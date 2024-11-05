@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SkyWay for Linux: include/skyway/room/interface/room_member.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SkyWay for Linux
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('interface_2room__member_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">room_member.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  room_member.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  skyway</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Naoto Takahashi on 2023/11/21.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright © 2023 NTT Communications. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef SKYWAY_ROOM_INTERFACE_ROOM_MEMBER_HPP</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define SKYWAY_ROOM_INTERFACE_ROOM_MEMBER_HPP</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;skyway/core/interface/member.hpp&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>skyway {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>room {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>interface {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span>Room;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span>RoomPublication;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">class </span>RoomSubscription;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member.html">RoomMember</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html">   26</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html">EventListener</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html">EventListener</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html#a6f1fdcbb8ded8f85003f979cc05e0426">   30</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html#a6f1fdcbb8ded8f85003f979cc05e0426">OnLeft</a>() {}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html#af9b959e257c4db1c3e51be122ca75629">   34</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html#af9b959e257c4db1c3e51be122ca75629">OnMetadataUpdated</a>(<span class="keyword">const</span> std::string&amp; metadata) {}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html#aca87ff5dbdad68a431dde18b3a9debf9">   37</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html#aca87ff5dbdad68a431dde18b3a9debf9">OnPublicationListChanged</a>() {}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html#a2db782127981cb23eebe3de0f8bcd864">   40</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html#a2db782127981cb23eebe3de0f8bcd864">OnSubscriptionListChanged</a>() {}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    };</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member.html">RoomMember</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a390a9c63d295b3a7f1d515a927b70ec8">   44</a></span>&#160;    <span class="keyword">virtual</span> boost::optional&lt;std::string&gt; <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a390a9c63d295b3a7f1d515a927b70ec8">RoomId</a>() = 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a6700789334ebc1cc10a4087a2111f008">   46</a></span>&#160;    <span class="keyword">virtual</span> boost::optional&lt;std::string&gt; <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a6700789334ebc1cc10a4087a2111f008">RoomName</a>() = 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member.html#aa452a349bd2f4a40541cc7820fa434bc">   48</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member.html#aa452a349bd2f4a40541cc7820fa434bc">Id</a>() = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member.html#ab5ba053a2b6e8405c27769c10c2f3c7d">   50</a></span>&#160;    <span class="keyword">virtual</span> boost::optional&lt;std::string&gt; <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member.html#ab5ba053a2b6e8405c27769c10c2f3c7d">Name</a>() = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member.html#aba047e4b15a5c12c666653ffb5bb9eef">   52</a></span>&#160;    <span class="keyword">virtual</span> boost::optional&lt;std::string&gt; <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member.html#aba047e4b15a5c12c666653ffb5bb9eef">Metadata</a>() = 0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a65bc636ae7d481780a7c1bd30a699d91">   54</a></span>&#160;    <span class="keyword">virtual</span> model::MemberType <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a65bc636ae7d481780a7c1bd30a699d91">Type</a>() = 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a129d118d0c6e49b0ff15e42072a7f6f1">   56</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a129d118d0c6e49b0ff15e42072a7f6f1">Subtype</a>() = 0;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a06fc75d1e619bb3a55f32a6aa699d0ab">   58</a></span>&#160;    <span class="keyword">virtual</span> model::Side <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a06fc75d1e619bb3a55f32a6aa699d0ab">Side</a>() = 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a5c525fb2f7ae3be6d754f3c97757bf25">   60</a></span>&#160;    <span class="keyword">virtual</span> core::interface::MemberState <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a5c525fb2f7ae3be6d754f3c97757bf25">State</a>() = 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a992f24f7b9b6b8a6fd9691a63b004dbb">   63</a></span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::unique_ptr&lt;RoomPublication&gt;&gt; <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a992f24f7b9b6b8a6fd9691a63b004dbb">Publications</a>() = 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a6ebd1864a1f9fa13ad0d11a3b8ec08fd">   65</a></span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::unique_ptr&lt;RoomSubscription&gt;&gt; <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a6ebd1864a1f9fa13ad0d11a3b8ec08fd">Subscriptions</a>() = 0;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a1494daffba2e9004f43421c9410d6a24">   68</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a1494daffba2e9004f43421c9410d6a24">UpdateMetadata</a>(<span class="keyword">const</span> std::string&amp; metadata) = 0;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a618e746883f14b5bb700fff1394e3e58">   70</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a618e746883f14b5bb700fff1394e3e58">Leave</a>() = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}  <span class="comment">// namespace interface</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}  <span class="comment">// namespace room</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_ROOM_INTERFACE_ROOM_MEMBER_HPP */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html">skyway::room::interface::RoomMember::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition:</b> room_member.hpp:26</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener_html_a2db782127981cb23eebe3de0f8bcd864"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html#a2db782127981cb23eebe3de0f8bcd864">skyway::room::interface::RoomMember::EventListener::OnSubscriptionListChanged</a></div><div class="ttdeci">virtual void OnSubscriptionListChanged()</div><div class="ttdoc">このRoomMemberのSubscriptionの数が変化された後に発生するイベント</div><div class="ttdef"><b>Definition:</b> room_member.hpp:40</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener_html_a6f1fdcbb8ded8f85003f979cc05e0426"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html#a6f1fdcbb8ded8f85003f979cc05e0426">skyway::room::interface::RoomMember::EventListener::OnLeft</a></div><div class="ttdeci">virtual void OnLeft()</div><div class="ttdoc">Memberが退出した後に発生するイベント</div><div class="ttdef"><b>Definition:</b> room_member.hpp:30</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener_html_aca87ff5dbdad68a431dde18b3a9debf9"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html#aca87ff5dbdad68a431dde18b3a9debf9">skyway::room::interface::RoomMember::EventListener::OnPublicationListChanged</a></div><div class="ttdeci">virtual void OnPublicationListChanged()</div><div class="ttdoc">このRoomMemberのPublicationの数が変化された後に発生するイベント</div><div class="ttdef"><b>Definition:</b> room_member.hpp:37</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener_html_af9b959e257c4db1c3e51be122ca75629"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html#af9b959e257c4db1c3e51be122ca75629">skyway::room::interface::RoomMember::EventListener::OnMetadataUpdated</a></div><div class="ttdeci">virtual void OnMetadataUpdated(const std::string &amp;metadata)</div><div class="ttdoc">このRoomMemberのMetadataが更新された後に発生するイベント</div><div class="ttdef"><b>Definition:</b> room_member.hpp:34</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_html"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member.html">skyway::room::interface::RoomMember</a></div><div class="ttdoc">RoomMemberの操作を行うインターフェース</div><div class="ttdef"><b>Definition:</b> room_member.hpp:23</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_html_a06fc75d1e619bb3a55f32a6aa699d0ab"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member.html#a06fc75d1e619bb3a55f32a6aa699d0ab">skyway::room::interface::RoomMember::Side</a></div><div class="ttdeci">virtual model::Side Side()=0</div><div class="ttdoc">Sideを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_html_a129d118d0c6e49b0ff15e42072a7f6f1"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member.html#a129d118d0c6e49b0ff15e42072a7f6f1">skyway::room::interface::RoomMember::Subtype</a></div><div class="ttdeci">virtual std::string Subtype()=0</div><div class="ttdoc">SubTypeを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_html_a1494daffba2e9004f43421c9410d6a24"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member.html#a1494daffba2e9004f43421c9410d6a24">skyway::room::interface::RoomMember::UpdateMetadata</a></div><div class="ttdeci">virtual bool UpdateMetadata(const std::string &amp;metadata)=0</div><div class="ttdoc">Metadataを更新します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_html_a390a9c63d295b3a7f1d515a927b70ec8"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member.html#a390a9c63d295b3a7f1d515a927b70ec8">skyway::room::interface::RoomMember::RoomId</a></div><div class="ttdeci">virtual boost::optional&lt; std::string &gt; RoomId()=0</div><div class="ttdoc">このMemberに紐づくRoomのIdを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_html_a5c525fb2f7ae3be6d754f3c97757bf25"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member.html#a5c525fb2f7ae3be6d754f3c97757bf25">skyway::room::interface::RoomMember::State</a></div><div class="ttdeci">virtual core::interface::MemberState State()=0</div><div class="ttdoc">Stateを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_html_a618e746883f14b5bb700fff1394e3e58"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member.html#a618e746883f14b5bb700fff1394e3e58">skyway::room::interface::RoomMember::Leave</a></div><div class="ttdeci">virtual bool Leave()=0</div><div class="ttdoc">Roomから退室します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_html_a65bc636ae7d481780a7c1bd30a699d91"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member.html#a65bc636ae7d481780a7c1bd30a699d91">skyway::room::interface::RoomMember::Type</a></div><div class="ttdeci">virtual model::MemberType Type()=0</div><div class="ttdoc">Typeを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_html_a6700789334ebc1cc10a4087a2111f008"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member.html#a6700789334ebc1cc10a4087a2111f008">skyway::room::interface::RoomMember::RoomName</a></div><div class="ttdeci">virtual boost::optional&lt; std::string &gt; RoomName()=0</div><div class="ttdoc">このMemberに紐づくRoomのNameを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_html_a6ebd1864a1f9fa13ad0d11a3b8ec08fd"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member.html#a6ebd1864a1f9fa13ad0d11a3b8ec08fd">skyway::room::interface::RoomMember::Subscriptions</a></div><div class="ttdeci">virtual std::vector&lt; std::unique_ptr&lt; RoomSubscription &gt; &gt; Subscriptions()=0</div><div class="ttdoc">このMemberのSubscription一覧を取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_html_a992f24f7b9b6b8a6fd9691a63b004dbb"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member.html#a992f24f7b9b6b8a6fd9691a63b004dbb">skyway::room::interface::RoomMember::Publications</a></div><div class="ttdeci">virtual std::vector&lt; std::unique_ptr&lt; RoomPublication &gt; &gt; Publications()=0</div><div class="ttdoc">このMemberのPublication一覧を取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_html_aa452a349bd2f4a40541cc7820fa434bc"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member.html#aa452a349bd2f4a40541cc7820fa434bc">skyway::room::interface::RoomMember::Id</a></div><div class="ttdeci">virtual std::string Id()=0</div><div class="ttdoc">Idを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_html_ab5ba053a2b6e8405c27769c10c2f3c7d"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member.html#ab5ba053a2b6e8405c27769c10c2f3c7d">skyway::room::interface::RoomMember::Name</a></div><div class="ttdeci">virtual boost::optional&lt; std::string &gt; Name()=0</div><div class="ttdoc">Nameを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_html_aba047e4b15a5c12c666653ffb5bb9eef"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member.html#aba047e4b15a5c12c666653ffb5bb9eef">skyway::room::interface::RoomMember::Metadata</a></div><div class="ttdeci">virtual boost::optional&lt; std::string &gt; Metadata()=0</div><div class="ttdoc">Metadataを取得します。</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_77f3510bf786cf3c12f65f3b0b944be3.html">skyway</a></li><li class="navelem"><a class="el" href="dir_64c8f5548683072db6c673aefb9e2785.html">room</a></li><li class="navelem"><a class="el" href="dir_2f82f5be45bcb587ce957053a8a65212.html">interface</a></li><li class="navelem"><b>room_member.hpp</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
