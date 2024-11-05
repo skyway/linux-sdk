@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SkyWay for Linux: include/skyway/room/p2p/p2p_room.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SkyWay for Linux
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('p2p__room_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">p2p_room.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  p2p_room.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  skyway</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Naoto Takahashi on 2023/11/22.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright © 2023 NTT Communications. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef SKYWAY_ROOM_P2P_P2P_ROOM_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define SKYWAY_ROOM_P2P_P2P_ROOM_HPP</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;skyway/room/abstract/room.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;skyway/room/p2p/local_p2p_room_member.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;skyway/room/p2p/room_domain_factory.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>skyway {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>room {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>p2p {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">class </span>P2PRoomFactory : <span class="keyword">public</span> interface::RoomFactory {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::shared_ptr&lt;interface::Room&gt; Create(</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        interface::RoomInitOptions options,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        std::unique_ptr&lt;interface::RoomDomainFactory&gt; domain_factory) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::shared_ptr&lt;interface::Room&gt; Find(</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        interface::RoomQuery query,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        std::unique_ptr&lt;interface::RoomDomainFactory&gt; domain_factory) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::shared_ptr&lt;interface::Room&gt; FindOrCreate(</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        interface::RoomInitOptions options,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::unique_ptr&lt;interface::RoomDomainFactory&gt; domain_factory) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html">P2PRoom</a> : <span class="keyword">public</span> <a class="code" href="classskyway_1_1room_1_1abstract_1_1_room.html">abstract::Room</a>, <span class="keyword">public</span> std::enable_shared_from_this&lt;P2PRoom&gt; {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html">P2PRoom</a>(std::shared_ptr&lt;core::interface::Channel&gt; channel,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            std::unique_ptr&lt;interface::RoomDomainFactory&gt; factory);</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#ac6aa0e7add93749343cc7d97df602fa5">   39</a></span>&#160;    interface::RoomType <a class="code" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#ac6aa0e7add93749343cc7d97df602fa5">Type</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a1e80cc6bfdb60420608705180046ca56">   42</a></span>&#160;    <span class="keyword">static</span> std::shared_ptr&lt;P2PRoom&gt; <a class="code" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a1e80cc6bfdb60420608705180046ca56">Create</a>(</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="structskyway_1_1room_1_1interface_1_1_room_init_options.html">interface::RoomInitOptions</a> options,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::unique_ptr&lt;interface::RoomFactory&gt; room_factory = std::make_unique&lt;P2PRoomFactory&gt;(),</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        std::unique_ptr&lt;interface::RoomDomainFactory&gt; domain_factory =</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            std::make_unique&lt;RoomDomainFactory&gt;());</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a0458e1a3e58164e6c7f410af660dcbda">   48</a></span>&#160;    <span class="keyword">static</span> std::shared_ptr&lt;P2PRoom&gt; <a class="code" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a0458e1a3e58164e6c7f410af660dcbda">Create</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#afd5414173af0e879d5dc6981c4699bbc">   50</a></span>&#160;    <span class="keyword">static</span> std::shared_ptr&lt;P2PRoom&gt; <a class="code" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#afd5414173af0e879d5dc6981c4699bbc">Find</a>(</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="structskyway_1_1room_1_1interface_1_1_room_query.html">interface::RoomQuery</a> query,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        std::unique_ptr&lt;interface::RoomFactory&gt; room_factory = std::make_unique&lt;P2PRoomFactory&gt;(),</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        std::unique_ptr&lt;interface::RoomDomainFactory&gt; domain_factory =</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            std::make_unique&lt;RoomDomainFactory&gt;());</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#ae054094b936848d43023c07ed42e9270">   56</a></span>&#160;    <span class="keyword">static</span> std::shared_ptr&lt;P2PRoom&gt; <a class="code" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#ae054094b936848d43023c07ed42e9270">FindOrCreate</a>(</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="structskyway_1_1room_1_1interface_1_1_room_init_options.html">interface::RoomInitOptions</a> options,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        std::unique_ptr&lt;interface::RoomFactory&gt; room_factory = std::make_unique&lt;P2PRoomFactory&gt;(),</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        std::unique_ptr&lt;interface::RoomDomainFactory&gt; domain_factory =</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            std::make_unique&lt;RoomDomainFactory&gt;());</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a31a072fbf4ea840e1358f97334282f6e">   62</a></span>&#160;    std::unique_ptr&lt;LocalP2PRoomMember&gt; <a class="code" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a31a072fbf4ea840e1358f97334282f6e">Join</a>(<a class="code" href="structskyway_1_1room_1_1interface_1_1_room_member_init_options.html">interface::RoomMemberInitOptions</a> options);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">static</span> std::shared_ptr&lt;P2PRoom&gt; CreateShared(</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        std::shared_ptr&lt;core::interface::Channel&gt; channel,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        std::unique_ptr&lt;interface::RoomDomainFactory&gt; factory);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>P2PRoomFactory;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>P2PRoomTest;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>LocalP2PRoomMemberTest;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}  <span class="comment">// namespace p2p</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}  <span class="comment">// namespace room</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_ROOM_P2P_P2P_ROOM_HPP */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html">skyway::room::abstract::Room</a></div><div class="ttdoc">Roomの操作を行う抽象クラス</div><div class="ttdef"><b>Definition:</b> room.hpp:20</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1p2p_1_1_p2_p_room_html"><div class="ttname"><a href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html">skyway::room::p2p::P2PRoom</a></div><div class="ttdoc">P2PRoomの操作を行うクラス</div><div class="ttdef"><b>Definition:</b> p2p_room.hpp:35</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1p2p_1_1_p2_p_room_html_a0458e1a3e58164e6c7f410af660dcbda"><div class="ttname"><a href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a0458e1a3e58164e6c7f410af660dcbda">skyway::room::p2p::P2PRoom::Create</a></div><div class="ttdeci">static std::shared_ptr&lt; P2PRoom &gt; Create()</div><div class="ttdoc">P2PRoomを作成します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1p2p_1_1_p2_p_room_html_a1e80cc6bfdb60420608705180046ca56"><div class="ttname"><a href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a1e80cc6bfdb60420608705180046ca56">skyway::room::p2p::P2PRoom::Create</a></div><div class="ttdeci">static std::shared_ptr&lt; P2PRoom &gt; Create(interface::RoomInitOptions options, std::unique_ptr&lt; interface::RoomFactory &gt; room_factory=std::make_unique&lt; P2PRoomFactory &gt;(), std::unique_ptr&lt; interface::RoomDomainFactory &gt; domain_factory=std::make_unique&lt; RoomDomainFactory &gt;())</div><div class="ttdoc">P2PRoomを作成します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1p2p_1_1_p2_p_room_html_a31a072fbf4ea840e1358f97334282f6e"><div class="ttname"><a href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a31a072fbf4ea840e1358f97334282f6e">skyway::room::p2p::P2PRoom::Join</a></div><div class="ttdeci">std::unique_ptr&lt; LocalP2PRoomMember &gt; Join(interface::RoomMemberInitOptions options)</div><div class="ttdoc">P2PRoomへ参加します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1p2p_1_1_p2_p_room_html_ac6aa0e7add93749343cc7d97df602fa5"><div class="ttname"><a href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#ac6aa0e7add93749343cc7d97df602fa5">skyway::room::p2p::P2PRoom::Type</a></div><div class="ttdeci">interface::RoomType Type() override</div><div class="ttdoc">RoomのTypeを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1p2p_1_1_p2_p_room_html_ae054094b936848d43023c07ed42e9270"><div class="ttname"><a href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#ae054094b936848d43023c07ed42e9270">skyway::room::p2p::P2PRoom::FindOrCreate</a></div><div class="ttdeci">static std::shared_ptr&lt; P2PRoom &gt; FindOrCreate(interface::RoomInitOptions options, std::unique_ptr&lt; interface::RoomFactory &gt; room_factory=std::make_unique&lt; P2PRoomFactory &gt;(), std::unique_ptr&lt; interface::RoomDomainFactory &gt; domain_factory=std::make_unique&lt; RoomDomainFactory &gt;())</div><div class="ttdoc">P2PRoomの検索をし、存在しなければ作成します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1p2p_1_1_p2_p_room_html_afd5414173af0e879d5dc6981c4699bbc"><div class="ttname"><a href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#afd5414173af0e879d5dc6981c4699bbc">skyway::room::p2p::P2PRoom::Find</a></div><div class="ttdeci">static std::shared_ptr&lt; P2PRoom &gt; Find(interface::RoomQuery query, std::unique_ptr&lt; interface::RoomFactory &gt; room_factory=std::make_unique&lt; P2PRoomFactory &gt;(), std::unique_ptr&lt; interface::RoomDomainFactory &gt; domain_factory=std::make_unique&lt; RoomDomainFactory &gt;())</div><div class="ttdoc">P2PRoomの検索をします。</div></div>
+<div class="ttc" id="astructskyway_1_1room_1_1interface_1_1_room_init_options_html"><div class="ttname"><a href="structskyway_1_1room_1_1interface_1_1_room_init_options.html">skyway::room::interface::RoomInitOptions</a></div><div class="ttdoc">RoomのCreate/FindOrCreateで扱うオプション</div><div class="ttdef"><b>Definition:</b> room.hpp:23</div></div>
+<div class="ttc" id="astructskyway_1_1room_1_1interface_1_1_room_member_init_options_html"><div class="ttname"><a href="structskyway_1_1room_1_1interface_1_1_room_member_init_options.html">skyway::room::interface::RoomMemberInitOptions</a></div><div class="ttdoc">MemberのCreateで扱うオプション</div><div class="ttdef"><b>Definition:</b> room.hpp:55</div></div>
+<div class="ttc" id="astructskyway_1_1room_1_1interface_1_1_room_query_html"><div class="ttname"><a href="structskyway_1_1room_1_1interface_1_1_room_query.html">skyway::room::interface::RoomQuery</a></div><div class="ttdoc">RoomのFind/FindOrCreateで扱うオプション</div><div class="ttdef"><b>Definition:</b> room.hpp:39</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_77f3510bf786cf3c12f65f3b0b944be3.html">skyway</a></li><li class="navelem"><a class="el" href="dir_64c8f5548683072db6c673aefb9e2785.html">room</a></li><li class="navelem"><a class="el" href="dir_4bd9ffd015eff6bb11f17d4afcd8eb1d.html">p2p</a></li><li class="navelem"><b>p2p_room.hpp</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
