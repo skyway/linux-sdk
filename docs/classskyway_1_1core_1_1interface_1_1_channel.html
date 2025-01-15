@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SkyWay for Linux: skyway::core::interface::Channel クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -24,9 +24,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
+ <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td id="projectalign">
    <div id="projectname">SkyWay for Linux
    </div>
   </td>
@@ -35,21 +35,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.1 -->
+<!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -63,7 +64,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('classskyway_1_1core_1_1interface_1_1_channel.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -77,9 +78,16 @@ $(document).ready(function(){initNavTree('classskyway_1_1core_1_1interface_1_1_c
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -87,8 +95,7 @@ $(document).ready(function(){initNavTree('classskyway_1_1core_1_1interface_1_1_c
 <a href="#nested-classes">クラス</a> &#124;
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="classskyway_1_1core_1_1interface_1_1_channel-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">skyway::core::interface::Channel クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+  <div class="headertitle"><div class="title">skyway::core::interface::Channel クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -106,77 +113,68 @@ skyway::core::interface::Channel の継承関係図</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 クラス</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html">EventListener</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントリスナ  <a href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a15ae248a5311cccd7a7bd155cfcc12d0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a15ae248a5311cccd7a7bd155cfcc12d0">AddEventListener</a> (<a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html">EventListener</a> *listener)=0</td></tr>
-<tr class="memdesc:a15ae248a5311cccd7a7bd155cfcc12d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントを購読します。  <a href="classskyway_1_1core_1_1interface_1_1_channel.html#a15ae248a5311cccd7a7bd155cfcc12d0">[詳解]</a><br /></td></tr>
+<tr class="memitem:a15ae248a5311cccd7a7bd155cfcc12d0" id="r_a15ae248a5311cccd7a7bd155cfcc12d0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a15ae248a5311cccd7a7bd155cfcc12d0">AddEventListener</a> (<a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html">EventListener</a> *listener)=0</td></tr>
+<tr class="memdesc:a15ae248a5311cccd7a7bd155cfcc12d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントを購読します。  <br /></td></tr>
 <tr class="separator:a15ae248a5311cccd7a7bd155cfcc12d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3029f7ae43d178fa2d3dbdda663ad0e7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a3029f7ae43d178fa2d3dbdda663ad0e7">RemoveEventListener</a> (<a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html">EventListener</a> *listener)=0</td></tr>
-<tr class="memdesc:a3029f7ae43d178fa2d3dbdda663ad0e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントの購読を中止します。  <a href="classskyway_1_1core_1_1interface_1_1_channel.html#a3029f7ae43d178fa2d3dbdda663ad0e7">[詳解]</a><br /></td></tr>
+<tr class="memitem:a3029f7ae43d178fa2d3dbdda663ad0e7" id="r_a3029f7ae43d178fa2d3dbdda663ad0e7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a3029f7ae43d178fa2d3dbdda663ad0e7">RemoveEventListener</a> (<a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html">EventListener</a> *listener)=0</td></tr>
+<tr class="memdesc:a3029f7ae43d178fa2d3dbdda663ad0e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントの購読を中止します。  <br /></td></tr>
 <tr class="separator:a3029f7ae43d178fa2d3dbdda663ad0e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51a43d3c304660777d0a29b5d8dc68e4"><td class="memItemLeft" align="right" valign="top"><a id="a51a43d3c304660777d0a29b5d8dc68e4"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a51a43d3c304660777d0a29b5d8dc68e4">Id</a> () const =0</td></tr>
-<tr class="memdesc:a51a43d3c304660777d0a29b5d8dc68e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Idを取得します。 <br /></td></tr>
+<tr class="memitem:a51a43d3c304660777d0a29b5d8dc68e4" id="r_a51a43d3c304660777d0a29b5d8dc68e4"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a51a43d3c304660777d0a29b5d8dc68e4">Id</a> () const =0</td></tr>
+<tr class="memdesc:a51a43d3c304660777d0a29b5d8dc68e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Idを取得します。  <br /></td></tr>
 <tr class="separator:a51a43d3c304660777d0a29b5d8dc68e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59a90784ffecdfed6a131aef57833f63"><td class="memItemLeft" align="right" valign="top"><a id="a59a90784ffecdfed6a131aef57833f63"></a>
-virtual boost::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a59a90784ffecdfed6a131aef57833f63">Name</a> () const =0</td></tr>
-<tr class="memdesc:a59a90784ffecdfed6a131aef57833f63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nameを取得します。 <br /></td></tr>
-<tr class="separator:a59a90784ffecdfed6a131aef57833f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ea9090c75181a8ac7326b11eac3b4ad"><td class="memItemLeft" align="right" valign="top"><a id="a0ea9090c75181a8ac7326b11eac3b4ad"></a>
-virtual boost::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a0ea9090c75181a8ac7326b11eac3b4ad">Metadata</a> () const =0</td></tr>
-<tr class="memdesc:a0ea9090c75181a8ac7326b11eac3b4ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadataを取得します。 <br /></td></tr>
-<tr class="separator:a0ea9090c75181a8ac7326b11eac3b4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a510205c14a15ecc0350ad6774877b86e"><td class="memItemLeft" align="right" valign="top"><a id="a510205c14a15ecc0350ad6774877b86e"></a>
-virtual <a class="el" href="classskyway_1_1core_1_1interface_1_1_local_person.html">interface::LocalPerson</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a510205c14a15ecc0350ad6774877b86e">LocalPerson</a> ()=0</td></tr>
-<tr class="memdesc:a510205c14a15ecc0350ad6774877b86e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ChannelにJoinしているLocalPersonを取得します。 <br /></td></tr>
-<tr class="separator:a510205c14a15ecc0350ad6774877b86e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a303b7120c3e37e39549248c302de07a2"><td class="memItemLeft" align="right" valign="top"><a id="a303b7120c3e37e39549248c302de07a2"></a>
-virtual std::vector&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_member.html">RemoteMember</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a303b7120c3e37e39549248c302de07a2">Bots</a> (bool active_only=true)=0</td></tr>
-<tr class="memdesc:a303b7120c3e37e39549248c302de07a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ChannelにJoinしているBotを取得します。 <br /></td></tr>
-<tr class="separator:a303b7120c3e37e39549248c302de07a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af171effe7f56331fa11acbf41a7157bf"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html">Member</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#af171effe7f56331fa11acbf41a7157bf">Members</a> (bool active_only=true)=0</td></tr>
-<tr class="memdesc:af171effe7f56331fa11acbf41a7157bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">ChannelにJoinしているすべてのMemberを取得します。  <a href="classskyway_1_1core_1_1interface_1_1_channel.html#af171effe7f56331fa11acbf41a7157bf">[詳解]</a><br /></td></tr>
-<tr class="separator:af171effe7f56331fa11acbf41a7157bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4fa68cdc7d9e8b295c559056dca5d96"><td class="memItemLeft" align="right" valign="top"><a id="af4fa68cdc7d9e8b295c559056dca5d96"></a>
-virtual std::vector&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">Publication</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#af4fa68cdc7d9e8b295c559056dca5d96">Publications</a> (bool active_only=true)=0</td></tr>
-<tr class="memdesc:af4fa68cdc7d9e8b295c559056dca5d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publicationの一覧を取得します。 <br /></td></tr>
-<tr class="separator:af4fa68cdc7d9e8b295c559056dca5d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b84c9ef0955fd0d4ff477719b87cc37"><td class="memItemLeft" align="right" valign="top"><a id="a2b84c9ef0955fd0d4ff477719b87cc37"></a>
-virtual std::vector&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">Subscription</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a2b84c9ef0955fd0d4ff477719b87cc37">Subscriptions</a> (bool active_only=true)=0</td></tr>
-<tr class="memdesc:a2b84c9ef0955fd0d4ff477719b87cc37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscriptionの一覧を取得します。 <br /></td></tr>
-<tr class="separator:a2b84c9ef0955fd0d4ff477719b87cc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b7e99b924ae4ee1bf9dce12d5a846ce"><td class="memItemLeft" align="right" valign="top"><a id="a4b7e99b924ae4ee1bf9dce12d5a846ce"></a>
-virtual ChannelState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a4b7e99b924ae4ee1bf9dce12d5a846ce">State</a> () const =0</td></tr>
-<tr class="memdesc:a4b7e99b924ae4ee1bf9dce12d5a846ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Channelの状態を取得します。 <br /></td></tr>
+<tr class="memitem:a262940e1f182c885bc7f384bc821ab49" id="r_a262940e1f182c885bc7f384bc821ab49"><td class="memItemLeft" align="right" valign="top">virtual boost::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a262940e1f182c885bc7f384bc821ab49">Name</a> () const =0</td></tr>
+<tr class="memdesc:a262940e1f182c885bc7f384bc821ab49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nameを取得します。  <br /></td></tr>
+<tr class="separator:a262940e1f182c885bc7f384bc821ab49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4214344eea93a22c332ecbf2c3c6d2dc" id="r_a4214344eea93a22c332ecbf2c3c6d2dc"><td class="memItemLeft" align="right" valign="top">virtual boost::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a4214344eea93a22c332ecbf2c3c6d2dc">Metadata</a> () const =0</td></tr>
+<tr class="memdesc:a4214344eea93a22c332ecbf2c3c6d2dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadataを取得します。  <br /></td></tr>
+<tr class="separator:a4214344eea93a22c332ecbf2c3c6d2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c73deb4ff78f03a5bf2d470253b59cb" id="r_a8c73deb4ff78f03a5bf2d470253b59cb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classskyway_1_1core_1_1interface_1_1_local_person.html">interface::LocalPerson</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a8c73deb4ff78f03a5bf2d470253b59cb">LocalPerson</a> ()=0</td></tr>
+<tr class="memdesc:a8c73deb4ff78f03a5bf2d470253b59cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">ChannelにJoinしているLocalPersonを取得します。  <br /></td></tr>
+<tr class="separator:a8c73deb4ff78f03a5bf2d470253b59cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4430700963e1d7e1cbd38fe2bd6ad56" id="r_af4430700963e1d7e1cbd38fe2bd6ad56"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_member.html">RemoteMember</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#af4430700963e1d7e1cbd38fe2bd6ad56">Bots</a> (bool active_only=true)=0</td></tr>
+<tr class="memdesc:af4430700963e1d7e1cbd38fe2bd6ad56"><td class="mdescLeft">&#160;</td><td class="mdescRight">ChannelにJoinしているBotを取得します。  <br /></td></tr>
+<tr class="separator:af4430700963e1d7e1cbd38fe2bd6ad56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9ed1c032cca0e0cceeae96cd269a751" id="r_ae9ed1c032cca0e0cceeae96cd269a751"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html">Member</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#ae9ed1c032cca0e0cceeae96cd269a751">Members</a> (bool active_only=true)=0</td></tr>
+<tr class="memdesc:ae9ed1c032cca0e0cceeae96cd269a751"><td class="mdescLeft">&#160;</td><td class="mdescRight">ChannelにJoinしているすべてのMemberを取得します。  <br /></td></tr>
+<tr class="separator:ae9ed1c032cca0e0cceeae96cd269a751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c2f2c20a771e3fd7c962c78424fd5cc" id="r_a6c2f2c20a771e3fd7c962c78424fd5cc"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">Publication</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a6c2f2c20a771e3fd7c962c78424fd5cc">Publications</a> (bool active_only=true)=0</td></tr>
+<tr class="memdesc:a6c2f2c20a771e3fd7c962c78424fd5cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publicationの一覧を取得します。  <br /></td></tr>
+<tr class="separator:a6c2f2c20a771e3fd7c962c78424fd5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e79bcff17e12844e6f8ae383eb065e2" id="r_a5e79bcff17e12844e6f8ae383eb065e2"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">Subscription</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a5e79bcff17e12844e6f8ae383eb065e2">Subscriptions</a> (bool active_only=true)=0</td></tr>
+<tr class="memdesc:a5e79bcff17e12844e6f8ae383eb065e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscriptionの一覧を取得します。  <br /></td></tr>
+<tr class="separator:a5e79bcff17e12844e6f8ae383eb065e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7e99b924ae4ee1bf9dce12d5a846ce" id="r_a4b7e99b924ae4ee1bf9dce12d5a846ce"><td class="memItemLeft" align="right" valign="top">virtual ChannelState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a4b7e99b924ae4ee1bf9dce12d5a846ce">State</a> () const =0</td></tr>
+<tr class="memdesc:a4b7e99b924ae4ee1bf9dce12d5a846ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Channelの状態を取得します。  <br /></td></tr>
 <tr class="separator:a4b7e99b924ae4ee1bf9dce12d5a846ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3267710f6affb66ee6e7c3ce59b5077d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classskyway_1_1core_1_1interface_1_1_local_person.html">interface::LocalPerson</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a3267710f6affb66ee6e7c3ce59b5077d">Join</a> (const <a class="el" href="structskyway_1_1model_1_1_member_1_1_init.html">model::Member::Init</a> &amp;init)=0</td></tr>
-<tr class="memdesc:a3267710f6affb66ee6e7c3ce59b5077d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ChannelにLocalPersonを追加します。  <a href="classskyway_1_1core_1_1interface_1_1_channel.html#a3267710f6affb66ee6e7c3ce59b5077d">[詳解]</a><br /></td></tr>
-<tr class="separator:a3267710f6affb66ee6e7c3ce59b5077d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a632d1e24d8b04de3b7cec0d20533cbcd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a632d1e24d8b04de3b7cec0d20533cbcd">Leave</a> (<a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html">Member</a> *member)=0</td></tr>
-<tr class="memdesc:a632d1e24d8b04de3b7cec0d20533cbcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ChannelからMemberを退出させます。  <a href="classskyway_1_1core_1_1interface_1_1_channel.html#a632d1e24d8b04de3b7cec0d20533cbcd">[詳解]</a><br /></td></tr>
+<tr class="memitem:a450d490eba877702b52ed1dde8e064af" id="r_a450d490eba877702b52ed1dde8e064af"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classskyway_1_1core_1_1interface_1_1_local_person.html">interface::LocalPerson</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a450d490eba877702b52ed1dde8e064af">Join</a> (const <a class="el" href="structskyway_1_1model_1_1_member_1_1_init.html">model::Member::Init</a> &amp;init)=0</td></tr>
+<tr class="memdesc:a450d490eba877702b52ed1dde8e064af"><td class="mdescLeft">&#160;</td><td class="mdescRight">ChannelにLocalPersonを追加します。  <br /></td></tr>
+<tr class="separator:a450d490eba877702b52ed1dde8e064af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a632d1e24d8b04de3b7cec0d20533cbcd" id="r_a632d1e24d8b04de3b7cec0d20533cbcd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a632d1e24d8b04de3b7cec0d20533cbcd">Leave</a> (<a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html">Member</a> *member)=0</td></tr>
+<tr class="memdesc:a632d1e24d8b04de3b7cec0d20533cbcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ChannelからMemberを退出させます。  <br /></td></tr>
 <tr class="separator:a632d1e24d8b04de3b7cec0d20533cbcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79b779d3526e16620749d1fc7424cffa"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a79b779d3526e16620749d1fc7424cffa">Close</a> ()=0</td></tr>
-<tr class="memdesc:a79b779d3526e16620749d1fc7424cffa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Channelを閉じます。  <a href="classskyway_1_1core_1_1interface_1_1_channel.html#a79b779d3526e16620749d1fc7424cffa">[詳解]</a><br /></td></tr>
+<tr class="memitem:a79b779d3526e16620749d1fc7424cffa" id="r_a79b779d3526e16620749d1fc7424cffa"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a79b779d3526e16620749d1fc7424cffa">Close</a> ()=0</td></tr>
+<tr class="memdesc:a79b779d3526e16620749d1fc7424cffa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Channelを閉じます。  <br /></td></tr>
 <tr class="separator:a79b779d3526e16620749d1fc7424cffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cc0752f2e40e371dbf344ac2b1d668e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a2cc0752f2e40e371dbf344ac2b1d668e">Dispose</a> (bool remove_myself_if_needed)=0</td></tr>
-<tr class="memdesc:a2cc0752f2e40e371dbf344ac2b1d668e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Channelを閉じずにChannelインスタンスを無効にし、リソースを解放します。  <a href="classskyway_1_1core_1_1interface_1_1_channel.html#a2cc0752f2e40e371dbf344ac2b1d668e">[詳解]</a><br /></td></tr>
+<tr class="memitem:a2cc0752f2e40e371dbf344ac2b1d668e" id="r_a2cc0752f2e40e371dbf344ac2b1d668e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a2cc0752f2e40e371dbf344ac2b1d668e">Dispose</a> (bool remove_myself_if_needed)=0</td></tr>
+<tr class="memdesc:a2cc0752f2e40e371dbf344ac2b1d668e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Channelを閉じずにChannelインスタンスを無効にし、リソースを解放します。  <br /></td></tr>
 <tr class="separator:a2cc0752f2e40e371dbf344ac2b1d668e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35de7b3a342e7cd7faa6d668001c027b"><td class="memItemLeft" align="right" valign="top"><a id="a35de7b3a342e7cd7faa6d668001c027b"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a35de7b3a342e7cd7faa6d668001c027b">UpdateMetadata</a> (const std::string &amp;metadata)=0</td></tr>
-<tr class="memdesc:a35de7b3a342e7cd7faa6d668001c027b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadataを更新します。 <br /></td></tr>
+<tr class="memitem:a35de7b3a342e7cd7faa6d668001c027b" id="r_a35de7b3a342e7cd7faa6d668001c027b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a35de7b3a342e7cd7faa6d668001c027b">UpdateMetadata</a> (const std::string &amp;metadata)=0</td></tr>
+<tr class="memdesc:a35de7b3a342e7cd7faa6d668001c027b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadataを更新します。  <br /></td></tr>
 <tr class="separator:a35de7b3a342e7cd7faa6d668001c027b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>Channelのインターフェース </p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="a15ae248a5311cccd7a7bd155cfcc12d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15ae248a5311cccd7a7bd155cfcc12d0">&#9670;&nbsp;</a></span>AddEventListener()</h2>
+<a id="a15ae248a5311cccd7a7bd155cfcc12d0" name="a15ae248a5311cccd7a7bd155cfcc12d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15ae248a5311cccd7a7bd155cfcc12d0">&#9670;&#160;</a></span>AddEventListener()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -211,8 +209,38 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
-<a id="a79b779d3526e16620749d1fc7424cffa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79b779d3526e16620749d1fc7424cffa">&#9670;&nbsp;</a></span>Close()</h2>
+<a id="af4430700963e1d7e1cbd38fe2bd6ad56" name="af4430700963e1d7e1cbd38fe2bd6ad56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4430700963e1d7e1cbd38fe2bd6ad56">&#9670;&#160;</a></span>Bots()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_member.html">RemoteMember</a> * &gt; skyway::core::interface::Channel::Bots </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>active_only</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ChannelにJoinしているBotを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#ad866205dcf21a565f0b01f9db0273c2b">skyway::core::channel::Channel</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a79b779d3526e16620749d1fc7424cffa" name="a79b779d3526e16620749d1fc7424cffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79b779d3526e16620749d1fc7424cffa">&#9670;&#160;</a></span>Close()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -244,8 +272,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
-<a id="a2cc0752f2e40e371dbf344ac2b1d668e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cc0752f2e40e371dbf344ac2b1d668e">&#9670;&nbsp;</a></span>Dispose()</h2>
+<a id="a2cc0752f2e40e371dbf344ac2b1d668e" name="a2cc0752f2e40e371dbf344ac2b1d668e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc0752f2e40e371dbf344ac2b1d668e">&#9670;&#160;</a></span>Dispose()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -276,8 +304,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
-<a id="a3267710f6affb66ee6e7c3ce59b5077d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3267710f6affb66ee6e7c3ce59b5077d">&#9670;&nbsp;</a></span>Join()</h2>
+<a id="a51a43d3c304660777d0a29b5d8dc68e4" name="a51a43d3c304660777d0a29b5d8dc68e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51a43d3c304660777d0a29b5d8dc68e4">&#9670;&#160;</a></span>Id()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -286,7 +314,36 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classskyway_1_1core_1_1interface_1_1_local_person.html">interface::LocalPerson</a>* skyway::core::interface::Channel::Join </td>
+          <td class="memname">virtual std::string skyway::core::interface::Channel::Id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Idを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#afcde6082b41f10e01af5ebc9cd5f6ea6">skyway::core::channel::Channel</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a450d490eba877702b52ed1dde8e064af" name="a450d490eba877702b52ed1dde8e064af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a450d490eba877702b52ed1dde8e064af">&#9670;&#160;</a></span>Join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classskyway_1_1core_1_1interface_1_1_local_person.html">interface::LocalPerson</a> * skyway::core::interface::Channel::Join </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structskyway_1_1model_1_1_member_1_1_init.html">model::Member::Init</a> &amp;&#160;</td>
           <td class="paramname"><em>init</em></td><td>)</td>
@@ -308,12 +365,12 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </dd>
 </dl>
 
-<p><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a013f19ac09f417841a8a0c5012614715">skyway::core::channel::Channel</a>で実装されています。</p>
+<p><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#abaff525229c00649387ed154d0477348">skyway::core::channel::Channel</a>で実装されています。</p>
 
 </div>
 </div>
-<a id="a632d1e24d8b04de3b7cec0d20533cbcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a632d1e24d8b04de3b7cec0d20533cbcd">&#9670;&nbsp;</a></span>Leave()</h2>
+<a id="a632d1e24d8b04de3b7cec0d20533cbcd" name="a632d1e24d8b04de3b7cec0d20533cbcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a632d1e24d8b04de3b7cec0d20533cbcd">&#9670;&#160;</a></span>Leave()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -350,8 +407,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
-<a id="af171effe7f56331fa11acbf41a7157bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af171effe7f56331fa11acbf41a7157bf">&#9670;&nbsp;</a></span>Members()</h2>
+<a id="a8c73deb4ff78f03a5bf2d470253b59cb" name="a8c73deb4ff78f03a5bf2d470253b59cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c73deb4ff78f03a5bf2d470253b59cb">&#9670;&#160;</a></span>LocalPerson()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -360,7 +417,36 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::vector&lt;<a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html">Member</a>*&gt; skyway::core::interface::Channel::Members </td>
+          <td class="memname">virtual <a class="el" href="classskyway_1_1core_1_1interface_1_1_local_person.html">interface::LocalPerson</a> * skyway::core::interface::Channel::LocalPerson </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ChannelにJoinしているLocalPersonを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a11121dff7539ccb6bc70fb992333e058">skyway::core::channel::Channel</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="ae9ed1c032cca0e0cceeae96cd269a751" name="ae9ed1c032cca0e0cceeae96cd269a751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9ed1c032cca0e0cceeae96cd269a751">&#9670;&#160;</a></span>Members()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html">Member</a> * &gt; skyway::core::interface::Channel::Members </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>active_only</em> = <code>true</code></td><td>)</td>
@@ -377,12 +463,100 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <p>ChannelにJoinしているすべてのMemberを取得します。 </p>
 <p>このMemberはLocalPersonも含まれます。 </p>
 
-<p><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a7c1158e51c04243792dc4b60ca12509a">skyway::core::channel::Channel</a>で実装されています。</p>
+<p><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a725b80a968f7ff40cab406a9a0ea0cbe">skyway::core::channel::Channel</a>で実装されています。</p>
 
 </div>
 </div>
-<a id="a3029f7ae43d178fa2d3dbdda663ad0e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3029f7ae43d178fa2d3dbdda663ad0e7">&#9670;&nbsp;</a></span>RemoveEventListener()</h2>
+<a id="a4214344eea93a22c332ecbf2c3c6d2dc" name="a4214344eea93a22c332ecbf2c3c6d2dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4214344eea93a22c332ecbf2c3c6d2dc">&#9670;&#160;</a></span>Metadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual boost::optional&lt; std::string &gt; skyway::core::interface::Channel::Metadata </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metadataを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a8f2bc5e6fb642cfa93fd0f08016c1baf">skyway::core::channel::Channel</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a262940e1f182c885bc7f384bc821ab49" name="a262940e1f182c885bc7f384bc821ab49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a262940e1f182c885bc7f384bc821ab49">&#9670;&#160;</a></span>Name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual boost::optional&lt; std::string &gt; skyway::core::interface::Channel::Name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Nameを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a3bc76bf096d895a3b4d99ddb3c4f0eab">skyway::core::channel::Channel</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a6c2f2c20a771e3fd7c962c78424fd5cc" name="a6c2f2c20a771e3fd7c962c78424fd5cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c2f2c20a771e3fd7c962c78424fd5cc">&#9670;&#160;</a></span>Publications()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">Publication</a> * &gt; skyway::core::interface::Channel::Publications </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>active_only</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Publicationの一覧を取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a8a3f731171de597a5270667a422bff90">skyway::core::channel::Channel</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a3029f7ae43d178fa2d3dbdda663ad0e7" name="a3029f7ae43d178fa2d3dbdda663ad0e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3029f7ae43d178fa2d3dbdda663ad0e7">&#9670;&#160;</a></span>RemoveEventListener()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -417,6 +591,95 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
+<a id="a4b7e99b924ae4ee1bf9dce12d5a846ce" name="a4b7e99b924ae4ee1bf9dce12d5a846ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7e99b924ae4ee1bf9dce12d5a846ce">&#9670;&#160;</a></span>State()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ChannelState skyway::core::interface::Channel::State </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Channelの状態を取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#ae576a949bc0e87e540210f12d545772f">skyway::core::channel::Channel</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a5e79bcff17e12844e6f8ae383eb065e2" name="a5e79bcff17e12844e6f8ae383eb065e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e79bcff17e12844e6f8ae383eb065e2">&#9670;&#160;</a></span>Subscriptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">Subscription</a> * &gt; skyway::core::interface::Channel::Subscriptions </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>active_only</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subscriptionの一覧を取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#aaa9bcc66d574426d8a77aae4b9752e8d">skyway::core::channel::Channel</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a35de7b3a342e7cd7faa6d668001c027b" name="a35de7b3a342e7cd7faa6d668001c027b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35de7b3a342e7cd7faa6d668001c027b">&#9670;&#160;</a></span>UpdateMetadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool skyway::core::interface::Channel::UpdateMetadata </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>metadata</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metadataを更新します。 </p>
+
+<p><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a9dd953c38f51c8dd0adce1ada8294b99">skyway::core::channel::Channel</a>で実装されています。</p>
+
+</div>
+</div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>include/skyway/core/interface/<a class="el" href="interface_2channel_8hpp_source.html">channel.hpp</a></li>
 </ul>
@@ -426,7 +689,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>skyway</b></li><li class="navelem"><b>core</b></li><li class="navelem"><b>interface</b></li><li class="navelem"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">Channel</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

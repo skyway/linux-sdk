@@ -22,9 +22,9 @@ namespace skyway {
 /// @details 特別な理由がない場合はcore::Contextでなく、こちらを利用してください。
 class Context : public core::Context {
 public:
-    static const unsigned VERSION_MAJOR = 0;
-    static const unsigned VERSION_MINOR = 2;
-    static const unsigned VERSION_PATCH = 1;
+    static const unsigned int VERSION_MAJOR = 1;
+    static const unsigned int VERSION_MINOR = 1;
+    static const unsigned int VERSION_PATCH = 0;
 
     /// @brief SkyWayの利用に関する設定
     struct SkyWayOptions : core::ContextOptions {

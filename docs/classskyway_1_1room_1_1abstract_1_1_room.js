@@ -1,15 +1,13 @@
 var classskyway_1_1room_1_1abstract_1_1_room =
 [
-    [ "~Room", "classskyway_1_1room_1_1abstract_1_1_room.html#ab35a6a48cdcb4c60c2d8f1c6cbdf060e", null ],
-    [ "Room", "classskyway_1_1room_1_1abstract_1_1_room.html#a20708860f3588e63436edf040c26adcc", null ],
     [ "AddEventListener", "classskyway_1_1room_1_1abstract_1_1_room.html#ab8d7808271c34edd3e956d6ad8f0b199", null ],
     [ "Close", "classskyway_1_1room_1_1abstract_1_1_room.html#aa8ff369a3d2eefa00c847cb5a37c350d", null ],
     [ "Dispose", "classskyway_1_1room_1_1abstract_1_1_room.html#a9641d6835066b3cb7f1ee62db5e9f3c5", null ],
     [ "Id", "classskyway_1_1room_1_1abstract_1_1_room.html#a5045dc96dea57dbf1dadfcd8860b7d1b", null ],
     [ "Leave", "classskyway_1_1room_1_1abstract_1_1_room.html#a7ee752198a87004020d592cf8040b983", null ],
-    [ "Members", "classskyway_1_1room_1_1abstract_1_1_room.html#abe1cb16c319551593929e14b4f3c4909", null ],
-    [ "Metadata", "classskyway_1_1room_1_1abstract_1_1_room.html#a2db3060f6456f464c7d20ac880ef8505", null ],
-    [ "Name", "classskyway_1_1room_1_1abstract_1_1_room.html#aa031b6e4a868cae1fc4fe2b3830786df", null ],
+    [ "Members", "classskyway_1_1room_1_1abstract_1_1_room.html#a9cb15972c45f0ca6a1afabfccca76da3", null ],
+    [ "Metadata", "classskyway_1_1room_1_1abstract_1_1_room.html#a07f1cbcda5955ff085c956a0a5bd0264", null ],
+    [ "Name", "classskyway_1_1room_1_1abstract_1_1_room.html#ab0c647f46c820bcbd9a8ac0aaa158f84", null ],
     [ "OnClosed", "classskyway_1_1room_1_1abstract_1_1_room.html#a523cb4006f062249ed82141a0de255aa", null ],
     [ "OnMemberJoined", "classskyway_1_1room_1_1abstract_1_1_room.html#ade3a6fab2957bdcd18bdbac13f6b6960", null ],
     [ "OnMemberLeft", "classskyway_1_1room_1_1abstract_1_1_room.html#a3d73b89c5db06bffc1eaa3f9f4cfe24d", null ],
@@ -27,13 +25,9 @@ var classskyway_1_1room_1_1abstract_1_1_room =
     [ "OnSubscriptionDisabled", "classskyway_1_1room_1_1abstract_1_1_room.html#a35f6a87f3e69c1764f163fbec910b7ed", null ],
     [ "OnSubscriptionEnabled", "classskyway_1_1room_1_1abstract_1_1_room.html#a51c0f0296580e5346f00273b58c1c289", null ],
     [ "OnSubscriptionListChanged", "classskyway_1_1room_1_1abstract_1_1_room.html#aff052fc7dfe4ce5be0edf06206299af1", null ],
-    [ "Publications", "classskyway_1_1room_1_1abstract_1_1_room.html#ad01eac6f35def68072f6f9af2f352ee1", null ],
+    [ "Publications", "classskyway_1_1room_1_1abstract_1_1_room.html#a0ffde8194db63f9e2a7f2eeef92c205d", null ],
     [ "RemoveEventListener", "classskyway_1_1room_1_1abstract_1_1_room.html#a7e4e507a38a89abe375dd565461e96bd", null ],
     [ "State", "classskyway_1_1room_1_1abstract_1_1_room.html#acc1e79c0fd1270e53fd4f047b1da1649", null ],
-    [ "Subscriptions", "classskyway_1_1room_1_1abstract_1_1_room.html#a676e51650018b7dc4336de303919ed18", null ],
-    [ "UpdateMetadata", "classskyway_1_1room_1_1abstract_1_1_room.html#ad5b08ea123c4ffd28d65736460a55206", null ],
-    [ "core_", "classskyway_1_1room_1_1abstract_1_1_room.html#ad2e0381c49c28fb5b4b222168f41901a", null ],
-    [ "factory_", "classskyway_1_1room_1_1abstract_1_1_room.html#a135a074a94e06be6ef2d7af507b318ff", null ],
-    [ "listener_", "classskyway_1_1room_1_1abstract_1_1_room.html#a90b09578d0fb74058bbb27d0e2b6e168", null ],
-    [ "listener_mtx_", "classskyway_1_1room_1_1abstract_1_1_room.html#ae52f3746797cf8d1820d0aa487e31b86", null ]
+    [ "Subscriptions", "classskyway_1_1room_1_1abstract_1_1_room.html#ae21097f661fca6dfd7104e5d0d746fb6", null ],
+    [ "UpdateMetadata", "classskyway_1_1room_1_1abstract_1_1_room.html#ad5b08ea123c4ffd28d65736460a55206", null ]
 ];

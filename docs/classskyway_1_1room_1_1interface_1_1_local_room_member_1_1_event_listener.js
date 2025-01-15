@@ -1,6 +1,5 @@
 var classskyway_1_1room_1_1interface_1_1_local_room_member_1_1_event_listener =
 [
-    [ "~EventListener", "classskyway_1_1room_1_1interface_1_1_local_room_member_1_1_event_listener.html#a8cb04faa43a927b7365053ffd9cfcc37", null ],
     [ "OnPublicationSubscribed", "classskyway_1_1room_1_1interface_1_1_local_room_member_1_1_event_listener.html#a68b684ebc6ee29243d2236ae5ec097df", null ],
     [ "OnPublicationUnsubscribed", "classskyway_1_1room_1_1interface_1_1_local_room_member_1_1_event_listener.html#aea8f7a88586006a68cc969ea002b0c43", null ],
     [ "OnStreamPublished", "classskyway_1_1room_1_1interface_1_1_local_room_member_1_1_event_listener.html#a3521a07c8f608e825d1cf070728ffad2", null ],

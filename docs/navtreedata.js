@@ -25,10 +25,7 @@
 var NAVTREE =
 [
   [ "SkyWay for Linux", "index.html", [
-    [ "SkyWay SDK for Linux", "index.html", [
-      [ "LICENSE", "index.html#autotoc_md1", null ],
-      [ "商標", "index.html#autotoc_md2", null ]
-    ] ],
+    [ "SkyWay SDK for Linux", "index.html", "index" ],
     [ "非推奨一覧", "deprecated.html", null ],
     [ "クラス", "annotated.html", [
       [ "クラス一覧", "annotated.html", "annotated_dup" ],
@@ -50,9 +47,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "abstract_2local__room__member_8hpp_source.html",
-"classskyway_1_1core_1_1stream_1_1remote_1_1_remote_data_stream.html#a1ac1ec16702c4eafe94545c0fab537d7",
-"classskyway_1_1room_1_1interface_1_1_room_publication.html#afe616d67b2039695d76f780e17d208f4",
-"structskyway_1_1model_1_1_member.html#a8cf2a2b780930bff4cb5eb8c1c3f127f"
+"classskyway_1_1media_1_1_i420_video_renderer_1_1_listener.html#a784166f8773c8be354ef84718d4431d0",
+"dir_e1ec78302703b1ea091e6224bb907694.html"
 ];
 
 var SYNCONMSG = 'クリックで同期表示が無効になります';

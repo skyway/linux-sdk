@@ -69,10 +69,16 @@ var hierarchy =
       [ "skyway::plugin::remote_person::RemotePerson", "classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html", null ]
     ] ],
     [ "skyway::core::stream::remote::RemoteDataStream::Listener", "classskyway_1_1core_1_1stream_1_1remote_1_1_remote_data_stream_1_1_listener.html", null ],
+    [ "skyway::global::Logger::Listener", "classskyway_1_1global_1_1_logger_1_1_listener.html", null ],
     [ "skyway::media::I420VideoRenderer::Listener", "classskyway_1_1media_1_1_i420_video_renderer_1_1_listener.html", [
       [ "skyway::media::V4l2VideoRenderer", "classskyway_1_1media_1_1_v4l2_video_renderer.html", null ]
     ] ],
-    [ "skyway::global::interface::Logger", "classskyway_1_1global_1_1interface_1_1_logger.html", null ],
+    [ "skyway::global::interface::Logger", "classskyway_1_1global_1_1interface_1_1_logger.html", [
+      [ "skyway::global::Logger", "classskyway_1_1global_1_1_logger.html", null ]
+    ] ],
+    [ "rtc::LogSink", null, [
+      [ "skyway::global::Logger", "classskyway_1_1global_1_1_logger.html", null ]
+    ] ],
     [ "skyway::core::interface::Member", "classskyway_1_1core_1_1interface_1_1_member.html", [
       [ "skyway::core::interface::LocalPerson", "classskyway_1_1core_1_1interface_1_1_local_person.html", [
         [ "skyway::core::channel::member::LocalPerson", "classskyway_1_1core_1_1channel_1_1member_1_1_local_person.html", null ]
