@@ -12,13 +12,13 @@ var annotated_dup =
           [ "Channel", "classskyway_1_1core_1_1interface_1_1_channel.html", "classskyway_1_1core_1_1interface_1_1_channel" ],
           [ "LocalMediaStream", "classskyway_1_1core_1_1interface_1_1_local_media_stream.html", "classskyway_1_1core_1_1interface_1_1_local_media_stream" ],
           [ "LocalPerson", "classskyway_1_1core_1_1interface_1_1_local_person.html", "classskyway_1_1core_1_1interface_1_1_local_person" ],
-          [ "LocalStream", "classskyway_1_1core_1_1interface_1_1_local_stream.html", "classskyway_1_1core_1_1interface_1_1_local_stream" ],
+          [ "LocalStream", "classskyway_1_1core_1_1interface_1_1_local_stream.html", null ],
           [ "Member", "classskyway_1_1core_1_1interface_1_1_member.html", "classskyway_1_1core_1_1interface_1_1_member" ],
           [ "Publication", "classskyway_1_1core_1_1interface_1_1_publication.html", "classskyway_1_1core_1_1interface_1_1_publication" ],
           [ "RemoteMediaStream", "classskyway_1_1core_1_1interface_1_1_remote_media_stream.html", "classskyway_1_1core_1_1interface_1_1_remote_media_stream" ],
-          [ "RemoteMember", "classskyway_1_1core_1_1interface_1_1_remote_member.html", "classskyway_1_1core_1_1interface_1_1_remote_member" ],
+          [ "RemoteMember", "classskyway_1_1core_1_1interface_1_1_remote_member.html", null ],
           [ "RemoteMemberPlugin", "classskyway_1_1core_1_1interface_1_1_remote_member_plugin.html", "classskyway_1_1core_1_1interface_1_1_remote_member_plugin" ],
-          [ "RemoteStream", "classskyway_1_1core_1_1interface_1_1_remote_stream.html", "classskyway_1_1core_1_1interface_1_1_remote_stream" ],
+          [ "RemoteStream", "classskyway_1_1core_1_1interface_1_1_remote_stream.html", null ],
           [ "Stream", "classskyway_1_1core_1_1interface_1_1_stream.html", "classskyway_1_1core_1_1interface_1_1_stream" ],
           [ "Subscription", "classskyway_1_1core_1_1interface_1_1_subscription.html", "classskyway_1_1core_1_1interface_1_1_subscription" ]
         ] ],
@@ -43,25 +43,26 @@ var annotated_dup =
         [ "interface", null, [
           [ "Logger", "classskyway_1_1global_1_1interface_1_1_logger.html", "classskyway_1_1global_1_1interface_1_1_logger" ]
         ] ],
-        [ "Error", "structskyway_1_1global_1_1_error.html", "structskyway_1_1global_1_1_error" ]
+        [ "Error", "structskyway_1_1global_1_1_error.html", null ],
+        [ "Logger", "classskyway_1_1global_1_1_logger.html", "classskyway_1_1global_1_1_logger" ]
       ] ],
       [ "media", null, [
         [ "DeviceManager", "classskyway_1_1media_1_1_device_manager.html", "classskyway_1_1media_1_1_device_manager" ],
-        [ "I420VideoRendererOptions", "structskyway_1_1media_1_1_i420_video_renderer_options.html", "structskyway_1_1media_1_1_i420_video_renderer_options" ],
         [ "I420VideoRenderer", "classskyway_1_1media_1_1_i420_video_renderer.html", "classskyway_1_1media_1_1_i420_video_renderer" ],
+        [ "I420VideoRendererOptions", "structskyway_1_1media_1_1_i420_video_renderer_options.html", "structskyway_1_1media_1_1_i420_video_renderer_options" ],
         [ "StreamFactory", "classskyway_1_1media_1_1_stream_factory.html", "classskyway_1_1media_1_1_stream_factory" ],
-        [ "V4l2VideoRendererOptions", "structskyway_1_1media_1_1_v4l2_video_renderer_options.html", "structskyway_1_1media_1_1_v4l2_video_renderer_options" ],
-        [ "V4l2VideoRenderer", "classskyway_1_1media_1_1_v4l2_video_renderer.html", "classskyway_1_1media_1_1_v4l2_video_renderer" ]
+        [ "V4l2VideoRenderer", "classskyway_1_1media_1_1_v4l2_video_renderer.html", "classskyway_1_1media_1_1_v4l2_video_renderer" ],
+        [ "V4l2VideoRendererOptions", "structskyway_1_1media_1_1_v4l2_video_renderer_options.html", "structskyway_1_1media_1_1_v4l2_video_renderer_options" ]
       ] ],
       [ "model", null, [
+        [ "Channel", "structskyway_1_1model_1_1_channel.html", "structskyway_1_1model_1_1_channel" ],
         [ "Codec", "structskyway_1_1model_1_1_codec.html", "structskyway_1_1model_1_1_codec" ],
         [ "Encoding", "structskyway_1_1model_1_1_encoding.html", "structskyway_1_1model_1_1_encoding" ],
         [ "Member", "structskyway_1_1model_1_1_member.html", "structskyway_1_1model_1_1_member" ],
         [ "Publication", "structskyway_1_1model_1_1_publication.html", "structskyway_1_1model_1_1_publication" ],
         [ "Subscription", "structskyway_1_1model_1_1_subscription.html", "structskyway_1_1model_1_1_subscription" ],
-        [ "Channel", "structskyway_1_1model_1_1_channel.html", "structskyway_1_1model_1_1_channel" ],
-        [ "WebRTCStatsReport", "structskyway_1_1model_1_1_web_r_t_c_stats_report.html", "structskyway_1_1model_1_1_web_r_t_c_stats_report" ],
-        [ "WebRTCStats", "structskyway_1_1model_1_1_web_r_t_c_stats.html", "structskyway_1_1model_1_1_web_r_t_c_stats" ]
+        [ "WebRTCStats", "structskyway_1_1model_1_1_web_r_t_c_stats.html", "structskyway_1_1model_1_1_web_r_t_c_stats" ],
+        [ "WebRTCStatsReport", "structskyway_1_1model_1_1_web_r_t_c_stats_report.html", "structskyway_1_1model_1_1_web_r_t_c_stats_report" ]
       ] ],
       [ "plugin", null, [
         [ "remote_person", null, [
@@ -69,8 +70,8 @@ var annotated_dup =
           [ "RemotePerson", "classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html", "classskyway_1_1plugin_1_1remote__person_1_1_remote_person" ]
         ] ],
         [ "unknown_plugin", null, [
-          [ "UnknownMember", "classskyway_1_1plugin_1_1unknown__plugin_1_1_unknown_member.html", "classskyway_1_1plugin_1_1unknown__plugin_1_1_unknown_member" ],
-          [ "Plugin", "classskyway_1_1plugin_1_1unknown__plugin_1_1_plugin.html", "classskyway_1_1plugin_1_1unknown__plugin_1_1_plugin" ]
+          [ "Plugin", "classskyway_1_1plugin_1_1unknown__plugin_1_1_plugin.html", "classskyway_1_1plugin_1_1unknown__plugin_1_1_plugin" ],
+          [ "UnknownMember", "classskyway_1_1plugin_1_1unknown__plugin_1_1_unknown_member.html", null ]
         ] ]
       ] ],
       [ "room", null, [
@@ -82,12 +83,12 @@ var annotated_dup =
         [ "interface", null, [
           [ "LocalRoomMember", "classskyway_1_1room_1_1interface_1_1_local_room_member.html", "classskyway_1_1room_1_1interface_1_1_local_room_member" ],
           [ "RemoteRoomMember", "classskyway_1_1room_1_1interface_1_1_remote_room_member.html", "classskyway_1_1room_1_1interface_1_1_remote_room_member" ],
-          [ "RoomInitOptions", "structskyway_1_1room_1_1interface_1_1_room_init_options.html", "structskyway_1_1room_1_1interface_1_1_room_init_options" ],
-          [ "RoomQuery", "structskyway_1_1room_1_1interface_1_1_room_query.html", "structskyway_1_1room_1_1interface_1_1_room_query" ],
-          [ "RoomMemberInitOptions", "structskyway_1_1room_1_1interface_1_1_room_member_init_options.html", "structskyway_1_1room_1_1interface_1_1_room_member_init_options" ],
           [ "Room", "classskyway_1_1room_1_1interface_1_1_room.html", "classskyway_1_1room_1_1interface_1_1_room" ],
+          [ "RoomInitOptions", "structskyway_1_1room_1_1interface_1_1_room_init_options.html", "structskyway_1_1room_1_1interface_1_1_room_init_options" ],
           [ "RoomMember", "classskyway_1_1room_1_1interface_1_1_room_member.html", "classskyway_1_1room_1_1interface_1_1_room_member" ],
+          [ "RoomMemberInitOptions", "structskyway_1_1room_1_1interface_1_1_room_member_init_options.html", "structskyway_1_1room_1_1interface_1_1_room_member_init_options" ],
           [ "RoomPublication", "classskyway_1_1room_1_1interface_1_1_room_publication.html", "classskyway_1_1room_1_1interface_1_1_room_publication" ],
+          [ "RoomQuery", "structskyway_1_1room_1_1interface_1_1_room_query.html", "structskyway_1_1room_1_1interface_1_1_room_query" ],
           [ "RoomSubscription", "classskyway_1_1room_1_1interface_1_1_room_subscription.html", "classskyway_1_1room_1_1interface_1_1_room_subscription" ]
         ] ],
         [ "p2p", null, [
