@@ -1,8 +1,0 @@
-var structrtc_1_1internal_1_1_static_range_check_3_01_dst_00_01_src_00_01_d_s_t___s_i_g_n_e_d_00_01_s_r_c___u_n_s_i_g_n_e_d_01_4 =
-[
-    [ "DstLimits", "structrtc_1_1internal_1_1_static_range_check_3_01_dst_00_01_src_00_01_d_s_t___s_i_g_n_e_d_00_01_s_r_c___u_n_s_i_g_n_e_d_01_4.html#af9bf42e59661c335642dcf0ee4070630", null ],
-    [ "SrcLimits", "structrtc_1_1internal_1_1_static_range_check_3_01_dst_00_01_src_00_01_d_s_t___s_i_g_n_e_d_00_01_s_r_c___u_n_s_i_g_n_e_d_01_4.html#aa22ace12e0572b42623b70495a70fe67", null ],
-    [ "kDstMaxExponent", "structrtc_1_1internal_1_1_static_range_check_3_01_dst_00_01_src_00_01_d_s_t___s_i_g_n_e_d_00_01_s_r_c___u_n_s_i_g_n_e_d_01_4.html#a01c532616c663f901680c9872d5069b7", null ],
-    [ "kSrcMaxExponent", "structrtc_1_1internal_1_1_static_range_check_3_01_dst_00_01_src_00_01_d_s_t___s_i_g_n_e_d_00_01_s_r_c___u_n_s_i_g_n_e_d_01_4.html#a860a82e72081d8676e733114cdefcac8", null ],
-    [ "value", "structrtc_1_1internal_1_1_static_range_check_3_01_dst_00_01_src_00_01_d_s_t___s_i_g_n_e_d_00_01_s_r_c___u_n_s_i_g_n_e_d_01_4.html#aa3409536413d217d2ab6436ec16b64de", null ]
-];

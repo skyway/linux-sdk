@@ -1,8 +1,0 @@
-var structrtc_1_1internal_1_1_static_range_check_3_01_dst_00_01_src_00_01_d_s_t___s_i_g_n_e_d_00_01_s_r_c___s_i_g_n_e_d_01_4 =
-[
-    [ "DstLimits", "structrtc_1_1internal_1_1_static_range_check_3_01_dst_00_01_src_00_01_d_s_t___s_i_g_n_e_d_00_01_s_r_c___s_i_g_n_e_d_01_4.html#a755ee5bf00630175713d395f8c50f252", null ],
-    [ "SrcLimits", "structrtc_1_1internal_1_1_static_range_check_3_01_dst_00_01_src_00_01_d_s_t___s_i_g_n_e_d_00_01_s_r_c___s_i_g_n_e_d_01_4.html#a72c091e67d69b094381a2f1efd80a542", null ],
-    [ "kDstMaxExponent", "structrtc_1_1internal_1_1_static_range_check_3_01_dst_00_01_src_00_01_d_s_t___s_i_g_n_e_d_00_01_s_r_c___s_i_g_n_e_d_01_4.html#a2dc449fa17f9106ee8d4dad5d8d7f7ae", null ],
-    [ "kSrcMaxExponent", "structrtc_1_1internal_1_1_static_range_check_3_01_dst_00_01_src_00_01_d_s_t___s_i_g_n_e_d_00_01_s_r_c___s_i_g_n_e_d_01_4.html#a65fcc405f472ce75e8ab6f36b5f0c597", null ],
-    [ "value", "structrtc_1_1internal_1_1_static_range_check_3_01_dst_00_01_src_00_01_d_s_t___s_i_g_n_e_d_00_01_s_r_c___s_i_g_n_e_d_01_4.html#ad910cec8b3a2d61fe90abf6e14665949", null ]
-];

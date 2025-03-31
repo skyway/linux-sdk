@@ -1,4 +1,0 @@
-var structinternal_1_1_deleter_impl_3_01_stack_00_01std_1_1enable__if__t_3_01_stack_traits_3_01_stack_01_4_1_1k_is_const_01_4_01_4 =
-[
-    [ "Free", "structinternal_1_1_deleter_impl_3_01_stack_00_01std_1_1enable__if__t_3_01_stack_traits_3_01_stack_01_4_1_1k_is_const_01_4_01_4.html#acf3279e155a0fdc3207281f05ce019d2", null ]
-];
