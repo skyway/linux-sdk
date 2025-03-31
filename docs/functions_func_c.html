@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.8.17 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('functions_func_c.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,359 +87,38 @@ $(document).ready(function(){initNavTree('functions_func_c.html',''); initResiza
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="contents">
-&#160;
+<div class="textblock">&#160;</div>
 
-<h3><a id="index_c"></a>- c -</h3><ul>
-<li>c_str()
-: <a class="el" href="classboost_1_1beast_1_1static__string.html#ac086d298ed81d31e619246b5fb96ed3b">boost::beast::static_string&lt; N, CharT, Traits &gt;</a>
-</li>
-<li>cancel()
-: <a class="el" href="classboost_1_1asio_1_1basic__socket.html#ab483b95225cee6da4050bbd71f22949e">boost::asio::basic_socket&lt; Protocol, Executor &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1basic__socket__acceptor.html#ab908afbdce0059082f8e85dec45d4c53">boost::asio::basic_socket_acceptor&lt; Protocol, Executor &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1basic__waitable__timer.html#a723a7496d625acf607df63de07900cf1">boost::asio::basic_waitable_timer&lt; Clock, WaitTraits, Executor &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1ip_1_1basic__resolver.html#a6c1232a1ac86579a3ad0dc64d1d581d2">boost::asio::ip::basic_resolver&lt; InternetProtocol, Executor &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1basic__stream.html#a88493d0b533c4d055d9f91793c0aa3c6">boost::beast::basic_stream&lt; Protocol, Executor, RatePolicy &gt;</a>
-</li>
-<li>Cancel()
-: <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html#a89a549a3979e7b1bc8a1140b18a79f3e">skyway::core::interface::Publication</a>
-, <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html#a946d0d66845450217a94f761d74ac05c">skyway::core::interface::Subscription</a>
-, <a class="el" href="classskyway_1_1core_1_1_publication.html#a8d28b7e1e13b4eb9d3b6899fe10fff9f">skyway::core::Publication</a>
-, <a class="el" href="classskyway_1_1core_1_1_subscription.html#aedde056c6478297b32b396924728c0c5">skyway::core::Subscription</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html#aba2de3d7714fd08001e75220c20671f1">skyway::room::interface::RoomPublication</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a29c7317e47219f315f1fd810a408770a">skyway::room::interface::RoomSubscription</a>
-, <a class="el" href="classskyway_1_1room_1_1_room_publication.html#af514237feb237e1ebcb9a6ce161f13e5">skyway::room::RoomPublication</a>
-, <a class="el" href="classskyway_1_1room_1_1_room_subscription.html#ae4e56aa8055e833562ff739318ecf44d">skyway::room::RoomSubscription</a>
-</li>
-<li>cancel_one()
-: <a class="el" href="classboost_1_1asio_1_1basic__waitable__timer.html#a7d29b6200e8af5d6d3786f4f637ae51e">boost::asio::basic_waitable_timer&lt; Clock, WaitTraits, Executor &gt;</a>
-</li>
-<li>capacity()
-: <a class="el" href="classboost_1_1asio_1_1dynamic__string__buffer.html#af060149992fcda017f20f642a25555a4">boost::asio::dynamic_string_buffer&lt; Elem, Traits, Allocator &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1dynamic__vector__buffer.html#ae752e73df2652c8423b14b1c711e2b11">boost::asio::dynamic_vector_buffer&lt; Elem, Allocator &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1ip_1_1basic__endpoint.html#a9a9329ab9e64db304c050881961c6f85">boost::asio::ip::basic_endpoint&lt; InternetProtocol &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1basic__flat__buffer.html#a7d97358ecd8fd7241b2665b58a25334f">boost::beast::basic_flat_buffer&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1basic__multi__buffer.html#aaf0ea59be121e9c798e773532a8ebe6f">boost::beast::basic_multi_buffer&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1buffered__read__stream.html#af21d2b18860e7c7551ac906f3f889b0a">boost::beast::buffered_read_stream&lt; Stream, DynamicBuffer &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1buffers__adaptor.html#a7e703326e1c818753882afe027ae9224">boost::beast::buffers_adaptor&lt; MutableBufferSequence &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1flat__static__buffer.html#a11618d244f35cd5426a163014f8451e9">boost::beast::flat_static_buffer&lt; N &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1flat__static__buffer__base.html#ab653122058fd82df564ed6eb2d1796ee">boost::beast::flat_static_buffer_base</a>
-, <a class="el" href="classboost_1_1beast_1_1static__buffer.html#a5de950894d665df78cba5673f5a5ee9e">boost::beast::static_buffer&lt; N &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1static__buffer__base.html#ac9470d21fb196fec7948310e37f02c4f">boost::beast::static_buffer_base</a>
-, <a class="el" href="classboost_1_1beast_1_1static__string.html#a38d60a061b3d989de5fdf137fe9beade">boost::beast::static_string&lt; N, CharT, Traits &gt;</a>
-</li>
-<li>capture_current_exception()
-: <a class="el" href="classboost_1_1asio_1_1detail_1_1scheduler.html#ad800eca4d6eefebff57fbbebdad08b12">boost::asio::detail::scheduler</a>
-</li>
-<li>cbegin()
-: <a class="el" href="classboost_1_1asio_1_1ip_1_1basic__resolver__results.html#a1d7e157a9cad802c62123ba95404b17f">boost::asio::ip::basic_resolver_results&lt; InternetProtocol &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1basic__fields.html#a4ec603baaee73ba51a6477df655b166f">boost::beast::http::basic_fields&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1detail_1_1basic__parsed__list.html#af0b87817312ef6eb0e1b7ed6c9f5156c">boost::beast::http::detail::basic_parsed_list&lt; Policy &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1ext__list.html#a6fd43c177343719ca4964bad319eb676">boost::beast::http::ext_list</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1param__list.html#aa9c712098fa8debdf780b908ee6b3b1c">boost::beast::http::param_list</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1token__list.html#abb2673d13893d05cddf50ab04d55b62d">boost::beast::http::token_list</a>
-, <a class="el" href="classboost_1_1beast_1_1span.html#a93902fa028b62d2f121217e99b3a4dc0">boost::beast::span&lt; T &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1static__string.html#a87f9c4811c9f5f16c0274ec93950e03c">boost::beast::static_string&lt; N, CharT, Traits &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1list__impl.html#adc17ab4f4ca5c3817adf62960dec3d40">boost::intrusive::list_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
-</li>
-<li>cdata()
-: <a class="el" href="classboost_1_1beast_1_1basic__flat__buffer.html#a952cb33d8c9eda8090e074f655aaba97">boost::beast::basic_flat_buffer&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1basic__multi__buffer.html#a7ad5d6b7c6a4e033e1c329ba8cf274ef">boost::beast::basic_multi_buffer&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1buffers__adaptor.html#ad7850649a7ac6dfedbed5e6d820c4af8">boost::beast::buffers_adaptor&lt; MutableBufferSequence &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1flat__static__buffer__base.html#adabc35a0f7ead396398413ce1aa885b3">boost::beast::flat_static_buffer_base</a>
-, <a class="el" href="classboost_1_1beast_1_1static__buffer__base.html#acf2a89d409c67b35fd97a7576bec6959">boost::beast::static_buffer_base</a>
-</li>
-<li>cend()
-: <a class="el" href="classboost_1_1asio_1_1ip_1_1basic__resolver__results.html#a3927f9db701734a1238206cfd0c8a255">boost::asio::ip::basic_resolver_results&lt; InternetProtocol &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1basic__fields.html#ae2fcf17e740c3032a192376196305c90">boost::beast::http::basic_fields&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1detail_1_1basic__parsed__list.html#a7582328fe9c01cb1e277cfd7075bc7a9">boost::beast::http::detail::basic_parsed_list&lt; Policy &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1ext__list.html#a21a8968d52c0bef8d9617d8efc25956d">boost::beast::http::ext_list</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1param__list.html#a26121b1047692c10feacf79756f60ded">boost::beast::http::param_list</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1token__list.html#a5c14bc72c54e92c72e0aff217bfab24b">boost::beast::http::token_list</a>
-, <a class="el" href="classboost_1_1beast_1_1span.html#a0e6546324e9e0f163aed0d24d763758a">boost::beast::span&lt; T &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1static__string.html#a4c3e152fd42c1c92383085c4983b451e">boost::beast::static_string&lt; N, CharT, Traits &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1list__impl.html#ab683bf5010edc6008b3c6e0adbc33b70">boost::intrusive::list_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
-</li>
-<li>ChangePreferredEncoding()
-: <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html#a1d481353896e7ff6bda5cea5b7983ed1">skyway::core::interface::Subscription</a>
-, <a class="el" href="classskyway_1_1core_1_1_subscription.html#a2586a488dcd566eecb6ca3de8ed0ca01">skyway::core::Subscription</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a402623fe8b40d997969f7182cefcb210">skyway::room::interface::RoomSubscription</a>
-, <a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a96f7ad3c2647c9d26795e6a911ee0611">skyway::room::RoomSubscription</a>
-</li>
-<li>check()
-: <a class="el" href="classboost_1_1intrusive_1_1bstree__algorithms.html#a12f1a9f055d1ebf3e41751670d2d1bfb">boost::intrusive::bstree_algorithms&lt; NodeTraits &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#ae8158cd092a57467374db8931be9125c">boost::intrusive::bstree_impl&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1list__impl.html#a7ae0ab138848f3a6fbe7da6f44617a75">boost::intrusive::list_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
-</li>
-<li>chunk_body()
-: <a class="el" href="classboost_1_1beast_1_1http_1_1chunk__body.html#a5a13df6d61ce5dae7cd9f59c7d185bfb">boost::beast::http::chunk_body&lt; ConstBufferSequence &gt;</a>
-</li>
-<li>chunk_crlf()
-: <a class="el" href="structboost_1_1beast_1_1http_1_1chunk__crlf.html#a73f860d9eb7475487689750254baef35">boost::beast::http::chunk_crlf</a>
-</li>
-<li>chunk_header()
-: <a class="el" href="classboost_1_1beast_1_1http_1_1chunk__header.html#a1683073ed6b528f578985f7d4f1afe1b">boost::beast::http::chunk_header</a>
-</li>
-<li>chunk_last()
-: <a class="el" href="classboost_1_1beast_1_1http_1_1chunk__last.html#aea24531bae8754b7619e50f73dfd46f9">boost::beast::http::chunk_last&lt; Trailer &gt;</a>
-</li>
-<li>chunk_size()
-: <a class="el" href="classboost_1_1beast_1_1http_1_1detail_1_1chunk__size.html#ada7f7eea86505d06b2bb35643ffae00d">boost::beast::http::detail::chunk_size</a>
-</li>
-<li>chunked()
-: <a class="el" href="classboost_1_1beast_1_1http_1_1basic__parser.html#a13ef707ae9e6564a1137336a75962bf7">boost::beast::http::basic_parser&lt; isRequest &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1message.html#ab1dc74343d680dc3f9e79fe49fb0153d">boost::beast::http::message&lt; isRequest, Body, Fields &gt;</a>
-</li>
-<li>ChunkMessenger()
-: <a class="el" href="classskyway_1_1core_1_1chunk__messenger_1_1_chunk_messenger.html#a1ff96f6805926e446550a55bd7b149a8">skyway::core::chunk_messenger::ChunkMessenger</a>
-</li>
-<li>clear()
-: <a class="el" href="classboost_1_1beast_1_1basic__flat__buffer.html#a76bb49fbe5ba1596b2157e57496aa574">boost::beast::basic_flat_buffer&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1basic__multi__buffer.html#a9cbacd096aa3236e5ff69b0e7e9adfce">boost::beast::basic_multi_buffer&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1flat__static__buffer__base.html#ac88fd4a267652b30dda8cd8efb7a0146">boost::beast::flat_static_buffer_base</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1basic__chunk__extensions.html#a461ca4e38ae74ec58f25e2becca5f9df">boost::beast::http::basic_chunk_extensions&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1basic__fields.html#a612de1b0bf65e42f4a20766bca4e291e">boost::beast::http::basic_fields&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1static__buffer__base.html#ab9b1fdc2deb297a08b7f154ec3872d62">boost::beast::static_buffer_base</a>
-, <a class="el" href="classboost_1_1beast_1_1static__string.html#ad60662f5bf8cbfc63e1db3fee101f38f">boost::beast::static_string&lt; N, CharT, Traits &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1zlib_1_1deflate__stream.html#aa6071054d8afa58af247951e1f8ae97d">boost::beast::zlib::deflate_stream</a>
-, <a class="el" href="classboost_1_1beast_1_1zlib_1_1inflate__stream.html#a5c0b9b0343cc550d7413c1dd59b712af">boost::beast::zlib::inflate_stream</a>
-, <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a345d2ebef0118fa5d9851f908036f3a8">boost::intrusive::bstree_impl&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1list__impl.html#a5666d7343a0e7bad0ad0f1869c90e1b2">boost::intrusive::list_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
-</li>
-<li>clear_and_dispose()
-: <a class="el" href="classboost_1_1intrusive_1_1bstree__algorithms.html#ab04747a10e259d548d5cc3282c3c869f">boost::intrusive::bstree_algorithms&lt; NodeTraits &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a4e70822b3955f9b775f01236be462f48">boost::intrusive::bstree_impl&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1list__impl.html#a0b07cfbe98383d57a8c27a8e389c13fc">boost::intrusive::list_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
-</li>
-<li>clear_options()
-: <a class="el" href="classboost_1_1asio_1_1ssl_1_1context.html#ad7263f29e84602fda039bd7ab4c252a1">boost::asio::ssl::context</a>
-</li>
-<li>clear_subtype()
-: <a class="el" href="classbyte__container__with__subtype.html#ad18f6a7557a2bfce28f1ed8d4d10607c">byte_container_with_subtype&lt; BinaryType &gt;</a>
-</li>
-<li>clone()
-: <a class="el" href="classboost_1_1intrusive_1_1bstree__algorithms.html#aa30f2c6286d1e4ea88700546424af95b">boost::intrusive::bstree_algorithms&lt; NodeTraits &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1rbtree__algorithms.html#aed4a40d50fd039846d3cff730c7b31e3">boost::intrusive::rbtree_algorithms&lt; NodeTraits &gt;</a>
-</li>
-<li>clone_from()
-: <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a1fdbdbccba221eae64c2b57fc0b4c5a2">boost::intrusive::bstree_impl&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1list__impl.html#afd28996ec25e7c810d7c867e66e1fa3e">boost::intrusive::list_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1multiset__impl.html#a24531396c41bb02ef11a851c95341bba">boost::intrusive::multiset_impl&lt; ValueTraits, VoidOrKeyOfValue, Compare, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1rbtree__impl.html#a5f92d2c5d302428ce949757e3813bed6">boost::intrusive::rbtree_impl&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1set__impl.html#a3b67e9b22de80d419ff80009d1b18466">boost::intrusive::set_impl&lt; ValueTraits, VoidOrKeyOfValue, Compare, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
-</li>
-<li>close()
-: <a class="el" href="classboost_1_1asio_1_1basic__socket.html#a891d6c735d254dcc69d813fd9d8a4cea">boost::asio::basic_socket&lt; Protocol, Executor &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1basic__socket__acceptor.html#a2c3c466a8287fbc062a8865def4c7d62">boost::asio::basic_socket_acceptor&lt; Protocol, Executor &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1basic__socket__iostream.html#a0c364c343f3671ee2242506a429c48c7">boost::asio::basic_socket_iostream&lt; Protocol, Clock, WaitTraits &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1basic__socket__streambuf.html#aadf45b3006ad095718aca6598f8f80ad">boost::asio::basic_socket_streambuf&lt; Protocol, Clock, WaitTraits &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1basic__stream.html#a8cfbc568c55fdef3c5cd60b2071d221a">boost::beast::basic_stream&lt; Protocol, Executor, RatePolicy &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1file__stdio.html#aac0c078c64ed385160d1ae6387310882">boost::beast::file_stdio</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1basic__file__body_1_1value__type.html#aa6d3c852f14710cdcff7ae31f8f97aa6">boost::beast::http::basic_file_body&lt; File &gt;::value_type</a>
-, <a class="el" href="classboost_1_1beast_1_1websocket_1_1stream.html#a5e5fe1bfe3738755b3d803e14a34c441">boost::beast::websocket::stream&lt; NextLayer, deflateSupported &gt;</a>
-</li>
-<li>Close()
-: <a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a62eedbaddc908e7f06398355305529ab">skyway::core::channel::Channel</a>
-, <a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a79b779d3526e16620749d1fc7424cffa">skyway::core::interface::Channel</a>
-, <a class="el" href="classskyway_1_1network_1_1interface_1_1_web_socket_client.html#a6afae60a84d08ece3414051223109058">skyway::network::interface::WebSocketClient</a>
-, <a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#aa8ff369a3d2eefa00c847cb5a37c350d">skyway::room::abstract::Room</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#a1da8a4a619516ab94a794d1e477147c4">skyway::room::interface::Room</a>
-</li>
-<li>close_reason()
-: <a class="el" href="structboost_1_1beast_1_1websocket_1_1close__reason.html#ad55b5f14e283af01084af28e6b316190">boost::beast::websocket::close_reason</a>
-</li>
-<li>CodecCapabilities()
-: <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html#aecbc929e907906a41b2fd346dca1bb68">skyway::core::interface::Publication</a>
-, <a class="el" href="classskyway_1_1core_1_1_publication.html#a1fab2c57ef285637205f8a37fbbf3fe0">skyway::core::Publication</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html#aed28674b28651b889cd7ecf794c1645f">skyway::room::interface::RoomPublication</a>
-, <a class="el" href="classskyway_1_1room_1_1_room_publication.html#ab35cb4bf8599fd1409ba7219c7aabbd4">skyway::room::RoomPublication</a>
-</li>
-<li>commit()
-: <a class="el" href="classboost_1_1asio_1_1dynamic__string__buffer.html#a0250e3e9ddae7c5cb0c2969c9b2b72f1">boost::asio::dynamic_string_buffer&lt; Elem, Traits, Allocator &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1dynamic__vector__buffer.html#a5637a4ea3f92de916f7422c59ffeef5b">boost::asio::dynamic_vector_buffer&lt; Elem, Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1basic__flat__buffer.html#a2d941e070be2625c1d8347dfc0187c8c">boost::beast::basic_flat_buffer&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1basic__multi__buffer.html#a75c380fdf77c5d5ef5aae090ba80ecdf">boost::beast::basic_multi_buffer&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1buffers__adaptor.html#a70848ae781b252b2f512329556bb9a12">boost::beast::buffers_adaptor&lt; MutableBufferSequence &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a697e3e27ec22c149bcabbb62e59da59b">boost::beast::flat_static_buffer_base</a>
-, <a class="el" href="classboost_1_1beast_1_1static__buffer__base.html#a9140da10b859a8ccabd07593d1a3889c">boost::beast::static_buffer_base</a>
-</li>
-<li>complete()
-: <a class="el" href="classboost_1_1beast_1_1async__base.html#ad29215ff56ff262e4703ec56dd973166">boost::beast::async_base&lt; Handler, Executor1, Allocator &gt;</a>
-</li>
-<li>complete_now()
-: <a class="el" href="classboost_1_1beast_1_1async__base.html#a264c45bc7c0def00869cc0984ac2bee8">boost::beast::async_base&lt; Handler, Executor1, Allocator &gt;</a>
-</li>
-<li>Configure()
-: <a class="el" href="classskyway_1_1plugin_1_1sfu__bot_1_1_forwarding.html#a8b9268d524182b255c85f99d96be8cdf">skyway::plugin::sfu_bot::Forwarding</a>
-</li>
-<li>connect()
-: <a class="el" href="classboost_1_1asio_1_1basic__socket.html#ad5d9e6cfd96361232a4278bfbf15d789">boost::asio::basic_socket&lt; Protocol, Executor &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1basic__socket__streambuf.html#af646d1aef5601b447db157531694e366">boost::asio::basic_socket_streambuf&lt; Protocol, Clock, WaitTraits &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1basic__stream.html#aba6155abe5ec0abcbc7aa8a82510915e">boost::beast::basic_stream&lt; Protocol, Executor, RatePolicy &gt;</a>
-</li>
-<li>Connect()
-: <a class="el" href="classskyway_1_1analytics_1_1interface_1_1_socket.html#a5f7a8dfb6a259b4bb9344ea3f53a9deb">skyway::analytics::interface::Socket</a>
-, <a class="el" href="classskyway_1_1analytics_1_1_socket.html#a2c805edb51bd32c07e265e95f702be98">skyway::analytics::Socket</a>
-, <a class="el" href="classskyway_1_1core_1_1chunk__messenger_1_1_chunk_messenger.html#a25e8ea9035b08a44aa9299f06ab7d558">skyway::core::chunk_messenger::ChunkMessenger</a>
-, <a class="el" href="classskyway_1_1core_1_1interface_1_1_chunk_messenger.html#ae85fec6f3888fbcff170a863293509f4">skyway::core::interface::ChunkMessenger</a>
-, <a class="el" href="classskyway_1_1network_1_1interface_1_1_web_socket_client.html#a59874943cffda31af74a6515ac304582">skyway::network::interface::WebSocketClient</a>
-, <a class="el" href="classskyway_1_1rtc__api_1_1_client.html#a1a20fbdcf087431e27e07f484d97f7b3">skyway::rtc_api::Client</a>
-, <a class="el" href="classskyway_1_1rtc__api_1_1interface_1_1_client.html#a1988bde85c7b0f493dda5ee87cce1aa4">skyway::rtc_api::interface::Client</a>
-, <a class="el" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client.html#a6e0a0003ed6d9e3e0508155eabc6bfa9">skyway::signaling::interface::SignalingClient</a>
-, <a class="el" href="classskyway_1_1signaling_1_1interface_1_1_socket.html#a84506b4fc170f927cacde980b2dd70fb">skyway::signaling::interface::Socket</a>
-, <a class="el" href="classskyway_1_1signaling_1_1_signaling_client.html#abaf08578064b72d8320312fb87f2d989">skyway::signaling::SignalingClient</a>
-, <a class="el" href="classskyway_1_1signaling_1_1_socket.html#a709b2060b28631ffa92c905e32dc2884">skyway::signaling::Socket</a>
-</li>
-<li>ConnectAsync()
-: <a class="el" href="classskyway_1_1analytics_1_1interface_1_1_analytics_client.html#a33f95599f3925a998a35af155d26e75e">skyway::analytics::interface::AnalyticsClient</a>
-</li>
-<li>const_buffer()
-: <a class="el" href="classboost_1_1asio_1_1const__buffer.html#ac1aa6256367ebd26490b1bc794ae8f4c">boost::asio::const_buffer</a>
-</li>
-<li>const_buffers_1()
-: <a class="el" href="classboost_1_1asio_1_1const__buffers__1.html#ac47f270f46f6cfeb8928e0e9aedff5c6">boost::asio::const_buffers_1</a>
-</li>
-<li>const_cast_from()
-: <a class="el" href="structboost_1_1intrusive_1_1pointer__traits.html#a3d311599aa469f253932bdd3fbc81819">boost::intrusive::pointer_traits&lt; Ptr &gt;</a>
-, <a class="el" href="structboost_1_1intrusive_1_1pointer__traits_3_01_t_01_5_01_4.html#a8125bccbf5affc6916cbdfcd07ee9558">boost::intrusive::pointer_traits&lt; T * &gt;</a>
-</li>
-<li>consume()
-: <a class="el" href="classboost_1_1asio_1_1dynamic__string__buffer.html#a0aef18bcbf7fe7192d285d817095f0bb">boost::asio::dynamic_string_buffer&lt; Elem, Traits, Allocator &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1dynamic__vector__buffer.html#a93a8e61ad3eafca8f6228bc483e45a8d">boost::asio::dynamic_vector_buffer&lt; Elem, Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1basic__flat__buffer.html#ac5ea3b56ffbb776680b132d9129d5b60">boost::beast::basic_flat_buffer&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1basic__multi__buffer.html#a9c3e2942f0eae34090638b77521896ef">boost::beast::basic_multi_buffer&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1buffers__adaptor.html#a9238b1561c8d47501fc36ced9da3d23c">boost::beast::buffers_adaptor&lt; MutableBufferSequence &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1buffers__suffix.html#a125aedd503881e54b5e07ea5992204af">boost::beast::buffers_suffix&lt; BufferSequence &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a246eb316f06cd6e1a2164a7e4c376b0e">boost::beast::flat_static_buffer_base</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1serializer.html#ab0b3b59938e012458cec3d3764d90bb9">boost::beast::http::serializer&lt; isRequest, Body, Fields &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1static__buffer__base.html#a0b54e0eab5e1f5e5d194fca28eca5de3">boost::beast::static_buffer_base</a>
-</li>
-<li>container_from_end_iterator()
-: <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#ac6442b2bd7acd7acd10eeb1453bc13c5">boost::intrusive::bstree_impl&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1list__impl.html#a1432b9781e8f4525d61d0a529f37d03c">boost::intrusive::list_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
-</li>
-<li>container_from_iterator()
-: <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a8d29e4f24b05de864c90df3a559dc6b6">boost::intrusive::bstree_impl&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;</a>
-</li>
-<li>contains()
-: <a class="el" href="classbasic__json.html#af01962558c1fcb35b67c1f34bd230288">basic_json</a>
-, <a class="el" href="classboost_1_1date__time_1_1period.html#a84ee29c946625e8b4eb3949245232b63">boost::date_time::period&lt; point_rep, duration_rep &gt;</a>
-</li>
-<li>content_length()
-: <a class="el" href="classboost_1_1beast_1_1http_1_1basic__parser.html#a3be5a827eed5160aeb11dc4b8d1443e4">boost::beast::http::basic_parser&lt; isRequest &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1message.html#ac92917c1925fd21f239d3b75a83756d8">boost::beast::http::message&lt; isRequest, Body, Fields &gt;</a>
-</li>
-<li>content_length_remaining()
-: <a class="el" href="classboost_1_1beast_1_1http_1_1basic__parser.html#ab47b83affaed66cc87150431b7604f57">boost::beast::http::basic_parser&lt; isRequest &gt;</a>
-</li>
-<li>ContentType()
-: <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html#ae5720af0aa69711426fc90e6ef847dbb">skyway::core::interface::Publication</a>
-, <a class="el" href="classskyway_1_1core_1_1interface_1_1_stream.html#ad5e136124332272c163aa046689bfaba">skyway::core::interface::Stream</a>
-, <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html#a1e0e4ef0f6837a8a5ae2ed96238870fe">skyway::core::interface::Subscription</a>
-, <a class="el" href="classskyway_1_1core_1_1_publication.html#a17164fe737f804334422b6a8fe42289f">skyway::core::Publication</a>
-, <a class="el" href="classskyway_1_1core_1_1_subscription.html#abef87daaa0865f97d55f036986a28df8">skyway::core::Subscription</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html#acb0be4751a68592e2d71827bf2f2be28">skyway::room::interface::RoomPublication</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a9e5d6fe1fa7e22645f886c6da206e11b">skyway::room::interface::RoomSubscription</a>
-, <a class="el" href="classskyway_1_1room_1_1_room_publication.html#ac9c2a9fd738aaeb724d0ea933b8676c1">skyway::room::RoomPublication</a>
-, <a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a65b45ad7ac9474aa67c5ff0c61b86907">skyway::room::RoomSubscription</a>
-</li>
-<li>context()
-: <a class="el" href="classboost_1_1asio_1_1basic__system__executor.html#a62fb41f17676d8b62d3b213789b99198">boost::asio::basic_system_executor&lt; Blocking, Relationship, Allocator &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1execution__context_1_1service.html#a8963249dd741dbb9ab238c1831583533">boost::asio::execution_context::service</a>
-, <a class="el" href="classboost_1_1asio_1_1executor.html#ab2fddf8c1bc9bb673e36196d2264b5b5">boost::asio::executor</a>
-, <a class="el" href="classboost_1_1asio_1_1io__context_1_1basic__executor__type.html#abee9040a6872d11df4ea059ef6318619">boost::asio::io_context::basic_executor_type&lt; Allocator, Bits &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1ssl_1_1context.html#acdca758e3211ec52d1613a5099090cf1">boost::asio::ssl::context</a>
-</li>
-<li>control_callback()
-: <a class="el" href="classboost_1_1beast_1_1websocket_1_1stream.html#a6bfb1d3554e748cb0feb364626c15e73">boost::beast::websocket::stream&lt; NextLayer, deflateSupported &gt;</a>
-</li>
-<li>copy()
-: <a class="el" href="classboost_1_1beast_1_1static__string.html#a6c7d3cbdc336f2d53d61358ac1defef8">boost::beast::static_string&lt; N, CharT, Traits &gt;</a>
-</li>
-<li>coroutine()
-: <a class="el" href="classboost_1_1asio_1_1coroutine.html#ae3423928fe8af959648e4d07e0345d20">boost::asio::coroutine</a>
-</li>
-<li>count()
-: <a class="el" href="classbasic__json.html#a68d43e31db5d62ad828e96c58227a40f">basic_json</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1basic__fields.html#a02cafa4eb4b437d776194c2ed4ffdc7d">boost::beast::http::basic_fields&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1bstree__algorithms.html#a92e82b6887af90c8dcd343af9b2b804c">boost::intrusive::bstree_algorithms&lt; NodeTraits &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a02decff62125704551474a2dd27e9dd0">boost::intrusive::bstree_impl&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a9887e18cf3725c518a96288964f50c0b">boost::intrusive::circular_list_algorithms&lt; NodeTraits &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1set__impl.html#a86ac313bc1bf0c52d9f75d8b1ab3eb75">boost::intrusive::set_impl&lt; ValueTraits, VoidOrKeyOfValue, Compare, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
-</li>
-<li>crbegin()
-: <a class="el" href="classboost_1_1beast_1_1static__string.html#a57374327a7f1fb778120dd6f2debd45c">boost::beast::static_string&lt; N, CharT, Traits &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1list__impl.html#aaec6d64d661acea3e7b92be73332618a">boost::intrusive::list_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
-</li>
-<li>create()
-: <a class="el" href="classdetail_1_1parse__error.html#a07046ea9f33d28f120af188ed674d6df">detail::parse_error</a>
-</li>
-<li>Create()
-: <a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a8be3375d2ffd41fb50e756c107f5be95">skyway::core::channel::Channel</a>
-, <a class="el" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a1e80cc6bfdb60420608705180046ca56">skyway::room::p2p::P2PRoom</a>
-</li>
-<li>CreateAudioStream()
-: <a class="el" href="classskyway_1_1media_1_1_stream_factory.html#a9cb43359712b2405751abdee0a807f4a">skyway::media::StreamFactory</a>
-</li>
-<li>CreateBot()
-: <a class="el" href="classskyway_1_1plugin_1_1sfu__bot_1_1_plugin.html#a8833bc2656fa2e22324ef3514956a5e4">skyway::plugin::sfu_bot::Plugin</a>
-</li>
-<li>CreateChannel()
-: <a class="el" href="classskyway_1_1rtc__api_1_1_client.html#a284407040779f76eb192ee919f27ed75">skyway::rtc_api::Client</a>
-, <a class="el" href="classskyway_1_1rtc__api_1_1interface_1_1_client.html#a83b42f20b9c860e5ee0ce7e96e188356">skyway::rtc_api::interface::Client</a>
-</li>
-<li>CreateDataStream()
-: <a class="el" href="classskyway_1_1media_1_1_stream_factory.html#a1e576b2f7feb5d1a5f410078472710f1">skyway::media::StreamFactory</a>
-</li>
-<li>CreateLocalRoomMember()
-: <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_domain_factory.html#ae0ff417953e5f457a2ab9914f6c0335e">skyway::room::interface::RoomDomainFactory</a>
-, <a class="el" href="classskyway_1_1room_1_1p2p_1_1_room_domain_factory.html#a22366b230350227647a9fada6aa8dc68">skyway::room::p2p::RoomDomainFactory</a>
-</li>
-<li>CreateRecvTransport()
-: <a class="el" href="classskyway_1_1plugin_1_1sfu__bot_1_1connection_1_1_transport_repository.html#ad94ab66ba313f4f338e7c9c25b42e698">skyway::plugin::sfu_bot::connection::TransportRepository</a>
-, <a class="el" href="classskyway_1_1plugin_1_1sfu__bot_1_1interface_1_1_transport_repository.html#af4dac47ae72329763e31c46d7189df25">skyway::plugin::sfu_bot::interface::TransportRepository</a>
-</li>
-<li>CreateRemoteRoomMember()
-: <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_domain_factory.html#a02379abfe564bcdba76e51224492511e">skyway::room::interface::RoomDomainFactory</a>
-, <a class="el" href="classskyway_1_1room_1_1p2p_1_1_room_domain_factory.html#adf3dc93385851a6811c47df6fcb404b0">skyway::room::p2p::RoomDomainFactory</a>
-</li>
-<li>CreateRoomMember()
-: <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_domain_factory.html#acc78a922843fd3eee87fb9f5c30936ee">skyway::room::interface::RoomDomainFactory</a>
-, <a class="el" href="classskyway_1_1room_1_1p2p_1_1_room_domain_factory.html#a2d574354fef34a042d4ea7eff3985150">skyway::room::p2p::RoomDomainFactory</a>
-</li>
-<li>CreateRoomPublication()
-: <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_domain_factory.html#a494150e6b4cb197ca6fbffd07f9d60de">skyway::room::interface::RoomDomainFactory</a>
-, <a class="el" href="classskyway_1_1room_1_1p2p_1_1_room_domain_factory.html#a898e01e1504211fd7500ff07e5b01b60">skyway::room::p2p::RoomDomainFactory</a>
-</li>
-<li>CreateRoomSubscription()
-: <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_domain_factory.html#ac74b38a3ce288ba397b1908b4f96fca4">skyway::room::interface::RoomDomainFactory</a>
-, <a class="el" href="classskyway_1_1room_1_1p2p_1_1_room_domain_factory.html#ad7ab2a543c7cfb1ce17dfbbe4435a3f2">skyway::room::p2p::RoomDomainFactory</a>
-</li>
-<li>CreateSendTransport()
-: <a class="el" href="classskyway_1_1plugin_1_1sfu__bot_1_1connection_1_1_transport_repository.html#aa2428a383be65b1459cc8d4108ebe8c1">skyway::plugin::sfu_bot::connection::TransportRepository</a>
-, <a class="el" href="classskyway_1_1plugin_1_1sfu__bot_1_1interface_1_1_transport_repository.html#ab50e22f5ba6e1d8758208520c5adecc2">skyway::plugin::sfu_bot::interface::TransportRepository</a>
-</li>
-<li>CreateVideoStream()
-: <a class="el" href="classskyway_1_1media_1_1_stream_factory.html#a547ae1ea932e02bda5695342a75bd8be">skyway::media::StreamFactory</a>
-</li>
-<li>crend()
-: <a class="el" href="classboost_1_1beast_1_1static__string.html#a5f06d2b224db3b8d449d2459a7a08481">boost::beast::static_string&lt; N, CharT, Traits &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1list__impl.html#a9b1515c25e9402cb27796dfeb8236baf">boost::intrusive::list_impl&lt; ValueTraits, SizeType, ConstantTimeSize, HeaderHolder &gt;</a>
-</li>
+<h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>Cancel()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html#a89a549a3979e7b1bc8a1140b18a79f3e">skyway::core::interface::Publication</a>, <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html#a946d0d66845450217a94f761d74ac05c">skyway::core::interface::Subscription</a>, <a class="el" href="classskyway_1_1core_1_1_publication.html#a8d28b7e1e13b4eb9d3b6899fe10fff9f">skyway::core::Publication</a>, <a class="el" href="classskyway_1_1core_1_1_subscription.html#aedde056c6478297b32b396924728c0c5">skyway::core::Subscription</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html#aba2de3d7714fd08001e75220c20671f1">skyway::room::interface::RoomPublication</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a29c7317e47219f315f1fd810a408770a">skyway::room::interface::RoomSubscription</a>, <a class="el" href="classskyway_1_1room_1_1_room_publication.html#af514237feb237e1ebcb9a6ce161f13e5">skyway::room::RoomPublication</a>, <a class="el" href="classskyway_1_1room_1_1_room_subscription.html#ae4e56aa8055e833562ff739318ecf44d">skyway::room::RoomSubscription</a></li>
+<li>ChangePreferredEncoding()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html#a1d481353896e7ff6bda5cea5b7983ed1">skyway::core::interface::Subscription</a>, <a class="el" href="classskyway_1_1core_1_1_subscription.html#a2586a488dcd566eecb6ca3de8ed0ca01">skyway::core::Subscription</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a402623fe8b40d997969f7182cefcb210">skyway::room::interface::RoomSubscription</a>, <a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a96f7ad3c2647c9d26795e6a911ee0611">skyway::room::RoomSubscription</a></li>
+<li>Close()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a62eedbaddc908e7f06398355305529ab">skyway::core::channel::Channel</a>, <a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a79b779d3526e16620749d1fc7424cffa">skyway::core::interface::Channel</a>, <a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#aa8ff369a3d2eefa00c847cb5a37c350d">skyway::room::abstract::Room</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#a1da8a4a619516ab94a794d1e477147c4">skyway::room::interface::Room</a></li>
+<li>CodecCapabilities()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html#aa087f10c350c52d986a8c930a1e45f34">skyway::core::interface::Publication</a>, <a class="el" href="classskyway_1_1core_1_1_publication.html#ad05c3a455d128da7035a41acc9da6e88">skyway::core::Publication</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html#affd51794819b701b736025b2ab6a6e88">skyway::room::interface::RoomPublication</a>, <a class="el" href="classskyway_1_1room_1_1_room_publication.html#a6cfbc930b41826e5c056c777148d26c4">skyway::room::RoomPublication</a></li>
+<li>ContentType()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html#ae5720af0aa69711426fc90e6ef847dbb">skyway::core::interface::Publication</a>, <a class="el" href="classskyway_1_1core_1_1interface_1_1_stream.html#ad5e136124332272c163aa046689bfaba">skyway::core::interface::Stream</a>, <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html#a1e0e4ef0f6837a8a5ae2ed96238870fe">skyway::core::interface::Subscription</a>, <a class="el" href="classskyway_1_1core_1_1_publication.html#a17164fe737f804334422b6a8fe42289f">skyway::core::Publication</a>, <a class="el" href="classskyway_1_1core_1_1_subscription.html#abef87daaa0865f97d55f036986a28df8">skyway::core::Subscription</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html#acb0be4751a68592e2d71827bf2f2be28">skyway::room::interface::RoomPublication</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a9e5d6fe1fa7e22645f886c6da206e11b">skyway::room::interface::RoomSubscription</a>, <a class="el" href="classskyway_1_1room_1_1_room_publication.html#ac9c2a9fd738aaeb724d0ea933b8676c1">skyway::room::RoomPublication</a>, <a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a65b45ad7ac9474aa67c5ff0c61b86907">skyway::room::RoomSubscription</a></li>
+<li>Create()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a6c23925f64bc82bcfb16191aff5eca5f">skyway::core::channel::Channel</a>, <a class="el" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#af3c7caa7e0133aea9f0bff1ed20be981">skyway::room::p2p::P2PRoom</a></li>
+<li>CreateAudioStream()&#160;:&#160;<a class="el" href="classskyway_1_1media_1_1_stream_factory.html#ae6f1267c07231eb6feb972d657343433">skyway::media::StreamFactory</a></li>
+<li>CreateDataStream()&#160;:&#160;<a class="el" href="classskyway_1_1media_1_1_stream_factory.html#a7200a8105e0d6ee14a9230df73087c2b">skyway::media::StreamFactory</a></li>
+<li>CreateVideoStream()&#160;:&#160;<a class="el" href="classskyway_1_1media_1_1_stream_factory.html#ad25a3f1dd6a1dd9f31f72b77d635b07d">skyway::media::StreamFactory</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

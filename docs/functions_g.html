@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.8.17 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('functions_g.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,221 +87,36 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="contents">
 <div class="textblock">詳解ありクラスメンバの一覧です。各クラスメンバ詳解へのリンクがあります。</div>
 
-<h3><a id="index_g"></a>- g -</h3><ul>
-<li>generate()
-: <a class="el" href="classboost_1_1random_1_1mersenne__twister__engine.html#a6cfdae85c30f8b298c9b38e506bed615">boost::random::mersenne_twister_engine&lt; UIntType, w, n, m, r, a, u, d, s, b, t, c, l, f &gt;</a>
-, <a class="el" href="classboost_1_1uuids_1_1detail_1_1random__provider.html#a0ce175162f80b3881ab16f4ff1a4753e">boost::uuids::detail::random_provider</a>
-</li>
-<li>get()
-: <a class="el" href="classbasic__json.html#aa78293304f1532d1715ef24e21fed598">basic_json</a>
-, <a class="el" href="structboost_1_1asio_1_1associated__allocator.html#aed01d9c9e17fa7724a49059bc10eaf4f">boost::asio::associated_allocator&lt; T, Allocator &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1async__result.html#a348c693bd52e5b733a6e35ed2beb8535">boost::asio::async_result&lt; CompletionToken, Signature &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1executor__binder.html#a71cb1eaf6ba518c06b2c52feb391dd92">boost::asio::executor_binder&lt; T, Executor &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1parser.html#a211f049c7103dcda985e83dcb2651e82">boost::beast::http::parser&lt; isRequest, Body, Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1serializer.html#a4c5c7a2746f63c7c0726ebee6a76d97a">boost::beast::http::serializer&lt; isRequest, Body, Fields &gt;</a>
-, <a class="el" href="classboost_1_1reference__wrapper.html#ad112802efc71e33cf6df723b2cc4f4c5">boost::reference_wrapper&lt; T &gt;</a>
-</li>
-<li>get_allocator()
-: <a class="el" href="classbasic__json.html#a9b4251b920c1d2fee6879a1812bd137e">basic_json</a>
-, <a class="el" href="classboost_1_1beast_1_1async__base.html#a6e2015267035930ff804df6cabbd1f78">boost::beast::async_base&lt; Handler, Executor1, Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1basic__flat__buffer.html#a7e1b8753644b1d4599a3b1ee37426213">boost::beast::basic_flat_buffer&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1basic__multi__buffer.html#ad46740a22435cfd29508d8cd71e4939b">boost::beast::basic_multi_buffer&lt; Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1basic__fields.html#a54f9ddad603769e53476af11ec3f2241">boost::beast::http::basic_fields&lt; Allocator &gt;</a>
-</li>
-<li>get_binary()
-: <a class="el" href="classbasic__json.html#afe23358d7194dbed2e02c573fca83050">basic_json</a>
-</li>
-<li>get_chunked_impl()
-: <a class="el" href="classboost_1_1beast_1_1http_1_1basic__fields.html#aa15b37a398bb263bc1b660995bd545d8">boost::beast::http::basic_fields&lt; Allocator &gt;</a>
-</li>
-<li>get_date()
-: <a class="el" href="classboost_1_1date__time_1_1first__kday__after.html#aa4a104193de09799cea0253e589f589c">boost::date_time::first_kday_after&lt; date_type &gt;</a>
-, <a class="el" href="classboost_1_1date__time_1_1first__kday__before.html#a7f805b90fd55c33ff03be4298eefa4d2">boost::date_time::first_kday_before&lt; date_type &gt;</a>
-, <a class="el" href="classboost_1_1date__time_1_1first__kday__of__month.html#a24ca47e34eea7be9bcb42852a622df46">boost::date_time::first_kday_of_month&lt; date_type &gt;</a>
-, <a class="el" href="classboost_1_1date__time_1_1last__kday__of__month.html#a858e9dd919d29f06727739b9ae698b6a">boost::date_time::last_kday_of_month&lt; date_type &gt;</a>
-, <a class="el" href="classboost_1_1date__time_1_1nth__kday__of__month.html#a6a485ee99a104a711f696851e1fb3739">boost::date_time::nth_kday_of_month&lt; date_type &gt;</a>
-, <a class="el" href="classboost_1_1date__time_1_1partial__date.html#afb0632b0f8adc9050a8932f149e76f3b">boost::date_time::partial_date&lt; date_type &gt;</a>
-</li>
-<li>get_error_message()
-: <a class="el" href="classdetail_1_1lexer.html#aebc99bc8563c932004c50cb3ac0f8d9e">detail::lexer&lt; BasicJsonType, InputAdapterType &gt;</a>
-</li>
-<li>get_executor()
-: <a class="el" href="classboost_1_1asio_1_1basic__socket.html#a139f7352e655549c127887a5bff48c0b">boost::asio::basic_socket&lt; Protocol, Executor &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1basic__socket__acceptor.html#a7883afece5566b9941f1451a8b6251ef">boost::asio::basic_socket_acceptor&lt; Protocol, Executor &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1basic__waitable__timer.html#a9336bc005e0f4bf6e1dda175da665059">boost::asio::basic_waitable_timer&lt; Clock, WaitTraits, Executor &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1executor__binder.html#a37c6ed7f5f99af7875024f2d446951de">boost::asio::executor_binder&lt; T, Executor &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1executor__work__guard.html#a4616e4c5b9670cf3233060e5a85aac92">boost::asio::executor_work_guard&lt; Executor, typename &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1io__context.html#a4be1a6db51d655a81b0cac537d5a5682">boost::asio::io_context</a>
-, <a class="el" href="classboost_1_1asio_1_1ip_1_1basic__resolver.html#a278363d1eff339fbd49a18336754416c">boost::asio::ip::basic_resolver&lt; InternetProtocol, Executor &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1ssl_1_1stream.html#a897d6252ab26beaa14e07bd300cb06d6">boost::asio::ssl::stream&lt; Stream &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1system__context.html#abeb40e3c3809e544ca4ce4ef5eb2996d">boost::asio::system_context</a>
-, <a class="el" href="classboost_1_1beast_1_1async__base.html#abb531dd62c0c2d4b0a0846b9ab2ff8be">boost::beast::async_base&lt; Handler, Executor1, Allocator &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1basic__stream.html#af3c696889183176ae7fc7a141af4e37d">boost::beast::basic_stream&lt; Protocol, Executor, RatePolicy &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1buffered__read__stream.html#ac1b37b875912c094c31d7f1de2cb73c6">boost::beast::buffered_read_stream&lt; Stream, DynamicBuffer &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1flat__stream.html#a41e2ca6d083cf084dc1c4862abbd4e29">boost::beast::flat_stream&lt; NextLayer &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1ssl__stream.html#a75d9f867f400365eebc3f7d3964e6602">boost::beast::ssl_stream&lt; NextLayer &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1websocket_1_1stream.html#a4b23fc090a9f22fd28fb8d0d6827e109">boost::beast::websocket::stream&lt; NextLayer, deflateSupported &gt;</a>
-</li>
-<li>get_header()
-: <a class="el" href="classboost_1_1intrusive_1_1bstree__algorithms__base.html#a34b0ddc3be2df2febed25be565912cd2">boost::intrusive::bstree_algorithms_base&lt; NodeTraits &gt;</a>
-</li>
-<li>get_io_context()
-: <a class="el" href="classboost_1_1asio_1_1io__context_1_1service.html#ab832cc001e9b3429be4cd9acc93a2bf6">boost::asio::io_context::service</a>
-, <a class="el" href="classboost_1_1asio_1_1io__context_1_1work.html#a669bef1f4b4fcb31fed5e6f52aac3f10">boost::asio::io_context::work</a>
-</li>
-<li>get_keep_alive_impl()
-: <a class="el" href="classboost_1_1beast_1_1http_1_1basic__fields.html#a760fd2da4d12ceeda6f24d6e07479e5a">boost::beast::http::basic_fields&lt; Allocator &gt;</a>
-</li>
-<li>get_method_impl()
-: <a class="el" href="classboost_1_1beast_1_1http_1_1basic__fields.html#a0e05463d622479a8d399534a54959d02">boost::beast::http::basic_fields&lt; Allocator &gt;</a>
-</li>
-<li>get_neg_offset()
-: <a class="el" href="classboost_1_1date__time_1_1month__functor.html#a0a395cd9ad399ad86890022c9cee088e">boost::date_time::month_functor&lt; date_type &gt;</a>
-, <a class="el" href="classboost_1_1date__time_1_1months__duration.html#ac217c5edfe6a02996e5ee3704cd0eac4">boost::date_time::months_duration&lt; base_config &gt;</a>
-, <a class="el" href="classboost_1_1date__time_1_1years__duration.html#af5350bba6765542df20ec7784e24344d">boost::date_time::years_duration&lt; base_config &gt;</a>
-</li>
-<li>get_number_float()
-: <a class="el" href="classdetail_1_1lexer.html#af2e903d32a7e3705c66539ea1e30ce59">detail::lexer&lt; BasicJsonType, InputAdapterType &gt;</a>
-</li>
-<li>get_number_integer()
-: <a class="el" href="classdetail_1_1lexer.html#a4227de7d0382fb4d3e18b119f0cc87d7">detail::lexer&lt; BasicJsonType, InputAdapterType &gt;</a>
-</li>
-<li>get_number_unsigned()
-: <a class="el" href="classdetail_1_1lexer.html#a65495d5d60a279adb009efa728708441">detail::lexer&lt; BasicJsonType, InputAdapterType &gt;</a>
-</li>
-<li>get_option()
-: <a class="el" href="classboost_1_1asio_1_1basic__socket.html#a0273c64f076340e791dfd99bae44372c">boost::asio::basic_socket&lt; Protocol, Executor &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1basic__socket__acceptor.html#ac33510dd205132e62ed3d9cea95867d8">boost::asio::basic_socket_acceptor&lt; Protocol, Executor &gt;</a>
-, <a class="el" href="classboost_1_1beast_1_1websocket_1_1stream.html#ae203d157f68e6dca41dadec6ad04c717">boost::beast::websocket::stream&lt; NextLayer, deflateSupported &gt;</a>
-</li>
-<li>get_pointer()
-: <a class="el" href="classboost_1_1reference__wrapper.html#a3b2715020731b5fce9eed8b4b39aee13">boost::reference_wrapper&lt; T &gt;</a>
-</li>
-<li>get_position()
-: <a class="el" href="classdetail_1_1lexer.html#a569266654a88a2dc6f0e9a587067fc9d">detail::lexer&lt; BasicJsonType, InputAdapterType &gt;</a>
-</li>
-<li>get_ptr()
-: <a class="el" href="classbasic__json.html#ac290e2691604a7c9f1511f15f56953f7">basic_json</a>
-</li>
-<li>get_reason_impl()
-: <a class="el" href="classboost_1_1beast_1_1http_1_1basic__fields.html#a4b2138c103fa9fe5360b6808059ac1fc">boost::beast::http::basic_fields&lt; Allocator &gt;</a>
-</li>
-<li>get_ref()
-: <a class="el" href="classbasic__json.html#a173301254c6b91f229738151b544ecf4">basic_json</a>
-</li>
-<li>get_rep()
-: <a class="el" href="classboost_1_1date__time_1_1date__duration.html#afa9c7923c0ff093781dfb74bc934c743">boost::date_time::date_duration&lt; duration_rep_traits &gt;</a>
-, <a class="el" href="classboost_1_1date__time_1_1time__duration.html#a26d8fe0b23bf6648904c2ea5db01ef7e">boost::date_time::time_duration&lt; T, rep_type &gt;</a>
-</li>
-<li>get_string()
-: <a class="el" href="classdetail_1_1lexer.html#a86ecfb03aba202680e5ab48f70baac07">detail::lexer&lt; BasicJsonType, InputAdapterType &gt;</a>
-</li>
-<li>get_target_impl()
-: <a class="el" href="classboost_1_1beast_1_1http_1_1basic__fields.html#a44f65ae7f2f5e5f5d8403307bf606089">boost::beast::http::basic_fields&lt; Allocator &gt;</a>
-</li>
-<li>get_to()
-: <a class="el" href="classbasic__json.html#aeef4892bf2e86e412f5349b95861274b">basic_json</a>
-</li>
-<li>get_token_string()
-: <a class="el" href="classdetail_1_1lexer.html#a41481d87dc1bcaaf532f529fbc0e690b">detail::lexer&lt; BasicJsonType, InputAdapterType &gt;</a>
-</li>
-<li>GetModelName()
-: <a class="el" href="classskyway_1_1platform_1_1interface_1_1_platform_info_delegator.html#ab41d7c62668fa6ff3b8b3e8397ba2daa">skyway::platform::interface::PlatformInfoDelegator</a>
-, <a class="el" href="classskyway_1_1platform_1_1_platform_info_delegator.html#abfa52c69bc665c1573d0a890f2300024">skyway::platform::PlatformInfoDelegator</a>
-</li>
-<li>GetOsInfo()
-: <a class="el" href="classskyway_1_1platform_1_1interface_1_1_platform_info_delegator.html#aefe150317c5770541fdd3a98ebcb9c43">skyway::platform::interface::PlatformInfoDelegator</a>
-, <a class="el" href="classskyway_1_1platform_1_1_platform_info_delegator.html#af166d21d440e534b9a3e8067894fd063">skyway::platform::PlatformInfoDelegator</a>
-</li>
-<li>GetPlatform()
-: <a class="el" href="classskyway_1_1platform_1_1interface_1_1_platform_info_delegator.html#a7b8d2b528db6e17a1e7974f21edd60ad">skyway::platform::interface::PlatformInfoDelegator</a>
-, <a class="el" href="classskyway_1_1platform_1_1_platform_info_delegator.html#a9c8f3b0e4ca33739b929c66b2ec000ca">skyway::platform::PlatformInfoDelegator</a>
-</li>
-<li>GetPlayoutDevices()
-: <a class="el" href="classskyway_1_1media_1_1_device_manager.html#af6aefda93132ea0311c47abf391543bc">skyway::media::DeviceManager</a>
-</li>
-<li>GetRecordDevices()
-: <a class="el" href="classskyway_1_1media_1_1_device_manager.html#a00e384c64490ebeabd2e2f2bd47b6dab">skyway::media::DeviceManager</a>
-</li>
-<li>GetRecvTransport()
-: <a class="el" href="classskyway_1_1plugin_1_1sfu__bot_1_1connection_1_1_transport_repository.html#ac7a70de5efe0f6b4fe9764100a491678">skyway::plugin::sfu_bot::connection::TransportRepository</a>
-, <a class="el" href="classskyway_1_1plugin_1_1sfu__bot_1_1interface_1_1_transport_repository.html#af860a0573abfadbbc0e26e199f7a7683">skyway::plugin::sfu_bot::interface::TransportRepository</a>
-</li>
-<li>GetRtpCapabilities()
-: <a class="el" href="classskyway_1_1plugin_1_1sfu__bot_1_1connection_1_1_transport_repository.html#a676b8c7a07dcbf413674b01246bb9b97">skyway::plugin::sfu_bot::connection::TransportRepository</a>
-, <a class="el" href="classskyway_1_1plugin_1_1sfu__bot_1_1interface_1_1_transport_repository.html#a2f549522af54d9b8797763686a031f71">skyway::plugin::sfu_bot::interface::TransportRepository</a>
-</li>
-<li>GetSdkVersion()
-: <a class="el" href="classskyway_1_1platform_1_1interface_1_1_platform_info_delegator.html#a26b7a26b361aa9c96eb7e764396b59d8">skyway::platform::interface::PlatformInfoDelegator</a>
-, <a class="el" href="classskyway_1_1platform_1_1_platform_info_delegator.html#a7d162363bbd34bbd8bb481a400af4463">skyway::platform::PlatformInfoDelegator</a>
-</li>
-<li>GetSendTransport()
-: <a class="el" href="classskyway_1_1plugin_1_1sfu__bot_1_1connection_1_1_transport_repository.html#ae98adb735ec001722dd8243d1368002b">skyway::plugin::sfu_bot::connection::TransportRepository</a>
-, <a class="el" href="classskyway_1_1plugin_1_1sfu__bot_1_1interface_1_1_transport_repository.html#a16b6d271594e5f70650f03e3b21172c8">skyway::plugin::sfu_bot::interface::TransportRepository</a>
-</li>
-<li>GetStats()
-: <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html#a400985d242737b0265a4c5a538aec0cf">skyway::core::interface::Publication</a>
-, <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html#a4546f2fc42ee84c45bcedf848f029bca">skyway::core::interface::Subscription</a>
-, <a class="el" href="classskyway_1_1core_1_1_publication.html#a78b61770c451ff5255383c93f9260572">skyway::core::Publication</a>
-, <a class="el" href="classskyway_1_1core_1_1_subscription.html#a72951aa3e79bea1ea3a407b3f7134917">skyway::core::Subscription</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html#ae86169726190aa768620eb0c6d28dc06">skyway::room::interface::RoomPublication</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a0b421494749046ba94dca3d05a618765">skyway::room::interface::RoomSubscription</a>
-, <a class="el" href="classskyway_1_1room_1_1_room_publication.html#a03159df27e23ca4e700f623cf2a4fc71">skyway::room::RoomPublication</a>
-, <a class="el" href="classskyway_1_1room_1_1_room_subscription.html#ab35f3530d27298c0329ba93cb0610aa5">skyway::room::RoomSubscription</a>
-</li>
-<li>GetSubtype()
-: <a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_member_plugin.html#a09288b4393adc11122d09cb6d451b6a2">skyway::core::interface::RemoteMemberPlugin</a>
-, <a class="el" href="classskyway_1_1plugin_1_1remote__person_1_1_plugin.html#ad9e536a104f5ad8a8a495269f38bd3aa">skyway::plugin::remote_person::Plugin</a>
-, <a class="el" href="classskyway_1_1plugin_1_1sfu__bot_1_1_plugin.html#a3df56d59869f087d29c4040d14f43e92">skyway::plugin::sfu_bot::Plugin</a>
-, <a class="el" href="classskyway_1_1plugin_1_1unknown__plugin_1_1_plugin.html#a02ebd52d8eec00f186f224d4a99788ed">skyway::plugin::unknown_plugin::Plugin</a>
-</li>
-<li>GetTrack()
-: <a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_media_stream.html#a7c781d0b6d8ae059cda92dab1131c2af">skyway::core::interface::RemoteMediaStream</a>
-, <a class="el" href="classskyway_1_1core_1_1stream_1_1remote_1_1_remote_audio_stream.html#aa59b8746945ccf9a575c855e234df5de">skyway::core::stream::remote::RemoteAudioStream</a>
-, <a class="el" href="classskyway_1_1core_1_1stream_1_1remote_1_1_remote_video_stream.html#aa3e113b58043d70306f77a8eba725244">skyway::core::stream::remote::RemoteVideoStream</a>
-</li>
-<li>GetVersionString()
-: <a class="el" href="classskyway_1_1_context.html#a043c8eaf8fdbe6cfd97e68e59b6d007b">skyway::Context</a>
-</li>
-<li>GetVideoDevices()
-: <a class="el" href="classskyway_1_1media_1_1_device_manager.html#afb543142c071d648b3143a5248367c74">skyway::media::DeviceManager</a>
-</li>
-<li>gmtime()
-: <a class="el" href="structboost_1_1date__time_1_1c__time.html#a097b8883bbcd63c6d6b972f9d66c5828">boost::date_time::c_time</a>
-</li>
-<li>got_binary()
-: <a class="el" href="classboost_1_1beast_1_1websocket_1_1stream.html#af2403f32e02459ff0ce44e1e2f17c46e">boost::beast::websocket::stream&lt; NextLayer, deflateSupported &gt;</a>
-</li>
-<li>got_some()
-: <a class="el" href="classboost_1_1beast_1_1http_1_1basic__parser.html#a6dea57b7580e58a2c3b35f7e16e95758">boost::beast::http::basic_parser&lt; isRequest &gt;</a>
-</li>
-<li>got_text()
-: <a class="el" href="classboost_1_1beast_1_1websocket_1_1stream.html#a666609a7cc058832e89bdbf60758674e">boost::beast::websocket::stream&lt; NextLayer, deflateSupported &gt;</a>
-</li>
-<li>greg_month()
-: <a class="el" href="classboost_1_1gregorian_1_1greg__month.html#a2b39b80647cb03fe2b3601f8538c544f">boost::gregorian::greg_month</a>
-</li>
-<li>grow()
-: <a class="el" href="classboost_1_1asio_1_1dynamic__string__buffer.html#a4479288a35604a9f6bef390f48636dbd">boost::asio::dynamic_string_buffer&lt; Elem, Traits, Allocator &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1dynamic__vector__buffer.html#a7b8e3d3805e1f27f6122f50a98442b72">boost::asio::dynamic_vector_buffer&lt; Elem, Allocator &gt;</a>
-</li>
+<h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
+<li>GetPlayoutDevices()&#160;:&#160;<a class="el" href="classskyway_1_1media_1_1_device_manager.html#a70229bac68283f936a2e51a3ab186959">skyway::media::DeviceManager</a></li>
+<li>GetRecordDevices()&#160;:&#160;<a class="el" href="classskyway_1_1media_1_1_device_manager.html#a76b0eeddeda6457378987e54167ce305">skyway::media::DeviceManager</a></li>
+<li>GetStats()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html#a579b076eb4489259f750f8fe379e1283">skyway::core::interface::Publication</a>, <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html#a21d0b1d6808efd6e955ae7d5ca9c76c5">skyway::core::interface::Subscription</a>, <a class="el" href="classskyway_1_1core_1_1_publication.html#ad73ec93896472ab2fd383a0577dc0005">skyway::core::Publication</a>, <a class="el" href="classskyway_1_1core_1_1_subscription.html#aea5768cc16f192a522c5db82f6323da8">skyway::core::Subscription</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html#ab7088729074e9ca3834398199acdde74">skyway::room::interface::RoomPublication</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a823d85cb25e90ffe0e120c32724ffaf1">skyway::room::interface::RoomSubscription</a>, <a class="el" href="classskyway_1_1room_1_1_room_publication.html#a59fd5acc046bfb716baae32c2d9cdfcc">skyway::room::RoomPublication</a>, <a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a78dab51e639da63146c5b75df246e5a4">skyway::room::RoomSubscription</a></li>
+<li>GetSubtype()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_member_plugin.html#a09288b4393adc11122d09cb6d451b6a2">skyway::core::interface::RemoteMemberPlugin</a>, <a class="el" href="classskyway_1_1plugin_1_1remote__person_1_1_plugin.html#ad9e536a104f5ad8a8a495269f38bd3aa">skyway::plugin::remote_person::Plugin</a>, <a class="el" href="classskyway_1_1plugin_1_1unknown__plugin_1_1_plugin.html#a02ebd52d8eec00f186f224d4a99788ed">skyway::plugin::unknown_plugin::Plugin</a></li>
+<li>GetTrack()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_media_stream.html#afa24ebd7eb5c5b2aea138eb2299ab8f0">skyway::core::interface::RemoteMediaStream</a>, <a class="el" href="classskyway_1_1core_1_1stream_1_1remote_1_1_remote_audio_stream.html#a6eea8553a17514a55429d1ae20d87db8">skyway::core::stream::remote::RemoteAudioStream</a>, <a class="el" href="classskyway_1_1core_1_1stream_1_1remote_1_1_remote_video_stream.html#a69f1e85dc4e3d03073881c66ec826a4b">skyway::core::stream::remote::RemoteVideoStream</a></li>
+<li>GetVersionString()&#160;:&#160;<a class="el" href="classskyway_1_1_context.html#a043c8eaf8fdbe6cfd97e68e59b6d007b">skyway::Context</a></li>
+<li>GetVideoDevices()&#160;:&#160;<a class="el" href="classskyway_1_1media_1_1_device_manager.html#ab3819f4a759012bd5d024a5911b7cb53">skyway::media::DeviceManager</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

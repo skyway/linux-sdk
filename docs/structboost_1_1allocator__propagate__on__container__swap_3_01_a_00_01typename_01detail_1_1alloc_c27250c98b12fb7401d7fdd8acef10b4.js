@@ -1,4 +1,0 @@
-var structboost_1_1allocator__propagate__on__container__swap_3_01_a_00_01typename_01detail_1_1alloc_c27250c98b12fb7401d7fdd8acef10b4 =
-[
-    [ "type", "structboost_1_1allocator__propagate__on__container__swap_3_01_a_00_01typename_01detail_1_1alloc_c27250c98b12fb7401d7fdd8acef10b4.html#ad23cb6e185a029eaa516966ebce73b47", null ]
-];

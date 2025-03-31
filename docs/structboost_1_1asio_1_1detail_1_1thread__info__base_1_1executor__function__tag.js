@@ -1,4 +1,0 @@
-var structboost_1_1asio_1_1detail_1_1thread__info__base_1_1executor__function__tag =
-[
-    [ "mem_index", "structboost_1_1asio_1_1detail_1_1thread__info__base_1_1executor__function__tag.html#aac8f8a8a53d2beefb83d9564b9ba6e77a22869bcb1f7054c0c50cf7544a05f994", null ]
-];

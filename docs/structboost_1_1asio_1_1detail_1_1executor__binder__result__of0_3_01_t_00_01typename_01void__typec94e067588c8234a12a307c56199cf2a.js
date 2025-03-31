@@ -1,4 +1,0 @@
-var structboost_1_1asio_1_1detail_1_1executor__binder__result__of0_3_01_t_00_01typename_01void__typec94e067588c8234a12a307c56199cf2a =
-[
-    [ "type", "structboost_1_1asio_1_1detail_1_1executor__binder__result__of0_3_01_t_00_01typename_01void__typec94e067588c8234a12a307c56199cf2a.html#a6790a89f7a58d2cdb55a3769ed0ba850", null ]
-];

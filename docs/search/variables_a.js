@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['name_15903',['name',['../structskyway_1_1model_1_1_member_1_1_init.html#a5ef28be260f6835535fa9d0eb312966e',1,'skyway::model::Member::Init::name()'],['../structskyway_1_1model_1_1_member.html#aed8f424e6db0f4bb712b9f15d187a974',1,'skyway::model::Member::name()'],['../structskyway_1_1model_1_1_channel_1_1_init.html#a60a954798f55dc0847c28527e7e91d81',1,'skyway::model::Channel::Init::name()'],['../structskyway_1_1model_1_1_channel_1_1_query.html#a24ee84f4e7c1d574432133519b76cd48',1,'skyway::model::Channel::Query::name()'],['../structskyway_1_1model_1_1_channel.html#adc76a7af47f9e3f41e65e4f455c7f553',1,'skyway::model::Channel::name()'],['../structskyway_1_1room_1_1interface_1_1_room_init_options.html#a7dd0b0fbccf9e69a9024801f12bc6a49',1,'skyway::room::interface::RoomInitOptions::name()'],['../structskyway_1_1room_1_1interface_1_1_room_query.html#a9f42bd9763b982f80b9580352f796f9e',1,'skyway::room::interface::RoomQuery::name()'],['../structskyway_1_1room_1_1interface_1_1_room_member_init_options.html#a35206c18b4cdd997d89e6d4afc96e36d',1,'skyway::room::interface::RoomMemberInitOptions::name()']]],
-  ['next_5fin_15904',['next_in',['../structboost_1_1beast_1_1zlib_1_1z__params.html#a9b5c2d59755cda57ff73f20aed862b13',1,'boost::beast::zlib::z_params']]],
-  ['next_5fout_15905',['next_out',['../structboost_1_1beast_1_1zlib_1_1z__params.html#a58043d65a900c0a7a053503da37110b6',1,'boost::beast::zlib::z_params']]],
-  ['npos_15906',['npos',['../classboost_1_1beast_1_1static__string.html#a94294fc473c029b1c384b8af38a0b4f2',1,'boost::beast::static_string']]],
-  ['number_5fbuffer_15907',['number_buffer',['../classdetail_1_1serializer.html#ace18a55b8304310fee309d31e54a3e27',1,'detail::serializer']]]
+  ['reports_0',['reports',['../structskyway_1_1model_1_1_web_r_t_c_stats.html#a9d30d7ca0821dd7d86d81f5ecf5861cb',1,'skyway::model::WebRTCStats']]]
 ];

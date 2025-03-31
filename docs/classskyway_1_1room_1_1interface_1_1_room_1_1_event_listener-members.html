@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.8.17 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,45 +87,49 @@ $(document).ready(function(){initNavTree('classskyway_1_1room_1_1interface_1_1_r
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">skyway::room::interface::Room::EventListener メンバ一覧</div>  </div>
+  <div class="headertitle"><div class="title">skyway::room::interface::Room::EventListener メンバ一覧</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>継承メンバを含む <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a> の全メンバ一覧です。</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#a7078d045ee3ca8e3acb93fdf0b18f43b">OnClosed</a>()</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#a9a21530722b477db9cccd702e30c142d">OnMemberJoined</a>(std::shared_ptr&lt; RoomMember &gt; member)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#a9a21530722b477db9cccd702e30c142d">OnMemberJoined</a>(std::shared_ptr&lt; RoomMember &gt; member)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#af1ea1ef54376fcaad65033fd03260867">OnMemberLeft</a>(std::shared_ptr&lt; RoomMember &gt; member)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#ad7bc3d346fded1033ea6da57be5b899e">OnMemberListChanged</a>()</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#ad7bc3d346fded1033ea6da57be5b899e">OnMemberListChanged</a>()</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#a78b35e0bba7b00c9d4522de55e2f17ad">OnMemberMetadataUpdated</a>(std::shared_ptr&lt; RoomMember &gt; member, const std::string &amp;metadata)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#a1f55d94dd79045ca7d67f66d3a9ede49">OnMetadataUpdated</a>(const std::string &amp;metadata)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#a1f55d94dd79045ca7d67f66d3a9ede49">OnMetadataUpdated</a>(const std::string &amp;metadata)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#a95dea073fe3702247dfe149bf79adf40">OnPublicationDisabled</a>(std::shared_ptr&lt; RoomPublication &gt; publication)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#a63e759e5b5f7414ab44794de0bab651b">OnPublicationEnabled</a>(std::shared_ptr&lt; RoomPublication &gt; publication)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#a63e759e5b5f7414ab44794de0bab651b">OnPublicationEnabled</a>(std::shared_ptr&lt; RoomPublication &gt; publication)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#a9a84678071eaf54b7b9d05e81918f96c">OnPublicationListChanged</a>()</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#ad7ac6158b370a89f574fc7b94f266d5c">OnPublicationMetadataUpdated</a>(std::shared_ptr&lt; RoomPublication &gt; publication, const std::string &amp;metadata)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#ad7ac6158b370a89f574fc7b94f266d5c">OnPublicationMetadataUpdated</a>(std::shared_ptr&lt; RoomPublication &gt; publication, const std::string &amp;metadata)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#aae55a1c7b6b8110170ef8cea5e598ec3">OnPublicationSubscribed</a>(std::shared_ptr&lt; RoomSubscription &gt; subscription)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#a95d3c91fedb48d007fedca53f616e1b2">OnPublicationUnsubscribed</a>(std::shared_ptr&lt; RoomSubscription &gt; subscription)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#a95d3c91fedb48d007fedca53f616e1b2">OnPublicationUnsubscribed</a>(std::shared_ptr&lt; RoomSubscription &gt; subscription)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#ac1e18e7af8c66812f7f91169ccc61e6e">OnStreamPublished</a>(std::shared_ptr&lt; RoomPublication &gt; publication)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#a9a5782bf1670add80ed8cd60ba087319">OnStreamUnpublished</a>(std::shared_ptr&lt; RoomPublication &gt; publication)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#a9a5782bf1670add80ed8cd60ba087319">OnStreamUnpublished</a>(std::shared_ptr&lt; RoomPublication &gt; publication)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#acc58120c851db326dcc77d7d71684087">OnSubscriptionDisabled</a>(std::shared_ptr&lt; RoomSubscription &gt; subscription)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#af0e677e82e3f11b2e63fe2445ad113eb">OnSubscriptionEnabled</a>(std::shared_ptr&lt; RoomSubscription &gt; subscription)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#af0e677e82e3f11b2e63fe2445ad113eb">OnSubscriptionEnabled</a>(std::shared_ptr&lt; RoomSubscription &gt; subscription)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#a98e9520a8497c9172985f1aaafa4b37f">OnSubscriptionListChanged</a>()</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>~EventListener</b>()=default (定義場所: <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a>)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>~EventListener</b>()=default (定義場所: <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a>)</td><td class="entry"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

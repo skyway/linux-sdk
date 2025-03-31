@@ -1,5 +1,0 @@
-var structboost_1_1asio_1_1detail_1_1legacy__connect__condition__helper_3_01_r_07_5_08_07_arg1_00_01_arg2_08_00_01_iterator_01_4 =
-[
-    [ "operator()", "structboost_1_1asio_1_1detail_1_1legacy__connect__condition__helper_3_01_r_07_5_08_07_arg1_00_01_arg2_08_00_01_iterator_01_4.html#adbb944a7708b313ab297313c08efa8be", null ],
-    [ "operator()", "structboost_1_1asio_1_1detail_1_1legacy__connect__condition__helper_3_01_r_07_5_08_07_arg1_00_01_arg2_08_00_01_iterator_01_4.html#ae0d8689cc2cb2db0b407fe234c4ccd02", null ]
-];

@@ -1,4 +1,0 @@
-var structboost_1_1asio_1_1detail_1_1prepared__buffers__max_3_01boost_1_1array_3_01_elem_00_01_n_01_4_01_4 =
-[
-    [ "value", "structboost_1_1asio_1_1detail_1_1prepared__buffers__max_3_01boost_1_1array_3_01_elem_00_01_n_01_4_01_4.html#a08de97b26fa9a20cecfd130cc37bd3f3a502fbf46e4684854504d0327f8776c06", null ]
-];

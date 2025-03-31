@@ -1,5 +1,0 @@
-var classboost_1_1algorithm_1_1has__native__replace_3_01std_1_1basic__string_3_01_t_00_01_traits_t_00_01_alloc_t_01_4_01_4 =
-[
-    [ "type", "classboost_1_1algorithm_1_1has__native__replace_3_01std_1_1basic__string_3_01_t_00_01_traits_t_00_01_alloc_t_01_4_01_4.html#a8df305e4cc5382741502a13af7ba230a", null ],
-    [ "BOOST_STATIC_CONSTANT", "classboost_1_1algorithm_1_1has__native__replace_3_01std_1_1basic__string_3_01_t_00_01_traits_t_00_01_alloc_t_01_4_01_4.html#a164477a953bf25765ba8378021cff608", null ]
-];

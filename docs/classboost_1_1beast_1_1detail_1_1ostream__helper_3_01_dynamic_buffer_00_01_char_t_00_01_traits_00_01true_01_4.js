@@ -1,5 +1,0 @@
-var classboost_1_1beast_1_1detail_1_1ostream__helper_3_01_dynamic_buffer_00_01_char_t_00_01_traits_00_01true_01_4 =
-[
-    [ "ostream_helper", "classboost_1_1beast_1_1detail_1_1ostream__helper_3_01_dynamic_buffer_00_01_char_t_00_01_traits_00_01true_01_4.html#a55c0e597fc58a6819c976f8b01384e0c", null ],
-    [ "ostream_helper", "classboost_1_1beast_1_1detail_1_1ostream__helper_3_01_dynamic_buffer_00_01_char_t_00_01_traits_00_01true_01_4.html#a691775e375f8a87880f360469eedcda4", null ]
-];

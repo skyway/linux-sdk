@@ -1,4 +1,0 @@
-var structboost_1_1asio_1_1detail_1_1composed__work__guard_3_01_executor_00_01typename_01enable__if_6891b95fd5f147472a6cf90ac3b74dab =
-[
-    [ "composed_work_guard", "structboost_1_1asio_1_1detail_1_1composed__work__guard_3_01_executor_00_01typename_01enable__if_6891b95fd5f147472a6cf90ac3b74dab.html#ae5d1974d1a03d415e0856b5d978ca1f1", null ]
-];
