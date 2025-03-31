@@ -1,4 +1,0 @@
-var structboost_1_1asio_1_1execution_1_1detail_1_1supportable__properties_3_01_i_00_01void_07_prop_08_4_1_1not__found =
-[
-    [ "BOOST_ASIO_STATIC_CONSTEXPR", "structboost_1_1asio_1_1execution_1_1detail_1_1supportable__properties_3_01_i_00_01void_07_prop_08_4_1_1not__found.html#affef9b5bd25f98cd110aef56e4e8b5e7", null ]
-];

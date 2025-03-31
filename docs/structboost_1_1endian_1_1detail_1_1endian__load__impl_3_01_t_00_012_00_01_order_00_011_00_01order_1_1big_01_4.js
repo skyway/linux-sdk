@@ -1,4 +1,0 @@
-var structboost_1_1endian_1_1detail_1_1endian__load__impl_3_01_t_00_012_00_01_order_00_011_00_01order_1_1big_01_4 =
-[
-    [ "operator()", "structboost_1_1endian_1_1detail_1_1endian__load__impl_3_01_t_00_012_00_01_order_00_011_00_01order_1_1big_01_4.html#aa49bf316f2a07c37513430aeaf5e79fb", null ]
-];

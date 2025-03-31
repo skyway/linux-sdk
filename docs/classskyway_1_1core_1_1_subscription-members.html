@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.8.17 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('classskyway_1_1core_1_1_subscription.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,40 +87,44 @@ $(document).ready(function(){initNavTree('classskyway_1_1core_1_1_subscription.h
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">skyway::core::Subscription メンバ一覧</div>  </div>
+  <div class="headertitle"><div class="title">skyway::core::Subscription メンバ一覧</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>継承メンバを含む <a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a> の全メンバ一覧です。</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#a7982ebcf6eea63d7df873735ee33ab73">AddEventListener</a>(interface::Subscription::EventListener *listener) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#aedde056c6478297b32b396924728c0c5">Cancel</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#aedde056c6478297b32b396924728c0c5">Cancel</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#a2586a488dcd566eecb6ca3de8ed0ca01">ChangePreferredEncoding</a>(const std::string &amp;id) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#abef87daaa0865f97d55f036986a28df8">ContentType</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#a72951aa3e79bea1ea3a407b3f7134917">GetStats</a>() override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#aca5efea7c50122852b6d0216d56e3123">Id</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#a3852c89b8e53a590a7e67e8510f251e9">PreferredEncodingId</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#ab7a22b89522eb1d071de934c1363fa00">Publication</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#abef87daaa0865f97d55f036986a28df8">ContentType</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#aea5768cc16f192a522c5db82f6323da8">GetStats</a>() override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#aca5efea7c50122852b6d0216d56e3123">Id</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#a9d21fd29a2024c91680d43f13c973d02">PreferredEncodingId</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#a8d9d17c622c8d558b2f2d501d73b23a5">Publication</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#a84604a9f3011bcb0cbea073cc4e267b1">RemoveEventListener</a>(interface::Subscription::EventListener *listener) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#a0c977d3c0d38ef903198a75642817d29">State</a>() override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#aeca7098c126a87f8a839d72151d722e1">Stream</a>() override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#aef4e6d0069e7249d3126c02e48d4d8bb">Subscriber</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#a0c977d3c0d38ef903198a75642817d29">State</a>() override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#a1da8a08c2f094c5558d1f4b13cab15fb">Stream</a>() override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html#a47939d23187fa5beffc8816dfd718969">Subscriber</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_subscription.html">skyway::core::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~Subscription</b>()=default (定義場所: <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">skyway::core::interface::Subscription</a>)</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">skyway::core::interface::Subscription</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

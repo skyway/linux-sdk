@@ -44,22 +44,28 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.8.17 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -72,7 +78,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('publication_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,136 +92,142 @@ $(document).ready(function(){initNavTree('publication_8hpp_source.html',''); ini
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">publication.hpp</div>  </div>
+  <div class="headertitle"><div class="title">publication.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  publication.hpp</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  skyway</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by sandabu on 2022/01/12.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright © 2022 NTT Communications. All rights reserved.</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef SKYWAY_CORE_PUBLICATION_HPP_</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define SKYWAY_CORE_PUBLICATION_HPP_</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;skyway/core/interface/channel.hpp&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;skyway/core/interface/local_stream.hpp&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>skyway {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>core {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classskyway_1_1core_1_1_publication.html">Publication</a> : <span class="keyword">public</span> <a class="code" href="classskyway_1_1core_1_1interface_1_1_publication.html">interface::Publication</a> {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classskyway_1_1core_1_1_publication.html">Publication</a>(std::shared_ptr&lt;interface::Channel&gt; channel, <span class="keyword">const</span> <a class="code" href="structskyway_1_1model_1_1_publication.html">model::Publication</a>&amp; initial_dto);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    ~<a class="code" href="classskyway_1_1core_1_1_publication.html">Publication</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1core_1_1_publication.html#af14b7075345258d12b42ee8e4f3b733e">AddEventListener</a>(<a class="code" href="classskyway_1_1core_1_1interface_1_1_publication_1_1_event_listener.html">interface::Publication::EventListener</a>* listener) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1core_1_1_publication.html#a0d7493308611b359262289ba7108330c">RemoveEventListener</a>(<a class="code" href="classskyway_1_1core_1_1interface_1_1_publication_1_1_event_listener.html">interface::Publication::EventListener</a>* listener) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> AddInternalListener(InternalListener* listener) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> RemoveInternalListener(InternalListener* listener) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::string <a class="code" href="classskyway_1_1core_1_1_publication.html#af32006f6b76795e28aeea517066543b6">Id</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::shared_ptr&lt;interface::Member&gt; <a class="code" href="classskyway_1_1core_1_1_publication.html#a98409211208f006ef0697e6f90361ed0">Publisher</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::vector&lt;std::shared_ptr&lt;interface::Subscription&gt;&gt; <a class="code" href="classskyway_1_1core_1_1_publication.html#acec5d3d0fd7d1ecdd33ed6c863959842">Subscriptions</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    model::ContentType <a class="code" href="classskyway_1_1core_1_1_publication.html#a17164fe737f804334422b6a8fe42289f">ContentType</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    std::optional&lt;std::string&gt; <a class="code" href="classskyway_1_1core_1_1_publication.html#ad81f6c86a063c2548c3cd401a9673696">Metadata</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    std::shared_ptr&lt;interface::Publication&gt; <a class="code" href="classskyway_1_1core_1_1_publication.html#ac1613e39b8531591ed1b8d0532107216">Origin</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    std::vector&lt;model::Codec&gt; <a class="code" href="classskyway_1_1core_1_1_publication.html#a1fab2c57ef285637205f8a37fbbf3fe0">CodecCapabilities</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::vector&lt;model::Encoding&gt; <a class="code" href="classskyway_1_1core_1_1_publication.html#ab8a5a0d4f1d7f86d7ada1e110e47bda7">Encodings</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    interface::PublicationState <a class="code" href="classskyway_1_1core_1_1_publication.html#a0069e6bf77d6add34284a2e9b00fe78f">State</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::shared_ptr&lt;interface::LocalStream&gt; <a class="code" href="classskyway_1_1core_1_1_publication.html#accb0f8a31bc97649580d4d9dac17d8cf">Stream</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1core_1_1_publication.html#aa48be4b20329ac5d8e833fb4aa915329">UpdateMetadata</a>(<span class="keyword">const</span> std::string&amp; metadata) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1core_1_1_publication.html#a5e70bb6844e9a6aebb1555d5bf800e57">UpdateEncodings</a>(std::vector&lt;model::Encoding&gt; encodings) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">bool</span> ReplaceStream(std::shared_ptr&lt;interface::LocalStream&gt; stream) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1core_1_1_publication.html#a8d28b7e1e13b4eb9d3b6899fe10fff9f">Cancel</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1core_1_1_publication.html#a90a2808bfda05de2ac2eb828d9ce92d9">Enable</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1core_1_1_publication.html#a5e81ffc8c307fea32ddbab65ced37e88">Disable</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::optional&lt;model::WebRTCStats&gt; <a class="code" href="classskyway_1_1core_1_1_publication.html#a78b61770c451ff5255383c93f9260572">GetStats</a>(<span class="keyword">const</span> std::string&amp; selector) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> AddGetStatsCallback(<span class="keyword">const</span> std::string&amp; remote_member_id, Callback* callback) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> RemoveGetStatsCallback(<span class="keyword">const</span> std::string&amp; remote_member_id) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> SetCodecCapabilities(std::vector&lt;model::Codec&gt; codec_capabilities) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> SetEncodings(std::vector&lt;model::Encoding&gt; encodings) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> SetStream(std::shared_ptr&lt;interface::LocalStream&gt; stream) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> IsEnabling() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> Dispose() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> OnUnpublished() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> OnSubscribed(std::shared_ptr&lt;interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> OnUnsubscribed(std::shared_ptr&lt;interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> OnMetadataUpdated(<span class="keyword">const</span> std::string&amp; metadata) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> OnEnabled() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> OnDisabled() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> OnConnectionStateChanged(<span class="keyword">const</span> ConnectionState new_state) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::weak_ptr&lt;interface::Channel&gt; channel_;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="structskyway_1_1model_1_1_publication.html">model::Publication</a> initial_dto_;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    std::atomic&lt;interface::PublicationState&gt; state_;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::vector&lt;model::Codec&gt; codec_capabilities_;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::vector&lt;model::Encoding&gt; encodings_;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::weak_ptr&lt;interface::Member&gt; publisher_;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::shared_ptr&lt;interface::LocalStream&gt; stream_;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::mutex listeners_mtx_;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::mutex internal_listeners_mtx_;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    std::unordered_set&lt;interface::Publication::EventListener*&gt; listeners_;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::unordered_set&lt;interface::Publication::InternalListener*&gt; internal_listeners_;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    std::atomic&lt;bool&gt; metadata_updated_;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">bool</span> is_enabling_;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    std::mutex get_stats_callback_mutex_;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::unordered_map&lt;std::string, Callback*&gt; get_stats_callbacks_;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}  <span class="comment">// namespace core</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_CORE_PUBLICATION_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//  publication.hpp</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//  skyway</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Created by sandabu on 2022/01/12.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  Copyright © 2022 NTT Communications. All rights reserved.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef SKYWAY_CORE_PUBLICATION_HPP_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define SKYWAY_CORE_PUBLICATION_HPP_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;skyway/core/interface/channel.hpp&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;skyway/core/interface/local_stream.hpp&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span>skyway {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span>core {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1core_1_1_publication.html">Publication</a> : <span class="keyword">public</span> <a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_publication.html">interface::Publication</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_class" href="classskyway_1_1core_1_1_publication.html">Publication</a>(std::shared_ptr&lt;interface::Channel&gt; channel, <span class="keyword">const</span> <a class="code hl_struct" href="structskyway_1_1model_1_1_publication.html">model::Publication</a>&amp; initial_dto);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_class" href="classskyway_1_1core_1_1_publication.html">~Publication</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#af14b7075345258d12b42ee8e4f3b733e">   26</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#af14b7075345258d12b42ee8e4f3b733e">AddEventListener</a>(<a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_publication_1_1_event_listener.html">interface::Publication::EventListener</a>* listener) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#a0d7493308611b359262289ba7108330c">   27</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#a0d7493308611b359262289ba7108330c">RemoveEventListener</a>(<a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_publication_1_1_event_listener.html">interface::Publication::EventListener</a>* listener) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> AddInternalListener(InternalListener* listener) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> RemoveInternalListener(InternalListener* listener) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#af32006f6b76795e28aeea517066543b6">   34</a></span>    std::string <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#af32006f6b76795e28aeea517066543b6">Id</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#a24e7c8090b718fafb2365ac50fdfcf87">   35</a></span>    std::shared_ptr&lt;interface::Member&gt; <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#a24e7c8090b718fafb2365ac50fdfcf87">Publisher</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#a21b1b7e115b91e43e8bd370da35d706a">   36</a></span>    std::vector&lt;std::shared_ptr&lt;interface::Subscription&gt;&gt; <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#a21b1b7e115b91e43e8bd370da35d706a">Subscriptions</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#a17164fe737f804334422b6a8fe42289f">   37</a></span>    model::ContentType <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#a17164fe737f804334422b6a8fe42289f">ContentType</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#a00d8ee67402723bdcc7542f4aae06558">   38</a></span>    std::optional&lt;std::string&gt; <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#a00d8ee67402723bdcc7542f4aae06558">Metadata</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#a400827013c6f6f5c097c52d5e7304de9">   39</a></span>    std::shared_ptr&lt;interface::Publication&gt; <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#a400827013c6f6f5c097c52d5e7304de9">Origin</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#ad05c3a455d128da7035a41acc9da6e88">   40</a></span>    std::vector&lt;model::Codec&gt; <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#ad05c3a455d128da7035a41acc9da6e88">CodecCapabilities</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#a0bfd27cb6b82423a0031c4dbf5b63205">   41</a></span>    std::vector&lt;model::Encoding&gt; <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#a0bfd27cb6b82423a0031c4dbf5b63205">Encodings</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#a0069e6bf77d6add34284a2e9b00fe78f">   42</a></span>    interface::PublicationState <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#a0069e6bf77d6add34284a2e9b00fe78f">State</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#a6d050b4a786dca3b487683f3812b740f">   44</a></span>    std::shared_ptr&lt;interface::LocalStream&gt; <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#a6d050b4a786dca3b487683f3812b740f">Stream</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#aa48be4b20329ac5d8e833fb4aa915329">   46</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#aa48be4b20329ac5d8e833fb4aa915329">UpdateMetadata</a>(<span class="keyword">const</span> std::string&amp; metadata) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#a5e70bb6844e9a6aebb1555d5bf800e57">   47</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#a5e70bb6844e9a6aebb1555d5bf800e57">UpdateEncodings</a>(std::vector&lt;model::Encoding&gt; encodings) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">bool</span> ReplaceStream(std::shared_ptr&lt;interface::LocalStream&gt; stream) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#a8d28b7e1e13b4eb9d3b6899fe10fff9f">   49</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#a8d28b7e1e13b4eb9d3b6899fe10fff9f">Cancel</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#a90a2808bfda05de2ac2eb828d9ce92d9">   50</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#a90a2808bfda05de2ac2eb828d9ce92d9">Enable</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#a5e81ffc8c307fea32ddbab65ced37e88">   51</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#a5e81ffc8c307fea32ddbab65ced37e88">Disable</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1_publication.html#ad73ec93896472ab2fd383a0577dc0005">   53</a></span>    std::optional&lt;model::WebRTCStats&gt; <a class="code hl_function" href="classskyway_1_1core_1_1_publication.html#ad73ec93896472ab2fd383a0577dc0005">GetStats</a>(<span class="keyword">const</span> std::string&amp; selector) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> AddGetStatsCallback(<span class="keyword">const</span> std::string&amp; remote_member_id, Callback* callback) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> RemoveGetStatsCallback(<span class="keyword">const</span> std::string&amp; remote_member_id) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> SetCodecCapabilities(std::vector&lt;model::Codec&gt; codec_capabilities) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> SetEncodings(std::vector&lt;model::Encoding&gt; encodings) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> SetStream(std::shared_ptr&lt;interface::LocalStream&gt; stream) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">bool</span> IsEnabling() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> Dispose() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> OnUnpublished() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> OnSubscribed(std::shared_ptr&lt;interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> OnUnsubscribed(std::shared_ptr&lt;interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> OnMetadataUpdated(<span class="keyword">const</span> std::string&amp; metadata) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> OnEnabled() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> OnDisabled() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> OnConnectionStateChanged(<span class="keyword">const</span> ConnectionState new_state) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    std::weak_ptr&lt;interface::Channel&gt; channel_;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_struct" href="structskyway_1_1model_1_1_publication.html">model::Publication</a> initial_dto_;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    std::atomic&lt;interface::PublicationState&gt; state_;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    std::vector&lt;model::Codec&gt; codec_capabilities_;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    std::vector&lt;model::Encoding&gt; encodings_;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::weak_ptr&lt;interface::Member&gt; publisher_;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    std::shared_ptr&lt;interface::LocalStream&gt; stream_;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    std::mutex listeners_mtx_;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    std::mutex internal_listeners_mtx_;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    std::unordered_set&lt;interface::Publication::EventListener*&gt; listeners_;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    std::unordered_set&lt;interface::Publication::InternalListener*&gt; internal_listeners_;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    std::atomic&lt;bool&gt; metadata_updated_;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">bool</span> is_enabling_;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    std::mutex get_stats_callback_mutex_;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    std::unordered_map&lt;std::string, Callback*&gt; get_stats_callbacks_;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>};</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}  <span class="comment">// namespace core</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_CORE_PUBLICATION_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></div><div class="ttdoc">Publicationの実装クラス</div><div class="ttdef"><b>Definition</b> publication.hpp:19</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a0069e6bf77d6add34284a2e9b00fe78f"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a0069e6bf77d6add34284a2e9b00fe78f">skyway::core::Publication::State</a></div><div class="ttdeci">interface::PublicationState State() override</div><div class="ttdoc">State(公開状態がEnableかDisabelかCancelか)を取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a00d8ee67402723bdcc7542f4aae06558"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a00d8ee67402723bdcc7542f4aae06558">skyway::core::Publication::Metadata</a></div><div class="ttdeci">std::optional&lt; std::string &gt; Metadata() const override</div><div class="ttdoc">Metadataを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a0bfd27cb6b82423a0031c4dbf5b63205"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a0bfd27cb6b82423a0031c4dbf5b63205">skyway::core::Publication::Encodings</a></div><div class="ttdeci">std::vector&lt; model::Encoding &gt; Encodings() const override</div><div class="ttdoc">このPublicationのエンコーディング設定の一覧を取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a0d7493308611b359262289ba7108330c"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a0d7493308611b359262289ba7108330c">skyway::core::Publication::RemoveEventListener</a></div><div class="ttdeci">void RemoveEventListener(interface::Publication::EventListener *listener) override</div><div class="ttdoc">イベントの購読を中止します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a17164fe737f804334422b6a8fe42289f"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a17164fe737f804334422b6a8fe42289f">skyway::core::Publication::ContentType</a></div><div class="ttdeci">model::ContentType ContentType() const override</div><div class="ttdoc">ContentType(VideoかAudioかDataか)を取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a21b1b7e115b91e43e8bd370da35d706a"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a21b1b7e115b91e43e8bd370da35d706a">skyway::core::Publication::Subscriptions</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; interface::Subscription &gt; &gt; Subscriptions() const override</div><div class="ttdoc">このPublicationを購読しているSubsciptionの一覧を取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a24e7c8090b718fafb2365ac50fdfcf87"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a24e7c8090b718fafb2365ac50fdfcf87">skyway::core::Publication::Publisher</a></div><div class="ttdeci">std::shared_ptr&lt; interface::Member &gt; Publisher() const override</div><div class="ttdoc">このPublicationをPublishしているMemberを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a400827013c6f6f5c097c52d5e7304de9"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a400827013c6f6f5c097c52d5e7304de9">skyway::core::Publication::Origin</a></div><div class="ttdeci">std::shared_ptr&lt; interface::Publication &gt; Origin() const override</div><div class="ttdoc">このPublicationのOriginを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a5e70bb6844e9a6aebb1555d5bf800e57"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a5e70bb6844e9a6aebb1555d5bf800e57">skyway::core::Publication::UpdateEncodings</a></div><div class="ttdeci">bool UpdateEncodings(std::vector&lt; model::Encoding &gt; encodings) override</div><div class="ttdoc">エンコーディング設定を更新します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a5e81ffc8c307fea32ddbab65ced37e88"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a5e81ffc8c307fea32ddbab65ced37e88">skyway::core::Publication::Disable</a></div><div class="ttdeci">bool Disable() const override</div><div class="ttdoc">Publicationの公開を一時停止します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a6d050b4a786dca3b487683f3812b740f"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a6d050b4a786dca3b487683f3812b740f">skyway::core::Publication::Stream</a></div><div class="ttdeci">std::shared_ptr&lt; interface::LocalStream &gt; Stream() const override</div><div class="ttdoc">Publisherが持つStreamを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a8d28b7e1e13b4eb9d3b6899fe10fff9f"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a8d28b7e1e13b4eb9d3b6899fe10fff9f">skyway::core::Publication::Cancel</a></div><div class="ttdeci">bool Cancel() const override</div><div class="ttdoc">Publishを中止します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a90a2808bfda05de2ac2eb828d9ce92d9"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a90a2808bfda05de2ac2eb828d9ce92d9">skyway::core::Publication::Enable</a></div><div class="ttdeci">bool Enable() override</div><div class="ttdoc">Publicationの公開を開始します。disableによって停止していた場合は再開します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_aa48be4b20329ac5d8e833fb4aa915329"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#aa48be4b20329ac5d8e833fb4aa915329">skyway::core::Publication::UpdateMetadata</a></div><div class="ttdeci">bool UpdateMetadata(const std::string &amp;metadata) override</div><div class="ttdoc">Metadataを更新します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_ad05c3a455d128da7035a41acc9da6e88"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#ad05c3a455d128da7035a41acc9da6e88">skyway::core::Publication::CodecCapabilities</a></div><div class="ttdeci">std::vector&lt; model::Codec &gt; CodecCapabilities() const override</div><div class="ttdoc">このPublicationのコーデック一覧を取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_ad73ec93896472ab2fd383a0577dc0005"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#ad73ec93896472ab2fd383a0577dc0005">skyway::core::Publication::GetStats</a></div><div class="ttdeci">std::optional&lt; model::WebRTCStats &gt; GetStats(const std::string &amp;selector) override</div><div class="ttdoc">統計情報を取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_af14b7075345258d12b42ee8e4f3b733e"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#af14b7075345258d12b42ee8e4f3b733e">skyway::core::Publication::AddEventListener</a></div><div class="ttdeci">void AddEventListener(interface::Publication::EventListener *listener) override</div><div class="ttdoc">イベントを購読します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_af32006f6b76795e28aeea517066543b6"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#af32006f6b76795e28aeea517066543b6">skyway::core::Publication::Id</a></div><div class="ttdeci">std::string Id() const override</div><div class="ttdoc">Idを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_publication_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_publication_1_1_event_listener.html">skyway::core::interface::Publication::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition</b> publication.hpp:34</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_publication_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_publication.html">skyway::core::interface::Publication</a></div><div class="ttdoc">Publicationのインターフェース</div><div class="ttdef"><b>Definition</b> publication.hpp:31</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_publication_html"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html">skyway::model::Publication</a></div><div class="ttdoc">Publication情報</div><div class="ttdef"><b>Definition</b> domain.hpp:92</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a78b61770c451ff5255383c93f9260572"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a78b61770c451ff5255383c93f9260572">skyway::core::Publication::GetStats</a></div><div class="ttdeci">std::optional&lt; model::WebRTCStats &gt; GetStats(const std::string &amp;selector) override</div><div class="ttdoc">統計情報を取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a17164fe737f804334422b6a8fe42289f"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a17164fe737f804334422b6a8fe42289f">skyway::core::Publication::ContentType</a></div><div class="ttdeci">model::ContentType ContentType() const override</div><div class="ttdoc">ContentType(VideoかAudioかDataか)を取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a1fab2c57ef285637205f8a37fbbf3fe0"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a1fab2c57ef285637205f8a37fbbf3fe0">skyway::core::Publication::CodecCapabilities</a></div><div class="ttdeci">std::vector&lt; model::Codec &gt; CodecCapabilities() const override</div><div class="ttdoc">このPublicationのコーデック一覧を取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_af32006f6b76795e28aeea517066543b6"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#af32006f6b76795e28aeea517066543b6">skyway::core::Publication::Id</a></div><div class="ttdeci">std::string Id() const override</div><div class="ttdoc">Idを取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a0069e6bf77d6add34284a2e9b00fe78f"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a0069e6bf77d6add34284a2e9b00fe78f">skyway::core::Publication::State</a></div><div class="ttdeci">interface::PublicationState State() override</div><div class="ttdoc">State(公開状態がEnableかDisabelかCancelか)を取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_ad81f6c86a063c2548c3cd401a9673696"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#ad81f6c86a063c2548c3cd401a9673696">skyway::core::Publication::Metadata</a></div><div class="ttdeci">std::optional&lt; std::string &gt; Metadata() const override</div><div class="ttdoc">Metadataを取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a5e81ffc8c307fea32ddbab65ced37e88"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a5e81ffc8c307fea32ddbab65ced37e88">skyway::core::Publication::Disable</a></div><div class="ttdeci">bool Disable() const override</div><div class="ttdoc">Publicationの公開を一時停止します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_ab8a5a0d4f1d7f86d7ada1e110e47bda7"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#ab8a5a0d4f1d7f86d7ada1e110e47bda7">skyway::core::Publication::Encodings</a></div><div class="ttdeci">std::vector&lt; model::Encoding &gt; Encodings() const override</div><div class="ttdoc">このPublicationのエンコーディング設定の一覧を取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_publication_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_publication_1_1_event_listener.html">skyway::core::interface::Publication::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition:</b> publication.hpp:34</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_af14b7075345258d12b42ee8e4f3b733e"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#af14b7075345258d12b42ee8e4f3b733e">skyway::core::Publication::AddEventListener</a></div><div class="ttdeci">void AddEventListener(interface::Publication::EventListener *listener) override</div><div class="ttdoc">イベントを購読します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a90a2808bfda05de2ac2eb828d9ce92d9"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a90a2808bfda05de2ac2eb828d9ce92d9">skyway::core::Publication::Enable</a></div><div class="ttdeci">bool Enable() override</div><div class="ttdoc">Publicationの公開を開始します。disableによって停止していた場合は再開します。</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_publication_html"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html">skyway::model::Publication</a></div><div class="ttdoc">Publication情報</div><div class="ttdef"><b>Definition:</b> domain.hpp:92</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_aa48be4b20329ac5d8e833fb4aa915329"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#aa48be4b20329ac5d8e833fb4aa915329">skyway::core::Publication::UpdateMetadata</a></div><div class="ttdeci">bool UpdateMetadata(const std::string &amp;metadata) override</div><div class="ttdoc">Metadataを更新します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a5e70bb6844e9a6aebb1555d5bf800e57"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a5e70bb6844e9a6aebb1555d5bf800e57">skyway::core::Publication::UpdateEncodings</a></div><div class="ttdeci">bool UpdateEncodings(std::vector&lt; model::Encoding &gt; encodings) override</div><div class="ttdoc">エンコーディング設定を更新します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_acec5d3d0fd7d1ecdd33ed6c863959842"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#acec5d3d0fd7d1ecdd33ed6c863959842">skyway::core::Publication::Subscriptions</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; interface::Subscription &gt; &gt; Subscriptions() const override</div><div class="ttdoc">このPublicationを購読しているSubsciptionの一覧を取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_ac1613e39b8531591ed1b8d0532107216"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#ac1613e39b8531591ed1b8d0532107216">skyway::core::Publication::Origin</a></div><div class="ttdeci">std::shared_ptr&lt; interface::Publication &gt; Origin() const override</div><div class="ttdoc">このPublicationのOriginを取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a98409211208f006ef0697e6f90361ed0"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a98409211208f006ef0697e6f90361ed0">skyway::core::Publication::Publisher</a></div><div class="ttdeci">std::shared_ptr&lt; interface::Member &gt; Publisher() const override</div><div class="ttdoc">このPublicationをPublishしているMemberを取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_publication_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_publication.html">skyway::core::interface::Publication</a></div><div class="ttdoc">Publicationのインターフェース</div><div class="ttdef"><b>Definition:</b> publication.hpp:31</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_accb0f8a31bc97649580d4d9dac17d8cf"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#accb0f8a31bc97649580d4d9dac17d8cf">skyway::core::Publication::Stream</a></div><div class="ttdeci">std::shared_ptr&lt; interface::LocalStream &gt; Stream() const override</div><div class="ttdoc">Publisherが持つStreamを取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></div><div class="ttdoc">Publicationの実装クラス</div><div class="ttdef"><b>Definition:</b> publication.hpp:19</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a8d28b7e1e13b4eb9d3b6899fe10fff9f"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a8d28b7e1e13b4eb9d3b6899fe10fff9f">skyway::core::Publication::Cancel</a></div><div class="ttdeci">bool Cancel() const override</div><div class="ttdoc">Publishを中止します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1_publication_html_a0d7493308611b359262289ba7108330c"><div class="ttname"><a href="classskyway_1_1core_1_1_publication.html#a0d7493308611b359262289ba7108330c">skyway::core::Publication::RemoveEventListener</a></div><div class="ttdeci">void RemoveEventListener(interface::Publication::EventListener *listener) override</div><div class="ttdoc">イベントの購読を中止します。</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_77f3510bf786cf3c12f65f3b0b944be3.html">skyway</a></li><li class="navelem"><a class="el" href="dir_c969e10abcf9ecdc3862a30832440b35.html">core</a></li><li class="navelem"><b>publication.hpp</b></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

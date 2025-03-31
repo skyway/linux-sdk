@@ -1,4 +1,0 @@
-var structboost_1_1allocator__propagate__on__container__move__assignment_3_01_a_00_01typename_01detaed096e9e36ec71741ba407c71aabf602 =
-[
-    [ "type", "structboost_1_1allocator__propagate__on__container__move__assignment_3_01_a_00_01typename_01detaed096e9e36ec71741ba407c71aabf602.html#a19dc4f28b7c20e41ad29c9788641727a", null ]
-];

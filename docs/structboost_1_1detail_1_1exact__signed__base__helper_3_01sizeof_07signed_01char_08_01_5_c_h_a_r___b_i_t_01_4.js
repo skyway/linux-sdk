@@ -1,4 +1,0 @@
-var structboost_1_1detail_1_1exact__signed__base__helper_3_01sizeof_07signed_01char_08_01_5_c_h_a_r___b_i_t_01_4 =
-[
-    [ "exact", "structboost_1_1detail_1_1exact__signed__base__helper_3_01sizeof_07signed_01char_08_01_5_c_h_a_r___b_i_t_01_4.html#a824ffc56c1732aa2558577764fbdfbf1", null ]
-];

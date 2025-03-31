@@ -1,5 +1,0 @@
-var classboost_1_1algorithm_1_1has__stable__iterators_3_01_b_o_o_s_t___s_t_d___e_x_t_e_n_s_i_o_n___n9f0131313f69f90098a48d51c93ff357 =
-[
-    [ "type", "classboost_1_1algorithm_1_1has__stable__iterators_3_01_b_o_o_s_t___s_t_d___e_x_t_e_n_s_i_o_n___n9f0131313f69f90098a48d51c93ff357.html#a028374b520da921f73df64c11ac902f2", null ],
-    [ "BOOST_STATIC_CONSTANT", "classboost_1_1algorithm_1_1has__stable__iterators_3_01_b_o_o_s_t___s_t_d___e_x_t_e_n_s_i_o_n___n9f0131313f69f90098a48d51c93ff357.html#a56e10543705a5d9a1aaef00f6dcb20ad", null ]
-];

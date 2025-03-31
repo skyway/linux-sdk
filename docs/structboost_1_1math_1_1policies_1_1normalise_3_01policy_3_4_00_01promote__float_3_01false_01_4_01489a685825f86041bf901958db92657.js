@@ -1,4 +1,0 @@
-var structboost_1_1math_1_1policies_1_1normalise_3_01policy_3_4_00_01promote__float_3_01false_01_4_01489a685825f86041bf901958db92657 =
-[
-    [ "type", "structboost_1_1math_1_1policies_1_1normalise_3_01policy_3_4_00_01promote__float_3_01false_01_4_01489a685825f86041bf901958db92657.html#a460d96f4d81768b16c6eddc43a76e309", null ]
-];

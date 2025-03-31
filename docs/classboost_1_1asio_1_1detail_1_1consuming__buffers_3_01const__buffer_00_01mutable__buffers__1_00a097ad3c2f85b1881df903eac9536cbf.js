@@ -1,4 +1,0 @@
-var classboost_1_1asio_1_1detail_1_1consuming__buffers_3_01const__buffer_00_01mutable__buffers__1_00a097ad3c2f85b1881df903eac9536cbf =
-[
-    [ "consuming_buffers", "classboost_1_1asio_1_1detail_1_1consuming__buffers_3_01const__buffer_00_01mutable__buffers__1_00a097ad3c2f85b1881df903eac9536cbf.html#a03f6f54b270dbcc6e97c153208dee561", null ]
-];

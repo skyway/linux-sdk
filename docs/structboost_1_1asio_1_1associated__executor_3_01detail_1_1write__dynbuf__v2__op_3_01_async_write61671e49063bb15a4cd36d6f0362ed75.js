@@ -1,5 +1,0 @@
-var structboost_1_1asio_1_1associated__executor_3_01detail_1_1write__dynbuf__v2__op_3_01_async_write61671e49063bb15a4cd36d6f0362ed75 =
-[
-    [ "type", "structboost_1_1asio_1_1associated__executor_3_01detail_1_1write__dynbuf__v2__op_3_01_async_write61671e49063bb15a4cd36d6f0362ed75.html#a46042c0cd9e19f2e6c9fb99a61756634", null ],
-    [ "get", "structboost_1_1asio_1_1associated__executor_3_01detail_1_1write__dynbuf__v2__op_3_01_async_write61671e49063bb15a4cd36d6f0362ed75.html#aefa8fc9727901c55036ec133c8a916a4", null ]
-];

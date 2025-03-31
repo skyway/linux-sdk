@@ -1,5 +1,0 @@
-var structboost_1_1detail_1_1function_1_1_b_o_o_s_t___f_u_n_c_t_i_o_n___g_e_t___i_n_v_o_k_e_r_3_01fu1ffd7f50f8b2fc000b34405a717af6a9 =
-[
-    [ "invoker_type", "structboost_1_1detail_1_1function_1_1_b_o_o_s_t___f_u_n_c_t_i_o_n___g_e_t___i_n_v_o_k_e_r_3_01fu1ffd7f50f8b2fc000b34405a717af6a9.html#a0ce688de935256d2af43920cab66e52f", null ],
-    [ "manager_type", "structboost_1_1detail_1_1function_1_1_b_o_o_s_t___f_u_n_c_t_i_o_n___g_e_t___i_n_v_o_k_e_r_3_01fu1ffd7f50f8b2fc000b34405a717af6a9.html#a54df19d45a0f64c0c2cb3fb4a4849aca", null ]
-];

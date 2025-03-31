@@ -1,4 +1,0 @@
-var structboost_1_1range__detail_1_1range__const__iterator__helper_3_01std_1_1pair_3_01_iterator_00_01_iterator_01_4_01_4 =
-[
-    [ "type", "structboost_1_1range__detail_1_1range__const__iterator__helper_3_01std_1_1pair_3_01_iterator_00_01_iterator_01_4_01_4.html#accd93e3fd73fc0bf9f87443435d2e4d1", null ]
-];

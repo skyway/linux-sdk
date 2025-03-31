@@ -44,22 +44,28 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.8.17 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -72,7 +78,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('interface_2i420__video__renderer_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,107 +92,117 @@ $(document).ready(function(){initNavTree('interface_2i420__video__renderer_8hpp_
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">i420_video_renderer.hpp</div>  </div>
+  <div class="headertitle"><div class="title">i420_video_renderer.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  i420_video_renderer.hpp</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  skyway</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by ogura on 2025/1/10.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright © 2025 NTT Communications. All rights reserved.</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef SKYWAY_MEDIA_INTERFACE_I420_VIDEO_RENDERER_HPP_</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define SKYWAY_MEDIA_INTERFACE_I420_VIDEO_RENDERER_HPP_</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;skyway/core/stream/remote/video_stream.hpp&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;skyway/media/interface/video_renderer.hpp&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>skyway {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>media {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>interface {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html">   23</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html">I420VideoRendererOptions</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#aa666c749aead62702386e3057dc507d5">   25</a></span>&#160;    std::optional&lt;int&gt; <a class="code" href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#aa666c749aead62702386e3057dc507d5">scaled_width</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#ab99005e6a592c647a9f8fde38782f23b">   27</a></span>&#160;    std::optional&lt;int&gt; <a class="code" href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#ab99005e6a592c647a9f8fde38782f23b">scaled_height</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html">   31</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html">I420Frame</a> {</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#af72e2792b13b2b9a720ba8571a5d7171">   33</a></span>&#160;    <span class="keyword">const</span> uint8_t* <a class="code" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#af72e2792b13b2b9a720ba8571a5d7171">y</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#acf0e64201e8d37664d1f865d056d5835">   35</a></span>&#160;    <span class="keyword">const</span> uint8_t* <a class="code" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#acf0e64201e8d37664d1f865d056d5835">u</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#a151e0671987dc00127702badbd714438">   37</a></span>&#160;    <span class="keyword">const</span> uint8_t* <a class="code" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#a151e0671987dc00127702badbd714438">v</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#afaa26a8bc0768ce89a64cc0594673106">   39</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#afaa26a8bc0768ce89a64cc0594673106">stride_y</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#a1691036c8c16d2dd8c384cd496215aa7">   41</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#a1691036c8c16d2dd8c384cd496215aa7">stride_u</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae2896ec958fe67f7df873a59ca17fff8">   43</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae2896ec958fe67f7df873a59ca17fff8">stride_v</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae0639e3b9c765b0f6fc054d4031b52a6">   45</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae0639e3b9c765b0f6fc054d4031b52a6">width</a>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae3b0eca7babf5c5b1742d79c42eaba19">   47</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae3b0eca7babf5c5b1742d79c42eaba19">height</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classrtc_1_1scoped__refptr.html">rtc::scoped_refptr&lt;webrtc::I420BufferInterface&gt;</a> i420_buffer;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html">   55</a></span>&#160;<span class="keyword">class </span><a class="code" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html">I420VideoRenderer</a> : <span class="keyword">public</span> <a class="code" href="classskyway_1_1media_1_1interface_1_1_video_renderer.html">VideoRenderer</a> {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener.html">   58</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener.html">Listener</a> {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener.html">Listener</a>()                   = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnFrame(<a class="code" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html">I420Frame</a> frame) = 0;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    };</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html#a8d4b5bd66165259f55db2e65bd30fc13">RegisterListener</a>(<a class="code" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener.html">Listener</a>* listener) = 0;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html#a5ced17fc3ed840b9f3ae721730aab5ea">UnregisterListener</a>(<a class="code" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener.html">Listener</a>* listener) = 0;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html#a0889b445a23ebda85728b51647666d8d">Render</a>(std::shared_ptr&lt;core::stream::remote::RemoteVideoStream&gt; stream) = 0;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">// rtc::VideoSinkInterface&lt;webrtc::VideoFrame&gt;</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnFrame(<span class="keyword">const</span> <a class="code" href="classwebrtc_1_1_video_frame.html">webrtc::VideoFrame</a>&amp; frame) = 0;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}  <span class="comment">// namespace interface</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}  <span class="comment">// namespace media</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_MEDIA_INTERFACE_I420_VIDEO_RENDERER_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//  i420_video_renderer.hpp</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//  skyway</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Created by ogura on 2025/1/10.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  Copyright © 2025 NTT Communications. All rights reserved.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef SKYWAY_MEDIA_INTERFACE_I420_VIDEO_RENDERER_HPP_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define SKYWAY_MEDIA_INTERFACE_I420_VIDEO_RENDERER_HPP_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;skyway/core/stream/remote/video_stream.hpp&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;skyway/media/interface/video_renderer.hpp&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span>skyway {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span>media {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span>interface {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html">   23</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html">I420VideoRendererOptions</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#aa666c749aead62702386e3057dc507d5">   25</a></span>    std::optional&lt;int&gt; <a class="code hl_variable" href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#aa666c749aead62702386e3057dc507d5">scaled_width</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#ab99005e6a592c647a9f8fde38782f23b">   27</a></span>    std::optional&lt;int&gt; <a class="code hl_variable" href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#ab99005e6a592c647a9f8fde38782f23b">scaled_height</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html">   31</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html">I420Frame</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#af72e2792b13b2b9a720ba8571a5d7171">   33</a></span>    <span class="keyword">const</span> uint8_t* <a class="code hl_variable" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#af72e2792b13b2b9a720ba8571a5d7171">y</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#acf0e64201e8d37664d1f865d056d5835">   35</a></span>    <span class="keyword">const</span> uint8_t* <a class="code hl_variable" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#acf0e64201e8d37664d1f865d056d5835">u</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#a151e0671987dc00127702badbd714438">   37</a></span>    <span class="keyword">const</span> uint8_t* <a class="code hl_variable" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#a151e0671987dc00127702badbd714438">v</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#afaa26a8bc0768ce89a64cc0594673106">   39</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#afaa26a8bc0768ce89a64cc0594673106">stride_y</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#a1691036c8c16d2dd8c384cd496215aa7">   41</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#a1691036c8c16d2dd8c384cd496215aa7">stride_u</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae2896ec958fe67f7df873a59ca17fff8">   43</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae2896ec958fe67f7df873a59ca17fff8">stride_v</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae0639e3b9c765b0f6fc054d4031b52a6">   45</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae0639e3b9c765b0f6fc054d4031b52a6">width</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae3b0eca7babf5c5b1742d79c42eaba19">   47</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae3b0eca7babf5c5b1742d79c42eaba19">height</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    rtc::scoped_refptr&lt;webrtc::I420BufferInterface&gt; i420_buffer;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="};">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html">   55</a></span><span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html">I420VideoRenderer</a> : <span class="keyword">public</span> <a class="code hl_class" href="classskyway_1_1media_1_1interface_1_1_video_renderer.html">VideoRenderer</a> {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="};">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener.html">   58</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener.html">Listener</a> {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">virtual</span> <a class="code hl_class" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener.html">~Listener</a>()                   = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnFrame(<a class="code hl_struct" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html">I420Frame</a> frame) = 0;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    };</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html#a8d4b5bd66165259f55db2e65bd30fc13">   66</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html#a8d4b5bd66165259f55db2e65bd30fc13">RegisterListener</a>(<a class="code hl_class" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener.html">Listener</a>* listener) = 0;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html#a5ced17fc3ed840b9f3ae721730aab5ea">   69</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html#a5ced17fc3ed840b9f3ae721730aab5ea">UnregisterListener</a>(<a class="code hl_class" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener.html">Listener</a>* listener) = 0;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html#a0889b445a23ebda85728b51647666d8d">   73</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html#a0889b445a23ebda85728b51647666d8d">Render</a>(std::shared_ptr&lt;core::stream::remote::RemoteVideoStream&gt; stream) = 0;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">// rtc::VideoSinkInterface&lt;webrtc::VideoFrame&gt;</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnFrame(<span class="keyword">const</span> webrtc::VideoFrame&amp; frame) = 0;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}  <span class="comment">// namespace interface</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}  <span class="comment">// namespace media</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_MEDIA_INTERFACE_I420_VIDEO_RENDERER_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener_html"><div class="ttname"><a href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener.html">skyway::media::interface::I420VideoRenderer::Listener</a></div><div class="ttdoc">RemoteVideoStreamにて映像フレームが更新された際に呼ばれるイベントリスナー</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:58</div></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1interface_1_1_i420_video_renderer_html"><div class="ttname"><a href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html">skyway::media::interface::I420VideoRenderer</a></div><div class="ttdoc">SubscribeしたVideoStreamの映像を取得するインターフェース</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:55</div></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1interface_1_1_i420_video_renderer_html_a0889b445a23ebda85728b51647666d8d"><div class="ttname"><a href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html#a0889b445a23ebda85728b51647666d8d">skyway::media::interface::I420VideoRenderer::Render</a></div><div class="ttdeci">virtual void Render(std::shared_ptr&lt; core::stream::remote::RemoteVideoStream &gt; stream)=0</div><div class="ttdoc">RemoteVideoStreamをRendererに登録します。</div></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1interface_1_1_i420_video_renderer_html_a5ced17fc3ed840b9f3ae721730aab5ea"><div class="ttname"><a href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html#a5ced17fc3ed840b9f3ae721730aab5ea">skyway::media::interface::I420VideoRenderer::UnregisterListener</a></div><div class="ttdeci">virtual void UnregisterListener(Listener *listener)=0</div><div class="ttdoc">イベントリスナーの登録を解除します。</div></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1interface_1_1_i420_video_renderer_html_a8d4b5bd66165259f55db2e65bd30fc13"><div class="ttname"><a href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html#a8d4b5bd66165259f55db2e65bd30fc13">skyway::media::interface::I420VideoRenderer::RegisterListener</a></div><div class="ttdeci">virtual void RegisterListener(Listener *listener)=0</div><div class="ttdoc">I420VideoRenderer::Listenerを登録します。</div></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1interface_1_1_video_renderer_html"><div class="ttname"><a href="classskyway_1_1media_1_1interface_1_1_video_renderer.html">skyway::media::interface::VideoRenderer</a></div><div class="ttdef"><b>Definition</b> video_renderer.hpp:18</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html">skyway::media::interface::I420Frame</a></div><div class="ttdoc">映像フレーム</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:31</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html_a151e0671987dc00127702badbd714438"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#a151e0671987dc00127702badbd714438">skyway::media::interface::I420Frame::v</a></div><div class="ttdeci">const uint8_t * v</div><div class="ttdoc">映像のV成分</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:37</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html_a1691036c8c16d2dd8c384cd496215aa7"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#a1691036c8c16d2dd8c384cd496215aa7">skyway::media::interface::I420Frame::stride_u</a></div><div class="ttdeci">int stride_u</div><div class="ttdoc">映像のY成分のStride</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:41</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html_acf0e64201e8d37664d1f865d056d5835"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#acf0e64201e8d37664d1f865d056d5835">skyway::media::interface::I420Frame::u</a></div><div class="ttdeci">const uint8_t * u</div><div class="ttdoc">映像のU成分</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:35</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html_ae0639e3b9c765b0f6fc054d4031b52a6"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae0639e3b9c765b0f6fc054d4031b52a6">skyway::media::interface::I420Frame::width</a></div><div class="ttdeci">int width</div><div class="ttdoc">width 映像の横幅</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:45</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html_ae2896ec958fe67f7df873a59ca17fff8"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae2896ec958fe67f7df873a59ca17fff8">skyway::media::interface::I420Frame::stride_v</a></div><div class="ttdeci">int stride_v</div><div class="ttdoc">映像のY成分のStride</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:43</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html_ae3b0eca7babf5c5b1742d79c42eaba19"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae3b0eca7babf5c5b1742d79c42eaba19">skyway::media::interface::I420Frame::height</a></div><div class="ttdeci">int height</div><div class="ttdoc">height 映像の縦幅</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:47</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html_af72e2792b13b2b9a720ba8571a5d7171"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#af72e2792b13b2b9a720ba8571a5d7171">skyway::media::interface::I420Frame::y</a></div><div class="ttdeci">const uint8_t * y</div><div class="ttdoc">映像のY成分</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:33</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html_afaa26a8bc0768ce89a64cc0594673106"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#afaa26a8bc0768ce89a64cc0594673106">skyway::media::interface::I420Frame::stride_y</a></div><div class="ttdeci">int stride_y</div><div class="ttdoc">映像のY成分のStride</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:39</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_video_renderer_options_html"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html">skyway::media::interface::I420VideoRendererOptions</a></div><div class="ttdoc">映像の出力時の設定</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:23</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_video_renderer_options_html_aa666c749aead62702386e3057dc507d5"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#aa666c749aead62702386e3057dc507d5">skyway::media::interface::I420VideoRendererOptions::scaled_width</a></div><div class="ttdeci">std::optional&lt; int &gt; scaled_width</div><div class="ttdoc">出力時の横幅(px)を指定します。</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:25</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_video_renderer_options_html_ab99005e6a592c647a9f8fde38782f23b"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#ab99005e6a592c647a9f8fde38782f23b">skyway::media::interface::I420VideoRendererOptions::scaled_height</a></div><div class="ttdeci">std::optional&lt; int &gt; scaled_height</div><div class="ttdoc">出力時の高さ(px)を指定します。</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html_a151e0671987dc00127702badbd714438"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#a151e0671987dc00127702badbd714438">skyway::media::interface::I420Frame::v</a></div><div class="ttdeci">const uint8_t * v</div><div class="ttdoc">映像のV成分</div><div class="ttdef"><b>Definition:</b> i420_video_renderer.hpp:37</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html_ae2896ec958fe67f7df873a59ca17fff8"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae2896ec958fe67f7df873a59ca17fff8">skyway::media::interface::I420Frame::stride_v</a></div><div class="ttdeci">int stride_v</div><div class="ttdoc">映像のY成分のStride</div><div class="ttdef"><b>Definition:</b> i420_video_renderer.hpp:43</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_video_renderer_options_html_aa666c749aead62702386e3057dc507d5"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#aa666c749aead62702386e3057dc507d5">skyway::media::interface::I420VideoRendererOptions::scaled_width</a></div><div class="ttdeci">std::optional&lt; int &gt; scaled_width</div><div class="ttdoc">出力時の横幅(px)を指定します。</div><div class="ttdef"><b>Definition:</b> i420_video_renderer.hpp:25</div></div>
-<div class="ttc" id="aclasswebrtc_1_1_video_frame_html"><div class="ttname"><a href="classwebrtc_1_1_video_frame.html">webrtc::VideoFrame</a></div><div class="ttdef"><b>Definition:</b> video_frame.h:30</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html_ae3b0eca7babf5c5b1742d79c42eaba19"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae3b0eca7babf5c5b1742d79c42eaba19">skyway::media::interface::I420Frame::height</a></div><div class="ttdeci">int height</div><div class="ttdoc">height 映像の縦幅</div><div class="ttdef"><b>Definition:</b> i420_video_renderer.hpp:47</div></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1interface_1_1_i420_video_renderer_html_a0889b445a23ebda85728b51647666d8d"><div class="ttname"><a href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html#a0889b445a23ebda85728b51647666d8d">skyway::media::interface::I420VideoRenderer::Render</a></div><div class="ttdeci">virtual void Render(std::shared_ptr&lt; core::stream::remote::RemoteVideoStream &gt; stream)=0</div><div class="ttdoc">RemoteVideoStreamをRendererに登録します。</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html_acf0e64201e8d37664d1f865d056d5835"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#acf0e64201e8d37664d1f865d056d5835">skyway::media::interface::I420Frame::u</a></div><div class="ttdeci">const uint8_t * u</div><div class="ttdoc">映像のU成分</div><div class="ttdef"><b>Definition:</b> i420_video_renderer.hpp:35</div></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1interface_1_1_i420_video_renderer_html_a5ced17fc3ed840b9f3ae721730aab5ea"><div class="ttname"><a href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html#a5ced17fc3ed840b9f3ae721730aab5ea">skyway::media::interface::I420VideoRenderer::UnregisterListener</a></div><div class="ttdeci">virtual void UnregisterListener(Listener *listener)=0</div><div class="ttdoc">イベントリスナーの登録を解除します。</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_video_renderer_options_html"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html">skyway::media::interface::I420VideoRendererOptions</a></div><div class="ttdoc">映像の出力時の設定</div><div class="ttdef"><b>Definition:</b> i420_video_renderer.hpp:23</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html_a1691036c8c16d2dd8c384cd496215aa7"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#a1691036c8c16d2dd8c384cd496215aa7">skyway::media::interface::I420Frame::stride_u</a></div><div class="ttdeci">int stride_u</div><div class="ttdoc">映像のY成分のStride</div><div class="ttdef"><b>Definition:</b> i420_video_renderer.hpp:41</div></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener_html"><div class="ttname"><a href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener.html">skyway::media::interface::I420VideoRenderer::Listener</a></div><div class="ttdoc">RemoteVideoStreamにて映像フレームが更新された際に呼ばれるイベントリスナー</div><div class="ttdef"><b>Definition:</b> i420_video_renderer.hpp:58</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html_afaa26a8bc0768ce89a64cc0594673106"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#afaa26a8bc0768ce89a64cc0594673106">skyway::media::interface::I420Frame::stride_y</a></div><div class="ttdeci">int stride_y</div><div class="ttdoc">映像のY成分のStride</div><div class="ttdef"><b>Definition:</b> i420_video_renderer.hpp:39</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html_ae0639e3b9c765b0f6fc054d4031b52a6"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae0639e3b9c765b0f6fc054d4031b52a6">skyway::media::interface::I420Frame::width</a></div><div class="ttdeci">int width</div><div class="ttdoc">width 映像の横幅</div><div class="ttdef"><b>Definition:</b> i420_video_renderer.hpp:45</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html">skyway::media::interface::I420Frame</a></div><div class="ttdoc">映像フレーム</div><div class="ttdef"><b>Definition:</b> i420_video_renderer.hpp:31</div></div>
-<div class="ttc" id="aclassrtc_1_1scoped__refptr_html"><div class="ttname"><a href="classrtc_1_1scoped__refptr.html">rtc::scoped_refptr</a></div><div class="ttdef"><b>Definition:</b> scoped_refptr.h:72</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_video_renderer_options_html_ab99005e6a592c647a9f8fde38782f23b"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#ab99005e6a592c647a9f8fde38782f23b">skyway::media::interface::I420VideoRendererOptions::scaled_height</a></div><div class="ttdeci">std::optional&lt; int &gt; scaled_height</div><div class="ttdoc">出力時の高さ(px)を指定します。</div><div class="ttdef"><b>Definition:</b> i420_video_renderer.hpp:27</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html_af72e2792b13b2b9a720ba8571a5d7171"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html#af72e2792b13b2b9a720ba8571a5d7171">skyway::media::interface::I420Frame::y</a></div><div class="ttdeci">const uint8_t * y</div><div class="ttdoc">映像のY成分</div><div class="ttdef"><b>Definition:</b> i420_video_renderer.hpp:33</div></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1interface_1_1_i420_video_renderer_html"><div class="ttname"><a href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html">skyway::media::interface::I420VideoRenderer</a></div><div class="ttdoc">SubscribeしたVideoStreamの映像を取得するインターフェース</div><div class="ttdef"><b>Definition:</b> i420_video_renderer.hpp:55</div></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1interface_1_1_video_renderer_html"><div class="ttname"><a href="classskyway_1_1media_1_1interface_1_1_video_renderer.html">skyway::media::interface::VideoRenderer</a></div><div class="ttdef"><b>Definition:</b> video_renderer.hpp:18</div></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1interface_1_1_i420_video_renderer_html_a8d4b5bd66165259f55db2e65bd30fc13"><div class="ttname"><a href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html#a8d4b5bd66165259f55db2e65bd30fc13">skyway::media::interface::I420VideoRenderer::RegisterListener</a></div><div class="ttdeci">virtual void RegisterListener(Listener *listener)=0</div><div class="ttdoc">I420VideoRenderer::Listenerを登録します。</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_77f3510bf786cf3c12f65f3b0b944be3.html">skyway</a></li><li class="navelem"><a class="el" href="dir_e0a5df88c41d0cefa5f5ef07a5fde6bd.html">media</a></li><li class="navelem"><a class="el" href="dir_c5b489e4a243e81622abebeba16e25bd.html">interface</a></li><li class="navelem"><b>i420_video_renderer.hpp</b></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

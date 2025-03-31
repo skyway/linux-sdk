@@ -1,6 +1,0 @@
-var structboost_1_1asio_1_1traits_1_1set__done__member_3_01boost_1_1asio_1_1execution_1_1detail_1_1void__receiver_01_4 =
-[
-    [ "result_type", "structboost_1_1asio_1_1traits_1_1set__done__member_3_01boost_1_1asio_1_1execution_1_1detail_1_1void__receiver_01_4.html#ad178fcd5c32828a95af0eb5603998c5f", null ],
-    [ "BOOST_ASIO_STATIC_CONSTEXPR", "structboost_1_1asio_1_1traits_1_1set__done__member_3_01boost_1_1asio_1_1execution_1_1detail_1_1void__receiver_01_4.html#ac0225eced05ff1d0f8d41408096ef521", null ],
-    [ "BOOST_ASIO_STATIC_CONSTEXPR", "structboost_1_1asio_1_1traits_1_1set__done__member_3_01boost_1_1asio_1_1execution_1_1detail_1_1void__receiver_01_4.html#a1c1d70ff591ef7e91f319dea45ade3dd", null ]
-];

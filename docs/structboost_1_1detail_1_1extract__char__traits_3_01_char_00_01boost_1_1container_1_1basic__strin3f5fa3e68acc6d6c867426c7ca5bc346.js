@@ -1,4 +1,0 @@
-var structboost_1_1detail_1_1extract__char__traits_3_01_char_00_01boost_1_1container_1_1basic__strin3f5fa3e68acc6d6c867426c7ca5bc346 =
-[
-    [ "trait_t", "structboost_1_1detail_1_1extract__char__traits_3_01_char_00_01boost_1_1container_1_1basic__strin3f5fa3e68acc6d6c867426c7ca5bc346.html#af70ad50965b9a440094cd100f4dedada", null ]
-];

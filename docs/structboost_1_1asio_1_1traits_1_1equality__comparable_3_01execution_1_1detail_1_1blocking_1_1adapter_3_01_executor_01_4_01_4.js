@@ -1,5 +1,0 @@
-var structboost_1_1asio_1_1traits_1_1equality__comparable_3_01execution_1_1detail_1_1blocking_1_1adapter_3_01_executor_01_4_01_4 =
-[
-    [ "BOOST_ASIO_STATIC_CONSTEXPR", "structboost_1_1asio_1_1traits_1_1equality__comparable_3_01execution_1_1detail_1_1blocking_1_1adapter_3_01_executor_01_4_01_4.html#a039799392724b86eeabf9d326477819d", null ],
-    [ "BOOST_ASIO_STATIC_CONSTEXPR", "structboost_1_1asio_1_1traits_1_1equality__comparable_3_01execution_1_1detail_1_1blocking_1_1adapter_3_01_executor_01_4_01_4.html#a9aa428e7faa6cc64aa33633dbd3159c2", null ]
-];

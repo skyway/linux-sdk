@@ -1,5 +1,0 @@
-var classboost_1_1asio_1_1detail_1_1base__from__connect__condition_3_01default__connect__condition_01_4 =
-[
-    [ "base_from_connect_condition", "classboost_1_1asio_1_1detail_1_1base__from__connect__condition_3_01default__connect__condition_01_4.html#a0fafda04e7bacd0051be29d8c84cf18f", null ],
-    [ "check_condition", "classboost_1_1asio_1_1detail_1_1base__from__connect__condition_3_01default__connect__condition_01_4.html#a4a7206e9daf47f29f73e0016b1831a7b", null ]
-];

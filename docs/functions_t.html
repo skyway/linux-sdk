@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.8.17 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('functions_t.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,231 +87,34 @@ $(document).ready(function(){initNavTree('functions_t.html',''); initResizable()
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="contents">
 <div class="textblock">詳解ありクラスメンバの一覧です。各クラスメンバ詳解へのリンクがあります。</div>
 
-<h3><a id="index_t"></a>- t -</h3><ul>
-<li>target()
-: <a class="el" href="classboost_1_1asio_1_1executor.html#a60d36d0170e81825041c44d0d4bc7118">boost::asio::executor</a>
-, <a class="el" href="classboost_1_1beast_1_1http_1_1header_3_01true_00_01_fields_01_4.html#a3cd2a117d3c5dc38a66fe6d0ed62ff45">boost::beast::http::header&lt; true, Fields &gt;</a>
-</li>
-<li>target_type()
-: <a class="el" href="classboost_1_1asio_1_1executor.html#a8ac240772ade2d0788135cc3873d3498">boost::asio::executor</a>
-, <a class="el" href="classboost_1_1asio_1_1executor__binder.html#ab9350887f95658a54bc35118e0f0a916">boost::asio::executor_binder&lt; T, Executor &gt;</a>
-, <a class="el" href="classboost_1_1function__base.html#a2fa9d14213883861c89f9b1185c0d8cb">boost::function_base</a>
-</li>
-<li>text()
-: <a class="el" href="classboost_1_1beast_1_1websocket_1_1stream.html#a90e77bd4c9cf9d84f936439a14d88d6a">boost::beast::websocket::stream&lt; NextLayer, deflateSupported &gt;</a>
-</li>
-<li>thousands_sep
-: <a class="el" href="classdetail_1_1serializer.html#a5b75b99511362e4e5d011c8a961e96bb">detail::serializer&lt; BasicJsonType &gt;</a>
-</li>
-<li>ticks_per_second()
-: <a class="el" href="classboost_1_1date__time_1_1time__duration.html#a5ca02fec82b90f63cea6d8b616e6a26e">boost::date_time::time_duration&lt; T, rep_type &gt;</a>
-</li>
-<li>time_duration()
-: <a class="el" href="classboost_1_1date__time_1_1time__duration.html#ac64d694dd7b455d5cb46210243570098">boost::date_time::time_duration&lt; T, rep_type &gt;</a>
-, <a class="el" href="classboost_1_1posix__time_1_1time__duration.html#a68fcc85b0f42471020c7936b290c547a">boost::posix_time::time_duration</a>
-</li>
-<li>time_point
-: <a class="el" href="classboost_1_1asio_1_1basic__waitable__timer.html#ae35633d673e8a5a0ead01908afb9ec2a">boost::asio::basic_waitable_timer&lt; Clock, WaitTraits, Executor &gt;</a>
-, <a class="el" href="structboost_1_1beast_1_1websocket_1_1stream__base.html#ad3c903ee6cf7e022b4e2012e73e37d22">boost::beast::websocket::stream_base</a>
-</li>
-<li>tls
-: <a class="el" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a5425d76fed32ef049d54df244150be62">boost::asio::ssl::context_base</a>
-</li>
-<li>tls_client
-: <a class="el" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397af53d9f75f87645cdf1d9db317fd3275a">boost::asio::ssl::context_base</a>
-</li>
-<li>tls_server
-: <a class="el" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a21209307a969ddaa661735efd11cd12e">boost::asio::ssl::context_base</a>
-</li>
-<li>tlsv1
-: <a class="el" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397af473dcc0bbfa536110c832ca2fc43824">boost::asio::ssl::context_base</a>
-</li>
-<li>tlsv11
-: <a class="el" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a6dae8c97b2525162d8b5c321bb1609e5">boost::asio::ssl::context_base</a>
-</li>
-<li>tlsv11_client
-: <a class="el" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a475bf8e17f35c8dc5633372cec6a39d9">boost::asio::ssl::context_base</a>
-</li>
-<li>tlsv11_server
-: <a class="el" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397ab772894395e68f172c0dd1a8a79fd31f">boost::asio::ssl::context_base</a>
-</li>
-<li>tlsv12
-: <a class="el" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a544652d27d4356138ef84a1e5d64f1e3">boost::asio::ssl::context_base</a>
-</li>
-<li>tlsv12_client
-: <a class="el" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a9ae65d778147b07a90f493358110a2be">boost::asio::ssl::context_base</a>
-</li>
-<li>tlsv12_server
-: <a class="el" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397ac25960f0f8366496068971bdbc7474b0">boost::asio::ssl::context_base</a>
-</li>
-<li>tlsv13
-: <a class="el" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a29e43175e58bc8a99249c0b1422e749a">boost::asio::ssl::context_base</a>
-</li>
-<li>tlsv13_client
-: <a class="el" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397aa01c1f3453f3e16c04dbf7fe50721ed7">boost::asio::ssl::context_base</a>
-</li>
-<li>tlsv13_server
-: <a class="el" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397ae72b8f47008322e2b0f6b491b76f25b2">boost::asio::ssl::context_base</a>
-</li>
-<li>tlsv1_client
-: <a class="el" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397aa355f2e00491accad34a3c9a583674f8">boost::asio::ssl::context_base</a>
-</li>
-<li>tlsv1_server
-: <a class="el" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397ad6c2299385ad0c45ed0c89d88c1463c5">boost::asio::ssl::context_base</a>
-</li>
-<li>to_bjdata()
-: <a class="el" href="classbasic__json.html#a22513f4e39d9d7ba525e6a2bddc5aad2">basic_json</a>
-</li>
-<li>to_bson()
-: <a class="el" href="classbasic__json.html#ab6cc57d5f54ea42464a3177932ae08d2">basic_json</a>
-</li>
-<li>to_bytes()
-: <a class="el" href="classboost_1_1asio_1_1ip_1_1address__v4.html#a6038a142a75931dab910e3bab488c3cd">boost::asio::ip::address_v4</a>
-, <a class="el" href="classboost_1_1asio_1_1ip_1_1address__v6.html#adcfc3c95494e1fc9dec8b06d0341f390">boost::asio::ip::address_v6</a>
-</li>
-<li>to_cbor()
-: <a class="el" href="classbasic__json.html#a42449b92e55d5ad5e856e38902306a61">basic_json</a>
-</li>
-<li>to_json()
-: <a class="el" href="structadl__serializer.html#a0216149429fe899cf45cbf14e08e2166">adl_serializer&lt; ValueType, typename &gt;</a>
-</li>
-<li>to_msgpack()
-: <a class="el" href="classbasic__json.html#a43b4bb587ae428aed696855476613e3b">basic_json</a>
-</li>
-<li>to_special()
-: <a class="el" href="classboost_1_1date__time_1_1int__adapter.html#a4fcaf3aa85b8870aa082e86024a004b1">boost::date_time::int_adapter&lt; int_type_ &gt;</a>
-</li>
-<li>to_string()
-: <a class="el" href="classboost_1_1asio_1_1ip_1_1address.html#a5c9dbdc1beaedc57c55c10c6c9800f8a">boost::asio::ip::address</a>
-, <a class="el" href="classboost_1_1asio_1_1ip_1_1address__v4.html#a35f4eae23a2e90bdf9c8226c2d9802ef">boost::asio::ip::address_v4</a>
-, <a class="el" href="classboost_1_1asio_1_1ip_1_1address__v6.html#a4f307ee357597b04f2d9415c080040aa">boost::asio::ip::address_v6</a>
-, <a class="el" href="classboost_1_1date__time_1_1first__kday__of__month.html#a0345436a021fd35a8945c82ce1bc7a18">boost::date_time::first_kday_of_month&lt; date_type &gt;</a>
-, <a class="el" href="classboost_1_1date__time_1_1last__kday__of__month.html#a94cd35c2ba7acdd1356073af22718252">boost::date_time::last_kday_of_month&lt; date_type &gt;</a>
-, <a class="el" href="classboost_1_1date__time_1_1nth__kday__of__month.html#a4cbe66ab4338fc3ac280aeb4cdf81105">boost::date_time::nth_kday_of_month&lt; date_type &gt;</a>
-, <a class="el" href="classboost_1_1date__time_1_1partial__date.html#a523e48f0abba2f08257b8a2e5f141f0f">boost::date_time::partial_date&lt; date_type &gt;</a>
-, <a class="el" href="classboost_1_1date__time_1_1year__based__generator.html#a057152a9ff09fd89718a01f68163a0ba">boost::date_time::year_based_generator&lt; date_type &gt;</a>
-, <a class="el" href="classjson__pointer.html#a6b94e2003be4cd72c4f145bcea2578ec">json_pointer&lt; RefStringType &gt;</a>
-</li>
-<li>to_tick_count()
-: <a class="el" href="classboost_1_1date__time_1_1time__resolution__traits.html#a742d91d95a9b6dd975f3ee1ce7a3c13e">boost::date_time::time_resolution_traits&lt; frac_sec_type, res, resolution_adjust, frac_digits, var_type &gt;</a>
-</li>
-<li>to_ubjson()
-: <a class="el" href="classbasic__json.html#a3509ba32f9173c84f643b7e10d2fe5cb">basic_json</a>
-</li>
-<li>to_uint()
-: <a class="el" href="classboost_1_1asio_1_1ip_1_1address__v4.html#ad6c4ca4ae67ba8659c3659a178334fe7">boost::asio::ip::address_v4</a>
-</li>
-<li>to_ulong()
-: <a class="el" href="classboost_1_1asio_1_1ip_1_1address__v4.html#ab8dfc5f68d991a0d843c2b56f3d244ed">boost::asio::ip::address_v4</a>
-</li>
-<li>to_v4()
-: <a class="el" href="classboost_1_1asio_1_1ip_1_1address.html#a835ff6ff15de57f8b79c90f6c7e6b9b3">boost::asio::ip::address</a>
-, <a class="el" href="classboost_1_1asio_1_1ip_1_1address__v6.html#a94e742fe1883c71fdb71a44479c23118">boost::asio::ip::address_v6</a>
-</li>
-<li>to_v6()
-: <a class="el" href="classboost_1_1asio_1_1ip_1_1address.html#a083e12ed78ba5ff36a5d9c9c2f86755a">boost::asio::ip::address</a>
-</li>
-<li>to_wait_duration()
-: <a class="el" href="structboost_1_1asio_1_1wait__traits.html#af0d92a4d41efad4cf2dfd395a065f1c7">boost::asio::wait_traits&lt; Clock &gt;</a>
-</li>
-<li>token_list()
-: <a class="el" href="classboost_1_1beast_1_1http_1_1token__list.html#a4435312b16461287fa87eaec472f7f6d">boost::beast::http::token_list</a>
-</li>
-<li>token_type
-: <a class="el" href="classdetail_1_1lexer__base.html#add65fa7a85aa15052963809fbcc04540">detail::lexer_base&lt; BasicJsonType &gt;</a>
-</li>
-<li>token_type_name()
-: <a class="el" href="classdetail_1_1lexer__base.html#adf1fc2580b5c6ae5aa3ea069a827aa61">detail::lexer_base&lt; BasicJsonType &gt;</a>
-</li>
-<li>total_in
-: <a class="el" href="structboost_1_1beast_1_1zlib_1_1z__params.html#a783e4c3e847eb83990b8914c14732c5e">boost::beast::zlib::z_params</a>
-</li>
-<li>total_microseconds()
-: <a class="el" href="classboost_1_1date__time_1_1time__duration.html#ae0bd9c8fa059a73f7746dfd231fb7c1b">boost::date_time::time_duration&lt; T, rep_type &gt;</a>
-</li>
-<li>total_milliseconds()
-: <a class="el" href="classboost_1_1date__time_1_1time__duration.html#a4b4fa3114971f5a03b73df19202c8d8c">boost::date_time::time_duration&lt; T, rep_type &gt;</a>
-</li>
-<li>total_nanoseconds()
-: <a class="el" href="classboost_1_1date__time_1_1time__duration.html#a44ce8fcee4c73b2f6914319347625240">boost::date_time::time_duration&lt; T, rep_type &gt;</a>
-</li>
-<li>total_out
-: <a class="el" href="structboost_1_1beast_1_1zlib_1_1z__params.html#afe27a1466636e059e10e1e2b05fad1b7">boost::beast::zlib::z_params</a>
-</li>
-<li>total_seconds()
-: <a class="el" href="classboost_1_1date__time_1_1time__duration.html#a8202ef0c10d464ead6abd9029e8c58ed">boost::date_time::time_duration&lt; T, rep_type &gt;</a>
-</li>
-<li>Trace()
-: <a class="el" href="classskyway_1_1global_1_1_logger.html#a4dca8ee38aee8566000e04d49d1287a5">skyway::global::Logger</a>
-</li>
-<li>Track()
-: <a class="el" href="classskyway_1_1core_1_1interface_1_1_local_media_stream.html#a033b179df119784026db3acfd9d8b210">skyway::core::interface::LocalMediaStream</a>
-, <a class="el" href="classskyway_1_1core_1_1stream_1_1local_1_1_local_audio_stream.html#a6dc96a95f9f2cbb3e1002112c9e98b2f">skyway::core::stream::local::LocalAudioStream</a>
-, <a class="el" href="classskyway_1_1core_1_1stream_1_1local_1_1_local_video_stream.html#a6eaff0d03ecf1b65fcc433f3eea0473c">skyway::core::stream::local::LocalVideoStream</a>
-</li>
-<li>traits_type
-: <a class="el" href="classboost_1_1asio_1_1basic__waitable__timer.html#a39cf7285625d0d8be29aa11ad307cf35">boost::asio::basic_waitable_timer&lt; Clock, WaitTraits, Executor &gt;</a>
-</li>
-<li>transfer()
-: <a class="el" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#acc948b90e50c74f50526559337e07040">boost::intrusive::circular_list_algorithms&lt; NodeTraits &gt;</a>
-</li>
-<li>transfer_equal()
-: <a class="el" href="classboost_1_1intrusive_1_1bstree__algorithms.html#a9b965e71fa5ea51f8b78dfb4344a856f">boost::intrusive::bstree_algorithms&lt; NodeTraits &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1rbtree__algorithms.html#a8242f2ac6a85674029b6978081134eb8">boost::intrusive::rbtree_algorithms&lt; NodeTraits &gt;</a>
-</li>
-<li>transfer_unique()
-: <a class="el" href="classboost_1_1intrusive_1_1bstree__algorithms.html#abecc400acbfb82498a29896cf16fde6e">boost::intrusive::bstree_algorithms&lt; NodeTraits &gt;</a>
-, <a class="el" href="classboost_1_1intrusive_1_1rbtree__algorithms.html#a5f73fc5c6049c2b7bb24f44e5abc9a55">boost::intrusive::rbtree_algorithms&lt; NodeTraits &gt;</a>
-</li>
-<li>TransportRepository()
-: <a class="el" href="classskyway_1_1plugin_1_1sfu__bot_1_1connection_1_1_transport_repository.html#ac15a60e9dbc900bc524428ec8dbcd834">skyway::plugin::sfu_bot::connection::TransportRepository</a>
-</li>
-<li>tribool()
-: <a class="el" href="classboost_1_1logic_1_1tribool.html#ad5c56b97cd996b184a34bd225c0f8241">boost::logic::tribool</a>
-</li>
-<li>tune()
-: <a class="el" href="classboost_1_1beast_1_1zlib_1_1deflate__stream.html#a503694e18ac4eaeb4de458744a8ec9b2">boost::beast::zlib::deflate_stream</a>
-</li>
-<li>type()
-: <a class="el" href="classbasic__json.html#ab54c60cb81bb2c5da7a2c00dbbea9037">basic_json</a>
-, <a class="el" href="structboost_1_1asio_1_1associated__allocator.html#aaf9c4695752fd7098d7e75bfd18fd4da">boost::asio::associated_allocator&lt; T, Allocator &gt;</a>
-, <a class="el" href="classboost_1_1asio_1_1ip_1_1tcp.html#aa1e900d62e8adb53574ebd479182cda4">boost::asio::ip::tcp</a>
-, <a class="el" href="classboost_1_1reference__wrapper.html#a09937d51a1206c88bdcb9e6260f17925">boost::reference_wrapper&lt; T &gt;</a>
-</li>
-<li>Type()
-: <a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#a8d62aa76ee702ecbdba6e9d2aae86d8b">skyway::core::interface::Member</a>
-</li>
-<li>type
-: <a class="el" href="structskyway_1_1model_1_1_member_1_1_init.html#ab34d304d8ee9b8060549213f2fa0f06d">skyway::model::Member::Init</a>
-, <a class="el" href="structskyway_1_1model_1_1_member.html#a68de04dcec85897c12585ce83cf3dfc4">skyway::model::Member</a>
-, <a class="el" href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html#aed6522a420ebf1719604e1c5dfc86c30">skyway::model::WebRTCStatsReport</a>
-</li>
-<li>Type()
-: <a class="el" href="classskyway_1_1room_1_1abstract_1_1_room_member.html#a0ec254ca4c721189567e55d206e48e7c">skyway::room::abstract::RoomMember</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#ab883b23bb7bc67e52c1b347c75ba7e2e">skyway::room::interface::Room</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a65bc636ae7d481780a7c1bd30a699d91">skyway::room::interface::RoomMember</a>
-, <a class="el" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#ac6aa0e7add93749343cc7d97df602fa5">skyway::room::p2p::P2PRoom</a>
-</li>
-<li>type_name()
-: <a class="el" href="classbasic__json.html#a8dad610d76867afeba96548ed1971b08">basic_json</a>
-</li>
+<h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>Trace()&#160;:&#160;<a class="el" href="classskyway_1_1global_1_1_logger.html#a4dca8ee38aee8566000e04d49d1287a5">skyway::global::Logger</a></li>
+<li>Track()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1interface_1_1_local_media_stream.html#a0f411f2d966e391de04f4f2216164b4d">skyway::core::interface::LocalMediaStream</a>, <a class="el" href="classskyway_1_1core_1_1stream_1_1local_1_1_local_audio_stream.html#a0aab3e0c1b8e7dd79206be98bc705f80">skyway::core::stream::local::LocalAudioStream</a>, <a class="el" href="classskyway_1_1core_1_1stream_1_1local_1_1_local_video_stream.html#acb12783c13ff11e891c3db802a2d37a0">skyway::core::stream::local::LocalVideoStream</a></li>
+<li>Type()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#a8d62aa76ee702ecbdba6e9d2aae86d8b">skyway::core::interface::Member</a></li>
+<li>type&#160;:&#160;<a class="el" href="structskyway_1_1model_1_1_member_1_1_init.html#ab34d304d8ee9b8060549213f2fa0f06d">skyway::model::Member::Init</a>, <a class="el" href="structskyway_1_1model_1_1_member.html#a68de04dcec85897c12585ce83cf3dfc4">skyway::model::Member</a>, <a class="el" href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html#aed6522a420ebf1719604e1c5dfc86c30">skyway::model::WebRTCStatsReport</a></li>
+<li>Type()&#160;:&#160;<a class="el" href="classskyway_1_1room_1_1abstract_1_1_room_member.html#a0ec254ca4c721189567e55d206e48e7c">skyway::room::abstract::RoomMember</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#ab883b23bb7bc67e52c1b347c75ba7e2e">skyway::room::interface::Room</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a65bc636ae7d481780a7c1bd30a699d91">skyway::room::interface::RoomMember</a>, <a class="el" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#ac6aa0e7add93749343cc7d97df602fa5">skyway::room::p2p::P2PRoom</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

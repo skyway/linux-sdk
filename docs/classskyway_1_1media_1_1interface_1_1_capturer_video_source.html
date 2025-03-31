@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.8.17 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('classskyway_1_1media_1_1interface_1_1_capturer_video_source.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,17 +87,23 @@ $(document).ready(function(){initNavTree('classskyway_1_1media_1_1interface_1_1_
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="classskyway_1_1media_1_1interface_1_1_capturer_video_source-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">skyway::media::interface::CapturerVideoSource クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+  <div class="headertitle"><div class="title">skyway::media::interface::CapturerVideoSource クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -110,11 +117,11 @@ skyway::media::interface::CapturerVideoSource の継承関係図</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a73158f5a45acff799a7bed57e91a5590"><td class="memItemLeft" align="right" valign="top"><a id="a73158f5a45acff799a7bed57e91a5590"></a>
-virtual <a class="el" href="classrtc_1_1scoped__refptr.html">rtc::scoped_refptr</a>&lt; <a class="el" href="classskyway_1_1media_1_1interface_1_1_internal_capturer_video_source.html">InternalCapturerVideoSource</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetSource</b> ()=0</td></tr>
-<tr class="separator:a73158f5a45acff799a7bed57e91a5590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac31d5e79aa121aaca0887a0b7ed2cf37" id="r_ac31d5e79aa121aaca0887a0b7ed2cf37"><td class="memItemLeft" align="right" valign="top"><a id="ac31d5e79aa121aaca0887a0b7ed2cf37" name="ac31d5e79aa121aaca0887a0b7ed2cf37"></a>
+virtual rtc::scoped_refptr&lt; <a class="el" href="classskyway_1_1media_1_1interface_1_1_internal_capturer_video_source.html">InternalCapturerVideoSource</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetSource</b> ()=0</td></tr>
+<tr class="separator:ac31d5e79aa121aaca0887a0b7ed2cf37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>include/skyway/media/interface/<a class="el" href="capturer__video__source_8hpp_source.html">capturer_video_source.hpp</a></li>
@@ -125,9 +132,7 @@ virtual <a class="el" href="classrtc_1_1scoped__refptr.html">rtc::scoped_refptr<
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>skyway</b></li><li class="navelem"><b>media</b></li><li class="navelem"><b>interface</b></li><li class="navelem"><a class="el" href="classskyway_1_1media_1_1interface_1_1_capturer_video_source.html">CapturerVideoSource</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

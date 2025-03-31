@@ -1,4 +1,0 @@
-var structboost_1_1mp11_1_1detail_1_1mp__take__c__impl_3_016_00_01_l_3_01_t1_00_01_t2_00_01_t3_00_01f3e4ce35cf5964046fd90e00efcee194 =
-[
-    [ "type", "structboost_1_1mp11_1_1detail_1_1mp__take__c__impl_3_016_00_01_l_3_01_t1_00_01_t2_00_01_t3_00_01f3e4ce35cf5964046fd90e00efcee194.html#a3b64f78b461144c65b275098160f27a9", null ]
-];

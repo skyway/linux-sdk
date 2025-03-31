@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cbor_5ftag_5fhandler_5ft_16079',['cbor_tag_handler_t',['../namespacedetail.html#a7c070b2bf3d61e3d8b8013f6fb18d592',1,'detail']]]
+  ['level_0',['Level',['../classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa',1,'skyway::global::interface::Logger']]]
 ];

@@ -1,4 +1,0 @@
-var structboost_1_1mp11_1_1detail_1_1mp__similar__impl_3_01_l_3_01_t1_8_8_8_01_4_00_01_l_3_01_t2_8_8_8_01_4_01_4 =
-[
-    [ "type", "structboost_1_1mp11_1_1detail_1_1mp__similar__impl_3_01_l_3_01_t1_8_8_8_01_4_00_01_l_3_01_t2_8_8_8_01_4_01_4.html#a137e8c1a4361fa75cf48271eeee14d1e", null ]
-];

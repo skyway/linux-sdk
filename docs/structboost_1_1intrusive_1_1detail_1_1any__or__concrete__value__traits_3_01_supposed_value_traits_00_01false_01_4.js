@@ -1,4 +1,0 @@
-var structboost_1_1intrusive_1_1detail_1_1any__or__concrete__value__traits_3_01_supposed_value_traits_00_01false_01_4 =
-[
-    [ "type", "structboost_1_1intrusive_1_1detail_1_1any__or__concrete__value__traits_3_01_supposed_value_traits_00_01false_01_4.html#ac168413ea0a11ab2da7cb07328292ae9", null ]
-];

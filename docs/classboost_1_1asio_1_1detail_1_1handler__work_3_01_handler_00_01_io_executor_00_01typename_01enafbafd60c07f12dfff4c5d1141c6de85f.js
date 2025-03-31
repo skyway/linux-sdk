@@ -1,6 +1,0 @@
-var classboost_1_1asio_1_1detail_1_1handler__work_3_01_handler_00_01_io_executor_00_01typename_01enafbafd60c07f12dfff4c5d1141c6de85f =
-[
-    [ "base1_type", "classboost_1_1asio_1_1detail_1_1handler__work_3_01_handler_00_01_io_executor_00_01typename_01enafbafd60c07f12dfff4c5d1141c6de85f.html#a7c964b850c9a138fd6a5a1f4b04e37e3", null ],
-    [ "handler_work", "classboost_1_1asio_1_1detail_1_1handler__work_3_01_handler_00_01_io_executor_00_01typename_01enafbafd60c07f12dfff4c5d1141c6de85f.html#ab5cdf688f2129de7533da3c10456028c", null ],
-    [ "complete", "classboost_1_1asio_1_1detail_1_1handler__work_3_01_handler_00_01_io_executor_00_01typename_01enafbafd60c07f12dfff4c5d1141c6de85f.html#a2b729bf7aef3ebbbcd8b1406d5a289ea", null ]
-];

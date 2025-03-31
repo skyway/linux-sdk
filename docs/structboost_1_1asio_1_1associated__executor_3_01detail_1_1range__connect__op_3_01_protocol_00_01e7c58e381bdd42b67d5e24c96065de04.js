@@ -1,5 +1,0 @@
-var structboost_1_1asio_1_1associated__executor_3_01detail_1_1range__connect__op_3_01_protocol_00_01e7c58e381bdd42b67d5e24c96065de04 =
-[
-    [ "type", "structboost_1_1asio_1_1associated__executor_3_01detail_1_1range__connect__op_3_01_protocol_00_01e7c58e381bdd42b67d5e24c96065de04.html#ad2c9ab23a17dde33e3ce935db2ec4def", null ],
-    [ "get", "structboost_1_1asio_1_1associated__executor_3_01detail_1_1range__connect__op_3_01_protocol_00_01e7c58e381bdd42b67d5e24c96065de04.html#a0596c69fc58d707990762a5f30731552", null ]
-];

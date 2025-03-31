@@ -1,4 +1,0 @@
-var structboost_1_1move__detail_1_1has__move__emulation__enabled__impl_3_01_1_1boost_1_1rv_3_01_t_01_4_01_4 =
-[
-    [ "value", "structboost_1_1move__detail_1_1has__move__emulation__enabled__impl_3_01_1_1boost_1_1rv_3_01_t_01_4_01_4.html#af0532cc81d5451ba9ac2fd50c3ddba71", null ]
-];

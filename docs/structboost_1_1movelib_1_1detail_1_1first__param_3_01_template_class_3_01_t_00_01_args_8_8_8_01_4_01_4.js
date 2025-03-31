@@ -1,4 +1,0 @@
-var structboost_1_1movelib_1_1detail_1_1first__param_3_01_template_class_3_01_t_00_01_args_8_8_8_01_4_01_4 =
-[
-    [ "type", "structboost_1_1movelib_1_1detail_1_1first__param_3_01_template_class_3_01_t_00_01_args_8_8_8_01_4_01_4.html#a7cb9e8acc01515cda6a342093ff4238f", null ]
-];

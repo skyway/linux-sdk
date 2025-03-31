@@ -1,4 +1,0 @@
-var structboost_1_1allocator__size__type_3_01_a_00_01typename_01detail_1_1alloc__void_3_01typename_0531708f7e6d2127010b2de5ce2cf063f =
-[
-    [ "type", "structboost_1_1allocator__size__type_3_01_a_00_01typename_01detail_1_1alloc__void_3_01typename_0531708f7e6d2127010b2de5ce2cf063f.html#a8a7d28b8c14a6d05428314e9eeab5441", null ]
-];

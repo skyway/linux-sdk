@@ -1,4 +1,0 @@
-var structboost_1_1allocator__pointer_3_01_a_00_01typename_01detail_1_1alloc__void_3_01typename_01_a_1_1pointer_01_4_1_1type_01_4 =
-[
-    [ "type", "structboost_1_1allocator__pointer_3_01_a_00_01typename_01detail_1_1alloc__void_3_01typename_01_a_1_1pointer_01_4_1_1type_01_4.html#a7e32cc87cb47534555aa6f91fe512112", null ]
-];

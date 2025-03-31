@@ -1,5 +1,0 @@
-var classboost_1_1asio_1_1detail_1_1work__dispatcher_3_01_handler_00_01_executor_00_01typename_01ena69227d4aa4a6310f965dac2835d2b0bc =
-[
-    [ "work_dispatcher", "classboost_1_1asio_1_1detail_1_1work__dispatcher_3_01_handler_00_01_executor_00_01typename_01ena69227d4aa4a6310f965dac2835d2b0bc.html#a4041305177c0aeb4e64d3b90556fceb2", null ],
-    [ "operator()", "classboost_1_1asio_1_1detail_1_1work__dispatcher_3_01_handler_00_01_executor_00_01typename_01ena69227d4aa4a6310f965dac2835d2b0bc.html#a5bc3e06739aaedd8d81ae7f7842cad13", null ]
-];
