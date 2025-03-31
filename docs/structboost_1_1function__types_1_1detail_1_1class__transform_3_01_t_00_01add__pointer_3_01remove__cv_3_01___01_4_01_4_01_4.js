@@ -1,4 +1,0 @@
-var structboost_1_1function__types_1_1detail_1_1class__transform_3_01_t_00_01add__pointer_3_01remove__cv_3_01___01_4_01_4_01_4 =
-[
-    [ "type", "structboost_1_1function__types_1_1detail_1_1class__transform_3_01_t_00_01add__pointer_3_01remove__cv_3_01___01_4_01_4_01_4.html#a57b65500e436ba8fa14352c2e612f372", null ]
-];

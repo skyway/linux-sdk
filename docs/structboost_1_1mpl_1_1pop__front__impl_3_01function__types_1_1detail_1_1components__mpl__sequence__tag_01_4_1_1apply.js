@@ -1,5 +1,0 @@
-var structboost_1_1mpl_1_1pop__front__impl_3_01function__types_1_1detail_1_1components__mpl__sequence__tag_01_4_1_1apply =
-[
-    [ "type", "structboost_1_1mpl_1_1pop__front__impl_3_01function__types_1_1detail_1_1components__mpl__sequence__tag_01_4_1_1apply.html#a9fd0b652d4eebdd38985878a4e329d7b", null ],
-    [ "types", "structboost_1_1mpl_1_1pop__front__impl_3_01function__types_1_1detail_1_1components__mpl__sequence__tag_01_4_1_1apply.html#ab5994555dbb87f3ed3f8bd2d02b12784", null ]
-];

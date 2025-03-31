@@ -1,9 +1,0 @@
-var structcomponents__impl_3_01_b_o_o_s_t___f_t__syntax_07_b_o_o_s_t___f_t__cc_00_01_b_o_o_s_t___p_pf14e68c76c30556e32f7311a169731e0 =
-[
-    [ "bits", "structcomponents__impl_3_01_b_o_o_s_t___f_t__syntax_07_b_o_o_s_t___f_t__cc_00_01_b_o_o_s_t___p_pf14e68c76c30556e32f7311a169731e0.html#a5615a4e5fd04860ee0a37ebdfe5393cf", null ],
-    [ "function_arity", "structcomponents__impl_3_01_b_o_o_s_t___f_t__syntax_07_b_o_o_s_t___f_t__cc_00_01_b_o_o_s_t___p_pf14e68c76c30556e32f7311a169731e0.html#a703e9d07bd84eb429885b6e6a347e930", null ],
-    [ "mask", "structcomponents__impl_3_01_b_o_o_s_t___f_t__syntax_07_b_o_o_s_t___f_t__cc_00_01_b_o_o_s_t___p_pf14e68c76c30556e32f7311a169731e0.html#ad45582cabe28ae11ae725b05eb9c7910", null ],
-    [ "tag", "structcomponents__impl_3_01_b_o_o_s_t___f_t__syntax_07_b_o_o_s_t___f_t__cc_00_01_b_o_o_s_t___p_pf14e68c76c30556e32f7311a169731e0.html#adbd06959829756498ab57f5b8bd7b3c5", null ],
-    [ "type", "structcomponents__impl_3_01_b_o_o_s_t___f_t__syntax_07_b_o_o_s_t___f_t__cc_00_01_b_o_o_s_t___p_pf14e68c76c30556e32f7311a169731e0.html#a71b1b29caa61248a295da1f6a7abc07f", null ],
-    [ "types", "structcomponents__impl_3_01_b_o_o_s_t___f_t__syntax_07_b_o_o_s_t___f_t__cc_00_01_b_o_o_s_t___p_pf14e68c76c30556e32f7311a169731e0.html#acca122ab22679fbd2950b7c093844296", null ]
-];

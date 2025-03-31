@@ -1,4 +1,0 @@
-var structboost_1_1intrusive_1_1detail_1_1is__unary__or__binary__function__impl_3_01_r_07_5_08_07_t0_8_8_8_08_4 =
-[
-    [ "value", "structboost_1_1intrusive_1_1detail_1_1is__unary__or__binary__function__impl_3_01_r_07_5_08_07_t0_8_8_8_08_4.html#ac94e8393b95b52682a826ed0a6821f74", null ]
-];

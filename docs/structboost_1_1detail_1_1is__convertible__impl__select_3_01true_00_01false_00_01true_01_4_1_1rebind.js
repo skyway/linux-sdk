@@ -1,4 +1,0 @@
-var structboost_1_1detail_1_1is__convertible__impl__select_3_01true_00_01false_00_01true_01_4_1_1rebind =
-[
-    [ "type", "structboost_1_1detail_1_1is__convertible__impl__select_3_01true_00_01false_00_01true_01_4_1_1rebind.html#a983d4f7b8f5844ed851a006c0701ee36", null ]
-];

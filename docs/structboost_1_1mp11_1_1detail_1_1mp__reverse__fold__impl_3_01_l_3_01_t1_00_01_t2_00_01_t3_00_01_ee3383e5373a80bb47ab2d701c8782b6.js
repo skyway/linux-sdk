@@ -1,5 +1,0 @@
-var structboost_1_1mp11_1_1detail_1_1mp__reverse__fold__impl_3_01_l_3_01_t1_00_01_t2_00_01_t3_00_01_ee3383e5373a80bb47ab2d701c8782b6 =
-[
-    [ "rest", "structboost_1_1mp11_1_1detail_1_1mp__reverse__fold__impl_3_01_l_3_01_t1_00_01_t2_00_01_t3_00_01_ee3383e5373a80bb47ab2d701c8782b6.html#a2fe869bf477bb8d366cb6da64b97ba38", null ],
-    [ "type", "structboost_1_1mp11_1_1detail_1_1mp__reverse__fold__impl_3_01_l_3_01_t1_00_01_t2_00_01_t3_00_01_ee3383e5373a80bb47ab2d701c8782b6.html#a464fa1e094c0ba0aa7e9dfe3677647b1", null ]
-];

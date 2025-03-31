@@ -1,4 +1,0 @@
-var structboost_1_1asio_1_1traits_1_1static__require_3_01_t_00_01execution_1_1mapping__t_1_1thread__419e1e7a2138a08c3c4f759889dc579f =
-[
-    [ "BOOST_ASIO_STATIC_CONSTEXPR", "structboost_1_1asio_1_1traits_1_1static__require_3_01_t_00_01execution_1_1mapping__t_1_1thread__419e1e7a2138a08c3c4f759889dc579f.html#aa3ec267e74e04308aac6d86ab0ef163f", null ]
-];

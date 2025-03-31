@@ -1,6 +1,0 @@
-var structboost_1_1asio_1_1traits_1_1require__member_3_01boost_1_1asio_1_1basic__system__executor_3_74fc6afef8fb33df673f34f292038690 =
-[
-    [ "result_type", "structboost_1_1asio_1_1traits_1_1require__member_3_01boost_1_1asio_1_1basic__system__executor_3_74fc6afef8fb33df673f34f292038690.html#a7496d2385a5a566b28177e4edacba63c", null ],
-    [ "BOOST_ASIO_STATIC_CONSTEXPR", "structboost_1_1asio_1_1traits_1_1require__member_3_01boost_1_1asio_1_1basic__system__executor_3_74fc6afef8fb33df673f34f292038690.html#ae32f732c1d16593c3b072b1f5ee77676", null ],
-    [ "BOOST_ASIO_STATIC_CONSTEXPR", "structboost_1_1asio_1_1traits_1_1require__member_3_01boost_1_1asio_1_1basic__system__executor_3_74fc6afef8fb33df673f34f292038690.html#af3a1e102aa718347978c3276f07bfa31", null ]
-];

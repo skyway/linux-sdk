@@ -1,4 +1,0 @@
-var structboost_1_1hash__detail_1_1select__hash__type__impl_3_01long_01double_00_01long_01double_01_4 =
-[
-    [ "type", "structboost_1_1hash__detail_1_1select__hash__type__impl_3_01long_01double_00_01long_01double_01_4.html#adf19eb53d36c96b28bc087471af9bfa8", null ]
-];

@@ -1,4 +1,0 @@
-var structboost_1_1detail_1_1extract__char__traits_3_01_char_00_01std_1_1basic__string_3_01_char_00_01_traits_00_01_alloc_01_4_01_4 =
-[
-    [ "trait_t", "structboost_1_1detail_1_1extract__char__traits_3_01_char_00_01std_1_1basic__string_3_01_char_00_01_traits_00_01_alloc_01_4_01_4.html#abf8748599fc2e9e99765f1de0952c553", null ]
-];

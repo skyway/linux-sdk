@@ -1,4 +1,0 @@
-var structboost_1_1intrusive_1_1detail_1_1concrete__hook__base__value__traits_3_01void_00_01_base_hook_01_4 =
-[
-    [ "type", "structboost_1_1intrusive_1_1detail_1_1concrete__hook__base__value__traits_3_01void_00_01_base_hook_01_4.html#ab7cab4eb6d10f23fd81d724e2a88557b", null ]
-];

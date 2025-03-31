@@ -1,5 +1,0 @@
-var structboost_1_1mpl_1_1aux_1_1le__result4_3_01true___00_01_tag_00_01_f_00_01_l1_00_01_l2_00_01_l3_00_01_l4_01_4 =
-[
-    [ "result_", "structboost_1_1mpl_1_1aux_1_1le__result4_3_01true___00_01_tag_00_01_f_00_01_l1_00_01_l2_00_01_l3_00_01_l4_01_4.html#acfd2926dc4501aaf96bcc3d1ca5aaa20", null ],
-    [ "type", "structboost_1_1mpl_1_1aux_1_1le__result4_3_01true___00_01_tag_00_01_f_00_01_l1_00_01_l2_00_01_l3_00_01_l4_01_4.html#a77104678bb736e5d52bcf1983b01904f", null ]
-];
