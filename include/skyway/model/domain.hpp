@@ -9,7 +9,7 @@
 #ifndef SKYWAY_MODEL_DOMAIN_HPP_
 #define SKYWAY_MODEL_DOMAIN_HPP_
 
-#include <boost/optional.hpp>
+#include <optional>
 #include <json.hpp>
 
 namespace skyway {
@@ -23,15 +23,15 @@ std::string ToString(Side side);
 std::string ToString(MemberType type);
 std::string ToString(ContentType type);
 
-boost::optional<Side> ToSide(const std::string& side);
-boost::optional<MemberType> ToMemberType(const std::string& type);
-boost::optional<ContentType> ToContentType(const std::string& type);
+std::optional<Side> ToSide(const std::string& side);
+std::optional<MemberType> ToMemberType(const std::string& type);
+std::optional<ContentType> ToContentType(const std::string& type);
 
 /// @brief コーデック情報
 struct Codec {
     /// @brief Dtxオプションを適応するかのオプション
     struct Parameters {
-        boost::optional<bool> use_dtx;
+        std::optional<bool> use_dtx;
     };
     /// @brief mimetype
     std::string mime_type;
@@ -42,13 +42,13 @@ struct Codec {
 /// @brief エンコーディング設定
 struct Encoding {
     /// @brief Id
-    boost::optional<std::string> id;
+    std::optional<std::string> id;
     /// @brief 最大ビットレート
-    boost::optional<int> max_bitrate;
+    std::optional<int> max_bitrate;
     /// @brief 解像度の倍率
-    boost::optional<double> scale_resolution_down_by;
+    std::optional<double> scale_resolution_down_by;
     /// @brief 最大フレームレート
-    boost::optional<double> max_framerate;
+    std::optional<double> max_framerate;
 };
 /// @brief メンバー情報
 struct Member {
@@ -59,27 +59,27 @@ struct Member {
         /// @brief サブタイプ
         std::string subtype;
         /// @brief 名前
-        boost::optional<std::string> name;
+        std::optional<std::string> name;
         /// @brief Metadata
-        boost::optional<std::string> metadata;
+        std::optional<std::string> metadata;
         /// @brief 生存確認の間隔
-        boost::optional<int> keepalive_interval_sec;
+        std::optional<int> keepalive_interval_sec;
         /// @brief 生存確認の間隔を超えてChannelからMemberが削除されるまでの時間
-        boost::optional<int> keepalive_interval_gap_sec;
+        std::optional<int> keepalive_interval_gap_sec;
     };
     /// @brief Id
     std::string id;
     /// @brief 名前
-    boost::optional<std::string> name;
+    std::optional<std::string> name;
     /// @brief 種類
     MemberType type;
     /// @brief サブタイプ
     std::string subtype;
     /// @brief Metadata
-    boost::optional<std::string> metadata;
+    std::optional<std::string> metadata;
     // the `name` can be retrieved from `init` but set the value returned by server.
     Member() {}
-    Member(const std::string& id, const boost::optional<std::string>& name, const Init& init) {
+    Member(const std::string& id, const std::optional<std::string>& name, const Init& init) {
         this->id   = id;
         this->name = name;
         type       = init.type;
@@ -94,8 +94,8 @@ struct Publication {
         std::string channel_id;
         std::string publisher_id;
         ContentType content_type;
-        boost::optional<std::string> origin;
-        boost::optional<std::string> metadata;
+        std::optional<std::string> origin;
+        std::optional<std::string> metadata;
         std::vector<Codec> codec_capabilities = {};
         std::vector<Encoding> encodings       = {};
         bool is_enabled;
@@ -105,11 +105,11 @@ struct Publication {
     /// @brief PublishしたメンバーのId
     std::string publisher_id;
     /// @brief Origin
-    boost::optional<std::string> origin;
+    std::optional<std::string> origin;
     /// @brief コンテンツの種類
     ContentType content_type;
     /// @brief Metadata
-    boost::optional<std::string> metadata;
+    std::optional<std::string> metadata;
     /// @brief コーデック一覧
     std::vector<Codec> codec_capabilities;
     /// @brief エンコーディング一覧
@@ -159,23 +159,23 @@ struct Channel {
     /// @brief `Create`もしくは`FindOrCreate`で指定する情報
     struct Init {
         /// @brief Channelの名前
-        boost::optional<std::string> name;
+        std::optional<std::string> name;
         /// @brief ChannelのMetadata
-        boost::optional<std::string> metadata;
+        std::optional<std::string> metadata;
     };
     /// @brief `Find`もしくは`FindOrCreate`で指定する情報
     struct Query {
         /// @brief Channelの名前
-        boost::optional<std::string> name;
+        std::optional<std::string> name;
         /// @brief ChannelのId
-        boost::optional<std::string> id;
+        std::optional<std::string> id;
     };
     /// @brief Id
     std::string id;
     /// @brief 名前
-    boost::optional<std::string> name;
+    std::optional<std::string> name;
     /// @brief Metadata
-    boost::optional<std::string> metadata;
+    std::optional<std::string> metadata;
     /// @brief このChannelの存在するメンバーの一覧
     std::vector<Member> members;
     /// @brief このChannelの存在するPublicationの一覧

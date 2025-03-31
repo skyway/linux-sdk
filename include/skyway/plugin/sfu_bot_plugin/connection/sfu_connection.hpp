@@ -31,8 +31,6 @@ namespace plugin {
 namespace sfu_bot {
 namespace connection {
 
-using PublicationInterface  = core::interface::Publication;
-using SubscriptionInterface = core::interface::Subscription;
 using StreamInterface       = core::interface::Stream;
 using SfuApiClient          = plugin::sfu_bot::SfuApiClient;
 
@@ -48,16 +46,16 @@ public:
         interface::TransportRepository* transport_repo,
         analytics::interface::AnalyticsClient* analytics_client);
     ~SfuConnection();
-    boost::optional<interface::StartForwardingResult> StartForwarding(
-        PublicationInterface* publication, ForwardingConfigure configure) override;
+    std::optional<interface::StartForwardingResult> StartForwarding(
+            std::shared_ptr<core::interface::Publication> publication, ForwardingConfigure configure) override;
     bool StopForwarding(Forwarding* forwarding, bool with_api_request) override;
-    void StartReceiving(SubscriptionInterface* subscription) override;
+    void StartReceiving(std::shared_ptr<core::interface::Subscription> subscription) override;
     bool StopReceiving(const std::string& subscription_id) override;
 
 private:
-    Sender* CreateSender(PublicationInterface* publication, ForwardingConfigure configure);
+    Sender* CreateSender(std::shared_ptr<core::interface::Publication> publication, ForwardingConfigure configure);
     Sender* GetSender(const std::string& publication_id);
-    Receiver* CreateReceiver(SubscriptionInterface* subscription);
+    Receiver* CreateReceiver(std::shared_ptr<core::interface::Subscription> subscription);
     Receiver* GetReceiver(const std::string& subscription_id);
 
     std::string local_person_id_;

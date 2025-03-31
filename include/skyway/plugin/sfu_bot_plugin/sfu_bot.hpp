@@ -27,18 +27,17 @@ namespace plugin {
 namespace sfu_bot {
 
 /// @brief SfuBotの機能を持つメンバー
-class SfuBot : public core::interface::RemoteMember,
-               public core::interface::Channel::InternalEventListener {
+class SfuBot : public core::interface::RemoteMember {
 public:
     // TODO: Impl EventListener
-    SfuBot(core::interface::Channel* channel,
+    SfuBot(std::shared_ptr<core::interface::Channel> channel,
            const model::Member& dto,
            interface::SfuApiClient* client,
            rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory,
            interface::TransportRepository* transport_repo,
            std::unique_ptr<interface::SfuConnectionFactory> connection_factory,
            std::unique_ptr<core::interface::IceManager> ice_manager);
-    SfuBot(core::interface::Channel* channel,
+    SfuBot(std::shared_ptr<core::interface::Channel> channel,
            const model::Member& dto,
            interface::SfuApiClient* client,
            rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory,
@@ -47,7 +46,7 @@ public:
     /// @brief Forwarding一覧
     std::vector<Forwarding*> Forwardings();
     /// @brief PublicationをForwardingします。
-    Forwarding* StartForwarding(core::interface::Publication* publication,
+    Forwarding* StartForwarding(std::shared_ptr<core::interface::Publication> publication,
                                 const ForwardingConfigure configure);
     /// @brief Forwarding停止します。
     bool StopForwarding(Forwarding* forwarding);
@@ -55,22 +54,20 @@ public:
     /// @cond INTERNAL_SECTION
     // Impl core::interface::RemoteMember
     void Dispose() override;
-    void OnUnsubscribedLocalPersonsPublication(PublicationInterface* publication) override;
-    void OnLocalPersonSubscribed(core::interface::Subscription* subscription) override;
-    void OnLocalPersonUnsubscribed(core::interface::Subscription* subscription) override;
+    void OnUnsubscribedLocalPersonsPublication(std::shared_ptr<core::interface::Publication> publication) override;
+    void OnLocalPersonSubscribed(std::shared_ptr<core::interface::Subscription> subscription) override;
+    void OnLocalPersonUnsubscribed(std::shared_ptr<core::interface::Subscription> subscription) override;
+    void OnPublicationSubscribed(std::shared_ptr<core::interface::Subscription> subscription) override;
 
     // Impl core::interface::Member
     void OnLeft() override;
-
-    // Impl core::interface::Channel::InternalEventListener
-    void OnPublicationSubscribed(core::interface::Subscription* subscription) override;
     /// @endcond
 
 private:
     bool StopForwarding(Forwarding* forwarding, bool with_api_request);
     interface::SfuConnection* CreateConnection();
     interface::SfuConnection* GetOrCreateConnection();
-    bool ConfirmSubscription(Forwarding* forwarding, core::interface::Subscription* subscription);
+    bool ConfirmSubscription(Forwarding* forwarding, std::shared_ptr<core::interface::Subscription> subscription);
 
     interface::SfuApiClient* client_;
     rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory_;

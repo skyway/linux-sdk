@@ -1,0 +1,4 @@
+var structboost_1_1asio_1_1execution_1_1detail_1_1blocking__t_1_1convertible__from__blocking__t =
+[
+    [ "convertible_from_blocking_t", "structboost_1_1asio_1_1execution_1_1detail_1_1blocking__t_1_1convertible__from__blocking__t.html#a290001f02d31a38528320209b33aa8b6", null ]
+];

@@ -11,7 +11,6 @@
 
 #include <api/peer_connection_interface.h>
 
-#include <boost/optional.hpp>
 #include <string>
 #include <unordered_map>
 
@@ -24,11 +23,7 @@ namespace core {
 namespace channel {
 namespace member {
 
-using ChannelInterface         = interface::Channel;
-using PublicationInterface     = interface::Publication;
-using SubscriptionInterface    = interface::Subscription;
 using LocalStream              = interface::LocalStream;
-using RemoteMember             = interface::RemoteMember;
 using ChunkMessengerInterface  = interface::ChunkMessenger;
 using AnalyticsClientInterface = analytics::interface::AnalyticsClient;
 
@@ -36,7 +31,7 @@ using AnalyticsClientInterface = analytics::interface::AnalyticsClient;
 class LocalPerson : public interface::LocalPerson, public AnalyticsClientInterface::Delegator {
 public:
     /// @cond INTERNAL_SECTION
-    LocalPerson(ChannelInterface* channel,
+    LocalPerson(std::shared_ptr<interface::Channel> channel,
                 const model::Member& dto,
                 std::unique_ptr<ChunkMessengerInterface> messenger,
                 int keepalive_interval_sec,
@@ -49,22 +44,22 @@ public:
     AnalyticsClientInterface* AnalyticsClient() const override;
     /// @endcond
 
-    PublicationInterface* Publish(std::shared_ptr<LocalStream> stream,
+    std::shared_ptr<interface::Publication> Publish(std::shared_ptr<LocalStream> stream,
                                   interface::LocalPerson::PublicationOptions options) override;
-    SubscriptionInterface* Subscribe(
+    std::shared_ptr<interface::Subscription> Subscribe(
         const std::string& publication_id,
         const interface::LocalPerson::SubscriptionOptions& options) override;
     bool Unpublish(const std::string& publication_id) const override;
     bool Unsubscribe(const std::string& subscription_id) const override;
     /// @cond INTERNAL_SECTION
-    void OnPublished(PublicationInterface* publication) override;
-    void OnUnpublished(PublicationInterface* publication) override;
-    void OnSubscribed(SubscriptionInterface* subscription, RemoteMember* publisher) override;
-    void OnUnsubscribed(SubscriptionInterface* subscription, RemoteMember* publisher) override;
-    void OnPublicationSubscribedByRemoteMember(SubscriptionInterface* subscription,
-                                               RemoteMember* subscriber) override;
-    void OnPublicationUnsubscribedByRemoteMember(SubscriptionInterface* subscription,
-                                                 RemoteMember* subscriber) override;
+    void OnPublished(std::shared_ptr<interface::Publication> publication) override;
+    void OnUnpublished(std::shared_ptr<interface::Publication> publication) override;
+    void OnSubscribed(std::shared_ptr<interface::Subscription> subscription, std::shared_ptr<interface::RemoteMember> publisher) override;
+    void OnUnsubscribed(std::shared_ptr<interface::Subscription> subscription, std::shared_ptr<interface::RemoteMember> publisher) override;
+    void OnPublicationSubscribedByRemoteMember(std::shared_ptr<interface::Subscription> subscription,
+                                               std::shared_ptr<interface::RemoteMember> subscriber) override;
+    void OnPublicationUnsubscribedByRemoteMember(std::shared_ptr<interface::Subscription> subscription,
+                                                 std::shared_ptr<interface::RemoteMember> subscriber) override;
     void Dispose() override;
     /// @endcond
 
@@ -73,11 +68,11 @@ public:
         const override;
 
 private:
-    void UpdateMemberTtl(int keepalive_interval_sec);
+    void UpdateMemberTtl(const std::string& channel_id, int keepalive_interval_sec);
     void SetupTtlTimer();
     using SubscriptionId = std::string;
     using SubscriptionPair =
-        std::pair<SubscriptionInterface*, interface::LocalPerson::SubscriptionOptions>;
+        std::pair<std::weak_ptr<interface::Subscription>, interface::LocalPerson::SubscriptionOptions>;
 
     std::unique_ptr<ChunkMessengerInterface> messenger_;
     std::mutex tmp_subscriptions_mtx_;
@@ -89,9 +84,9 @@ private:
 
     std::mutex stream_mtx_;
 
-    std::mutex disposed_mtx_;
-    std::condition_variable disposed_cv_;
-    bool disposed_;
+    std::mutex is_disposed_mtx_;
+    std::condition_variable is_disposed_cv_;
+    bool is_disposed_;
     std::unique_ptr<std::thread> ttl_timer_thread_;
 };
 

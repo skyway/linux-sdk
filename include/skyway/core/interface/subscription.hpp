@@ -24,7 +24,11 @@ class Publication;
 enum class SubscriptionState { kEnabled, kDisabled, kCanceled };
 
 /// @brief Subscriptionのインターフェース
-class Subscription : public ConnectionStateChangeNotifiable {
+// `std::enable_shared_from_this<T>` is supposed to be inherited by concrete classes.
+// (e.g. skyway/core/subscription.hpp)
+// however if so, compile failed on the Android SDK that includes interfaces.
+class Subscription : public std::enable_shared_from_this<Subscription>,
+                     public ConnectionStateChangeNotifiable {
 public:
     /// @brief イベントリスナ
     class EventListener {
@@ -32,24 +36,18 @@ public:
         /// @deprecated 本機能は非推奨です。
         /// @brief このSubscriptionのSubscribeがキャンセルされた際に発火するイベント。
         [[deprecated]] virtual void OnCanceled() {}
-        /// @brief このSubscriptionの通信が有効になった時に発火するイベント。
-        /// Publication.Enableが実行された時に発火します。
-        virtual void OnEnabled() {}
-        /// @brief このSubscriptionの通信が無効になった時に発火するイベント。
-        /// Publication.Disableが実行された時に発火します。
-        virtual void OnDisabled() {}
         /// @brief このSubscriptionのメディア通信の状態が変化した時に発火するイベント
         virtual void OnConnectionStateChanged(const ConnectionState state) {}
     };
     /// @cond INTERNAL_SECTION
     class InternalListener {
     public:
-        virtual void OnChangePreferredEncoding(Subscription* subscription) = 0;
+        virtual void OnChangePreferredEncoding(std::shared_ptr<Subscription> subscription) = 0;
     };
     class Callback {
     public:
-        virtual const boost::optional<nlohmann::json> GetStatsReport(
-            Subscription* subscription) = 0;
+        virtual const std::optional<nlohmann::json> GetStatsReport(
+            std::shared_ptr<Subscription> subscription) = 0;
     };
     /// @endcond
     virtual ~Subscription() = default;
@@ -70,9 +68,9 @@ public:
     /// @brief ContentType(VideoかAudioかDataか)を取得します。
     virtual model::ContentType ContentType() const = 0;
     /// @brief このSubscriptionに紐づくPublicationを取得します。
-    virtual Publication* Publication() const = 0;
+    virtual std::shared_ptr<interface::Publication> Publication() const = 0;
     /// @brief このSubscriptionをSubscribeしているMemberを取得します。
-    virtual Member* Subscriber() const = 0;
+    virtual std::shared_ptr<interface::Member> Subscriber() const = 0;
     /// @brief State(公開状態がEnableかDisabelかCancelか)を取得します。
     virtual SubscriptionState State() = 0;
     /// @brief Publisherが持つStreamを取得します。
@@ -81,20 +79,16 @@ public:
     /// その他、イベントの発火によってSubscriptionを取得した場合、まだ値がsetされていない可能性があります。
     virtual std::shared_ptr<RemoteStream> Stream() = 0;
     /// @brief このSubscriptionの優先エンコーディングIDを取得します。
-    virtual boost::optional<std::string> PreferredEncodingId() const = 0;
+    virtual std::optional<std::string> PreferredEncodingId() const = 0;
     /// @brief 受信するエンコード設定を切り替えます。
-    virtual void ChangePreferredEncoding(const std::string& id) = 0;
+    virtual bool ChangePreferredEncoding(const std::string& id) = 0;
     /// @deprecated 本機能は非推奨です。
     /// @brief Subscribeを中止します。
     [[deprecated]] virtual bool Cancel() const = 0;
     /// @deprecated 本機能は非推奨です。
     /// @brief 統計情報を取得します。
-    [[deprecated]] virtual boost::optional<model::WebRTCStats> GetStats() = 0;
+    [[deprecated]] virtual std::optional<model::WebRTCStats> GetStats() = 0;
     /// @cond INTERNAL_SECTION
-    /// @brief Subscriptionの購読を開始します。disableによって停止していた場合は再開します。
-    virtual bool Enable() const = 0;
-    /// @brief Subscriptionの購読を一時停止します。
-    virtual bool Disable() const                         = 0;
     virtual void AddGetStatsCallback(Callback* callback) = 0;
     virtual void RemoveGetStatsCallback()                = 0;
 
@@ -102,8 +96,6 @@ public:
     virtual void SetPreferredEncodingId(const std::string& id)   = 0;
 
     virtual void OnCanceled() = 0;
-    virtual void OnEnabled()  = 0;
-    virtual void OnDisabled() = 0;
     /// @endcond
 };
 

@@ -9,7 +9,6 @@
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONFIG_HPP_
 #define SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONFIG_HPP_
 
-#include <boost/optional.hpp>
 #include <string>
 
 namespace skyway {

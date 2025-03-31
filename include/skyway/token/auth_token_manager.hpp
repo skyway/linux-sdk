@@ -41,7 +41,7 @@ private:
     std::mutex update_token_mtx_;
     Listener* listener_;
     std::unordered_set<interface::AuthTokenManager::InternalListener*> internal_listeners_;
-    boost::optional<int> remind_time_in_sec_;
+    std::optional<int> remind_time_in_sec_;
     std::unique_ptr<AuthToken> auth_token_;
     bool timer_canceled_;
     std::condition_variable timer_cv_;

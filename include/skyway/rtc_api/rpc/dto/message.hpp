@@ -9,7 +9,8 @@
 #ifndef SKYWAY_RTC_API_RPC_DTO_MESSAGE_HPP_
 #define SKYWAY_RTC_API_RPC_DTO_MESSAGE_HPP_
 
-#include <boost/optional.hpp>
+#include <optional>
+
 #include <json.hpp>
 
 namespace skyway {
@@ -21,11 +22,11 @@ struct RequestMessage {
     std::string json_rpc;
     std::string method;
     nlohmann::json params;
-    boost::optional<std::string> id;
+    std::optional<std::string> id;
     bool operator==(const RequestMessage& rhs) const { return id == rhs.id; }
     struct Hash {
         std::size_t operator()(const RequestMessage& message) const {
-            std::string id = message.id == boost::none ? "" : message.id.get();
+            std::string id = message.id == std::nullopt ? "" : message.id.value();
             return std::hash<std::string>()(id);
         }
     };

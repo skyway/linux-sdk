@@ -1,0 +1,4 @@
+var structboost_1_1detail_1_1stream__char__common_3_01std_1_1basic__string_3_01_char_00_01_traits_00_01_alloc_01_4_01_4 =
+[
+    [ "type", "structboost_1_1detail_1_1stream__char__common_3_01std_1_1basic__string_3_01_char_00_01_traits_00_01_alloc_01_4_01_4.html#a9f66df13dd9fc34c1957d913bda4b8a9", null ]
+];

@@ -1,0 +1,5 @@
+var structboost_1_1asio_1_1associated__allocator_3_01ssl_1_1detail_1_1io__op_3_01_stream_00_01_operac9a88abe9a7f426a7b8f89dbe036a0cc =
+[
+    [ "type", "structboost_1_1asio_1_1associated__allocator_3_01ssl_1_1detail_1_1io__op_3_01_stream_00_01_operac9a88abe9a7f426a7b8f89dbe036a0cc.html#af66221fc2458edab5a201e03bfd9862e", null ],
+    [ "get", "structboost_1_1asio_1_1associated__allocator_3_01ssl_1_1detail_1_1io__op_3_01_stream_00_01_operac9a88abe9a7f426a7b8f89dbe036a0cc.html#a85e1585db1d2c8dfa7cc9e06a7a2f32e", null ]
+];

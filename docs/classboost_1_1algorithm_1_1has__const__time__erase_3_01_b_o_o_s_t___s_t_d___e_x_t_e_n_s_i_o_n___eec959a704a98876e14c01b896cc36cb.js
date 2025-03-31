@@ -1,0 +1,5 @@
+var classboost_1_1algorithm_1_1has__const__time__erase_3_01_b_o_o_s_t___s_t_d___e_x_t_e_n_s_i_o_n___eec959a704a98876e14c01b896cc36cb =
+[
+    [ "type", "classboost_1_1algorithm_1_1has__const__time__erase_3_01_b_o_o_s_t___s_t_d___e_x_t_e_n_s_i_o_n___eec959a704a98876e14c01b896cc36cb.html#a54fe75277e5a1348cee790fe46e01173", null ],
+    [ "BOOST_STATIC_CONSTANT", "classboost_1_1algorithm_1_1has__const__time__erase_3_01_b_o_o_s_t___s_t_d___e_x_t_e_n_s_i_o_n___eec959a704a98876e14c01b896cc36cb.html#a8989f2d40e5ffaabce329df39d4440c8", null ]
+];

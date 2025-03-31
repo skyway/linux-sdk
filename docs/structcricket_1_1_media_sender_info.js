@@ -1,0 +1,27 @@
+var structcricket_1_1_media_sender_info =
+[
+    [ "MediaSenderInfo", "structcricket_1_1_media_sender_info.html#aefdb71d40fc8554ee92b84ba4664e3bc", null ],
+    [ "~MediaSenderInfo", "structcricket_1_1_media_sender_info.html#a10742dcdc52beecd955603e5fd1108b2", null ],
+    [ "add_ssrc", "structcricket_1_1_media_sender_info.html#afd75c09c36803b13091190de12d35e23", null ],
+    [ "add_ssrc", "structcricket_1_1_media_sender_info.html#a8d5940f326b612bc59d0d38cd6cbe683", null ],
+    [ "connected", "structcricket_1_1_media_sender_info.html#ae24a2bf61514d79ffd83c4d2f6e64f42", null ],
+    [ "ssrc", "structcricket_1_1_media_sender_info.html#af0d590c682c0ea8c13e551960e4bdb36", null ],
+    [ "ssrcs", "structcricket_1_1_media_sender_info.html#ac2fb007d7209297ae28cae9e70155044", null ],
+    [ "active", "structcricket_1_1_media_sender_info.html#ab6358777f25e6413504925f5e0d0f5c9", null ],
+    [ "codec_name", "structcricket_1_1_media_sender_info.html#a354a99830d091cfae83d8a65a45bc1b5", null ],
+    [ "codec_payload_type", "structcricket_1_1_media_sender_info.html#ab9c6d83eadc8bb18d8f06c0669010a48", null ],
+    [ "fraction_lost", "structcricket_1_1_media_sender_info.html#a3e5a27e6272fef3205a3b44f0cc79589", null ],
+    [ "header_and_padding_bytes_sent", "structcricket_1_1_media_sender_info.html#ac4f08da66d55776930d7b5f0df693590", null ],
+    [ "local_stats", "structcricket_1_1_media_sender_info.html#a3d31cc6e792352a574e0624f82c00d13", null ],
+    [ "nacks_received", "structcricket_1_1_media_sender_info.html#a7d521ac1bb8ed67b674b883f4685ea55", null ],
+    [ "packets_lost", "structcricket_1_1_media_sender_info.html#acf8e8d9fe391e9e4c265df08f737ebe4", null ],
+    [ "packets_sent", "structcricket_1_1_media_sender_info.html#abc3576b9a717e2d250380de374fdd6d4", null ],
+    [ "payload_bytes_sent", "structcricket_1_1_media_sender_info.html#a1342d34807656cc923e8b548c993f4ad", null ],
+    [ "remote_stats", "structcricket_1_1_media_sender_info.html#ae945886fb49146f06c85e3e16aabfbb1", null ],
+    [ "report_block_datas", "structcricket_1_1_media_sender_info.html#a2fb2b657b0fac6bd945a32c92a364c1c", null ],
+    [ "retransmitted_bytes_sent", "structcricket_1_1_media_sender_info.html#a713a3545a7d2b398f2290ff301d669fe", null ],
+    [ "retransmitted_packets_sent", "structcricket_1_1_media_sender_info.html#ac95cbd86600fe5a4c1ac1f816d2fa383", null ],
+    [ "rtt_ms", "structcricket_1_1_media_sender_info.html#acc2bc5a67c8ece9e3c80dde53a88113f", null ],
+    [ "target_bitrate", "structcricket_1_1_media_sender_info.html#a44a8e2b0709e42c3b13a544d154cafd6", null ],
+    [ "total_packet_send_delay", "structcricket_1_1_media_sender_info.html#a0d0ad70f28b0461eab88268cde3b2a0f", null ]
+];

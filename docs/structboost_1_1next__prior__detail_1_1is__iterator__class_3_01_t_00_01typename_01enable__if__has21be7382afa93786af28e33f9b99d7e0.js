@@ -1,0 +1,4 @@
+var structboost_1_1next__prior__detail_1_1is__iterator__class_3_01_t_00_01typename_01enable__if__has21be7382afa93786af28e33f9b99d7e0 =
+[
+    [ "value", "structboost_1_1next__prior__detail_1_1is__iterator__class_3_01_t_00_01typename_01enable__if__has21be7382afa93786af28e33f9b99d7e0.html#a9a06e87a040b751beff7da60c3545721", null ]
+];

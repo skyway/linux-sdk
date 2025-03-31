@@ -9,7 +9,6 @@
 #ifndef SKYWAY_ANALYTICS_SERVER_EVENT_HPP_
 #define SKYWAY_ANALYTICS_SERVER_EVENT_HPP_
 
-#include <boost/optional.hpp>
 #include <chrono>
 #include <json.hpp>
 #include <string>
@@ -27,8 +26,8 @@ public:
     bool IsOpenEvent() const;
     bool IsAcknowledgeEvent() const;
 
-    boost::optional<OpenPayload> GetOpenPayload() const;
-    boost::optional<AcknowledgePayload> GetAcknowledgePayload() const;
+    std::optional<OpenPayload> GetOpenPayload() const;
+    std::optional<AcknowledgePayload> GetAcknowledgePayload() const;
 
 private:
     static const std::string kOpen;
@@ -71,7 +70,7 @@ struct AcknowledgePayload {
     std::string
         event_id;  // Defined as Optional, but has actual value when the client set events' id.
     bool ok;
-    boost::optional<std::string> reason;
+    std::optional<std::string> reason;
 
 private:
     static const std::string kInvalidPayload;

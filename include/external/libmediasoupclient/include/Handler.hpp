@@ -21,6 +21,7 @@ namespace mediasoupclient
 		class PrivateListener
 		{
 		public:
+			virtual ~PrivateListener()                             = default;
 			virtual void OnConnect(nlohmann::json& dtlsParameters) = 0;
 			virtual void OnConnectionStateChange(
 			  webrtc::PeerConnectionInterface::IceConnectionState connectionState) = 0;
@@ -68,7 +69,8 @@ namespace mediasoupclient
 		// Got transport local and remote parameters.
 		bool transportReady{ false };
 		// Map of RTCTransceivers indexed by MID.
-		std::unordered_map<std::string, rtc::scoped_refptr<webrtc::RtpTransceiverInterface>> mapMidTransceiver{};
+		std::unordered_map<std::string, rtc::scoped_refptr<webrtc::RtpTransceiverInterface>>
+		  mapMidTransceiver{};
 		// PeerConnection instance.
 		std::unique_ptr<PeerConnection> pc{ nullptr };
 		bool hasDataChannelMediaSection = false;
@@ -104,11 +106,10 @@ namespace mediasoupclient
 		  rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track,
 		  std::vector<webrtc::RtpEncodingParameters>* encodings,
 		  const nlohmann::json* codecOptions,
-		  const nlohmann::json* codec,
-      const nlohmann::json& sendingRtpParametersByKind,
-      const nlohmann::json& sendingRemoteRtpParametersByKind);
+		  const nlohmann::json* codec);
 		void StopSending(const std::string& localId);
-		void ReplaceTrack(const std::string& localId, rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track);
+		void ReplaceTrack(
+		  const std::string& localId, rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track);
 		void SetMaxSpatialLayer(const std::string& localId, uint8_t spatialLayer);
 		nlohmann::json GetSenderStats(const std::string& localId);
 		void RestartIce(const nlohmann::json& iceParameters) override;

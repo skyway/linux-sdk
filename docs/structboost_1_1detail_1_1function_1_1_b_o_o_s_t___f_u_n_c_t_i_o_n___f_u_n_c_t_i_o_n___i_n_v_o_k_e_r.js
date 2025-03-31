@@ -1,0 +1,4 @@
+var structboost_1_1detail_1_1function_1_1_b_o_o_s_t___f_u_n_c_t_i_o_n___f_u_n_c_t_i_o_n___i_n_v_o_k_e_r =
+[
+    [ "invoke", "structboost_1_1detail_1_1function_1_1_b_o_o_s_t___f_u_n_c_t_i_o_n___f_u_n_c_t_i_o_n___i_n_v_o_k_e_r.html#ab5a6559d0e24a3d749ad28676150b578", null ]
+];

@@ -1,0 +1,4 @@
+var structabsl_1_1internal__any__invocable_1_1_unwrap_std_reference_wrapper_impl_3_01std_1_1reference__wrapper_3_01_t_01_4_01_4 =
+[
+    [ "type", "structabsl_1_1internal__any__invocable_1_1_unwrap_std_reference_wrapper_impl_3_01std_1_1reference__wrapper_3_01_t_01_4_01_4.html#aeaf31a57394877e9e5c10962c4112406", null ]
+];

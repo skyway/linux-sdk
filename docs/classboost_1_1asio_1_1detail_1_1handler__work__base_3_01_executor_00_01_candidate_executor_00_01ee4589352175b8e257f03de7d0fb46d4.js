@@ -1,0 +1,10 @@
+var classboost_1_1asio_1_1detail_1_1handler__work__base_3_01_executor_00_01_candidate_executor_00_01ee4589352175b8e257f03de7d0fb46d4 =
+[
+    [ "handler_work_base", "classboost_1_1asio_1_1detail_1_1handler__work__base_3_01_executor_00_01_candidate_executor_00_01ee4589352175b8e257f03de7d0fb46d4.html#a14695eb69115680c9e3f67ff19b410f7", null ],
+    [ "handler_work_base", "classboost_1_1asio_1_1detail_1_1handler__work__base_3_01_executor_00_01_candidate_executor_00_01ee4589352175b8e257f03de7d0fb46d4.html#a0b9b8a9c5106a6157202d448d4a707f1", null ],
+    [ "handler_work_base", "classboost_1_1asio_1_1detail_1_1handler__work__base_3_01_executor_00_01_candidate_executor_00_01ee4589352175b8e257f03de7d0fb46d4.html#ad708c433cfa3e5ae14c3905d27f58066", null ],
+    [ "handler_work_base", "classboost_1_1asio_1_1detail_1_1handler__work__base_3_01_executor_00_01_candidate_executor_00_01ee4589352175b8e257f03de7d0fb46d4.html#a84775fd684895de7211e69c0e08cf623", null ],
+    [ "~handler_work_base", "classboost_1_1asio_1_1detail_1_1handler__work__base_3_01_executor_00_01_candidate_executor_00_01ee4589352175b8e257f03de7d0fb46d4.html#a90fb68d2dd6cc2ae7d236f13605af426", null ],
+    [ "dispatch", "classboost_1_1asio_1_1detail_1_1handler__work__base_3_01_executor_00_01_candidate_executor_00_01ee4589352175b8e257f03de7d0fb46d4.html#ac4018c727a0a5d374149537311923a08", null ],
+    [ "owns_work", "classboost_1_1asio_1_1detail_1_1handler__work__base_3_01_executor_00_01_candidate_executor_00_01ee4589352175b8e257f03de7d0fb46d4.html#aca889b44e273dc00e2b9a5662408e5e2", null ]
+];

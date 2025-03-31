@@ -1,7 +1,7 @@
 var classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener =
 [
-    [ "OnPublicationSubscribed", "classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html#a91ddb88656d0d206fd1d1ff5ed7c8e1c", null ],
-    [ "OnPublicationUnsubscribed", "classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html#a8f7d3dd19d393f21e94449872da0bc3e", null ],
-    [ "OnStreamPublished", "classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html#a0e7c5b66ec703983e794be81aad2670a", null ],
-    [ "OnStreamUnpublished", "classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html#af458dec0a919ead00347a7644bd194db", null ]
+    [ "OnPublicationSubscribed", "classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html#ac95e7865f26e468dce07bca2543ea61a", null ],
+    [ "OnPublicationUnsubscribed", "classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html#a94ed65205ee43951a2acd49c20ed50f5", null ],
+    [ "OnStreamPublished", "classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html#a9d211845455aa44f626f5512799b40a0", null ],
+    [ "OnStreamUnpublished", "classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html#a137daf818b6dcfa7699a416a2d16b924", null ]
 ];

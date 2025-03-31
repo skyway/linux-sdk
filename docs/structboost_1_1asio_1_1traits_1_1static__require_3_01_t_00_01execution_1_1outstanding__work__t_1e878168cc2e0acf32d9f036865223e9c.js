@@ -1,0 +1,4 @@
+var structboost_1_1asio_1_1traits_1_1static__require_3_01_t_00_01execution_1_1outstanding__work__t_1e878168cc2e0acf32d9f036865223e9c =
+[
+    [ "BOOST_ASIO_STATIC_CONSTEXPR", "structboost_1_1asio_1_1traits_1_1static__require_3_01_t_00_01execution_1_1outstanding__work__t_1e878168cc2e0acf32d9f036865223e9c.html#a436f038abc74ee8a59546a17bf447ee1", null ]
+];

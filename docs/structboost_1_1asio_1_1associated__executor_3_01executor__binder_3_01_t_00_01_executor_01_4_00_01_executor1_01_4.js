@@ -1,0 +1,5 @@
+var structboost_1_1asio_1_1associated__executor_3_01executor__binder_3_01_t_00_01_executor_01_4_00_01_executor1_01_4 =
+[
+    [ "type", "structboost_1_1asio_1_1associated__executor_3_01executor__binder_3_01_t_00_01_executor_01_4_00_01_executor1_01_4.html#ac0751b63ab8676fdb1238c5db29a3062", null ],
+    [ "get", "structboost_1_1asio_1_1associated__executor_3_01executor__binder_3_01_t_00_01_executor_01_4_00_01_executor1_01_4.html#a862cae126a53d46591d47ad7c99b8c49", null ]
+];

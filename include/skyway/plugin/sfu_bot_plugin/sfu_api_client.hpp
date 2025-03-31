@@ -20,7 +20,6 @@ namespace skyway {
 namespace plugin {
 namespace sfu_bot {
 
-using PublicationInterface = core::interface::Publication;
 using HttpClientInterface  = network::interface::HttpClient;
 using SfuOptions           = sfu_options::SfuOptionsParams;
 
@@ -28,51 +27,51 @@ class SfuApiClient : public interface::SfuApiClient {
 public:
     SfuApiClient(HttpClientInterface* http, SfuOptions sfu_options);
 
-    boost::optional<dto::CreateBotResponse> CreateBot(const std::string& app_id,
+    std::optional<dto::CreateBotResponse> CreateBot(const std::string& app_id,
                                                       const std::string& channel_id) override;
     bool DeleteBot(const std::string& bot_id) override;
 
     bool Connect(const std::string& transport_id, const nlohmann::json& dtls_parameters) override;
 
     // For Sender
-    boost::optional<dto::StartForwardingResponse> StartForwarding(
+    std::optional<dto::StartForwardingResponse> StartForwarding(
         const std::string& bot_id,
-        const PublicationInterface* publication,
+        const std::shared_ptr<core::interface::Publication> publication,
         ForwardingConfigure configure) override;
     bool StopForwarding(const std::string& bot_id, const std::string& forwarding_id) override;
-    boost::optional<dto::ConfirmSubscriptionResponse> ConfirmSubscription(
+    std::optional<dto::ConfirmSubscriptionResponse> ConfirmSubscription(
         const std::string& forwarding_id,
         const std::string& subscription_id,
         const std::string& identifier_key) override;
-    boost::optional<dto::CreateProducerResponse> CreateProducer(
+    std::optional<dto::CreateProducerResponse> CreateProducer(
         const std::string& bot_id,
         const std::string& forwarding_id,
         const std::string& transport_id,
         const nlohmann::json& producer_options) override;
 
     // For Receiver
-    boost::optional<dto::GetCapabilitiesResponse> GetCapabilities(
+    std::optional<dto::GetCapabilitiesResponse> GetCapabilities(
         const std::string& bot_id,
         const std::string& publication_id,
         const std::string& origin_publication_id) override;
-    boost::optional<dto::CreateConsumerResponse> CreateConsumer(
+    std::optional<dto::CreateConsumerResponse> CreateConsumer(
         const std::string& bot_id,
         const std::string& forwarding_id,
         const nlohmann::json& rtp_capabilities,
         const std::string& subscription_id,
         const std::string& subscriber_id,
         const std::string& origin_publication_id,
-        const boost::optional<int> spatial_layer) override;
-    boost::optional<dto::ChangeConsumerLayerResponse> ChangeConsumerLayer(
+        const std::optional<int> spatial_layer) override;
+    std::optional<dto::ChangeConsumerLayerResponse> ChangeConsumerLayer(
         const std::string& transport_id,
         const std::string& consumer_id,
         const std::string& publication_id,
         const int spatial_layer) override;
 
-    boost::optional<dto::IceRestartResponse> IceRestart(const std::string& transport_id) override;
+    std::optional<dto::IceRestartResponse> IceRestart(const std::string& transport_id) override;
 
 private:
-    boost::optional<HttpClientInterface::Response> Request(const std::string& path,
+    std::optional<HttpClientInterface::Response> Request(const std::string& path,
                                                            const std::string& method,
                                                            const nlohmann::json& body) const;
     std::string GetSfuParamsEndPoint() const;

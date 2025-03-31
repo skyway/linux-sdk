@@ -43,12 +43,17 @@ public:
     bool Connect(int connectivity_check_interval_sec) override;
 
     dto::SendResult Send(const signaling::interface::Member& target_member,
-                         const nlohmann::json& message) override;
+                         const nlohmann::json& message,
+                         const bool skip_response_wait) override;
     void ResolveBufferedMessages(const signaling::interface::Member& src) override;
 
     void OnRequestReceived(const nlohmann::json& data,
                            const signaling::interface::Member src) override;
     void OnConnectionFailed() override;
+
+    void ResetBlocking(const std::string& member_id) override;
+
+    void InterruptBlocking(const std::string& member_id) override;
 
 private:
     using MemberId                  = std::string;

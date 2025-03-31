@@ -1,0 +1,1983 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classboost_1_1intrusive_1_1bstree__impl.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="classboost_1_1intrusive_1_1bstree__impl-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">boost::intrusive::bstree_impl&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt; クラステンプレート</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="bstree_8hpp_source.html">bstree.hpp</a>&gt;</code></p>
+<div class="dynheader">
+boost::intrusive::bstree_impl&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt; の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classboost_1_1intrusive_1_1bstree__impl.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a5be162af427359031cac27137fa028c7"><td class="memItemLeft" align="right" valign="top"><a id="a5be162af427359031cac27137fa028c7"></a>
+typedef node_algorithms::insert_commit_data&#160;</td><td class="memItemRight" valign="bottom"><b>insert_commit_data</b></td></tr>
+<tr class="separator:a5be162af427359031cac27137fa028c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a45b42ec398d89a65b383d0af67378ad5"><td class="memItemLeft" align="right" valign="top"><a id="a45b42ec398d89a65b383d0af67378ad5"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (ValueTraits) <a class="el" href="structboost_1_1intrusive_1_1value__traits.html">value_traits</a></td></tr>
+<tr class="separator:a45b42ec398d89a65b383d0af67378ad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a135a3a982fd93d601eb19cbb7d97b5aa"><td class="memItemLeft" align="right" valign="top"><a id="a135a3a982fd93d601eb19cbb7d97b5aa"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (typename value_traits::pointer) pointer</td></tr>
+<tr class="separator:a135a3a982fd93d601eb19cbb7d97b5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127c95973f1302c3f110c1ba29857826"><td class="memItemLeft" align="right" valign="top"><a id="a127c95973f1302c3f110c1ba29857826"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (typename value_traits::const_pointer) const _pointer</td></tr>
+<tr class="separator:a127c95973f1302c3f110c1ba29857826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ddd6713e163eaef37c2641c6b021b0c"><td class="memItemLeft" align="right" valign="top"><a id="a8ddd6713e163eaef37c2641c6b021b0c"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (typename <a class="el" href="structboost_1_1intrusive_1_1pointer__traits.html">pointer_traits</a>&lt; pointer &gt;::element_type) value_type</td></tr>
+<tr class="separator:a8ddd6713e163eaef37c2641c6b021b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288b48d607d92270aa896a583500a3ed"><td class="memItemLeft" align="right" valign="top"><a id="a288b48d607d92270aa896a583500a3ed"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (typename data_type::key_type) key_type</td></tr>
+<tr class="separator:a288b48d607d92270aa896a583500a3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a011fe828626844e1be3789cbe186ddd4"><td class="memItemLeft" align="right" valign="top"><a id="a011fe828626844e1be3789cbe186ddd4"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (typename data_type::key_of_value) key_of_value</td></tr>
+<tr class="separator:a011fe828626844e1be3789cbe186ddd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eff2617b4147e15fa701e2b67638ae8"><td class="memItemLeft" align="right" valign="top"><a id="a6eff2617b4147e15fa701e2b67638ae8"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (typename <a class="el" href="structboost_1_1intrusive_1_1pointer__traits.html">pointer_traits</a>&lt; pointer &gt;::reference) reference</td></tr>
+<tr class="separator:a6eff2617b4147e15fa701e2b67638ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7137ab27a234ab6b63289a9265256db7"><td class="memItemLeft" align="right" valign="top"><a id="a7137ab27a234ab6b63289a9265256db7"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (typename <a class="el" href="structboost_1_1intrusive_1_1pointer__traits.html">pointer_traits</a>&lt; const_pointer &gt;::reference) const _reference</td></tr>
+<tr class="separator:a7137ab27a234ab6b63289a9265256db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd9f841049dae1ddf53a924c0d689d3f"><td class="memItemLeft" align="right" valign="top"><a id="abd9f841049dae1ddf53a924c0d689d3f"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (typename <a class="el" href="structboost_1_1intrusive_1_1pointer__traits.html">pointer_traits</a>&lt; const_pointer &gt;::difference_type) difference_type</td></tr>
+<tr class="separator:abd9f841049dae1ddf53a924c0d689d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab42438094ecba84022efb3632f8545b8"><td class="memItemLeft" align="right" valign="top"><a id="ab42438094ecba84022efb3632f8545b8"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (SizeType) <a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a></td></tr>
+<tr class="separator:ab42438094ecba84022efb3632f8545b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a565a9305edc7981cad006f165451c42b"><td class="memItemLeft" align="right" valign="top"><a id="a565a9305edc7981cad006f165451c42b"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (typename data_type::value_compare) value_compare</td></tr>
+<tr class="separator:a565a9305edc7981cad006f165451c42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9bf8e0231f4af9fa9e8469543054c96"><td class="memItemLeft" align="right" valign="top"><a id="af9bf8e0231f4af9fa9e8469543054c96"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (typename data_type::key_compare) key_compare</td></tr>
+<tr class="separator:af9bf8e0231f4af9fa9e8469543054c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16eb962da10d23dba87d19394b9b961b"><td class="memItemLeft" align="right" valign="top"><a id="a16eb962da10d23dba87d19394b9b961b"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (iterator_type) <a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a></td></tr>
+<tr class="separator:a16eb962da10d23dba87d19394b9b961b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a981a524b2cd46e7a929e65114bfdf388"><td class="memItemLeft" align="right" valign="top"><a id="a981a524b2cd46e7a929e65114bfdf388"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (const_iterator_type) const _iterator</td></tr>
+<tr class="separator:a981a524b2cd46e7a929e65114bfdf388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ad1a190f19346c0b62206c462780cae"><td class="memItemLeft" align="right" valign="top"><a id="a2ad1a190f19346c0b62206c462780cae"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (<a class="el" href="classboost_1_1intrusive_1_1reverse__iterator.html">boost::intrusive::reverse_iterator</a>&lt; <a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a> &gt;) <a class="el" href="classboost_1_1intrusive_1_1reverse__iterator.html">reverse_iterator</a></td></tr>
+<tr class="separator:a2ad1a190f19346c0b62206c462780cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9e860a4c594f3d41da8acd259689263"><td class="memItemLeft" align="right" valign="top"><a id="aa9e860a4c594f3d41da8acd259689263"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (<a class="el" href="classboost_1_1intrusive_1_1reverse__iterator.html">boost::intrusive::reverse_iterator</a>&lt; const_iterator &gt;) const _reverse_iterator</td></tr>
+<tr class="separator:aa9e860a4c594f3d41da8acd259689263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a0046714b4c5cb9d9b37d75920ab7a"><td class="memItemLeft" align="right" valign="top"><a id="a31a0046714b4c5cb9d9b37d75920ab7a"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (typename value_traits::node_traits) node_traits</td></tr>
+<tr class="separator:a31a0046714b4c5cb9d9b37d75920ab7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbd435ede5c6da34156aef62cf9eb101"><td class="memItemLeft" align="right" valign="top"><a id="acbd435ede5c6da34156aef62cf9eb101"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (typename node_traits::node) node</td></tr>
+<tr class="separator:acbd435ede5c6da34156aef62cf9eb101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d43d32ebff7a50bb7b7bce99b2a358"><td class="memItemLeft" align="right" valign="top"><a id="a34d43d32ebff7a50bb7b7bce99b2a358"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (typename node_traits::node_ptr) node_ptr</td></tr>
+<tr class="separator:a34d43d32ebff7a50bb7b7bce99b2a358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87ac4ec786e6ef96b348133b00bd620f"><td class="memItemLeft" align="right" valign="top"><a id="a87ac4ec786e6ef96b348133b00bd620f"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (typename node_traits::const_node_ptr) const _node_ptr</td></tr>
+<tr class="separator:a87ac4ec786e6ef96b348133b00bd620f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c68e0de9071a371e86392b7a4754c1f"><td class="memItemLeft" align="right" valign="top"><a id="a9c68e0de9071a371e86392b7a4754c1f"></a>
+typedef&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_INTRUSIVE_IMPDEF</b> (algo_type) node_algorithms</td></tr>
+<tr class="separator:a9c68e0de9071a371e86392b7a4754c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28ea6e0f5e102011804372a71aee53d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a28ea6e0f5e102011804372a71aee53d1">bstree_impl</a> ()</td></tr>
+<tr class="separator:a28ea6e0f5e102011804372a71aee53d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64066a33681b4081cc109ebc8f060c2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a64066a33681b4081cc109ebc8f060c2b">bstree_impl</a> (const key_compare &amp;cmp, const <a class="el" href="structboost_1_1intrusive_1_1value__traits.html">value_traits</a> &amp;v_traits=<a class="el" href="structboost_1_1intrusive_1_1value__traits.html">value_traits</a>())</td></tr>
+<tr class="separator:a64066a33681b4081cc109ebc8f060c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33d6a985e82d43a39722919e962b485e"><td class="memTemplParams" colspan="2">template&lt;class Iterator &gt; </td></tr>
+<tr class="memitem:a33d6a985e82d43a39722919e962b485e"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a33d6a985e82d43a39722919e962b485e">bstree_impl</a> (bool unique, Iterator b, Iterator e, const key_compare &amp;cmp=key_compare(), const <a class="el" href="structboost_1_1intrusive_1_1value__traits.html">value_traits</a> &amp;v_traits=<a class="el" href="structboost_1_1intrusive_1_1value__traits.html">value_traits</a>())</td></tr>
+<tr class="separator:a33d6a985e82d43a39722919e962b485e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a154614cb9f9fe3903c0ac1a0a1446b57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a154614cb9f9fe3903c0ac1a0a1446b57">bstree_impl</a> (<a class="el" href="move_2core_8hpp.html#a41dbf698e587e2adc7f518a2b8625436">BOOST_RV_REF</a>(<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>) x)</td></tr>
+<tr class="separator:a154614cb9f9fe3903c0ac1a0a1446b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a532b963537944a4d220976b34442d807"><td class="memItemLeft" align="right" valign="top">BOOST_INTRUSIVE_FORCEINLINE <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a532b963537944a4d220976b34442d807">operator=</a> (<a class="el" href="move_2core_8hpp.html#a41dbf698e587e2adc7f518a2b8625436">BOOST_RV_REF</a>(<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>) x)</td></tr>
+<tr class="separator:a532b963537944a4d220976b34442d807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a832c5d6cd300b2f0b6d587c5e39b6937"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a832c5d6cd300b2f0b6d587c5e39b6937">empty</a> () const</td></tr>
+<tr class="separator:a832c5d6cd300b2f0b6d587c5e39b6937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4754e3fb5db62ffdca2ad57ccd9e3f86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a4754e3fb5db62ffdca2ad57ccd9e3f86">size</a> () const</td></tr>
+<tr class="separator:a4754e3fb5db62ffdca2ad57ccd9e3f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d223e816265872d7fe0023c8a4c18f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a2d223e816265872d7fe0023c8a4c18f5">swap</a> (<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;other)</td></tr>
+<tr class="separator:a2d223e816265872d7fe0023c8a4c18f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fdbdbccba221eae64c2b57fc0b4c5a2"><td class="memTemplParams" colspan="2">template&lt;class Cloner , class Disposer &gt; </td></tr>
+<tr class="memitem:a1fdbdbccba221eae64c2b57fc0b4c5a2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a1fdbdbccba221eae64c2b57fc0b4c5a2">clone_from</a> (const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;src, Cloner cloner, Disposer disposer)</td></tr>
+<tr class="separator:a1fdbdbccba221eae64c2b57fc0b4c5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d14e553a4d2172da1e3889edea93e9"><td class="memTemplParams" colspan="2">template&lt;class Cloner , class Disposer &gt; </td></tr>
+<tr class="memitem:ab9d14e553a4d2172da1e3889edea93e9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#ab9d14e553a4d2172da1e3889edea93e9">clone_from</a> (<a class="el" href="move_2core_8hpp.html#a41dbf698e587e2adc7f518a2b8625436">BOOST_RV_REF</a>(<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>) src, Cloner cloner, Disposer disposer)</td></tr>
+<tr class="separator:ab9d14e553a4d2172da1e3889edea93e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f857e96c25f143d023aa0836d67c1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a29f857e96c25f143d023aa0836d67c1c">insert_equal</a> (reference value)</td></tr>
+<tr class="separator:a29f857e96c25f143d023aa0836d67c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4ea1b91750ea41670fa40c5c6a0f98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#ada4ea1b91750ea41670fa40c5c6a0f98">insert_equal</a> (const_iterator hint, reference value)</td></tr>
+<tr class="separator:ada4ea1b91750ea41670fa40c5c6a0f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a976bb45069640851e44d167459032"><td class="memTemplParams" colspan="2">template&lt;class Iterator &gt; </td></tr>
+<tr class="memitem:a58a976bb45069640851e44d167459032"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a58a976bb45069640851e44d167459032">insert_equal</a> (Iterator b, Iterator e)</td></tr>
+<tr class="separator:a58a976bb45069640851e44d167459032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a265bc2cc71d3b33081cafa5233a866c5"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a>, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a265bc2cc71d3b33081cafa5233a866c5">insert_unique</a> (reference value)</td></tr>
+<tr class="separator:a265bc2cc71d3b33081cafa5233a866c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab859e9959ff87491de9b8a1b07c9b929"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#ab859e9959ff87491de9b8a1b07c9b929">insert_unique</a> (const_iterator hint, reference value)</td></tr>
+<tr class="separator:ab859e9959ff87491de9b8a1b07c9b929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e1ca2912191f03a40d452e575929013"><td class="memTemplParams" colspan="2">template&lt;class Iterator &gt; </td></tr>
+<tr class="memitem:a6e1ca2912191f03a40d452e575929013"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a6e1ca2912191f03a40d452e575929013">insert_unique</a> (Iterator b, Iterator e)</td></tr>
+<tr class="separator:a6e1ca2912191f03a40d452e575929013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cd20d63a14d56142ae7f4b3d562c343"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a7cd20d63a14d56142ae7f4b3d562c343">insert_unique_commit</a> (reference value, const insert_commit_data &amp;commit_data)</td></tr>
+<tr class="separator:a7cd20d63a14d56142ae7f4b3d562c343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9d35150f279e6c6be1e72a1bea6494b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#af9d35150f279e6c6be1e72a1bea6494b">insert_before</a> (const_iterator pos, reference value)</td></tr>
+<tr class="separator:af9d35150f279e6c6be1e72a1bea6494b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3adaecc813513122757b9ef8d22a126a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a3adaecc813513122757b9ef8d22a126a">push_back</a> (reference value)</td></tr>
+<tr class="separator:a3adaecc813513122757b9ef8d22a126a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d49d05ded832047909a2f68b47aca5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#ae9d49d05ded832047909a2f68b47aca5">push_front</a> (reference value)</td></tr>
+<tr class="separator:ae9d49d05ded832047909a2f68b47aca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d746612d4b970f212e2abcb72097c82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a7d746612d4b970f212e2abcb72097c82">erase</a> (const_iterator i)</td></tr>
+<tr class="separator:a7d746612d4b970f212e2abcb72097c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a441a195943b6678b3276693f9a8b176e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a441a195943b6678b3276693f9a8b176e">erase</a> (const_iterator b, const_iterator e)</td></tr>
+<tr class="separator:a441a195943b6678b3276693f9a8b176e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac522d167e45f33cb32a2571f0fd0cec4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#ac522d167e45f33cb32a2571f0fd0cec4">erase</a> (const key_type &amp;key)</td></tr>
+<tr class="separator:ac522d167e45f33cb32a2571f0fd0cec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a253f4213861f6f94c3e80e8101492fbd"><td class="memTemplParams" colspan="2">template&lt;class KeyType , class KeyTypeKeyCompare &gt; </td></tr>
+<tr class="memitem:a253f4213861f6f94c3e80e8101492fbd"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a253f4213861f6f94c3e80e8101492fbd">BOOST_INTRUSIVE_DOC1ST</a> (<a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a>, typename <a class="el" href="structboost_1_1move__detail_1_1disable__if__convertible.html">detail::disable_if_convertible</a>&lt; KeyTypeKeyCompare BOOST_INTRUSIVE_I const_iterator BOOST_INTRUSIVE_I <a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a> &gt;::<a class="el" href="structboost_1_1type.html">type</a>) <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a7d746612d4b970f212e2abcb72097c82">erase</a>(const KeyType &amp;key</td></tr>
+<tr class="separator:a253f4213861f6f94c3e80e8101492fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72c3d2dceed8751aad900fa48afe9e61"><td class="memItemLeft" align="right" valign="top"><a id="a72c3d2dceed8751aad900fa48afe9e61"></a>
+this&#160;</td><td class="memItemRight" valign="bottom"><b>private_erase</b> (p.first, p.second, n)</td></tr>
+<tr class="separator:a72c3d2dceed8751aad900fa48afe9e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a049d8bede40c99feec58d426746c658e"><td class="memTemplParams" colspan="2">template&lt;class Disposer &gt; </td></tr>
+<tr class="memitem:a049d8bede40c99feec58d426746c658e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a049d8bede40c99feec58d426746c658e">erase_and_dispose</a> (const_iterator i, Disposer disposer)</td></tr>
+<tr class="separator:a049d8bede40c99feec58d426746c658e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ea6bf331f61dfb9e5d1f671bb8b8871"><td class="memTemplParams" colspan="2">template&lt;class Disposer &gt; </td></tr>
+<tr class="memitem:a6ea6bf331f61dfb9e5d1f671bb8b8871"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a6ea6bf331f61dfb9e5d1f671bb8b8871">erase_and_dispose</a> (const key_type &amp;key, Disposer disposer)</td></tr>
+<tr class="separator:a6ea6bf331f61dfb9e5d1f671bb8b8871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2352d98d488dd297f7490037deb0f8d3"><td class="memTemplParams" colspan="2">template&lt;class Disposer &gt; </td></tr>
+<tr class="memitem:a2352d98d488dd297f7490037deb0f8d3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a2352d98d488dd297f7490037deb0f8d3">erase_and_dispose</a> (const_iterator b, const_iterator e, Disposer disposer)</td></tr>
+<tr class="separator:a2352d98d488dd297f7490037deb0f8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c2d3a5e7fd3c82386c70e0d9ff3a526"><td class="memTemplParams" colspan="2">template&lt;class KeyType , class KeyTypeKeyCompare , class Disposer &gt; </td></tr>
+<tr class="memitem:a8c2d3a5e7fd3c82386c70e0d9ff3a526"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a8c2d3a5e7fd3c82386c70e0d9ff3a526">BOOST_INTRUSIVE_DOC1ST</a> (<a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a>, typename <a class="el" href="structboost_1_1move__detail_1_1disable__if__convertible.html">detail::disable_if_convertible</a>&lt; KeyTypeKeyCompare BOOST_INTRUSIVE_I const_iterator BOOST_INTRUSIVE_I <a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a> &gt;::<a class="el" href="structboost_1_1type.html">type</a>) <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a049d8bede40c99feec58d426746c658e">erase_and_dispose</a>(const KeyType &amp;key</td></tr>
+<tr class="separator:a8c2d3a5e7fd3c82386c70e0d9ff3a526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e01fdcd53f80e413f7ca8d5a6f5fd26"><td class="memItemLeft" align="right" valign="top"><a id="a4e01fdcd53f80e413f7ca8d5a6f5fd26"></a>
+this&#160;</td><td class="memItemRight" valign="bottom"><b>private_erase</b> (p.first, p.second, n, disposer)</td></tr>
+<tr class="separator:a4e01fdcd53f80e413f7ca8d5a6f5fd26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a345d2ebef0118fa5d9851f908036f3a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a345d2ebef0118fa5d9851f908036f3a8">clear</a> ()</td></tr>
+<tr class="separator:a345d2ebef0118fa5d9851f908036f3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e70822b3955f9b775f01236be462f48"><td class="memTemplParams" colspan="2">template&lt;class Disposer &gt; </td></tr>
+<tr class="memitem:a4e70822b3955f9b775f01236be462f48"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a4e70822b3955f9b775f01236be462f48">clear_and_dispose</a> (Disposer disposer)</td></tr>
+<tr class="separator:a4e70822b3955f9b775f01236be462f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bb554b51019c198d2bb1e8b458e2a42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a8bb554b51019c198d2bb1e8b458e2a42">count</a> (const key_type &amp;key) const</td></tr>
+<tr class="separator:a8bb554b51019c198d2bb1e8b458e2a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02decff62125704551474a2dd27e9dd0"><td class="memTemplParams" colspan="2">template&lt;class KeyType , class KeyTypeKeyCompare &gt; </td></tr>
+<tr class="memitem:a02decff62125704551474a2dd27e9dd0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a02decff62125704551474a2dd27e9dd0">count</a> (const KeyType &amp;key, KeyTypeKeyCompare comp) const</td></tr>
+<tr class="separator:a02decff62125704551474a2dd27e9dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f1db119e44633785f8bd39e790d1dfc"><td class="memItemLeft" align="right" valign="top"><a id="a2f1db119e44633785f8bd39e790d1dfc"></a>
+<a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>count</b> (const key_type &amp;key)</td></tr>
+<tr class="separator:a2f1db119e44633785f8bd39e790d1dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1613420cbd775ddba35159fa54e76a95"><td class="memTemplParams" colspan="2"><a id="a1613420cbd775ddba35159fa54e76a95"></a>
+template&lt;class KeyType , class KeyTypeKeyCompare &gt; </td></tr>
+<tr class="memitem:a1613420cbd775ddba35159fa54e76a95"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>count</b> (const KeyType &amp;key, KeyTypeKeyCompare comp)</td></tr>
+<tr class="separator:a1613420cbd775ddba35159fa54e76a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c1179cbef40a1b6af8aff7c323b058"><td class="memItemLeft" align="right" valign="top">pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#ab7c1179cbef40a1b6af8aff7c323b058">unlink_leftmost_without_rebalance</a> ()</td></tr>
+<tr class="separator:ab7c1179cbef40a1b6af8aff7c323b058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88ff62d35e08d431918815330e1c9c1e"><td class="memTemplParams" colspan="2">template&lt;class Compare2 &gt; </td></tr>
+<tr class="memitem:a88ff62d35e08d431918815330e1c9c1e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a88ff62d35e08d431918815330e1c9c1e">merge_unique</a> (<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, Compare2, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt; &amp;source)</td></tr>
+<tr class="separator:a88ff62d35e08d431918815330e1c9c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae799f103e79a9ed40f36d88e4ca7c7a1"><td class="memTemplParams" colspan="2">template&lt;class Compare2 &gt; </td></tr>
+<tr class="memitem:ae799f103e79a9ed40f36d88e4ca7c7a1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#ae799f103e79a9ed40f36d88e4ca7c7a1">merge_equal</a> (<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, Compare2, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt; &amp;source)</td></tr>
+<tr class="separator:ae799f103e79a9ed40f36d88e4ca7c7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8158cd092a57467374db8931be9125c"><td class="memTemplParams" colspan="2">template&lt;class ExtraChecker &gt; </td></tr>
+<tr class="memitem:ae8158cd092a57467374db8931be9125c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#ae8158cd092a57467374db8931be9125c">check</a> (ExtraChecker extra_checker) const</td></tr>
+<tr class="separator:ae8158cd092a57467374db8931be9125c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9237de325cd4e7927a7a8779f2ec5ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#ab9237de325cd4e7927a7a8779f2ec5ad">check</a> () const</td></tr>
+<tr class="separator:ab9237de325cd4e7927a7a8779f2ec5ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:ac6442b2bd7acd7acd10eeb1453bc13c5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#ac6442b2bd7acd7acd10eeb1453bc13c5">container_from_end_iterator</a> (<a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a> end_iterator)</td></tr>
+<tr class="separator:ac6442b2bd7acd7acd10eeb1453bc13c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae33b9bec18f0ca8357f2e23ab6697280"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#ae33b9bec18f0ca8357f2e23ab6697280">container_from_end_iterator</a> (const_iterator end_iterator)</td></tr>
+<tr class="separator:ae33b9bec18f0ca8357f2e23ab6697280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d29e4f24b05de864c90df3a559dc6b6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a8d29e4f24b05de864c90df3a559dc6b6">container_from_iterator</a> (<a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a> it)</td></tr>
+<tr class="separator:a8d29e4f24b05de864c90df3a559dc6b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0318b68afc4aadc9dd6cb9f00a6aa931"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a0318b68afc4aadc9dd6cb9f00a6aa931">container_from_iterator</a> (const_iterator it)</td></tr>
+<tr class="separator:a0318b68afc4aadc9dd6cb9f00a6aa931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc371868d7a3a14279ee68eb6c7e9a1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a6fc371868d7a3a14279ee68eb6c7e9a1">remove_node</a> (reference value)</td></tr>
+<tr class="separator:a6fc371868d7a3a14279ee68eb6c7e9a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a7cf73a5a364d3e69661641be00c1edb6"><td class="memItemLeft" align="right" valign="top">KeyTypeKeyCompare&#160;</td><td class="memItemRight" valign="bottom"><b>comp</b></td></tr>
+<tr class="separator:a7cf73a5a364d3e69661641be00c1edb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe15fe7a28f9de79fb7decf079b2aeb1"><td class="memItemLeft" align="right" valign="top"><a id="abe15fe7a28f9de79fb7decf079b2aeb1"></a>
+<a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>n</b></td></tr>
+<tr class="separator:abe15fe7a28f9de79fb7decf079b2aeb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe15fe7a28f9de79fb7decf079b2aeb1"><td class="memItemLeft" align="right" valign="top"><a id="abe15fe7a28f9de79fb7decf079b2aeb1"></a>
+return&#160;</td><td class="memItemRight" valign="bottom"><b>n</b></td></tr>
+<tr class="separator:abe15fe7a28f9de79fb7decf079b2aeb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb2cd5fa5fe2b1726aef9c75f00df4d5"><td class="memItemLeft" align="right" valign="top">KeyTypeKeyCompare Disposer&#160;</td><td class="memItemRight" valign="bottom"><b>disposer</b></td></tr>
+<tr class="separator:adb2cd5fa5fe2b1726aef9c75f00df4d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:a104a0728990f3cbd0037ac77a4bbbfce"><td class="memItemLeft" align="right" valign="top"><a id="a104a0728990f3cbd0037ac77a4bbbfce"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>constant_time_size</b> = ConstantTimeSize</td></tr>
+<tr class="separator:a104a0728990f3cbd0037ac77a4bbbfce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a736ea41663911fed5fbf3d284eed0d5b"><td class="memItemLeft" align="right" valign="top"><a id="a736ea41663911fed5fbf3d284eed0d5b"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>stateful_value_traits</b> = <a class="el" href="structboost_1_1intrusive_1_1detail_1_1is__stateful__value__traits.html">detail::is_stateful_value_traits</a>&lt;<a class="el" href="structboost_1_1intrusive_1_1value__traits.html">value_traits</a>&gt;::value</td></tr>
+<tr class="separator:a736ea41663911fed5fbf3d284eed0d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a2e85a0a96082893702d4e1bbb6cb8310"><td class="memItemLeft" align="right" valign="top"><a id="a2e85a0a96082893702d4e1bbb6cb8310"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;x, const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;y)</td></tr>
+<tr class="separator:a2e85a0a96082893702d4e1bbb6cb8310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17f4d57095de4ee872280562631ace1"><td class="memItemLeft" align="right" valign="top"><a id="aa17f4d57095de4ee872280562631ace1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;x, const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;y)</td></tr>
+<tr class="separator:aa17f4d57095de4ee872280562631ace1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef7ebe422d144bdd86c0620184822df6"><td class="memItemLeft" align="right" valign="top"><a id="aef7ebe422d144bdd86c0620184822df6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;x, const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;y)</td></tr>
+<tr class="separator:aef7ebe422d144bdd86c0620184822df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0509f2835b1690315c5270594aa5c3f"><td class="memItemLeft" align="right" valign="top"><a id="ae0509f2835b1690315c5270594aa5c3f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;x, const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;y)</td></tr>
+<tr class="separator:ae0509f2835b1690315c5270594aa5c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ac9598ed4455a974b799a90d1f43897"><td class="memItemLeft" align="right" valign="top"><a id="a4ac9598ed4455a974b799a90d1f43897"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;=</b> (const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;x, const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;y)</td></tr>
+<tr class="separator:a4ac9598ed4455a974b799a90d1f43897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37ccfc487e3f77cb7ed0a213c41f3733"><td class="memItemLeft" align="right" valign="top"><a id="a37ccfc487e3f77cb7ed0a213c41f3733"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;=</b> (const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;x, const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;y)</td></tr>
+<tr class="separator:a37ccfc487e3f77cb7ed0a213c41f3733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c41d533a0676cdb6c698ba39fb1652c"><td class="memItemLeft" align="right" valign="top"><a id="a0c41d533a0676cdb6c698ba39fb1652c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;x, <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> &amp;y)</td></tr>
+<tr class="separator:a0c41d533a0676cdb6c698ba39fb1652c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><h3>template&lt;class ValueTraits, class VoidOrKeyOfValue, class VoidOrKeyComp, class SizeType, bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder&gt;<br />
+class boost::intrusive::bstree_impl&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;</h3>
+
+<p>The class template bstree is an unbalanced intrusive binary search tree container. The no-throw guarantee holds only, if the key_compare object doesn't throw.</p>
+<p>The complexity guarantees only hold if the tree is balanced, logarithmic complexity would increase to linear if the tree is totally unbalanced.</p>
+<p>The template parameter <code>T</code> is the type to be managed by the container. The user can specify additional options and if no options are provided default options are used.</p>
+<p>The container supports the following options: <code>base_hook&lt;&gt;/member_hook&lt;&gt;/value_traits&lt;&gt;</code>, <code>constant_time_size&lt;&gt;</code>, <code>size_type&lt;&gt;</code> and <code>compare&lt;&gt;</code>. </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a28ea6e0f5e102011804372a71aee53d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28ea6e0f5e102011804372a71aee53d1">&#9670;&nbsp;</a></span>bstree_impl() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: Constructs an empty container.</p>
+<p><b>Complexity</b>: Constant.</p>
+<p><b>Throws</b>: If value_traits::node_traits::node constructor throws (this does not happen with predefined Boost.Intrusive hooks) or the copy constructor of the key_compare object throws. Basic guarantee. </p>
+
+</div>
+</div>
+<a id="a64066a33681b4081cc109ebc8f060c2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64066a33681b4081cc109ebc8f060c2b">&#9670;&nbsp;</a></span>bstree_impl() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> </td>
+          <td>(</td>
+          <td class="paramtype">const key_compare &amp;&#160;</td>
+          <td class="paramname"><em>cmp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structboost_1_1intrusive_1_1value__traits.html">value_traits</a> &amp;&#160;</td>
+          <td class="paramname"><em>v_traits</em> = <code><a class="el" href="structboost_1_1intrusive_1_1value__traits.html">value_traits</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: Constructs an empty container with given comparison and traits.</p>
+<p><b>Complexity</b>: Constant.</p>
+<p><b>Throws</b>: If value_traits::node_traits::node constructor throws (this does not happen with predefined Boost.Intrusive hooks) or the copy constructor of the key_compare object throws. Basic guarantee. </p>
+
+</div>
+</div>
+<a id="a33d6a985e82d43a39722919e962b485e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33d6a985e82d43a39722919e962b485e">&#9670;&nbsp;</a></span>bstree_impl() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<div class="memtemplate">
+template&lt;class Iterator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>unique</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const key_compare &amp;&#160;</td>
+          <td class="paramname"><em>cmp</em> = <code>key_compare()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structboost_1_1intrusive_1_1value__traits.html">value_traits</a> &amp;&#160;</td>
+          <td class="paramname"><em>v_traits</em> = <code><a class="el" href="structboost_1_1intrusive_1_1value__traits.html">value_traits</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: Dereferencing iterator must yield an lvalue of type value_type. cmp must be a comparison function that induces a strict weak ordering.</p>
+<p><b>Effects</b>: Constructs an empty container and inserts elements from [b, e).</p>
+<p><b>Complexity</b>: Linear in N if [b, e) is already sorted using comp and otherwise N * log N, where N is the distance between first and last.</p>
+<p><b>Throws</b>: If value_traits::node_traits::node constructor throws (this does not happen with predefined Boost.Intrusive hooks) or the copy constructor/operator() of the key_compare object throws. Basic guarantee. </p>
+
+</div>
+</div>
+<a id="a154614cb9f9fe3903c0ac1a0a1446b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a154614cb9f9fe3903c0ac1a0a1446b57">&#9670;&nbsp;</a></span>bstree_impl() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="move_2core_8hpp.html#a41dbf698e587e2adc7f518a2b8625436">BOOST_RV_REF</a>(<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;)&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: Constructs a container moving resources from another container. Internal comparison object and value traits are move constructed and nodes belonging to x (except the node representing the "end") are linked to *this.</p>
+<p><b>Complexity</b>: Constant.</p>
+<p><b>Throws</b>: If value_traits::node_traits::node's move constructor throws (this does not happen with predefined Boost.Intrusive hooks) or the move constructor of the comparison objet throws. </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a253f4213861f6f94c3e80e8101492fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a253f4213861f6f94c3e80e8101492fbd">&#9670;&nbsp;</a></span>BOOST_INTRUSIVE_DOC1ST() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<div class="memtemplate">
+template&lt;class KeyType , class KeyTypeKeyCompare &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::BOOST_INTRUSIVE_DOC1ST </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename <a class="el" href="structboost_1_1move__detail_1_1disable__if__convertible.html">detail::disable_if_convertible</a>&lt; KeyTypeKeyCompare BOOST_INTRUSIVE_I const_iterator BOOST_INTRUSIVE_I <a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a> &gt;::<a class="el" href="structboost_1_1type.html">type</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><b>Requires</b>: key is a value such that <code>*this</code> is partitioned with respect to comp(nk, key) and !comp(key, nk), with comp(nk, key) implying !comp(key, nk), with nk the key_type of a value_type inserted into <code>*this</code>.</p>
+<p><b>Effects</b>: Erases all the elements with the given key. according to the comparison functor "comp".</p>
+<p><b>Returns</b>: The number of erased elements.</p>
+<p><b>Complexity</b>: O(log(<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a4754e3fb5db62ffdca2ad57ccd9e3f86">size()</a> + N).</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: Invalidates the iterators (but not the references) to the erased elements. No destructors are called. </p>
+
+</div>
+</div>
+<a id="a8c2d3a5e7fd3c82386c70e0d9ff3a526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c2d3a5e7fd3c82386c70e0d9ff3a526">&#9670;&nbsp;</a></span>BOOST_INTRUSIVE_DOC1ST() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<div class="memtemplate">
+template&lt;class KeyType , class KeyTypeKeyCompare , class Disposer &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::BOOST_INTRUSIVE_DOC1ST </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename <a class="el" href="structboost_1_1move__detail_1_1disable__if__convertible.html">detail::disable_if_convertible</a>&lt; KeyTypeKeyCompare BOOST_INTRUSIVE_I const_iterator BOOST_INTRUSIVE_I <a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a> &gt;::<a class="el" href="structboost_1_1type.html">type</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><b>Requires</b>: key is a value such that <code>*this</code> is partitioned with respect to comp(nk, key) and !comp(key, nk), with comp(nk, key) implying !comp(key, nk) and nk the key_type of a value_type inserted into <code>*this</code>.</p>
+<p><b>Requires</b>: Disposer::operator()(pointer) shouldn't throw.</p>
+<p><b>Effects</b>: Erases all the elements with the given key. according to the comparison functor "comp". Disposer::operator()(pointer) is called for the removed elements.</p>
+<p><b>Returns</b>: The number of erased elements.</p>
+<p><b>Complexity</b>: O(log(<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a4754e3fb5db62ffdca2ad57ccd9e3f86">size()</a> + N).</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: Invalidates the iterators to the erased elements. </p>
+
+</div>
+</div>
+<a id="ab9237de325cd4e7927a7a8779f2ec5ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9237de325cd4e7927a7a8779f2ec5ad">&#9670;&nbsp;</a></span>check() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::check </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: Asserts the integrity of the container.</p>
+<p><b>Complexity</b>: Linear time.</p>
+<p><b>Note</b>: The method has no effect when asserts are turned off (e.g., with NDEBUG). Experimental function, interface might change in future versions. </p>
+
+</div>
+</div>
+<a id="ae8158cd092a57467374db8931be9125c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8158cd092a57467374db8931be9125c">&#9670;&nbsp;</a></span>check() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<div class="memtemplate">
+template&lt;class ExtraChecker &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::check </td>
+          <td>(</td>
+          <td class="paramtype">ExtraChecker&#160;</td>
+          <td class="paramname"><em>extra_checker</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: Asserts the integrity of the container with additional checks provided by the user.</p>
+<p><b>Complexity</b>: Linear time.</p>
+<p><b>Note</b>: The method might not have effect when asserts are turned off (e.g., with NDEBUG). Experimental function, interface might change in future versions. </p>
+
+</div>
+</div>
+<a id="a345d2ebef0118fa5d9851f908036f3a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a345d2ebef0118fa5d9851f908036f3a8">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: Erases all of the elements.</p>
+<p><b>Complexity</b>: Linear to the number of elements on the container. if it's a safe-mode or auto-unlink value_type. Constant time otherwise.</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: Invalidates the iterators (but not the references) to the erased elements. No destructors are called. </p>
+
+</div>
+</div>
+<a id="a4e70822b3955f9b775f01236be462f48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e70822b3955f9b775f01236be462f48">&#9670;&nbsp;</a></span>clear_and_dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<div class="memtemplate">
+template&lt;class Disposer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::clear_and_dispose </td>
+          <td>(</td>
+          <td class="paramtype">Disposer&#160;</td>
+          <td class="paramname"><em>disposer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: Erases all of the elements calling disposer(p) for each node to be erased. <b>Complexity</b>: Average complexity for is at most O(log(<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a4754e3fb5db62ffdca2ad57ccd9e3f86">size()</a> + N)), where N is the number of elements in the container.</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: Invalidates the iterators (but not the references) to the erased elements. Calls N times to disposer functor. </p>
+
+</div>
+</div>
+<a id="ab9d14e553a4d2172da1e3889edea93e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9d14e553a4d2172da1e3889edea93e9">&#9670;&nbsp;</a></span>clone_from() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<div class="memtemplate">
+template&lt;class Cloner , class Disposer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::clone_from </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="move_2core_8hpp.html#a41dbf698e587e2adc7f518a2b8625436">BOOST_RV_REF</a>(<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;)&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Cloner&#160;</td>
+          <td class="paramname"><em>cloner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Disposer&#160;</td>
+          <td class="paramname"><em>disposer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: Disposer::operator()(pointer) shouldn't throw. Cloner should yield to nodes equivalent to the original nodes.</p>
+<p><b>Effects</b>: Erases all the elements from *this calling Disposer::operator()(pointer), clones all the elements from src calling Cloner::operator()(reference) and inserts them on *this. Copies the predicate from the source container.</p>
+<p>If cloner throws, all cloned elements are unlinked and disposed calling Disposer::operator()(pointer).</p>
+<p><b>Complexity</b>: Linear to erased plus inserted elements.</p>
+<p><b>Throws</b>: If cloner throws or predicate copy assignment throws. Basic guarantee.</p>
+<p><b>Note</b>: This version can modify the source container, useful to implement move semantics. </p>
+
+</div>
+</div>
+<a id="a1fdbdbccba221eae64c2b57fc0b4c5a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fdbdbccba221eae64c2b57fc0b4c5a2">&#9670;&nbsp;</a></span>clone_from() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<div class="memtemplate">
+template&lt;class Cloner , class Disposer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::clone_from </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt; &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Cloner&#160;</td>
+          <td class="paramname"><em>cloner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Disposer&#160;</td>
+          <td class="paramname"><em>disposer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: Disposer::operator()(pointer) shouldn't throw. Cloner should yield to nodes equivalent to the original nodes.</p>
+<p><b>Effects</b>: Erases all the elements from *this calling Disposer::operator()(pointer), clones all the elements from src calling Cloner::operator()(const_reference ) and inserts them on *this. Copies the predicate from the source container.</p>
+<p>If cloner throws, all cloned elements are unlinked and disposed calling Disposer::operator()(pointer).</p>
+<p><b>Complexity</b>: Linear to erased plus inserted elements.</p>
+<p><b>Throws</b>: If cloner throws or predicate copy assignment throws. Basic guarantee. </p>
+
+</div>
+</div>
+<a id="ae33b9bec18f0ca8357f2e23ab6697280"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae33b9bec18f0ca8357f2e23ab6697280">&#9670;&nbsp;</a></span>container_from_end_iterator() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>&amp; <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::container_from_end_iterator </td>
+          <td>(</td>
+          <td class="paramtype">const_iterator&#160;</td>
+          <td class="paramname"><em>end_iterator</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Precondition</b>: end_iterator must be a valid end const_iterator of the container.</p>
+<p><b>Effects</b>: Returns a const reference to the container associated to the iterator</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Complexity</b>: Constant. </p>
+
+</div>
+</div>
+<a id="ac6442b2bd7acd7acd10eeb1453bc13c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6442b2bd7acd7acd10eeb1453bc13c5">&#9670;&nbsp;</a></span>container_from_end_iterator() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>&amp; <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::container_from_end_iterator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a>&#160;</td>
+          <td class="paramname"><em>end_iterator</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Precondition</b>: end_iterator must be a valid end iterator of the container.</p>
+<p><b>Effects</b>: Returns a const reference to the container associated to the end iterator</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Complexity</b>: Constant. </p>
+
+</div>
+</div>
+<a id="a0318b68afc4aadc9dd6cb9f00a6aa931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0318b68afc4aadc9dd6cb9f00a6aa931">&#9670;&nbsp;</a></span>container_from_iterator() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>&amp; <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::container_from_iterator </td>
+          <td>(</td>
+          <td class="paramtype">const_iterator&#160;</td>
+          <td class="paramname"><em>it</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Precondition</b>: it must be a valid end const_iterator of container.</p>
+<p><b>Effects</b>: Returns a const reference to the container associated to the end iterator</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Complexity</b>: Logarithmic. </p>
+
+</div>
+</div>
+<a id="a8d29e4f24b05de864c90df3a559dc6b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d29e4f24b05de864c90df3a559dc6b6">&#9670;&nbsp;</a></span>container_from_iterator() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>&amp; <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::container_from_iterator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a>&#160;</td>
+          <td class="paramname"><em>it</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Precondition</b>: it must be a valid iterator of the container.</p>
+<p><b>Effects</b>: Returns a const reference to the container associated to the iterator</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Complexity</b>: Logarithmic. </p>
+
+</div>
+</div>
+<a id="a8bb554b51019c198d2bb1e8b458e2a42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bb554b51019c198d2bb1e8b458e2a42">&#9670;&nbsp;</a></span>count() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a> <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::count </td>
+          <td>(</td>
+          <td class="paramtype">const key_type &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: Returns the number of contained elements with the given value</p>
+<p><b>Complexity</b>: Logarithmic to the number of elements contained plus lineal to number of objects with the given value.</p>
+<p><b>Throws</b>: If <code>key_compare</code> throws. </p>
+
+</div>
+</div>
+<a id="a02decff62125704551474a2dd27e9dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02decff62125704551474a2dd27e9dd0">&#9670;&nbsp;</a></span>count() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<div class="memtemplate">
+template&lt;class KeyType , class KeyTypeKeyCompare &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a> <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::count </td>
+          <td>(</td>
+          <td class="paramtype">const KeyType &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyTypeKeyCompare&#160;</td>
+          <td class="paramname"><em>comp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: key is a value such that <code>*this</code> is partitioned with respect to comp(nk, key) and !comp(key, nk), with comp(nk, key) implying !comp(key, nk), and nk the key_type of a value_type inserted into <code>*this</code>.</p>
+<p><b>Effects</b>: Returns the number of contained elements with the given key</p>
+<p><b>Complexity</b>: Logarithmic to the number of elements contained plus lineal to number of objects with the given key.</p>
+<p><b>Throws</b>: If <code>comp</code> throws. </p>
+
+</div>
+</div>
+<a id="a832c5d6cd300b2f0b6d587c5e39b6937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a832c5d6cd300b2f0b6d587c5e39b6937">&#9670;&nbsp;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::<a class="el" href="structboost_1_1intrusive_1_1empty.html">empty</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: Returns true if the container is empty.</p>
+<p><b>Complexity</b>: Constant.</p>
+<p><b>Throws</b>: Nothing. </p>
+
+</div>
+</div>
+<a id="ac522d167e45f33cb32a2571f0fd0cec4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac522d167e45f33cb32a2571f0fd0cec4">&#9670;&nbsp;</a></span>erase() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a> <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::erase </td>
+          <td>(</td>
+          <td class="paramtype">const key_type &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: Erases all the elements with the given value.</p>
+<p><b>Returns</b>: The number of erased elements.</p>
+<p><b>Complexity</b>: O(log(<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a4754e3fb5db62ffdca2ad57ccd9e3f86">size()</a> + N).</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: Invalidates the iterators (but not the references) to the erased elements. No destructors are called. </p>
+
+</div>
+</div>
+<a id="a441a195943b6678b3276693f9a8b176e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a441a195943b6678b3276693f9a8b176e">&#9670;&nbsp;</a></span>erase() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a> <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::erase </td>
+          <td>(</td>
+          <td class="paramtype">const_iterator&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const_iterator&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: Erases the range pointed to by b end e.</p>
+<p><b>Complexity</b>: Average complexity for erase range is at most O(log(<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a4754e3fb5db62ffdca2ad57ccd9e3f86">size()</a> + N)), where N is the number of elements in the range.</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: Invalidates the iterators (but not the references) to the erased elements. No destructors are called. </p>
+
+</div>
+</div>
+<a id="a7d746612d4b970f212e2abcb72097c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d746612d4b970f212e2abcb72097c82">&#9670;&nbsp;</a></span>erase() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a> <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::erase </td>
+          <td>(</td>
+          <td class="paramtype">const_iterator&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: Erases the element pointed to by i.</p>
+<p><b>Complexity</b>: Average complexity for erase element is constant time.</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: Invalidates the iterators (but not the references) to the erased elements. No destructors are called. </p>
+
+</div>
+</div>
+<a id="a6ea6bf331f61dfb9e5d1f671bb8b8871"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ea6bf331f61dfb9e5d1f671bb8b8871">&#9670;&nbsp;</a></span>erase_and_dispose() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<div class="memtemplate">
+template&lt;class Disposer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a> <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::erase_and_dispose </td>
+          <td>(</td>
+          <td class="paramtype">const key_type &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Disposer&#160;</td>
+          <td class="paramname"><em>disposer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: Disposer::operator()(pointer) shouldn't throw.</p>
+<p><b>Effects</b>: Erases all the elements with the given value. Disposer::operator()(pointer) is called for the removed elements.</p>
+<p><b>Returns</b>: The number of erased elements.</p>
+<p><b>Complexity</b>: O(log(<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a4754e3fb5db62ffdca2ad57ccd9e3f86">size()</a> + N).</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: Invalidates the iterators (but not the references) to the erased elements. No destructors are called. </p>
+
+</div>
+</div>
+<a id="a2352d98d488dd297f7490037deb0f8d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2352d98d488dd297f7490037deb0f8d3">&#9670;&nbsp;</a></span>erase_and_dispose() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<div class="memtemplate">
+template&lt;class Disposer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a> <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::erase_and_dispose </td>
+          <td>(</td>
+          <td class="paramtype">const_iterator&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const_iterator&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Disposer&#160;</td>
+          <td class="paramname"><em>disposer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: Disposer::operator()(pointer) shouldn't throw.</p>
+<p><b>Effects</b>: Erases the range pointed to by b end e. Disposer::operator()(pointer) is called for the removed elements.</p>
+<p><b>Complexity</b>: Average complexity for erase range is at most O(log(<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html#a4754e3fb5db62ffdca2ad57ccd9e3f86">size()</a> + N)), where N is the number of elements in the range.</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: Invalidates the iterators to the erased elements. </p>
+
+</div>
+</div>
+<a id="a049d8bede40c99feec58d426746c658e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a049d8bede40c99feec58d426746c658e">&#9670;&nbsp;</a></span>erase_and_dispose() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<div class="memtemplate">
+template&lt;class Disposer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a> <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::erase_and_dispose </td>
+          <td>(</td>
+          <td class="paramtype">const_iterator&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Disposer&#160;</td>
+          <td class="paramname"><em>disposer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: Disposer::operator()(pointer) shouldn't throw.</p>
+<p><b>Effects</b>: Erases the element pointed to by i. Disposer::operator()(pointer) is called for the removed element.</p>
+<p><b>Complexity</b>: Average complexity for erase element is constant time.</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: Invalidates the iterators to the erased elements. </p>
+
+</div>
+</div>
+<a id="af9d35150f279e6c6be1e72a1bea6494b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9d35150f279e6c6be1e72a1bea6494b">&#9670;&nbsp;</a></span>insert_before()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a> <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::insert_before </td>
+          <td>(</td>
+          <td class="paramtype">const_iterator&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">reference&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: value must be an lvalue, "pos" must be a valid iterator (or end) and must be the succesor of value once inserted according to the predicate</p>
+<p><b>Effects</b>: Inserts x into the container before "pos".</p>
+<p><b>Complexity</b>: Constant time.</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: This function does not check preconditions so if "pos" is not the successor of "value" container ordering invariant will be broken. This is a low-level function to be used only for performance reasons by advanced users. </p>
+
+</div>
+</div>
+<a id="ada4ea1b91750ea41670fa40c5c6a0f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada4ea1b91750ea41670fa40c5c6a0f98">&#9670;&nbsp;</a></span>insert_equal() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a> <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::insert_equal </td>
+          <td>(</td>
+          <td class="paramtype">const_iterator&#160;</td>
+          <td class="paramname"><em>hint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">reference&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: value must be an lvalue, and "hint" must be a valid iterator.</p>
+<p><b>Effects</b>: Inserts x into the container, using "hint" as a hint to where it will be inserted. If "hint" is the upper_bound the insertion takes constant time (two comparisons in the worst case)</p>
+<p><b>Complexity</b>: Logarithmic in general, but it is amortized constant time if t is inserted immediately before hint.</p>
+<p><b>Throws</b>: If the internal key_compare ordering function throws. Strong guarantee.</p>
+<p><b>Note</b>: Does not affect the validity of iterators and references. No copy-constructors are called. </p>
+
+</div>
+</div>
+<a id="a58a976bb45069640851e44d167459032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58a976bb45069640851e44d167459032">&#9670;&nbsp;</a></span>insert_equal() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<div class="memtemplate">
+template&lt;class Iterator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::insert_equal </td>
+          <td>(</td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: Dereferencing iterator must yield an lvalue of type value_type.</p>
+<p><b>Effects</b>: Inserts a each element of a range into the container before the upper bound of the key of each element.</p>
+<p><b>Complexity</b>: Insert range is in general O(N * log(N)), where N is the size of the range. However, it is linear in N if the range is already sorted by value_comp().</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: Does not affect the validity of iterators and references. No copy-constructors are called. </p>
+
+</div>
+</div>
+<a id="a29f857e96c25f143d023aa0836d67c1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29f857e96c25f143d023aa0836d67c1c">&#9670;&nbsp;</a></span>insert_equal() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a> <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::insert_equal </td>
+          <td>(</td>
+          <td class="paramtype">reference&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: value must be an lvalue</p>
+<p><b>Effects</b>: Inserts value into the container before the upper bound.</p>
+<p><b>Complexity</b>: Average complexity for insert element is at most logarithmic.</p>
+<p><b>Throws</b>: If the internal key_compare ordering function throws. Strong guarantee.</p>
+<p><b>Note</b>: Does not affect the validity of iterators and references. No copy-constructors are called. </p>
+
+</div>
+</div>
+<a id="ab859e9959ff87491de9b8a1b07c9b929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab859e9959ff87491de9b8a1b07c9b929">&#9670;&nbsp;</a></span>insert_unique() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a> <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::insert_unique </td>
+          <td>(</td>
+          <td class="paramtype">const_iterator&#160;</td>
+          <td class="paramname"><em>hint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">reference&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: value must be an lvalue, and "hint" must be a valid iterator</p>
+<p><b>Effects</b>: Tries to insert x into the container, using "hint" as a hint to where it will be inserted.</p>
+<p><b>Complexity</b>: Logarithmic in general, but it is amortized constant time (two comparisons in the worst case) if t is inserted immediately before hint.</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: Does not affect the validity of iterators and references. No copy-constructors are called. </p>
+
+</div>
+</div>
+<a id="a6e1ca2912191f03a40d452e575929013"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e1ca2912191f03a40d452e575929013">&#9670;&nbsp;</a></span>insert_unique() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<div class="memtemplate">
+template&lt;class Iterator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::insert_unique </td>
+          <td>(</td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: Dereferencing iterator must yield an lvalue of type value_type.</p>
+<p><b>Effects</b>: Tries to insert each element of a range into the container.</p>
+<p><b>Complexity</b>: Insert range is in general O(N * log(N)), where N is the size of the range. However, it is linear in N if the range is already sorted by value_comp().</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: Does not affect the validity of iterators and references. No copy-constructors are called. </p>
+
+</div>
+</div>
+<a id="a265bc2cc71d3b33081cafa5233a866c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a265bc2cc71d3b33081cafa5233a866c5">&#9670;&nbsp;</a></span>insert_unique() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;<a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a>, bool&gt; <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::insert_unique </td>
+          <td>(</td>
+          <td class="paramtype">reference&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: value must be an lvalue</p>
+<p><b>Effects</b>: Inserts value into the container if the value is not already present.</p>
+<p><b>Complexity</b>: Average complexity for insert element is at most logarithmic.</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: Does not affect the validity of iterators and references. No copy-constructors are called. </p>
+
+</div>
+</div>
+<a id="a7cd20d63a14d56142ae7f4b3d562c343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cd20d63a14d56142ae7f4b3d562c343">&#9670;&nbsp;</a></span>insert_unique_commit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboost_1_1intrusive_1_1iterator.html">iterator</a> <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::insert_unique_commit </td>
+          <td>(</td>
+          <td class="paramtype">reference&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const insert_commit_data &amp;&#160;</td>
+          <td class="paramname"><em>commit_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: value must be an lvalue of type value_type. commit_data must have been obtained from a previous call to "insert_check". No objects should have been inserted or erased from the container between the "insert_check" that filled "commit_data" and the call to "insert_commit".</p>
+<p><b>Effects</b>: Inserts the value in the container using the information obtained from the "commit_data" that a previous "insert_check" filled.</p>
+<p><b>Returns</b>: An iterator to the newly inserted object.</p>
+<p><b>Complexity</b>: Constant time.</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Notes</b>: This function has only sense if a "insert_check" has been previously executed to fill "commit_data". No value should be inserted or erased between the "insert_check" and "insert_commit" calls. </p>
+
+</div>
+</div>
+<a id="ae799f103e79a9ed40f36d88e4ca7c7a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae799f103e79a9ed40f36d88e4ca7c7a1">&#9670;&nbsp;</a></span>merge_equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<div class="memtemplate">
+template&lt;class Compare2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::merge_equal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, Compare2, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: "source" container's Options can only can differ in the comparison function from *this.</p>
+<p><b>Effects</b>: Extracts each element in source and insert it into a using the comparison object of *this.</p>
+<p><b>Postcondition</b>: Pointers and references to the transferred elements of source refer to those same elements but as members of *this. Iterators referring to the transferred elements will continue to refer to their elements, but they now behave as iterators into *this, not into source.</p>
+<p><b>Throws</b>: Nothing unless the comparison object throws.</p>
+<p><b>Complexity</b>: N log(a.size() + N) (N has the value source.size()) </p>
+
+</div>
+</div>
+<a id="a88ff62d35e08d431918815330e1c9c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88ff62d35e08d431918815330e1c9c1e">&#9670;&nbsp;</a></span>merge_unique()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<div class="memtemplate">
+template&lt;class Compare2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::merge_unique </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, Compare2, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: "source" container's Options can only can differ in the comparison function from *this.</p>
+<p><b>Effects</b>: Attempts to extract each element in source and insert it into a using the comparison object of *this. If there is an element in a with key equivalent to the key of an element from source, then that element is not extracted from source.</p>
+<p><b>Postcondition</b>: Pointers and references to the transferred elements of source refer to those same elements but as members of *this. Iterators referring to the transferred elements will continue to refer to their elements, but they now behave as iterators into *this, not into source.</p>
+<p><b>Throws</b>: Nothing unless the comparison object throws.</p>
+<p><b>Complexity</b>: N log(a.size() + N) (N has the value source.size()) </p>
+
+</div>
+</div>
+<a id="a532b963537944a4d220976b34442d807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a532b963537944a4d220976b34442d807">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOST_INTRUSIVE_FORCEINLINE <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>&amp; <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="move_2core_8hpp.html#a41dbf698e587e2adc7f518a2b8625436">BOOST_RV_REF</a>(<a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;)&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: Equivalent to swap </p>
+
+</div>
+</div>
+<a id="a3adaecc813513122757b9ef8d22a126a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3adaecc813513122757b9ef8d22a126a">&#9670;&nbsp;</a></span>push_back()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::push_back </td>
+          <td>(</td>
+          <td class="paramtype">reference&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: value must be an lvalue, and it must be no less than the greatest inserted key</p>
+<p><b>Effects</b>: Inserts x into the container in the last position.</p>
+<p><b>Complexity</b>: Constant time.</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: This function does not check preconditions so if value is less than the greatest inserted key container ordering invariant will be broken. This function is slightly more efficient than using "insert_before". This is a low-level function to be used only for performance reasons by advanced users. </p>
+
+</div>
+</div>
+<a id="ae9d49d05ded832047909a2f68b47aca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9d49d05ded832047909a2f68b47aca5">&#9670;&nbsp;</a></span>push_front()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::push_front </td>
+          <td>(</td>
+          <td class="paramtype">reference&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Requires</b>: value must be an lvalue, and it must be no greater than the minimum inserted key</p>
+<p><b>Effects</b>: Inserts x into the container in the first position.</p>
+<p><b>Complexity</b>: Constant time.</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Note</b>: This function does not check preconditions so if value is greater than the minimum inserted key container ordering invariant will be broken. This function is slightly more efficient than using "insert_before". This is a low-level function to be used only for performance reasons by advanced users. </p>
+
+</div>
+</div>
+<a id="a6fc371868d7a3a14279ee68eb6c7e9a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc371868d7a3a14279ee68eb6c7e9a1">&#9670;&nbsp;</a></span>remove_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::remove_node </td>
+          <td>(</td>
+          <td class="paramtype">reference&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: removes "value" from the container.</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Complexity</b>: Logarithmic time.</p>
+<p><b>Note</b>: This static function is only usable with non-constant time size containers that have stateless comparison functors.</p>
+<p>If the user calls this function with a constant time size container or stateful comparison functor a compilation error will be issued. </p>
+
+</div>
+</div>
+<a id="a4754e3fb5db62ffdca2ad57ccd9e3f86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4754e3fb5db62ffdca2ad57ccd9e3f86">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboost_1_1intrusive_1_1size__type.html">size_type</a> <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: Returns the number of elements stored in the container.</p>
+<p><b>Complexity</b>: Linear to elements contained in *this if constant-time size option is disabled. Constant time otherwise.</p>
+<p><b>Throws</b>: Nothing. </p>
+
+</div>
+</div>
+<a id="a2d223e816265872d7fe0023c8a4c18f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d223e816265872d7fe0023c8a4c18f5">&#9670;&nbsp;</a></span>swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: Swaps the contents of two containers.</p>
+<p><b>Complexity</b>: Constant.</p>
+<p><b>Throws</b>: If the comparison functor's swap call throws. </p>
+
+</div>
+</div>
+<a id="ab7c1179cbef40a1b6af8aff7c323b058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7c1179cbef40a1b6af8aff7c323b058">&#9670;&nbsp;</a></span>unlink_leftmost_without_rebalance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pointer <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::unlink_leftmost_without_rebalance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><b>Effects</b>: Unlinks the leftmost node from the container.</p>
+<p><b>Complexity</b>: Average complexity is constant time.</p>
+<p><b>Throws</b>: Nothing.</p>
+<p><b>Notes</b>: This function breaks the container and the container can only be used for more unlink_leftmost_without_rebalance calls. This function is normally used to achieve a step by step controlled destruction of the container. </p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a7cf73a5a364d3e69661641be00c1edb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cf73a5a364d3e69661641be00c1edb6">&#9670;&nbsp;</a></span>comp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">KeyTypeKeyCompare <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::comp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">{</div>
+<div class="line">      std::pair&lt;iterator,iterator&gt; p = this-&gt;equal_range(key, comp)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adb2cd5fa5fe2b1726aef9c75f00df4d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb2cd5fa5fe2b1726aef9c75f00df4d5">&#9670;&nbsp;</a></span>disposer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ValueTraits , class VoidOrKeyOfValue , class VoidOrKeyComp , class SizeType , bool ConstantTimeSize, algo_types AlgoType, typename HeaderHolder &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">KeyTypeKeyCompare Disposer <a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">boost::intrusive::bstree_impl</a>&lt; ValueTraits, VoidOrKeyOfValue, VoidOrKeyComp, SizeType, ConstantTimeSize, AlgoType, HeaderHolder &gt;::disposer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">{</div>
+<div class="line">      std::pair&lt;iterator,iterator&gt; p = this-&gt;equal_range(key, comp)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>include/external/boost/boost/intrusive/<a class="el" href="bstree_8hpp_source.html">bstree.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceboost.html">boost</a></li><li class="navelem"><b>intrusive</b></li><li class="navelem"><a class="el" href="classboost_1_1intrusive_1_1bstree__impl.html">bstree_impl</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

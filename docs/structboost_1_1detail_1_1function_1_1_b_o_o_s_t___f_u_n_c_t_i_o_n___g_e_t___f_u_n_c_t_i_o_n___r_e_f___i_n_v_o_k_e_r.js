@@ -1,0 +1,4 @@
+var structboost_1_1detail_1_1function_1_1_b_o_o_s_t___f_u_n_c_t_i_o_n___g_e_t___f_u_n_c_t_i_o_n___r_e_f___i_n_v_o_k_e_r =
+[
+    [ "type", "structboost_1_1detail_1_1function_1_1_b_o_o_s_t___f_u_n_c_t_i_o_n___g_e_t___f_u_n_c_t_i_o_n___r_e_f___i_n_v_o_k_e_r.html#a21c09174e59128eb5c2abf2b55e592fa", null ]
+];

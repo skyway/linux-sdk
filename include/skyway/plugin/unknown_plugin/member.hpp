@@ -19,7 +19,7 @@ namespace unknown_plugin {
 /// @brief 機能として対応していないメンバー
 class UnknownMember : public core::interface::RemoteMember {
 public:
-    UnknownMember(core::interface::Channel* channel, const model::Member& dto);
+    UnknownMember(std::shared_ptr<core::interface::Channel> channel, const model::Member& dto);
 };
 
 }  // namespace unknown_plugin

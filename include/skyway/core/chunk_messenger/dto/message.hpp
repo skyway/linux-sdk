@@ -9,9 +9,10 @@
 #ifndef SKYWAY_CORE_CHUNK_MESSENGER_DTO_MESSAGE_HPP_
 #define SKYWAY_CORE_CHUNK_MESSENGER_DTO_MESSAGE_HPP_
 
-#include <boost/optional.hpp>
-#include <json.hpp>
 #include <string>
+#include <optional>
+
+#include <json.hpp>
 
 namespace skyway {
 namespace core {
@@ -28,7 +29,7 @@ struct ChunkedMessage {
 
 struct SendResult {
     bool is_success;
-    boost::optional<std::string> error_reason;
+    std::optional<std::string> error_reason;
 };
 
 void from_json(const nlohmann::json& j, ChunkedMessage& message);

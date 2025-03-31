@@ -42,27 +42,35 @@ public:
     /// @details このAPIはlibskyway内部で利用される関数であり、ラップしないでください。
     /// @param publication Publication
     /// @param subscription_id SubscriptionのID
-    virtual void OnSubscribedLocalPersonsPublication(Publication* publication,
+    virtual void OnSubscribedLocalPersonsPublication(std::shared_ptr<core::interface::Publication> publication,
                                                      const SubscriptionId& subscription_id) {};
 
     /// @brief LocalPersonのPublicationがUnsubscribeされた時にコールされる関数
     /// @details このAPIはlibskyway内部で利用される関数であり、ラップしないでください。
     /// @param publication Publication
-    virtual void OnUnsubscribedLocalPersonsPublication(Publication* publication) {};
+    virtual void OnUnsubscribedLocalPersonsPublication(std::shared_ptr<core::interface::Publication> publication) {};
 
     /// @brief LocalPersonがSubscribeした時にコールされる関数
     /// @details このAPIはlibskyway内部で利用される関数であり、ラップしないでください。
     /// @param subscription Subscription
-    virtual void OnLocalPersonSubscribed(Subscription* subscription) {};
+    virtual void OnLocalPersonSubscribed(std::shared_ptr<interface::Subscription> subscription) {};
 
     /// @brief LocalPersonがUnsubscribeした時にコールされる関数
     /// @details このAPIはlibskyway内部で利用される関数であり、ラップしないでください。
     /// @param subscription Subscription
-    virtual void OnLocalPersonUnsubscribed(Subscription* subscription) {};
+    virtual void OnLocalPersonUnsubscribed(std::shared_ptr<interface::Subscription> subscription) {};
     /// @endcond
+    
+    /// @brief PublicationがSubscribeされた時に発生するイベント
+    /// @param subscription 対象のSubscription
+    virtual void OnPublicationSubscribed(std::shared_ptr<interface::Subscription> subscription) {}
+    
+    /// @brief PublicationがUnsubscribeされた時に発生するイベント
+    /// @param subscription 対象のSubscription
+    virtual void OnPublicationUnsubscribed(std::shared_ptr<interface::Subscription> subscription) {}
 
 protected:
-    RemoteMember(Channel* channel, const model::Member& dto);
+    RemoteMember(std::shared_ptr<interface::Channel> channel, const model::Member& dto);
 };
 
 }  // namespace interface

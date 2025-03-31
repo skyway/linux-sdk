@@ -11,7 +11,6 @@
 
 #include <api/peer_connection_interface.h>
 
-#include <boost/optional.hpp>
 #include <chrono>
 #include <json.hpp>
 #include <string>
@@ -74,17 +73,17 @@ struct RtcPeerConnectionEventReportPayload {
         kSkywayConnectionStateChange
     };
     struct Data {
-        boost::optional<std::string> offer;
-        boost::optional<std::string> answer;
-        boost::optional<std::string> candidate;
-        boost::optional<std::string> event;
-        boost::optional<std::string> ice_connection_state;
-        boost::optional<std::string> ice_gathering_state;
-        boost::optional<std::string> connection_state;
-        boost::optional<std::string> signaling_state;
-        boost::optional<std::string> skyway_connection_state;
+        std::optional<std::string> offer;
+        std::optional<std::string> answer;
+        std::optional<std::string> candidate;
+        std::optional<std::string> event;
+        std::optional<std::string> ice_connection_state;
+        std::optional<std::string> ice_gathering_state;
+        std::optional<std::string> connection_state;
+        std::optional<std::string> signaling_state;
+        std::optional<std::string> skyway_connection_state;
 
-        static boost::optional<Data> Create(Type type, const boost::optional<std::string>& string);
+        static std::optional<Data> Create(Type type, const std::optional<std::string>& string);
     };
     struct IceCandidateErrorEvent {
         std::string address;
@@ -102,12 +101,12 @@ struct RtcPeerConnectionEventReportPayload {
 
     std::string rtc_peer_connection_id;
     Type type;
-    boost::optional<Data> data;
+    std::optional<Data> data;
     std::chrono::milliseconds created_at;  // Unix Timestamp
 
     RtcPeerConnectionEventReportPayload(const std::string& rtc_peer_connection_id,
                                         Type type,
-                                        const boost::optional<std::string>& data_string);
+                                        const std::optional<std::string>& data_string);
     RtcPeerConnectionEventReportPayload(const std::string& rtc_peer_connection_id,
                                         const IceCandidateErrorEvent& event);
     RtcPeerConnectionEventReportPayload(

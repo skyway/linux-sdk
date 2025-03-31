@@ -1,0 +1,4 @@
+var structasio__prefer__fn_1_1call__traits_3_01_t_00_01void_07_property_08_00_01typename_01enable__i8d631885405984f6088ccf979e910cc3 =
+[
+    [ "BOOST_ASIO_STATIC_CONSTEXPR", "structasio__prefer__fn_1_1call__traits_3_01_t_00_01void_07_property_08_00_01typename_01enable__i8d631885405984f6088ccf979e910cc3.html#a5665998e3a54c713474af33ab7079f54", null ]
+];

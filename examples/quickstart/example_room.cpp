@@ -50,7 +50,7 @@ bool ExampleRoom::JoinRoom(const std::string& room_name) {
     // P2PRoomの情報を出力します。
     std::cout << "# Room" << std::endl;
     if (p2proom_->Name()) {
-        std::cout << "- Name: " << p2proom_->Name().get() << std::endl;
+        std::cout << "- Name: " << p2proom_->Name().value() << std::endl;
     }
     std::cout << "- Id: " << p2proom_->Id() << std::endl;
 
@@ -145,12 +145,12 @@ void ExampleRoom::Publish() {
 }
 
 // 指定のpublicationをsubscribeします。
-bool ExampleRoom::Subscribe(std::unique_ptr<skyway::room::interface::RoomPublication> publication) {
+bool ExampleRoom::Subscribe(std::shared_ptr<skyway::room::interface::RoomPublication> publication) {
     if (room_member_->Id() == publication->Publisher()->Id()) {
         // 自身がPublishしたPublicationはSubscribeできないので無視します。
         return false;
     }
-    if (this->IsSubscribed(publication.get())) {
+    if (this->IsSubscribed(publication)) {
         // 既にSubscribeしている場合は無視します。
         return false;
     }
@@ -226,7 +226,7 @@ bool ExampleRoom::Subscribe(std::unique_ptr<skyway::room::interface::RoomPublica
 // P2PRoomに存在するPublication全てに対してSubscribeを試みます。
 void ExampleRoom::SubscribeAll() {
     for (auto& publication : p2proom_->Publications()) {
-        this->Subscribe(std::move(publication));
+        this->Subscribe(publication);
     }
 }
 
@@ -255,7 +255,7 @@ void ExampleRoom::Dispose() { skyway::Context::Dispose(); }
 
 // Impl skyway::room::interface::Room::EventListener
 void ExampleRoom::OnStreamPublished(
-    std::unique_ptr<skyway::room::interface::RoomPublication> publication) {
+    std::shared_ptr<skyway::room::interface::RoomPublication> publication) {
     if (is_notify_) {
         std::cout << "<!-- [Event] StreamPublished: Id " << publication->Id() << "-->" << std::endl;
     }
@@ -282,12 +282,13 @@ void ExampleRoom::OnDataBuffer(const uint8_t* data, size_t length) {
 };
 
 // 指定のPublicationをSubscribeしているかチェックします。
-bool ExampleRoom::IsSubscribed(skyway::room::interface::RoomPublication* publication) {
+bool ExampleRoom::IsSubscribed(
+    std::shared_ptr<skyway::room::interface::RoomPublication> publication) {
     auto subscriptions = publication->Subscriptions();
     auto find =
         std::find_if(subscriptions.begin(),
                      subscriptions.end(),
-                     [&](std::unique_ptr<skyway::room::interface::RoomSubscription>& subscription) {
+                     [&](std::shared_ptr<skyway::room::interface::RoomSubscription>& subscription) {
                          return subscription->Subscriber()->Id() == room_member_->Id();
                      });
     return find != subscriptions.end();

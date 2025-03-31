@@ -1,0 +1,4 @@
+var structboost_1_1allocator__difference__type_3_01_a_00_01typename_01detail_1_1alloc__void_3_01type06ebc2a961f78f0b08e08ba439484729 =
+[
+    [ "type", "structboost_1_1allocator__difference__type_3_01_a_00_01typename_01detail_1_1alloc__void_3_01type06ebc2a961f78f0b08e08ba439484729.html#a3ca031e4a4413778376265688f7d4bd5", null ]
+];

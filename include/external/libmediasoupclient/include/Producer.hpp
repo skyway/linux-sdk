@@ -20,7 +20,7 @@ namespace mediasoupclient
 		public:
 			virtual void OnClose(Producer* producer) = 0;
 			virtual void OnReplaceTrack(
-			  const Producer* producer, rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> newTrack)             = 0;
+			  const Producer* producer, rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> newTrack) = 0;
 			virtual void OnSetMaxSpatialLayer(const Producer* producer, uint8_t maxSpatialLayer) = 0;
 			virtual nlohmann::json OnGetStats(const Producer* producer)                          = 0;
 		};

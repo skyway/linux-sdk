@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('rfc2818__verification_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">rfc2818_verification.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// ssl/rfc2818_verification.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2020 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef BOOST_ASIO_SSL_RFC2818_VERIFICATION_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define BOOST_ASIO_SSL_RFC2818_VERIFICATION_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif // defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;boost/asio/detail/config.hpp&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#if !defined(BOOST_ASIO_NO_DEPRECATED)</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;boost/asio/ssl/detail/openssl_types.hpp&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;boost/asio/ssl/verify_context.hpp&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;boost/asio/detail/push_options.hpp&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceboost.html">boost</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>asio {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span>ssl {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1ssl_1_1rfc2818__verification.html">   63</a></span>&#160;<span class="keyword">class </span><a class="code" href="classboost_1_1asio_1_1ssl_1_1rfc2818__verification.html">rfc2818_verification</a></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1ssl_1_1rfc2818__verification.html#a6de51c723752359c9bdf8bf9370eac14">   67</a></span>&#160;  <span class="keyword">typedef</span> <span class="keywordtype">bool</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1rfc2818__verification.html#a6de51c723752359c9bdf8bf9370eac14">result_type</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1ssl_1_1rfc2818__verification.html#abb36df7adbc4b697b3061bb4d8ae4aba">   70</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1rfc2818__verification.html#abb36df7adbc4b697b3061bb4d8ae4aba">rfc2818_verification</a>(<span class="keyword">const</span> std::string&amp; host)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    : host_(host)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">bool</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1rfc2818__verification.html#a567ff056554ce901280648783f90b378">operator()</a>(<span class="keywordtype">bool</span> preverified, <a class="code" href="classboost_1_1asio_1_1ssl_1_1verify__context.html">verify_context</a>&amp; ctx) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="comment">// Helper function to check a host name against a pattern.</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  BOOST_ASIO_DECL <span class="keyword">static</span> <span class="keywordtype">bool</span> match_pattern(<span class="keyword">const</span> <span class="keywordtype">char</span>* pattern,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      std::size_t pattern_length, <span class="keyword">const</span> <span class="keywordtype">char</span>* host);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="comment">// Helper function to check a host name against an IPv4 address</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">// The host name to be checked.</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  std::string host_;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;} <span class="comment">// namespace ssl</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;} <span class="comment">// namespace boost</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#include &lt;boost/asio/detail/pop_options.hpp&gt;</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#if defined(BOOST_ASIO_HEADER_ONLY)</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor"># include &lt;boost/asio/ssl/impl/rfc2818_verification.ipp&gt;</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif // defined(BOOST_ASIO_HEADER_ONLY)</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif // !defined(BOOST_ASIO_NO_DEPRECATED)</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif // BOOST_ASIO_SSL_RFC2818_VERIFICATION_HPP</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397a6dae8c97b2525162d8b5c321bb1609e5"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a6dae8c97b2525162d8b5c321bb1609e5">boost::asio::ssl::context_base::tlsv11</a></div><div class="ttdeci">@ tlsv11</div><div class="ttdoc">Generic TLS version 1.1.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:72</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ip_1_1address_html_a2def172b0f5d10c73b485217cc5d987a"><div class="ttname"><a href="classboost_1_1asio_1_1ip_1_1address.html#a2def172b0f5d10c73b485217cc5d987a">boost::asio::ip::address::is_v6</a></div><div class="ttdeci">bool is_v6() const BOOST_ASIO_NOEXCEPT</div><div class="ttdoc">Get whether the address is an IP version 6 address.</div><div class="ttdef"><b>Definition:</b> address.hpp:92</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397ae72b8f47008322e2b0f6b491b76f25b2"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397ae72b8f47008322e2b0f6b491b76f25b2">boost::asio::ssl::context_base::tlsv13_server</a></div><div class="ttdeci">@ tlsv13_server</div><div class="ttdoc">TLS version 1.3 server.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:96</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397ac25960f0f8366496068971bdbc7474b0"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397ac25960f0f8366496068971bdbc7474b0">boost::asio::ssl::context_base::tlsv12_server</a></div><div class="ttdeci">@ tlsv12_server</div><div class="ttdoc">TLS version 1.2 server.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:87</div></div>
+<div class="ttc" id="aclassboost_1_1system_1_1error__code_html"><div class="ttname"><a href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a></div><div class="ttdef"><b>Definition:</b> error_code.hpp:571</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397aa5dea7b9bd46d44d4caaf58326fc21a2"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397aa5dea7b9bd46d44d4caaf58326fc21a2">boost::asio::ssl::context_base::sslv3_client</a></div><div class="ttdeci">@ sslv3_client</div><div class="ttdoc">SSL version 3 client.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:48</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397ac14462718079abd5524ccdfb67e3ece0"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397ac14462718079abd5524ccdfb67e3ece0">boost::asio::ssl::context_base::sslv23_client</a></div><div class="ttdeci">@ sslv23_client</div><div class="ttdoc">SSL/TLS client.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:66</div></div>
+<div class="ttc" id="astruct_g_e_n_e_r_a_l___n_a_m_e__st_html"><div class="ttname"><a href="struct_g_e_n_e_r_a_l___n_a_m_e__st.html">GENERAL_NAME_st</a></div><div class="ttdef"><b>Definition:</b> x509v3.h:156</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ip_1_1address_html_a90d4b26247f4e7d8ddf5f4fec79ddec3"><div class="ttname"><a href="classboost_1_1asio_1_1ip_1_1address.html#a90d4b26247f4e7d8ddf5f4fec79ddec3">boost::asio::ip::address::is_v4</a></div><div class="ttdeci">bool is_v4() const BOOST_ASIO_NOEXCEPT</div><div class="ttdoc">Get whether the address is an IP version 4 address.</div><div class="ttdef"><b>Definition:</b> address.hpp:86</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397aa01c1f3453f3e16c04dbf7fe50721ed7"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397aa01c1f3453f3e16c04dbf7fe50721ed7">boost::asio::ssl::context_base::tlsv13_client</a></div><div class="ttdeci">@ tlsv13_client</div><div class="ttdoc">TLS version 1.3 client.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:93</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397a29e43175e58bc8a99249c0b1422e749a"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a29e43175e58bc8a99249c0b1422e749a">boost::asio::ssl::context_base::tlsv13</a></div><div class="ttdeci">@ tlsv13</div><div class="ttdoc">Generic TLS version 1.3.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:90</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a8acea64f08aff2630a5a448b56a31160"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a8acea64f08aff2630a5a448b56a31160">boost::asio::ssl::context::use_rsa_private_key_file</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_rsa_private_key_file(const std::string &amp;filename, file_format format)</div><div class="ttdoc">Use an RSA private key from a file.</div><div class="ttdef"><b>Definition:</b> context.ipp:1020</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ip_1_1address_html"><div class="ttname"><a href="classboost_1_1asio_1_1ip_1_1address.html">boost::asio::ip::address</a></div><div class="ttdoc">Implements version-independent IP addresses.</div><div class="ttdef"><b>Definition:</b> address.hpp:47</div></div>
+<div class="ttc" id="astructbio__st_html"><div class="ttname"><a href="structbio__st.html">bio_st</a></div><div class="ttdef"><b>Definition:</b> bio.h:851</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397ad6c2299385ad0c45ed0c89d88c1463c5"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397ad6c2299385ad0c45ed0c89d88c1463c5">boost::asio::ssl::context_base::tlsv1_server</a></div><div class="ttdeci">@ tlsv1_server</div><div class="ttdoc">TLS version 1 server.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:60</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1detail_1_1verify__callback__base_html"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1detail_1_1verify__callback__base.html">boost::asio::ssl::detail::verify_callback_base</a></div><div class="ttdef"><b>Definition:</b> verify_callback.hpp:29</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397a9ae65d778147b07a90f493358110a2be"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a9ae65d778147b07a90f493358110a2be">boost::asio::ssl::context_base::tlsv12_client</a></div><div class="ttdeci">@ tlsv12_client</div><div class="ttdoc">TLS version 1.2 client.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:84</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397afb15dd1599dea30d5c1393ef9d9a6bfb"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397afb15dd1599dea30d5c1393ef9d9a6bfb">boost::asio::ssl::context_base::sslv2_server</a></div><div class="ttdeci">@ sslv2_server</div><div class="ttdoc">SSL version 2 server.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:42</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ip_1_1address__v4_html_a6038a142a75931dab910e3bab488c3cd"><div class="ttname"><a href="classboost_1_1asio_1_1ip_1_1address__v4.html#a6038a142a75931dab910e3bab488c3cd">boost::asio::ip::address_v4::to_bytes</a></div><div class="ttdeci">BOOST_ASIO_DECL bytes_type to_bytes() const BOOST_ASIO_NOEXCEPT</div><div class="ttdoc">Get the address in bytes, in network byte order.</div><div class="ttdef"><b>Definition:</b> address_v4.ipp:61</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a4ef1c018a5a01710a84ccf82dd968ad1"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a4ef1c018a5a01710a84ccf82dd968ad1">boost::asio::ssl::context::use_certificate_chain_file</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_certificate_chain_file(const std::string &amp;filename)</div><div class="ttdoc">Use a certificate chain from a file.</div><div class="ttdef"><b>Definition:</b> context.ipp:832</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397a544652d27d4356138ef84a1e5d64f1e3"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a544652d27d4356138ef84a1e5d64f1e3">boost::asio::ssl::context_base::tlsv12</a></div><div class="ttdeci">@ tlsv12</div><div class="ttdoc">Generic TLS version 1.2.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:81</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_ad7263f29e84602fda039bd7ab4c252a1"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#ad7263f29e84602fda039bd7ab4c252a1">boost::asio::ssl::context::clear_options</a></div><div class="ttdeci">BOOST_ASIO_DECL void clear_options(options o)</div><div class="ttdoc">Clear options on the context.</div><div class="ttdef"><b>Definition:</b> context.ipp:440</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1rfc2818__verification_html"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1rfc2818__verification.html">boost::asio::ssl::rfc2818_verification</a></div><div class="ttdef"><b>Definition:</b> rfc2818_verification.hpp:63</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1const__buffer_html_a6c190d85046b96a0bfba75f744bb17a6"><div class="ttname"><a href="classboost_1_1asio_1_1const__buffer.html#a6c190d85046b96a0bfba75f744bb17a6">boost::asio::const_buffer::size</a></div><div class="ttdeci">std::size_t size() const BOOST_ASIO_NOEXCEPT</div><div class="ttdoc">Get the size of the memory range.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:280</div></div>
+<div class="ttc" id="anamespaceboost_html"><div class="ttname"><a href="namespaceboost.html">boost</a></div><div class="ttdoc">defined(BOOST_MOVE_DOXYGEN_INVOKED)</div><div class="ttdef"><b>Definition:</b> case_conv.hpp:32</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397af53d9f75f87645cdf1d9db317fd3275a"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397af53d9f75f87645cdf1d9db317fd3275a">boost::asio::ssl::context_base::tls_client</a></div><div class="ttdeci">@ tls_client</div><div class="ttdoc">TLS client.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:102</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397a475bf8e17f35c8dc5633372cec6a39d9"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a475bf8e17f35c8dc5633372cec6a39d9">boost::asio::ssl::context_base::tlsv11_client</a></div><div class="ttdeci">@ tlsv11_client</div><div class="ttdoc">TLS version 1.1 client.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:75</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ip_1_1address_html_a083e12ed78ba5ff36a5d9c9c2f86755a"><div class="ttname"><a href="classboost_1_1asio_1_1ip_1_1address.html#a083e12ed78ba5ff36a5d9c9c2f86755a">boost::asio::ip::address::to_v6</a></div><div class="ttdeci">BOOST_ASIO_DECL boost::asio::ip::address_v6 to_v6() const</div><div class="ttdoc">Get the address as an IP version 6 address.</div><div class="ttdef"><b>Definition:</b> address.ipp:168</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397a5425d76fed32ef049d54df244150be62"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a5425d76fed32ef049d54df244150be62">boost::asio::ssl::context_base::tls</a></div><div class="ttdeci">@ tls</div><div class="ttdoc">Generic TLS.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:99</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a826afd5c0d57ccfd9a547f9ac5e45c82"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a826afd5c0d57ccfd9a547f9ac5e45c82">boost::asio::ssl::context::use_private_key_file</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_private_key_file(const std::string &amp;filename, file_format format)</div><div class="ttdoc">Use a private key from a file.</div><div class="ttdef"><b>Definition:</b> context.ipp:917</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a412530540443de2d11cc0e1526a2fd2b"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a412530540443de2d11cc0e1526a2fd2b">boost::asio::ssl::context::set_verify_mode</a></div><div class="ttdeci">BOOST_ASIO_DECL void set_verify_mode(verify_mode v)</div><div class="ttdoc">Set the peer verification mode.</div><div class="ttdef"><b>Definition:</b> context.ipp:501</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397a50a5e63a1afbba97679b795acdc60f9b"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a50a5e63a1afbba97679b795acdc60f9b">boost::asio::ssl::context_base::sslv3_server</a></div><div class="ttdeci">@ sslv3_server</div><div class="ttdoc">SSL version 3 server.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:51</div></div>
+<div class="ttc" id="aclassboost_1_1basic__format_html"><div class="ttname"><a href="classboost_1_1basic__format.html">boost::basic_format</a></div><div class="ttdef"><b>Definition:</b> format_class.hpp:30</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_ab404d617b574761ffab5512cb5f402a7"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#ab404d617b574761ffab5512cb5f402a7">boost::asio::ssl::context::set_options</a></div><div class="ttdeci">BOOST_ASIO_DECL void set_options(options o)</div><div class="ttdoc">Set options on the context.</div><div class="ttdef"><b>Definition:</b> context.ipp:474</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397a873d38fadad9068a876a52f3438aa10c"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a873d38fadad9068a876a52f3438aa10c">boost::asio::ssl::context_base::sslv2</a></div><div class="ttdeci">@ sslv2</div><div class="ttdoc">Generic SSL version 2.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:36</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1verify__context_html"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1verify__context.html">boost::asio::ssl::verify_context</a></div><div class="ttdef"><b>Definition:</b> verify_context.hpp:34</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1const__buffer_html"><div class="ttname"><a href="classboost_1_1asio_1_1const__buffer.html">boost::asio::const_buffer</a></div><div class="ttdoc">Holds a buffer that cannot be modified.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:227</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a0a975b578992313ea579de15f5c374bda284045edf253cb7d8e3a7a696dd137ef"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a0a975b578992313ea579de15f5c374bda284045edf253cb7d8e3a7a696dd137ef">boost::asio::ssl::context_base::asn1</a></div><div class="ttdeci">@ asn1</div><div class="ttdoc">ASN.1 file.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:170</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_aa506c6ecd73e26a939435e4790308cf0"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#aa506c6ecd73e26a939435e4790308cf0">boost::asio::ssl::context::use_certificate</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_certificate(const const_buffer &amp;certificate, file_format format)</div><div class="ttdoc">Use a certificate from a memory buffer.</div><div class="ttdef"><b>Definition:</b> context.ipp:653</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a6994ec6e978b8270a86919499d6bb7c5"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a6994ec6e978b8270a86919499d6bb7c5">boost::asio::ssl::context::set_verify_depth</a></div><div class="ttdeci">BOOST_ASIO_DECL void set_verify_depth(int depth)</div><div class="ttdoc">Set the peer verification depth.</div><div class="ttdef"><b>Definition:</b> context.ipp:517</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_aad6fb803065a77d1d2086c88df6f1d78"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#aad6fb803065a77d1d2086c88df6f1d78">boost::asio::ssl::context::use_certificate_chain</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_certificate_chain(const const_buffer &amp;chain)</div><div class="ttdoc">Use a certificate chain from a memory buffer.</div><div class="ttdef"><b>Definition:</b> context.ipp:747</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1rfc2818__verification_html_abb36df7adbc4b697b3061bb4d8ae4aba"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1rfc2818__verification.html#abb36df7adbc4b697b3061bb4d8ae4aba">boost::asio::ssl::rfc2818_verification::rfc2818_verification</a></div><div class="ttdeci">rfc2818_verification(const std::string &amp;host)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> rfc2818_verification.hpp:70</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397af473dcc0bbfa536110c832ca2fc43824"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397af473dcc0bbfa536110c832ca2fc43824">boost::asio::ssl::context_base::tlsv1</a></div><div class="ttdeci">@ tlsv1</div><div class="ttdoc">Generic TLS version 1.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:54</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_acd590910f7ed77308368da5e889996dba67d755c261ab34499b7f12a93415ae47"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#acd590910f7ed77308368da5e889996dba67d755c261ab34499b7f12a93415ae47">boost::asio::ssl::context_base::for_reading</a></div><div class="ttdeci">@ for_reading</div><div class="ttdoc">The password is needed for reading/decryption.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:192</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a28118d5a5738bbfe9a93242f16602f20"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a28118d5a5738bbfe9a93242f16602f20">boost::asio::ssl::context_base::options</a></div><div class="ttdeci">long options</div><div class="ttdoc">Bitmask type for SSL options.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:109</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a67cb6cf4cab54d764a8c05e2c973acf0"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a67cb6cf4cab54d764a8c05e2c973acf0">boost::asio::ssl::context::use_rsa_private_key</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_rsa_private_key(const const_buffer &amp;private_key, file_format format)</div><div class="ttdoc">Use an RSA private key from a memory buffer.</div><div class="ttdef"><b>Definition:</b> context.ipp:925</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a674553531d74b6dd22dc449458ab000b"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a674553531d74b6dd22dc449458ab000b">boost::asio::ssl::context::~context</a></div><div class="ttdeci">BOOST_ASIO_DECL ~context()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> context.ipp:396</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ip_1_1address__v6_html_adcfc3c95494e1fc9dec8b06d0341f390"><div class="ttname"><a href="classboost_1_1asio_1_1ip_1_1address__v6.html#adcfc3c95494e1fc9dec8b06d0341f390">boost::asio::ip::address_v6::to_bytes</a></div><div class="ttdeci">BOOST_ASIO_DECL bytes_type to_bytes() const BOOST_ASIO_NOEXCEPT</div><div class="ttdoc">Get the address in bytes, in network byte order.</div><div class="ttdef"><b>Definition:</b> address_v6.ipp:90</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397">boost::asio::ssl::context_base::method</a></div><div class="ttdeci">method</div><div class="ttdoc">Different methods supported by a context.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:33</div></div>
+<div class="ttc" id="aclassboost_1_1array_html"><div class="ttname"><a href="classboost_1_1array.html">boost::array</a></div><div class="ttdef"><b>Definition:</b> array.hpp:60</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a0a975b578992313ea579de15f5c374bd"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a0a975b578992313ea579de15f5c374bd">boost::asio::ssl::context_base::file_format</a></div><div class="ttdeci">file_format</div><div class="ttdoc">File format types.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:167</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_acd590910f7ed77308368da5e889996dbaa31942533ec5167ee3e6115ea4d1dd0f"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#acd590910f7ed77308368da5e889996dbaa31942533ec5167ee3e6115ea4d1dd0f">boost::asio::ssl::context_base::for_writing</a></div><div class="ttdeci">@ for_writing</div><div class="ttdoc">The password is needed for writing/encryption.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:195</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397a21209307a969ddaa661735efd11cd12e"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a21209307a969ddaa661735efd11cd12e">boost::asio::ssl::context_base::tls_server</a></div><div class="ttdeci">@ tls_server</div><div class="ttdoc">TLS server.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:105</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397ab772894395e68f172c0dd1a8a79fd31f"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397ab772894395e68f172c0dd1a8a79fd31f">boost::asio::ssl::context_base::tlsv11_server</a></div><div class="ttdeci">@ tlsv11_server</div><div class="ttdoc">TLS version 1.1 server.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:78</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1const__buffer_html_abe3ef3a8f86f87a783584491aac2c793"><div class="ttname"><a href="classboost_1_1asio_1_1const__buffer.html#abe3ef3a8f86f87a783584491aac2c793">boost::asio::const_buffer::data</a></div><div class="ttdeci">const void * data() const BOOST_ASIO_NOEXCEPT</div><div class="ttdoc">Get a pointer to the beginning of the memory range.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:270</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1verify__context_html_a8b92fc125f771839cf0b49ab5462958f"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1verify__context.html#a8b92fc125f771839cf0b49ab5462958f">boost::asio::ssl::verify_context::native_handle</a></div><div class="ttdeci">native_handle_type native_handle()</div><div class="ttdoc">Get the underlying implementation in the native type.</div><div class="ttdef"><b>Definition:</b> verify_context.hpp:53</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1detail_1_1password__callback__base_html"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1detail_1_1password__callback__base.html">boost::asio::ssl::detail::password_callback_base</a></div><div class="ttdef"><b>Definition:</b> password_callback.hpp:31</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_aa73ab1c5601e0b236851f46aa1f15b6e"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#aa73ab1c5601e0b236851f46aa1f15b6e">boost::asio::ssl::context::load_verify_file</a></div><div class="ttdeci">BOOST_ASIO_DECL void load_verify_file(const std::string &amp;filename)</div><div class="ttdoc">Load a certification authority file for performing verification.</div><div class="ttdef"><b>Definition:</b> context.ipp:533</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1rfc2818__verification_html_a567ff056554ce901280648783f90b378"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1rfc2818__verification.html#a567ff056554ce901280648783f90b378">boost::asio::ssl::rfc2818_verification::operator()</a></div><div class="ttdeci">BOOST_ASIO_DECL bool operator()(bool preverified, verify_context &amp;ctx) const</div><div class="ttdoc">Perform certificate verification.</div><div class="ttdef"><b>Definition:</b> rfc2818_verification.ipp:34</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397aa355f2e00491accad34a3c9a583674f8"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397aa355f2e00491accad34a3c9a583674f8">boost::asio::ssl::context_base::tlsv1_client</a></div><div class="ttdeci">@ tlsv1_client</div><div class="ttdoc">TLS version 1 client.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:57</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_acdca758e3211ec52d1613a5099090cf1"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#acdca758e3211ec52d1613a5099090cf1">boost::asio::ssl::context::context</a></div><div class="ttdeci">BOOST_ASIO_DECL context(method m)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> context.ipp:63</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1host__name__verification_html_a71a67bbb00c9d2ac766804eee0a6aa5c"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1host__name__verification.html#a71a67bbb00c9d2ac766804eee0a6aa5c">boost::asio::ssl::host_name_verification::operator()</a></div><div class="ttdeci">BOOST_ASIO_DECL bool operator()(bool preverified, verify_context &amp;ctx) const</div><div class="ttdoc">Perform certificate verification.</div><div class="ttdef"><b>Definition:</b> host_name_verification.ipp:32</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397a3b0cb1120d20d642cac2ba5cf025b5c8"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a3b0cb1120d20d642cac2ba5cf025b5c8">boost::asio::ssl::context_base::sslv2_client</a></div><div class="ttdeci">@ sslv2_client</div><div class="ttdoc">SSL version 2 client.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:39</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_ac7f5911a3c38c77cae2c0168b60baca1"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#ac7f5911a3c38c77cae2c0168b60baca1">boost::asio::ssl::context::add_verify_path</a></div><div class="ttdeci">BOOST_ASIO_DECL void add_verify_path(const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> context.ipp:629</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1rfc2818__verification_html_a6de51c723752359c9bdf8bf9370eac14"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1rfc2818__verification.html#a6de51c723752359c9bdf8bf9370eac14">boost::asio::ssl::rfc2818_verification::result_type</a></div><div class="ttdeci">bool result_type</div><div class="ttdoc">The type of the function object's result.</div><div class="ttdef"><b>Definition:</b> rfc2818_verification.hpp:67</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a9f691b25839a623ab1d4a6fe3788ca67"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a9f691b25839a623ab1d4a6fe3788ca67">boost::asio::ssl::context::native_handle_type</a></div><div class="ttdeci">SSL_CTX * native_handle_type</div><div class="ttdoc">The native handle type of the SSL context.</div><div class="ttdef"><b>Definition:</b> context.hpp:42</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html">boost::asio::ssl::context</a></div><div class="ttdef"><b>Definition:</b> context.hpp:36</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397a50469cf285d798de009a104270b56afd"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397a50469cf285d798de009a104270b56afd">boost::asio::ssl::context_base::sslv23</a></div><div class="ttdeci">@ sslv23</div><div class="ttdoc">Generic SSL/TLS.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:63</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a7266eb37d9dbd7343c138ced0d4c50a9"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a7266eb37d9dbd7343c138ced0d4c50a9">boost::asio::ssl::context::add_certificate_authority</a></div><div class="ttdeci">BOOST_ASIO_DECL void add_certificate_authority(const const_buffer &amp;ca)</div><div class="ttdoc">Add certification authority for performing verification.</div><div class="ttdef"><b>Definition:</b> context.ipp:557</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a566c1dd4acce1bd6251e499c347a4068"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a566c1dd4acce1bd6251e499c347a4068">boost::asio::ssl::context::native_handle</a></div><div class="ttdeci">BOOST_ASIO_DECL native_handle_type native_handle()</div><div class="ttdoc">Get the underlying implementation in the native type.</div><div class="ttdef"><b>Definition:</b> context.ipp:435</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_aaf6d736fd251e88acfc216b774d35870"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#aaf6d736fd251e88acfc216b774d35870">boost::asio::ssl::context::use_tmp_dh</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_tmp_dh(const const_buffer &amp;dh)</div><div class="ttdef"><b>Definition:</b> context.ipp:1063</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a773aedaf065c0cb68fa37e5577c3cbf5"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a773aedaf065c0cb68fa37e5577c3cbf5">boost::asio::ssl::context::use_private_key</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_private_key(const const_buffer &amp;private_key, file_format format)</div><div class="ttdoc">Use a private key from a memory buffer.</div><div class="ttdef"><b>Definition:</b> context.ipp:856</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_ab3bfad216b07734e9362bfd8e561f9ec"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#ab3bfad216b07734e9362bfd8e561f9ec">boost::asio::ssl::context::set_default_verify_paths</a></div><div class="ttdeci">BOOST_ASIO_DECL void set_default_verify_paths()</div><div class="ttdef"><b>Definition:</b> context.ipp:605</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a81b6ef2a9345a28e65d6bb4c7d4c7e3d"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a81b6ef2a9345a28e65d6bb4c7d4c7e3d">boost::asio::ssl::context::use_tmp_dh_file</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_tmp_dh_file(const std::string &amp;filename)</div><div class="ttdoc">Use the specified file to obtain the temporary Diffie-Hellman parameters.</div><div class="ttdef"><b>Definition:</b> context.ipp:1087</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a4d273558f9a4ba5165c45559e19725d8"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a4d273558f9a4ba5165c45559e19725d8">boost::asio::ssl::context::use_certificate_file</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_certificate_file(const std::string &amp;filename, file_format format)</div><div class="ttdoc">Use a certificate from a file.</div><div class="ttdef"><b>Definition:</b> context.ipp:705</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397ac74106adf4d8682fa4c0fe5dc55106c5"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397ac74106adf4d8682fa4c0fe5dc55106c5">boost::asio::ssl::context_base::sslv3</a></div><div class="ttdeci">@ sslv3</div><div class="ttdoc">Generic SSL version 3.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:45</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1detail_1_1openssl__init_html"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1detail_1_1openssl__init.html">boost::asio::ssl::detail::openssl_init</a></div><div class="ttdef"><b>Definition:</b> openssl_init.hpp:55</div></div>
+<div class="ttc" id="astructasn1__string__st_html"><div class="ttname"><a href="structasn1__string__st.html">asn1_string_st</a></div><div class="ttdef"><b>Definition:</b> asn1.h:532</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397aa12e312d4385ca3ca5b2d3936872e3f1"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397aa12e312d4385ca3ca5b2d3936872e3f1">boost::asio::ssl::context_base::sslv23_server</a></div><div class="ttdeci">@ sslv23_server</div><div class="ttdoc">SSL/TLS server.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:69</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ip_1_1address_html_a835ff6ff15de57f8b79c90f6c7e6b9b3"><div class="ttname"><a href="classboost_1_1asio_1_1ip_1_1address.html#a835ff6ff15de57f8b79c90f6c7e6b9b3">boost::asio::ip::address::to_v4</a></div><div class="ttdeci">BOOST_ASIO_DECL boost::asio::ip::address_v4 to_v4() const</div><div class="ttdoc">Get the address as an IP version 4 address.</div><div class="ttdef"><b>Definition:</b> address.ipp:158</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a0a975b578992313ea579de15f5c374bdacd847f324c5c7e7ed9b5ccce44338590"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a0a975b578992313ea579de15f5c374bdacd847f324c5c7e7ed9b5ccce44338590">boost::asio::ssl::context_base::pem</a></div><div class="ttdeci">@ pem</div><div class="ttdoc">PEM file.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:173</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1794b65aa62003e11b03e0565def47fa.html">external</a></li><li class="navelem"><a class="el" href="dir_c08529bcc08f755a4d16428f71043471.html">boost</a></li><li class="navelem"><a class="el" href="dir_08e916b1ba9423845cffef83795e9545.html">boost</a></li><li class="navelem"><a class="el" href="dir_95a6475d294165210308bf5d4f5823e3.html">asio</a></li><li class="navelem"><a class="el" href="dir_0a96a0fb4e756ff0b1f57080f0460ca0.html">ssl</a></li><li class="navelem"><b>rfc2818_verification.hpp</b></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

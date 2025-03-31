@@ -21,12 +21,12 @@ class Room : public interface::Room, public core::interface::Channel::EventListe
 public:
     virtual ~Room();
     std::string Id() override;
-    boost::optional<std::string> Name() override;
-    boost::optional<std::string> Metadata() override;
+    std::optional<std::string> Name() override;
+    std::optional<std::string> Metadata() override;
     core::interface::ChannelState State() override;
-    std::vector<std::unique_ptr<interface::RoomPublication>> Publications() override;
-    std::vector<std::unique_ptr<interface::RoomSubscription>> Subscriptions() override;
-    std::vector<std::unique_ptr<interface::RoomMember>> Members() override;
+    std::vector<std::shared_ptr<interface::RoomPublication>> Publications() override;
+    std::vector<std::shared_ptr<interface::RoomSubscription>> Subscriptions() override;
+    std::vector<std::shared_ptr<interface::RoomMember>> Members() override;
     void AddEventListener(interface::Room::EventListener* listener) override;
     void RemoveEventListener(interface::Room::EventListener* listener) override;
     bool UpdateMetadata(const std::string& metadata) override;
@@ -41,22 +41,22 @@ protected:
     void OnClosed() override;
     void OnMetadataUpdated(const std::string& metadata) override;
     void OnMemberListChanged() override;
-    void OnMemberJoined(core::interface::Member* member) override;
-    void OnMemberLeft(core::interface::Member* member) override;
-    void OnMemberMetadataUpdated(core::interface::Member* member,
+    void OnMemberJoined(std::shared_ptr<core::interface::Member> member) override;
+    void OnMemberLeft(std::shared_ptr<core::interface::Member> member) override;
+    void OnMemberMetadataUpdated(std::shared_ptr<core::interface::Member> member,
                                  const std::string& metadata) override;
-    void OnPublicationMetadataUpdated(core::interface::Publication* publication,
+    void OnPublicationMetadataUpdated(std::shared_ptr<core::interface::Publication> publication,
                                       const std::string& metadata) override;
     void OnPublicationListChanged() override;
-    void OnStreamPublished(core::interface::Publication* publication) override;
-    void OnStreamUnpublished(core::interface::Publication* publication) override;
-    void OnPublicationEnabled(core::interface::Publication* publication) override;
-    void OnPublicationDisabled(core::interface::Publication* publication) override;
+    void OnStreamPublished(std::shared_ptr<core::interface::Publication> publication) override;
+    void OnStreamUnpublished(std::shared_ptr<core::interface::Publication> publication) override;
+    void OnPublicationEnabled(std::shared_ptr<core::interface::Publication> publication) override;
+    void OnPublicationDisabled(std::shared_ptr<core::interface::Publication> publication) override;
     void OnSubscriptionListChanged() override;
-    void OnPublicationSubscribed(core::interface::Subscription* subscription) override;
-    void OnPublicationUnsubscribed(core::interface::Subscription* subscription) override;
-    void OnSubscriptionEnabled(core::interface::Subscription* subscription) override;
-    void OnSubscriptionDisabled(core::interface::Subscription* subscription) override;
+    void OnPublicationSubscribed(
+        std::shared_ptr<core::interface::Subscription> subscription) override;
+    void OnPublicationUnsubscribed(
+        std::shared_ptr<core::interface::Subscription> subscription) override;
 
     std::shared_ptr<core::interface::Channel> core_;
     std::unique_ptr<interface::RoomDomainFactory> factory_;

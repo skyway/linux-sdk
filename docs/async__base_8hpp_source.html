@@ -1,0 +1,414 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('async__base_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">async_base.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Copyright (c) 2016-2019 Vinnie Falco (vinnie dot falco at gmail dot com)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Official repository: https://github.com/boostorg/beast</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef BOOST_BEAST_CORE_ASYNC_BASE_HPP</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define BOOST_BEAST_CORE_ASYNC_BASE_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;boost/beast/core/detail/config.hpp&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;boost/beast/core/bind_handler.hpp&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;boost/beast/core/detail/allocator.hpp&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;boost/beast/core/detail/async_base.hpp&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;boost/beast/core/detail/work_guard.hpp&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;boost/asio/associated_allocator.hpp&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;boost/asio/associated_executor.hpp&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;boost/asio/bind_executor.hpp&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;boost/asio/handler_alloc_hook.hpp&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;boost/asio/handler_continuation_hook.hpp&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;boost/asio/handler_invoke_hook.hpp&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;boost/asio/post.hpp&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;boost/core/exchange.hpp&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;boost/core/empty_value.hpp&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceboost.html">boost</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span>beast {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keyword">template</span>&lt;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">class </span>Handler,</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">class </span>Executor1,</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keyword">class </span>Allocator = std::allocator&lt;void&gt;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;&gt;</div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1async__base.html">  179</a></span>&#160;<span class="keyword">class </span><a class="code" href="classboost_1_1beast_1_1async__base.html">async_base</a></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;#if ! BOOST_BEAST_DOXYGEN</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    : <span class="keyword">private</span> <a class="code" href="classboost_1_1empty___1_1empty__value.html">boost::empty_value</a>&lt;Allocator&gt;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;{</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    static_assert(</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <a class="code" href="structboost_1_1asio_1_1is__executor.html">net::is_executor&lt;Executor1&gt;::value</a> || net::execution::is_executor&lt;Executor1&gt;::value,</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="stringliteral">&quot;Executor type requirements not met&quot;</span>);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    Handler h_;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    detail::select_work_guard_t&lt;Executor1&gt; wg1_;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keyword">using</span> <a class="code" href="classboost_1_1beast_1_1async__base.html#a34bf423eb7bb284dd1e740ed0e009b42">executor_type</a> =</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">#if BOOST_BEAST_DOXYGEN</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        __implementation_defined__;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keyword">typename</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <a class="code" href="structboost_1_1asio_1_1associated__executor.html">net::associated_executor</a>&lt;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            Handler,</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keyword">typename</span> detail::select_work_guard_t&lt;Executor1&gt;::executor_type</div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1async__base.html#a34bf423eb7bb284dd1e740ed0e009b42">  206</a></span>&#160;                &gt;::type;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keyword">virtual</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    before_invoke_hook()</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="preprocessor">#if BOOST_BEAST_DOXYGEN</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Handler_&gt;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <a class="code" href="classboost_1_1beast_1_1async__base.html#a99299e04284c1195525a4d63f33f0cf4">async_base</a>(</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        Handler&amp;&amp; <a class="code" href="classboost_1_1beast_1_1async__base.html#abe01a96330049c65f0de233617661813">handler</a>,</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        Executor1 <span class="keyword">const</span>&amp; ex1,</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        Allocator <span class="keyword">const</span>&amp; alloc = Allocator());</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keyword">template</span>&lt;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keyword">class </span>Handler_,</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keyword">class </span>= <span class="keyword">typename</span> std::enable_if&lt;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            ! std::is_same&lt;<span class="keyword">typename</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                std::decay&lt;Handler_&gt;::type,</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                <a class="code" href="classboost_1_1beast_1_1async__base.html">async_base</a></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            &gt;::value&gt;<a class="code" href="structboost_1_1type.html">::type</a></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    &gt;</div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1async__base.html#a99299e04284c1195525a4d63f33f0cf4">  248</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1async__base.html#a99299e04284c1195525a4d63f33f0cf4">async_base</a>(</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        Handler_&amp;&amp; <a class="code" href="classboost_1_1beast_1_1async__base.html#abe01a96330049c65f0de233617661813">handler</a>,</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        Executor1 <span class="keyword">const</span>&amp; ex1)</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        : h_(std::forward&lt;Handler_&gt;(<a class="code" href="classboost_1_1beast_1_1async__base.html#abe01a96330049c65f0de233617661813">handler</a>))</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        , wg1_(<a class="code" href="namespacedetail.html">detail</a>::make_work_guard(ex1))</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Handler_&gt;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <a class="code" href="classboost_1_1beast_1_1async__base.html#a99299e04284c1195525a4d63f33f0cf4">async_base</a>(</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        Handler_&amp;&amp; <a class="code" href="classboost_1_1beast_1_1async__base.html#abe01a96330049c65f0de233617661813">handler</a>,</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        Executor1 <span class="keyword">const</span>&amp; ex1,</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        Allocator <span class="keyword">const</span>&amp; alloc)</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        : <a class="code" href="namespaceboost.html">boost</a>::<a class="code" href="classboost_1_1empty___1_1empty__value.html">empty_value</a>&lt;Allocator&gt;(</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <a class="code" href="namespaceboost.html">boost</a>::<a class="code" href="structboost_1_1empty__init__t.html">empty_init_t</a>{}, alloc)</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        , h_(std::forward&lt;Handler_&gt;(<a class="code" href="classboost_1_1beast_1_1async__base.html#abe01a96330049c65f0de233617661813">handler</a>))</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        , wg1_(ex1)</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    {</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <a class="code" href="classboost_1_1beast_1_1async__base.html#a99299e04284c1195525a4d63f33f0cf4">async_base</a>(<a class="code" href="classboost_1_1beast_1_1async__base.html#a99299e04284c1195525a4d63f33f0cf4">async_base</a>&amp;&amp; other) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classboost_1_1beast_1_1async__base.html#a99299e04284c1195525a4d63f33f0cf4">async_base</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <a class="code" href="classboost_1_1beast_1_1async__base.html#a99299e04284c1195525a4d63f33f0cf4">async_base</a>(<a class="code" href="classboost_1_1beast_1_1async__base.html#a99299e04284c1195525a4d63f33f0cf4">async_base</a> <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <a class="code" href="classboost_1_1beast_1_1async__base.html#a99299e04284c1195525a4d63f33f0cf4">async_base</a>&amp; operator=(<a class="code" href="classboost_1_1beast_1_1async__base.html#a99299e04284c1195525a4d63f33f0cf4">async_base</a> <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keyword">using</span> <a class="code" href="classboost_1_1beast_1_1async__base.html#aadc29d21f36269207b3117e227c468c0">allocator_type</a> =</div>
+<div class="line"><a name="l00283"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1async__base.html#aadc29d21f36269207b3117e227c468c0">  283</a></span>&#160;        net::associated_allocator_t&lt;Handler, Allocator&gt;;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <a class="code" href="classboost_1_1beast_1_1async__base.html#aadc29d21f36269207b3117e227c468c0">allocator_type</a></div>
+<div class="line"><a name="l00292"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1async__base.html#a6e2015267035930ff804df6cabbd1f78">  292</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1async__base.html#a6e2015267035930ff804df6cabbd1f78">get_allocator</a>() const noexcept</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">return</span> net::get_associated_allocator(h_,</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            <a class="code" href="classboost_1_1empty___1_1empty__value.html">boost::empty_value&lt;Allocator&gt;::get</a>());</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    executor_type</div>
+<div class="line"><a name="l00305"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1async__base.html#abb531dd62c0c2d4b0a0846b9ab2ff8be">  305</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1async__base.html#abb531dd62c0c2d4b0a0846b9ab2ff8be">get_executor</a>() const noexcept</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">return</span> net::get_associated_executor(</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            h_, wg1_.get_executor());</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    Handler <span class="keyword">const</span>&amp;</div>
+<div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1async__base.html#abe01a96330049c65f0de233617661813">  313</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1async__base.html#abe01a96330049c65f0de233617661813">handler</a>() const noexcept</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">return</span> h_;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    }</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    Handler</div>
+<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1async__base.html#ad20d783ce163443781f97dfa20c99376">  326</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1async__base.html#ad20d783ce163443781f97dfa20c99376">release_handler</a>()</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="keywordflow">return</span> std::move(h_);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    }</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span>... Args&gt;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1async__base.html#ad29215ff56ff262e4703ec56dd973166">  352</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1async__base.html#ad29215ff56ff262e4703ec56dd973166">complete</a>(<span class="keywordtype">bool</span> is_continuation, Args&amp;&amp;... args)</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    {</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        this-&gt;before_invoke_hook();</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keywordflow">if</span>(! is_continuation)</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            <span class="keyword">auto</span> <span class="keyword">const</span> ex = <a class="code" href="classboost_1_1beast_1_1async__base.html#abb531dd62c0c2d4b0a0846b9ab2ff8be">get_executor</a>();</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            net::post(net::bind_executor(</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                ex,</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                beast::bind_front_handler(</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                    std::move(h_),</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                    std::forward&lt;Args&gt;(args)...)));</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            wg1_.reset();</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        }</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        {</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            wg1_.reset();</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            h_(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        }</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    }</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160; </div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span>... Args&gt;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1async__base.html#a264c45bc7c0def00869cc0984ac2bee8">  388</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1async__base.html#a264c45bc7c0def00869cc0984ac2bee8">complete_now</a>(Args&amp;&amp;... args)</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    {</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        this-&gt;before_invoke_hook();</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        wg1_.reset();</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        h_(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    }</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="preprocessor">#if ! BOOST_BEAST_DOXYGEN</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    Handler*</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    get_legacy_handler_pointer() noexcept</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    {</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="keywordflow">return</span> std::addressof(h_);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    }</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;};</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160; </div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;<span class="keyword">template</span>&lt;</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    <span class="keyword">class </span>Handler,</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;    <span class="keyword">class </span>Executor1,</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;    <span class="keyword">class </span>Allocator = std::allocator&lt;void&gt;</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;&gt;</div>
+<div class="line"><a name="l00593"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1stable__async__base.html">  593</a></span>&#160;<span class="keyword">class </span><a class="code" href="classboost_1_1beast_1_1stable__async__base.html">stable_async_base</a></div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    : <span class="keyword">public</span> <a class="code" href="classboost_1_1beast_1_1async__base.html">async_base</a>&lt;</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;        Handler, Executor1, Allocator&gt;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;{</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;    <a class="code" href="structboost_1_1beast_1_1detail_1_1stable__base.html">detail::stable_base</a>* list_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160; </div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    before_invoke_hook()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;        detail::stable_base::destroy_list(list_);</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    }</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160; </div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;<span class="preprocessor">#if BOOST_BEAST_DOXYGEN</span></div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Handler&gt;</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;    <a class="code" href="classboost_1_1beast_1_1stable__async__base.html#a1218a3963987b9ef48e822caf0729317">stable_async_base</a>(</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;        Handler&amp;&amp; <a class="code" href="classboost_1_1beast_1_1async__base.html#abe01a96330049c65f0de233617661813">handler</a>,</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;        Executor1 <span class="keyword">const</span>&amp; ex1,</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;        Allocator <span class="keyword">const</span>&amp; alloc = Allocator());</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;    <span class="keyword">template</span>&lt;</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;        <span class="keyword">class </span>Handler_,</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;        <span class="keyword">class </span>= <span class="keyword">typename</span> std::enable_if&lt;</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;            ! std::is_same&lt;<span class="keyword">typename</span></div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;                std::decay&lt;Handler_&gt;::type,</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;                <a class="code" href="classboost_1_1beast_1_1stable__async__base.html">stable_async_base</a></div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;            &gt;::value&gt;::type</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    &gt;</div>
+<div class="line"><a name="l00636"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1stable__async__base.html#a1218a3963987b9ef48e822caf0729317">  636</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1stable__async__base.html#a1218a3963987b9ef48e822caf0729317">stable_async_base</a>(</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;        Handler_&amp;&amp; <a class="code" href="classboost_1_1beast_1_1async__base.html#abe01a96330049c65f0de233617661813">handler</a>,</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;        Executor1 <span class="keyword">const</span>&amp; ex1)</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;        : <a class="code" href="classboost_1_1beast_1_1async__base.html">async_base</a>&lt;</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;            Handler, Executor1, Allocator&gt;(</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;                std::forward&lt;Handler_&gt;(<a class="code" href="classboost_1_1beast_1_1async__base.html#abe01a96330049c65f0de233617661813">handler</a>), ex1)</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    {</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;    }</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160; </div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Handler_&gt;</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    <a class="code" href="classboost_1_1beast_1_1stable__async__base.html#a1218a3963987b9ef48e822caf0729317">stable_async_base</a>(</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        Handler_&amp;&amp; <a class="code" href="classboost_1_1beast_1_1async__base.html#abe01a96330049c65f0de233617661813">handler</a>,</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;        Executor1 <span class="keyword">const</span>&amp; ex1,</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;        Allocator <span class="keyword">const</span>&amp; alloc)</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;        : <a class="code" href="classboost_1_1beast_1_1async__base.html">async_base</a>&lt;</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;            Handler, Executor1, Allocator&gt;(</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;                std::forward&lt;Handler_&gt;(<a class="code" href="classboost_1_1beast_1_1async__base.html#abe01a96330049c65f0de233617661813">handler</a>), ex1, alloc)</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;    {</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;    }</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160; </div>
+<div class="line"><a name="l00658"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1stable__async__base.html#ab111c2b67adc9770b67a96de5081a6a0">  658</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1stable__async__base.html#ab111c2b67adc9770b67a96de5081a6a0">stable_async_base</a>(<a class="code" href="classboost_1_1beast_1_1stable__async__base.html">stable_async_base</a>&amp;&amp; other)</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;        : <a class="code" href="classboost_1_1beast_1_1async__base.html">async_base</a>&lt;Handler, Executor1, Allocator&gt;(</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;            std::move(other))</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;        , list_(<a class="code" href="namespaceboost.html">boost</a>::exchange(other.list_, nullptr))</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    {</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    }</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160; </div>
+<div class="line"><a name="l00671"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1stable__async__base.html#a4f88ef066879570ae5f380f2318bcea8">  671</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1stable__async__base.html#a4f88ef066879570ae5f380f2318bcea8">~stable_async_base</a>()</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    {</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;        detail::stable_base::destroy_list(list_);</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    }</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160; </div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    <span class="keyword">template</span>&lt;</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;        <span class="keyword">class </span>State,</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;        <span class="keyword">class </span>Handler_,</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;        <span class="keyword">class </span>Executor1_,</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        <span class="keyword">class </span>Allocator_,</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;        <span class="keyword">class</span>... Args&gt;</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    <span class="keyword">friend</span></div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;    State&amp;</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    <a class="code" href="classboost_1_1beast_1_1stable__async__base.html#a85aa5a5ab8c90eef41c20ef9bce41739">allocate_stable</a>(</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;        <a class="code" href="classboost_1_1beast_1_1stable__async__base.html">stable_async_base</a>&lt;</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;            Handler_, Executor1_, Allocator_&gt;&amp; base,</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;        Args&amp;&amp;... args);</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;};</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160; </div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;<span class="keyword">template</span>&lt;</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    <span class="keyword">class </span>State,</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    <span class="keyword">class </span>Handler,</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    <span class="keyword">class </span>Executor1,</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    <span class="keyword">class </span>Allocator,</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    <span class="keyword">class</span>... Args&gt;</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;State&amp;</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;allocate_stable(</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    stable_async_base&lt;</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;        Handler, Executor1, Allocator&gt;&amp; base,</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;    Args&amp;&amp;... args);</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160; </div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;} <span class="comment">// beast</span></div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;} <span class="comment">// boost</span></div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160; </div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="preprocessor">#include &lt;boost/beast/core/impl/async_base.hpp&gt;</span></div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160; </div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassboost_1_1beast_1_1async__base_html_a6e2015267035930ff804df6cabbd1f78"><div class="ttname"><a href="classboost_1_1beast_1_1async__base.html#a6e2015267035930ff804df6cabbd1f78">boost::beast::async_base::get_allocator</a></div><div class="ttdeci">allocator_type get_allocator() const noexcept</div><div class="ttdef"><b>Definition:</b> async_base.hpp:292</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1stable__async__base_html_a1218a3963987b9ef48e822caf0729317"><div class="ttname"><a href="classboost_1_1beast_1_1stable__async__base.html#a1218a3963987b9ef48e822caf0729317">boost::beast::stable_async_base::stable_async_base</a></div><div class="ttdeci">stable_async_base(Handler_ &amp;&amp;handler, Executor1 const &amp;ex1)</div><div class="ttdef"><b>Definition:</b> async_base.hpp:636</div></div>
+<div class="ttc" id="astructboost_1_1empty__init__t_html"><div class="ttname"><a href="structboost_1_1empty__init__t.html">boost::empty_init_t</a></div><div class="ttdef"><b>Definition:</b> empty_value.hpp:41</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1async__base_html_a99299e04284c1195525a4d63f33f0cf4"><div class="ttname"><a href="classboost_1_1beast_1_1async__base.html#a99299e04284c1195525a4d63f33f0cf4">boost::beast::async_base::async_base</a></div><div class="ttdeci">async_base(Handler_ &amp;&amp;handler, Executor1 const &amp;ex1)</div><div class="ttdef"><b>Definition:</b> async_base.hpp:248</div></div>
+<div class="ttc" id="astructboost_1_1type_html"><div class="ttname"><a href="structboost_1_1type.html">boost::type</a></div><div class="ttdef"><b>Definition:</b> type.hpp:14</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1async__base_html"><div class="ttname"><a href="classboost_1_1beast_1_1async__base.html">boost::beast::async_base</a></div><div class="ttdef"><b>Definition:</b> async_base.hpp:179</div></div>
+<div class="ttc" id="anamespacedetail_html"><div class="ttname"><a href="namespacedetail.html">detail</a></div><div class="ttdoc">detail namespace with internal helper functions</div><div class="ttdef"><b>Definition:</b> json.hpp:246</div></div>
+<div class="ttc" id="aclassboost_1_1empty___1_1empty__value_html"><div class="ttname"><a href="classboost_1_1empty___1_1empty__value.html">boost::empty_::empty_value</a></div><div class="ttdef"><b>Definition:</b> empty_value.hpp:47</div></div>
+<div class="ttc" id="anamespaceboost_html"><div class="ttname"><a href="namespaceboost.html">boost</a></div><div class="ttdoc">defined(BOOST_MOVE_DOXYGEN_INVOKED)</div><div class="ttdef"><b>Definition:</b> case_conv.hpp:32</div></div>
+<div class="ttc" id="astructboost_1_1beast_1_1detail_1_1stable__base_html"><div class="ttname"><a href="structboost_1_1beast_1_1detail_1_1stable__base.html">boost::beast::detail::stable_base</a></div><div class="ttdef"><b>Definition:</b> async_base.hpp:19</div></div>
+<div class="ttc" id="astructboost_1_1asio_1_1is__executor_html"><div class="ttname"><a href="structboost_1_1asio_1_1is__executor.html">boost::asio::is_executor</a></div><div class="ttdef"><b>Definition:</b> is_executor.hpp:34</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1async__base_html_a34bf423eb7bb284dd1e740ed0e009b42"><div class="ttname"><a href="classboost_1_1beast_1_1async__base.html#a34bf423eb7bb284dd1e740ed0e009b42">boost::beast::async_base::executor_type</a></div><div class="ttdeci">typename net::associated_executor&lt; Handler, typename detail::select_work_guard_t&lt; Executor1 &gt;::executor_type &gt;::type executor_type</div><div class="ttdef"><b>Definition:</b> async_base.hpp:206</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1async__base_html_abb531dd62c0c2d4b0a0846b9ab2ff8be"><div class="ttname"><a href="classboost_1_1beast_1_1async__base.html#abb531dd62c0c2d4b0a0846b9ab2ff8be">boost::beast::async_base::get_executor</a></div><div class="ttdeci">executor_type get_executor() const noexcept</div><div class="ttdef"><b>Definition:</b> async_base.hpp:305</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1stable__async__base_html"><div class="ttname"><a href="classboost_1_1beast_1_1stable__async__base.html">boost::beast::stable_async_base</a></div><div class="ttdef"><b>Definition:</b> async_base.hpp:593</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1stable__async__base_html_ab111c2b67adc9770b67a96de5081a6a0"><div class="ttname"><a href="classboost_1_1beast_1_1stable__async__base.html#ab111c2b67adc9770b67a96de5081a6a0">boost::beast::stable_async_base::stable_async_base</a></div><div class="ttdeci">stable_async_base(stable_async_base &amp;&amp;other)</div><div class="ttdoc">Move Constructor</div><div class="ttdef"><b>Definition:</b> async_base.hpp:658</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1async__base_html_abe01a96330049c65f0de233617661813"><div class="ttname"><a href="classboost_1_1beast_1_1async__base.html#abe01a96330049c65f0de233617661813">boost::beast::async_base::handler</a></div><div class="ttdeci">Handler const  &amp; handler() const noexcept</div><div class="ttdoc">Returns the handler associated with this object</div><div class="ttdef"><b>Definition:</b> async_base.hpp:313</div></div>
+<div class="ttc" id="astructboost_1_1asio_1_1associated__executor_html"><div class="ttname"><a href="structboost_1_1asio_1_1associated__executor.html">boost::asio::associated_executor</a></div><div class="ttdoc">Traits type used to obtain the executor associated with an object.</div><div class="ttdef"><b>Definition:</b> associated_executor.hpp:77</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1stable__async__base_html_a85aa5a5ab8c90eef41c20ef9bce41739"><div class="ttname"><a href="classboost_1_1beast_1_1stable__async__base.html#a85aa5a5ab8c90eef41c20ef9bce41739">boost::beast::stable_async_base::allocate_stable</a></div><div class="ttdeci">friend State &amp; allocate_stable(stable_async_base&lt; Handler_, Executor1_, Allocator_ &gt; &amp;base, Args &amp;&amp;... args)</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1async__base_html_ad29215ff56ff262e4703ec56dd973166"><div class="ttname"><a href="classboost_1_1beast_1_1async__base.html#ad29215ff56ff262e4703ec56dd973166">boost::beast::async_base::complete</a></div><div class="ttdeci">void complete(bool is_continuation, Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition:</b> async_base.hpp:352</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1async__base_html_aadc29d21f36269207b3117e227c468c0"><div class="ttname"><a href="classboost_1_1beast_1_1async__base.html#aadc29d21f36269207b3117e227c468c0">boost::beast::async_base::allocator_type</a></div><div class="ttdeci">net::associated_allocator_t&lt; Handler, Allocator &gt; allocator_type</div><div class="ttdef"><b>Definition:</b> async_base.hpp:283</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1async__base_html_a264c45bc7c0def00869cc0984ac2bee8"><div class="ttname"><a href="classboost_1_1beast_1_1async__base.html#a264c45bc7c0def00869cc0984ac2bee8">boost::beast::async_base::complete_now</a></div><div class="ttdeci">void complete_now(Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition:</b> async_base.hpp:388</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1stable__async__base_html_a4f88ef066879570ae5f380f2318bcea8"><div class="ttname"><a href="classboost_1_1beast_1_1stable__async__base.html#a4f88ef066879570ae5f380f2318bcea8">boost::beast::stable_async_base::~stable_async_base</a></div><div class="ttdeci">~stable_async_base()</div><div class="ttdef"><b>Definition:</b> async_base.hpp:671</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1async__base_html_ad20d783ce163443781f97dfa20c99376"><div class="ttname"><a href="classboost_1_1beast_1_1async__base.html#ad20d783ce163443781f97dfa20c99376">boost::beast::async_base::release_handler</a></div><div class="ttdeci">Handler release_handler()</div><div class="ttdef"><b>Definition:</b> async_base.hpp:326</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1794b65aa62003e11b03e0565def47fa.html">external</a></li><li class="navelem"><a class="el" href="dir_c08529bcc08f755a4d16428f71043471.html">boost</a></li><li class="navelem"><a class="el" href="dir_08e916b1ba9423845cffef83795e9545.html">boost</a></li><li class="navelem"><a class="el" href="dir_bd6a85e4ee4cdda35614a339a6890cf4.html">beast</a></li><li class="navelem"><a class="el" href="dir_70222f29f9522fd356e0faf7dbb59b69.html">core</a></li><li class="navelem"><b>async_base.hpp</b></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -25,23 +25,22 @@ namespace plugin {
 namespace sfu_bot {
 namespace connection {
 
-using PublicationInterface = core::interface::Publication;
-using LocalMediaStream     = core::interface::LocalMediaStream;
+using LocalMediaStream = core::interface::LocalMediaStream;
 
 class Sender : public interface::SendTransport::Listener,
                public mediasoupclient::Producer::Listener,
                public core::interface::Publication::InternalListener,
-               public PublicationInterface::Callback {
+               public core::interface::Publication::Callback {
 public:
     Sender(const std::string& local_person_id,
            const std::string& bot_id,
            interface::SfuApiClient* client,
            interface::TransportRepository* transport_repo,
-           PublicationInterface* publication,
+           std::shared_ptr<core::interface::Publication> publication,
            ForwardingConfigure configure,
            analytics::interface::AnalyticsClient* analytics_client);
     ~Sender();
-    boost::optional<interface::StartForwardingResult> StartForwarding(
+    std::optional<interface::StartForwardingResult> StartForwarding(
         const interface::Device::PeerConnectionOptions* pc_options);
     bool StopForwarding(bool with_api_request);
 
@@ -55,27 +54,28 @@ public:
     void OnTransportClose(mediasoupclient::Producer* producer) override;
 
     // core::interface::Publication::InternalListener
-    void OnEncodingsUpdated(core::interface::Publication* publication,
+    void OnEncodingsUpdated(std::shared_ptr<core::interface::Publication> publication,
                             std::vector<model::Encoding> encodings) override;
-    void OnStreamReplaced(core::interface::Publication* publication,
+    void OnStreamReplaced(std::shared_ptr<core::interface::Publication> publication,
                           std::shared_ptr<core::interface::LocalMediaStream> stream) override;
 
     // core::interface::Publication::Callback
-    const boost::optional<nlohmann::json> GetStatsReport(
-        PublicationInterface* publication) override;
+    const std::optional<nlohmann::json> GetStatsReport(
+        std::shared_ptr<core::interface::Publication> publication) override;
 
 private:
     bool ApplyEncoding(std::vector<model::Encoding> encoding);
     void Produce(const std::string& transaction_id);
-    void SetupTransportAccessForStream(PublicationInterface* publication);
+    void SetupTransportAccessForStream(std::shared_ptr<core::interface::Publication> publication);
     bool SupportedCodecs(std::vector<model::Codec> codecs);
+    std::optional<nlohmann::json> FindSupportedRemoteCodec(const model::ContentType& type);
 
     std::string local_person_id_;
     std::string bot_id_;
     interface::SfuApiClient* client_;
     interface::TransportRepository* transport_repo_;
 
-    PublicationInterface* publication_;
+    std::weak_ptr<core::interface::Publication> publication_;
     ForwardingConfigure configure_;
 
     analytics::interface::AnalyticsClient* analytics_client_;
@@ -83,8 +83,8 @@ private:
     interface::SendTransport* transport_ = nullptr;
     ProducerId producer_id_;
 
-    boost::optional<std::string> forwarding_id_;
-    boost::optional<std::string> transaction_id_;
+    std::optional<std::string> forwarding_id_;
+    std::optional<std::string> transaction_id_;
 
 public:
     friend class SfuBotPluginSenderTest;

@@ -1,4 +1,4 @@
-SkyWay SDK for Linux®︎ is built using open source software.
+SkyWay Linux®︎ SDK is built using open source software.
 
 # abseil-cpp
 ```

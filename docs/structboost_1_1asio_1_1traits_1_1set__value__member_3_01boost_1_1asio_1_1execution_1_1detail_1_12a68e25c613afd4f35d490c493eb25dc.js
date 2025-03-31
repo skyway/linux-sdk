@@ -1,0 +1,6 @@
+var structboost_1_1asio_1_1traits_1_1set__value__member_3_01boost_1_1asio_1_1execution_1_1detail_1_12a68e25c613afd4f35d490c493eb25dc =
+[
+    [ "result_type", "structboost_1_1asio_1_1traits_1_1set__value__member_3_01boost_1_1asio_1_1execution_1_1detail_1_12a68e25c613afd4f35d490c493eb25dc.html#a4cef7c2b99270d030f8994f55d2b7b2a", null ],
+    [ "BOOST_ASIO_STATIC_CONSTEXPR", "structboost_1_1asio_1_1traits_1_1set__value__member_3_01boost_1_1asio_1_1execution_1_1detail_1_12a68e25c613afd4f35d490c493eb25dc.html#aced7cd83a6988942acadffe2dd222c75", null ],
+    [ "BOOST_ASIO_STATIC_CONSTEXPR", "structboost_1_1asio_1_1traits_1_1set__value__member_3_01boost_1_1asio_1_1execution_1_1detail_1_12a68e25c613afd4f35d490c493eb25dc.html#a4d65d9f7cccf2484df43647bcc81c306", null ]
+];

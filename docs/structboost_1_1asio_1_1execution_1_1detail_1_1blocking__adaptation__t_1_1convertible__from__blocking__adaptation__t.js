@@ -1,0 +1,4 @@
+var structboost_1_1asio_1_1execution_1_1detail_1_1blocking__adaptation__t_1_1convertible__from__blocking__adaptation__t =
+[
+    [ "convertible_from_blocking_adaptation_t", "structboost_1_1asio_1_1execution_1_1detail_1_1blocking__adaptation__t_1_1convertible__from__blocking__adaptation__t.html#a5b1c2e520fddd8ccb10c0b47c2835ca7", null ]
+];

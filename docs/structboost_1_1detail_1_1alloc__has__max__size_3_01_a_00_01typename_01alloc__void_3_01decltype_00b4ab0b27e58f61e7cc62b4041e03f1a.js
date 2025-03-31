@@ -1,0 +1,4 @@
+var structboost_1_1detail_1_1alloc__has__max__size_3_01_a_00_01typename_01alloc__void_3_01decltype_00b4ab0b27e58f61e7cc62b4041e03f1a =
+[
+    [ "value", "structboost_1_1detail_1_1alloc__has__max__size_3_01_a_00_01typename_01alloc__void_3_01decltype_00b4ab0b27e58f61e7cc62b4041e03f1a.html#a28b0a32c380d2ea00b2b14a53d678180", null ]
+];

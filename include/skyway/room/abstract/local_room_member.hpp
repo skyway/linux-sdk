@@ -32,16 +32,18 @@ public:
     void RemoveEventListener(interface::LocalRoomMember::EventListener* listener) override;
 
 protected:
-    LocalRoomMember(core::interface::LocalPerson* core,
+    LocalRoomMember(std::shared_ptr<core::interface::LocalPerson> core,
                     std::shared_ptr<interface::Room> room,
                     interface::RoomDomainFactory* factory);
 
 private:
     // core::interface::LocalPerson::EventListener
-    void OnStreamPublished(core::interface::Publication* publication) override;
-    void OnStreamUnpublished(core::interface::Publication* publication) override;
-    void OnPublicationSubscribed(core::interface::Subscription* subscription) override;
-    void OnPublicationUnsubscribed(core::interface::Subscription* subscription) override;
+    void OnStreamPublished(std::shared_ptr<core::interface::Publication> publication) override;
+    void OnStreamUnpublished(std::shared_ptr<core::interface::Publication> publication) override;
+    void OnPublicationSubscribed(
+        std::shared_ptr<core::interface::Subscription> subscription) override;
+    void OnPublicationUnsubscribed(
+        std::shared_ptr<core::interface::Subscription> subscription) override;
 
     // core::interface::Member::EventListener
     void OnLeft() override;

@@ -143,7 +143,7 @@ inline void SortEncodingsForMediaSoup(std::vector<model::Encoding>& encodings) {
         std::sort(encodings.begin(),
                   encodings.end(),
                   [](const model::Encoding& lhs, const model::Encoding& rhs) {
-                      if (lhs.max_bitrate == boost::none || rhs.max_bitrate == boost::none) {
+                      if (lhs.max_bitrate == std::nullopt || rhs.max_bitrate == std::nullopt) {
                           return true;
                       }
                       return *lhs.max_bitrate < *rhs.max_bitrate;
@@ -152,8 +152,8 @@ inline void SortEncodingsForMediaSoup(std::vector<model::Encoding>& encodings) {
         std::sort(encodings.begin(),
                   encodings.end(),
                   [](const model::Encoding& lhs, const model::Encoding& rhs) {
-                      if (lhs.scale_resolution_down_by == boost::none ||
-                          rhs.scale_resolution_down_by == boost::none) {
+                      if (lhs.scale_resolution_down_by == std::nullopt ||
+                          rhs.scale_resolution_down_by == std::nullopt) {
                           return true;
                       }
                       return *lhs.scale_resolution_down_by > *rhs.scale_resolution_down_by;
@@ -162,7 +162,7 @@ inline void SortEncodingsForMediaSoup(std::vector<model::Encoding>& encodings) {
         std::sort(encodings.begin(),
                   encodings.end(),
                   [](const model::Encoding& lhs, const model::Encoding& rhs) {
-                      if (lhs.max_framerate == boost::none || rhs.max_framerate == boost::none) {
+                      if (lhs.max_framerate == std::nullopt || rhs.max_framerate == std::nullopt) {
                           return true;
                       }
                       return *lhs.max_framerate < *rhs.max_framerate;

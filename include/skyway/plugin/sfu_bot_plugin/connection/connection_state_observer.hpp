@@ -31,8 +31,8 @@ public:
         const int check_restart_ice_time_seconds = config::DEFAULT_RESTART_ICE_CHECKING_TIME_SEC);
     ~ConnectionStateObserver() override;
 
-    void AddListener(core::ConnectionStateChangeNotifiable* listener) override;
-    void RemoveListener(core::ConnectionStateChangeNotifiable* listener) override;
+    void AddListener(std::shared_ptr<core::ConnectionStateChangeNotifiable> listener) override;
+    void RemoveListener(std::shared_ptr<core::ConnectionStateChangeNotifiable> listener) override;
     void OnConnectionStateChange(interface::Transport* transport,
                                  const std::string& connection_state) override;
     void Dispose() override;
@@ -59,7 +59,7 @@ private:
     analytics::interface::AnalyticsClient* analytics_client_;
 
     std::mutex listeners_mtx_;
-    std::vector<core::ConnectionStateChangeNotifiable*> listeners_;
+    std::vector<std::weak_ptr<core::ConnectionStateChangeNotifiable>> listeners_;
     std::atomic<bool> is_reconnecting_;
 
     std::atomic<bool> is_disposed_ = false;

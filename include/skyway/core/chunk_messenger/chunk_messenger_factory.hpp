@@ -18,7 +18,7 @@ namespace chunk_messenger {
 
 class ChunkMessengerFactory : public interface::ChunkMessengerFactory {
 public:
-    std::unique_ptr<interface::ChunkMessenger> Create(interface::Channel* channel,
+    std::unique_ptr<interface::ChunkMessenger> Create(std::shared_ptr<interface::Channel> channel,
                                                       const model::Member& member) override;
 };
 

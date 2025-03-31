@@ -15,6 +15,8 @@
 #include <skyway/core/stream/local/data_stream.hpp>
 #include <skyway/core/stream/local/video_stream.hpp>
 
+#include "skyway/media/interface/capturer_video_source.hpp"
+
 namespace skyway {
 namespace media {
 
@@ -28,11 +30,19 @@ public:
     static std::shared_ptr<core::stream::local::LocalAudioStream> CreateAudioStream();
 
     /// @brief LocalVideoStreamを生成します。
+    /// @param track StreamのソースになるCapture
+    static std::shared_ptr<core::stream::local::LocalVideoStream> CreateVideoStream(
+        std::shared_ptr<interface::CapturerVideoSource> capturer);
+
+    /// @brief LocalVideoStreamを生成します。
     /// @param device StreamのソースになるVideoDevice
     static std::shared_ptr<core::stream::local::LocalVideoStream> CreateVideoStream(
         const DeviceManager::VideoDevice& device);
 
-private:
+    /// @cond INTERNAL_SECTION
+    static std::shared_ptr<core::stream::local::LocalVideoStream> CreateVideoStream(
+        rtc::scoped_refptr<webrtc::VideoTrackSourceInterface> source);
+    /// @endcond
 };
 }  // namespace media
 }  // namespace skyway

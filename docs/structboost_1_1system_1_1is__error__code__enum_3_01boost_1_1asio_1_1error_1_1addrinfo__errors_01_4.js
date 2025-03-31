@@ -1,0 +1,4 @@
+var structboost_1_1system_1_1is__error__code__enum_3_01boost_1_1asio_1_1error_1_1addrinfo__errors_01_4 =
+[
+    [ "value", "structboost_1_1system_1_1is__error__code__enum_3_01boost_1_1asio_1_1error_1_1addrinfo__errors_01_4.html#a5342b9e77f256c69f7c635c5b5a7c1cf", null ]
+];

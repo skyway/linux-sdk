@@ -1,0 +1,4 @@
+var structboost_1_1asio_1_1detail_1_1default__completion__token__impl_3_01_t_00_01typename_01void__te3f44e2f70c2d4da3efe9f2c898085a8 =
+[
+    [ "type", "structboost_1_1asio_1_1detail_1_1default__completion__token__impl_3_01_t_00_01typename_01void__te3f44e2f70c2d4da3efe9f2c898085a8.html#a27023869f4234149f89dad4af3411eb8", null ]
+];

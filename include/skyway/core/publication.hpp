@@ -19,7 +19,7 @@ namespace core {
 class Publication : public interface::Publication {
 public:
     /// @cond INTERNAL_SECTION
-    Publication(interface::Channel* channel, const model::Publication& initial_dto);
+    Publication(std::shared_ptr<interface::Channel> channel, const model::Publication& initial_dto);
     /// @endcond
     ~Publication();
 
@@ -32,11 +32,11 @@ public:
     /// @endcond
 
     std::string Id() const override;
-    interface::Member* Publisher() const override;
-    std::vector<interface::Subscription*> Subscriptions() const override;
+    std::shared_ptr<interface::Member> Publisher() const override;
+    std::vector<std::shared_ptr<interface::Subscription>> Subscriptions() const override;
     model::ContentType ContentType() const override;
-    boost::optional<std::string> Metadata() const override;
-    interface::Publication* Origin() const override;
+    std::optional<std::string> Metadata() const override;
+    std::shared_ptr<interface::Publication> Origin() const override;
     std::vector<model::Codec> CodecCapabilities() const override;
     std::vector<model::Encoding> Encodings() const override;
     interface::PublicationState State() override;
@@ -44,13 +44,13 @@ public:
     std::shared_ptr<interface::LocalStream> Stream() const override;
 
     bool UpdateMetadata(const std::string& metadata) override;
-    void UpdateEncodings(std::vector<model::Encoding> encodings) override;
+    bool UpdateEncodings(std::vector<model::Encoding> encodings) override;
     bool ReplaceStream(std::shared_ptr<interface::LocalStream> stream) override;
     bool Cancel() const override;
     bool Enable() override;
     bool Disable() const override;
 
-    boost::optional<model::WebRTCStats> GetStats(const std::string& selector) override;
+    std::optional<model::WebRTCStats> GetStats(const std::string& selector) override;
     /// @cond INTERNAL_SECTION
     void AddGetStatsCallback(const std::string& remote_member_id, Callback* callback) override;
     void RemoveGetStatsCallback(const std::string& remote_member_id) override;
@@ -62,8 +62,8 @@ public:
     void Dispose() override;
 
     void OnUnpublished() override;
-    void OnSubscribed(interface::Subscription* subscription) override;
-    void OnUnsubscribed(interface::Subscription* subscription) override;
+    void OnSubscribed(std::shared_ptr<interface::Subscription> subscription) override;
+    void OnUnsubscribed(std::shared_ptr<interface::Subscription> subscription) override;
     void OnMetadataUpdated(const std::string& metadata) override;
     void OnEnabled() override;
     void OnDisabled() override;
@@ -71,12 +71,13 @@ public:
     /// @endcond
 
 private:
-    interface::Channel* channel_;
+    std::weak_ptr<interface::Channel> channel_;
     model::Publication initial_dto_;
     std::atomic<interface::PublicationState> state_;
     std::vector<model::Codec> codec_capabilities_;
     std::vector<model::Encoding> encodings_;
 
+    std::weak_ptr<interface::Member> publisher_;
     std::shared_ptr<interface::LocalStream> stream_;
 
     std::mutex listeners_mtx_;

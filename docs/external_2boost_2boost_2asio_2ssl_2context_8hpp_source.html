@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('external_2boost_2boost_2asio_2ssl_2context_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">context.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// ssl/context.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2020 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef BOOST_ASIO_SSL_CONTEXT_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define BOOST_ASIO_SSL_CONTEXT_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif // defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;boost/asio/detail/config.hpp&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;boost/asio/buffer.hpp&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;boost/asio/io_context.hpp&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;boost/asio/ssl/context_base.hpp&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;boost/asio/ssl/detail/openssl_types.hpp&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;boost/asio/ssl/detail/openssl_init.hpp&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;boost/asio/ssl/detail/password_callback.hpp&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;boost/asio/ssl/detail/verify_callback.hpp&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;boost/asio/ssl/verify_mode.hpp&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;boost/asio/detail/push_options.hpp&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceboost.html">boost</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span>asio {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span>ssl {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1ssl_1_1context.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html">context</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  : <span class="keyword">public</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html">context_base</a>,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">private</span> <a class="code" href="classboost_1_1asio_1_1detail_1_1noncopyable.html">noncopyable</a></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1ssl_1_1context.html#a9f691b25839a623ab1d4a6fe3788ca67">   42</a></span>&#160;  <span class="keyword">typedef</span> SSL_CTX* <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a9f691b25839a623ab1d4a6fe3788ca67">native_handle_type</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  BOOST_ASIO_DECL <span class="keyword">explicit</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#acdca758e3211ec52d1613a5099090cf1">context</a>(<a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397">method</a> m);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  BOOST_ASIO_DECL <span class="keyword">explicit</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#acdca758e3211ec52d1613a5099090cf1">context</a>(<a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a9f691b25839a623ab1d4a6fe3788ca67">native_handle_type</a> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a566c1dd4acce1bd6251e499c347a4068">native_handle</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#if defined(BOOST_ASIO_HAS_MOVE) || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  BOOST_ASIO_DECL <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#acdca758e3211ec52d1613a5099090cf1">context</a>(<a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html">context</a>&amp;&amp; other);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  BOOST_ASIO_DECL <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html">context</a>&amp; operator=(<a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html">context</a>&amp;&amp; other);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif // defined(BOOST_ASIO_HAS_MOVE) || defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  BOOST_ASIO_DECL <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a674553531d74b6dd22dc449458ab000b">~context</a>();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  BOOST_ASIO_DECL <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a9f691b25839a623ab1d4a6fe3788ca67">native_handle_type</a> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a566c1dd4acce1bd6251e499c347a4068">native_handle</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#ad7263f29e84602fda039bd7ab4c252a1">clear_options</a>(<a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a28118d5a5738bbfe9a93242f16602f20">options</a> o);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#ad7263f29e84602fda039bd7ab4c252a1">clear_options</a>(<a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a28118d5a5738bbfe9a93242f16602f20">options</a> o,</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#ab404d617b574761ffab5512cb5f402a7">set_options</a>(<a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a28118d5a5738bbfe9a93242f16602f20">options</a> o);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#ab404d617b574761ffab5512cb5f402a7">set_options</a>(<a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a28118d5a5738bbfe9a93242f16602f20">options</a> o,</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a412530540443de2d11cc0e1526a2fd2b">set_verify_mode</a>(verify_mode v);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a412530540443de2d11cc0e1526a2fd2b">set_verify_mode</a>(</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      verify_mode v, <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a6994ec6e978b8270a86919499d6bb7c5">set_verify_depth</a>(<span class="keywordtype">int</span> depth);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a6994ec6e978b8270a86919499d6bb7c5">set_verify_depth</a>(</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      <span class="keywordtype">int</span> depth, <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> VerifyCallback&gt;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a4ad7d16576bf6b2ac32c84225f718e11">set_verify_callback</a>(VerifyCallback callback);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> VerifyCallback&gt;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a4ad7d16576bf6b2ac32c84225f718e11">set_verify_callback</a>(VerifyCallback callback,</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#aa73ab1c5601e0b236851f46aa1f15b6e">load_verify_file</a>(<span class="keyword">const</span> std::string&amp; filename);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#aa73ab1c5601e0b236851f46aa1f15b6e">load_verify_file</a>(</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a7266eb37d9dbd7343c138ced0d4c50a9">add_certificate_authority</a>(<span class="keyword">const</span> <a class="code" href="classboost_1_1asio_1_1const__buffer.html">const_buffer</a>&amp; ca);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a7266eb37d9dbd7343c138ced0d4c50a9">add_certificate_authority</a>(</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      <span class="keyword">const</span> <a class="code" href="classboost_1_1asio_1_1const__buffer.html">const_buffer</a>&amp; ca, <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#ab3bfad216b07734e9362bfd8e561f9ec">set_default_verify_paths</a>();</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#ab3bfad216b07734e9362bfd8e561f9ec">set_default_verify_paths</a>(</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#ac7f5911a3c38c77cae2c0168b60baca1">add_verify_path</a>(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#ac7f5911a3c38c77cae2c0168b60baca1">add_verify_path</a>(</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;      <span class="keyword">const</span> std::string&amp; path, <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#aa506c6ecd73e26a939435e4790308cf0">use_certificate</a>(</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;      <span class="keyword">const</span> <a class="code" href="classboost_1_1asio_1_1const__buffer.html">const_buffer</a>&amp; certificate, <a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a0a975b578992313ea579de15f5c374bd">file_format</a> <a class="code" href="classboost_1_1basic__format.html">format</a>);</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#aa506c6ecd73e26a939435e4790308cf0">use_certificate</a>(</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;      <span class="keyword">const</span> <a class="code" href="classboost_1_1asio_1_1const__buffer.html">const_buffer</a>&amp; certificate, <a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a0a975b578992313ea579de15f5c374bd">file_format</a> <a class="code" href="classboost_1_1basic__format.html">format</a>,</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;      <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a4d273558f9a4ba5165c45559e19725d8">use_certificate_file</a>(</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a0a975b578992313ea579de15f5c374bd">file_format</a> <a class="code" href="classboost_1_1basic__format.html">format</a>);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160; </div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a4d273558f9a4ba5165c45559e19725d8">use_certificate_file</a>(</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a0a975b578992313ea579de15f5c374bd">file_format</a> <a class="code" href="classboost_1_1basic__format.html">format</a>,</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;      <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160; </div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#aad6fb803065a77d1d2086c88df6f1d78">use_certificate_chain</a>(<span class="keyword">const</span> <a class="code" href="classboost_1_1asio_1_1const__buffer.html">const_buffer</a>&amp; chain);</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160; </div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#aad6fb803065a77d1d2086c88df6f1d78">use_certificate_chain</a>(</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;      <span class="keyword">const</span> <a class="code" href="classboost_1_1asio_1_1const__buffer.html">const_buffer</a>&amp; chain, <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160; </div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160; </div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a4ef1c018a5a01710a84ccf82dd968ad1">use_certificate_chain_file</a>(<span class="keyword">const</span> std::string&amp; filename);</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160; </div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160; </div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a4ef1c018a5a01710a84ccf82dd968ad1">use_certificate_chain_file</a>(</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160; </div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160; </div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a773aedaf065c0cb68fa37e5577c3cbf5">use_private_key</a>(</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;      <span class="keyword">const</span> <a class="code" href="classboost_1_1asio_1_1const__buffer.html">const_buffer</a>&amp; private_key, <a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a0a975b578992313ea579de15f5c374bd">file_format</a> <a class="code" href="classboost_1_1basic__format.html">format</a>);</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160; </div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160; </div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a773aedaf065c0cb68fa37e5577c3cbf5">use_private_key</a>(</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;      <span class="keyword">const</span> <a class="code" href="classboost_1_1asio_1_1const__buffer.html">const_buffer</a>&amp; private_key, <a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a0a975b578992313ea579de15f5c374bd">file_format</a> <a class="code" href="classboost_1_1basic__format.html">format</a>,</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;      <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160; </div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160; </div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a826afd5c0d57ccfd9a547f9ac5e45c82">use_private_key_file</a>(</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a0a975b578992313ea579de15f5c374bd">file_format</a> <a class="code" href="classboost_1_1basic__format.html">format</a>);</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160; </div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160; </div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a826afd5c0d57ccfd9a547f9ac5e45c82">use_private_key_file</a>(</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a0a975b578992313ea579de15f5c374bd">file_format</a> <a class="code" href="classboost_1_1basic__format.html">format</a>,</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;      <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160; </div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160; </div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a67cb6cf4cab54d764a8c05e2c973acf0">use_rsa_private_key</a>(</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;      <span class="keyword">const</span> <a class="code" href="classboost_1_1asio_1_1const__buffer.html">const_buffer</a>&amp; private_key, <a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a0a975b578992313ea579de15f5c374bd">file_format</a> <a class="code" href="classboost_1_1basic__format.html">format</a>);</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160; </div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160; </div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a67cb6cf4cab54d764a8c05e2c973acf0">use_rsa_private_key</a>(</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;      <span class="keyword">const</span> <a class="code" href="classboost_1_1asio_1_1const__buffer.html">const_buffer</a>&amp; private_key, <a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a0a975b578992313ea579de15f5c374bd">file_format</a> <a class="code" href="classboost_1_1basic__format.html">format</a>,</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;      <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160; </div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160; </div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a8acea64f08aff2630a5a448b56a31160">use_rsa_private_key_file</a>(</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a0a975b578992313ea579de15f5c374bd">file_format</a> <a class="code" href="classboost_1_1basic__format.html">format</a>);</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160; </div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160; </div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a8acea64f08aff2630a5a448b56a31160">use_rsa_private_key_file</a>(</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="classboost_1_1asio_1_1ssl_1_1context__base.html#a0a975b578992313ea579de15f5c374bd">file_format</a> <a class="code" href="classboost_1_1basic__format.html">format</a>,</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;      <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160; </div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160; </div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#aaf6d736fd251e88acfc216b774d35870">use_tmp_dh</a>(<span class="keyword">const</span> <a class="code" href="classboost_1_1asio_1_1const__buffer.html">const_buffer</a>&amp; dh);</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160; </div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160; </div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#aaf6d736fd251e88acfc216b774d35870">use_tmp_dh</a>(</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;      <span class="keyword">const</span> <a class="code" href="classboost_1_1asio_1_1const__buffer.html">const_buffer</a>&amp; dh, <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160; </div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160; </div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a81b6ef2a9345a28e65d6bb4c7d4c7e3d">use_tmp_dh_file</a>(<span class="keyword">const</span> std::string&amp; filename);</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160; </div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160; </div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a81b6ef2a9345a28e65d6bb4c7d4c7e3d">use_tmp_dh_file</a>(</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;      <span class="keyword">const</span> std::string&amp; filename, <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160; </div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160; </div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PasswordCallback&gt;</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#af76a4379383cda835b19861f39d5733d">set_password_callback</a>(PasswordCallback callback);</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160; </div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160; </div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PasswordCallback&gt;</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;  BOOST_ASIO_SYNC_OP_VOID <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#af76a4379383cda835b19861f39d5733d">set_password_callback</a>(PasswordCallback callback,</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;      <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160; </div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;  <span class="keyword">struct </span>bio_cleanup;</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;  <span class="keyword">struct </span>x509_cleanup;</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;  <span class="keyword">struct </span>evp_pkey_cleanup;</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;  <span class="keyword">struct </span>rsa_cleanup;</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;  <span class="keyword">struct </span>dh_cleanup;</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160; </div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;  <span class="comment">// Helper function used to set a peer certificate verification callback.</span></div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID do_set_verify_callback(</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;      <a class="code" href="classboost_1_1asio_1_1ssl_1_1detail_1_1verify__callback__base.html">detail::verify_callback_base</a>* callback, <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160; </div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;  <span class="comment">// Callback used when the SSL implementation wants to verify a certificate.</span></div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;  BOOST_ASIO_DECL <span class="keyword">static</span> <span class="keywordtype">int</span> verify_callback_function(</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;      <span class="keywordtype">int</span> preverified, X509_STORE_CTX* ctx);</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160; </div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;  <span class="comment">// Helper function used to set a password callback.</span></div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID do_set_password_callback(</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;      <a class="code" href="classboost_1_1asio_1_1ssl_1_1detail_1_1password__callback__base.html">detail::password_callback_base</a>* callback, <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160; </div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;  <span class="comment">// Callback used when the SSL implementation wants a password.</span></div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;  BOOST_ASIO_DECL <span class="keyword">static</span> <span class="keywordtype">int</span> password_callback_function(</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;      <span class="keywordtype">char</span>* buf, <span class="keywordtype">int</span> size, <span class="keywordtype">int</span> purpose, <span class="keywordtype">void</span>* data);</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160; </div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;  <span class="comment">// Helper function to set the temporary Diffie-Hellman parameters from a BIO.</span></div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;  BOOST_ASIO_DECL BOOST_ASIO_SYNC_OP_VOID do_use_tmp_dh(</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;      <a class="code" href="structbio__st.html">BIO</a>* bio, <a class="code" href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a>&amp; ec);</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160; </div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;  <span class="comment">// Helper function to make a BIO from a memory buffer.</span></div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;  BOOST_ASIO_DECL <a class="code" href="structbio__st.html">BIO</a>* make_buffer_bio(<span class="keyword">const</span> <a class="code" href="classboost_1_1asio_1_1const__buffer.html">const_buffer</a>&amp; b);</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160; </div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;  <span class="comment">// The underlying native implementation.</span></div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;  <a class="code" href="classboost_1_1asio_1_1ssl_1_1context.html#a9f691b25839a623ab1d4a6fe3788ca67">native_handle_type</a> handle_;</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160; </div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;  <span class="comment">// Ensure openssl is initialised.</span></div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;  <a class="code" href="classboost_1_1asio_1_1ssl_1_1detail_1_1openssl__init.html">boost::asio::ssl::detail::openssl_init&lt;&gt;</a> init_;</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;};</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160; </div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;} <span class="comment">// namespace ssl</span></div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;} <span class="comment">// namespace boost</span></div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160; </div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;<span class="preprocessor">#include &lt;boost/asio/detail/pop_options.hpp&gt;</span></div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160; </div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;<span class="preprocessor">#include &lt;boost/asio/ssl/impl/context.hpp&gt;</span></div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="preprocessor">#if defined(BOOST_ASIO_HEADER_ONLY)</span></div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;<span class="preprocessor"># include &lt;boost/asio/ssl/impl/context.ipp&gt;</span></div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;<span class="preprocessor">#endif // defined(BOOST_ASIO_HEADER_ONLY)</span></div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160; </div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;<span class="preprocessor">#endif // BOOST_ASIO_SSL_CONTEXT_HPP</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassboost_1_1system_1_1error__code_html"><div class="ttname"><a href="classboost_1_1system_1_1error__code.html">boost::system::error_code</a></div><div class="ttdef"><b>Definition:</b> error_code.hpp:571</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a8acea64f08aff2630a5a448b56a31160"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a8acea64f08aff2630a5a448b56a31160">boost::asio::ssl::context::use_rsa_private_key_file</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_rsa_private_key_file(const std::string &amp;filename, file_format format)</div><div class="ttdoc">Use an RSA private key from a file.</div><div class="ttdef"><b>Definition:</b> context.ipp:1020</div></div>
+<div class="ttc" id="astructbio__st_html"><div class="ttname"><a href="structbio__st.html">bio_st</a></div><div class="ttdef"><b>Definition:</b> bio.h:851</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1detail_1_1verify__callback__base_html"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1detail_1_1verify__callback__base.html">boost::asio::ssl::detail::verify_callback_base</a></div><div class="ttdef"><b>Definition:</b> verify_callback.hpp:29</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1detail_1_1noncopyable_html"><div class="ttname"><a href="classboost_1_1asio_1_1detail_1_1noncopyable.html">boost::asio::detail::noncopyable</a></div><div class="ttdef"><b>Definition:</b> noncopyable.hpp:26</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_af76a4379383cda835b19861f39d5733d"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#af76a4379383cda835b19861f39d5733d">boost::asio::ssl::context::set_password_callback</a></div><div class="ttdeci">void set_password_callback(PasswordCallback callback)</div><div class="ttdoc">Set the password callback.</div><div class="ttdef"><b>Definition:</b> context.hpp:47</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a4ef1c018a5a01710a84ccf82dd968ad1"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a4ef1c018a5a01710a84ccf82dd968ad1">boost::asio::ssl::context::use_certificate_chain_file</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_certificate_chain_file(const std::string &amp;filename)</div><div class="ttdoc">Use a certificate chain from a file.</div><div class="ttdef"><b>Definition:</b> context.ipp:832</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_ad7263f29e84602fda039bd7ab4c252a1"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#ad7263f29e84602fda039bd7ab4c252a1">boost::asio::ssl::context::clear_options</a></div><div class="ttdeci">BOOST_ASIO_DECL void clear_options(options o)</div><div class="ttdoc">Clear options on the context.</div><div class="ttdef"><b>Definition:</b> context.ipp:440</div></div>
+<div class="ttc" id="anamespaceboost_html"><div class="ttname"><a href="namespaceboost.html">boost</a></div><div class="ttdoc">defined(BOOST_MOVE_DOXYGEN_INVOKED)</div><div class="ttdef"><b>Definition:</b> case_conv.hpp:32</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a826afd5c0d57ccfd9a547f9ac5e45c82"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a826afd5c0d57ccfd9a547f9ac5e45c82">boost::asio::ssl::context::use_private_key_file</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_private_key_file(const std::string &amp;filename, file_format format)</div><div class="ttdoc">Use a private key from a file.</div><div class="ttdef"><b>Definition:</b> context.ipp:917</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a412530540443de2d11cc0e1526a2fd2b"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a412530540443de2d11cc0e1526a2fd2b">boost::asio::ssl::context::set_verify_mode</a></div><div class="ttdeci">BOOST_ASIO_DECL void set_verify_mode(verify_mode v)</div><div class="ttdoc">Set the peer verification mode.</div><div class="ttdef"><b>Definition:</b> context.ipp:501</div></div>
+<div class="ttc" id="aclassboost_1_1basic__format_html"><div class="ttname"><a href="classboost_1_1basic__format.html">boost::basic_format</a></div><div class="ttdef"><b>Definition:</b> format_class.hpp:30</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_ab404d617b574761ffab5512cb5f402a7"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#ab404d617b574761ffab5512cb5f402a7">boost::asio::ssl::context::set_options</a></div><div class="ttdeci">BOOST_ASIO_DECL void set_options(options o)</div><div class="ttdoc">Set options on the context.</div><div class="ttdef"><b>Definition:</b> context.ipp:474</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1const__buffer_html"><div class="ttname"><a href="classboost_1_1asio_1_1const__buffer.html">boost::asio::const_buffer</a></div><div class="ttdoc">Holds a buffer that cannot be modified.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:227</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_aa506c6ecd73e26a939435e4790308cf0"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#aa506c6ecd73e26a939435e4790308cf0">boost::asio::ssl::context::use_certificate</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_certificate(const const_buffer &amp;certificate, file_format format)</div><div class="ttdoc">Use a certificate from a memory buffer.</div><div class="ttdef"><b>Definition:</b> context.ipp:653</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html">boost::asio::ssl::context_base</a></div><div class="ttdef"><b>Definition:</b> context_base.hpp:29</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a6994ec6e978b8270a86919499d6bb7c5"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a6994ec6e978b8270a86919499d6bb7c5">boost::asio::ssl::context::set_verify_depth</a></div><div class="ttdeci">BOOST_ASIO_DECL void set_verify_depth(int depth)</div><div class="ttdoc">Set the peer verification depth.</div><div class="ttdef"><b>Definition:</b> context.ipp:517</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_aad6fb803065a77d1d2086c88df6f1d78"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#aad6fb803065a77d1d2086c88df6f1d78">boost::asio::ssl::context::use_certificate_chain</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_certificate_chain(const const_buffer &amp;chain)</div><div class="ttdoc">Use a certificate chain from a memory buffer.</div><div class="ttdef"><b>Definition:</b> context.ipp:747</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a28118d5a5738bbfe9a93242f16602f20"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a28118d5a5738bbfe9a93242f16602f20">boost::asio::ssl::context_base::options</a></div><div class="ttdeci">long options</div><div class="ttdoc">Bitmask type for SSL options.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:109</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a67cb6cf4cab54d764a8c05e2c973acf0"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a67cb6cf4cab54d764a8c05e2c973acf0">boost::asio::ssl::context::use_rsa_private_key</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_rsa_private_key(const const_buffer &amp;private_key, file_format format)</div><div class="ttdoc">Use an RSA private key from a memory buffer.</div><div class="ttdef"><b>Definition:</b> context.ipp:925</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a674553531d74b6dd22dc449458ab000b"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a674553531d74b6dd22dc449458ab000b">boost::asio::ssl::context::~context</a></div><div class="ttdeci">BOOST_ASIO_DECL ~context()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> context.ipp:396</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a8fa8b32cef7847c86ac57d5a09ebe397"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a8fa8b32cef7847c86ac57d5a09ebe397">boost::asio::ssl::context_base::method</a></div><div class="ttdeci">method</div><div class="ttdoc">Different methods supported by a context.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:33</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a4ad7d16576bf6b2ac32c84225f718e11"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a4ad7d16576bf6b2ac32c84225f718e11">boost::asio::ssl::context::set_verify_callback</a></div><div class="ttdeci">void set_verify_callback(VerifyCallback callback)</div><div class="ttdoc">Set the callback used to verify peer certificates.</div><div class="ttdef"><b>Definition:</b> context.hpp:30</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context__base_html_a0a975b578992313ea579de15f5c374bd"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context__base.html#a0a975b578992313ea579de15f5c374bd">boost::asio::ssl::context_base::file_format</a></div><div class="ttdeci">file_format</div><div class="ttdoc">File format types.</div><div class="ttdef"><b>Definition:</b> context_base.hpp:167</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1detail_1_1password__callback__base_html"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1detail_1_1password__callback__base.html">boost::asio::ssl::detail::password_callback_base</a></div><div class="ttdef"><b>Definition:</b> password_callback.hpp:31</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_aa73ab1c5601e0b236851f46aa1f15b6e"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#aa73ab1c5601e0b236851f46aa1f15b6e">boost::asio::ssl::context::load_verify_file</a></div><div class="ttdeci">BOOST_ASIO_DECL void load_verify_file(const std::string &amp;filename)</div><div class="ttdoc">Load a certification authority file for performing verification.</div><div class="ttdef"><b>Definition:</b> context.ipp:533</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_acdca758e3211ec52d1613a5099090cf1"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#acdca758e3211ec52d1613a5099090cf1">boost::asio::ssl::context::context</a></div><div class="ttdeci">BOOST_ASIO_DECL context(method m)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> context.ipp:63</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_ac7f5911a3c38c77cae2c0168b60baca1"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#ac7f5911a3c38c77cae2c0168b60baca1">boost::asio::ssl::context::add_verify_path</a></div><div class="ttdeci">BOOST_ASIO_DECL void add_verify_path(const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> context.ipp:629</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a9f691b25839a623ab1d4a6fe3788ca67"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a9f691b25839a623ab1d4a6fe3788ca67">boost::asio::ssl::context::native_handle_type</a></div><div class="ttdeci">SSL_CTX * native_handle_type</div><div class="ttdoc">The native handle type of the SSL context.</div><div class="ttdef"><b>Definition:</b> context.hpp:42</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html">boost::asio::ssl::context</a></div><div class="ttdef"><b>Definition:</b> context.hpp:36</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a7266eb37d9dbd7343c138ced0d4c50a9"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a7266eb37d9dbd7343c138ced0d4c50a9">boost::asio::ssl::context::add_certificate_authority</a></div><div class="ttdeci">BOOST_ASIO_DECL void add_certificate_authority(const const_buffer &amp;ca)</div><div class="ttdoc">Add certification authority for performing verification.</div><div class="ttdef"><b>Definition:</b> context.ipp:557</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a566c1dd4acce1bd6251e499c347a4068"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a566c1dd4acce1bd6251e499c347a4068">boost::asio::ssl::context::native_handle</a></div><div class="ttdeci">BOOST_ASIO_DECL native_handle_type native_handle()</div><div class="ttdoc">Get the underlying implementation in the native type.</div><div class="ttdef"><b>Definition:</b> context.ipp:435</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_aaf6d736fd251e88acfc216b774d35870"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#aaf6d736fd251e88acfc216b774d35870">boost::asio::ssl::context::use_tmp_dh</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_tmp_dh(const const_buffer &amp;dh)</div><div class="ttdef"><b>Definition:</b> context.ipp:1063</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a773aedaf065c0cb68fa37e5577c3cbf5"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a773aedaf065c0cb68fa37e5577c3cbf5">boost::asio::ssl::context::use_private_key</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_private_key(const const_buffer &amp;private_key, file_format format)</div><div class="ttdoc">Use a private key from a memory buffer.</div><div class="ttdef"><b>Definition:</b> context.ipp:856</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_ab3bfad216b07734e9362bfd8e561f9ec"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#ab3bfad216b07734e9362bfd8e561f9ec">boost::asio::ssl::context::set_default_verify_paths</a></div><div class="ttdeci">BOOST_ASIO_DECL void set_default_verify_paths()</div><div class="ttdef"><b>Definition:</b> context.ipp:605</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a81b6ef2a9345a28e65d6bb4c7d4c7e3d"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a81b6ef2a9345a28e65d6bb4c7d4c7e3d">boost::asio::ssl::context::use_tmp_dh_file</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_tmp_dh_file(const std::string &amp;filename)</div><div class="ttdoc">Use the specified file to obtain the temporary Diffie-Hellman parameters.</div><div class="ttdef"><b>Definition:</b> context.ipp:1087</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1context_html_a4d273558f9a4ba5165c45559e19725d8"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1context.html#a4d273558f9a4ba5165c45559e19725d8">boost::asio::ssl::context::use_certificate_file</a></div><div class="ttdeci">BOOST_ASIO_DECL void use_certificate_file(const std::string &amp;filename, file_format format)</div><div class="ttdoc">Use a certificate from a file.</div><div class="ttdef"><b>Definition:</b> context.ipp:705</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1ssl_1_1detail_1_1openssl__init_html"><div class="ttname"><a href="classboost_1_1asio_1_1ssl_1_1detail_1_1openssl__init.html">boost::asio::ssl::detail::openssl_init</a></div><div class="ttdef"><b>Definition:</b> openssl_init.hpp:55</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1794b65aa62003e11b03e0565def47fa.html">external</a></li><li class="navelem"><a class="el" href="dir_c08529bcc08f755a4d16428f71043471.html">boost</a></li><li class="navelem"><a class="el" href="dir_08e916b1ba9423845cffef83795e9545.html">boost</a></li><li class="navelem"><a class="el" href="dir_95a6475d294165210308bf5d4f5823e3.html">asio</a></li><li class="navelem"><a class="el" href="dir_0a96a0fb4e756ff0b1f57080f0460ca0.html">ssl</a></li><li class="navelem"><b>context.hpp</b></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

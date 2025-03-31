@@ -23,18 +23,19 @@ namespace rpc {
 
 using RpcInterface              = interface::Rpc;
 using WebSocketClientInterface  = network::interface::WebSocketClient;
-using AuthTokenManagerInterface = token::interface::AuthTokenManager;
+
+const std::string kRapiReconnectThreadName = "rapi_reconnect";
 
 /// JSON-RPCモジュール
 class Rpc : public RpcInterface, public WebSocketClientInterface::Listener {
 public:
     /// コンストラクタ
-    Rpc(AuthTokenManagerInterface* auth,
+    Rpc(std::weak_ptr<token::interface::AuthTokenManager> auth,
         RpcInterface::Listener* listener,
         int timeout_for_send_ms = config::DEFAULT_TIMEOUT_FOR_SEND);
     ~Rpc();
     bool Connect(const std::string& domain, bool secure) override;
-    boost::optional<nlohmann::json> Request(const std::string& method,
+    std::optional<nlohmann::json> Request(const std::string& method,
                                             const nlohmann::json& params,
                                             const std::string& message_id) override;
     void Close() override;
@@ -59,12 +60,12 @@ private:
     bool IsErrorMessage(const nlohmann::json& message) const;
     bool IsNotifyMessage(const nlohmann::json& message) const;
     std::string GetEndpoint(const std::string& domain, bool secure) const;
-    boost::optional<nlohmann::json> Request(dto::RequestMessage message);
+    std::optional<nlohmann::json> Request(dto::RequestMessage message);
     void AddPendingRequest(dto::RequestMessage message);
     void ResolvePendingRequests();
     void Reconnect();
-
-    AuthTokenManagerInterface* auth_;
+    
+    std::weak_ptr<token::interface::AuthTokenManager> auth_;
     RpcInterface::Listener* listener_;
     std::atomic<State> state_;
     std::shared_ptr<WebSocketClientInterface> ws_;
@@ -73,7 +74,7 @@ private:
     std::mutex request_results_mtx_;
     using MessageId = std::string;
     // The type of value must be `dto::ResponseMessage` or `dto::ResponseErrorMessage`
-    std::unordered_map<MessageId, boost::optional<nlohmann::json>> request_results_;
+    std::unordered_map<MessageId, std::optional<nlohmann::json>> request_results_;
     std::mutex request_mtx_;
     int timeout_for_send_ms_;
 
@@ -83,7 +84,7 @@ private:
     std::atomic<bool> disconnected_while_requesting_;
     std::atomic<bool> is_closed_;
 
-    std::unique_ptr<global::interface::Worker> reconnect_worker_ = std::make_unique<global::Worker>();
+    std::unique_ptr<global::interface::Worker> reconnect_worker_ = std::make_unique<global::Worker>(kRapiReconnectThreadName);
 
 public:
     friend class RtcApiRpcTest;

@@ -16,8 +16,6 @@ namespace skyway {
 namespace plugin {
 namespace sfu_bot {
 
-using PublicationInterface = core::interface::Publication;
-
 // Defined as an outer class to avoid name collisions with member variables.
 /// @brief Fowardingの設定
 struct ForwardingConfigure {
@@ -39,7 +37,7 @@ public:
 
     Forwarding(const std::string& id,
                const ForwardingConfigure& configure,
-               PublicationInterface* relaying_publication,
+               std::shared_ptr<core::interface::Publication> relaying_publication,
                const std::string& identifier_key);
     ~Forwarding();
     /// @brief イベントを購読します。
@@ -58,9 +56,9 @@ public:
     /// @brief ForwardingConfigureを取得します。
     ForwardingConfigure Configure() const;
     /// @brief OriginPublicationを取得します。
-    PublicationInterface* OriginPublication() const;
+    std::shared_ptr<core::interface::Publication> OriginPublication() const;
     /// @brief RelayingPublicationを取得します。
-    PublicationInterface* RelayingPublication();
+    std::shared_ptr<core::interface::Publication> RelayingPublication();
     /// @brief IdentifierKeyを取得します。
     std::string IdentifierKey();
 
@@ -70,7 +68,7 @@ private:
     std::string id_;
     std::unordered_set<EventListener*> listeners_;
     ForwardingConfigure configure_;
-    PublicationInterface* relaying_publication_;
+    std::weak_ptr<core::interface::Publication> relaying_publication_;
     std::string identifier_key_;
     ForwardingState state_;
 };

@@ -9,7 +9,6 @@
 #ifndef SKYWAY_RTC_API_EVENT_OBSERVER_HPP_
 #define SKYWAY_RTC_API_EVENT_OBSERVER_HPP_
 
-#include <boost/optional.hpp>
 #include <json.hpp>
 #include <mutex>
 #include <set>
@@ -31,11 +30,11 @@ public:
     /// コンストラクタ
     /// - Parameters:
     ///   - version: 初期バージョン
-    ///   ChannelCreatedイベントが0なので、新しくChannelを作った場合はboost::noneを入力してください
+    ///   ChannelCreatedイベントが0なので、新しくChannelを作った場合はstd::nulloptを入力してください
     ///   - channel_id: チャンネルID
     ///   - event_listener_repository: イベントリスナーリポジトリ
     ///   - api: RAPIクライアント
-    EventObserver(const boost::optional<uint64_t> version,
+    EventObserver(const std::optional<uint64_t> version,
                   const std::string& channel_id,
                   interface::EventListenerRepository* event_listener_repository,
                   interface::ApiClient* api);
@@ -56,7 +55,7 @@ private:
     void JoinPacketLossCheckerThread();
     bool ResubscribingChannelEvents();
 
-    boost::optional<uint64_t> version_;
+    std::optional<uint64_t> version_;
     std::string channel_id_;
     interface::EventListenerRepository* event_listener_repository_;
     interface::ApiClient* api_;

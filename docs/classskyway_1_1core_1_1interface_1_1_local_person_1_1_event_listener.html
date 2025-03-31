@@ -1,56 +1,64 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SkyWay for Linux: skyway::core::interface::LocalPerson::EventListener クラス</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
-<script type="text/javascript" src="search/search.js"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellspacing="0" cellpadding="0">
- <tbody>
- <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
-  <td id="projectalign">
-   <div id="projectname">SkyWay for Linux
-   </div>
-  </td>
- </tr>
- </tbody>
-</table>
-</div>
-<!-- end header part -->
-<!-- 構築: Doxygen 1.9.8 -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -64,7 +72,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(document).ready(function(){initNavTree('classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -78,23 +86,17 @@ $(document).ready(function(){initNavTree('classskyway_1_1core_1_1interface_1_1_l
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">読み取り中…</div>
-<div class="SRStatus" id="Searching">検索中…</div>
-<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle"><div class="title">skyway::core::interface::LocalPerson::EventListener クラス</div></div>
+  <div class="headertitle">
+<div class="title">skyway::core::interface::LocalPerson::EventListener クラス</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -114,46 +116,46 @@ skyway::core::interface::LocalPerson::EventListener の継承関係図</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a0e7c5b66ec703983e794be81aad2670a" id="r_a0e7c5b66ec703983e794be81aad2670a"><td class="memItemLeft" align="right" valign="top"><a id="a0e7c5b66ec703983e794be81aad2670a" name="a0e7c5b66ec703983e794be81aad2670a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStreamPublished</b> (<a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">Publication</a> *publication)</td></tr>
-<tr class="memdesc:a0e7c5b66ec703983e794be81aad2670a"><td class="mdescLeft">&#160;</td><td class="mdescRight">このLocalPersonがPublishした時に発火するイベント <br /></td></tr>
-<tr class="separator:a0e7c5b66ec703983e794be81aad2670a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af458dec0a919ead00347a7644bd194db" id="r_af458dec0a919ead00347a7644bd194db"><td class="memItemLeft" align="right" valign="top"><a id="af458dec0a919ead00347a7644bd194db" name="af458dec0a919ead00347a7644bd194db"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStreamUnpublished</b> (<a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">Publication</a> *publication)</td></tr>
-<tr class="memdesc:af458dec0a919ead00347a7644bd194db"><td class="mdescLeft">&#160;</td><td class="mdescRight">このLocalPersonがUnpublishした時に発火するイベント <br /></td></tr>
-<tr class="separator:af458dec0a919ead00347a7644bd194db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91ddb88656d0d206fd1d1ff5ed7c8e1c" id="r_a91ddb88656d0d206fd1d1ff5ed7c8e1c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html#a91ddb88656d0d206fd1d1ff5ed7c8e1c">OnPublicationSubscribed</a> (<a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">Subscription</a> *subscription)</td></tr>
-<tr class="memdesc:a91ddb88656d0d206fd1d1ff5ed7c8e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">このLocalPersonがSubscribeした時に発火するイベント  <br /></td></tr>
-<tr class="separator:a91ddb88656d0d206fd1d1ff5ed7c8e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f7d3dd19d393f21e94449872da0bc3e" id="r_a8f7d3dd19d393f21e94449872da0bc3e"><td class="memItemLeft" align="right" valign="top"><a id="a8f7d3dd19d393f21e94449872da0bc3e" name="a8f7d3dd19d393f21e94449872da0bc3e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPublicationUnsubscribed</b> (<a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">Subscription</a> *subscription)</td></tr>
-<tr class="memdesc:a8f7d3dd19d393f21e94449872da0bc3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">このLocalPersonがUnsubscribeした時に発火するイベント <br /></td></tr>
-<tr class="separator:a8f7d3dd19d393f21e94449872da0bc3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d211845455aa44f626f5512799b40a0"><td class="memItemLeft" align="right" valign="top"><a id="a9d211845455aa44f626f5512799b40a0"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html#a9d211845455aa44f626f5512799b40a0">OnStreamPublished</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">interface::Publication</a> &gt; publication)</td></tr>
+<tr class="memdesc:a9d211845455aa44f626f5512799b40a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">このLocalPersonがPublishした時に発火するイベント <br /></td></tr>
+<tr class="separator:a9d211845455aa44f626f5512799b40a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a137daf818b6dcfa7699a416a2d16b924"><td class="memItemLeft" align="right" valign="top"><a id="a137daf818b6dcfa7699a416a2d16b924"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html#a137daf818b6dcfa7699a416a2d16b924">OnStreamUnpublished</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">interface::Publication</a> &gt; publication)</td></tr>
+<tr class="memdesc:a137daf818b6dcfa7699a416a2d16b924"><td class="mdescLeft">&#160;</td><td class="mdescRight">このLocalPersonがUnpublishした時に発火するイベント <br /></td></tr>
+<tr class="separator:a137daf818b6dcfa7699a416a2d16b924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac95e7865f26e468dce07bca2543ea61a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html#ac95e7865f26e468dce07bca2543ea61a">OnPublicationSubscribed</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">interface::Subscription</a> &gt; subscription)</td></tr>
+<tr class="memdesc:ac95e7865f26e468dce07bca2543ea61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">このLocalPersonがSubscribeした時に発火するイベント  <a href="classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html#ac95e7865f26e468dce07bca2543ea61a">[詳解]</a><br /></td></tr>
+<tr class="separator:ac95e7865f26e468dce07bca2543ea61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ed65205ee43951a2acd49c20ed50f5"><td class="memItemLeft" align="right" valign="top"><a id="a94ed65205ee43951a2acd49c20ed50f5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html#a94ed65205ee43951a2acd49c20ed50f5">OnPublicationUnsubscribed</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">interface::Subscription</a> &gt; subscription)</td></tr>
+<tr class="memdesc:a94ed65205ee43951a2acd49c20ed50f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">このLocalPersonがUnsubscribeした時に発火するイベント <br /></td></tr>
+<tr class="separator:a94ed65205ee43951a2acd49c20ed50f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">skyway::core::interface::Member::EventListener</a> に属する継承公開メンバ関数</td></tr>
-<tr class="memitem:a5f79390748cd3cbf77df6dfc21b17dee inherit pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener" id="r_a5f79390748cd3cbf77df6dfc21b17dee"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnLeft</b> ()</td></tr>
+<tr class="memitem:a5f79390748cd3cbf77df6dfc21b17dee inherit pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener"><td class="memItemLeft" align="right" valign="top"><a id="a5f79390748cd3cbf77df6dfc21b17dee"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#a5f79390748cd3cbf77df6dfc21b17dee">OnLeft</a> ()</td></tr>
 <tr class="memdesc:a5f79390748cd3cbf77df6dfc21b17dee inherit pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">MemberがChannelから退出した時に発火するイベント <br /></td></tr>
 <tr class="separator:a5f79390748cd3cbf77df6dfc21b17dee inherit pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaa30f3d77716e012391954ba0cbb385 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener" id="r_aaaa30f3d77716e012391954ba0cbb385"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnMetadataUpdated</b> (const std::string &amp;metadata)</td></tr>
+<tr class="memitem:aaaa30f3d77716e012391954ba0cbb385 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener"><td class="memItemLeft" align="right" valign="top"><a id="aaaa30f3d77716e012391954ba0cbb385"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#aaaa30f3d77716e012391954ba0cbb385">OnMetadataUpdated</a> (const std::string &amp;metadata)</td></tr>
 <tr class="memdesc:aaaa30f3d77716e012391954ba0cbb385 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">MemberのMetadataが更新した時に発火するイベント <br /></td></tr>
 <tr class="separator:aaaa30f3d77716e012391954ba0cbb385 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa129d4cf558f6d06de8ff45657e4b191 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener" id="r_aa129d4cf558f6d06de8ff45657e4b191"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPublicationListChanged</b> ()</td></tr>
+<tr class="memitem:aa129d4cf558f6d06de8ff45657e4b191 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener"><td class="memItemLeft" align="right" valign="top"><a id="aa129d4cf558f6d06de8ff45657e4b191"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#aa129d4cf558f6d06de8ff45657e4b191">OnPublicationListChanged</a> ()</td></tr>
 <tr class="memdesc:aa129d4cf558f6d06de8ff45657e4b191 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">MemberのPublicationの一覧が更新した時に発火するイベント <br /></td></tr>
 <tr class="separator:aa129d4cf558f6d06de8ff45657e4b191 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e5362dfe0da66475a4e80c858b4a321 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener" id="r_a2e5362dfe0da66475a4e80c858b4a321"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnSubscriptionListChanged</b> ()</td></tr>
+<tr class="memitem:a2e5362dfe0da66475a4e80c858b4a321 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener"><td class="memItemLeft" align="right" valign="top"><a id="a2e5362dfe0da66475a4e80c858b4a321"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#a2e5362dfe0da66475a4e80c858b4a321">OnSubscriptionListChanged</a> ()</td></tr>
 <tr class="memdesc:a2e5362dfe0da66475a4e80c858b4a321 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">MemberのSubscriptionの一覧が更新した時に発火するイベント <br /></td></tr>
 <tr class="separator:a2e5362dfe0da66475a4e80c858b4a321 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>イベントリスナ </p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="a91ddb88656d0d206fd1d1ff5ed7c8e1c" name="a91ddb88656d0d206fd1d1ff5ed7c8e1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91ddb88656d0d206fd1d1ff5ed7c8e1c">&#9670;&#160;</a></span>OnPublicationSubscribed()</h2>
+<a id="ac95e7865f26e468dce07bca2543ea61a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac95e7865f26e468dce07bca2543ea61a">&#9670;&nbsp;</a></span>OnPublicationSubscribed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -164,7 +166,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnSubscriptio
         <tr>
           <td class="memname">virtual void skyway::core::interface::LocalPerson::EventListener::OnPublicationSubscribed </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">Subscription</a> *&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">interface::Subscription</a> &gt;&#160;</td>
           <td class="paramname"><em>subscription</em></td><td>)</td>
           <td></td>
         </tr>
@@ -195,7 +197,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnSubscriptio
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>skyway</b></li><li class="navelem"><b>core</b></li><li class="navelem"><b>interface</b></li><li class="navelem"><a class="el" href="classskyway_1_1core_1_1interface_1_1_local_person.html">LocalPerson</a></li><li class="navelem"><a class="el" href="classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html">EventListener</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

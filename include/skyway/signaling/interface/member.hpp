@@ -9,9 +9,10 @@
 #ifndef SKYWAY_SIGNALING_INTERFACE_MEMBER_HPP_
 #define SKYWAY_SIGNALING_INTERFACE_MEMBER_HPP_
 
-#include <boost/optional.hpp>
-#include <json.hpp>
 #include <string>
+#include <optional>
+
+#include <json.hpp>
 
 namespace skyway {
 namespace signaling {
@@ -19,7 +20,7 @@ namespace interface {
 
 struct Member {
     std::string id;
-    boost::optional<std::string> name;
+    std::optional<std::string> name;
     bool operator==(const Member& rhs) const { return id == rhs.id && name == rhs.name; }
     bool operator!=(const Member& rhs) const { return id != rhs.id || name != rhs.name; }
 };

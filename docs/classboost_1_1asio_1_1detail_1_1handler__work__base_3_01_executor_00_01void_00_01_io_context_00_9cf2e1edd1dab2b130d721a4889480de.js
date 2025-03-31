@@ -1,0 +1,6 @@
+var classboost_1_1asio_1_1detail_1_1handler__work__base_3_01_executor_00_01void_00_01_io_context_00_9cf2e1edd1dab2b130d721a4889480de =
+[
+    [ "handler_work_base", "classboost_1_1asio_1_1detail_1_1handler__work__base_3_01_executor_00_01void_00_01_io_context_00_9cf2e1edd1dab2b130d721a4889480de.html#a0a727ab8e5e196e4afc0f78e28766c32", null ],
+    [ "dispatch", "classboost_1_1asio_1_1detail_1_1handler__work__base_3_01_executor_00_01void_00_01_io_context_00_9cf2e1edd1dab2b130d721a4889480de.html#a97e43d07dec453dad6d25180fd70e033", null ],
+    [ "owns_work", "classboost_1_1asio_1_1detail_1_1handler__work__base_3_01_executor_00_01void_00_01_io_context_00_9cf2e1edd1dab2b130d721a4889480de.html#aa406a4158796fe8f554b798919511df3", null ]
+];

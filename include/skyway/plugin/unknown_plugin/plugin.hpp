@@ -20,7 +20,7 @@ class Plugin : public core::interface::RemoteMemberPlugin {
 public:
     std::string GetSubtype() const override;
     /// @cond INTERNAL_SECTION
-    std::unique_ptr<core::interface::RemoteMember> Create(core::interface::Channel* channel,
+    std::shared_ptr<core::interface::RemoteMember> Create(std::shared_ptr<core::interface::Channel> channel,
                                                           const model::Member& dto) const override;
     /// @endcond
 };

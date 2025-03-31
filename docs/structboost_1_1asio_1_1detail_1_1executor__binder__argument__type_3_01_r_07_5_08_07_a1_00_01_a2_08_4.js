@@ -1,0 +1,5 @@
+var structboost_1_1asio_1_1detail_1_1executor__binder__argument__type_3_01_r_07_5_08_07_a1_00_01_a2_08_4 =
+[
+    [ "first_argument_type", "structboost_1_1asio_1_1detail_1_1executor__binder__argument__type_3_01_r_07_5_08_07_a1_00_01_a2_08_4.html#a77621364a7f7020a7603c5a56f772088", null ],
+    [ "second_argument_type", "structboost_1_1asio_1_1detail_1_1executor__binder__argument__type_3_01_r_07_5_08_07_a1_00_01_a2_08_4.html#a4b13dd092445999b955c0a4c44c7e6ab", null ]
+];

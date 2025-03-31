@@ -32,7 +32,7 @@ public:
     };
     class InternalListener {
     public:
-        virtual void OnWriteData(const SendingData& buffer,
+        virtual bool OnWriteData(const SendingData& buffer,
                                  const PublicationId& publication_id) = 0;
     };
     /// @endcond
@@ -45,9 +45,9 @@ public:
                                 const PublicationId& publication_id);
     /// @endcond
     /// @brief 文字列を送信します。
-    void Write(const std::string& data) const;
+    bool Write(const std::string& data) const;
     /// @brief バイト列を送信します。
-    void Write(const uint8_t* data, size_t length) const;
+    bool Write(const uint8_t* data, size_t length) const;
 
     /// @cond INTERNAL_SECTION
     /// @brief Dataの送信を開始します。

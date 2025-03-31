@@ -9,15 +9,14 @@
 #ifndef SKYWAY_SKYWAY_HPP_
 #define SKYWAY_SKYWAY_HPP_
 
-#include <boost/optional.hpp>
 #include <string>
 
 namespace skyway {
 
 // General
-static const unsigned VERSION_MAJOR = 2;
-static const unsigned VERSION_MINOR = 1;
-static const unsigned VERSION_PATCH = 3;
+static const unsigned VERSION_MAJOR = 4;
+static const unsigned VERSION_MINOR = 0;
+static const unsigned VERSION_PATCH = 0;
 
 inline std::string GetVersionString() {
     // clang-format off

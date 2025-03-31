@@ -1,0 +1,4 @@
+var structabsl_1_1variant__internal_1_1_num_cases_of_switch_3_01_head_num_alternatives_00_01_tail_num_alternatives_8_8_8_01_4 =
+[
+    [ "value", "structabsl_1_1variant__internal_1_1_num_cases_of_switch_3_01_head_num_alternatives_00_01_tail_num_alternatives_8_8_8_01_4.html#a442cbcab52b22d31e4c36a9665323321", null ]
+];

@@ -31,11 +31,11 @@ public:
 
         /// @brief このPublicationがSubscribeされた後に発生するイベント
         /// @param subscription RoomSubscription
-        virtual void OnSubscribed(std::unique_ptr<RoomSubscription> subscription) {}
+        virtual void OnSubscribed(std::shared_ptr<RoomSubscription> subscription) {}
 
         /// @brief このPublicationがUnsubscribeされた後に発生するイベント
         /// @param subscription RoomSubscription
-        virtual void OnUnsubscribed(std::unique_ptr<RoomSubscription> subscription) {}
+        virtual void OnUnsubscribed(std::shared_ptr<RoomSubscription> subscription) {}
 
         /// @brief このPublicationに紐づくSubscriptionの数が変化した後に発生するイベント
         virtual void OnSubscriptionListChanged() {}
@@ -61,13 +61,13 @@ public:
     /// @brief Idを取得します。
     virtual std::string Id() = 0;
     /// @brief このPublicationを公開しているMemberを取得します。
-    virtual std::unique_ptr<RoomMember> Publisher() = 0;
+    virtual std::shared_ptr<RoomMember> Publisher() = 0;
     /// @brief このPublicationを購読しているSubsciptionの一覧を取得します。
-    virtual std::vector<std::unique_ptr<RoomSubscription>> Subscriptions() = 0;
+    virtual std::vector<std::shared_ptr<RoomSubscription>> Subscriptions() = 0;
     /// @brief ContentType(VideoかAudioかDataか)を取得します。
     virtual model::ContentType ContentType() = 0;
     /// @brief Metadataを取得します。
-    virtual boost::optional<std::string> Metadata() = 0;
+    virtual std::optional<std::string> Metadata() = 0;
     /// @brief このPublicationのコーデック一覧を取得します。
     virtual std::vector<model::Codec> CodecCapabilities() = 0;
     /// @brief このPublicationのエンコーディング設定の一覧を取得します。
@@ -83,14 +83,14 @@ public:
     /// @brief Metadataを更新します。
     virtual bool UpdateMetadata(const std::string& metadata) = 0;
     /// @brief エンコーディング設定を更新します。
-    virtual void UpdateEncodings(std::vector<model::Encoding> encodings) = 0;
+    virtual bool UpdateEncodings(std::vector<model::Encoding> encodings) = 0;
     /// @brief 公開しているStreamを変更します。
     virtual bool ReplaceStream(std::shared_ptr<core::interface::LocalStream> stream) = 0;
     /// @deprecated 本機能は非推奨です。
     /// @brief 統計情報を取得します。
     /// @details 試験的なAPIです。今後インターフェースや仕様が変更される可能性があります。
     /// @param selector 取得対象のmemberID
-    [[deprecated]] virtual boost::optional<model::WebRTCStats> GetStats(
+    [[deprecated]] virtual std::optional<model::WebRTCStats> GetStats(
         const std::string& selector) = 0;
     /// @deprecated 本機能は非推奨です。
     /// @brief Publishを中止します。

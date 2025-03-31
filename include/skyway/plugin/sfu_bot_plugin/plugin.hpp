@@ -24,9 +24,6 @@ namespace plugin {
 namespace sfu_bot {
 
 using PluginInterface       = core::interface::RemoteMemberPlugin;
-using MemberInterface       = core::interface::Member;
-using RemoteMemberInterface = core::interface::RemoteMember;
-using ChannelInterface      = core::interface::Channel;
 using HttpClientInterface   = network::interface::HttpClient;
 
 /// @brief SfuBotのPlugin
@@ -37,27 +34,27 @@ public:
            sfu_options::SfuOptionsParams sfu_options);
     std::string GetSubtype() const override;
     /// @cond INTERNAL_SECTION
-    std::unique_ptr<RemoteMemberInterface> Create(ChannelInterface* channel,
+    std::shared_ptr<core::interface::RemoteMember> Create(std::shared_ptr<core::interface::Channel> channel,
                                                   const model::Member& member_dto) const override;
     /// @endcond
     /// @brief SFUBotを作成します。
-    SfuBot* CreateBot(ChannelInterface* channel);
+    std::shared_ptr<SfuBot> CreateBot(std::shared_ptr<core::interface::Channel> channel);
     /// @brief SFUBotを削除します。
-    bool DeleteBot(SfuBot* sfu_bot);
+    bool DeleteBot(std::shared_ptr<SfuBot> sfu_bot);
 
     // PluginInterface
     void OnLocalPersonDisposed(const std::string& local_person_id) override;
 
 private:
-    class BotCreationListener : public ChannelInterface::EventListener {
+    class BotCreationListener : public core::interface::Channel::EventListener {
     public:
-        SfuBot* WaitForBotCreation(const std::string& bot_id);
+        std::shared_ptr<SfuBot> WaitForBotCreation(const std::string& bot_id);
 
     private:
         // Impl ChannelEventListener
-        void OnMemberJoined(MemberInterface* member) override;
+        void OnMemberJoined(std::shared_ptr<core::interface::Member> member) override;
         std::mutex candidate_bots_mtx_;
-        std::vector<SfuBot*> candidate_bots_;
+        std::vector<std::weak_ptr<SfuBot>> candidate_bots_;
     };
 
     std::unique_ptr<interface::SfuApiClient> client_;

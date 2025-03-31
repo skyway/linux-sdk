@@ -35,35 +35,36 @@ public:
     /// このAPIをコールする前に`SetRoom`をコールする必要があります。
     ///
     /// - Parameter core: Core Member
-    virtual std::unique_ptr<RoomMember> CreateRoomMember(core::interface::Member* core) = 0;
+    virtual std::shared_ptr<RoomMember> CreateRoomMember(
+        std::shared_ptr<core::interface::Member> core) = 0;
 
     /// LocalMemberを生成します。
     ///
     /// このAPIをコールする前に`SetRoom`をコールする必要があります。
     ///
     /// - Parameter person: Core Member
-    virtual std::unique_ptr<LocalRoomMember> CreateLocalRoomMember(
-        core::interface::LocalPerson* person) = 0;
+    virtual std::shared_ptr<LocalRoomMember> CreateLocalRoomMember(
+        std::shared_ptr<core::interface::LocalPerson> person) = 0;
 
     /// RemoteMemberを生成します。
     ///
     /// このAPIをコールする前に`SetRoom`をコールする必要があります。
     ///
     /// - Parameter core: Core Member
-    virtual std::unique_ptr<RemoteRoomMember> CreateRemoteRoomMember(
-        plugin::remote_person::RemotePerson* person) = 0;
+    virtual std::shared_ptr<RemoteRoomMember> CreateRemoteRoomMember(
+        std::shared_ptr<plugin::remote_person::RemotePerson> person) = 0;
 
     /// Publicationを生成します。
     ///
     /// - Parameter core: Core Publication
-    virtual std::unique_ptr<RoomPublication> CreateRoomPublication(
-        core::interface::Publication* core) = 0;
+    virtual std::shared_ptr<RoomPublication> CreateRoomPublication(
+        std::shared_ptr<core::interface::Publication> core) = 0;
 
     /// Subscriptionを生成します。
     ///
     /// - Parameter core: Core Subscription
-    virtual std::unique_ptr<RoomSubscription> CreateRoomSubscription(
-        core::interface::Subscription* core) = 0;
+    virtual std::shared_ptr<RoomSubscription> CreateRoomSubscription(
+        std::shared_ptr<core::interface::Subscription> core) = 0;
 };
 
 }  // namespace interface

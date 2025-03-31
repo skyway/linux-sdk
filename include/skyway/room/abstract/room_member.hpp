@@ -22,29 +22,29 @@ class RoomMember : public virtual interface::RoomMember {
 public:
     virtual ~RoomMember();
 
-    boost::optional<std::string> RoomId() override;
-    boost::optional<std::string> RoomName() override;
+    std::optional<std::string> RoomId() override;
+    std::optional<std::string> RoomName() override;
     std::string Id() override;
-    boost::optional<std::string> Name() override;
-    boost::optional<std::string> Metadata() override;
+    std::optional<std::string> Name() override;
+    std::optional<std::string> Metadata() override;
     model::MemberType Type() override;
     std::string Subtype() override;
     model::Side Side() override;
     core::interface::MemberState State() override;
 
-    std::vector<std::unique_ptr<interface::RoomPublication>> Publications() override;
-    std::vector<std::unique_ptr<interface::RoomSubscription>> Subscriptions() override;
+    std::vector<std::shared_ptr<interface::RoomPublication>> Publications() override;
+    std::vector<std::shared_ptr<interface::RoomSubscription>> Subscriptions() override;
 
     bool UpdateMetadata(const std::string& metadata) override;
     bool Leave() override;
 
 protected:
-    RoomMember(core::interface::Member* core,
+    RoomMember(std::shared_ptr<core::interface::Member> core,
                std::shared_ptr<interface::Room> room,
                interface::RoomDomainFactory* factory);
 
-    core::interface::Member* core_;
-    std::shared_ptr<interface::Room> room_;
+    std::shared_ptr<core::interface::Member> core_;
+    std::weak_ptr<interface::Room> room_;
     interface::RoomDomainFactory* factory_;
 };
 

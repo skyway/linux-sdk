@@ -1,0 +1,4 @@
+var structboost_1_1allocator__const__void__pointer_3_01_a_00_01typename_01detail_1_1alloc__void_3_01a73369f96b2b8fbc09ef6ea3682f230a =
+[
+    [ "type", "structboost_1_1allocator__const__void__pointer_3_01_a_00_01typename_01detail_1_1alloc__void_3_01a73369f96b2b8fbc09ef6ea3682f230a.html#a711de45ddc3d6af1efec1bb841801411", null ]
+];

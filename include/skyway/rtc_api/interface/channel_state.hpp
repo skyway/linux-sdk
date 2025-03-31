@@ -29,14 +29,12 @@ public:
         virtual void OnPublicationMetadataUpdated(const model::Publication& publication) {}
         virtual void OnPublicationSubscribed(const model::Subscription& subscription) {}
         virtual void OnPublicationUnsubscribed(const std::string& subscription_id) {}
-        virtual void OnSubscriptionEnabled(const model::Subscription& subscription) {}
-        virtual void OnSubscriptionDisabled(const model::Subscription& subscription) {}
     };
     virtual ~ChannelState() = default;
 
     virtual std::string Id()                                 = 0;
-    virtual boost::optional<std::string> Name()              = 0;
-    virtual boost::optional<std::string> Metadata()          = 0;
+    virtual std::optional<std::string> Name()                = 0;
+    virtual std::optional<std::string> Metadata()            = 0;
     virtual std::vector<model::Member> Members()             = 0;
     virtual std::vector<model::Publication> Publications()   = 0;
     virtual std::vector<model::Subscription> Subscriptions() = 0;

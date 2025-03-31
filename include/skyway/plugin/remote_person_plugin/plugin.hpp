@@ -19,8 +19,6 @@ namespace plugin {
 namespace remote_person {
 
 using PluginInterface       = core::interface::RemoteMemberPlugin;
-using RemoteMemberInterface = core::interface::RemoteMember;
-using ChannelInterface      = core::interface::Channel;
 
 /// @brief RemotePersonのPlugin
 class Plugin : public PluginInterface {
@@ -28,7 +26,7 @@ public:
     Plugin(rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory);
     std::string GetSubtype() const override;
     /// @cond INTERNAL_SECTION
-    std::unique_ptr<RemoteMemberInterface> Create(ChannelInterface* channel,
+    std::shared_ptr<core::interface::RemoteMember> Create(std::shared_ptr<core::interface::Channel> channel,
                                                   const model::Member& member_dto) const override;
     /// @endcond
 

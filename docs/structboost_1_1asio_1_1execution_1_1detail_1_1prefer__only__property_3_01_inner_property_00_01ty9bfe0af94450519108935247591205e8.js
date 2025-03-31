@@ -1,0 +1,6 @@
+var structboost_1_1asio_1_1execution_1_1detail_1_1prefer__only__property_3_01_inner_property_00_01ty9bfe0af94450519108935247591205e8 =
+[
+    [ "prefer_only_property", "structboost_1_1asio_1_1execution_1_1detail_1_1prefer__only__property_3_01_inner_property_00_01ty9bfe0af94450519108935247591205e8.html#aeb4923890be31d9e8cd439bdbcb5406e", null ],
+    [ "value", "structboost_1_1asio_1_1execution_1_1detail_1_1prefer__only__property_3_01_inner_property_00_01ty9bfe0af94450519108935247591205e8.html#a6de51ef3fde0b0e769d2bc4b7d2f4f04", null ],
+    [ "property", "structboost_1_1asio_1_1execution_1_1detail_1_1prefer__only__property_3_01_inner_property_00_01ty9bfe0af94450519108935247591205e8.html#a338b0388ec5c2c00b34a8d5b2f11e165", null ]
+];

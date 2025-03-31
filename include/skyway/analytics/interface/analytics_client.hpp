@@ -9,7 +9,6 @@
 #ifndef SKYWAY_ANALYTICS_INTERFACE_ANALYTICS_CLIENT_HPP_
 #define SKYWAY_ANALYTICS_INTERFACE_ANALYTICS_CLIENT_HPP_
 
-#include <boost/optional.hpp>
 #include <future>
 
 #include "skyway/analytics/client_event.hpp"
@@ -42,8 +41,8 @@ public:
     };
 
     struct Options {
-        boost::optional<std::string> analytics_domain;
-        boost::optional<bool> use_secure_protocol;
+        std::optional<std::string> analytics_domain;
+        std::optional<bool> use_secure_protocol;
     };
 
     virtual ~AnalyticsClient() = default;

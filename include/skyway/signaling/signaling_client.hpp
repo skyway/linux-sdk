@@ -15,6 +15,7 @@
 #include <unordered_set>
 
 #include "skyway/signaling/client_event.hpp"
+#include "skyway/signaling/config.hpp"
 #include "skyway/signaling/dto/payload.hpp"
 #include "skyway/signaling/dto/response.hpp"
 #include "skyway/signaling/interface/signaling_client.hpp"
@@ -28,16 +29,24 @@ namespace signaling {
 using SignalingClientInterface         = interface::SignalingClient;
 using Member                           = interface::Member;
 using SocketListener                   = SocketInterface::Listener;
-using AuthTokenManagerInterface        = token::interface::AuthTokenManager;
 using AuthTokenManagerInternalListener = token::interface::AuthTokenManager::InternalListener;
+
+const std::string kSignalingWebSocketThreadName           = "sign_websocket";
 
 class SignalingClient : public SignalingClientInterface,
                         public SocketListener,
                         public AuthTokenManagerInternalListener {
 public:
-    SignalingClient(AuthTokenManagerInterface* auth, std::unique_ptr<SocketInterface> socket);
+    SignalingClient(std::weak_ptr<token::interface::AuthTokenManager> auth, std::unique_ptr<SocketInterface> socket);
 
     ~SignalingClient();
+
+    /**
+     * DNATIVE-2856
+     * For disturbing Request's SpinLock when P2PConnection close
+     */
+    void InterruptBlocking(const std::string&  member_id) override;
+    void ResetBlocking(const std::string&  member_id) override;
 
     void AddListener(SignalingClientInterface::Listener* listener) override;
     void RemoveListener(SignalingClientInterface::Listener* listener) override;
@@ -46,14 +55,17 @@ public:
 
     dto::RequestResult Request(const Member& target,
                                const nlohmann::json& data,
-                               const int timeout_sec) override;
+                               const int timeout_sec,
+                               const bool skip_response_wait = false) override;
 
-    dto::RequestResult Request(const Member& target, const nlohmann::json& data) override;
+    dto::RequestResult Request(const Member& target, const nlohmann::json& data, const bool skip_response_wait = false) override;
     // SocketListener
     void OnConnectionFailed() override;
     void OnDataReceived(const nlohmann::json& data) override;
 
 private:
+
+    bool IsBlocking(const std::string & member_id);
     bool StartConnectivityCheck(int interval_sec);
 
     bool StopConnectivityCheck();
@@ -71,8 +83,9 @@ private:
 
     // AuthTokenManager::InternalListener
     void OnTokenUpdated(const token::AuthToken* token) override;
-
-    AuthTokenManagerInterface* auth_;
+                            
+    std::weak_ptr<token::interface::AuthTokenManager> auth_;
+                            
     std::unique_ptr<SocketInterface> socket_;
 
     std::atomic<bool> is_sending_connectivity_check_;
@@ -93,7 +106,12 @@ private:
 
     SignalingClientInterface::Delegator* delegator_;
 
-    std::unique_ptr<global::interface::Worker> worker_ = std::make_unique<skyway::global::Worker>();
+    std::unique_ptr<global::interface::Worker> worker_ = std::make_unique<skyway::global::Worker>(kSignalingWebSocketThreadName);
+
+    std::atomic<bool> interrupt_blocking_ = false;
+
+    std::mutex interrupt_blocking_map_mtx_;
+    std::unordered_map<std::string, bool> interrupt_blocking_map_;
 
 public:
     friend class SignalingClientTest;

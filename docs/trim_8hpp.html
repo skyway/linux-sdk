@@ -1,0 +1,932 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('trim_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">名前空間</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">trim.hpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;boost/algorithm/string/config.hpp&gt;</code><br />
+<code>#include &lt;boost/range/begin.hpp&gt;</code><br />
+<code>#include &lt;boost/range/end.hpp&gt;</code><br />
+<code>#include &lt;boost/range/const_iterator.hpp&gt;</code><br />
+<code>#include &lt;boost/range/as_literal.hpp&gt;</code><br />
+<code>#include &lt;<a class="el" href="iterator__range__core_8hpp_source.html">boost/range/iterator_range_core.hpp</a>&gt;</code><br />
+<code>#include &lt;boost/algorithm/string/detail/trim.hpp&gt;</code><br />
+<code>#include &lt;<a class="el" href="classification_8hpp_source.html">boost/algorithm/string/classification.hpp</a>&gt;</code><br />
+<code>#include &lt;locale&gt;</code><br />
+</div>
+<p><a href="trim_8hpp_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+名前空間</h2></td></tr>
+<tr class="memitem:namespaceboost"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceboost.html">boost</a></td></tr>
+<tr class="memdesc:namespaceboost"><td class="mdescLeft">&#160;</td><td class="mdescRight">defined(BOOST_MOVE_DOXYGEN_INVOKED) <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:aad94e1494537960ac33cef299f88c3a5"><td class="memTemplParams" colspan="2">template&lt;typename OutputIteratorT , typename RangeT , typename PredicateT &gt; </td></tr>
+<tr class="memitem:aad94e1494537960ac33cef299f88c3a5"><td class="memTemplItemLeft" align="right" valign="top">OutputIteratorT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="trim_8hpp.html#aad94e1494537960ac33cef299f88c3a5">boost::algorithm::trim_left_copy_if</a> (OutputIteratorT Output, const RangeT &amp;Input, PredicateT IsSpace)</td></tr>
+<tr class="memdesc:aad94e1494537960ac33cef299f88c3a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Left trim - parametric  <a href="trim_8hpp.html#aad94e1494537960ac33cef299f88c3a5">[詳解]</a><br /></td></tr>
+<tr class="separator:aad94e1494537960ac33cef299f88c3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acccef591ee294ce19c50560398c658d0"><td class="memTemplParams" colspan="2">template&lt;typename SequenceT , typename PredicateT &gt; </td></tr>
+<tr class="memitem:acccef591ee294ce19c50560398c658d0"><td class="memTemplItemLeft" align="right" valign="top">SequenceT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="trim_8hpp.html#acccef591ee294ce19c50560398c658d0">boost::algorithm::trim_left_copy_if</a> (const SequenceT &amp;Input, PredicateT IsSpace)</td></tr>
+<tr class="memdesc:acccef591ee294ce19c50560398c658d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Left trim - parametric  <a href="trim_8hpp.html#acccef591ee294ce19c50560398c658d0">[詳解]</a><br /></td></tr>
+<tr class="separator:acccef591ee294ce19c50560398c658d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e4f04d85034293dbde7369487f9799"><td class="memTemplParams" colspan="2">template&lt;typename SequenceT &gt; </td></tr>
+<tr class="memitem:a31e4f04d85034293dbde7369487f9799"><td class="memTemplItemLeft" align="right" valign="top">SequenceT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="trim_8hpp.html#a31e4f04d85034293dbde7369487f9799">boost::algorithm::trim_left_copy</a> (const SequenceT &amp;Input, const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:a31e4f04d85034293dbde7369487f9799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Left trim - parametric  <a href="trim_8hpp.html#a31e4f04d85034293dbde7369487f9799">[詳解]</a><br /></td></tr>
+<tr class="separator:a31e4f04d85034293dbde7369487f9799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a439753f43b1c4df234de500b6d5adb0d"><td class="memTemplParams" colspan="2">template&lt;typename SequenceT , typename PredicateT &gt; </td></tr>
+<tr class="memitem:a439753f43b1c4df234de500b6d5adb0d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="trim_8hpp.html#a439753f43b1c4df234de500b6d5adb0d">boost::algorithm::trim_left_if</a> (SequenceT &amp;Input, PredicateT IsSpace)</td></tr>
+<tr class="memdesc:a439753f43b1c4df234de500b6d5adb0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Left trim  <a href="trim_8hpp.html#a439753f43b1c4df234de500b6d5adb0d">[詳解]</a><br /></td></tr>
+<tr class="separator:a439753f43b1c4df234de500b6d5adb0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f44d7580f087f131d01c19aa0b746c3"><td class="memTemplParams" colspan="2">template&lt;typename SequenceT &gt; </td></tr>
+<tr class="memitem:a4f44d7580f087f131d01c19aa0b746c3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="trim_8hpp.html#a4f44d7580f087f131d01c19aa0b746c3">boost::algorithm::trim_left</a> (SequenceT &amp;Input, const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:a4f44d7580f087f131d01c19aa0b746c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Left trim  <a href="trim_8hpp.html#a4f44d7580f087f131d01c19aa0b746c3">[詳解]</a><br /></td></tr>
+<tr class="separator:a4f44d7580f087f131d01c19aa0b746c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9b83ac6a5cce5ff6a8159211dc6f5f0"><td class="memTemplParams" colspan="2">template&lt;typename OutputIteratorT , typename RangeT , typename PredicateT &gt; </td></tr>
+<tr class="memitem:ac9b83ac6a5cce5ff6a8159211dc6f5f0"><td class="memTemplItemLeft" align="right" valign="top">OutputIteratorT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="trim_8hpp.html#ac9b83ac6a5cce5ff6a8159211dc6f5f0">boost::algorithm::trim_right_copy_if</a> (OutputIteratorT Output, const RangeT &amp;Input, PredicateT IsSpace)</td></tr>
+<tr class="memdesc:ac9b83ac6a5cce5ff6a8159211dc6f5f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Right trim - parametric  <a href="trim_8hpp.html#ac9b83ac6a5cce5ff6a8159211dc6f5f0">[詳解]</a><br /></td></tr>
+<tr class="separator:ac9b83ac6a5cce5ff6a8159211dc6f5f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ca87c03ffd7e48069b8dc8ded9c9773"><td class="memTemplParams" colspan="2">template&lt;typename SequenceT , typename PredicateT &gt; </td></tr>
+<tr class="memitem:a1ca87c03ffd7e48069b8dc8ded9c9773"><td class="memTemplItemLeft" align="right" valign="top">SequenceT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="trim_8hpp.html#a1ca87c03ffd7e48069b8dc8ded9c9773">boost::algorithm::trim_right_copy_if</a> (const SequenceT &amp;Input, PredicateT IsSpace)</td></tr>
+<tr class="memdesc:a1ca87c03ffd7e48069b8dc8ded9c9773"><td class="mdescLeft">&#160;</td><td class="mdescRight">Right trim - parametric  <a href="trim_8hpp.html#a1ca87c03ffd7e48069b8dc8ded9c9773">[詳解]</a><br /></td></tr>
+<tr class="separator:a1ca87c03ffd7e48069b8dc8ded9c9773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac75b845dcccc021af36c92ae61d5b938"><td class="memTemplParams" colspan="2">template&lt;typename SequenceT &gt; </td></tr>
+<tr class="memitem:ac75b845dcccc021af36c92ae61d5b938"><td class="memTemplItemLeft" align="right" valign="top">SequenceT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="trim_8hpp.html#ac75b845dcccc021af36c92ae61d5b938">boost::algorithm::trim_right_copy</a> (const SequenceT &amp;Input, const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:ac75b845dcccc021af36c92ae61d5b938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Right trim  <a href="trim_8hpp.html#ac75b845dcccc021af36c92ae61d5b938">[詳解]</a><br /></td></tr>
+<tr class="separator:ac75b845dcccc021af36c92ae61d5b938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd39df73ed1116220a6858257b18296a"><td class="memTemplParams" colspan="2">template&lt;typename SequenceT , typename PredicateT &gt; </td></tr>
+<tr class="memitem:abd39df73ed1116220a6858257b18296a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="trim_8hpp.html#abd39df73ed1116220a6858257b18296a">boost::algorithm::trim_right_if</a> (SequenceT &amp;Input, PredicateT IsSpace)</td></tr>
+<tr class="memdesc:abd39df73ed1116220a6858257b18296a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Right trim - parametric  <a href="trim_8hpp.html#abd39df73ed1116220a6858257b18296a">[詳解]</a><br /></td></tr>
+<tr class="separator:abd39df73ed1116220a6858257b18296a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa8579eae167a324d0b723c68f0b8ac6"><td class="memTemplParams" colspan="2">template&lt;typename SequenceT &gt; </td></tr>
+<tr class="memitem:afa8579eae167a324d0b723c68f0b8ac6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="trim_8hpp.html#afa8579eae167a324d0b723c68f0b8ac6">boost::algorithm::trim_right</a> (SequenceT &amp;Input, const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:afa8579eae167a324d0b723c68f0b8ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Right trim  <a href="trim_8hpp.html#afa8579eae167a324d0b723c68f0b8ac6">[詳解]</a><br /></td></tr>
+<tr class="separator:afa8579eae167a324d0b723c68f0b8ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a444fd830c7491572c1cda997f4787b6e"><td class="memTemplParams" colspan="2">template&lt;typename OutputIteratorT , typename RangeT , typename PredicateT &gt; </td></tr>
+<tr class="memitem:a444fd830c7491572c1cda997f4787b6e"><td class="memTemplItemLeft" align="right" valign="top">OutputIteratorT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="trim_8hpp.html#a444fd830c7491572c1cda997f4787b6e">boost::algorithm::trim_copy_if</a> (OutputIteratorT Output, const RangeT &amp;Input, PredicateT IsSpace)</td></tr>
+<tr class="memdesc:a444fd830c7491572c1cda997f4787b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trim - parametric  <a href="trim_8hpp.html#a444fd830c7491572c1cda997f4787b6e">[詳解]</a><br /></td></tr>
+<tr class="separator:a444fd830c7491572c1cda997f4787b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf51552e88b2e1df818699073a353a4e"><td class="memTemplParams" colspan="2">template&lt;typename SequenceT , typename PredicateT &gt; </td></tr>
+<tr class="memitem:adf51552e88b2e1df818699073a353a4e"><td class="memTemplItemLeft" align="right" valign="top">SequenceT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="trim_8hpp.html#adf51552e88b2e1df818699073a353a4e">boost::algorithm::trim_copy_if</a> (const SequenceT &amp;Input, PredicateT IsSpace)</td></tr>
+<tr class="memdesc:adf51552e88b2e1df818699073a353a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trim - parametric  <a href="trim_8hpp.html#adf51552e88b2e1df818699073a353a4e">[詳解]</a><br /></td></tr>
+<tr class="separator:adf51552e88b2e1df818699073a353a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82eb2d0b868f6199468518ecde1f9f97"><td class="memTemplParams" colspan="2">template&lt;typename SequenceT &gt; </td></tr>
+<tr class="memitem:a82eb2d0b868f6199468518ecde1f9f97"><td class="memTemplItemLeft" align="right" valign="top">SequenceT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="trim_8hpp.html#a82eb2d0b868f6199468518ecde1f9f97">boost::algorithm::trim_copy</a> (const SequenceT &amp;Input, const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:a82eb2d0b868f6199468518ecde1f9f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trim  <a href="trim_8hpp.html#a82eb2d0b868f6199468518ecde1f9f97">[詳解]</a><br /></td></tr>
+<tr class="separator:a82eb2d0b868f6199468518ecde1f9f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73061b5aae50eccb0835397cfbc2f0af"><td class="memTemplParams" colspan="2">template&lt;typename SequenceT , typename PredicateT &gt; </td></tr>
+<tr class="memitem:a73061b5aae50eccb0835397cfbc2f0af"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="trim_8hpp.html#a73061b5aae50eccb0835397cfbc2f0af">boost::algorithm::trim_if</a> (SequenceT &amp;Input, PredicateT IsSpace)</td></tr>
+<tr class="memdesc:a73061b5aae50eccb0835397cfbc2f0af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trim  <a href="trim_8hpp.html#a73061b5aae50eccb0835397cfbc2f0af">[詳解]</a><br /></td></tr>
+<tr class="separator:a73061b5aae50eccb0835397cfbc2f0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43176b48fed44bc161b5ed635bea9cbe"><td class="memTemplParams" colspan="2">template&lt;typename SequenceT &gt; </td></tr>
+<tr class="memitem:a43176b48fed44bc161b5ed635bea9cbe"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="trim_8hpp.html#a43176b48fed44bc161b5ed635bea9cbe">boost::algorithm::trim</a> (SequenceT &amp;Input, const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:a43176b48fed44bc161b5ed635bea9cbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trim  <a href="trim_8hpp.html#a43176b48fed44bc161b5ed635bea9cbe">[詳解]</a><br /></td></tr>
+<tr class="separator:a43176b48fed44bc161b5ed635bea9cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Defines trim algorithms. Trim algorithms are used to remove trailing and leading spaces from a sequence (string). Space is recognized using given locales.</p>
+<p>Parametric (<code>_if</code>) variants use a predicate (functor) to select which characters are to be trimmed.. Functions take a selection predicate as a parameter, which is used to determine whether a character is a space. Common predicates are provided in classification.hpp header. </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a43176b48fed44bc161b5ed635bea9cbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43176b48fed44bc161b5ed635bea9cbe">&#9670;&nbsp;</a></span>trim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SequenceT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void boost::algorithm::trim </td>
+          <td>(</td>
+          <td class="paramtype">SequenceT &amp;&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Trim </p>
+<p>Remove all leading and trailing spaces from the input. The input sequence is modified in-place.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Input</td><td>An input sequence </td></tr>
+    <tr><td class="paramname">Loc</td><td>A locale used for 'space' classification </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a82eb2d0b868f6199468518ecde1f9f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82eb2d0b868f6199468518ecde1f9f97">&#9670;&nbsp;</a></span>trim_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SequenceT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SequenceT boost::algorithm::trim_copy </td>
+          <td>(</td>
+          <td class="paramtype">const SequenceT &amp;&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Trim </p>
+<p>Remove all leading and trailing spaces from the input. The result is a trimmed copy of the input</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Input</td><td>An input sequence </td></tr>
+    <tr><td class="paramname">Loc</td><td>A locale used for 'space' classification </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>A trimmed copy of the input</dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>This function provides the strong exception-safety guarantee </dd></dl>
+
+</div>
+</div>
+<a id="adf51552e88b2e1df818699073a353a4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf51552e88b2e1df818699073a353a4e">&#9670;&nbsp;</a></span>trim_copy_if() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SequenceT , typename PredicateT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SequenceT boost::algorithm::trim_copy_if </td>
+          <td>(</td>
+          <td class="paramtype">const SequenceT &amp;&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PredicateT&#160;</td>
+          <td class="paramname"><em>IsSpace</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Trim - parametric </p>
+<p>これはオーバーロードされたメンバ関数です。利便性のために用意されています。元の関数との違いは引き数のみです。 </p>
+
+</div>
+</div>
+<a id="a444fd830c7491572c1cda997f4787b6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a444fd830c7491572c1cda997f4787b6e">&#9670;&nbsp;</a></span>trim_copy_if() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputIteratorT , typename RangeT , typename PredicateT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">OutputIteratorT boost::algorithm::trim_copy_if </td>
+          <td>(</td>
+          <td class="paramtype">OutputIteratorT&#160;</td>
+          <td class="paramname"><em>Output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const RangeT &amp;&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PredicateT&#160;</td>
+          <td class="paramname"><em>IsSpace</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Trim - parametric </p>
+<p>Remove all trailing and leading spaces from the input. The supplied predicate is used to determine which characters are considered spaces. The result is a trimmed copy of the input. It is returned as a sequence or copied to the output iterator</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Output</td><td>An output iterator to which the result will be copied </td></tr>
+    <tr><td class="paramname">Input</td><td>An input range </td></tr>
+    <tr><td class="paramname">IsSpace</td><td>A unary predicate identifying spaces </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An output iterator pointing just after the last inserted character or a copy of the input</dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>The second variant of this function provides the strong exception-safety guarantee </dd></dl>
+
+</div>
+</div>
+<a id="a73061b5aae50eccb0835397cfbc2f0af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73061b5aae50eccb0835397cfbc2f0af">&#9670;&nbsp;</a></span>trim_if()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SequenceT , typename PredicateT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void boost::algorithm::trim_if </td>
+          <td>(</td>
+          <td class="paramtype">SequenceT &amp;&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PredicateT&#160;</td>
+          <td class="paramname"><em>IsSpace</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Trim </p>
+<p>Remove all leading and trailing spaces from the input. The supplied predicate is used to determine which characters are considered spaces. The input sequence is modified in-place.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Input</td><td>An input sequence </td></tr>
+    <tr><td class="paramname">IsSpace</td><td>A unary predicate identifying spaces </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4f44d7580f087f131d01c19aa0b746c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f44d7580f087f131d01c19aa0b746c3">&#9670;&nbsp;</a></span>trim_left()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SequenceT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void boost::algorithm::trim_left </td>
+          <td>(</td>
+          <td class="paramtype">SequenceT &amp;&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Left trim </p>
+<p>Remove all leading spaces from the input. The Input sequence is modified in-place.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Input</td><td>An input sequence </td></tr>
+    <tr><td class="paramname">Loc</td><td>A locale used for 'space' classification </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a31e4f04d85034293dbde7369487f9799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31e4f04d85034293dbde7369487f9799">&#9670;&nbsp;</a></span>trim_left_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SequenceT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SequenceT boost::algorithm::trim_left_copy </td>
+          <td>(</td>
+          <td class="paramtype">const SequenceT &amp;&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Left trim - parametric </p>
+<p>Remove all leading spaces from the input. The result is a trimmed copy of the input.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Input</td><td>An input sequence </td></tr>
+    <tr><td class="paramname">Loc</td><td>a locale used for 'space' classification </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>A trimmed copy of the input</dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>This function provides the strong exception-safety guarantee </dd></dl>
+
+</div>
+</div>
+<a id="acccef591ee294ce19c50560398c658d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acccef591ee294ce19c50560398c658d0">&#9670;&nbsp;</a></span>trim_left_copy_if() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SequenceT , typename PredicateT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SequenceT boost::algorithm::trim_left_copy_if </td>
+          <td>(</td>
+          <td class="paramtype">const SequenceT &amp;&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PredicateT&#160;</td>
+          <td class="paramname"><em>IsSpace</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Left trim - parametric </p>
+<p>これはオーバーロードされたメンバ関数です。利便性のために用意されています。元の関数との違いは引き数のみです。 </p>
+
+</div>
+</div>
+<a id="aad94e1494537960ac33cef299f88c3a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad94e1494537960ac33cef299f88c3a5">&#9670;&nbsp;</a></span>trim_left_copy_if() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputIteratorT , typename RangeT , typename PredicateT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">OutputIteratorT boost::algorithm::trim_left_copy_if </td>
+          <td>(</td>
+          <td class="paramtype">OutputIteratorT&#160;</td>
+          <td class="paramname"><em>Output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const RangeT &amp;&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PredicateT&#160;</td>
+          <td class="paramname"><em>IsSpace</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Left trim - parametric </p>
+<p>Remove all leading spaces from the input. The supplied predicate is used to determine which characters are considered spaces. The result is a trimmed copy of the input. It is returned as a sequence or copied to the output iterator</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Output</td><td>An output iterator to which the result will be copied </td></tr>
+    <tr><td class="paramname">Input</td><td>An input range </td></tr>
+    <tr><td class="paramname">IsSpace</td><td>A unary predicate identifying spaces </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An output iterator pointing just after the last inserted character or a copy of the input</dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>The second variant of this function provides the strong exception-safety guarantee </dd></dl>
+
+</div>
+</div>
+<a id="a439753f43b1c4df234de500b6d5adb0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a439753f43b1c4df234de500b6d5adb0d">&#9670;&nbsp;</a></span>trim_left_if()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SequenceT , typename PredicateT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void boost::algorithm::trim_left_if </td>
+          <td>(</td>
+          <td class="paramtype">SequenceT &amp;&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PredicateT&#160;</td>
+          <td class="paramname"><em>IsSpace</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Left trim </p>
+<p>Remove all leading spaces from the input. The supplied predicate is used to determine which characters are considered spaces. The input sequence is modified in-place.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Input</td><td>An input sequence </td></tr>
+    <tr><td class="paramname">IsSpace</td><td>A unary predicate identifying spaces </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afa8579eae167a324d0b723c68f0b8ac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa8579eae167a324d0b723c68f0b8ac6">&#9670;&nbsp;</a></span>trim_right()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SequenceT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void boost::algorithm::trim_right </td>
+          <td>(</td>
+          <td class="paramtype">SequenceT &amp;&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Right trim </p>
+<p>Remove all trailing spaces from the input. The input sequence is modified in-place.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Input</td><td>An input sequence </td></tr>
+    <tr><td class="paramname">Loc</td><td>A locale used for 'space' classification </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac75b845dcccc021af36c92ae61d5b938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac75b845dcccc021af36c92ae61d5b938">&#9670;&nbsp;</a></span>trim_right_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SequenceT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SequenceT boost::algorithm::trim_right_copy </td>
+          <td>(</td>
+          <td class="paramtype">const SequenceT &amp;&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Right trim </p>
+<p>Remove all trailing spaces from the input. The result is a trimmed copy of the input</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Input</td><td>An input sequence </td></tr>
+    <tr><td class="paramname">Loc</td><td>A locale used for 'space' classification </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>A trimmed copy of the input</dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>This function provides the strong exception-safety guarantee </dd></dl>
+
+</div>
+</div>
+<a id="a1ca87c03ffd7e48069b8dc8ded9c9773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ca87c03ffd7e48069b8dc8ded9c9773">&#9670;&nbsp;</a></span>trim_right_copy_if() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SequenceT , typename PredicateT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SequenceT boost::algorithm::trim_right_copy_if </td>
+          <td>(</td>
+          <td class="paramtype">const SequenceT &amp;&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PredicateT&#160;</td>
+          <td class="paramname"><em>IsSpace</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Right trim - parametric </p>
+<p>これはオーバーロードされたメンバ関数です。利便性のために用意されています。元の関数との違いは引き数のみです。 </p>
+
+</div>
+</div>
+<a id="ac9b83ac6a5cce5ff6a8159211dc6f5f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9b83ac6a5cce5ff6a8159211dc6f5f0">&#9670;&nbsp;</a></span>trim_right_copy_if() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputIteratorT , typename RangeT , typename PredicateT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">OutputIteratorT boost::algorithm::trim_right_copy_if </td>
+          <td>(</td>
+          <td class="paramtype">OutputIteratorT&#160;</td>
+          <td class="paramname"><em>Output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const RangeT &amp;&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PredicateT&#160;</td>
+          <td class="paramname"><em>IsSpace</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Right trim - parametric </p>
+<p>Remove all trailing spaces from the input. <br  />
+ The supplied predicate is used to determine which characters are considered spaces. The result is a trimmed copy of the input. It is returned as a sequence or copied to the output iterator</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Output</td><td>An output iterator to which the result will be copied </td></tr>
+    <tr><td class="paramname">Input</td><td>An input range </td></tr>
+    <tr><td class="paramname">IsSpace</td><td>A unary predicate identifying spaces </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An output iterator pointing just after the last inserted character or a copy of the input</dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>The second variant of this function provides the strong exception-safety guarantee </dd></dl>
+
+</div>
+</div>
+<a id="abd39df73ed1116220a6858257b18296a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd39df73ed1116220a6858257b18296a">&#9670;&nbsp;</a></span>trim_right_if()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SequenceT , typename PredicateT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void boost::algorithm::trim_right_if </td>
+          <td>(</td>
+          <td class="paramtype">SequenceT &amp;&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PredicateT&#160;</td>
+          <td class="paramname"><em>IsSpace</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Right trim - parametric </p>
+<p>Remove all trailing spaces from the input. The supplied predicate is used to determine which characters are considered spaces. The input sequence is modified in-place.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Input</td><td>An input sequence </td></tr>
+    <tr><td class="paramname">IsSpace</td><td>A unary predicate identifying spaces </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1794b65aa62003e11b03e0565def47fa.html">external</a></li><li class="navelem"><a class="el" href="dir_c08529bcc08f755a4d16428f71043471.html">boost</a></li><li class="navelem"><a class="el" href="dir_08e916b1ba9423845cffef83795e9545.html">boost</a></li><li class="navelem"><a class="el" href="dir_9800f813ecac2c341b3805f88c329233.html">algorithm</a></li><li class="navelem"><a class="el" href="dir_8f2d71a5cad810076374860da5042034.html">string</a></li><li class="navelem"><a class="el" href="trim_8hpp.html">trim.hpp</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

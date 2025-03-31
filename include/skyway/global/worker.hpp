@@ -23,8 +23,17 @@ namespace global {
 class Worker : public interface::Worker {
 public:
     using Task = std::function<void()>;
-
-    Worker();
+    
+    /// @brief コンストラクタ
+    ///
+    /// @details
+    /// デバッグのためにWorker内部で管理しているスレッドに名前をつけることができます。
+    /// なお、PFはAndroid, iOS, Linuxのみ対応しています。
+    ///
+    /// @param name
+    /// スレッドの名前
+    /// 全てのPFをサポートするために16文字以下でなければいけません。
+    Worker(const std::string& name);
     /// @brief デストラクタ
     ///
     /// @details
@@ -36,7 +45,8 @@ public:
     void Join() override;
 
 private:
-    void ProcessWorker();
+    void ProcessWorker(const std::string& name);
+    int SetThreadName(const std::string& name);
     std::deque<Task> tasks_;
     std::mutex mtx_;
     std::condition_variable cv_;

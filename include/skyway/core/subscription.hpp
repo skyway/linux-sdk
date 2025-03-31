@@ -22,7 +22,7 @@ namespace core {
 class Subscription : public interface::Subscription {
 public:
     /// @cond INTERNAL_SECTION
-    Subscription(interface::Channel* channel, const model::Subscription& initial_dto);
+    Subscription(std::shared_ptr<interface::Channel> channel, const model::Subscription& initial_dto, model::ContentType content_type);
     /// @endcond
 
     void AddEventListener(interface::Subscription::EventListener* listener) override;
@@ -34,19 +34,17 @@ public:
 
     std::string Id() const override;
     model::ContentType ContentType() const override;
-    interface::Publication* Publication() const override;
-    interface::Member* Subscriber() const override;
+    std::shared_ptr<interface::Publication> Publication() const override;
+    std::shared_ptr<interface::Member> Subscriber() const override;
     interface::SubscriptionState State() override;
 
     std::shared_ptr<interface::RemoteStream> Stream() override;
-    boost::optional<std::string> PreferredEncodingId() const override;
+    std::optional<std::string> PreferredEncodingId() const override;
 
-    void ChangePreferredEncoding(const std::string& id) override;
+    bool ChangePreferredEncoding(const std::string& id) override;
     bool Cancel() const override;
-    boost::optional<model::WebRTCStats> GetStats() override;
+    std::optional<model::WebRTCStats> GetStats() override;
     /// @cond INTERNAL_SECTION
-    bool Enable() const override;
-    bool Disable() const override;
     void AddGetStatsCallback(Callback* callback) override;
     void RemoveGetStatsCallback() override;
 
@@ -54,17 +52,17 @@ public:
     void SetPreferredEncodingId(const std::string& id) override;
 
     void OnCanceled() override;
-    void OnEnabled() override;
-    void OnDisabled() override;
     void OnConnectionStateChanged(const core::ConnectionState new_state) override;
     /// @endcond
 private:
-    interface::Channel* channel_;
+    std::weak_ptr<interface::Channel> channel_;
     model::Subscription initial_dto_;
+    model::ContentType content_type_;
     std::atomic<interface::SubscriptionState> state_;
+    std::weak_ptr<interface::Member> subscriber_;
     std::mutex stream_mtx_;
     std::shared_ptr<interface::RemoteStream> stream_;
-    boost::optional<std::string> preferred_encoding_id_;
+    std::optional<std::string> preferred_encoding_id_;
 
     std::mutex listeners_mtx_;
     std::unordered_set<interface::Subscription::EventListener*> listeners_;

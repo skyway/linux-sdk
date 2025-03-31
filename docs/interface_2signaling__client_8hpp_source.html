@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('interface_2signaling__client_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">signaling_client.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  signaling_client.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  skyway</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by sandabu on 2021/10/14.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright © 2021 NTT Communications. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef SKYWAY_SIGNALING_INTERFACE_SIGNALING_CLIENT_HPP_</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define SKYWAY_SIGNALING_INTERFACE_SIGNALING_CLIENT_HPP_</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;future&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;json.hpp&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;skyway/signaling/dto/response.hpp&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;skyway/signaling/interface/member.hpp&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;skyway/signaling/interface/socket.hpp&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span>skyway {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span>signaling {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>interface {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client.html">SignalingClient</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_listener.html">   30</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_listener.html">Listener</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_listener.html">Listener</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnConnectionFailed() {};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_listener.html#a49a5d5d08232f7b05dab88dc9933b2aa">OnRequestReceived</a>(<span class="keyword">const</span> nlohmann::json&amp; data, <span class="keyword">const</span> <a class="code" href="structskyway_1_1signaling_1_1interface_1_1_member.html">Member</a> src) = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        std::function&lt;nlohmann::json(<span class="keyword">const</span> nlohmann::json&amp;, <span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> std::string&amp;)&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            reply;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    };</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_delegator.html">   42</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_delegator.html">Delegator</a> {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_delegator.html">Delegator</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_delegator.html#af31255593738f0cb7356fdc43d70ecf7">   50</a></span>&#160;        <span class="keyword">virtual</span> nlohmann::json <a class="code" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_delegator.html#af31255593738f0cb7356fdc43d70ecf7">reply</a>(<span class="keyword">const</span> nlohmann::json&amp; data,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                     <span class="keyword">const</span> std::string&amp; src,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                     <span class="keyword">const</span> std::string&amp; event_id) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">return</span> nlohmann::json::object();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    };</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_options.html">   56</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_options.html">Options</a> {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        std::optional&lt;int&gt; connectivity_check_interval_sec;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        std::optional&lt;std::string&gt; signaling_domain;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        std::optional&lt;bool&gt; use_secure_protocol;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="structskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_options.html">Options</a>&amp; rhs)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">if</span> (connectivity_check_interval_sec == rhs.connectivity_check_interval_sec &amp;&amp;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                signaling_domain == rhs.signaling_domain &amp;&amp;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                use_secure_protocol == rhs.use_secure_protocol) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    };</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client.html">SignalingClient</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> InterruptBlocking(<span class="keyword">const</span> std::string&amp; member_id) = 0;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> ResetBlocking(<span class="keyword">const</span> std::string&amp; member_id) = 0;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client.html#acd9ffcb7a91b87ca4f9e8f2d56825279">AddListener</a>(<a class="code" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_listener.html">Listener</a>* listener) = 0;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client.html#ae13c903b1b735f0604ab93208ef15b4f">RemoveListener</a>(<a class="code" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_listener.html">Listener</a>* listener) = 0;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client.html#a6e0a0003ed6d9e3e0508155eabc6bfa9">Connect</a>(<a class="code" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_delegator.html">Delegator</a>* delegator, <span class="keywordtype">int</span> connectivity_check_interval_sec) = 0;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structskyway_1_1signaling_1_1dto_1_1_request_result.html">signaling::dto::RequestResult</a> <a class="code" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client.html#ae466120b06f20d31f8e6863eb9d9efab">Request</a>(<span class="keyword">const</span> <a class="code" href="structskyway_1_1signaling_1_1interface_1_1_member.html">Member</a>&amp; target,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                                  <span class="keyword">const</span> nlohmann::json&amp; data,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                                  <span class="keyword">const</span> <span class="keywordtype">int</span> timeout_sec,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                                                  <span class="keyword">const</span> <span class="keywordtype">bool</span> skip_response_wait = <span class="keyword">false</span>) = 0;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structskyway_1_1signaling_1_1dto_1_1_request_result.html">signaling::dto::RequestResult</a> <a class="code" href="classskyway_1_1signaling_1_1interface_1_1_signaling_client.html#ae466120b06f20d31f8e6863eb9d9efab">Request</a>(<span class="keyword">const</span> <a class="code" href="structskyway_1_1signaling_1_1interface_1_1_member.html">Member</a>&amp; target,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                                                  <span class="keyword">const</span> nlohmann::json&amp; data,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                                                  <span class="keyword">const</span> <span class="keywordtype">bool</span> skip_response_wait = <span class="keyword">false</span>) = 0;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}  <span class="comment">// namespace interface</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}  <span class="comment">// namespace signaling</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_SIGNALING_INTERFACE_SIGNALING_CLIENT_HPP_ */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astructskyway_1_1signaling_1_1dto_1_1_request_result_html"><div class="ttname"><a href="structskyway_1_1signaling_1_1dto_1_1_request_result.html">skyway::signaling::dto::RequestResult</a></div><div class="ttdef"><b>Definition:</b> response.hpp:21</div></div>
+<div class="ttc" id="aclassskyway_1_1signaling_1_1interface_1_1_signaling_client_html_ae466120b06f20d31f8e6863eb9d9efab"><div class="ttname"><a href="classskyway_1_1signaling_1_1interface_1_1_signaling_client.html#ae466120b06f20d31f8e6863eb9d9efab">skyway::signaling::interface::SignalingClient::Request</a></div><div class="ttdeci">virtual signaling::dto::RequestResult Request(const Member &amp;target, const nlohmann::json &amp;data, const int timeout_sec, const bool skip_response_wait=false)=0</div><div class="ttdoc">対象のクライアントに対し、応答を必要とするメッセージを送信します。</div></div>
+<div class="ttc" id="aclassskyway_1_1signaling_1_1interface_1_1_signaling_client_html"><div class="ttname"><a href="classskyway_1_1signaling_1_1interface_1_1_signaling_client.html">skyway::signaling::interface::SignalingClient</a></div><div class="ttdoc">シグナリングサーバを介してメッセージを送るクライアント</div><div class="ttdef"><b>Definition:</b> signaling_client.hpp:27</div></div>
+<div class="ttc" id="aclassskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_listener_html_a49a5d5d08232f7b05dab88dc9933b2aa"><div class="ttname"><a href="classskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_listener.html#a49a5d5d08232f7b05dab88dc9933b2aa">skyway::signaling::interface::SignalingClient::Listener::OnRequestReceived</a></div><div class="ttdeci">virtual void OnRequestReceived(const nlohmann::json &amp;data, const Member src)=0</div></div>
+<div class="ttc" id="astructskyway_1_1signaling_1_1interface_1_1_member_html"><div class="ttname"><a href="structskyway_1_1signaling_1_1interface_1_1_member.html">skyway::signaling::interface::Member</a></div><div class="ttdef"><b>Definition:</b> member.hpp:21</div></div>
+<div class="ttc" id="aclassskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_listener_html"><div class="ttname"><a href="classskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_listener.html">skyway::signaling::interface::SignalingClient::Listener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition:</b> signaling_client.hpp:30</div></div>
+<div class="ttc" id="aclassskyway_1_1signaling_1_1interface_1_1_signaling_client_html_a6e0a0003ed6d9e3e0508155eabc6bfa9"><div class="ttname"><a href="classskyway_1_1signaling_1_1interface_1_1_signaling_client.html#a6e0a0003ed6d9e3e0508155eabc6bfa9">skyway::signaling::interface::SignalingClient::Connect</a></div><div class="ttdeci">virtual bool Connect(Delegator *delegator, int connectivity_check_interval_sec)=0</div><div class="ttdoc">シグナリングサーバとの接続処理を行います。</div></div>
+<div class="ttc" id="astructskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_options_html"><div class="ttname"><a href="structskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_options.html">skyway::signaling::interface::SignalingClient::Options</a></div><div class="ttdef"><b>Definition:</b> signaling_client.hpp:56</div></div>
+<div class="ttc" id="aclassskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_delegator_html_af31255593738f0cb7356fdc43d70ecf7"><div class="ttname"><a href="classskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_delegator.html#af31255593738f0cb7356fdc43d70ecf7">skyway::signaling::interface::SignalingClient::Delegator::reply</a></div><div class="ttdeci">virtual nlohmann::json reply(const nlohmann::json &amp;data, const std::string &amp;src, const std::string &amp;event_id)</div><div class="ttdoc">クライアントからリクエストが来たときの返信処理を行います。</div><div class="ttdef"><b>Definition:</b> signaling_client.hpp:50</div></div>
+<div class="ttc" id="aclassskyway_1_1signaling_1_1interface_1_1_signaling_client_html_ae13c903b1b735f0604ab93208ef15b4f"><div class="ttname"><a href="classskyway_1_1signaling_1_1interface_1_1_signaling_client.html#ae13c903b1b735f0604ab93208ef15b4f">skyway::signaling::interface::SignalingClient::RemoveListener</a></div><div class="ttdeci">virtual void RemoveListener(Listener *listener)=0</div><div class="ttdoc">イベントリスナを削除します。</div></div>
+<div class="ttc" id="aclassskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_delegator_html"><div class="ttname"><a href="classskyway_1_1signaling_1_1interface_1_1_signaling_client_1_1_delegator.html">skyway::signaling::interface::SignalingClient::Delegator</a></div><div class="ttdoc">応答デリデータ</div><div class="ttdef"><b>Definition:</b> signaling_client.hpp:42</div></div>
+<div class="ttc" id="aclassskyway_1_1signaling_1_1interface_1_1_signaling_client_html_acd9ffcb7a91b87ca4f9e8f2d56825279"><div class="ttname"><a href="classskyway_1_1signaling_1_1interface_1_1_signaling_client.html#acd9ffcb7a91b87ca4f9e8f2d56825279">skyway::signaling::interface::SignalingClient::AddListener</a></div><div class="ttdeci">virtual void AddListener(Listener *listener)=0</div><div class="ttdoc">イベントリスナを設定します。</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_77f3510bf786cf3c12f65f3b0b944be3.html">skyway</a></li><li class="navelem"><a class="el" href="dir_3d8e706448c2f2740c98f6a19ac59acb.html">signaling</a></li><li class="navelem"><a class="el" href="dir_67d6cd578f9b4ce7c542c3d7cd2aecc1.html">interface</a></li><li class="navelem"><b>signaling_client.hpp</b></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

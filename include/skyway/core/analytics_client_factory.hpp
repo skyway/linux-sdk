@@ -19,7 +19,7 @@ namespace core {
 class AnalyticsClientFactory {
 public:
     static std::unique_ptr<analytics::interface::AnalyticsClient> Create(
-        const interface::Channel* channel, const model::Member& member);
+        const std::shared_ptr<interface::Channel> channel, const model::Member& member);
 };
 
 }  // namespace core

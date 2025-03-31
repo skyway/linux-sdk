@@ -24,18 +24,17 @@ namespace plugin {
 namespace sfu_bot {
 namespace connection {
 
-using SubscriptionInterface = core::interface::Subscription;
 using RemoteStreamInterface = core::interface::RemoteStream;
 
 class Receiver : public mediasoupclient::Consumer::Listener,
-                 public SubscriptionInterface::InternalListener,
-                 public SubscriptionInterface::Callback {
+                 public core::interface::Subscription::InternalListener,
+                 public core::interface::Subscription::Callback {
 public:
     Receiver(const std::string& local_person_id,
              const std::string& bot_id,
              interface::SfuApiClient* client,
              interface::TransportRepository* transport_repo,
-             SubscriptionInterface* subscription,
+             std::shared_ptr<core::interface::Subscription> subscription,
              analytics::interface::AnalyticsClient* analytics_client);
 
     ~Receiver();
@@ -46,17 +45,17 @@ public:
     void OnTransportClose(mediasoupclient::Consumer* consumer) override;
 
     // core::interface::Subscription::InternalListener
-    void OnChangePreferredEncoding(SubscriptionInterface* subscription) override;
+    void OnChangePreferredEncoding(std::shared_ptr<core::interface::Subscription> subscription) override;
 
     // core::interface::Subscription::Callback
-    const boost::optional<nlohmann::json> GetStatsReport(
-        SubscriptionInterface* subscription) override;
+    const std::optional<nlohmann::json> GetStatsReport(
+            std::shared_ptr<core::interface::Subscription> subscription) override;
 
 private:
     bool LoadDevice(const std::string& publication_id,
                     const std::string& origin_publication_id,
                     const interface::Device::PeerConnectionOptions* pc_options);
-    boost::optional<dto::CreateConsumerResponse> CreateConsumer(
+    std::optional<dto::CreateConsumerResponse> CreateConsumer(
         const std::string& publication_id, const std::string& origin_publication_id);
     std::shared_ptr<RemoteStreamInterface> Consume(const std::string& producer_id,
                                                    nlohmann::json consumer_options);
@@ -64,17 +63,18 @@ private:
                       std::vector<model::Encoding> encodings);
     skyway::plugin::sfu_bot::interface::RecvTransport* GetOrCreateRecvTransport(
         const std::string& transport_id,
-        boost::optional<nlohmann::json>,
+        std::optional<nlohmann::json>,
         const interface::Device::PeerConnectionOptions* pc_options);
 
-    void SetupTransportAccessForStream(SubscriptionInterface* subscription);
+    void SetupTransportAccessForStream();
+    void CreateConsumeThread(const std::string& publication_id, const std::string& origin_publication_id, const interface::Device::PeerConnectionOptions* pc_options);
 
     std::string local_person_id_;
     std::string bot_id_;
     interface::SfuApiClient* client_;
     interface::TransportRepository* transport_repo_;
 
-    SubscriptionInterface* subscription_;
+    std::weak_ptr<core::interface::Subscription> subscription_;
 
     analytics::interface::AnalyticsClient* analytics_client_;
 

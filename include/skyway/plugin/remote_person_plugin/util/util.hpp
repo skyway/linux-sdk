@@ -11,7 +11,6 @@
 
 #include <api/stats/rtc_stats_report.h>
 
-#include <boost/optional.hpp>
 #include <json.hpp>
 
 namespace skyway {
@@ -20,7 +19,8 @@ namespace remote_person {
 namespace connection {
 namespace util {
 
-const boost::optional<nlohmann::json> StatsToJson(const rtc::scoped_refptr<const webrtc::RTCStatsReport>& report);
+const std::optional<nlohmann::json> StatsToJson(
+    const rtc::scoped_refptr<const webrtc::RTCStatsReport>& report);
 
 }  // namespace util
 }  // namespace connection

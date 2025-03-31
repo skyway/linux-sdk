@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('array__view_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">array_view.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *  Copyright 2015 The WebRTC Project Authors. All rights reserved.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Use of this source code is governed by a BSD-style license</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  that can be found in the LICENSE file in the root of the source</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  tree. An additional intellectual property rights grant can be found</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  in the file PATENTS.  All contributing project authors may</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  be found in the AUTHORS file in the root of the source tree.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef API_ARRAY_VIEW_H_</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define API_ARRAY_VIEW_H_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;iterator&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;rtc_base/checks.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;rtc_base/type_traits.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span>rtc {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// tl;dr: rtc::ArrayView is the same thing as gsl::span from the Guideline</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//        Support Library.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// Many functions read from or write to arrays. The obvious way to do this is</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// to use two arguments, a pointer to the first element and an element count:</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//   bool Contains17(const int* arr, size_t size) {</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//     for (size_t i = 0; i &lt; size; ++i) {</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//       if (arr[i] == 17)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//         return true;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">//     }</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//     return false;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">//   }</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// This is flexible, since it doesn&#39;t matter how the array is stored (C array,</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// std::vector, rtc::Buffer, ...), but it&#39;s error-prone because the caller has</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// to correctly specify the array length:</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//   Contains17(arr, arraysize(arr));     // C array</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//   Contains17(arr.data(), arr.size());  // std::vector</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//   Contains17(arr, size);               // pointer + size</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//   ...</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">// It&#39;s also kind of messy to have two separate arguments for what is</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">// conceptually a single thing.</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">// Enter rtc::ArrayView&lt;T&gt;. It contains a T pointer (to an array it doesn&#39;t</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">// own) and a count, and supports the basic things you&#39;d expect, such as</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">// indexing and iteration. It allows us to write our function like this:</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">//   bool Contains17(rtc::ArrayView&lt;const int&gt; arr) {</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">//     for (auto e : arr) {</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//       if (e == 17)</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//         return true;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">//     }</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//     return false;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">//   }</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">// And even better, because a bunch of things will implicitly convert to</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">// ArrayView, we can call it like this:</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">//   Contains17(arr);                             // C array</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">//   Contains17(arr);                             // std::vector</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">//   Contains17(rtc::ArrayView&lt;int&gt;(arr, size));  // pointer + size</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">//   Contains17(nullptr);                         // nullptr -&gt; empty ArrayView</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">//   ...</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">// ArrayView&lt;T&gt; stores both a pointer and a size, but you may also use</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">// ArrayView&lt;T, N&gt;, which has a size that&#39;s fixed at compile time (which means</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">// it only has to store the pointer).</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">// One important point is that ArrayView&lt;T&gt; and ArrayView&lt;const T&gt; are</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">// different types, which allow and don&#39;t allow mutation of the array elements,</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">// respectively. The implicit conversions work just like you&#39;d hope, so that</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">// e.g. vector&lt;int&gt; will convert to either ArrayView&lt;int&gt; or ArrayView&lt;const</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">// int&gt;, but const vector&lt;int&gt; will convert only to ArrayView&lt;const int&gt;.</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">// (ArrayView itself can be the source type in such conversions, so</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">// ArrayView&lt;int&gt; will convert to ArrayView&lt;const int&gt;.)</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">// Note: ArrayView is tiny (just a pointer and a count if variable-sized, just</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">// a pointer if fix-sized) and trivially copyable, so it&#39;s probably cheaper to</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">// pass it by value than by const reference.</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">namespace </span>array_view_internal {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">// Magic constant for indicating that the size of an ArrayView is variable</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">// instead of fixed.</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;enum : std::ptrdiff_t { kArrayViewVarSize = -4711 };</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">// Base class for ArrayViews of fixed nonzero size.</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, std::ptrdiff_t Size&gt;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classrtc_1_1array__view__internal_1_1_array_view_base.html">   95</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrtc_1_1array__view__internal_1_1_array_view_base.html">ArrayViewBase</a> {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  static_assert(Size &gt; 0, <span class="stringliteral">&quot;ArrayView size must be variable or non-negative&quot;</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="classrtc_1_1array__view__internal_1_1_array_view_base.html">ArrayViewBase</a>(T* data, <span class="keywordtype">size_t</span> size) : data_(data) {}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">static</span> constexpr <span class="keywordtype">size_t</span> size() { <span class="keywordflow">return</span> Size; }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span> empty() { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  T* data()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> data_; }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span> fixed_size() { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  T* data_;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;};</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">// Specialized base class for ArrayViews of fixed zero size.</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classrtc_1_1array__view__internal_1_1_array_view_base_3_01_t_00_010_01_4.html">  114</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrtc_1_1array__view__internal_1_1_array_view_base.html">ArrayViewBase</a>&lt;T, 0&gt; {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrtc_1_1array__view__internal_1_1_array_view_base.html">ArrayViewBase</a>(T* data, <span class="keywordtype">size_t</span> size) {}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keyword">static</span> constexpr <span class="keywordtype">size_t</span> size() { <span class="keywordflow">return</span> 0; }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span> empty() { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  T* data()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">nullptr</span>; }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span> fixed_size() { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;};</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">// Specialized base class for ArrayViews of variable size.</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classrtc_1_1array__view__internal_1_1_array_view_base_3_01_t_00_01array__view__internal_1_1k_array_view_var_size_01_4.html">  128</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrtc_1_1array__view__internal_1_1_array_view_base.html">ArrayViewBase</a>&lt;T, array_view_internal::kArrayViewVarSize&gt; {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <a class="code" href="classrtc_1_1array__view__internal_1_1_array_view_base.html">ArrayViewBase</a>(T* data, <span class="keywordtype">size_t</span> size)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      : data_(size == 0 ? <span class="keyword">nullptr</span> : data), size_(size) {}</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordtype">size_t</span> size()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> size_; }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">bool</span> empty()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> size_ == 0; }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  T* data()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> data_; }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span> fixed_size() { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  T* data_;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordtype">size_t</span> size_;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;};</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}  <span class="comment">// namespace array_view_internal</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T,</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;          std::ptrdiff_t Size = array_view_internal::kArrayViewVarSize&gt;</div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="classrtc_1_1_array_view.html">  149</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrtc_1_1_array_view.html">ArrayView</a> final : <span class="keyword">public</span> <a class="code" href="classrtc_1_1array__view__internal_1_1_array_view_base.html">array_view_internal::ArrayViewBase</a>&lt;T, Size&gt; {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keyword">using</span> value_type = T;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keyword">using</span> reference = value_type&amp;;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keyword">using</span> const_reference = <span class="keyword">const</span> value_type&amp;;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keyword">using</span> pointer = value_type*;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keyword">using</span> const_pointer = <span class="keyword">const</span> value_type*;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keyword">using</span> const_iterator = <span class="keyword">const</span> T*;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="comment">// Construct an ArrayView from a pointer and a length.</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(U* data, <span class="keywordtype">size_t</span> size)</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      : <a class="code" href="classrtc_1_1array__view__internal_1_1_array_view_base.html">array_view_internal::ArrayViewBase&lt;T, Size&gt;::ArrayViewBase</a>(data, size) {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    RTC_DCHECK_EQ(size == 0 ? <span class="keyword">nullptr</span> : data, this-&gt;data());</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    RTC_DCHECK_EQ(size, this-&gt;size());</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    RTC_DCHECK_EQ(!this-&gt;data(),</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                  this-&gt;size() == 0);  <span class="comment">// data is null iff size == 0.</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="comment">// Construct an empty ArrayView. Note that fixed-size ArrayViews of size &gt; 0</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="comment">// cannot be empty.</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>() : <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(<span class="keyword">nullptr</span>, 0) {}</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(std::nullptr_t)  <span class="comment">// NOLINT</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      : <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>() {}</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(std::nullptr_t, <span class="keywordtype">size_t</span> size)</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      : <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(<span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>(<span class="keyword">nullptr</span>), size) {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    static_assert(Size == 0 || Size == array_view_internal::kArrayViewVarSize,</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                  <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    RTC_DCHECK_EQ(0, size);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="comment">// Construct an ArrayView from a C-style array.</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U, <span class="keywordtype">size_t</span> N&gt;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(U (&amp;array)[N])  <span class="comment">// NOLINT</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      : <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(array, N) {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    static_assert(Size == N || Size == array_view_internal::kArrayViewVarSize,</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                  <span class="stringliteral">&quot;Array size must match ArrayView size&quot;</span>);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="comment">// (Only if size is fixed.) Construct a fixed size ArrayView&lt;T, N&gt; from a</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="comment">// non-const std::array instance. For an ArrayView with variable size, the</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="comment">// used ctor is ArrayView(U&amp; u) instead.</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U,</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordtype">size_t</span> N,</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keyword">typename</span> std::enable_if&lt;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                Size == <span class="keyword">static_cast&lt;</span>std::ptrdiff_t<span class="keyword">&gt;</span>(N)&gt;::type* = <span class="keyword">nullptr</span>&gt;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(std::array&lt;U, N&gt;&amp; u)  <span class="comment">// NOLINT</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      : <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(u.data(), u.size()) {}</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="comment">// (Only if size is fixed.) Construct a fixed size ArrayView&lt;T, N&gt; where T is</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="comment">// const from a const(expr) std::array instance. For an ArrayView with</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="comment">// variable size, the used ctor is ArrayView(U&amp; u) instead.</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U,</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordtype">size_t</span> N,</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keyword">typename</span> std::enable_if&lt;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                Size == <span class="keyword">static_cast&lt;</span>std::ptrdiff_t<span class="keyword">&gt;</span>(N)&gt;::type* = <span class="keyword">nullptr</span>&gt;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(<span class="keyword">const</span> std::array&lt;U, N&gt;&amp; u)  <span class="comment">// NOLINT</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      : <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(u.data(), u.size()) {}</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="comment">// (Only if size is fixed.) Construct an ArrayView from any type U that has a</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  <span class="comment">// static constexpr size() method whose return value is equal to Size, and a</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="comment">// data() method whose return value converts implicitly to T*. In particular,</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="comment">// this means we allow conversion from ArrayView&lt;T, N&gt; to ArrayView&lt;const T,</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="comment">// N&gt;, but not the other way around. We also don&#39;t allow conversion from</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="comment">// ArrayView&lt;T&gt; to ArrayView&lt;T, N&gt;, or from ArrayView&lt;T, M&gt; to ArrayView&lt;T,</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="comment">// N&gt; when M != N.</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <span class="keyword">template</span> &lt;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      <span class="keyword">typename</span> U,</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      <span class="keyword">typename</span> std::enable_if&lt;Size != array_view_internal::kArrayViewVarSize &amp;&amp;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                              <a class="code" href="classrtc_1_1_has_data_and_size.html">HasDataAndSize&lt;U, T&gt;::value</a>&gt;::type* = <span class="keyword">nullptr</span>&gt;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(U&amp; u)  <span class="comment">// NOLINT</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      : <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(u.data(), u.size()) {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    static_assert(U::size() == Size, <span class="stringliteral">&quot;Sizes must match exactly&quot;</span>);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <span class="keyword">template</span> &lt;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      <span class="keyword">typename</span> U,</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      <span class="keyword">typename</span> std::enable_if&lt;Size != array_view_internal::kArrayViewVarSize &amp;&amp;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                              <a class="code" href="classrtc_1_1_has_data_and_size.html">HasDataAndSize&lt;U, T&gt;::value</a>&gt;::type* = <span class="keyword">nullptr</span>&gt;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(<span class="keyword">const</span> U&amp; u)  <span class="comment">// NOLINT(runtime/explicit)</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      : <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(u.data(), u.size()) {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    static_assert(U::size() == Size, <span class="stringliteral">&quot;Sizes must match exactly&quot;</span>);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="comment">// (Only if size is variable.) Construct an ArrayView from any type U that</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="comment">// has a size() method whose return value converts implicitly to size_t, and</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <span class="comment">// a data() method whose return value converts implicitly to T*. In</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="comment">// particular, this means we allow conversion from ArrayView&lt;T&gt; to</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="comment">// ArrayView&lt;const T&gt;, but not the other way around. Other allowed</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="comment">// conversions include</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="comment">// ArrayView&lt;T, N&gt; to ArrayView&lt;T&gt; or ArrayView&lt;const T&gt;,</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="comment">// std::vector&lt;T&gt; to ArrayView&lt;T&gt; or ArrayView&lt;const T&gt;,</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="comment">// const std::vector&lt;T&gt; to ArrayView&lt;const T&gt;,</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="comment">// rtc::Buffer to ArrayView&lt;uint8_t&gt; or ArrayView&lt;const uint8_t&gt;, and</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="comment">// const rtc::Buffer to ArrayView&lt;const uint8_t&gt;.</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="keyword">template</span> &lt;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      <span class="keyword">typename</span> U,</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      <span class="keyword">typename</span> std::enable_if&lt;Size == array_view_internal::kArrayViewVarSize &amp;&amp;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                              <a class="code" href="classrtc_1_1_has_data_and_size.html">HasDataAndSize&lt;U, T&gt;::value</a>&gt;::type* = <span class="keyword">nullptr</span>&gt;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(U&amp; u)  <span class="comment">// NOLINT</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      : <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(u.data(), u.size()) {}</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="keyword">template</span> &lt;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      <span class="keyword">typename</span> U,</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      <span class="keyword">typename</span> std::enable_if&lt;Size == array_view_internal::kArrayViewVarSize &amp;&amp;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                              <a class="code" href="classrtc_1_1_has_data_and_size.html">HasDataAndSize&lt;U, T&gt;::value</a>&gt;::type* = <span class="keyword">nullptr</span>&gt;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(<span class="keyword">const</span> U&amp; u)  <span class="comment">// NOLINT(runtime/explicit)</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      : <a class="code" href="classrtc_1_1_array_view.html">ArrayView</a>(u.data(), u.size()) {}</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="comment">// Indexing and iteration. These allow mutation even if the ArrayView is</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="comment">// const, because the ArrayView doesn&#39;t own the array. (To prevent mutation,</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="comment">// use a const element type.)</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  T&amp; operator[](<span class="keywordtype">size_t</span> idx)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    RTC_DCHECK_LT(idx, this-&gt;size());</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    RTC_DCHECK(this-&gt;data());</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">return</span> this-&gt;data()[idx];</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  T* begin()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;data(); }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  T* end()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;data() + this-&gt;size(); }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="keyword">const</span> T* cbegin()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;data(); }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="keyword">const</span> T* cend()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;data() + this-&gt;size(); }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  std::reverse_iterator&lt;T*&gt; rbegin()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">return</span> std::make_reverse_iterator(end());</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  std::reverse_iterator&lt;T*&gt; rend()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">return</span> std::make_reverse_iterator(begin());</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  std::reverse_iterator&lt;const T*&gt; crbegin()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">return</span> std::make_reverse_iterator(cend());</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  std::reverse_iterator&lt;const T*&gt; crend()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">return</span> std::make_reverse_iterator(cbegin());</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <a class="code" href="classrtc_1_1_array_view.html">ArrayView&lt;T&gt;</a> subview(<span class="keywordtype">size_t</span> offset, <span class="keywordtype">size_t</span> size)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">return</span> offset &lt; this-&gt;size()</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;               ? <a class="code" href="classrtc_1_1_array_view.html">ArrayView&lt;T&gt;</a>(this-&gt;data() + offset,</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                              std::min(size, this-&gt;size() - offset))</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;               : <a class="code" href="classrtc_1_1_array_view.html">ArrayView&lt;T&gt;</a>();</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <a class="code" href="classrtc_1_1_array_view.html">ArrayView&lt;T&gt;</a> subview(<span class="keywordtype">size_t</span> offset)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">return</span> subview(offset, this-&gt;size());</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;};</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment">// Comparing two ArrayViews compares their (pointer,size) pairs; it does *not*</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">// dereference the pointers.</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, std::ptrdiff_t Size1, std::ptrdiff_t Size2&gt;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="classrtc_1_1_array_view.html">ArrayView&lt;T, Size1&gt;</a>&amp; a, <span class="keyword">const</span> <a class="code" href="classrtc_1_1_array_view.html">ArrayView&lt;T, Size2&gt;</a>&amp; b) {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="keywordflow">return</span> a.data() == b.data() &amp;&amp; a.size() == b.size();</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;}</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, std::ptrdiff_t Size1, std::ptrdiff_t Size2&gt;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> ArrayView&lt;T, Size1&gt;&amp; a, <span class="keyword">const</span> ArrayView&lt;T, Size2&gt;&amp; b) {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="keywordflow">return</span> !(a == b);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;}</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment">// Variable-size ArrayViews are the size of two pointers; fixed-size ArrayViews</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment">// are the size of one pointer. (And as a special case, fixed-size ArrayViews</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment">// of size 0 require no storage.)</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;static_assert(<span class="keyword">sizeof</span>(ArrayView&lt;int&gt;) == 2 * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>*), <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;static_assert(<span class="keyword">sizeof</span>(ArrayView&lt;int, 17&gt;) == <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>*), <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;static_assert(std::is_empty&lt;ArrayView&lt;int, 0&gt;&gt;::value, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="keyword">inline</span> ArrayView&lt;T&gt; MakeArrayView(T* data, <span class="keywordtype">size_t</span> size) {</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="keywordflow">return</span> ArrayView&lt;T&gt;(data, size);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;}</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="comment">// Only for primitive types that have the same size and aligment.</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment">// Allow reinterpret cast of the array view to another primitive type of the</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="comment">// same size.</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment">// Template arguments order is (U, T, Size) to allow deduction of the template</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="comment">// arguments in client calls: reinterpret_array_view&lt;target_type&gt;(array_view).</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> U, <span class="keyword">typename</span> T, std::ptrdiff_t Size&gt;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="keyword">inline</span> ArrayView&lt;U, Size&gt; reinterpret_array_view(ArrayView&lt;T, Size&gt; view) {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  static_assert(<span class="keyword">sizeof</span>(U) == <span class="keyword">sizeof</span>(T) &amp;&amp; <span class="keyword">alignof</span>(U) == <span class="keyword">alignof</span>(T),</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                <span class="stringliteral">&quot;ArrayView reinterpret_cast is only supported for casting &quot;</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                <span class="stringliteral">&quot;between views that represent the same chunk of memory.&quot;</span>);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  static_assert(</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      std::is_fundamental&lt;T&gt;::value &amp;&amp; std::is_fundamental&lt;U&gt;::value,</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      <span class="stringliteral">&quot;ArrayView reinterpret_cast is only supported for casting between &quot;</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      <span class="stringliteral">&quot;fundamental types.&quot;</span>);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  <span class="keywordflow">return</span> ArrayView&lt;U, Size&gt;(<span class="keyword">reinterpret_cast&lt;</span>U*<span class="keyword">&gt;</span>(view.data()), view.size());</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;}</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;}  <span class="comment">// namespace rtc</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="preprocessor">#endif  // API_ARRAY_VIEW_H_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassrtc_1_1array__view__internal_1_1_array_view_base_html"><div class="ttname"><a href="classrtc_1_1array__view__internal_1_1_array_view_base.html">rtc::array_view_internal::ArrayViewBase</a></div><div class="ttdef"><b>Definition:</b> array_view.h:95</div></div>
+<div class="ttc" id="aclassrtc_1_1_has_data_and_size_html"><div class="ttname"><a href="classrtc_1_1_has_data_and_size.html">rtc::HasDataAndSize</a></div><div class="ttdef"><b>Definition:</b> type_traits.h:22</div></div>
+<div class="ttc" id="aclassrtc_1_1_array_view_html"><div class="ttname"><a href="classrtc_1_1_array_view.html">rtc::ArrayView</a></div><div class="ttdef"><b>Definition:</b> array_view.h:149</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1794b65aa62003e11b03e0565def47fa.html">external</a></li><li class="navelem"><a class="el" href="dir_3b2981cbb116c36ad9ad7225b84e71bc.html">libwebrtc</a></li><li class="navelem"><a class="el" href="dir_1bc69d95fd95caf2e2a2bf45fefe9e3b.html">api</a></li><li class="navelem"><b>array_view.h</b></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

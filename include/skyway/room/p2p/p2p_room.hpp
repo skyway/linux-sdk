@@ -59,7 +59,7 @@ public:
         std::unique_ptr<interface::RoomDomainFactory> domain_factory =
             std::make_unique<RoomDomainFactory>());
     /// @brief P2PRoomへ参加します。
-    std::unique_ptr<LocalP2PRoomMember> Join(interface::RoomMemberInitOptions options);
+    std::shared_ptr<LocalP2PRoomMember> Join(interface::RoomMemberInitOptions options);
 
 private:
     static std::shared_ptr<P2PRoom> CreateShared(

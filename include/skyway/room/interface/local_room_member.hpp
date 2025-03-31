@@ -26,25 +26,25 @@ public:
         virtual ~EventListener() = default;
         /// @brief このLocalRoomMemerがStreamをPublishした後に発生するイベント
         /// @param publication Publication
-        virtual void OnStreamPublished(std::unique_ptr<RoomPublication> publication) {}
+        virtual void OnStreamPublished(std::shared_ptr<RoomPublication> publication) {}
 
         /// @brief このLocalRoomMemerがUnpublishした後に発生するイベント
         /// @param publication Publication
-        virtual void OnStreamUnpublished(std::unique_ptr<RoomPublication> publication) {}
+        virtual void OnStreamUnpublished(std::shared_ptr<RoomPublication> publication) {}
 
         /// @brief このLocalRoomMemerがSubscribeした後に発生するイベント
         /// @param subscription Subscription
-        virtual void OnPublicationSubscribed(std::unique_ptr<RoomSubscription> subscription) {}
+        virtual void OnPublicationSubscribed(std::shared_ptr<RoomSubscription> subscription) {}
 
         /// @brief このLocalRoomMemerがUnsubscribeした後に発生するイベント
         /// @param subscription Subscription
-        virtual void OnPublicationUnsubscribed(std::unique_ptr<RoomSubscription> subscription) {}
+        virtual void OnPublicationUnsubscribed(std::shared_ptr<RoomSubscription> subscription) {}
     };
 
     /// @brief `Publish`時の設定
     struct PublicationOptions {
         /// @brief Metadata
-        boost::optional<std::string> metadata;
+        std::optional<std::string> metadata;
         /// @brief コーデック一覧
         std::vector<model::Codec> codec_capabilities;
         /// @brief エンコーディング一覧
@@ -67,7 +67,7 @@ public:
     struct SubscriptionOptions {
         /// @brief `Subscribe`時に選択するエンコーディング設定。
         /// @details `RoomPublication.Options.encodings`から選択する項目のIdを設定してください。
-        boost::optional<std::string> preferred_encoding_id;
+        std::optional<std::string> preferred_encoding_id;
         /// @cond INTERNAL_SECTION
         core::interface::LocalPerson::SubscriptionOptions ToCore() {
             core::interface::LocalPerson::SubscriptionOptions core_opt;
@@ -83,10 +83,10 @@ public:
     /// @brief イベントの購読を中止します。
     virtual void RemoveEventListener(EventListener* listener) = 0;
     /// @brief LocalStreamを公開します。
-    virtual std::unique_ptr<RoomPublication> Publish(std::shared_ptr<core::interface::LocalStream>,
+    virtual std::shared_ptr<RoomPublication> Publish(std::shared_ptr<core::interface::LocalStream>,
                                                      PublicationOptions options) = 0;
     /// @brief 公開されているPublicationを購読します。
-    virtual std::unique_ptr<RoomSubscription> Subscribe(const std::string& publication_id,
+    virtual std::shared_ptr<RoomSubscription> Subscribe(const std::string& publication_id,
                                                         SubscriptionOptions options) = 0;
     /// @brief 公開しているPublicationを非公開にします。
     virtual bool Unpublish(const std::string& publication_id) = 0;

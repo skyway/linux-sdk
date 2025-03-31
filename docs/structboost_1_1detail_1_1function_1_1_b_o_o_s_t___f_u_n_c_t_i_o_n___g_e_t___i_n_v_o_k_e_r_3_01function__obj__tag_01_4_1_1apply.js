@@ -1,0 +1,5 @@
+var structboost_1_1detail_1_1function_1_1_b_o_o_s_t___f_u_n_c_t_i_o_n___g_e_t___i_n_v_o_k_e_r_3_01function__obj__tag_01_4_1_1apply =
+[
+    [ "invoker_type", "structboost_1_1detail_1_1function_1_1_b_o_o_s_t___f_u_n_c_t_i_o_n___g_e_t___i_n_v_o_k_e_r_3_01function__obj__tag_01_4_1_1apply.html#ae30cec82f615d03de491e14e6779d5bb", null ],
+    [ "manager_type", "structboost_1_1detail_1_1function_1_1_b_o_o_s_t___f_u_n_c_t_i_o_n___g_e_t___i_n_v_o_k_e_r_3_01function__obj__tag_01_4_1_1apply.html#a72b069e24d38a14ed35bd094e18babfd", null ]
+];

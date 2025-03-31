@@ -1,0 +1,4 @@
+var structboost_1_1asio_1_1execution_1_1detail_1_1prefer__only__polymorphic__query__result__type_3_05088b5c2cdaa1cc597c21fedf167623f =
+[
+    [ "polymorphic_query_result_type", "structboost_1_1asio_1_1execution_1_1detail_1_1prefer__only__polymorphic__query__result__type_3_05088b5c2cdaa1cc597c21fedf167623f.html#abc52626b2c97a8db30788b484d0d966c", null ]
+];

@@ -41,15 +41,15 @@ public:
     };
     virtual ~RoomMember() = default;
     /// @brief このMemberに紐づくRoomのIdを取得します。
-    virtual boost::optional<std::string> RoomId() = 0;
+    virtual std::optional<std::string> RoomId() = 0;
     /// @brief このMemberに紐づくRoomのNameを取得します。
-    virtual boost::optional<std::string> RoomName() = 0;
+    virtual std::optional<std::string> RoomName() = 0;
     /// @brief Idを取得します。
     virtual std::string Id() = 0;
     /// @brief Nameを取得します。
-    virtual boost::optional<std::string> Name() = 0;
+    virtual std::optional<std::string> Name() = 0;
     /// @brief Metadataを取得します。
-    virtual boost::optional<std::string> Metadata() = 0;
+    virtual std::optional<std::string> Metadata() = 0;
     /// @brief Typeを取得します。
     virtual model::MemberType Type() = 0;
     /// @brief SubTypeを取得します。
@@ -60,9 +60,9 @@ public:
     virtual core::interface::MemberState State() = 0;
 
     /// @brief このMemberのPublication一覧を取得します。
-    virtual std::vector<std::unique_ptr<RoomPublication>> Publications() = 0;
+    virtual std::vector<std::shared_ptr<RoomPublication>> Publications() = 0;
     /// @brief このMemberのSubscription一覧を取得します。
-    virtual std::vector<std::unique_ptr<RoomSubscription>> Subscriptions() = 0;
+    virtual std::vector<std::shared_ptr<RoomSubscription>> Subscriptions() = 0;
 
     /// @brief Metadataを更新します。
     virtual bool UpdateMetadata(const std::string& metadata) = 0;

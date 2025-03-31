@@ -1,0 +1,5 @@
+var classboost_1_1beast_1_1detail_1_1ostream__helper_3_01_dynamic_buffer_00_01_char_t_00_01_traits_00_01false_01_4 =
+[
+    [ "ostream_helper", "classboost_1_1beast_1_1detail_1_1ostream__helper_3_01_dynamic_buffer_00_01_char_t_00_01_traits_00_01false_01_4.html#ac6b75e6f698d021296e0e55d79d7aebe", null ],
+    [ "ostream_helper", "classboost_1_1beast_1_1detail_1_1ostream__helper_3_01_dynamic_buffer_00_01_char_t_00_01_traits_00_01false_01_4.html#a1f3b8f8a65583c670d45a50afc53a6d2", null ]
+];
