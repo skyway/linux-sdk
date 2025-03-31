@@ -9,9 +9,10 @@
 #ifndef SKYWAY_CORE_ICE_DTO_RESPONSE_HPP_
 #define SKYWAY_CORE_ICE_DTO_RESPONSE_HPP_
 
-#include <boost/optional.hpp>
-#include <json.hpp>
 #include <string>
+#include <optional>
+
+#include <json.hpp>
 
 namespace skyway {
 namespace core {
@@ -32,7 +33,7 @@ struct Turn {
 
 struct IceParamsResponse {
     Stun stun;
-    boost::optional<Turn> turn;
+    std::optional<Turn> turn;
 };
 
 void from_json(const nlohmann::json& j, Stun& stun);

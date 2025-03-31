@@ -40,29 +40,29 @@ public:
     /// @brief ContentType(VideoかAudioかDataか)を取得します。
     virtual model::ContentType ContentType() = 0;
     /// @brief このSubscriptionに紐づくPublicationを取得します。
-    virtual std::unique_ptr<RoomPublication> Publication() = 0;
+    virtual std::shared_ptr<RoomPublication> Publication() = 0;
     /// @brief このSubscriptionを購読しているMemberを取得します。
-    virtual std::unique_ptr<RoomMember> Subscriber() = 0;
+    virtual std::shared_ptr<RoomMember> Subscriber() = 0;
     /// @brief State(公開状態がEnableかDisabelかCancelか)を取得します。
     virtual core::interface::SubscriptionState State() = 0;
     /// @brief Publisherが持つStreamを取得します。
     virtual std::shared_ptr<core::interface::RemoteStream> Stream() = 0;
     /// @brief このSubscriptionの優先エンコーディングIDを取得します。
-    virtual boost::optional<std::string> PreferredEncodingId() = 0;
+    virtual std::optional<std::string> PreferredEncodingId() = 0;
 
     /// @brief イベントを購読します。
     virtual void AddEventListener(EventListener* listener) = 0;
     /// @brief イベントの購読を中止します。
     virtual void RemoveEventListener(EventListener* listener) = 0;
     /// @brief 受信するエンコード設定を切り替えます。
-    virtual void ChangePreferredEncoding(const std::string& id) = 0;
+    virtual bool ChangePreferredEncoding(const std::string& id) = 0;
     /// @deprecated 本機能は非推奨です。
     /// @brief Subscribeを中止します。
     [[deprecated]] virtual bool Cancel() = 0;
     /// @deprecated 本機能は非推奨です。
     /// @brief 統計情報を取得します。
     /// @details 試験的なAPIです。今後インターフェースや仕様が変更される可能性があります。
-    [[deprecated]] virtual boost::optional<model::WebRTCStats> GetStats() = 0;
+    [[deprecated]] virtual std::optional<model::WebRTCStats> GetStats() = 0;
 };
 
 }  // namespace interface

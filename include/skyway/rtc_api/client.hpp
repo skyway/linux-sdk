@@ -37,18 +37,18 @@ public:
     bool LeaveChannel(const std::string& channel_id, const std::string& member_id) override;
     bool UpdateChannelMetadata(const std::string& channel_id, const std::string& metadata) override;
 
-    boost::optional<model::Member> JoinChannel(const std::string& channel_id,
+    std::optional<model::Member> JoinChannel(const std::string& channel_id,
                                                const model::Member::Init& init,
-                                               const boost::optional<time_t> ttl_sec) override;
+                                               const std::optional<time_t> ttl_sec) override;
     bool UpdateMemberMetadata(const std::string& channel_id,
                               const std::string& member_id,
                               const std::string& metadata) override;
-    boost::optional<time_t> GetServerUnixTimeSec() override;
+    std::optional<time_t> GetServerUnixTimeSec() override;
     bool UpdateMemberTtl(const std::string& channel_id,
                          const std::string& member_id,
                          const std::time_t ttl_sec) override;
     bool UpdateAuthToken(const std::string& token) override;
-    boost::optional<model::Publication> Publish(const model::Publication::Init& init) override;
+    std::optional<model::Publication> Publish(const model::Publication::Init& init) override;
     bool UpdatePublicationMetadata(const std::string& channel_id,
                                    const std::string& publication_id,
                                    const std::string& metadata) override;
@@ -57,12 +57,8 @@ public:
                            const std::string& publication_id) override;
     bool DisablePublication(const std::string& channel_id,
                             const std::string& publication_id) override;
-    boost::optional<model::Subscription> Subscribe(const model::Subscription::Init& init) override;
+    std::optional<model::Subscription> Subscribe(const model::Subscription::Init& init) override;
     bool Unsubscribe(const std::string& channel_id, const std::string& subscription_id) override;
-    bool EnableSubscription(const std::string& channel_id,
-                            const std::string& subscription_id) override;
-    bool DisableSubscription(const std::string& channel_id,
-                             const std::string& subscription_id) override;
 
 private:
     std::unique_ptr<interface::EventListenerRepository> event_listener_repository_;

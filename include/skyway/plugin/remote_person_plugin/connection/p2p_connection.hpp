@@ -23,11 +23,12 @@ namespace plugin {
 namespace remote_person {
 namespace connection {
 
-using PublicationInterface    = core::interface::Publication;
-using SubscriptionInterface   = core::interface::Subscription;
 using StreamInterface         = core::interface::Stream;
 using ChunkMessengerInterface = core::interface::ChunkMessenger;
 using SubscriptionId          = std::string;
+
+const std::string kRemotePersonSendThreadName = "remo_psn_send";
+const std::string kRemotePersonRecvThreadName = "remo_psn_recv";
 
 /// @brief Peer-to-Peerを実現するWebRTCコネクション
 class P2PConnection : public ChunkMessengerInterface::Listener {
@@ -55,15 +56,15 @@ public:
     /// Streamに応じてRTCPeerConnectionの操作を行い、ネゴシエーションが完了までブロックします。
     /// @param publication Publication
     /// @param subscription_id SubscriptionのID
-    void StartPublishing(PublicationInterface* publication, const SubscriptionId& subscription_id);
+    void StartPublishing(std::shared_ptr<core::interface::Publication> publication, const SubscriptionId& subscription_id);
 
-    void StopPublishing(PublicationInterface* publication);
+    void StopPublishing(std::shared_ptr<core::interface::Publication> publication);
 
     /// @brief データプレーンにおけるSubscribeを行います。
     /// @details
     /// Publisherとネゴシエーションを行い、Subscription.Streamが挿入されるまでブロックします。
     /// @param subscription Subscription
-    void StartSubscribing(SubscriptionInterface* subscription);
+    void StartSubscribing(std::shared_ptr<core::interface::Subscription> subscription);
 
     /// @brief Subscribeを中止します。
     /// @param subscription_id SubscriptionId
@@ -96,8 +97,8 @@ private:
     ChunkMessengerInterface* messenger_;
     std::unique_ptr<Sender> sender_;
     std::unique_ptr<Receiver> receiver_;
-    std::unique_ptr<global::interface::Worker> send_worker_ = std::make_unique<global::Worker>();
-    std::unique_ptr<global::interface::Worker> receive_worker_ = std::make_unique<global::Worker>();
+    std::unique_ptr<global::interface::Worker> send_worker_ = std::make_unique<global::Worker>(kRemotePersonSendThreadName);
+    std::unique_ptr<global::interface::Worker> receive_worker_ = std::make_unique<global::Worker>(kRemotePersonRecvThreadName);
 
 public:
     friend class P2PConnectionTest;

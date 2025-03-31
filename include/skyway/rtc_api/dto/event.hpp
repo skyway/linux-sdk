@@ -9,7 +9,6 @@
 #ifndef SKYWAY_RTC_API_DTO_EVENT_HPP_
 #define SKYWAY_RTC_API_DTO_EVENT_HPP_
 
-#include <boost/optional.hpp>
 #include <json.hpp>
 
 #include "skyway/model/domain.hpp"
@@ -21,7 +20,7 @@ namespace dto {
 struct ChannelSummary {
     std::string id;
     uint64_t version;
-    boost::optional<std::string> metadata;
+    std::optional<std::string> metadata;
 };
 
 struct EventData {
@@ -71,14 +70,6 @@ struct StreamUnsubscribedEventData : public EventData {
     model::Subscription subscription;
 };
 
-struct SubscriptionEnabledEventData : public EventData {
-    model::Subscription subscription;
-};
-
-struct SubscriptionDisabledEventData : public EventData {
-    model::Subscription subscription;
-};
-
 void from_json(const nlohmann::json& j, ChannelSummary& summary);
 void from_json(const nlohmann::json& j, EventData& data);
 void from_json(const nlohmann::json& j, ChannelMetadataUpdatedEventData& data);
@@ -92,8 +83,6 @@ void from_json(const nlohmann::json& j, PublicationDisabledEventData& data);
 void from_json(const nlohmann::json& j, PublicationMetadataUpdatedEventData& data);
 void from_json(const nlohmann::json& j, StreamSubscribedEventData& data);
 void from_json(const nlohmann::json& j, StreamUnsubscribedEventData& data);
-void from_json(const nlohmann::json& j, SubscriptionEnabledEventData& data);
-void from_json(const nlohmann::json& j, SubscriptionDisabledEventData& data);
 
 }  // namespace dto
 }  // namespace rtc_api

@@ -14,6 +14,7 @@ namespace global {
 namespace config {
 
 extern const int DEFAULT_TIMEOUT_SEC;
+extern const int MAX_THREAD_NAME_SIZE;
 
 }
 }  // namespace global

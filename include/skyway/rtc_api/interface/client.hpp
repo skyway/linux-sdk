@@ -32,18 +32,18 @@ public:
     virtual bool UpdateChannelMetadata(const std::string& channel_id,
                                        const std::string& metadata)                             = 0;
 
-    virtual boost::optional<model::Member> JoinChannel(const std::string& channel_id,
+    virtual std::optional<model::Member> JoinChannel(const std::string& channel_id,
                                                        const model::Member::Init& init,
-                                                       const boost::optional<time_t> ttl_sec) = 0;
+                                                       const std::optional<time_t> ttl_sec) = 0;
     virtual bool UpdateMemberMetadata(const std::string& channel_id,
                                       const std::string& member_id,
                                       const std::string& metadata)                            = 0;
-    virtual boost::optional<time_t> GetServerUnixTimeSec()                                       = 0;
+    virtual std::optional<time_t> GetServerUnixTimeSec()                                       = 0;
     virtual bool UpdateMemberTtl(const std::string& channel_id,
                                  const std::string& member_id,
                                  const std::time_t ttl_sec)                                   = 0;
     virtual bool UpdateAuthToken(const std::string& token)                                    = 0;
-    virtual boost::optional<model::Publication> Publish(const model::Publication::Init& init) = 0;
+    virtual std::optional<model::Publication> Publish(const model::Publication::Init& init) = 0;
     virtual bool UpdatePublicationMetadata(const std::string& channel_id,
                                            const std::string& publication_id,
                                            const std::string& metadata)                       = 0;
@@ -52,13 +52,9 @@ public:
                                    const std::string& publication_id)                         = 0;
     virtual bool DisablePublication(const std::string& channel_id,
                                     const std::string& publication_id)                        = 0;
-    virtual boost::optional<model::Subscription> Subscribe(
+    virtual std::optional<model::Subscription> Subscribe(
         const model::Subscription::Init& init)                                                  = 0;
     virtual bool Unsubscribe(const std::string& channel_id, const std::string& subscription_id) = 0;
-    virtual bool EnableSubscription(const std::string& channel_id,
-                                    const std::string& subscription_id)                         = 0;
-    virtual bool DisableSubscription(const std::string& channel_id,
-                                     const std::string& subscription_id)                        = 0;
 };
 
 }  // namespace interface

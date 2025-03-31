@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['for_20linux_0',['SkyWay SDK for Linux',['../index.html',1,'']]]
+  ['skyway_20linux_20sdk_16217',['SkyWay Linux SDK',['../index.html',1,'']]]
 ];

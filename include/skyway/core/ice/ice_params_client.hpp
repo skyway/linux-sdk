@@ -11,8 +11,6 @@
 
 #include <api/peer_connection_interface.h>
 
-#include <boost/optional.hpp>
-
 #include "skyway/core/context_options.hpp"
 #include "skyway/core/ice/dto/response.hpp"
 #include "skyway/core/interface/ice_params_client.hpp"
@@ -47,7 +45,7 @@ public:
         const std::string& token,
         const std::string& channel_id,
         const std::string& member_id,
-        boost::optional<int> ttl) const override;
+        std::optional<int> ttl) const override;
 
 private:
     HttpClientInterface* http_;

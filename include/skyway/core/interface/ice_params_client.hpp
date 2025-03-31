@@ -20,7 +20,7 @@ public:
         const std::string& token,
         const std::string& channel_id,
         const std::string& member_id,
-        boost::optional<int> ttl) const = 0;
+        std::optional<int> ttl) const = 0;
 };
 
 }  // namespace interface

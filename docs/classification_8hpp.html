@@ -1,0 +1,871 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classification_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">名前空間</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">classification.hpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;locale&gt;</code><br />
+<code>#include &lt;boost/range/value_type.hpp&gt;</code><br />
+<code>#include &lt;boost/range/as_literal.hpp&gt;</code><br />
+<code>#include &lt;boost/algorithm/string/detail/classification.hpp&gt;</code><br />
+<code>#include &lt;boost/algorithm/string/predicate_facade.hpp&gt;</code><br />
+</div>
+<p><a href="classification_8hpp_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+名前空間</h2></td></tr>
+<tr class="memitem:namespaceboost"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceboost.html">boost</a></td></tr>
+<tr class="memdesc:namespaceboost"><td class="mdescLeft">&#160;</td><td class="mdescRight">defined(BOOST_MOVE_DOXYGEN_INVOKED) <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a279049312f2502ade6483fb641bfac99"><td class="memItemLeft" align="right" valign="top">detail::is_classifiedF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#a279049312f2502ade6483fb641bfac99">boost::algorithm::is_classified</a> (std::ctype_base::mask Type, const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:a279049312f2502ade6483fb641bfac99"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_classified predicate  <a href="classification_8hpp.html#a279049312f2502ade6483fb641bfac99">[詳解]</a><br /></td></tr>
+<tr class="separator:a279049312f2502ade6483fb641bfac99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27c93b15da176a054314b87fc8f0b0d9"><td class="memItemLeft" align="right" valign="top">detail::is_classifiedF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#a27c93b15da176a054314b87fc8f0b0d9">boost::algorithm::is_space</a> (const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:a27c93b15da176a054314b87fc8f0b0d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_space predicate  <a href="classification_8hpp.html#a27c93b15da176a054314b87fc8f0b0d9">[詳解]</a><br /></td></tr>
+<tr class="separator:a27c93b15da176a054314b87fc8f0b0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688afb7e00182847f935526f2baedb88"><td class="memItemLeft" align="right" valign="top">detail::is_classifiedF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#a688afb7e00182847f935526f2baedb88">boost::algorithm::is_alnum</a> (const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:a688afb7e00182847f935526f2baedb88"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_alnum predicate  <a href="classification_8hpp.html#a688afb7e00182847f935526f2baedb88">[詳解]</a><br /></td></tr>
+<tr class="separator:a688afb7e00182847f935526f2baedb88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0d802b0e5276f86a1f90125cb3acfe"><td class="memItemLeft" align="right" valign="top">detail::is_classifiedF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#a5f0d802b0e5276f86a1f90125cb3acfe">boost::algorithm::is_alpha</a> (const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:a5f0d802b0e5276f86a1f90125cb3acfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_alpha predicate  <a href="classification_8hpp.html#a5f0d802b0e5276f86a1f90125cb3acfe">[詳解]</a><br /></td></tr>
+<tr class="separator:a5f0d802b0e5276f86a1f90125cb3acfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a310420f9c0757a2a0944663df8ee46"><td class="memItemLeft" align="right" valign="top">detail::is_classifiedF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#a8a310420f9c0757a2a0944663df8ee46">boost::algorithm::is_cntrl</a> (const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:a8a310420f9c0757a2a0944663df8ee46"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_cntrl predicate  <a href="classification_8hpp.html#a8a310420f9c0757a2a0944663df8ee46">[詳解]</a><br /></td></tr>
+<tr class="separator:a8a310420f9c0757a2a0944663df8ee46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac34dbdf3b64bd3c43111c9feb30d32cb"><td class="memItemLeft" align="right" valign="top">detail::is_classifiedF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#ac34dbdf3b64bd3c43111c9feb30d32cb">boost::algorithm::is_digit</a> (const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:ac34dbdf3b64bd3c43111c9feb30d32cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_digit predicate  <a href="classification_8hpp.html#ac34dbdf3b64bd3c43111c9feb30d32cb">[詳解]</a><br /></td></tr>
+<tr class="separator:ac34dbdf3b64bd3c43111c9feb30d32cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7169f4a3321ec20badc15dd012735291"><td class="memItemLeft" align="right" valign="top">detail::is_classifiedF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#a7169f4a3321ec20badc15dd012735291">boost::algorithm::is_graph</a> (const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:a7169f4a3321ec20badc15dd012735291"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_graph predicate  <a href="classification_8hpp.html#a7169f4a3321ec20badc15dd012735291">[詳解]</a><br /></td></tr>
+<tr class="separator:a7169f4a3321ec20badc15dd012735291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b7f26421a530340e5815b05e67d955f"><td class="memItemLeft" align="right" valign="top">detail::is_classifiedF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#a5b7f26421a530340e5815b05e67d955f">boost::algorithm::is_lower</a> (const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:a5b7f26421a530340e5815b05e67d955f"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_lower predicate  <a href="classification_8hpp.html#a5b7f26421a530340e5815b05e67d955f">[詳解]</a><br /></td></tr>
+<tr class="separator:a5b7f26421a530340e5815b05e67d955f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91c7c3c5b40405c9920b9c5179520049"><td class="memItemLeft" align="right" valign="top">detail::is_classifiedF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#a91c7c3c5b40405c9920b9c5179520049">boost::algorithm::is_print</a> (const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:a91c7c3c5b40405c9920b9c5179520049"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_print predicate  <a href="classification_8hpp.html#a91c7c3c5b40405c9920b9c5179520049">[詳解]</a><br /></td></tr>
+<tr class="separator:a91c7c3c5b40405c9920b9c5179520049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0156a7d132b50d14dd637092525c440e"><td class="memItemLeft" align="right" valign="top">detail::is_classifiedF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#a0156a7d132b50d14dd637092525c440e">boost::algorithm::is_punct</a> (const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:a0156a7d132b50d14dd637092525c440e"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_punct predicate  <a href="classification_8hpp.html#a0156a7d132b50d14dd637092525c440e">[詳解]</a><br /></td></tr>
+<tr class="separator:a0156a7d132b50d14dd637092525c440e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa034034f6b2599ceeaa407b98ea9787c"><td class="memItemLeft" align="right" valign="top">detail::is_classifiedF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#aa034034f6b2599ceeaa407b98ea9787c">boost::algorithm::is_upper</a> (const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:aa034034f6b2599ceeaa407b98ea9787c"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_upper predicate  <a href="classification_8hpp.html#aa034034f6b2599ceeaa407b98ea9787c">[詳解]</a><br /></td></tr>
+<tr class="separator:aa034034f6b2599ceeaa407b98ea9787c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ddcabe4a2f789fb1b2fdf9a7903edc2"><td class="memItemLeft" align="right" valign="top">detail::is_classifiedF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#a3ddcabe4a2f789fb1b2fdf9a7903edc2">boost::algorithm::is_xdigit</a> (const std::locale &amp;Loc=std::locale())</td></tr>
+<tr class="memdesc:a3ddcabe4a2f789fb1b2fdf9a7903edc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_xdigit predicate  <a href="classification_8hpp.html#a3ddcabe4a2f789fb1b2fdf9a7903edc2">[詳解]</a><br /></td></tr>
+<tr class="separator:a3ddcabe4a2f789fb1b2fdf9a7903edc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a0f322390dfc43dc699835abef0308"><td class="memTemplParams" colspan="2">template&lt;typename RangeT &gt; </td></tr>
+<tr class="memitem:a85a0f322390dfc43dc699835abef0308"><td class="memTemplItemLeft" align="right" valign="top">detail::is_any_ofF&lt; BOOST_STRING_TYPENAME range_value&lt; RangeT &gt;::type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#a85a0f322390dfc43dc699835abef0308">boost::algorithm::is_any_of</a> (const RangeT &amp;Set)</td></tr>
+<tr class="memdesc:a85a0f322390dfc43dc699835abef0308"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_any_of predicate  <a href="classification_8hpp.html#a85a0f322390dfc43dc699835abef0308">[詳解]</a><br /></td></tr>
+<tr class="separator:a85a0f322390dfc43dc699835abef0308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c1f12cfab06acca56984953567560ec"><td class="memTemplParams" colspan="2">template&lt;typename CharT &gt; </td></tr>
+<tr class="memitem:a2c1f12cfab06acca56984953567560ec"><td class="memTemplItemLeft" align="right" valign="top">detail::is_from_rangeF&lt; CharT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#a2c1f12cfab06acca56984953567560ec">boost::algorithm::is_from_range</a> (CharT From, CharT To)</td></tr>
+<tr class="memdesc:a2c1f12cfab06acca56984953567560ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_from_range predicate  <a href="classification_8hpp.html#a2c1f12cfab06acca56984953567560ec">[詳解]</a><br /></td></tr>
+<tr class="separator:a2c1f12cfab06acca56984953567560ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f12202b92ca6a6d4d21bad09178e3b1"><td class="memTemplParams" colspan="2">template&lt;typename Pred1T , typename Pred2T &gt; </td></tr>
+<tr class="memitem:a3f12202b92ca6a6d4d21bad09178e3b1"><td class="memTemplItemLeft" align="right" valign="top">detail::pred_andF&lt; Pred1T, Pred2T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#a3f12202b92ca6a6d4d21bad09178e3b1">boost::algorithm::operator&amp;&amp;</a> (const predicate_facade&lt; Pred1T &gt; &amp;Pred1, const predicate_facade&lt; Pred2T &gt; &amp;Pred2)</td></tr>
+<tr class="memdesc:a3f12202b92ca6a6d4d21bad09178e3b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">predicate 'and' composition predicate  <a href="classification_8hpp.html#a3f12202b92ca6a6d4d21bad09178e3b1">[詳解]</a><br /></td></tr>
+<tr class="separator:a3f12202b92ca6a6d4d21bad09178e3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a428a1394797f9d101ddb0f00a485bcda"><td class="memTemplParams" colspan="2">template&lt;typename Pred1T , typename Pred2T &gt; </td></tr>
+<tr class="memitem:a428a1394797f9d101ddb0f00a485bcda"><td class="memTemplItemLeft" align="right" valign="top">detail::pred_orF&lt; Pred1T, Pred2T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#a428a1394797f9d101ddb0f00a485bcda">boost::algorithm::operator||</a> (const predicate_facade&lt; Pred1T &gt; &amp;Pred1, const predicate_facade&lt; Pred2T &gt; &amp;Pred2)</td></tr>
+<tr class="memdesc:a428a1394797f9d101ddb0f00a485bcda"><td class="mdescLeft">&#160;</td><td class="mdescRight">predicate 'or' composition predicate  <a href="classification_8hpp.html#a428a1394797f9d101ddb0f00a485bcda">[詳解]</a><br /></td></tr>
+<tr class="separator:a428a1394797f9d101ddb0f00a485bcda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ba4a07df5a00b86ccf25d3186b2bc48"><td class="memTemplParams" colspan="2">template&lt;typename PredT &gt; </td></tr>
+<tr class="memitem:a0ba4a07df5a00b86ccf25d3186b2bc48"><td class="memTemplItemLeft" align="right" valign="top">detail::pred_notF&lt; PredT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classification_8hpp.html#a0ba4a07df5a00b86ccf25d3186b2bc48">boost::algorithm::operator!</a> (const predicate_facade&lt; PredT &gt; &amp;Pred)</td></tr>
+<tr class="memdesc:a0ba4a07df5a00b86ccf25d3186b2bc48"><td class="mdescLeft">&#160;</td><td class="mdescRight">predicate negation operator  <a href="classification_8hpp.html#a0ba4a07df5a00b86ccf25d3186b2bc48">[詳解]</a><br /></td></tr>
+<tr class="separator:a0ba4a07df5a00b86ccf25d3186b2bc48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Classification predicates are included in the library to give some more convenience when using algorithms like <code><a class="el" href="trim_8hpp.html#a43176b48fed44bc161b5ed635bea9cbe" title="Trim">trim()</a></code> and <code><a class="el" href="predicate_8hpp.html#a02b634f662d43fcbc5fbe52fa29e1886" title="&#39;All&#39; predicate">all()</a></code>. They wrap functionality of STL classification functions ( e.g. <code>std::isspace()</code> ) into generic functors. </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a688afb7e00182847f935526f2baedb88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a688afb7e00182847f935526f2baedb88">&#9670;&nbsp;</a></span>is_alnum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::is_classifiedF boost::algorithm::is_alnum </td>
+          <td>(</td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is_alnum predicate </p>
+<p>Construct the <code>is_classified</code> predicate for the <code>ctype_base::alnum</code> category. <br  />
+</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Loc</td><td>A locale used for classification </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of the <code>is_classified</code> predicate </dd></dl>
+
+</div>
+</div>
+<a id="a5f0d802b0e5276f86a1f90125cb3acfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f0d802b0e5276f86a1f90125cb3acfe">&#9670;&nbsp;</a></span>is_alpha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::is_classifiedF boost::algorithm::is_alpha </td>
+          <td>(</td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is_alpha predicate </p>
+<p>Construct the <code>is_classified</code> predicate for the <code>ctype_base::alpha</code> category. <br  />
+</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Loc</td><td>A locale used for classification </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of the <code>is_classified</code> predicate </dd></dl>
+
+</div>
+</div>
+<a id="a85a0f322390dfc43dc699835abef0308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85a0f322390dfc43dc699835abef0308">&#9670;&nbsp;</a></span>is_any_of()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RangeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::is_any_ofF&lt; BOOST_STRING_TYPENAME range_value&lt;RangeT&gt;::type&gt; boost::algorithm::is_any_of </td>
+          <td>(</td>
+          <td class="paramtype">const RangeT &amp;&#160;</td>
+          <td class="paramname"><em>Set</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is_any_of predicate </p>
+<p>Construct the <code>is_any_of</code> predicate. The predicate holds if the input is included in the specified set of characters.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Set</td><td>A set of characters to be recognized </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of the <code>is_any_of</code> predicate </dd></dl>
+
+</div>
+</div>
+<a id="a279049312f2502ade6483fb641bfac99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a279049312f2502ade6483fb641bfac99">&#9670;&nbsp;</a></span>is_classified()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::is_classifiedF boost::algorithm::is_classified </td>
+          <td>(</td>
+          <td class="paramtype">std::ctype_base::mask&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is_classified predicate </p>
+<p>Construct the <code>is_classified</code> predicate. This predicate holds if the input is of specified <code>std::ctype</code> category.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Type</td><td>A <code>std::ctype</code> category </td></tr>
+    <tr><td class="paramname">Loc</td><td>A locale used for classification </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of the <code>is_classified</code> predicate </dd></dl>
+
+</div>
+</div>
+<a id="a8a310420f9c0757a2a0944663df8ee46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a310420f9c0757a2a0944663df8ee46">&#9670;&nbsp;</a></span>is_cntrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::is_classifiedF boost::algorithm::is_cntrl </td>
+          <td>(</td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is_cntrl predicate </p>
+<p>Construct the <code>is_classified</code> predicate for the <code>ctype_base::cntrl</code> category. <br  />
+</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Loc</td><td>A locale used for classification </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of the <code>is_classified</code> predicate </dd></dl>
+
+</div>
+</div>
+<a id="ac34dbdf3b64bd3c43111c9feb30d32cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac34dbdf3b64bd3c43111c9feb30d32cb">&#9670;&nbsp;</a></span>is_digit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::is_classifiedF boost::algorithm::is_digit </td>
+          <td>(</td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is_digit predicate </p>
+<p>Construct the <code>is_classified</code> predicate for the <code>ctype_base::digit</code> category. <br  />
+</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Loc</td><td>A locale used for classification </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of the <code>is_classified</code> predicate </dd></dl>
+
+</div>
+</div>
+<a id="a2c1f12cfab06acca56984953567560ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c1f12cfab06acca56984953567560ec">&#9670;&nbsp;</a></span>is_from_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CharT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::is_from_rangeF&lt;CharT&gt; boost::algorithm::is_from_range </td>
+          <td>(</td>
+          <td class="paramtype">CharT&#160;</td>
+          <td class="paramname"><em>From</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CharT&#160;</td>
+          <td class="paramname"><em>To</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is_from_range predicate </p>
+<p>Construct the <code>is_from_range</code> predicate. The predicate holds if the input is included in the specified range. (i.e. From &lt;= Ch &lt;= To )</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">From</td><td>The start of the range </td></tr>
+    <tr><td class="paramname">To</td><td>The end of the range </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of the <code>is_from_range</code> predicate </dd></dl>
+
+</div>
+</div>
+<a id="a7169f4a3321ec20badc15dd012735291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7169f4a3321ec20badc15dd012735291">&#9670;&nbsp;</a></span>is_graph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::is_classifiedF boost::algorithm::is_graph </td>
+          <td>(</td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is_graph predicate </p>
+<p>Construct the <code>is_classified</code> predicate for the <code>ctype_base::graph</code> category. <br  />
+</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Loc</td><td>A locale used for classification </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of the <code>is_classified</code> predicate </dd></dl>
+
+</div>
+</div>
+<a id="a5b7f26421a530340e5815b05e67d955f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b7f26421a530340e5815b05e67d955f">&#9670;&nbsp;</a></span>is_lower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::is_classifiedF boost::algorithm::is_lower </td>
+          <td>(</td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is_lower predicate </p>
+<p>Construct the <code>is_classified</code> predicate for the <code>ctype_base::lower</code> category. <br  />
+</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Loc</td><td>A locale used for classification </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of <code>is_classified</code> predicate </dd></dl>
+
+</div>
+</div>
+<a id="a91c7c3c5b40405c9920b9c5179520049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91c7c3c5b40405c9920b9c5179520049">&#9670;&nbsp;</a></span>is_print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::is_classifiedF boost::algorithm::is_print </td>
+          <td>(</td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is_print predicate </p>
+<p>Construct the <code>is_classified</code> predicate for the <code>ctype_base::print</code> category. <br  />
+</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Loc</td><td>A locale used for classification </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of the <code>is_classified</code> predicate </dd></dl>
+
+</div>
+</div>
+<a id="a0156a7d132b50d14dd637092525c440e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0156a7d132b50d14dd637092525c440e">&#9670;&nbsp;</a></span>is_punct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::is_classifiedF boost::algorithm::is_punct </td>
+          <td>(</td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is_punct predicate </p>
+<p>Construct the <code>is_classified</code> predicate for the <code>ctype_base::punct</code> category. <br  />
+</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Loc</td><td>A locale used for classification </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of the <code>is_classified</code> predicate </dd></dl>
+
+</div>
+</div>
+<a id="a27c93b15da176a054314b87fc8f0b0d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27c93b15da176a054314b87fc8f0b0d9">&#9670;&nbsp;</a></span>is_space()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::is_classifiedF boost::algorithm::is_space </td>
+          <td>(</td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is_space predicate </p>
+<p>Construct the <code>is_classified</code> predicate for the <code>ctype_base::space</code> category. <br  />
+</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Loc</td><td>A locale used for classification </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of the <code>is_classified</code> predicate </dd></dl>
+
+</div>
+</div>
+<a id="aa034034f6b2599ceeaa407b98ea9787c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa034034f6b2599ceeaa407b98ea9787c">&#9670;&nbsp;</a></span>is_upper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::is_classifiedF boost::algorithm::is_upper </td>
+          <td>(</td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is_upper predicate </p>
+<p>Construct the <code>is_classified</code> predicate for the <code>ctype_base::upper</code> category. <br  />
+</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Loc</td><td>A locale used for classification </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of the <code>is_classified</code> predicate </dd></dl>
+
+</div>
+</div>
+<a id="a3ddcabe4a2f789fb1b2fdf9a7903edc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ddcabe4a2f789fb1b2fdf9a7903edc2">&#9670;&nbsp;</a></span>is_xdigit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::is_classifiedF boost::algorithm::is_xdigit </td>
+          <td>(</td>
+          <td class="paramtype">const std::locale &amp;&#160;</td>
+          <td class="paramname"><em>Loc</em> = <code>std::locale()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is_xdigit predicate </p>
+<p>Construct the <code>is_classified</code> predicate for the <code>ctype_base::xdigit</code> category. <br  />
+</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Loc</td><td>A locale used for classification </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of the <code>is_classified</code> predicate </dd></dl>
+
+</div>
+</div>
+<a id="a0ba4a07df5a00b86ccf25d3186b2bc48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ba4a07df5a00b86ccf25d3186b2bc48">&#9670;&nbsp;</a></span>operator!()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PredT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::pred_notF&lt;PredT&gt; boost::algorithm::operator! </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structboost_1_1algorithm_1_1predicate__facade.html">predicate_facade</a>&lt; PredT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Pred</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>predicate negation operator </p>
+<p>Construct the <code>class_not</code> predicate. This predicate represents a negation. <code>class_or</code> holds if of the predicates return false.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Pred</td><td>The predicate to be negated </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of the <code>class_not</code> predicate <br  />
+ </dd></dl>
+
+</div>
+</div>
+<a id="a3f12202b92ca6a6d4d21bad09178e3b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f12202b92ca6a6d4d21bad09178e3b1">&#9670;&nbsp;</a></span>operator&amp;&amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pred1T , typename Pred2T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::pred_andF&lt;Pred1T, Pred2T&gt; boost::algorithm::operator&amp;&amp; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structboost_1_1algorithm_1_1predicate__facade.html">predicate_facade</a>&lt; Pred1T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Pred1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structboost_1_1algorithm_1_1predicate__facade.html">predicate_facade</a>&lt; Pred2T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Pred2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>predicate 'and' composition predicate </p>
+<p>Construct the <code>class_and</code> predicate. This predicate can be used to logically combine two classification predicates. <code>class_and</code> holds, if both predicates return true.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Pred1</td><td>The first predicate </td></tr>
+    <tr><td class="paramname">Pred2</td><td>The second predicate </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of the <code>class_and</code> predicate <br  />
+ </dd></dl>
+
+</div>
+</div>
+<a id="a428a1394797f9d101ddb0f00a485bcda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a428a1394797f9d101ddb0f00a485bcda">&#9670;&nbsp;</a></span>operator||()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pred1T , typename Pred2T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::pred_orF&lt;Pred1T, Pred2T&gt; boost::algorithm::operator|| </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structboost_1_1algorithm_1_1predicate__facade.html">predicate_facade</a>&lt; Pred1T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Pred1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structboost_1_1algorithm_1_1predicate__facade.html">predicate_facade</a>&lt; Pred2T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Pred2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>predicate 'or' composition predicate </p>
+<p>Construct the <code>class_or</code> predicate. This predicate can be used to logically combine two classification predicates. <code>class_or</code> holds, if one of the predicates return true.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Pred1</td><td>The first predicate </td></tr>
+    <tr><td class="paramname">Pred2</td><td>The second predicate </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>An instance of the <code>class_or</code> predicate <br  />
+ </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1794b65aa62003e11b03e0565def47fa.html">external</a></li><li class="navelem"><a class="el" href="dir_c08529bcc08f755a4d16428f71043471.html">boost</a></li><li class="navelem"><a class="el" href="dir_08e916b1ba9423845cffef83795e9545.html">boost</a></li><li class="navelem"><a class="el" href="dir_9800f813ecac2c341b3805f88c329233.html">algorithm</a></li><li class="navelem"><a class="el" href="dir_8f2d71a5cad810076374860da5042034.html">string</a></li><li class="navelem"><a class="el" href="classification_8hpp.html">classification.hpp</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

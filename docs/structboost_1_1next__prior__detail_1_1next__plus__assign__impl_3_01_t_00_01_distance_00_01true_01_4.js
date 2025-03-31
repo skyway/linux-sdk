@@ -1,0 +1,4 @@
+var structboost_1_1next__prior__detail_1_1next__plus__assign__impl_3_01_t_00_01_distance_00_01true_01_4 =
+[
+    [ "call", "structboost_1_1next__prior__detail_1_1next__plus__assign__impl_3_01_t_00_01_distance_00_01true_01_4.html#a04b34c3fc349d0a30b47bedff22b161c", null ]
+];

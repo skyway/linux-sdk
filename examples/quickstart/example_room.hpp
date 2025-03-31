@@ -32,7 +32,7 @@ public:
     void Publish();
 
     // 指定のpublicationをsubscribeします。
-    bool Subscribe(std::unique_ptr<skyway::room::interface::RoomPublication> publication);
+    bool Subscribe(std::shared_ptr<skyway::room::interface::RoomPublication> publication);
 
     // P2PRoomに存在するPublication全てに対してSubscribeを試みます。
     void SubscribeAll();
@@ -45,7 +45,7 @@ public:
 
     // Impl skyway::room::interface::Room::EventListener
     void OnStreamPublished(
-        std::unique_ptr<skyway::room::interface::RoomPublication> publication) override;
+        std::shared_ptr<skyway::room::interface::RoomPublication> publication) override;
 
     // Impl skyway::core::stream::remote::RemoteDataStream::Listener
     void OnData(const std::string& data) override;
@@ -53,15 +53,15 @@ public:
 
 private:
     // 指定のPublicationをSubscribeしているかチェックします。
-    bool IsSubscribed(skyway::room::interface::RoomPublication* publication);
+    bool IsSubscribed(std::shared_ptr<skyway::room::interface::RoomPublication> publication);
 
     std::shared_ptr<skyway::room::p2p::P2PRoom> p2proom_;
-    std::unique_ptr<skyway::room::p2p::LocalP2PRoomMember> room_member_;
+    std::shared_ptr<skyway::room::p2p::LocalP2PRoomMember> room_member_;
     std::unique_ptr<skyway::media::V4l2VideoRenderer> renderer_;
     std::shared_ptr<skyway::core::stream::local::LocalDataStream> data_stream_;
     std::string renderer_device_name_;
     std::vector<std::unique_ptr<std::thread>> threads_;
-    bool is_leaving_;
+    std::atomic<bool> is_leaving_;
     bool is_notify_;
 };
 

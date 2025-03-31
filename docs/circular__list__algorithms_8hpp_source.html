@@ -1,0 +1,455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('circular__list__algorithms_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">circular_list_algorithms.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// (C) Copyright Olaf Krzikalla 2004-2006.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// (C) Copyright Ion Gaztanaga  2006-2014</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//    (See accompanying file LICENSE_1_0.txt or copy at</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//          http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// See http://www.boost.org/libs/intrusive for documentation.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifndef BOOST_INTRUSIVE_CIRCULAR_LIST_ALGORITHMS_HPP</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define BOOST_INTRUSIVE_CIRCULAR_LIST_ALGORITHMS_HPP</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;boost/intrusive/detail/config_begin.hpp&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="intrusive__fwd_8hpp.html">boost/intrusive/intrusive_fwd.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;boost/intrusive/detail/algo_type.hpp&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;boost/core/no_exceptions_support.hpp&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#if defined(BOOST_HAS_PRAGMA_ONCE)</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#  pragma once</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceboost.html">boost</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>intrusive {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> NodeTraits&gt;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html">   56</a></span>&#160;<span class="keyword">class </span><a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html">circular_list_algorithms</a></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   <span class="keyword">typedef</span> <span class="keyword">typename</span> NodeTraits::node            node;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <span class="keyword">typedef</span> <span class="keyword">typename</span> NodeTraits::node_ptr        node_ptr;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   <span class="keyword">typedef</span> <span class="keyword">typename</span> NodeTraits::const_node_ptr  const_node_ptr;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   <span class="keyword">typedef</span> NodeTraits                           node_traits;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a9fdce090c08e420e5666f0f8961d43ec">   70</a></span>&#160;   BOOST_INTRUSIVE_FORCEINLINE <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a9fdce090c08e420e5666f0f8961d43ec">init</a>(node_ptr this_node)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keyword">const</span> node_ptr null_node = node_ptr();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      NodeTraits::set_next(this_node, null_node);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      NodeTraits::set_previous(this_node, null_node);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a0f44f5ccdc6846ce9b69d9b03db7f7f1">   83</a></span>&#160;   BOOST_INTRUSIVE_FORCEINLINE <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a0f44f5ccdc6846ce9b69d9b03db7f7f1">inited</a>(<span class="keyword">const</span> const_node_ptr &amp;this_node)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;   {  <span class="keywordflow">return</span> !NodeTraits::get_next(this_node); }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#aac7c86afe3c637af62c6b77ded11d153">   94</a></span>&#160;   BOOST_INTRUSIVE_FORCEINLINE <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#aac7c86afe3c637af62c6b77ded11d153">init_header</a>(node_ptr this_node)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;   {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      NodeTraits::set_next(this_node, this_node);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      NodeTraits::set_previous(this_node, this_node);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;   }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#ab239617dc07fa7215ce9916ab3fa1f01">  109</a></span>&#160;   BOOST_INTRUSIVE_FORCEINLINE <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#ab239617dc07fa7215ce9916ab3fa1f01">unique</a>(<span class="keyword">const</span> const_node_ptr &amp;this_node)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;   {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      node_ptr next = NodeTraits::get_next(this_node);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keywordflow">return</span> !next || next == this_node;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;   }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a9887e18cf3725c518a96288964f50c0b">  123</a></span>&#160;   <span class="keyword">static</span> std::size_t <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a9887e18cf3725c518a96288964f50c0b">count</a>(<span class="keyword">const</span> const_node_ptr &amp;this_node)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;   {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      std::size_t result = 0;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      const_node_ptr p = this_node;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">do</span>{</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;         p = NodeTraits::get_next(p);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;         ++result;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      }<span class="keywordflow">while</span> (p != this_node);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;   }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a2b1751b671287877d9a54f15e7da987c">  141</a></span>&#160;   BOOST_INTRUSIVE_FORCEINLINE <span class="keyword">static</span> node_ptr <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a2b1751b671287877d9a54f15e7da987c">unlink</a>(node_ptr this_node)</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;   {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;      node_ptr next(NodeTraits::get_next(this_node));</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      node_ptr prev(NodeTraits::get_previous(this_node));</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      NodeTraits::set_next(prev, next);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      NodeTraits::set_previous(next, prev);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <span class="keywordflow">return</span> next;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;   }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a2e62880525b1aff8d95432283dae323d">  157</a></span>&#160;   BOOST_INTRUSIVE_FORCEINLINE <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a2e62880525b1aff8d95432283dae323d">unlink</a>(node_ptr b, node_ptr e)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;   {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      <span class="keywordflow">if</span> (b != e) {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;         node_ptr prevb(NodeTraits::get_previous(b));</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;         NodeTraits::set_previous(e, prevb);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;         NodeTraits::set_next(prevb, e);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;   }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#aae38d888535f44a656601facdcffffe0">  173</a></span>&#160;   BOOST_INTRUSIVE_FORCEINLINE <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#aae38d888535f44a656601facdcffffe0">link_before</a>(node_ptr nxt_node, node_ptr this_node)</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;   {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      node_ptr prev(NodeTraits::get_previous(nxt_node));</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      NodeTraits::set_previous(this_node, prev);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      NodeTraits::set_next(this_node, nxt_node);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      <span class="comment">//nxt_node might be an alias for prev-&gt;next_</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;      <span class="comment">//so use it before NodeTraits::set_next(prev, ...)</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      <span class="comment">//is called and the reference changes its value</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      NodeTraits::set_previous(nxt_node, this_node);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;      NodeTraits::set_next(prev, this_node);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;   }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#abbc0aa5f31b3c6ea57e378c6d533e913">  192</a></span>&#160;   BOOST_INTRUSIVE_FORCEINLINE <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#abbc0aa5f31b3c6ea57e378c6d533e913">link_after</a>(node_ptr prev_node, node_ptr this_node)</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;   {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      node_ptr next(NodeTraits::get_next(prev_node));</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      NodeTraits::set_previous(this_node, prev_node);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      NodeTraits::set_next(this_node, next);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      <span class="comment">//prev_node might be an alias for next-&gt;next_</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      <span class="comment">//so use it before update it before NodeTraits::set_previous(next, ...)</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      <span class="comment">//is called and the reference changes it&#39;s value</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      NodeTraits::set_next(prev_node, this_node);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      NodeTraits::set_previous(next, this_node);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;   }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a9d76f3a3fdbfe3a94c2280c64a9b8067">  214</a></span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a9d76f3a3fdbfe3a94c2280c64a9b8067">swap_nodes</a>(node_ptr this_node, node_ptr other_node)</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;   {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      <span class="keywordflow">if</span> (other_node == this_node)</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;         <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      <span class="keywordtype">bool</span> this_inited  = <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a0f44f5ccdc6846ce9b69d9b03db7f7f1">inited</a>(this_node);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <span class="keywordtype">bool</span> other_inited = <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a0f44f5ccdc6846ce9b69d9b03db7f7f1">inited</a>(other_node);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      <span class="keywordflow">if</span>(this_inited){</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;         <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#aac7c86afe3c637af62c6b77ded11d153">init_header</a>(this_node);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      <span class="keywordflow">if</span>(other_inited){</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;         <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#aac7c86afe3c637af62c6b77ded11d153">init_header</a>(other_node);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      node_ptr next_this(NodeTraits::get_next(this_node));</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      node_ptr prev_this(NodeTraits::get_previous(this_node));</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      node_ptr next_other(NodeTraits::get_next(other_node));</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      node_ptr prev_other(NodeTraits::get_previous(other_node));</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      <span class="comment">//these first two swaps must happen before the other two</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      swap_prev(next_this, next_other);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      swap_next(prev_this, prev_other);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      swap_next(this_node, other_node);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      swap_prev(this_node, other_node);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      <span class="keywordflow">if</span>(this_inited){</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;         <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a9fdce090c08e420e5666f0f8961d43ec">init</a>(other_node);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      <span class="keywordflow">if</span>(other_inited){</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;         <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a9fdce090c08e420e5666f0f8961d43ec">init</a>(this_node);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;   }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;   <span class="comment">//    [b, e).</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#acc948b90e50c74f50526559337e07040">  255</a></span>&#160;<span class="comment"></span>   <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#acc948b90e50c74f50526559337e07040">transfer</a>(node_ptr p, node_ptr b, node_ptr e)</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;   {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      <span class="keywordflow">if</span> (b != e) {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;         node_ptr prev_p(NodeTraits::get_previous(p));</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;         node_ptr prev_b(NodeTraits::get_previous(b));</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;         node_ptr prev_e(NodeTraits::get_previous(e));</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;         NodeTraits::set_next(prev_e, p);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;         NodeTraits::set_previous(p, prev_e);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;         NodeTraits::set_next(prev_b, e);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;         NodeTraits::set_previous(e, prev_b);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;         NodeTraits::set_next(prev_p, b);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;         NodeTraits::set_previous(b, prev_p);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;   }</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a29b66efc0edb63325085fc6195d1dae3">  280</a></span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a29b66efc0edb63325085fc6195d1dae3">transfer</a>(node_ptr p, node_ptr i)</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;   {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;      node_ptr n(NodeTraits::get_next(i));</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;      <span class="keywordflow">if</span>(n != p &amp;&amp; i != p){</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;         node_ptr prev_p(NodeTraits::get_previous(p));</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;         node_ptr prev_i(NodeTraits::get_previous(i));</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;         NodeTraits::set_next(prev_p, i);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;         NodeTraits::set_previous(i, prev_p);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;         NodeTraits::set_next(i, p);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;         NodeTraits::set_previous(p, i);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;         NodeTraits::set_previous(n, prev_i);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;         NodeTraits::set_next(prev_i, n);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      }</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;   }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a865b2be740c99fb2b8d2a3345eb6f260">  301</a></span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a865b2be740c99fb2b8d2a3345eb6f260">reverse</a>(node_ptr p)</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;   {</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;      node_ptr f(NodeTraits::get_next(p));</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      node_ptr i(NodeTraits::get_next(f)), e(p);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      <span class="keywordflow">while</span>(i != e) {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;         node_ptr n = i;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;         i = NodeTraits::get_next(i);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;         <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#acc948b90e50c74f50526559337e07040">transfer</a>(f, n, i);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;         f = n;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;   }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a7d2d6cd6fcacf5ad5b36409e98c5476d">  319</a></span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a7d2d6cd6fcacf5ad5b36409e98c5476d">move_backwards</a>(node_ptr p, std::size_t n)</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;   {</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;      <span class="comment">//Null shift, nothing to do</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;      <span class="keywordflow">if</span>(!n) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;      node_ptr first  = NodeTraits::get_next(p);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      <span class="comment">//size() == 0 or 1, nothing to do</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      <span class="keywordflow">if</span>(first == NodeTraits::get_previous(p)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a2b1751b671287877d9a54f15e7da987c">unlink</a>(p);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      <span class="comment">//Now get the new first node</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      <span class="keywordflow">while</span>(n--){</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;         first = NodeTraits::get_next(first);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      }</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#aae38d888535f44a656601facdcffffe0">link_before</a>(first, p);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;   }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00339"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a24792ccb5e82efa91f70f9e9934c9414">  339</a></span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a24792ccb5e82efa91f70f9e9934c9414">move_forward</a>(node_ptr p, std::size_t n)</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;   {</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;      <span class="comment">//Null shift, nothing to do</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;      <span class="keywordflow">if</span>(!n)   <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;      node_ptr last  = NodeTraits::get_previous(p);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;      <span class="comment">//size() == 0 or 1, nothing to do</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;      <span class="keywordflow">if</span>(last == NodeTraits::get_next(p))   <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a2b1751b671287877d9a54f15e7da987c">unlink</a>(p);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;      <span class="comment">//Now get the new last node</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;      <span class="keywordflow">while</span>(n--){</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;         last = NodeTraits::get_previous(last);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;      }</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#abbc0aa5f31b3c6ea57e378c6d533e913">link_after</a>(last, p);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;   }</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
+<div class="line"><a name="l00362"></a><span class="lineno"><a class="line" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#aa81c488a6a5294a0c612ebcb0a28bdc4">  362</a></span>&#160;   <span class="keyword">static</span> std::size_t <a class="code" href="classboost_1_1intrusive_1_1circular__list__algorithms.html#aa81c488a6a5294a0c612ebcb0a28bdc4">distance</a>(<span class="keyword">const</span> const_node_ptr &amp;f, <span class="keyword">const</span> const_node_ptr &amp;l)</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;   {</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;      const_node_ptr i(f);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;      std::size_t result = 0;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;      <span class="keywordflow">while</span>(i != l){</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;         i = NodeTraits::get_next(i);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;         ++result;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;      }</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;   }</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
+<div class="line"><a name="l00373"></a><span class="lineno"><a class="line" href="structboost_1_1intrusive_1_1circular__list__algorithms_1_1stable__partition__info.html">  373</a></span>&#160;   <span class="keyword">struct </span><a class="code" href="structboost_1_1intrusive_1_1circular__list__algorithms_1_1stable__partition__info.html">stable_partition_info</a></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;   {</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;      std::size_t num_1st_partition;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;      std::size_t num_2nd_partition;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;      node_ptr    beg_2st_partition;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;   };</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;   <span class="keyword">template</span>&lt;<span class="keyword">class</span> Pred&gt;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> stable_partition(node_ptr beg, node_ptr end, Pred pred, <a class="code" href="structboost_1_1intrusive_1_1circular__list__algorithms_1_1stable__partition__info.html">stable_partition_info</a> &amp;info)</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;   {</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      node_ptr bcur = node_traits::get_previous(beg);</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;      node_ptr cur  = beg;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      node_ptr new_f = end;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;      std::size_t num1 = 0, num2 = 0;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;      <span class="keywordflow">while</span>(cur != end){</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;         <span class="keywordflow">if</span>(pred(cur)){</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            ++num1;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;            bcur = cur;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            cur  = node_traits::get_next(cur);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;         }</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;         <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            ++num2;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            node_ptr last_to_remove = bcur;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            new_f = cur;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            bcur = cur;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            cur  = node_traits::get_next(cur);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            BOOST_TRY{</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;               <span class="comment">//Main loop</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;               <span class="keywordflow">while</span>(cur != end){</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                  <span class="keywordflow">if</span>(pred(cur)){ <span class="comment">//Might throw</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                     ++num1;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                     <span class="comment">//Process current node</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;                     node_traits::set_next    (last_to_remove, cur);</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                     node_traits::set_previous(cur, last_to_remove);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                     last_to_remove = cur;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                     node_ptr nxt = node_traits::get_next(cur);</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                     node_traits::set_next    (bcur, nxt);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                     node_traits::set_previous(nxt, bcur);</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                     cur = nxt;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                  }</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;                  <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;                     ++num2;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;                     bcur = cur;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                     cur  = node_traits::get_next(cur);</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                  }</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;               }</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            }</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            BOOST_CATCH(...){</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;               node_traits::set_next    (last_to_remove, new_f);</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;               node_traits::set_previous(new_f, last_to_remove);</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;               BOOST_RETHROW;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;            }</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;            BOOST_CATCH_END</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            node_traits::set_next(last_to_remove, new_f);</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;            node_traits::set_previous(new_f, last_to_remove);</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;         }</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;      }</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;      info.num_1st_partition = num1;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;      info.num_2nd_partition = num2;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;      info.beg_2st_partition = new_f;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;   }</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160; </div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;   <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;   BOOST_INTRUSIVE_FORCEINLINE <span class="keyword">static</span> <span class="keywordtype">void</span> swap_prev(node_ptr this_node, node_ptr other_node)</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;   {</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;      node_ptr temp(NodeTraits::get_previous(this_node));</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;      NodeTraits::set_previous(this_node, NodeTraits::get_previous(other_node));</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;      NodeTraits::set_previous(other_node, temp);</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;   }</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;   BOOST_INTRUSIVE_FORCEINLINE <span class="keyword">static</span> <span class="keywordtype">void</span> swap_next(node_ptr this_node, node_ptr other_node)</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;   {</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;      node_ptr temp(NodeTraits::get_next(this_node));</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;      NodeTraits::set_next(this_node, NodeTraits::get_next(other_node));</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;      NodeTraits::set_next(other_node, temp);</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;   }</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;};</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160; </div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160; </div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> NodeTraits&gt;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="keyword">struct </span>get_algo&lt;CircularListAlgorithms, NodeTraits&gt;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;{</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;   <span class="keyword">typedef</span> circular_list_algorithms&lt;NodeTraits&gt; type;</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;};</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160; </div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160; </div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;} <span class="comment">//namespace intrusive</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;} <span class="comment">//namespace boost</span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160; </div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="preprocessor">#include &lt;boost/intrusive/detail/config_end.hpp&gt;</span></div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;<span class="preprocessor">#endif //BOOST_INTRUSIVE_CIRCULAR_LIST_ALGORITHMS_HPP</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html_a0f44f5ccdc6846ce9b69d9b03db7f7f1"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a0f44f5ccdc6846ce9b69d9b03db7f7f1">boost::intrusive::circular_list_algorithms::inited</a></div><div class="ttdeci">static BOOST_INTRUSIVE_FORCEINLINE bool inited(const const_node_ptr &amp;this_node)</div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:83</div></div>
+<div class="ttc" id="aintrusive__fwd_8hpp_html"><div class="ttname"><a href="intrusive__fwd_8hpp.html">intrusive_fwd.hpp</a></div></div>
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html_a9d76f3a3fdbfe3a94c2280c64a9b8067"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a9d76f3a3fdbfe3a94c2280c64a9b8067">boost::intrusive::circular_list_algorithms::swap_nodes</a></div><div class="ttdeci">static void swap_nodes(node_ptr this_node, node_ptr other_node)</div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:214</div></div>
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html_aa81c488a6a5294a0c612ebcb0a28bdc4"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html#aa81c488a6a5294a0c612ebcb0a28bdc4">boost::intrusive::circular_list_algorithms::distance</a></div><div class="ttdeci">static std::size_t distance(const const_node_ptr &amp;f, const const_node_ptr &amp;l)</div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:362</div></div>
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html">boost::intrusive::circular_list_algorithms</a></div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:56</div></div>
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html_a9fdce090c08e420e5666f0f8961d43ec"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a9fdce090c08e420e5666f0f8961d43ec">boost::intrusive::circular_list_algorithms::init</a></div><div class="ttdeci">static BOOST_INTRUSIVE_FORCEINLINE void init(node_ptr this_node)</div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:70</div></div>
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html_a9887e18cf3725c518a96288964f50c0b"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a9887e18cf3725c518a96288964f50c0b">boost::intrusive::circular_list_algorithms::count</a></div><div class="ttdeci">static std::size_t count(const const_node_ptr &amp;this_node)</div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:123</div></div>
+<div class="ttc" id="astructboost_1_1intrusive_1_1circular__list__algorithms_1_1stable__partition__info_html"><div class="ttname"><a href="structboost_1_1intrusive_1_1circular__list__algorithms_1_1stable__partition__info.html">boost::intrusive::circular_list_algorithms::stable_partition_info</a></div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:373</div></div>
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html_aae38d888535f44a656601facdcffffe0"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html#aae38d888535f44a656601facdcffffe0">boost::intrusive::circular_list_algorithms::link_before</a></div><div class="ttdeci">static BOOST_INTRUSIVE_FORCEINLINE void link_before(node_ptr nxt_node, node_ptr this_node)</div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:173</div></div>
+<div class="ttc" id="anamespaceboost_html"><div class="ttname"><a href="namespaceboost.html">boost</a></div><div class="ttdoc">defined(BOOST_MOVE_DOXYGEN_INVOKED)</div><div class="ttdef"><b>Definition:</b> case_conv.hpp:32</div></div>
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html_a7d2d6cd6fcacf5ad5b36409e98c5476d"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a7d2d6cd6fcacf5ad5b36409e98c5476d">boost::intrusive::circular_list_algorithms::move_backwards</a></div><div class="ttdeci">static void move_backwards(node_ptr p, std::size_t n)</div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:319</div></div>
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html_a865b2be740c99fb2b8d2a3345eb6f260"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a865b2be740c99fb2b8d2a3345eb6f260">boost::intrusive::circular_list_algorithms::reverse</a></div><div class="ttdeci">static void reverse(node_ptr p)</div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:301</div></div>
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html_a29b66efc0edb63325085fc6195d1dae3"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a29b66efc0edb63325085fc6195d1dae3">boost::intrusive::circular_list_algorithms::transfer</a></div><div class="ttdeci">static void transfer(node_ptr p, node_ptr i)</div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:280</div></div>
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html_a24792ccb5e82efa91f70f9e9934c9414"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a24792ccb5e82efa91f70f9e9934c9414">boost::intrusive::circular_list_algorithms::move_forward</a></div><div class="ttdeci">static void move_forward(node_ptr p, std::size_t n)</div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:339</div></div>
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html_abbc0aa5f31b3c6ea57e378c6d533e913"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html#abbc0aa5f31b3c6ea57e378c6d533e913">boost::intrusive::circular_list_algorithms::link_after</a></div><div class="ttdeci">static BOOST_INTRUSIVE_FORCEINLINE void link_after(node_ptr prev_node, node_ptr this_node)</div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:192</div></div>
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html_ab239617dc07fa7215ce9916ab3fa1f01"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html#ab239617dc07fa7215ce9916ab3fa1f01">boost::intrusive::circular_list_algorithms::unique</a></div><div class="ttdeci">static BOOST_INTRUSIVE_FORCEINLINE bool unique(const const_node_ptr &amp;this_node)</div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:109</div></div>
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html_a2b1751b671287877d9a54f15e7da987c"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a2b1751b671287877d9a54f15e7da987c">boost::intrusive::circular_list_algorithms::unlink</a></div><div class="ttdeci">static BOOST_INTRUSIVE_FORCEINLINE node_ptr unlink(node_ptr this_node)</div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:141</div></div>
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html_aac7c86afe3c637af62c6b77ded11d153"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html#aac7c86afe3c637af62c6b77ded11d153">boost::intrusive::circular_list_algorithms::init_header</a></div><div class="ttdeci">static BOOST_INTRUSIVE_FORCEINLINE void init_header(node_ptr this_node)</div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:94</div></div>
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html_a2e62880525b1aff8d95432283dae323d"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html#a2e62880525b1aff8d95432283dae323d">boost::intrusive::circular_list_algorithms::unlink</a></div><div class="ttdeci">static BOOST_INTRUSIVE_FORCEINLINE void unlink(node_ptr b, node_ptr e)</div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:157</div></div>
+<div class="ttc" id="aclassboost_1_1intrusive_1_1circular__list__algorithms_html_acc948b90e50c74f50526559337e07040"><div class="ttname"><a href="classboost_1_1intrusive_1_1circular__list__algorithms.html#acc948b90e50c74f50526559337e07040">boost::intrusive::circular_list_algorithms::transfer</a></div><div class="ttdeci">static void transfer(node_ptr p, node_ptr b, node_ptr e)</div><div class="ttdef"><b>Definition:</b> circular_list_algorithms.hpp:255</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1794b65aa62003e11b03e0565def47fa.html">external</a></li><li class="navelem"><a class="el" href="dir_c08529bcc08f755a4d16428f71043471.html">boost</a></li><li class="navelem"><a class="el" href="dir_08e916b1ba9423845cffef83795e9545.html">boost</a></li><li class="navelem"><a class="el" href="dir_5002083305862f8b27b39502889588ee.html">intrusive</a></li><li class="navelem"><b>circular_list_algorithms.hpp</b></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

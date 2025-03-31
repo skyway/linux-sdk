@@ -28,8 +28,8 @@ public:
     std::string GetConnectionState() const override;
     void RestartIce(const nlohmann::json& iceParameters) override;
     void SetMediasoupTransport(mediasoupclient::Transport* transport);
-    void AddConnectionStateObserverListener(core::ConnectionStateChangeNotifiable* listener);
-    void RemoveConnectionStateObserverListener(core::ConnectionStateChangeNotifiable* listener);
+    void AddConnectionStateObserverListener(std::shared_ptr<core::ConnectionStateChangeNotifiable> listener);
+    void RemoveConnectionStateObserverListener(std::shared_ptr<core::ConnectionStateChangeNotifiable> listener);
     std::future<void> OnConnect(mediasoupclient::Transport* transport,
                                 const nlohmann::json& dtls_parameters);
     void OnConnectionStateChange(mediasoupclient::Transport* transport,

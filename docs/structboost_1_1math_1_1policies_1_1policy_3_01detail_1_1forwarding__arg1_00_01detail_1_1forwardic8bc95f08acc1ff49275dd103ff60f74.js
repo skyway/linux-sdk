@@ -1,0 +1,18 @@
+var structboost_1_1math_1_1policies_1_1policy_3_01detail_1_1forwarding__arg1_00_01detail_1_1forwardic8bc95f08acc1ff49275dd103ff60f74 =
+[
+    [ "assert_undefined_type", "structboost_1_1math_1_1policies_1_1policy_3_01detail_1_1forwarding__arg1_00_01detail_1_1forwardic8bc95f08acc1ff49275dd103ff60f74.html#aa5bbff1c5ad1592669b8f3bea9de474b", null ],
+    [ "denorm_error_type", "structboost_1_1math_1_1policies_1_1policy_3_01detail_1_1forwarding__arg1_00_01detail_1_1forwardic8bc95f08acc1ff49275dd103ff60f74.html#a345c5ae0af693e60d3b4d15796f1809b", null ],
+    [ "discrete_quantile_type", "structboost_1_1math_1_1policies_1_1policy_3_01detail_1_1forwarding__arg1_00_01detail_1_1forwardic8bc95f08acc1ff49275dd103ff60f74.html#aebad2c5dd7e8bddfcf10aed64b071f7e", null ],
+    [ "domain_error_type", "structboost_1_1math_1_1policies_1_1policy_3_01detail_1_1forwarding__arg1_00_01detail_1_1forwardic8bc95f08acc1ff49275dd103ff60f74.html#a3aff7b65b73f442f3ef56cb04ef83ba5", null ],
+    [ "evaluation_error_type", "structboost_1_1math_1_1policies_1_1policy_3_01detail_1_1forwarding__arg1_00_01detail_1_1forwardic8bc95f08acc1ff49275dd103ff60f74.html#a587d9482c38f9d7014b8adab25e5226f", null ],
+    [ "indeterminate_result_error_type", "structboost_1_1math_1_1policies_1_1policy_3_01detail_1_1forwarding__arg1_00_01detail_1_1forwardic8bc95f08acc1ff49275dd103ff60f74.html#a2ad276c85d12b43d18e6999fb277eafe", null ],
+    [ "max_root_iterations_type", "structboost_1_1math_1_1policies_1_1policy_3_01detail_1_1forwarding__arg1_00_01detail_1_1forwardic8bc95f08acc1ff49275dd103ff60f74.html#a32c57d0b6eef1302584e7b9a0261a381", null ],
+    [ "max_series_iterations_type", "structboost_1_1math_1_1policies_1_1policy_3_01detail_1_1forwarding__arg1_00_01detail_1_1forwardic8bc95f08acc1ff49275dd103ff60f74.html#ac276d3c944cba7aa6c9d85b480b2b5d9", null ],
+    [ "overflow_error_type", "structboost_1_1math_1_1policies_1_1policy_3_01detail_1_1forwarding__arg1_00_01detail_1_1forwardic8bc95f08acc1ff49275dd103ff60f74.html#af92f20eb952b0ba4fad24b67af240a07", null ],
+    [ "pole_error_type", "structboost_1_1math_1_1policies_1_1policy_3_01detail_1_1forwarding__arg1_00_01detail_1_1forwardic8bc95f08acc1ff49275dd103ff60f74.html#a289287c226d6e08869abbcd3a3f56e12", null ],
+    [ "precision_type", "structboost_1_1math_1_1policies_1_1policy_3_01detail_1_1forwarding__arg1_00_01detail_1_1forwardic8bc95f08acc1ff49275dd103ff60f74.html#a6b696b225097d4c23888b22084a1d9db", null ],
+    [ "promote_double_type", "structboost_1_1math_1_1policies_1_1policy_3_01detail_1_1forwarding__arg1_00_01detail_1_1forwardic8bc95f08acc1ff49275dd103ff60f74.html#ad28f513fa5da00d500215c4cb04e0c4d", null ],
+    [ "promote_float_type", "structboost_1_1math_1_1policies_1_1policy_3_01detail_1_1forwarding__arg1_00_01detail_1_1forwardic8bc95f08acc1ff49275dd103ff60f74.html#a83dad11eccfbc5f3057aa27ac84ae628", null ],
+    [ "rounding_error_type", "structboost_1_1math_1_1policies_1_1policy_3_01detail_1_1forwarding__arg1_00_01detail_1_1forwardic8bc95f08acc1ff49275dd103ff60f74.html#a4892e80b6fe4bfffd2cd7ed46585ab51", null ],
+    [ "underflow_error_type", "structboost_1_1math_1_1policies_1_1policy_3_01detail_1_1forwarding__arg1_00_01detail_1_1forwardic8bc95f08acc1ff49275dd103ff60f74.html#a2cfb662760bf24d05ee2b12c2363bdec", null ]
+];

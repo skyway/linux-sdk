@@ -21,24 +21,19 @@ namespace skyway {
 namespace plugin {
 namespace remote_person {
 
-using RemoteMemberInterface = core::interface::RemoteMember;
-using PublicationInterface  = core::interface::Publication;
-using SubscriptionInterface = core::interface::Subscription;
-using MemberInterface       = core::interface::Member;
 using SubscriptionId        = std::string;
 
 /// @brief RemotePersonの機能を持つメンバー
 /// @details 他のSDKで生成されたRemoteMemberで、WebRTCコネクションにてStreamの受け渡しを行います。
-class RemotePerson : public RemoteMemberInterface,
-                     public core::interface::Channel::InternalEventListener {
+class RemotePerson : public core::interface::RemoteMember {
 public:
-    class EventListener : public MemberInterface::EventListener {
+    class EventListener : public core::interface::Member::EventListener {
     public:
-        virtual void OnPublicationSubscribed(SubscriptionInterface* subscription) {}
-        virtual void OnPublicationUnsubscribed(SubscriptionInterface* subscription) {}
+        virtual void OnPublicationSubscribed(std::shared_ptr<core::interface::Subscription> subscription) {}
+        virtual void OnPublicationUnsubscribed(std::shared_ptr<core::interface::Subscription> subscription) {}
     };
     RemotePerson(
-        core::interface::Channel* channel,
+        std::shared_ptr<core::interface::Channel> channel,
         const model::Member& dto,
         rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory);
     ~RemotePerson();
@@ -51,7 +46,7 @@ public:
     /// 単純にLocalPerson.Subscribeを利用してください。
     ///
     /// @param publication_id SubscribeするPublicationのID
-    SubscriptionInterface* Subscribe(const std::string& publication_id);
+    std::shared_ptr<core::interface::Subscription> Subscribe(const std::string& publication_id);
 
     /// @brief Subscribeを中止させます。
     ///
@@ -69,7 +64,7 @@ public:
     /// LocalPersonがDataPlaneにおいて、Senderとしての接続を開始します。
     /// @param publication LocalPersonのPublication
     /// @param subscription_id SubscriptionのID
-    void OnSubscribedLocalPersonsPublication(PublicationInterface* publication,
+    void OnSubscribedLocalPersonsPublication(std::shared_ptr<core::interface::Publication> publication,
                                              const SubscriptionId& subscription_id) override;
 
     /// @brief このRemotePersonがLocalPersonのPublicationをUnsubscribeしたときのイベント
@@ -79,7 +74,7 @@ public:
     ///
     /// LocalPersonがDataPlaneにおいて、Senderとしての接続を終了します。
     /// @param publication LocalPersonのPublication
-    void OnUnsubscribedLocalPersonsPublication(PublicationInterface* publication) override;
+    void OnUnsubscribedLocalPersonsPublication(std::shared_ptr<core::interface::Publication> publication) override;
 
     /// @brief LocalPersonがこのRemotePersonのPublicationをSubscribeした時のイベント
     ///
@@ -88,7 +83,7 @@ public:
     ///
     /// LocalPersonがDataPlaneにおいて、Receiverとしての接続を開始します。
     /// @param subscription LocalPersonのSubscription
-    void OnLocalPersonSubscribed(SubscriptionInterface* subscription) override;
+    void OnLocalPersonSubscribed(std::shared_ptr<core::interface::Subscription> subscription) override;
 
     /// @brief LocalPersonがこのRemotePersonのPublicationをUnsubscribeした時のイベント
     ///
@@ -97,14 +92,13 @@ public:
     ///
     /// LocalPersonがDataPlaneにおいて、Receiverとしての接続を終了します。
     /// @param subscription LocalPersonのSubscription
-    void OnLocalPersonUnsubscribed(SubscriptionInterface* subscription) override;
+    void OnLocalPersonUnsubscribed(std::shared_ptr<core::interface::Subscription> subscription) override;
+    
+    void OnPublicationSubscribed(std::shared_ptr<core::interface::Subscription> subscription) override;
+    void OnPublicationUnsubscribed(std::shared_ptr<core::interface::Subscription> subscription) override;
 
     // core::interface::Member
     void OnLeft() override;
-
-    // core::interface::Channel::InternalEventListener
-    void OnPublicationSubscribed(SubscriptionInterface* subscription) override;
-    void OnPublicationUnsubscribed(SubscriptionInterface* subscription) override;
 
     void Dispose() override;
     /// @endcond
@@ -121,7 +115,6 @@ private:
     std::unique_ptr<connection::P2PConnection> connection_;
     rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory_;
     std::unique_ptr<core::interface::IceManager> ice_manager_;
-    std::unique_ptr<global::interface::Worker> worker_ = std::make_unique<global::Worker>();
 };
 
 }  // namespace remote_person

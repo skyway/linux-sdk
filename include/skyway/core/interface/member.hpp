@@ -10,7 +10,6 @@
 #define SKYWAY_CORE_INTERFACE_MEMBER_HPP_
 
 #include <atomic>
-#include <boost/optional.hpp>
 #include <mutex>
 #include <string>
 #include <unordered_set>
@@ -29,7 +28,7 @@ class Subscription;
 enum class MemberState { kJoined, kLeft };
 
 /// @brief LocalPersonおよびRemoteMemberの基底クラス
-class Member {
+class Member: public std::enable_shared_from_this<Member> {
 public:
     /// @brief イベントリスナ
     class EventListener {
@@ -60,9 +59,9 @@ public:
     /// @brief Idを取得します。
     std::string Id() const;
     /// @brief Nameを取得します。
-    boost::optional<std::string> Name() const;
+    std::optional<std::string> Name() const;
     /// @brief Metadataを取得します。
-    boost::optional<std::string> Metadata() const;
+    std::optional<std::string> Metadata() const;
     /// @brief MemberTypeを取得します。
     model::MemberType Type() const;
     /// @brief Subtypeを取得します。
@@ -73,9 +72,9 @@ public:
     MemberState State() const;
 
     /// @brief 自身が持つ全てのPublicationを取得します。
-    std::vector<Publication*> Publications() const;
+    std::vector<std::shared_ptr<interface::Publication>> Publications() const;
     /// @brief 自身が持つ全てのSubscriptionを取得します。
-    std::vector<Subscription*> Subscriptions() const;
+    std::vector<std::shared_ptr<interface::Subscription>> Subscriptions() const;
 
     /// @cond INTERNAL_SECTION
     virtual void OnLeft();
@@ -85,9 +84,9 @@ public:
     /// @endcond
 
 protected:
-    Member(Channel* channel, const model::Member& initial_dto, const model::Side& side);
+    Member(std::shared_ptr<interface::Channel> channel, const model::Member& initial_dto, const model::Side& side);
 
-    Channel* channel_;
+    std::weak_ptr<interface::Channel> channel_;
     model::Member initial_dto_;
     model::Side side_;
     MemberState state_;

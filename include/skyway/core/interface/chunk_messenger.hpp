@@ -25,7 +25,6 @@ namespace interface {
 /// @brief RemoteMemberとチャンキングされたメッセージを送受信するインターフェース
 class ChunkMessenger {
 public:
-    using AuthTokenManagerInterface = token::interface::AuthTokenManager;
     using WebSocketClientInterface  = network::interface::WebSocketClient;
     using SingnalingClientInterface = signaling::interface::SignalingClient;
     using SocketInterface           = signaling::interface::Socket;
@@ -40,6 +39,8 @@ public:
         /// @param message メッセージ
         virtual void OnMessage(const nlohmann::json& message) = 0;
     };
+    virtual void ResetBlocking(const std::string& member_id) = 0;
+    virtual void InterruptBlocking(const std::string& member_id) = 0;
     virtual ~ChunkMessenger() = default;
     /// @brief リスナーを追加します。
     /// @param remote_member 登録対象のRemoteMember
@@ -58,7 +59,8 @@ public:
     /// @param target_member 送信先のMember
     /// @param data 送信するメッセージ
     virtual chunk_messenger::dto::SendResult Send(const signaling::interface::Member& target_member,
-                                                  const nlohmann::json& data) = 0;
+                                                  const nlohmann::json& data,
+                                                  const bool skip_response_wait = false) = 0;
 
     /// @brief リスナー登録までバッファリングしていたメッセージをリスナーに発火させます。
     ///

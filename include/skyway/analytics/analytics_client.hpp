@@ -21,8 +21,7 @@ class AnalyticsClient : public interface::AnalyticsClient,
                         public interface::Socket::Listener,
                         public token::interface::AuthTokenManager::InternalListener {
 public:
-    AnalyticsClient(token::interface::AuthTokenManager* const auth,
-                    std::unique_ptr<interface::Socket> socket);
+    AnalyticsClient(std::weak_ptr<token::interface::AuthTokenManager> auth, std::unique_ptr<interface::Socket> socket);
 
     // interface::AnalyticsClient
     ~AnalyticsClient() override;
@@ -67,8 +66,9 @@ private:
 
     std::unique_ptr<Impl> pimpl_;
     mutable std::mutex pimpl_mutex_;
-
-    token::interface::AuthTokenManager* const auth_;
+                            
+    std::weak_ptr<token::interface::AuthTokenManager> auth_;
+                            
     const Delegator* delegator_;
     bool disposed_;
     std::mutex disposed_mutex_;

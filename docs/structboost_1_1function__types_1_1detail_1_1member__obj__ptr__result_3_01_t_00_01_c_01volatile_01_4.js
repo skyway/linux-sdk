@@ -1,0 +1,4 @@
+var structboost_1_1function__types_1_1detail_1_1member__obj__ptr__result_3_01_t_00_01_c_01volatile_01_4 =
+[
+    [ "type", "structboost_1_1function__types_1_1detail_1_1member__obj__ptr__result_3_01_t_00_01_c_01volatile_01_4.html#a864ada2263736670c546a27cf7ed0954", null ]
+];

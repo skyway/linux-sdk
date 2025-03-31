@@ -20,7 +20,7 @@ namespace interface {
 class ChunkMessengerFactory {
 public:
     virtual ~ChunkMessengerFactory()                                            = default;
-    virtual std::unique_ptr<ChunkMessenger> Create(Channel* channel,
+    virtual std::unique_ptr<ChunkMessenger> Create(std::shared_ptr<interface::Channel> channel,
                                                    const model::Member& member) = 0;
 };
 

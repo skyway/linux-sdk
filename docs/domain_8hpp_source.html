@@ -1,62 +1,65 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SkyWay for Linux: include/skyway/model/domain.hpp ソースファイル</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
-<script type="text/javascript" src="search/search.js"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellspacing="0" cellpadding="0">
- <tbody>
- <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
-  <td id="projectalign">
-   <div id="projectname">SkyWay for Linux
-   </div>
-  </td>
- </tr>
- </tbody>
-</table>
-</div>
-<!-- end header part -->
-<!-- 構築: Doxygen 1.9.8 -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -69,7 +72,7 @@ $(document).ready(function() { init_codefold(0); });
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(document).ready(function(){initNavTree('domain_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -83,278 +86,244 @@ $(document).ready(function(){initNavTree('domain_8hpp_source.html',''); initResi
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">読み取り中…</div>
-<div class="SRStatus" id="Searching">検索中…</div>
-<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">domain.hpp</div></div>
+  <div class="headertitle">
+<div class="title">domain.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//  domain.hpp</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//  skyway</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Created by sandabu on 2021/12/21.</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  Copyright © 2021 NTT Communications. All rights reserved.</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef SKYWAY_MODEL_DOMAIN_HPP_</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define SKYWAY_MODEL_DOMAIN_HPP_</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;boost/optional.hpp&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;json.hpp&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span>skyway {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span>model {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">enum class</span> Side { kLocal, kRemote };</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">enum class</span> MemberType { kPerson, kBot };</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">enum class</span> ContentType { kAudio, kVideo, kData };</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>std::string ToString(Side side);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>std::string ToString(MemberType type);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>std::string ToString(ContentType type);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>boost::optional&lt;Side&gt; ToSide(<span class="keyword">const</span> std::string&amp; side);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>boost::optional&lt;MemberType&gt; ToMemberType(<span class="keyword">const</span> std::string&amp; type);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>boost::optional&lt;ContentType&gt; ToContentType(<span class="keyword">const</span> std::string&amp; type);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_codec.html">   31</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1model_1_1_codec.html">Codec</a> {</div>
-<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_codec_1_1_parameters.html">   33</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1model_1_1_codec_1_1_parameters.html">Parameters</a> {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        boost::optional&lt;bool&gt; use_dtx;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    };</div>
-</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_codec.html#a9986815652806280d75aa9b5d65ba6a5">   37</a></span>    std::string <a class="code hl_variable" href="structskyway_1_1model_1_1_codec.html#a9986815652806280d75aa9b5d65ba6a5">mime_type</a>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_codec.html#aa14ab85e4a597fe6f9b63e38d0a9c725">   39</a></span>    <a class="code hl_struct" href="structskyway_1_1model_1_1_codec_1_1_parameters.html">Parameters</a> <a class="code hl_variable" href="structskyway_1_1model_1_1_codec.html#aa14ab85e4a597fe6f9b63e38d0a9c725">parameters</a>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
-</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_encoding.html">   43</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1model_1_1_encoding.html">Encoding</a> {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_encoding.html#aedb3d606bf7eb1b7f904586249177bed">   45</a></span>    boost::optional&lt;std::string&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_encoding.html#aedb3d606bf7eb1b7f904586249177bed">id</a>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_encoding.html#abe0ccc1acbe91916d43f6075f56b4fa1">   47</a></span>    boost::optional&lt;int&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_encoding.html#abe0ccc1acbe91916d43f6075f56b4fa1">max_bitrate</a>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_encoding.html#a16b8e05bbe77a55135c3f9573788b717">   49</a></span>    boost::optional&lt;double&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_encoding.html#a16b8e05bbe77a55135c3f9573788b717">scale_resolution_down_by</a>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_encoding.html#a77b142deb7566a17839f55c745a6c943">   51</a></span>    boost::optional&lt;double&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_encoding.html#a77b142deb7566a17839f55c745a6c943">max_framerate</a>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
-</div>
-<div class="foldopen" id="foldopen00054" data-start="{" data-end="};">
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member.html">   54</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1model_1_1_member.html">Member</a> {</div>
-<div class="foldopen" id="foldopen00056" data-start="{" data-end="};">
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member_1_1_init.html">   56</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1model_1_1_member_1_1_init.html">Init</a> {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member_1_1_init.html#ab34d304d8ee9b8060549213f2fa0f06d">   58</a></span>        MemberType <a class="code hl_variable" href="structskyway_1_1model_1_1_member_1_1_init.html#ab34d304d8ee9b8060549213f2fa0f06d">type</a>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member_1_1_init.html#a47f343f6d47cf92ea3ae5fc83f085bfb">   60</a></span>        std::string <a class="code hl_variable" href="structskyway_1_1model_1_1_member_1_1_init.html#a47f343f6d47cf92ea3ae5fc83f085bfb">subtype</a>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member_1_1_init.html#a49a5e29987d340d9966c041af5f13083">   62</a></span>        boost::optional&lt;std::string&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_member_1_1_init.html#a49a5e29987d340d9966c041af5f13083">name</a>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member_1_1_init.html#a30ba14285f885f4258d5975e3ec8018e">   64</a></span>        boost::optional&lt;std::string&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_member_1_1_init.html#a30ba14285f885f4258d5975e3ec8018e">metadata</a>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member_1_1_init.html#a8e999b858043390236bbf15aa3722c5e">   66</a></span>        boost::optional&lt;int&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_member_1_1_init.html#a8e999b858043390236bbf15aa3722c5e">keepalive_interval_sec</a>;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member_1_1_init.html#a3e18233147ea7028eabd7a6b165752ea">   68</a></span>        boost::optional&lt;int&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_member_1_1_init.html#a3e18233147ea7028eabd7a6b165752ea">keepalive_interval_gap_sec</a>;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    };</div>
-</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member.html#aa1b05e9b2af07bcbc7d9773a58f2a780">   71</a></span>    std::string <a class="code hl_variable" href="structskyway_1_1model_1_1_member.html#aa1b05e9b2af07bcbc7d9773a58f2a780">id</a>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member.html#a8cf2a2b780930bff4cb5eb8c1c3f127f">   73</a></span>    boost::optional&lt;std::string&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_member.html#a8cf2a2b780930bff4cb5eb8c1c3f127f">name</a>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member.html#a68de04dcec85897c12585ce83cf3dfc4">   75</a></span>    MemberType <a class="code hl_variable" href="structskyway_1_1model_1_1_member.html#a68de04dcec85897c12585ce83cf3dfc4">type</a>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member.html#a3536f2b00fa4c134dea89ab74603aa6c">   77</a></span>    std::string <a class="code hl_variable" href="structskyway_1_1model_1_1_member.html#a3536f2b00fa4c134dea89ab74603aa6c">subtype</a>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member.html#a06596aa1f3841877df50b254825a76c2">   79</a></span>    boost::optional&lt;std::string&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_member.html#a06596aa1f3841877df50b254825a76c2">metadata</a>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// the `name` can be retrieved from `init` but set the value returned by server.</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_struct" href="structskyway_1_1model_1_1_member.html">Member</a>() {}</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_struct" href="structskyway_1_1model_1_1_member.html">Member</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> boost::optional&lt;std::string&gt;&amp; <a class="code hl_variable" href="structskyway_1_1model_1_1_member.html#a8cf2a2b780930bff4cb5eb8c1c3f127f">name</a>, <span class="keyword">const</span> Init&amp; init) {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        this-&gt;<span class="keywordtype">id</span>   = <a class="code hl_variable" href="structskyway_1_1model_1_1_member.html#aa1b05e9b2af07bcbc7d9773a58f2a780">id</a>;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        this-&gt;name = <a class="code hl_variable" href="structskyway_1_1model_1_1_member.html#a8cf2a2b780930bff4cb5eb8c1c3f127f">name</a>;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_variable" href="structskyway_1_1model_1_1_member.html#a68de04dcec85897c12585ce83cf3dfc4">type</a>       = init.<a class="code hl_variable" href="structskyway_1_1model_1_1_member.html#a68de04dcec85897c12585ce83cf3dfc4">type</a>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_variable" href="structskyway_1_1model_1_1_member.html#a3536f2b00fa4c134dea89ab74603aa6c">subtype</a>    = init.subtype;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <a class="code hl_variable" href="structskyway_1_1model_1_1_member.html#a06596aa1f3841877df50b254825a76c2">metadata</a>   = init.metadata;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
-</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="foldopen" id="foldopen00092" data-start="{" data-end="};">
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html">   92</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1model_1_1_publication.html">Publication</a> {</div>
-<div class="foldopen" id="foldopen00093" data-start="{" data-end="};">
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication_1_1_init.html">   93</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1model_1_1_publication_1_1_init.html">Init</a> {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        std::string channel_id;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        std::string publisher_id;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        ContentType content_type;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        boost::optional&lt;std::string&gt; origin;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        boost::optional&lt;std::string&gt; metadata;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        std::vector&lt;Codec&gt; codec_capabilities = {};</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        std::vector&lt;Encoding&gt; encodings       = {};</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordtype">bool</span> is_enabled;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    };</div>
-</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html#a7038caa6abacad3d44c491a31de4fcac">  104</a></span>    std::string <a class="code hl_variable" href="structskyway_1_1model_1_1_publication.html#a7038caa6abacad3d44c491a31de4fcac">id</a>;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html#a2a13a3e089e1f6b1290c64ccba346ed6">  106</a></span>    std::string <a class="code hl_variable" href="structskyway_1_1model_1_1_publication.html#a2a13a3e089e1f6b1290c64ccba346ed6">publisher_id</a>;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html#ae68b487b684ac891a3a99731c98ce326">  108</a></span>    boost::optional&lt;std::string&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_publication.html#ae68b487b684ac891a3a99731c98ce326">origin</a>;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html#a93356d6c6557edc1d9153c76add56b49">  110</a></span>    ContentType <a class="code hl_variable" href="structskyway_1_1model_1_1_publication.html#a93356d6c6557edc1d9153c76add56b49">content_type</a>;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html#a05afaac032924f9ac29a3a92f25bfd9a">  112</a></span>    boost::optional&lt;std::string&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_publication.html#a05afaac032924f9ac29a3a92f25bfd9a">metadata</a>;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html#ab264171331bf5a21b1f9ac68dc7bccfa">  114</a></span>    std::vector&lt;Codec&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_publication.html#ab264171331bf5a21b1f9ac68dc7bccfa">codec_capabilities</a>;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html#a57180cb67316af0f5c6cab7e3f0c9e2d">  116</a></span>    std::vector&lt;Encoding&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_publication.html#a57180cb67316af0f5c6cab7e3f0c9e2d">encodings</a>;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html#adbd7e945d3e58898aab0aed1ec4b5b3b">  118</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structskyway_1_1model_1_1_publication.html#adbd7e945d3e58898aab0aed1ec4b5b3b">is_enabled</a>;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <a class="code hl_struct" href="structskyway_1_1model_1_1_publication.html">Publication</a>() {}</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <a class="code hl_struct" href="structskyway_1_1model_1_1_publication.html">Publication</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> Init&amp; init) {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        this-&gt;<span class="keywordtype">id</span>           = <a class="code hl_variable" href="structskyway_1_1model_1_1_publication.html#a7038caa6abacad3d44c491a31de4fcac">id</a>;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        publisher_id       = init.<a class="code hl_variable" href="structskyway_1_1model_1_1_publication.html#a2a13a3e089e1f6b1290c64ccba346ed6">publisher_id</a>;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <a class="code hl_variable" href="structskyway_1_1model_1_1_publication.html#ae68b487b684ac891a3a99731c98ce326">origin</a>             = init.origin;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <a class="code hl_variable" href="structskyway_1_1model_1_1_publication.html#a93356d6c6557edc1d9153c76add56b49">content_type</a>       = init.content_type;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <a class="code hl_variable" href="structskyway_1_1model_1_1_publication.html#a05afaac032924f9ac29a3a92f25bfd9a">metadata</a>           = init.metadata;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <a class="code hl_variable" href="structskyway_1_1model_1_1_publication.html#ab264171331bf5a21b1f9ac68dc7bccfa">codec_capabilities</a> = init.codec_capabilities;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <a class="code hl_variable" href="structskyway_1_1model_1_1_publication.html#a57180cb67316af0f5c6cab7e3f0c9e2d">encodings</a>          = init.encodings;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <a class="code hl_variable" href="structskyway_1_1model_1_1_publication.html#adbd7e945d3e58898aab0aed1ec4b5b3b">is_enabled</a>         = init.is_enabled;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>};</div>
-</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="foldopen" id="foldopen00133" data-start="{" data-end="};">
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_subscription.html">  133</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1model_1_1_subscription.html">Subscription</a> {</div>
-<div class="foldopen" id="foldopen00134" data-start="{" data-end="};">
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_subscription_1_1_init.html">  134</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1model_1_1_subscription_1_1_init.html">Init</a> {</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        std::string channel_id;</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        std::string publication_id;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        std::string subscriber_id;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordtype">bool</span> is_enabled;</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    };</div>
-</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_subscription.html#ae9753ad69106bdeba67be33c9565013a">  141</a></span>    std::string <a class="code hl_variable" href="structskyway_1_1model_1_1_subscription.html#ae9753ad69106bdeba67be33c9565013a">id</a>;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_subscription.html#ab7e69ac0cc4ffc9ffecb81eaf05902cf">  143</a></span>    std::string <a class="code hl_variable" href="structskyway_1_1model_1_1_subscription.html#ab7e69ac0cc4ffc9ffecb81eaf05902cf">publication_id</a>;</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_subscription.html#acfbc445312952443434a96a925e93151">  145</a></span>    std::string <a class="code hl_variable" href="structskyway_1_1model_1_1_subscription.html#acfbc445312952443434a96a925e93151">subscriber_id</a>;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_subscription.html#af10f807700e5dd6f8b0770a38950b3c5">  147</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structskyway_1_1model_1_1_subscription.html#af10f807700e5dd6f8b0770a38950b3c5">is_enabled</a>;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <a class="code hl_struct" href="structskyway_1_1model_1_1_subscription.html">Subscription</a>() {}</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <a class="code hl_struct" href="structskyway_1_1model_1_1_subscription.html">Subscription</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> Init&amp; init) {</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        this-&gt;<span class="keywordtype">id</span>       = <a class="code hl_variable" href="structskyway_1_1model_1_1_subscription.html#ae9753ad69106bdeba67be33c9565013a">id</a>;</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        publication_id = init.<a class="code hl_variable" href="structskyway_1_1model_1_1_subscription.html#ab7e69ac0cc4ffc9ffecb81eaf05902cf">publication_id</a>;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <a class="code hl_variable" href="structskyway_1_1model_1_1_subscription.html#acfbc445312952443434a96a925e93151">subscriber_id</a>  = init.subscriber_id;</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <a class="code hl_variable" href="structskyway_1_1model_1_1_subscription.html#af10f807700e5dd6f8b0770a38950b3c5">is_enabled</a>     = init.is_enabled;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    }</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>};</div>
-</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
-<div class="foldopen" id="foldopen00158" data-start="{" data-end="};">
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel.html">  158</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1model_1_1_channel.html">Channel</a> {</div>
-<div class="foldopen" id="foldopen00160" data-start="{" data-end="};">
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel_1_1_init.html">  160</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1model_1_1_channel_1_1_init.html">Init</a> {</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel_1_1_init.html#a39116c6cc9d97ff6a625c1ed2b58e812">  162</a></span>        boost::optional&lt;std::string&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_channel_1_1_init.html#a39116c6cc9d97ff6a625c1ed2b58e812">name</a>;</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel_1_1_init.html#a29c4fba45dade649cc52d74fe3da1d75">  164</a></span>        boost::optional&lt;std::string&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_channel_1_1_init.html#a29c4fba45dade649cc52d74fe3da1d75">metadata</a>;</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    };</div>
-</div>
-<div class="foldopen" id="foldopen00167" data-start="{" data-end="};">
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel_1_1_query.html">  167</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1model_1_1_channel_1_1_query.html">Query</a> {</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel_1_1_query.html#a4781eef24a4d3e26d363317927bbe238">  169</a></span>        boost::optional&lt;std::string&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_channel_1_1_query.html#a4781eef24a4d3e26d363317927bbe238">name</a>;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel_1_1_query.html#ae7104fa2443a8b23f3eb9f55b83a9781">  171</a></span>        boost::optional&lt;std::string&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_channel_1_1_query.html#ae7104fa2443a8b23f3eb9f55b83a9781">id</a>;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    };</div>
-</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel.html#a523ebac9a593b05e6ad82fd1061077d1">  174</a></span>    std::string <a class="code hl_variable" href="structskyway_1_1model_1_1_channel.html#a523ebac9a593b05e6ad82fd1061077d1">id</a>;</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel.html#a963802ccd9d94fc265b04eb54f105d90">  176</a></span>    boost::optional&lt;std::string&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_channel.html#a963802ccd9d94fc265b04eb54f105d90">name</a>;</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel.html#a0755703cdaea28cf6408a1876b7bd031">  178</a></span>    boost::optional&lt;std::string&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_channel.html#a0755703cdaea28cf6408a1876b7bd031">metadata</a>;</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel.html#a6609d1e3313540ea448610d7a8581139">  180</a></span>    std::vector&lt;Member&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_channel.html#a6609d1e3313540ea448610d7a8581139">members</a>;</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel.html#abc65fdfba871f4ca8c23dda3522e79bf">  182</a></span>    std::vector&lt;Publication&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_channel.html#abc65fdfba871f4ca8c23dda3522e79bf">publications</a>;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel.html#a83f131ef2aed17d12e89ea572a5a7475">  184</a></span>    std::vector&lt;Subscription&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_channel.html#a83f131ef2aed17d12e89ea572a5a7475">subscriptions</a>;</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel.html#acb5aa350d836f167846fc5141628317c">  186</a></span>    uint64_t <a class="code hl_variable" href="structskyway_1_1model_1_1_channel.html#acb5aa350d836f167846fc5141628317c">version</a>;</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>};</div>
-</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
-<div class="foldopen" id="foldopen00191" data-start="{" data-end="};">
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html">  191</a></span><span class="keyword">struct </span>[[deprecated]] <a class="code hl_struct" href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html">WebRTCStatsReport</a> {</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html#aa9ed919dfa14dfe9f53d86f9a9861258">  193</a></span>    std::string <a class="code hl_variable" href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html#aa9ed919dfa14dfe9f53d86f9a9861258">id</a>;</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html#aed6522a420ebf1719604e1c5dfc86c30">  195</a></span>    std::string <a class="code hl_variable" href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html#aed6522a420ebf1719604e1c5dfc86c30">type</a>;</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html#ab85cfbc3258435615f971f4546a48819">  197</a></span>    std::unordered_map&lt;std::string, nlohmann::json&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html#ab85cfbc3258435615f971f4546a48819">params</a>;</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>};</div>
-</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
-<div class="foldopen" id="foldopen00202" data-start="{" data-end="};">
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_web_r_t_c_stats.html">  202</a></span><span class="keyword">struct </span>[[deprecated]] <a class="code hl_struct" href="structskyway_1_1model_1_1_web_r_t_c_stats.html">WebRTCStats</a> {</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_web_r_t_c_stats.html#a9d30d7ca0821dd7d86d81f5ecf5861cb">  204</a></span>    std::vector&lt;WebRTCStatsReport&gt; <a class="code hl_variable" href="structskyway_1_1model_1_1_web_r_t_c_stats.html#a9d30d7ca0821dd7d86d81f5ecf5861cb">reports</a>;</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>};</div>
-</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="keywordtype">void</span> from_json(<span class="keyword">const</span> nlohmann::json&amp; j, <a class="code hl_struct" href="structskyway_1_1model_1_1_codec.html">Codec</a>&amp; codec);</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="keywordtype">void</span> from_json(<span class="keyword">const</span> nlohmann::json&amp; j, <a class="code hl_struct" href="structskyway_1_1model_1_1_encoding.html">Encoding</a>&amp; encoding);</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="keywordtype">void</span> from_json(<span class="keyword">const</span> nlohmann::json&amp; j, <a class="code hl_struct" href="structskyway_1_1model_1_1_channel.html">Channel</a>&amp; channel);</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="keywordtype">void</span> from_json(<span class="keyword">const</span> nlohmann::json&amp; j, <a class="code hl_struct" href="structskyway_1_1model_1_1_member.html">Member</a>&amp; member);</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="keywordtype">void</span> from_json(<span class="keyword">const</span> nlohmann::json&amp; j, <a class="code hl_struct" href="structskyway_1_1model_1_1_publication.html">Publication</a>&amp; publication);</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="keywordtype">void</span> from_json(<span class="keyword">const</span> nlohmann::json&amp; j, <a class="code hl_struct" href="structskyway_1_1model_1_1_subscription.html">Subscription</a>&amp; subscription);</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>[[deprecated]] <span class="keywordtype">void</span> from_json(<span class="keyword">const</span> nlohmann::json&amp; j, <a class="code hl_struct" href="structskyway_1_1model_1_1_web_r_t_c_stats.html">WebRTCStats</a>&amp; stats);</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="keywordtype">void</span> to_json(nlohmann::json&amp; j, <span class="keyword">const</span> <a class="code hl_struct" href="structskyway_1_1model_1_1_codec.html">Codec</a>&amp; codec);</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="keywordtype">void</span> to_json(nlohmann::json&amp; j, <span class="keyword">const</span> <a class="code hl_struct" href="structskyway_1_1model_1_1_encoding.html">Encoding</a>&amp; encoding);</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>}  <span class="comment">// namespace model</span></div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_MODEL_DOMAIN_HPP_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_channel_1_1_init_html"><div class="ttname"><a href="structskyway_1_1model_1_1_channel_1_1_init.html">skyway::model::Channel::Init</a></div><div class="ttdoc">CreateもしくはFindOrCreateで指定する情報</div><div class="ttdef"><b>Definition</b> domain.hpp:160</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_channel_1_1_init_html_a29c4fba45dade649cc52d74fe3da1d75"><div class="ttname"><a href="structskyway_1_1model_1_1_channel_1_1_init.html#a29c4fba45dade649cc52d74fe3da1d75">skyway::model::Channel::Init::metadata</a></div><div class="ttdeci">boost::optional&lt; std::string &gt; metadata</div><div class="ttdoc">ChannelのMetadata</div><div class="ttdef"><b>Definition</b> domain.hpp:164</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_channel_1_1_init_html_a39116c6cc9d97ff6a625c1ed2b58e812"><div class="ttname"><a href="structskyway_1_1model_1_1_channel_1_1_init.html#a39116c6cc9d97ff6a625c1ed2b58e812">skyway::model::Channel::Init::name</a></div><div class="ttdeci">boost::optional&lt; std::string &gt; name</div><div class="ttdoc">Channelの名前</div><div class="ttdef"><b>Definition</b> domain.hpp:162</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_channel_1_1_query_html"><div class="ttname"><a href="structskyway_1_1model_1_1_channel_1_1_query.html">skyway::model::Channel::Query</a></div><div class="ttdoc">FindもしくはFindOrCreateで指定する情報</div><div class="ttdef"><b>Definition</b> domain.hpp:167</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_channel_1_1_query_html_a4781eef24a4d3e26d363317927bbe238"><div class="ttname"><a href="structskyway_1_1model_1_1_channel_1_1_query.html#a4781eef24a4d3e26d363317927bbe238">skyway::model::Channel::Query::name</a></div><div class="ttdeci">boost::optional&lt; std::string &gt; name</div><div class="ttdoc">Channelの名前</div><div class="ttdef"><b>Definition</b> domain.hpp:169</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_channel_1_1_query_html_ae7104fa2443a8b23f3eb9f55b83a9781"><div class="ttname"><a href="structskyway_1_1model_1_1_channel_1_1_query.html#ae7104fa2443a8b23f3eb9f55b83a9781">skyway::model::Channel::Query::id</a></div><div class="ttdeci">boost::optional&lt; std::string &gt; id</div><div class="ttdoc">ChannelのId</div><div class="ttdef"><b>Definition</b> domain.hpp:171</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_channel_html"><div class="ttname"><a href="structskyway_1_1model_1_1_channel.html">skyway::model::Channel</a></div><div class="ttdoc">Channel情報</div><div class="ttdef"><b>Definition</b> domain.hpp:158</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_channel_html_a0755703cdaea28cf6408a1876b7bd031"><div class="ttname"><a href="structskyway_1_1model_1_1_channel.html#a0755703cdaea28cf6408a1876b7bd031">skyway::model::Channel::metadata</a></div><div class="ttdeci">boost::optional&lt; std::string &gt; metadata</div><div class="ttdoc">Metadata</div><div class="ttdef"><b>Definition</b> domain.hpp:178</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_channel_html_a523ebac9a593b05e6ad82fd1061077d1"><div class="ttname"><a href="structskyway_1_1model_1_1_channel.html#a523ebac9a593b05e6ad82fd1061077d1">skyway::model::Channel::id</a></div><div class="ttdeci">std::string id</div><div class="ttdoc">Id</div><div class="ttdef"><b>Definition</b> domain.hpp:174</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_channel_html_a6609d1e3313540ea448610d7a8581139"><div class="ttname"><a href="structskyway_1_1model_1_1_channel.html#a6609d1e3313540ea448610d7a8581139">skyway::model::Channel::members</a></div><div class="ttdeci">std::vector&lt; Member &gt; members</div><div class="ttdoc">このChannelの存在するメンバーの一覧</div><div class="ttdef"><b>Definition</b> domain.hpp:180</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_channel_html_a83f131ef2aed17d12e89ea572a5a7475"><div class="ttname"><a href="structskyway_1_1model_1_1_channel.html#a83f131ef2aed17d12e89ea572a5a7475">skyway::model::Channel::subscriptions</a></div><div class="ttdeci">std::vector&lt; Subscription &gt; subscriptions</div><div class="ttdoc">このChannelの存在するSubscriptionの一覧</div><div class="ttdef"><b>Definition</b> domain.hpp:184</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_channel_html_a963802ccd9d94fc265b04eb54f105d90"><div class="ttname"><a href="structskyway_1_1model_1_1_channel.html#a963802ccd9d94fc265b04eb54f105d90">skyway::model::Channel::name</a></div><div class="ttdeci">boost::optional&lt; std::string &gt; name</div><div class="ttdoc">名前</div><div class="ttdef"><b>Definition</b> domain.hpp:176</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_channel_html_abc65fdfba871f4ca8c23dda3522e79bf"><div class="ttname"><a href="structskyway_1_1model_1_1_channel.html#abc65fdfba871f4ca8c23dda3522e79bf">skyway::model::Channel::publications</a></div><div class="ttdeci">std::vector&lt; Publication &gt; publications</div><div class="ttdoc">このChannelの存在するPublicationの一覧</div><div class="ttdef"><b>Definition</b> domain.hpp:182</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_channel_html_acb5aa350d836f167846fc5141628317c"><div class="ttname"><a href="structskyway_1_1model_1_1_channel.html#acb5aa350d836f167846fc5141628317c">skyway::model::Channel::version</a></div><div class="ttdeci">uint64_t version</div><div class="ttdoc">バージョン</div><div class="ttdef"><b>Definition</b> domain.hpp:186</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_codec_1_1_parameters_html"><div class="ttname"><a href="structskyway_1_1model_1_1_codec_1_1_parameters.html">skyway::model::Codec::Parameters</a></div><div class="ttdoc">Dtxオプションを適応するかのオプション</div><div class="ttdef"><b>Definition</b> domain.hpp:33</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_codec_html"><div class="ttname"><a href="structskyway_1_1model_1_1_codec.html">skyway::model::Codec</a></div><div class="ttdoc">コーデック情報</div><div class="ttdef"><b>Definition</b> domain.hpp:31</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_codec_html_a9986815652806280d75aa9b5d65ba6a5"><div class="ttname"><a href="structskyway_1_1model_1_1_codec.html#a9986815652806280d75aa9b5d65ba6a5">skyway::model::Codec::mime_type</a></div><div class="ttdeci">std::string mime_type</div><div class="ttdoc">mimetype</div><div class="ttdef"><b>Definition</b> domain.hpp:37</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_codec_html_aa14ab85e4a597fe6f9b63e38d0a9c725"><div class="ttname"><a href="structskyway_1_1model_1_1_codec.html#aa14ab85e4a597fe6f9b63e38d0a9c725">skyway::model::Codec::parameters</a></div><div class="ttdeci">Parameters parameters</div><div class="ttdoc">パラメーター</div><div class="ttdef"><b>Definition</b> domain.hpp:39</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_encoding_html"><div class="ttname"><a href="structskyway_1_1model_1_1_encoding.html">skyway::model::Encoding</a></div><div class="ttdoc">エンコーディング設定</div><div class="ttdef"><b>Definition</b> domain.hpp:43</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_encoding_html_a16b8e05bbe77a55135c3f9573788b717"><div class="ttname"><a href="structskyway_1_1model_1_1_encoding.html#a16b8e05bbe77a55135c3f9573788b717">skyway::model::Encoding::scale_resolution_down_by</a></div><div class="ttdeci">boost::optional&lt; double &gt; scale_resolution_down_by</div><div class="ttdoc">解像度の倍率</div><div class="ttdef"><b>Definition</b> domain.hpp:49</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_encoding_html_a77b142deb7566a17839f55c745a6c943"><div class="ttname"><a href="structskyway_1_1model_1_1_encoding.html#a77b142deb7566a17839f55c745a6c943">skyway::model::Encoding::max_framerate</a></div><div class="ttdeci">boost::optional&lt; double &gt; max_framerate</div><div class="ttdoc">最大フレームレート</div><div class="ttdef"><b>Definition</b> domain.hpp:51</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_encoding_html_abe0ccc1acbe91916d43f6075f56b4fa1"><div class="ttname"><a href="structskyway_1_1model_1_1_encoding.html#abe0ccc1acbe91916d43f6075f56b4fa1">skyway::model::Encoding::max_bitrate</a></div><div class="ttdeci">boost::optional&lt; int &gt; max_bitrate</div><div class="ttdoc">最大ビットレート</div><div class="ttdef"><b>Definition</b> domain.hpp:47</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_encoding_html_aedb3d606bf7eb1b7f904586249177bed"><div class="ttname"><a href="structskyway_1_1model_1_1_encoding.html#aedb3d606bf7eb1b7f904586249177bed">skyway::model::Encoding::id</a></div><div class="ttdeci">boost::optional&lt; std::string &gt; id</div><div class="ttdoc">Id</div><div class="ttdef"><b>Definition</b> domain.hpp:45</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_member_1_1_init_html"><div class="ttname"><a href="structskyway_1_1model_1_1_member_1_1_init.html">skyway::model::Member::Init</a></div><div class="ttdoc">Join時に使用するメンバー情報</div><div class="ttdef"><b>Definition</b> domain.hpp:56</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_member_1_1_init_html_a30ba14285f885f4258d5975e3ec8018e"><div class="ttname"><a href="structskyway_1_1model_1_1_member_1_1_init.html#a30ba14285f885f4258d5975e3ec8018e">skyway::model::Member::Init::metadata</a></div><div class="ttdeci">boost::optional&lt; std::string &gt; metadata</div><div class="ttdoc">Metadata</div><div class="ttdef"><b>Definition</b> domain.hpp:64</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_member_1_1_init_html_a3e18233147ea7028eabd7a6b165752ea"><div class="ttname"><a href="structskyway_1_1model_1_1_member_1_1_init.html#a3e18233147ea7028eabd7a6b165752ea">skyway::model::Member::Init::keepalive_interval_gap_sec</a></div><div class="ttdeci">boost::optional&lt; int &gt; keepalive_interval_gap_sec</div><div class="ttdoc">生存確認の間隔を超えてChannelからMemberが削除されるまでの時間</div><div class="ttdef"><b>Definition</b> domain.hpp:68</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_member_1_1_init_html_a47f343f6d47cf92ea3ae5fc83f085bfb"><div class="ttname"><a href="structskyway_1_1model_1_1_member_1_1_init.html#a47f343f6d47cf92ea3ae5fc83f085bfb">skyway::model::Member::Init::subtype</a></div><div class="ttdeci">std::string subtype</div><div class="ttdoc">サブタイプ</div><div class="ttdef"><b>Definition</b> domain.hpp:60</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_member_1_1_init_html_a49a5e29987d340d9966c041af5f13083"><div class="ttname"><a href="structskyway_1_1model_1_1_member_1_1_init.html#a49a5e29987d340d9966c041af5f13083">skyway::model::Member::Init::name</a></div><div class="ttdeci">boost::optional&lt; std::string &gt; name</div><div class="ttdoc">名前</div><div class="ttdef"><b>Definition</b> domain.hpp:62</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_member_1_1_init_html_a8e999b858043390236bbf15aa3722c5e"><div class="ttname"><a href="structskyway_1_1model_1_1_member_1_1_init.html#a8e999b858043390236bbf15aa3722c5e">skyway::model::Member::Init::keepalive_interval_sec</a></div><div class="ttdeci">boost::optional&lt; int &gt; keepalive_interval_sec</div><div class="ttdoc">生存確認の間隔</div><div class="ttdef"><b>Definition</b> domain.hpp:66</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_member_1_1_init_html_ab34d304d8ee9b8060549213f2fa0f06d"><div class="ttname"><a href="structskyway_1_1model_1_1_member_1_1_init.html#ab34d304d8ee9b8060549213f2fa0f06d">skyway::model::Member::Init::type</a></div><div class="ttdeci">MemberType type</div><div class="ttdoc">種類</div><div class="ttdef"><b>Definition</b> domain.hpp:58</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_member_html"><div class="ttname"><a href="structskyway_1_1model_1_1_member.html">skyway::model::Member</a></div><div class="ttdoc">メンバー情報</div><div class="ttdef"><b>Definition</b> domain.hpp:54</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_member_html_a06596aa1f3841877df50b254825a76c2"><div class="ttname"><a href="structskyway_1_1model_1_1_member.html#a06596aa1f3841877df50b254825a76c2">skyway::model::Member::metadata</a></div><div class="ttdeci">boost::optional&lt; std::string &gt; metadata</div><div class="ttdoc">Metadata</div><div class="ttdef"><b>Definition</b> domain.hpp:79</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_member_html_a3536f2b00fa4c134dea89ab74603aa6c"><div class="ttname"><a href="structskyway_1_1model_1_1_member.html#a3536f2b00fa4c134dea89ab74603aa6c">skyway::model::Member::subtype</a></div><div class="ttdeci">std::string subtype</div><div class="ttdoc">サブタイプ</div><div class="ttdef"><b>Definition</b> domain.hpp:77</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_member_html_a68de04dcec85897c12585ce83cf3dfc4"><div class="ttname"><a href="structskyway_1_1model_1_1_member.html#a68de04dcec85897c12585ce83cf3dfc4">skyway::model::Member::type</a></div><div class="ttdeci">MemberType type</div><div class="ttdoc">種類</div><div class="ttdef"><b>Definition</b> domain.hpp:75</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_member_html_a8cf2a2b780930bff4cb5eb8c1c3f127f"><div class="ttname"><a href="structskyway_1_1model_1_1_member.html#a8cf2a2b780930bff4cb5eb8c1c3f127f">skyway::model::Member::name</a></div><div class="ttdeci">boost::optional&lt; std::string &gt; name</div><div class="ttdoc">名前</div><div class="ttdef"><b>Definition</b> domain.hpp:73</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_member_html_aa1b05e9b2af07bcbc7d9773a58f2a780"><div class="ttname"><a href="structskyway_1_1model_1_1_member.html#aa1b05e9b2af07bcbc7d9773a58f2a780">skyway::model::Member::id</a></div><div class="ttdeci">std::string id</div><div class="ttdoc">Id</div><div class="ttdef"><b>Definition</b> domain.hpp:71</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_publication_1_1_init_html"><div class="ttname"><a href="structskyway_1_1model_1_1_publication_1_1_init.html">skyway::model::Publication::Init</a></div><div class="ttdef"><b>Definition</b> domain.hpp:93</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_publication_html"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html">skyway::model::Publication</a></div><div class="ttdoc">Publication情報</div><div class="ttdef"><b>Definition</b> domain.hpp:92</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_publication_html_a05afaac032924f9ac29a3a92f25bfd9a"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html#a05afaac032924f9ac29a3a92f25bfd9a">skyway::model::Publication::metadata</a></div><div class="ttdeci">boost::optional&lt; std::string &gt; metadata</div><div class="ttdoc">Metadata</div><div class="ttdef"><b>Definition</b> domain.hpp:112</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_publication_html_a2a13a3e089e1f6b1290c64ccba346ed6"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html#a2a13a3e089e1f6b1290c64ccba346ed6">skyway::model::Publication::publisher_id</a></div><div class="ttdeci">std::string publisher_id</div><div class="ttdoc">PublishしたメンバーのId</div><div class="ttdef"><b>Definition</b> domain.hpp:106</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_publication_html_a57180cb67316af0f5c6cab7e3f0c9e2d"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html#a57180cb67316af0f5c6cab7e3f0c9e2d">skyway::model::Publication::encodings</a></div><div class="ttdeci">std::vector&lt; Encoding &gt; encodings</div><div class="ttdoc">エンコーディング一覧</div><div class="ttdef"><b>Definition</b> domain.hpp:116</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_publication_html_a7038caa6abacad3d44c491a31de4fcac"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html#a7038caa6abacad3d44c491a31de4fcac">skyway::model::Publication::id</a></div><div class="ttdeci">std::string id</div><div class="ttdoc">Id</div><div class="ttdef"><b>Definition</b> domain.hpp:104</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_publication_html_a93356d6c6557edc1d9153c76add56b49"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html#a93356d6c6557edc1d9153c76add56b49">skyway::model::Publication::content_type</a></div><div class="ttdeci">ContentType content_type</div><div class="ttdoc">コンテンツの種類</div><div class="ttdef"><b>Definition</b> domain.hpp:110</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_publication_html_ab264171331bf5a21b1f9ac68dc7bccfa"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html#ab264171331bf5a21b1f9ac68dc7bccfa">skyway::model::Publication::codec_capabilities</a></div><div class="ttdeci">std::vector&lt; Codec &gt; codec_capabilities</div><div class="ttdoc">コーデック一覧</div><div class="ttdef"><b>Definition</b> domain.hpp:114</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_publication_html_adbd7e945d3e58898aab0aed1ec4b5b3b"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html#adbd7e945d3e58898aab0aed1ec4b5b3b">skyway::model::Publication::is_enabled</a></div><div class="ttdeci">bool is_enabled</div><div class="ttdoc">有効か無効か</div><div class="ttdef"><b>Definition</b> domain.hpp:118</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_publication_html_ae68b487b684ac891a3a99731c98ce326"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html#ae68b487b684ac891a3a99731c98ce326">skyway::model::Publication::origin</a></div><div class="ttdeci">boost::optional&lt; std::string &gt; origin</div><div class="ttdoc">Origin</div><div class="ttdef"><b>Definition</b> domain.hpp:108</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_subscription_1_1_init_html"><div class="ttname"><a href="structskyway_1_1model_1_1_subscription_1_1_init.html">skyway::model::Subscription::Init</a></div><div class="ttdef"><b>Definition</b> domain.hpp:134</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_subscription_html"><div class="ttname"><a href="structskyway_1_1model_1_1_subscription.html">skyway::model::Subscription</a></div><div class="ttdoc">Subscription情報</div><div class="ttdef"><b>Definition</b> domain.hpp:133</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_subscription_html_ab7e69ac0cc4ffc9ffecb81eaf05902cf"><div class="ttname"><a href="structskyway_1_1model_1_1_subscription.html#ab7e69ac0cc4ffc9ffecb81eaf05902cf">skyway::model::Subscription::publication_id</a></div><div class="ttdeci">std::string publication_id</div><div class="ttdoc">このSubscriptionに紐づくPublicationのId</div><div class="ttdef"><b>Definition</b> domain.hpp:143</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_subscription_html_acfbc445312952443434a96a925e93151"><div class="ttname"><a href="structskyway_1_1model_1_1_subscription.html#acfbc445312952443434a96a925e93151">skyway::model::Subscription::subscriber_id</a></div><div class="ttdeci">std::string subscriber_id</div><div class="ttdoc">このSubscriptionをSubscribeしているメンバーのId</div><div class="ttdef"><b>Definition</b> domain.hpp:145</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_subscription_html_ae9753ad69106bdeba67be33c9565013a"><div class="ttname"><a href="structskyway_1_1model_1_1_subscription.html#ae9753ad69106bdeba67be33c9565013a">skyway::model::Subscription::id</a></div><div class="ttdeci">std::string id</div><div class="ttdoc">Id</div><div class="ttdef"><b>Definition</b> domain.hpp:141</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_subscription_html_af10f807700e5dd6f8b0770a38950b3c5"><div class="ttname"><a href="structskyway_1_1model_1_1_subscription.html#af10f807700e5dd6f8b0770a38950b3c5">skyway::model::Subscription::is_enabled</a></div><div class="ttdeci">bool is_enabled</div><div class="ttdoc">有効か無効か</div><div class="ttdef"><b>Definition</b> domain.hpp:147</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_web_r_t_c_stats_html"><div class="ttname"><a href="structskyway_1_1model_1_1_web_r_t_c_stats.html">skyway::model::WebRTCStats</a></div><div class="ttdoc">統計情報</div><div class="ttdef"><b>Definition</b> domain.hpp:202</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_web_r_t_c_stats_html_a9d30d7ca0821dd7d86d81f5ecf5861cb"><div class="ttname"><a href="structskyway_1_1model_1_1_web_r_t_c_stats.html#a9d30d7ca0821dd7d86d81f5ecf5861cb">skyway::model::WebRTCStats::reports</a></div><div class="ttdeci">std::vector&lt; WebRTCStatsReport &gt; reports</div><div class="ttdoc">統計情報の一覧</div><div class="ttdef"><b>Definition</b> domain.hpp:204</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_web_r_t_c_stats_report_html"><div class="ttname"><a href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html">skyway::model::WebRTCStatsReport</a></div><div class="ttdoc">統計情報の詳細</div><div class="ttdef"><b>Definition</b> domain.hpp:191</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_web_r_t_c_stats_report_html_aa9ed919dfa14dfe9f53d86f9a9861258"><div class="ttname"><a href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html#aa9ed919dfa14dfe9f53d86f9a9861258">skyway::model::WebRTCStatsReport::id</a></div><div class="ttdeci">std::string id</div><div class="ttdoc">Id</div><div class="ttdef"><b>Definition</b> domain.hpp:193</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_web_r_t_c_stats_report_html_ab85cfbc3258435615f971f4546a48819"><div class="ttname"><a href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html#ab85cfbc3258435615f971f4546a48819">skyway::model::WebRTCStatsReport::params</a></div><div class="ttdeci">std::unordered_map&lt; std::string, nlohmann::json &gt; params</div><div class="ttdoc">各パラメーターに対応するJson</div><div class="ttdef"><b>Definition</b> domain.hpp:197</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_web_r_t_c_stats_report_html_aed6522a420ebf1719604e1c5dfc86c30"><div class="ttname"><a href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html#aed6522a420ebf1719604e1c5dfc86c30">skyway::model::WebRTCStatsReport::type</a></div><div class="ttdeci">std::string type</div><div class="ttdoc">種類</div><div class="ttdef"><b>Definition</b> domain.hpp:195</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  domain.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  skyway</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by sandabu on 2021/12/21.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright © 2021 NTT Communications. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef SKYWAY_MODEL_DOMAIN_HPP_</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define SKYWAY_MODEL_DOMAIN_HPP_</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;json.hpp&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>skyway {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>model {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">enum class</span> Side { kLocal, kRemote };</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">enum class</span> MemberType { kPerson, kBot };</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">enum class</span> ContentType { kAudio, kVideo, kData };</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;std::string ToString(Side side);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;std::string ToString(MemberType type);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;std::string ToString(ContentType type);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;std::optional&lt;Side&gt; ToSide(<span class="keyword">const</span> std::string&amp; side);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;std::optional&lt;MemberType&gt; ToMemberType(<span class="keyword">const</span> std::string&amp; type);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;std::optional&lt;ContentType&gt; ToContentType(<span class="keyword">const</span> std::string&amp; type);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_codec.html">   31</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structskyway_1_1model_1_1_codec.html">Codec</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_codec_1_1_parameters.html">   33</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structskyway_1_1model_1_1_codec_1_1_parameters.html">Parameters</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::optional&lt;bool&gt; use_dtx;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_codec.html#a9986815652806280d75aa9b5d65ba6a5">   37</a></span>&#160;    std::string <a class="code" href="structskyway_1_1model_1_1_codec.html#a9986815652806280d75aa9b5d65ba6a5">mime_type</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_codec.html#aa14ab85e4a597fe6f9b63e38d0a9c725">   39</a></span>&#160;    <a class="code" href="structskyway_1_1model_1_1_codec_1_1_parameters.html">Parameters</a> <a class="code" href="structskyway_1_1model_1_1_codec.html#aa14ab85e4a597fe6f9b63e38d0a9c725">parameters</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_encoding.html">   43</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structskyway_1_1model_1_1_encoding.html">Encoding</a> {</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_encoding.html#ad020abf98180ad182abab25843a58b1c">   45</a></span>&#160;    std::optional&lt;std::string&gt; <a class="code" href="structskyway_1_1model_1_1_encoding.html#ad020abf98180ad182abab25843a58b1c">id</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_encoding.html#aa3f145e2ae0e752059f2f756b1509f55">   47</a></span>&#160;    std::optional&lt;int&gt; <a class="code" href="structskyway_1_1model_1_1_encoding.html#aa3f145e2ae0e752059f2f756b1509f55">max_bitrate</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_encoding.html#a8bfc1d6bc1fae783547bb8cec3ff5c80">   49</a></span>&#160;    std::optional&lt;double&gt; <a class="code" href="structskyway_1_1model_1_1_encoding.html#a8bfc1d6bc1fae783547bb8cec3ff5c80">scale_resolution_down_by</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_encoding.html#af2d89f3234bc5aceba289ebf1af1fbdf">   51</a></span>&#160;    std::optional&lt;double&gt; <a class="code" href="structskyway_1_1model_1_1_encoding.html#af2d89f3234bc5aceba289ebf1af1fbdf">max_framerate</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member.html">   54</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structskyway_1_1model_1_1_member.html">Member</a> {</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member_1_1_init.html">   56</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structskyway_1_1model_1_1_member_1_1_init.html">Init</a> {</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member_1_1_init.html#ab34d304d8ee9b8060549213f2fa0f06d">   58</a></span>&#160;        MemberType <a class="code" href="structskyway_1_1model_1_1_member_1_1_init.html#ab34d304d8ee9b8060549213f2fa0f06d">type</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member_1_1_init.html#a47f343f6d47cf92ea3ae5fc83f085bfb">   60</a></span>&#160;        std::string <a class="code" href="structskyway_1_1model_1_1_member_1_1_init.html#a47f343f6d47cf92ea3ae5fc83f085bfb">subtype</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member_1_1_init.html#a5ef28be260f6835535fa9d0eb312966e">   62</a></span>&#160;        std::optional&lt;std::string&gt; <a class="code" href="structskyway_1_1model_1_1_member_1_1_init.html#a5ef28be260f6835535fa9d0eb312966e">name</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member_1_1_init.html#a01541444784e9e347ce7377e535f1014">   64</a></span>&#160;        std::optional&lt;std::string&gt; <a class="code" href="structskyway_1_1model_1_1_member_1_1_init.html#a01541444784e9e347ce7377e535f1014">metadata</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member_1_1_init.html#ac7a5429c36e4265c12991f6418c3f537">   66</a></span>&#160;        std::optional&lt;int&gt; <a class="code" href="structskyway_1_1model_1_1_member_1_1_init.html#ac7a5429c36e4265c12991f6418c3f537">keepalive_interval_sec</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member_1_1_init.html#ae66790e7ad9afa068c1a69e30d2904ae">   68</a></span>&#160;        std::optional&lt;int&gt; <a class="code" href="structskyway_1_1model_1_1_member_1_1_init.html#ae66790e7ad9afa068c1a69e30d2904ae">keepalive_interval_gap_sec</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    };</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member.html#aa1b05e9b2af07bcbc7d9773a58f2a780">   71</a></span>&#160;    std::string <a class="code" href="structskyway_1_1model_1_1_member.html#aa1b05e9b2af07bcbc7d9773a58f2a780">id</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member.html#aed8f424e6db0f4bb712b9f15d187a974">   73</a></span>&#160;    std::optional&lt;std::string&gt; <a class="code" href="structskyway_1_1model_1_1_member.html#aed8f424e6db0f4bb712b9f15d187a974">name</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member.html#a68de04dcec85897c12585ce83cf3dfc4">   75</a></span>&#160;    MemberType <a class="code" href="structskyway_1_1model_1_1_member.html#a68de04dcec85897c12585ce83cf3dfc4">type</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member.html#a3536f2b00fa4c134dea89ab74603aa6c">   77</a></span>&#160;    std::string <a class="code" href="structskyway_1_1model_1_1_member.html#a3536f2b00fa4c134dea89ab74603aa6c">subtype</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_member.html#a32ffb6b05ce181be6f2f86867f06b3fb">   79</a></span>&#160;    std::optional&lt;std::string&gt; <a class="code" href="structskyway_1_1model_1_1_member.html#a32ffb6b05ce181be6f2f86867f06b3fb">metadata</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// the `name` can be retrieved from `init` but set the value returned by server.</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="structskyway_1_1model_1_1_member.html">Member</a>() {}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="structskyway_1_1model_1_1_member.html">Member</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> std::optional&lt;std::string&gt;&amp; <a class="code" href="structskyway_1_1model_1_1_member.html#aed8f424e6db0f4bb712b9f15d187a974">name</a>, <span class="keyword">const</span> Init&amp; init) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        this-&gt;<span class="keywordtype">id</span>   = <a class="code" href="structskyway_1_1model_1_1_member.html#aa1b05e9b2af07bcbc7d9773a58f2a780">id</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        this-&gt;name = <a class="code" href="structskyway_1_1model_1_1_member.html#aed8f424e6db0f4bb712b9f15d187a974">name</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="structskyway_1_1model_1_1_member.html#a68de04dcec85897c12585ce83cf3dfc4">type</a>       = init.type;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="structskyway_1_1model_1_1_member.html#a3536f2b00fa4c134dea89ab74603aa6c">subtype</a>    = init.subtype;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="structskyway_1_1model_1_1_member.html#a32ffb6b05ce181be6f2f86867f06b3fb">metadata</a>   = init.metadata;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html">   92</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structskyway_1_1model_1_1_publication.html">Publication</a> {</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication_1_1_init.html">   93</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structskyway_1_1model_1_1_publication_1_1_init.html">Init</a> {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        std::string channel_id;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        std::string publisher_id;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        ContentType content_type;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        std::optional&lt;std::string&gt; origin;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        std::optional&lt;std::string&gt; metadata;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        std::vector&lt;Codec&gt; codec_capabilities = {};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        std::vector&lt;Encoding&gt; encodings       = {};</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">bool</span> is_enabled;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    };</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html#a7038caa6abacad3d44c491a31de4fcac">  104</a></span>&#160;    std::string <a class="code" href="structskyway_1_1model_1_1_publication.html#a7038caa6abacad3d44c491a31de4fcac">id</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html#a2a13a3e089e1f6b1290c64ccba346ed6">  106</a></span>&#160;    std::string <a class="code" href="structskyway_1_1model_1_1_publication.html#a2a13a3e089e1f6b1290c64ccba346ed6">publisher_id</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html#a97a8eb500b4b11e65c447fd56c0cba13">  108</a></span>&#160;    std::optional&lt;std::string&gt; <a class="code" href="structskyway_1_1model_1_1_publication.html#a97a8eb500b4b11e65c447fd56c0cba13">origin</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html#a93356d6c6557edc1d9153c76add56b49">  110</a></span>&#160;    ContentType <a class="code" href="structskyway_1_1model_1_1_publication.html#a93356d6c6557edc1d9153c76add56b49">content_type</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html#ac90a01e14982c9c6e8e4d029980cb6c8">  112</a></span>&#160;    std::optional&lt;std::string&gt; <a class="code" href="structskyway_1_1model_1_1_publication.html#ac90a01e14982c9c6e8e4d029980cb6c8">metadata</a>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html#ab264171331bf5a21b1f9ac68dc7bccfa">  114</a></span>&#160;    std::vector&lt;Codec&gt; <a class="code" href="structskyway_1_1model_1_1_publication.html#ab264171331bf5a21b1f9ac68dc7bccfa">codec_capabilities</a>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html#a57180cb67316af0f5c6cab7e3f0c9e2d">  116</a></span>&#160;    std::vector&lt;Encoding&gt; <a class="code" href="structskyway_1_1model_1_1_publication.html#a57180cb67316af0f5c6cab7e3f0c9e2d">encodings</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_publication.html#adbd7e945d3e58898aab0aed1ec4b5b3b">  118</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structskyway_1_1model_1_1_publication.html#adbd7e945d3e58898aab0aed1ec4b5b3b">is_enabled</a>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="structskyway_1_1model_1_1_publication.html">Publication</a>() {}</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="structskyway_1_1model_1_1_publication.html">Publication</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> Init&amp; init) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        this-&gt;<span class="keywordtype">id</span>           = <a class="code" href="structskyway_1_1model_1_1_publication.html#a7038caa6abacad3d44c491a31de4fcac">id</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        publisher_id       = init.publisher_id;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <a class="code" href="structskyway_1_1model_1_1_publication.html#a97a8eb500b4b11e65c447fd56c0cba13">origin</a>             = init.origin;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="structskyway_1_1model_1_1_publication.html#a93356d6c6557edc1d9153c76add56b49">content_type</a>       = init.content_type;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="structskyway_1_1model_1_1_publication.html#ac90a01e14982c9c6e8e4d029980cb6c8">metadata</a>           = init.metadata;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="structskyway_1_1model_1_1_publication.html#ab264171331bf5a21b1f9ac68dc7bccfa">codec_capabilities</a> = init.codec_capabilities;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="structskyway_1_1model_1_1_publication.html#a57180cb67316af0f5c6cab7e3f0c9e2d">encodings</a>          = init.encodings;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="structskyway_1_1model_1_1_publication.html#adbd7e945d3e58898aab0aed1ec4b5b3b">is_enabled</a>         = init.is_enabled;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;};</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_subscription.html">  133</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structskyway_1_1model_1_1_subscription.html">Subscription</a> {</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_subscription_1_1_init.html">  134</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structskyway_1_1model_1_1_subscription_1_1_init.html">Init</a> {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        std::string channel_id;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        std::string publication_id;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        std::string subscriber_id;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordtype">bool</span> is_enabled;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    };</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_subscription.html#ae9753ad69106bdeba67be33c9565013a">  141</a></span>&#160;    std::string <a class="code" href="structskyway_1_1model_1_1_subscription.html#ae9753ad69106bdeba67be33c9565013a">id</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_subscription.html#ab7e69ac0cc4ffc9ffecb81eaf05902cf">  143</a></span>&#160;    std::string <a class="code" href="structskyway_1_1model_1_1_subscription.html#ab7e69ac0cc4ffc9ffecb81eaf05902cf">publication_id</a>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_subscription.html#acfbc445312952443434a96a925e93151">  145</a></span>&#160;    std::string <a class="code" href="structskyway_1_1model_1_1_subscription.html#acfbc445312952443434a96a925e93151">subscriber_id</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_subscription.html#af10f807700e5dd6f8b0770a38950b3c5">  147</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structskyway_1_1model_1_1_subscription.html#af10f807700e5dd6f8b0770a38950b3c5">is_enabled</a>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="structskyway_1_1model_1_1_subscription.html">Subscription</a>() {}</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="structskyway_1_1model_1_1_subscription.html">Subscription</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> Init&amp; init) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        this-&gt;<span class="keywordtype">id</span>       = <a class="code" href="structskyway_1_1model_1_1_subscription.html#ae9753ad69106bdeba67be33c9565013a">id</a>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        publication_id = init.publication_id;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <a class="code" href="structskyway_1_1model_1_1_subscription.html#acfbc445312952443434a96a925e93151">subscriber_id</a>  = init.subscriber_id;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <a class="code" href="structskyway_1_1model_1_1_subscription.html#af10f807700e5dd6f8b0770a38950b3c5">is_enabled</a>     = init.is_enabled;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;};</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel.html">  158</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structskyway_1_1model_1_1_channel.html">Channel</a> {</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel_1_1_init.html">  160</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structskyway_1_1model_1_1_channel_1_1_init.html">Init</a> {</div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel_1_1_init.html#a60a954798f55dc0847c28527e7e91d81">  162</a></span>&#160;        std::optional&lt;std::string&gt; <a class="code" href="structskyway_1_1model_1_1_channel_1_1_init.html#a60a954798f55dc0847c28527e7e91d81">name</a>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel_1_1_init.html#abaadb08eece5ff87108b2e147251273b">  164</a></span>&#160;        std::optional&lt;std::string&gt; <a class="code" href="structskyway_1_1model_1_1_channel_1_1_init.html#abaadb08eece5ff87108b2e147251273b">metadata</a>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    };</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel_1_1_query.html">  167</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structskyway_1_1model_1_1_channel_1_1_query.html">Query</a> {</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel_1_1_query.html#a24ee84f4e7c1d574432133519b76cd48">  169</a></span>&#160;        std::optional&lt;std::string&gt; <a class="code" href="structskyway_1_1model_1_1_channel_1_1_query.html#a24ee84f4e7c1d574432133519b76cd48">name</a>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel_1_1_query.html#ae000782e8bbb29a497563a85f299116e">  171</a></span>&#160;        std::optional&lt;std::string&gt; <a class="code" href="structskyway_1_1model_1_1_channel_1_1_query.html#ae000782e8bbb29a497563a85f299116e">id</a>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    };</div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel.html#a523ebac9a593b05e6ad82fd1061077d1">  174</a></span>&#160;    std::string <a class="code" href="structskyway_1_1model_1_1_channel.html#a523ebac9a593b05e6ad82fd1061077d1">id</a>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel.html#adc76a7af47f9e3f41e65e4f455c7f553">  176</a></span>&#160;    std::optional&lt;std::string&gt; <a class="code" href="structskyway_1_1model_1_1_channel.html#adc76a7af47f9e3f41e65e4f455c7f553">name</a>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel.html#a7974025ff1380bdd192aebcbec1218cf">  178</a></span>&#160;    std::optional&lt;std::string&gt; <a class="code" href="structskyway_1_1model_1_1_channel.html#a7974025ff1380bdd192aebcbec1218cf">metadata</a>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel.html#a6609d1e3313540ea448610d7a8581139">  180</a></span>&#160;    std::vector&lt;Member&gt; <a class="code" href="structskyway_1_1model_1_1_channel.html#a6609d1e3313540ea448610d7a8581139">members</a>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel.html#abc65fdfba871f4ca8c23dda3522e79bf">  182</a></span>&#160;    std::vector&lt;Publication&gt; <a class="code" href="structskyway_1_1model_1_1_channel.html#abc65fdfba871f4ca8c23dda3522e79bf">publications</a>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel.html#a83f131ef2aed17d12e89ea572a5a7475">  184</a></span>&#160;    std::vector&lt;Subscription&gt; <a class="code" href="structskyway_1_1model_1_1_channel.html#a83f131ef2aed17d12e89ea572a5a7475">subscriptions</a>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_channel.html#acb5aa350d836f167846fc5141628317c">  186</a></span>&#160;    uint64_t <a class="code" href="structskyway_1_1model_1_1_channel.html#acb5aa350d836f167846fc5141628317c">version</a>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;};</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html">  191</a></span>&#160;<span class="keyword">struct </span>[[deprecated]] <a class="code" href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html">WebRTCStatsReport</a> {</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html#aa9ed919dfa14dfe9f53d86f9a9861258">  193</a></span>&#160;    std::string id;</div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html#aed6522a420ebf1719604e1c5dfc86c30">  195</a></span>&#160;    std::string type;</div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html#ab85cfbc3258435615f971f4546a48819">  197</a></span>&#160;    std::unordered_map&lt;std::string, nlohmann::json&gt; <a class="code" href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html#ab85cfbc3258435615f971f4546a48819">params</a>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;};</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_web_r_t_c_stats.html">  202</a></span>&#160;<span class="keyword">struct </span>[[deprecated]] <a class="code" href="structskyway_1_1model_1_1_web_r_t_c_stats.html">WebRTCStats</a> {</div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="structskyway_1_1model_1_1_web_r_t_c_stats.html#a9d30d7ca0821dd7d86d81f5ecf5861cb">  204</a></span>&#160;    std::vector&lt;WebRTCStatsReport&gt; <a class="code" href="structskyway_1_1model_1_1_web_r_t_c_stats.html#a9d30d7ca0821dd7d86d81f5ecf5861cb">reports</a>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;};</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keywordtype">void</span> from_json(<span class="keyword">const</span> nlohmann::json&amp; j, <a class="code" href="structskyway_1_1model_1_1_codec.html">Codec</a>&amp; codec);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keywordtype">void</span> from_json(<span class="keyword">const</span> nlohmann::json&amp; j, <a class="code" href="structskyway_1_1model_1_1_encoding.html">Encoding</a>&amp; encoding);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keywordtype">void</span> from_json(<span class="keyword">const</span> nlohmann::json&amp; j, <a class="code" href="structskyway_1_1model_1_1_channel.html">Channel</a>&amp; channel);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="keywordtype">void</span> from_json(<span class="keyword">const</span> nlohmann::json&amp; j, <a class="code" href="structskyway_1_1model_1_1_member.html">Member</a>&amp; member);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="keywordtype">void</span> from_json(<span class="keyword">const</span> nlohmann::json&amp; j, <a class="code" href="structskyway_1_1model_1_1_publication.html">Publication</a>&amp; publication);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="keywordtype">void</span> from_json(<span class="keyword">const</span> nlohmann::json&amp; j, <a class="code" href="structskyway_1_1model_1_1_subscription.html">Subscription</a>&amp; subscription);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;[[deprecated]] <span class="keywordtype">void</span> from_json(<span class="keyword">const</span> nlohmann::json&amp; j, <a class="code" href="structskyway_1_1model_1_1_web_r_t_c_stats.html">WebRTCStats</a>&amp; stats);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="keywordtype">void</span> to_json(nlohmann::json&amp; j, <span class="keyword">const</span> <a class="code" href="structskyway_1_1model_1_1_codec.html">Codec</a>&amp; codec);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keywordtype">void</span> to_json(nlohmann::json&amp; j, <span class="keyword">const</span> <a class="code" href="structskyway_1_1model_1_1_encoding.html">Encoding</a>&amp; encoding);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;}  <span class="comment">// namespace model</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_MODEL_DOMAIN_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="astructskyway_1_1model_1_1_channel_1_1_init_html_abaadb08eece5ff87108b2e147251273b"><div class="ttname"><a href="structskyway_1_1model_1_1_channel_1_1_init.html#abaadb08eece5ff87108b2e147251273b">skyway::model::Channel::Init::metadata</a></div><div class="ttdeci">std::optional&lt; std::string &gt; metadata</div><div class="ttdoc">ChannelのMetadata</div><div class="ttdef"><b>Definition:</b> domain.hpp:164</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_channel_html_adc76a7af47f9e3f41e65e4f455c7f553"><div class="ttname"><a href="structskyway_1_1model_1_1_channel.html#adc76a7af47f9e3f41e65e4f455c7f553">skyway::model::Channel::name</a></div><div class="ttdeci">std::optional&lt; std::string &gt; name</div><div class="ttdoc">名前</div><div class="ttdef"><b>Definition:</b> domain.hpp:176</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_member_html_aa1b05e9b2af07bcbc7d9773a58f2a780"><div class="ttname"><a href="structskyway_1_1model_1_1_member.html#aa1b05e9b2af07bcbc7d9773a58f2a780">skyway::model::Member::id</a></div><div class="ttdeci">std::string id</div><div class="ttdoc">Id</div><div class="ttdef"><b>Definition:</b> domain.hpp:71</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_channel_html_a83f131ef2aed17d12e89ea572a5a7475"><div class="ttname"><a href="structskyway_1_1model_1_1_channel.html#a83f131ef2aed17d12e89ea572a5a7475">skyway::model::Channel::subscriptions</a></div><div class="ttdeci">std::vector&lt; Subscription &gt; subscriptions</div><div class="ttdoc">このChannelの存在するSubscriptionの一覧</div><div class="ttdef"><b>Definition:</b> domain.hpp:184</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_member_html_a68de04dcec85897c12585ce83cf3dfc4"><div class="ttname"><a href="structskyway_1_1model_1_1_member.html#a68de04dcec85897c12585ce83cf3dfc4">skyway::model::Member::type</a></div><div class="ttdeci">MemberType type</div><div class="ttdoc">種類</div><div class="ttdef"><b>Definition:</b> domain.hpp:75</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_web_r_t_c_stats_html_a9d30d7ca0821dd7d86d81f5ecf5861cb"><div class="ttname"><a href="structskyway_1_1model_1_1_web_r_t_c_stats.html#a9d30d7ca0821dd7d86d81f5ecf5861cb">skyway::model::WebRTCStats::reports</a></div><div class="ttdeci">std::vector&lt; WebRTCStatsReport &gt; reports</div><div class="ttdoc">統計情報の一覧</div><div class="ttdef"><b>Definition:</b> domain.hpp:204</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_member_1_1_init_html_ae66790e7ad9afa068c1a69e30d2904ae"><div class="ttname"><a href="structskyway_1_1model_1_1_member_1_1_init.html#ae66790e7ad9afa068c1a69e30d2904ae">skyway::model::Member::Init::keepalive_interval_gap_sec</a></div><div class="ttdeci">std::optional&lt; int &gt; keepalive_interval_gap_sec</div><div class="ttdoc">生存確認の間隔を超えてChannelからMemberが削除されるまでの時間</div><div class="ttdef"><b>Definition:</b> domain.hpp:68</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_subscription_1_1_init_html"><div class="ttname"><a href="structskyway_1_1model_1_1_subscription_1_1_init.html">skyway::model::Subscription::Init</a></div><div class="ttdef"><b>Definition:</b> domain.hpp:134</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_channel_html_a6609d1e3313540ea448610d7a8581139"><div class="ttname"><a href="structskyway_1_1model_1_1_channel.html#a6609d1e3313540ea448610d7a8581139">skyway::model::Channel::members</a></div><div class="ttdeci">std::vector&lt; Member &gt; members</div><div class="ttdoc">このChannelの存在するメンバーの一覧</div><div class="ttdef"><b>Definition:</b> domain.hpp:180</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_channel_1_1_init_html"><div class="ttname"><a href="structskyway_1_1model_1_1_channel_1_1_init.html">skyway::model::Channel::Init</a></div><div class="ttdoc">CreateもしくはFindOrCreateで指定する情報</div><div class="ttdef"><b>Definition:</b> domain.hpp:160</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_publication_html_a97a8eb500b4b11e65c447fd56c0cba13"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html#a97a8eb500b4b11e65c447fd56c0cba13">skyway::model::Publication::origin</a></div><div class="ttdeci">std::optional&lt; std::string &gt; origin</div><div class="ttdoc">Origin</div><div class="ttdef"><b>Definition:</b> domain.hpp:108</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_member_html_aed8f424e6db0f4bb712b9f15d187a974"><div class="ttname"><a href="structskyway_1_1model_1_1_member.html#aed8f424e6db0f4bb712b9f15d187a974">skyway::model::Member::name</a></div><div class="ttdeci">std::optional&lt; std::string &gt; name</div><div class="ttdoc">名前</div><div class="ttdef"><b>Definition:</b> domain.hpp:73</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_member_1_1_init_html_a47f343f6d47cf92ea3ae5fc83f085bfb"><div class="ttname"><a href="structskyway_1_1model_1_1_member_1_1_init.html#a47f343f6d47cf92ea3ae5fc83f085bfb">skyway::model::Member::Init::subtype</a></div><div class="ttdeci">std::string subtype</div><div class="ttdoc">サブタイプ</div><div class="ttdef"><b>Definition:</b> domain.hpp:60</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_publication_html_adbd7e945d3e58898aab0aed1ec4b5b3b"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html#adbd7e945d3e58898aab0aed1ec4b5b3b">skyway::model::Publication::is_enabled</a></div><div class="ttdeci">bool is_enabled</div><div class="ttdoc">有効か無効か</div><div class="ttdef"><b>Definition:</b> domain.hpp:118</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_channel_1_1_query_html"><div class="ttname"><a href="structskyway_1_1model_1_1_channel_1_1_query.html">skyway::model::Channel::Query</a></div><div class="ttdoc">FindもしくはFindOrCreateで指定する情報</div><div class="ttdef"><b>Definition:</b> domain.hpp:167</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_subscription_html"><div class="ttname"><a href="structskyway_1_1model_1_1_subscription.html">skyway::model::Subscription</a></div><div class="ttdoc">Subscription情報</div><div class="ttdef"><b>Definition:</b> domain.hpp:133</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_channel_html"><div class="ttname"><a href="structskyway_1_1model_1_1_channel.html">skyway::model::Channel</a></div><div class="ttdoc">Channel情報</div><div class="ttdef"><b>Definition:</b> domain.hpp:158</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_member_html"><div class="ttname"><a href="structskyway_1_1model_1_1_member.html">skyway::model::Member</a></div><div class="ttdoc">メンバー情報</div><div class="ttdef"><b>Definition:</b> domain.hpp:54</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_publication_html_a57180cb67316af0f5c6cab7e3f0c9e2d"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html#a57180cb67316af0f5c6cab7e3f0c9e2d">skyway::model::Publication::encodings</a></div><div class="ttdeci">std::vector&lt; Encoding &gt; encodings</div><div class="ttdoc">エンコーディング一覧</div><div class="ttdef"><b>Definition:</b> domain.hpp:116</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_encoding_html_af2d89f3234bc5aceba289ebf1af1fbdf"><div class="ttname"><a href="structskyway_1_1model_1_1_encoding.html#af2d89f3234bc5aceba289ebf1af1fbdf">skyway::model::Encoding::max_framerate</a></div><div class="ttdeci">std::optional&lt; double &gt; max_framerate</div><div class="ttdoc">最大フレームレート</div><div class="ttdef"><b>Definition:</b> domain.hpp:51</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_codec_html"><div class="ttname"><a href="structskyway_1_1model_1_1_codec.html">skyway::model::Codec</a></div><div class="ttdoc">コーデック情報</div><div class="ttdef"><b>Definition:</b> domain.hpp:31</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_encoding_html"><div class="ttname"><a href="structskyway_1_1model_1_1_encoding.html">skyway::model::Encoding</a></div><div class="ttdoc">エンコーディング設定</div><div class="ttdef"><b>Definition:</b> domain.hpp:43</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_publication_html_a2a13a3e089e1f6b1290c64ccba346ed6"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html#a2a13a3e089e1f6b1290c64ccba346ed6">skyway::model::Publication::publisher_id</a></div><div class="ttdeci">std::string publisher_id</div><div class="ttdoc">PublishしたメンバーのId</div><div class="ttdef"><b>Definition:</b> domain.hpp:106</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_publication_html"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html">skyway::model::Publication</a></div><div class="ttdoc">Publication情報</div><div class="ttdef"><b>Definition:</b> domain.hpp:92</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_publication_html_ac90a01e14982c9c6e8e4d029980cb6c8"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html#ac90a01e14982c9c6e8e4d029980cb6c8">skyway::model::Publication::metadata</a></div><div class="ttdeci">std::optional&lt; std::string &gt; metadata</div><div class="ttdoc">Metadata</div><div class="ttdef"><b>Definition:</b> domain.hpp:112</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_web_r_t_c_stats_html"><div class="ttname"><a href="structskyway_1_1model_1_1_web_r_t_c_stats.html">skyway::model::WebRTCStats</a></div><div class="ttdoc">統計情報</div><div class="ttdef"><b>Definition:</b> domain.hpp:202</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_channel_html_abc65fdfba871f4ca8c23dda3522e79bf"><div class="ttname"><a href="structskyway_1_1model_1_1_channel.html#abc65fdfba871f4ca8c23dda3522e79bf">skyway::model::Channel::publications</a></div><div class="ttdeci">std::vector&lt; Publication &gt; publications</div><div class="ttdoc">このChannelの存在するPublicationの一覧</div><div class="ttdef"><b>Definition:</b> domain.hpp:182</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_member_1_1_init_html_ac7a5429c36e4265c12991f6418c3f537"><div class="ttname"><a href="structskyway_1_1model_1_1_member_1_1_init.html#ac7a5429c36e4265c12991f6418c3f537">skyway::model::Member::Init::keepalive_interval_sec</a></div><div class="ttdeci">std::optional&lt; int &gt; keepalive_interval_sec</div><div class="ttdoc">生存確認の間隔</div><div class="ttdef"><b>Definition:</b> domain.hpp:66</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_member_1_1_init_html_a01541444784e9e347ce7377e535f1014"><div class="ttname"><a href="structskyway_1_1model_1_1_member_1_1_init.html#a01541444784e9e347ce7377e535f1014">skyway::model::Member::Init::metadata</a></div><div class="ttdeci">std::optional&lt; std::string &gt; metadata</div><div class="ttdoc">Metadata</div><div class="ttdef"><b>Definition:</b> domain.hpp:64</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_subscription_html_af10f807700e5dd6f8b0770a38950b3c5"><div class="ttname"><a href="structskyway_1_1model_1_1_subscription.html#af10f807700e5dd6f8b0770a38950b3c5">skyway::model::Subscription::is_enabled</a></div><div class="ttdeci">bool is_enabled</div><div class="ttdoc">有効か無効か</div><div class="ttdef"><b>Definition:</b> domain.hpp:147</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_channel_1_1_init_html_a60a954798f55dc0847c28527e7e91d81"><div class="ttname"><a href="structskyway_1_1model_1_1_channel_1_1_init.html#a60a954798f55dc0847c28527e7e91d81">skyway::model::Channel::Init::name</a></div><div class="ttdeci">std::optional&lt; std::string &gt; name</div><div class="ttdoc">Channelの名前</div><div class="ttdef"><b>Definition:</b> domain.hpp:162</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_channel_1_1_query_html_a24ee84f4e7c1d574432133519b76cd48"><div class="ttname"><a href="structskyway_1_1model_1_1_channel_1_1_query.html#a24ee84f4e7c1d574432133519b76cd48">skyway::model::Channel::Query::name</a></div><div class="ttdeci">std::optional&lt; std::string &gt; name</div><div class="ttdoc">Channelの名前</div><div class="ttdef"><b>Definition:</b> domain.hpp:169</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_publication_html_a93356d6c6557edc1d9153c76add56b49"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html#a93356d6c6557edc1d9153c76add56b49">skyway::model::Publication::content_type</a></div><div class="ttdeci">ContentType content_type</div><div class="ttdoc">コンテンツの種類</div><div class="ttdef"><b>Definition:</b> domain.hpp:110</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_publication_html_a7038caa6abacad3d44c491a31de4fcac"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html#a7038caa6abacad3d44c491a31de4fcac">skyway::model::Publication::id</a></div><div class="ttdeci">std::string id</div><div class="ttdoc">Id</div><div class="ttdef"><b>Definition:</b> domain.hpp:104</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_channel_html_acb5aa350d836f167846fc5141628317c"><div class="ttname"><a href="structskyway_1_1model_1_1_channel.html#acb5aa350d836f167846fc5141628317c">skyway::model::Channel::version</a></div><div class="ttdeci">uint64_t version</div><div class="ttdoc">バージョン</div><div class="ttdef"><b>Definition:</b> domain.hpp:186</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_subscription_html_acfbc445312952443434a96a925e93151"><div class="ttname"><a href="structskyway_1_1model_1_1_subscription.html#acfbc445312952443434a96a925e93151">skyway::model::Subscription::subscriber_id</a></div><div class="ttdeci">std::string subscriber_id</div><div class="ttdoc">このSubscriptionをSubscribeしているメンバーのId</div><div class="ttdef"><b>Definition:</b> domain.hpp:145</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_channel_html_a7974025ff1380bdd192aebcbec1218cf"><div class="ttname"><a href="structskyway_1_1model_1_1_channel.html#a7974025ff1380bdd192aebcbec1218cf">skyway::model::Channel::metadata</a></div><div class="ttdeci">std::optional&lt; std::string &gt; metadata</div><div class="ttdoc">Metadata</div><div class="ttdef"><b>Definition:</b> domain.hpp:178</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_channel_html_a523ebac9a593b05e6ad82fd1061077d1"><div class="ttname"><a href="structskyway_1_1model_1_1_channel.html#a523ebac9a593b05e6ad82fd1061077d1">skyway::model::Channel::id</a></div><div class="ttdeci">std::string id</div><div class="ttdoc">Id</div><div class="ttdef"><b>Definition:</b> domain.hpp:174</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_member_html_a3536f2b00fa4c134dea89ab74603aa6c"><div class="ttname"><a href="structskyway_1_1model_1_1_member.html#a3536f2b00fa4c134dea89ab74603aa6c">skyway::model::Member::subtype</a></div><div class="ttdeci">std::string subtype</div><div class="ttdoc">サブタイプ</div><div class="ttdef"><b>Definition:</b> domain.hpp:77</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_web_r_t_c_stats_report_html"><div class="ttname"><a href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html">skyway::model::WebRTCStatsReport</a></div><div class="ttdoc">統計情報の詳細</div><div class="ttdef"><b>Definition:</b> domain.hpp:191</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_publication_html_ab264171331bf5a21b1f9ac68dc7bccfa"><div class="ttname"><a href="structskyway_1_1model_1_1_publication.html#ab264171331bf5a21b1f9ac68dc7bccfa">skyway::model::Publication::codec_capabilities</a></div><div class="ttdeci">std::vector&lt; Codec &gt; codec_capabilities</div><div class="ttdoc">コーデック一覧</div><div class="ttdef"><b>Definition:</b> domain.hpp:114</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_member_1_1_init_html_ab34d304d8ee9b8060549213f2fa0f06d"><div class="ttname"><a href="structskyway_1_1model_1_1_member_1_1_init.html#ab34d304d8ee9b8060549213f2fa0f06d">skyway::model::Member::Init::type</a></div><div class="ttdeci">MemberType type</div><div class="ttdoc">種類</div><div class="ttdef"><b>Definition:</b> domain.hpp:58</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_codec_html_a9986815652806280d75aa9b5d65ba6a5"><div class="ttname"><a href="structskyway_1_1model_1_1_codec.html#a9986815652806280d75aa9b5d65ba6a5">skyway::model::Codec::mime_type</a></div><div class="ttdeci">std::string mime_type</div><div class="ttdoc">mimetype</div><div class="ttdef"><b>Definition:</b> domain.hpp:37</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_codec_1_1_parameters_html"><div class="ttname"><a href="structskyway_1_1model_1_1_codec_1_1_parameters.html">skyway::model::Codec::Parameters</a></div><div class="ttdoc">Dtxオプションを適応するかのオプション</div><div class="ttdef"><b>Definition:</b> domain.hpp:33</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_encoding_html_ad020abf98180ad182abab25843a58b1c"><div class="ttname"><a href="structskyway_1_1model_1_1_encoding.html#ad020abf98180ad182abab25843a58b1c">skyway::model::Encoding::id</a></div><div class="ttdeci">std::optional&lt; std::string &gt; id</div><div class="ttdoc">Id</div><div class="ttdef"><b>Definition:</b> domain.hpp:45</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_codec_html_aa14ab85e4a597fe6f9b63e38d0a9c725"><div class="ttname"><a href="structskyway_1_1model_1_1_codec.html#aa14ab85e4a597fe6f9b63e38d0a9c725">skyway::model::Codec::parameters</a></div><div class="ttdeci">Parameters parameters</div><div class="ttdoc">パラメーター</div><div class="ttdef"><b>Definition:</b> domain.hpp:39</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_member_html_a32ffb6b05ce181be6f2f86867f06b3fb"><div class="ttname"><a href="structskyway_1_1model_1_1_member.html#a32ffb6b05ce181be6f2f86867f06b3fb">skyway::model::Member::metadata</a></div><div class="ttdeci">std::optional&lt; std::string &gt; metadata</div><div class="ttdoc">Metadata</div><div class="ttdef"><b>Definition:</b> domain.hpp:79</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_channel_1_1_query_html_ae000782e8bbb29a497563a85f299116e"><div class="ttname"><a href="structskyway_1_1model_1_1_channel_1_1_query.html#ae000782e8bbb29a497563a85f299116e">skyway::model::Channel::Query::id</a></div><div class="ttdeci">std::optional&lt; std::string &gt; id</div><div class="ttdoc">ChannelのId</div><div class="ttdef"><b>Definition:</b> domain.hpp:171</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_member_1_1_init_html"><div class="ttname"><a href="structskyway_1_1model_1_1_member_1_1_init.html">skyway::model::Member::Init</a></div><div class="ttdoc">Join時に使用するメンバー情報</div><div class="ttdef"><b>Definition:</b> domain.hpp:56</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_encoding_html_aa3f145e2ae0e752059f2f756b1509f55"><div class="ttname"><a href="structskyway_1_1model_1_1_encoding.html#aa3f145e2ae0e752059f2f756b1509f55">skyway::model::Encoding::max_bitrate</a></div><div class="ttdeci">std::optional&lt; int &gt; max_bitrate</div><div class="ttdoc">最大ビットレート</div><div class="ttdef"><b>Definition:</b> domain.hpp:47</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_subscription_html_ab7e69ac0cc4ffc9ffecb81eaf05902cf"><div class="ttname"><a href="structskyway_1_1model_1_1_subscription.html#ab7e69ac0cc4ffc9ffecb81eaf05902cf">skyway::model::Subscription::publication_id</a></div><div class="ttdeci">std::string publication_id</div><div class="ttdoc">このSubscriptionに紐づくPublicationのId</div><div class="ttdef"><b>Definition:</b> domain.hpp:143</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_publication_1_1_init_html"><div class="ttname"><a href="structskyway_1_1model_1_1_publication_1_1_init.html">skyway::model::Publication::Init</a></div><div class="ttdef"><b>Definition:</b> domain.hpp:93</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_encoding_html_a8bfc1d6bc1fae783547bb8cec3ff5c80"><div class="ttname"><a href="structskyway_1_1model_1_1_encoding.html#a8bfc1d6bc1fae783547bb8cec3ff5c80">skyway::model::Encoding::scale_resolution_down_by</a></div><div class="ttdeci">std::optional&lt; double &gt; scale_resolution_down_by</div><div class="ttdoc">解像度の倍率</div><div class="ttdef"><b>Definition:</b> domain.hpp:49</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_web_r_t_c_stats_report_html_ab85cfbc3258435615f971f4546a48819"><div class="ttname"><a href="structskyway_1_1model_1_1_web_r_t_c_stats_report.html#ab85cfbc3258435615f971f4546a48819">skyway::model::WebRTCStatsReport::params</a></div><div class="ttdeci">std::unordered_map&lt; std::string, nlohmann::json &gt; params</div><div class="ttdoc">各パラメーターに対応するJson</div><div class="ttdef"><b>Definition:</b> domain.hpp:197</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_member_1_1_init_html_a5ef28be260f6835535fa9d0eb312966e"><div class="ttname"><a href="structskyway_1_1model_1_1_member_1_1_init.html#a5ef28be260f6835535fa9d0eb312966e">skyway::model::Member::Init::name</a></div><div class="ttdeci">std::optional&lt; std::string &gt; name</div><div class="ttdoc">名前</div><div class="ttdef"><b>Definition:</b> domain.hpp:62</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_subscription_html_ae9753ad69106bdeba67be33c9565013a"><div class="ttname"><a href="structskyway_1_1model_1_1_subscription.html#ae9753ad69106bdeba67be33c9565013a">skyway::model::Subscription::id</a></div><div class="ttdeci">std::string id</div><div class="ttdoc">Id</div><div class="ttdef"><b>Definition:</b> domain.hpp:141</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_77f3510bf786cf3c12f65f3b0b944be3.html">skyway</a></li><li class="navelem"><a class="el" href="dir_6626448db952d99743ecb0f38a66b689.html">model</a></li><li class="navelem"><b>domain.hpp</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

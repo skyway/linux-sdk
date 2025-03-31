@@ -1,0 +1,8 @@
+var classboost_1_1asio_1_1detail_1_1consuming__buffers_3_01_buffer_00_01boost_1_1array_3_01_elem_00_095bf041d587ed91616497ff9cfd055d =
+[
+    [ "consuming_buffers", "classboost_1_1asio_1_1detail_1_1consuming__buffers_3_01_buffer_00_01boost_1_1array_3_01_elem_00_095bf041d587ed91616497ff9cfd055d.html#af10a0202b592d33475e5f336c7aae7ed", null ],
+    [ "consume", "classboost_1_1asio_1_1detail_1_1consuming__buffers_3_01_buffer_00_01boost_1_1array_3_01_elem_00_095bf041d587ed91616497ff9cfd055d.html#a01ba668cc377dd4a0d719efe2dda41ab", null ],
+    [ "empty", "classboost_1_1asio_1_1detail_1_1consuming__buffers_3_01_buffer_00_01boost_1_1array_3_01_elem_00_095bf041d587ed91616497ff9cfd055d.html#ac70b38bcd0886e87e83a6d0491b0709e", null ],
+    [ "prepare", "classboost_1_1asio_1_1detail_1_1consuming__buffers_3_01_buffer_00_01boost_1_1array_3_01_elem_00_095bf041d587ed91616497ff9cfd055d.html#aee14b81316fb6da683a924df4264fff7", null ],
+    [ "total_consumed", "classboost_1_1asio_1_1detail_1_1consuming__buffers_3_01_buffer_00_01boost_1_1array_3_01_elem_00_095bf041d587ed91616497ff9cfd055d.html#a44e3b897f7a5a24045d9a7b071fe5638", null ]
+];

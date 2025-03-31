@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('flat__static__buffer_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">flat_static_buffer.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Copyright (c) 2016-2019 Vinnie Falco (vinnie dot falco at gmail dot com)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Official repository: https://github.com/boostorg/beast</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef BOOST_BEAST_FLAT_STATIC_BUFFER_HPP</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define BOOST_BEAST_FLAT_STATIC_BUFFER_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;boost/beast/core/detail/config.hpp&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;boost/asio/buffer.hpp&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceboost.html">boost</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>beast {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer__base.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html">flat_static_buffer_base</a></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">char</span>* begin_;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">char</span>* in_;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">char</span>* out_;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">char</span>* last_;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">char</span>* end_;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a79e23e36ef61840046bc07adb2065607">flat_static_buffer_base</a>(</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html">flat_static_buffer_base</a> <span class="keyword">const</span>&amp; other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html">flat_static_buffer_base</a>&amp; operator=(</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html">flat_static_buffer_base</a> <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a14b78fdcebdb96aeff0d47e794698810">   73</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a14b78fdcebdb96aeff0d47e794698810">flat_static_buffer_base</a>(</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">void</span>* p, std::size_t n) noexcept</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a31917c905e65ee4acca4469dbf6b9e52">reset</a>(p, n);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    BOOST_BEAST_DECL</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#ac88fd4a267652b30dda8cd8efb7a0146">clear</a>() noexcept;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer__base.html#aca169db1c9788a2a54fc16ded8746854">   98</a></span>&#160;    using <a class="code" href="classboost_1_1asio_1_1const__buffer.html">const_buffers_type</a> = net::const_buffer;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a2c8f80a876dd63d38365cc47e1fe703b">  101</a></span>&#160;    using <a class="code" href="classboost_1_1asio_1_1mutable__buffer.html">mutable_buffers_type</a> = net::mutable_buffer;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    std::<span class="keywordtype">size_t</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a8df2a83aeb21d92402081bea527be1fc">  105</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a8df2a83aeb21d92402081bea527be1fc">size</a>() const noexcept</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> out_ - in_;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    std::size_t</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer__base.html#aeb1970202c9952c4f1d48edb44e5f2c3">  112</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#aeb1970202c9952c4f1d48edb44e5f2c3">max_size</a>() const noexcept</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">return</span> dist(begin_, end_);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    std::size_t</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer__base.html#ab653122058fd82df564ed6eb2d1796ee">  119</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#ab653122058fd82df564ed6eb2d1796ee">capacity</a>() const noexcept</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#aeb1970202c9952c4f1d48edb44e5f2c3">max_size</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#aca169db1c9788a2a54fc16ded8746854">const_buffers_type</a></div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer__base.html#afb9d8cca0d2835a3f8339f06d4b49ad7">  126</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#afb9d8cca0d2835a3f8339f06d4b49ad7">data</a>() const noexcept</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span> {in_, dist(in_, out_)};</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#aca169db1c9788a2a54fc16ded8746854">const_buffers_type</a></div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer__base.html#adabc35a0f7ead396398413ce1aa885b3">  133</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#adabc35a0f7ead396398413ce1aa885b3">cdata</a>() const noexcept</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#afb9d8cca0d2835a3f8339f06d4b49ad7">data</a>();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a2c8f80a876dd63d38365cc47e1fe703b">mutable_buffers_type</a></div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a4a84a554d6e9ef3c30466ad83d146407">  140</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a4a84a554d6e9ef3c30466ad83d146407">data</a>() noexcept</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">return</span> {in_, dist(in_, out_)};</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    BOOST_BEAST_DECL</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a2c8f80a876dd63d38365cc47e1fe703b">mutable_buffers_type</a></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#af4968b3d3c8418133ffe372694809815">prepare</a>(std::size_t n);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a697e3e27ec22c149bcabbb62e59da59b">  185</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a697e3e27ec22c149bcabbb62e59da59b">commit</a>(std::size_t n) noexcept</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        out_ += (std::min&lt;std::size_t&gt;)(n, last_ - out_);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    BOOST_BEAST_DECL</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a246eb316f06cd6e1a2164a7e4c376b0e">consume</a>(std::size_t n) noexcept;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a79e23e36ef61840046bc07adb2065607">flat_static_buffer_base</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    BOOST_BEAST_DECL</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html#a31917c905e65ee4acca4469dbf6b9e52">reset</a>(<span class="keywordtype">void</span>* p, std::size_t n) noexcept;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keyword">static</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    std::size_t</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    dist(<span class="keywordtype">char</span> <span class="keyword">const</span>* first, <span class="keywordtype">char</span> <span class="keyword">const</span>* last) noexcept</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(last - first);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;};</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="keyword">template</span>&lt;std::<span class="keywordtype">size_t</span> N&gt;</div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer.html">  263</a></span>&#160;<span class="keyword">class </span><a class="code" href="classboost_1_1beast_1_1flat__static__buffer.html">flat_static_buffer</a> : <span class="keyword">public</span> <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html">flat_static_buffer_base</a></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;{</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordtype">char</span> buf_[N];</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer.html#adfc9aeb8bb3ca72ccf19c074f45bd616">flat_static_buffer</a>(<a class="code" href="classboost_1_1beast_1_1flat__static__buffer.html">flat_static_buffer</a> <span class="keyword">const</span>&amp;);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer.html#adfc9aeb8bb3ca72ccf19c074f45bd616">  272</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer.html#adfc9aeb8bb3ca72ccf19c074f45bd616">flat_static_buffer</a>()</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        : <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html">flat_static_buffer_base</a>(buf_, N)</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer.html">flat_static_buffer</a>&amp; <a class="code" href="classboost_1_1beast_1_1flat__static__buffer.html#a7612965db93a4c600c15872219b2e10f">operator=</a>(<a class="code" href="classboost_1_1beast_1_1flat__static__buffer.html">flat_static_buffer</a> <span class="keyword">const</span>&amp;);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html">flat_static_buffer_base</a>&amp;</div>
+<div class="line"><a name="l00282"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer.html#a5a3b9ea8bdcaa537fd50e8a9e1fb77a6">  282</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer.html#a5a3b9ea8bdcaa537fd50e8a9e1fb77a6">base</a>()</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer__base.html">flat_static_buffer_base</a> <span class="keyword">const</span>&amp;</div>
+<div class="line"><a name="l00289"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer.html#a584bcef354fa3b1baec9ee0ecab2ade1">  289</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer.html#a584bcef354fa3b1baec9ee0ecab2ade1">base</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    std::size_t constexpr</div>
+<div class="line"><a name="l00296"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer.html#ab2606cd94e61df223b7f028612c4683a">  296</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer.html#ab2606cd94e61df223b7f028612c4683a">max_size</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keywordflow">return</span> N;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    }</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    std::size_t constexpr</div>
+<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="classboost_1_1beast_1_1flat__static__buffer.html#a11618d244f35cd5426a163014f8451e9">  303</a></span>&#160;    <a class="code" href="classboost_1_1beast_1_1flat__static__buffer.html#a11618d244f35cd5426a163014f8451e9">capacity</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordflow">return</span> N;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;};</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;} <span class="comment">// beast</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;} <span class="comment">// boost</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor">#include &lt;boost/beast/core/impl/flat_static_buffer.hpp&gt;</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor">#ifdef BOOST_BEAST_HEADER_ONLY</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="preprocessor">#include &lt;boost/beast/core/impl/flat_static_buffer.ipp&gt;</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer__base_html_ab653122058fd82df564ed6eb2d1796ee"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer__base.html#ab653122058fd82df564ed6eb2d1796ee">boost::beast::flat_static_buffer_base::capacity</a></div><div class="ttdeci">std::size_t capacity() const noexcept</div><div class="ttdoc">Return the maximum number of bytes, both readable and writable, that can be held without requiring an...</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:119</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1mutable__buffer_html"><div class="ttname"><a href="classboost_1_1asio_1_1mutable__buffer.html">boost::asio::mutable_buffer</a></div><div class="ttdoc">Holds a buffer that can be modified.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:93</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer__base_html_aca169db1c9788a2a54fc16ded8746854"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer__base.html#aca169db1c9788a2a54fc16ded8746854">boost::beast::flat_static_buffer_base::const_buffers_type</a></div><div class="ttdeci">net::const_buffer const_buffers_type</div><div class="ttdoc">The ConstBufferSequence used to represent the readable bytes.</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:98</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer__base_html_a246eb316f06cd6e1a2164a7e4c376b0e"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer__base.html#a246eb316f06cd6e1a2164a7e4c376b0e">boost::beast::flat_static_buffer_base::consume</a></div><div class="ttdeci">BOOST_BEAST_DECL void consume(std::size_t n) noexcept</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.ipp:64</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer__base_html_ac88fd4a267652b30dda8cd8efb7a0146"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer__base.html#ac88fd4a267652b30dda8cd8efb7a0146">boost::beast::flat_static_buffer_base::clear</a></div><div class="ttdeci">BOOST_BEAST_DECL void clear() noexcept</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.ipp:33</div></div>
+<div class="ttc" id="anamespaceboost_html"><div class="ttname"><a href="namespaceboost.html">boost</a></div><div class="ttdoc">defined(BOOST_MOVE_DOXYGEN_INVOKED)</div><div class="ttdef"><b>Definition:</b> case_conv.hpp:32</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer_html_adfc9aeb8bb3ca72ccf19c074f45bd616"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer.html#adfc9aeb8bb3ca72ccf19c074f45bd616">boost::beast::flat_static_buffer::flat_static_buffer</a></div><div class="ttdeci">flat_static_buffer()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:272</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer__base_html"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer__base.html">boost::beast::flat_static_buffer_base</a></div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:51</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1const__buffer_html"><div class="ttname"><a href="classboost_1_1asio_1_1const__buffer.html">boost::asio::const_buffer</a></div><div class="ttdoc">Holds a buffer that cannot be modified.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:227</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer__base_html_adabc35a0f7ead396398413ce1aa885b3"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer__base.html#adabc35a0f7ead396398413ce1aa885b3">boost::beast::flat_static_buffer_base::cdata</a></div><div class="ttdeci">const_buffers_type cdata() const noexcept</div><div class="ttdoc">Returns a constant buffer sequence representing the readable bytes</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:133</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer__base_html_a4a84a554d6e9ef3c30466ad83d146407"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer__base.html#a4a84a554d6e9ef3c30466ad83d146407">boost::beast::flat_static_buffer_base::data</a></div><div class="ttdeci">mutable_buffers_type data() noexcept</div><div class="ttdoc">Returns a mutable buffer sequence representing the readable bytes</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:140</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer__base_html_a8df2a83aeb21d92402081bea527be1fc"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer__base.html#a8df2a83aeb21d92402081bea527be1fc">boost::beast::flat_static_buffer_base::size</a></div><div class="ttdeci">std::size_t size() const noexcept</div><div class="ttdoc">Returns the number of readable bytes.</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:105</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer_html_a5a3b9ea8bdcaa537fd50e8a9e1fb77a6"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer.html#a5a3b9ea8bdcaa537fd50e8a9e1fb77a6">boost::beast::flat_static_buffer::base</a></div><div class="ttdeci">flat_static_buffer_base &amp; base()</div><div class="ttdoc">Returns the flat_static_buffer_base portion of this object</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:282</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer__base_html_afb9d8cca0d2835a3f8339f06d4b49ad7"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer__base.html#afb9d8cca0d2835a3f8339f06d4b49ad7">boost::beast::flat_static_buffer_base::data</a></div><div class="ttdeci">const_buffers_type data() const noexcept</div><div class="ttdoc">Returns a constant buffer sequence representing the readable bytes</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:126</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer__base_html_a79e23e36ef61840046bc07adb2065607"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer__base.html#a79e23e36ef61840046bc07adb2065607">boost::beast::flat_static_buffer_base::flat_static_buffer_base</a></div><div class="ttdeci">flat_static_buffer_base()=default</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer_html_a11618d244f35cd5426a163014f8451e9"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer.html#a11618d244f35cd5426a163014f8451e9">boost::beast::flat_static_buffer::capacity</a></div><div class="ttdeci">constexpr std::size_t capacity() const</div><div class="ttdoc">Return the maximum sum of input and output sizes that can be held without an allocation.</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:303</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer_html_a584bcef354fa3b1baec9ee0ecab2ade1"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer.html#a584bcef354fa3b1baec9ee0ecab2ade1">boost::beast::flat_static_buffer::base</a></div><div class="ttdeci">flat_static_buffer_base const  &amp; base() const</div><div class="ttdoc">Returns the flat_static_buffer_base portion of this object</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:289</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer_html_a7612965db93a4c600c15872219b2e10f"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer.html#a7612965db93a4c600c15872219b2e10f">boost::beast::flat_static_buffer::operator=</a></div><div class="ttdeci">flat_static_buffer &amp; operator=(flat_static_buffer const &amp;)</div><div class="ttdoc">Assignment</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:29</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer__base_html_aeb1970202c9952c4f1d48edb44e5f2c3"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer__base.html#aeb1970202c9952c4f1d48edb44e5f2c3">boost::beast::flat_static_buffer_base::max_size</a></div><div class="ttdeci">std::size_t max_size() const noexcept</div><div class="ttdoc">Return the maximum number of bytes, both readable and writable, that can ever be held.</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:112</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer_html_ab2606cd94e61df223b7f028612c4683a"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer.html#ab2606cd94e61df223b7f028612c4683a">boost::beast::flat_static_buffer::max_size</a></div><div class="ttdeci">constexpr std::size_t max_size() const</div><div class="ttdoc">Return the maximum sum of the input and output sequence sizes.</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:296</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer__base_html_a14b78fdcebdb96aeff0d47e794698810"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer__base.html#a14b78fdcebdb96aeff0d47e794698810">boost::beast::flat_static_buffer_base::flat_static_buffer_base</a></div><div class="ttdeci">flat_static_buffer_base(void *p, std::size_t n) noexcept</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:73</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer__base_html_a2c8f80a876dd63d38365cc47e1fe703b"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer__base.html#a2c8f80a876dd63d38365cc47e1fe703b">boost::beast::flat_static_buffer_base::mutable_buffers_type</a></div><div class="ttdeci">net::mutable_buffer mutable_buffers_type</div><div class="ttdoc">The MutableBufferSequence used to represent the writable bytes.</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:101</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer__base_html_a697e3e27ec22c149bcabbb62e59da59b"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer__base.html#a697e3e27ec22c149bcabbb62e59da59b">boost::beast::flat_static_buffer_base::commit</a></div><div class="ttdeci">void commit(std::size_t n) noexcept</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:185</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer__base_html_a31917c905e65ee4acca4469dbf6b9e52"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer__base.html#a31917c905e65ee4acca4469dbf6b9e52">boost::beast::flat_static_buffer_base::reset</a></div><div class="ttdeci">BOOST_BEAST_DECL void reset(void *p, std::size_t n) noexcept</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.ipp:77</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer__base_html_af4968b3d3c8418133ffe372694809815"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer__base.html#af4968b3d3c8418133ffe372694809815">boost::beast::flat_static_buffer_base::prepare</a></div><div class="ttdeci">BOOST_BEAST_DECL mutable_buffers_type prepare(std::size_t n)</div><div class="ttdef"><b>Definition:</b> flat_static_buffer.ipp:42</div></div>
+<div class="ttc" id="aclassboost_1_1beast_1_1flat__static__buffer_html"><div class="ttname"><a href="classboost_1_1beast_1_1flat__static__buffer.html">boost::beast::flat_static_buffer</a></div><div class="ttdef"><b>Definition:</b> flat_static_buffer.hpp:263</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1794b65aa62003e11b03e0565def47fa.html">external</a></li><li class="navelem"><a class="el" href="dir_c08529bcc08f755a4d16428f71043471.html">boost</a></li><li class="navelem"><a class="el" href="dir_08e916b1ba9423845cffef83795e9545.html">boost</a></li><li class="navelem"><a class="el" href="dir_bd6a85e4ee4cdda35614a339a6890cf4.html">beast</a></li><li class="navelem"><a class="el" href="dir_70222f29f9522fd356e0faf7dbb59b69.html">core</a></li><li class="navelem"><b>flat_static_buffer.hpp</b></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

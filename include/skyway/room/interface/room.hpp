@@ -22,9 +22,9 @@ enum class RoomType { kP2P, kSfu };
 /// @brief Roomの`Create`/`FindOrCreate`で扱うオプション
 struct RoomInitOptions {
     /// @brief Name
-    boost::optional<std::string> name;
+    std::optional<std::string> name;
     /// @brief Metadata
-    boost::optional<std::string> metadata;
+    std::optional<std::string> metadata;
     /// @cond INTERNAL_SECTION
     model::Channel::Init ToCore() {
         model::Channel::Init core;
@@ -38,9 +38,9 @@ struct RoomInitOptions {
 /// @brief Roomの`Find`/`FindOrCreate`で扱うオプション
 struct RoomQuery {
     /// @brief Id
-    boost::optional<std::string> id;
+    std::optional<std::string> id;
     /// @brief Name
-    boost::optional<std::string> name;
+    std::optional<std::string> name;
     /// @cond INTERNAL_SECTION
     model::Channel::Query ToCore() {
         model::Channel::Query core;
@@ -54,13 +54,13 @@ struct RoomQuery {
 /// @brief Memberの`Create`で扱うオプション
 struct RoomMemberInitOptions {
     /// @brief Name
-    boost::optional<std::string> name;
+    std::optional<std::string> name;
     /// @brief Metadata
-    boost::optional<std::string> metadata;
+    std::optional<std::string> metadata;
     /// @brief 生存確認の間隔
-    boost::optional<int> keepalive_interval_sec;
+    std::optional<int> keepalive_interval_sec;
     /// @brief 生存確認の間隔を超えてChannelからMemberが削除されるまでの時間
-    boost::optional<int> keepalive_interval_gap_sec;
+    std::optional<int> keepalive_interval_gap_sec;
     /// @cond INTERNAL_SECTION
     model::Member::Init ToCore() {
         model::Member::Init core;
@@ -93,22 +93,22 @@ public:
 
         /// @brief RoomにRoomMemberが参加した後に発生するイベント
         /// @param member 参加したRoomMember
-        virtual void OnMemberJoined(std::unique_ptr<RoomMember> member) {}
+        virtual void OnMemberJoined(std::shared_ptr<RoomMember> member) {}
 
         /// @brief RoomからRoomMemberが退出した後に発生するイベント
         /// @param member 退出したRoomMember
-        virtual void OnMemberLeft(std::unique_ptr<RoomMember> member) {}
+        virtual void OnMemberLeft(std::shared_ptr<RoomMember> member) {}
 
         /// @brief RoomMemberのMetadataが更新された後に発生するイベント
         /// @param member 対象のRoomMember
         /// @param metadata Metadata
-        virtual void OnMemberMetadataUpdated(std::unique_ptr<RoomMember> member,
+        virtual void OnMemberMetadataUpdated(std::shared_ptr<RoomMember> member,
                                              const std::string& metadata) {}
 
         /// @brief RoomPublicationのMetadataが更新された後に発生するイベント
         /// @param publication 対象のRoomPublication
         /// @param metadata Metadata
-        virtual void OnPublicationMetadataUpdated(std::unique_ptr<RoomPublication> publication,
+        virtual void OnPublicationMetadataUpdated(std::shared_ptr<RoomPublication> publication,
                                                   const std::string& metadata) {}
 
         /// @brief RoomPublicationが作成または削除された後に発生するイベント
@@ -117,56 +117,56 @@ public:
 
         /// @brief StreamがPublishされた後に発生するイベント
         /// @param publication 対象のRoomPublication
-        virtual void OnStreamPublished(std::unique_ptr<RoomPublication> publication) {}
+        virtual void OnStreamPublished(std::shared_ptr<RoomPublication> publication) {}
 
         /// @brief StreamがUnpublishされた後に発生するイベント
         /// @param publication 対象のRoomPublication
-        virtual void OnStreamUnpublished(std::unique_ptr<RoomPublication> publication) {}
+        virtual void OnStreamUnpublished(std::shared_ptr<RoomPublication> publication) {}
 
         /// @brief RoomPublicationがEnableになった後に発生するイベント
         /// @param publication 対象のRoomPublication
-        virtual void OnPublicationEnabled(std::unique_ptr<RoomPublication> publication) {}
+        virtual void OnPublicationEnabled(std::shared_ptr<RoomPublication> publication) {}
 
         /// @brief RoomPublicationがDisableになった後に発生するイベント
         /// @param publication 対象のRoomPublication
-        virtual void OnPublicationDisabled(std::unique_ptr<RoomPublication> publication) {}
+        virtual void OnPublicationDisabled(std::shared_ptr<RoomPublication> publication) {}
 
         /// @brief StreamがSubscribeまたはUnsubscribeされた後に発生するイベント
         virtual void OnSubscriptionListChanged() {}
 
         /// @brief RoomPublicationがSubscribeされた後に発生するイベント
         /// @param subscription 対象のRoomSubscription
-        virtual void OnPublicationSubscribed(std::unique_ptr<RoomSubscription> subscription) {}
+        virtual void OnPublicationSubscribed(std::shared_ptr<RoomSubscription> subscription) {}
 
         /// @brief RoomPublicationがUnsubscribeされた後に発生するイベント
         /// @param subscription 対象のRoomSubscription
-        virtual void OnPublicationUnsubscribed(std::unique_ptr<RoomSubscription> subscription) {}
+        virtual void OnPublicationUnsubscribed(std::shared_ptr<RoomSubscription> subscription) {}
 
         /// @brief RoomSubscriptionがEnableになった後に発生するイベント
         /// @param subscription 対象のRoomSubscription
-        virtual void OnSubscriptionEnabled(std::unique_ptr<RoomSubscription> subscription) {}
+        virtual void OnSubscriptionEnabled(std::shared_ptr<RoomSubscription> subscription) {}
 
         /// @brief RoomSubscriptionがDisableになった後に発生するイベント
         /// @param subscription 対象のRoomSubscription
-        virtual void OnSubscriptionDisabled(std::unique_ptr<RoomSubscription> subscription) {}
+        virtual void OnSubscriptionDisabled(std::shared_ptr<RoomSubscription> subscription) {}
     };
     virtual ~Room() = default;
     /// @brief Idを取得します。
     virtual std::string Id() = 0;
     /// @brief Nameを取得します。
-    virtual boost::optional<std::string> Name() = 0;
+    virtual std::optional<std::string> Name() = 0;
     /// @brief RoomのTypeを取得します。
     virtual RoomType Type() = 0;
     /// @brief Metadataを取得します。
-    virtual boost::optional<std::string> Metadata() = 0;
+    virtual std::optional<std::string> Metadata() = 0;
     /// @brief Stateを取得します。
     virtual core::interface::ChannelState State() = 0;
     /// @brief Roomインスタンスに紐づくPublicationの一覧を取得します。
-    virtual std::vector<std::unique_ptr<RoomPublication>> Publications() = 0;
+    virtual std::vector<std::shared_ptr<RoomPublication>> Publications() = 0;
     /// @brief Roomインスタンスに紐づくSubscriptionの一覧を取得します。
-    virtual std::vector<std::unique_ptr<RoomSubscription>> Subscriptions() = 0;
+    virtual std::vector<std::shared_ptr<RoomSubscription>> Subscriptions() = 0;
     /// @brief Roomインスタンスに紐づくRoomMemberの一覧を取得します。
-    virtual std::vector<std::unique_ptr<RoomMember>> Members() = 0;
+    virtual std::vector<std::shared_ptr<RoomMember>> Members() = 0;
 
     /// @brief イベントを購読します。
     virtual void AddEventListener(EventListener* listener) = 0;

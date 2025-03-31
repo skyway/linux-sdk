@@ -18,18 +18,19 @@ class RoomDomainFactory : public interface::RoomDomainFactory {
 public:
     void SetWeakRoom(std::weak_ptr<interface::Room> room) override;
 
-    std::unique_ptr<interface::RoomMember> CreateRoomMember(core::interface::Member* core) override;
+    std::shared_ptr<interface::RoomMember> CreateRoomMember(
+        std::shared_ptr<core::interface::Member> core) override;
 
-    std::unique_ptr<interface::LocalRoomMember> CreateLocalRoomMember(
-        core::interface::LocalPerson* person) override;
-    std::unique_ptr<interface::RemoteRoomMember> CreateRemoteRoomMember(
-        plugin::remote_person::RemotePerson* person) override;
+    std::shared_ptr<interface::LocalRoomMember> CreateLocalRoomMember(
+        std::shared_ptr<core::interface::LocalPerson> person) override;
+    std::shared_ptr<interface::RemoteRoomMember> CreateRemoteRoomMember(
+        std::shared_ptr<plugin::remote_person::RemotePerson> person) override;
 
-    std::unique_ptr<interface::RoomPublication> CreateRoomPublication(
-        core::interface::Publication* core) override;
+    std::shared_ptr<interface::RoomPublication> CreateRoomPublication(
+        std::shared_ptr<core::interface::Publication> core) override;
 
-    std::unique_ptr<interface::RoomSubscription> CreateRoomSubscription(
-        core::interface::Subscription* core) override;
+    std::shared_ptr<interface::RoomSubscription> CreateRoomSubscription(
+        std::shared_ptr<core::interface::Subscription> core) override;
 
 private:
     std::weak_ptr<interface::Room> room_;

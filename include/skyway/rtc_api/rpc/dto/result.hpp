@@ -9,7 +9,8 @@
 #ifndef SKYWAY_RTC_API_RPC_DTO_RESULT_HPP_
 #define SKYWAY_RTC_API_RPC_DTO_RESULT_HPP_
 
-#include <boost/optional.hpp>
+#include <optional>
+
 #include <json.hpp>
 
 #include "skyway/model/domain.hpp"
@@ -49,7 +50,7 @@ struct UpdateChannelMetadataResult {
 
 struct JoinChannelResult {
     std::string member_id;
-    boost::optional<std::string> member_name;
+    std::optional<std::string> member_name;
     uint64_t version;
 };
 
@@ -103,14 +104,6 @@ struct UnsubscribeStreamResult {
     uint64_t version;
 };
 
-struct EnableSubscriptionResult {
-    uint64_t version;
-};
-
-struct DisableSubscriptionResult {
-    uint64_t version;
-};
-
 struct SubscribeChannelEventsResult {};
 
 struct ListChannelEventResult {};
@@ -136,8 +129,6 @@ void from_json(const nlohmann::json& j, SubscribeStreamResult& result);
 void from_json(const nlohmann::json& j, UnsubscribeStreamResult& result);
 void from_json(const nlohmann::json& j, SubscribeChannelEventsResult& result);
 void from_json(const nlohmann::json& j, ListChannelEventResult& result);
-void from_json(const nlohmann::json& j, EnableSubscriptionResult& result);
-void from_json(const nlohmann::json& j, DisableSubscriptionResult& result);
 
 }  // namespace dto
 }  // namespace rpc

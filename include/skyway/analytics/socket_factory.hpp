@@ -22,10 +22,10 @@ class SocketFactory {
 public:
     static std::unique_ptr<interface::Socket> Create(
         const std::string& channel_id,
-        const boost::optional<std::string>& channel_name,
+        const std::optional<std::string>& channel_name,
         const std::string& member_id,
-        const boost::optional<std::string>& member_name,
-        const token::interface::AuthTokenManager* auth,
+        const std::optional<std::string>& member_name,
+        const std::weak_ptr<token::interface::AuthTokenManager> auth,
         const std::shared_ptr<network::interface::WebSocketClient>& ws,
         const platform::interface::PlatformInfoDelegator* platform_info,
         const interface::AnalyticsClient::Options& options);

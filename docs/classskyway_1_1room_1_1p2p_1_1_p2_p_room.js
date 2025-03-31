@@ -1,9 +1,10 @@
 var classskyway_1_1room_1_1p2p_1_1_p2_p_room =
 [
-    [ "Create", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a0069d1ed483afbc0478cdd125a74ad4f", null ],
-    [ "Create", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#af3c7caa7e0133aea9f0bff1ed20be981", null ],
-    [ "Find", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a9ac1af35d25890f4320ee0aee9e1c09d", null ],
-    [ "FindOrCreate", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#af7007aad6d81eb372dc7b010531ede04", null ],
-    [ "Join", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#ad87c4988ad6c48f9a722ad74a3471039", null ],
+    [ "P2PRoom", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a47d6e21fa3dc27e4857f0c3ce91f446d", null ],
+    [ "Create", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a0458e1a3e58164e6c7f410af660dcbda", null ],
+    [ "Create", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a1e80cc6bfdb60420608705180046ca56", null ],
+    [ "Find", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#afd5414173af0e879d5dc6981c4699bbc", null ],
+    [ "FindOrCreate", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#ae054094b936848d43023c07ed42e9270", null ],
+    [ "Join", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a8982282e5e665c5daf51c054648c868b", null ],
     [ "Type", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#ac6aa0e7add93749343cc7d97df602fa5", null ]
 ];

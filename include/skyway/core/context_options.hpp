@@ -9,14 +9,12 @@
 #ifndef SKYWAY_CORE_CONTEXT_OPTIONS_HPP_
 #define SKYWAY_CORE_CONTEXT_OPTIONS_HPP_
 
-#include <boost/optional.hpp>
+#include <api/peer_connection_interface.h>
 
 #include "skyway/token/interface/auth_token_manager.hpp"
 
 namespace skyway {
 namespace core {
-
-using AuthTokenManagerInterface = token::interface::AuthTokenManager;
 
 enum class TurnPolicy {
     kEnable,
@@ -28,36 +26,37 @@ enum class TurnPolicy {
 struct ContextOptions {
     /// @brief RTCAPIサーバーへの接続に関する設定
     struct RtcApi {
-        boost::optional<std::string> domain;
-        boost::optional<bool> secure;
+        std::optional<std::string> domain;
+        std::optional<bool> secure;
     };
     /// @brief ICEサーバーへの接続に関する設定
     struct IceParams {
-        boost::optional<std::string> domain;
-        boost::optional<int> version;
-        boost::optional<bool> secure;
+        std::optional<std::string> domain;
+        std::optional<int> version;
+        std::optional<bool> secure;
+        webrtc::PeerConnectionInterface::IceServers custom_ice_servers;
     };
     /// @brief Signalingサーバーへの接続に関する設定
     struct Signaling {
-        boost::optional<std::string> domain;
-        boost::optional<bool> secure;
+        std::optional<std::string> domain;
+        std::optional<bool> secure;
     };
 
     /// @brief Analyticsサーバーへの接続に関する設定
     struct Analytics {
-        boost::optional<std::string> domain;
-        boost::optional<bool> secure;
+        std::optional<std::string> domain;
+        std::optional<bool> secure;
     };
     /// @brief RTCサーバーへの接続に関する設定
     struct RtcConfig {
-        boost::optional<int> timeout;
+        std::optional<int> timeout;
         /// @brief TURN接続に関するポリシーを選択します。
-        boost::optional<TurnPolicy> policy;
+        std::optional<TurnPolicy> policy;
     };
     /// @brief トークンに関する設定
     struct Token {
-        boost::optional<int> remind_time_sec;
-        AuthTokenManagerInterface::Listener* listener = nullptr;
+        std::optional<int> remind_time_sec;
+        token::interface::AuthTokenManager::Listener* listener = nullptr;
     };
     RtcApi rtc_api;
     IceParams ice_params;

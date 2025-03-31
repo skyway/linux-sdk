@@ -11,7 +11,6 @@
 
 #include <api/peer_connection_interface.h>
 
-#include <boost/optional.hpp>
 #include <string>
 
 namespace skyway {
@@ -19,10 +18,10 @@ namespace core {
 
 enum class ConnectionState { kNew, kConnecting, kConnected, kReconnecting, kDisconnected };
 
-boost::optional<ConnectionState> ConnectionStateFromPeerConnectionState(
+std::optional<ConnectionState> ConnectionStateFromPeerConnectionState(
     webrtc::PeerConnectionInterface::PeerConnectionState state);
 
-boost::optional<std::string> StringFromConnectionState(ConnectionState state);
+std::optional<std::string> StringFromConnectionState(ConnectionState state);
 
 class ConnectionStateChangeNotifiable {
 public:

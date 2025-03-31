@@ -1,0 +1,5 @@
+var structboost_1_1asio_1_1associated__executor_3_01detail_1_1write__op_3_01_async_write_stream_00_073ef3f3da8ada43a960473679766a74a =
+[
+    [ "type", "structboost_1_1asio_1_1associated__executor_3_01detail_1_1write__op_3_01_async_write_stream_00_073ef3f3da8ada43a960473679766a74a.html#a3d0634b33b5e51afe20bca3e09b7ebe3", null ],
+    [ "get", "structboost_1_1asio_1_1associated__executor_3_01detail_1_1write__op_3_01_async_write_stream_00_073ef3f3da8ada43a960473679766a74a.html#abf135617acbb78591e70a0d5e5f925d7", null ]
+];

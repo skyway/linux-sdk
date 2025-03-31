@@ -20,7 +20,7 @@ class RemoteRoomMember : public virtual RoomMember {
 public:
     virtual ~RemoteRoomMember() = default;
     /// @brief 公開されているPublicationを購読します。
-    virtual std::unique_ptr<RoomSubscription> Subscribe(const std::string& publication_id) = 0;
+    virtual std::shared_ptr<RoomSubscription> Subscribe(const std::string& publication_id) = 0;
     /// @brief 購読しているSubscriptionの購読を解除します。
     virtual bool Unsubscribe(const std::string& subscription_id) = 0;
 };

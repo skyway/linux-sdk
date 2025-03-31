@@ -1,0 +1,5 @@
+var structdetail_1_1is__constructible__array__type__impl_3_01_basic_json_type_00_01_constructible_ar54e545c8083fe861c90a40ff938a22b7 =
+[
+    [ "value_type", "structdetail_1_1is__constructible__array__type__impl_3_01_basic_json_type_00_01_constructible_ar54e545c8083fe861c90a40ff938a22b7.html#a27b3a7d1007755a51043ffbc3381afd0", null ],
+    [ "value", "structdetail_1_1is__constructible__array__type__impl_3_01_basic_json_type_00_01_constructible_ar54e545c8083fe861c90a40ff938a22b7.html#af9e0932ee1c0d23d339ebe1e489d0afd", null ]
+];

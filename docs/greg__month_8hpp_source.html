@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('greg__month_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">greg_month.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GREG_MONTH_HPP___</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GREG_MONTH_HPP___</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/* Copyright (c) 2002,2003, 2020 CrystalClear Software, Inc.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Use, modification and distribution is subject to the </span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * file LICENSE_1_0.txt or http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * Author: Jeff Garland, Bart Garst</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * $Date$</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;boost/date_time/constrained_value.hpp&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;boost/date_time/date_defs.hpp&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;boost/date_time/compiler_config.hpp&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceboost.html">boost</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>gregorian {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">typedef</span> date_time::months_of_year months_of_year;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="comment">//bring enum values into the namespace</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">using</span> date_time::Jan;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">using</span> date_time::Feb;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">using</span> date_time::Mar;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">using</span> date_time::Apr;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">using</span> date_time::May;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">using</span> date_time::Jun;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">using</span> date_time::Jul;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">using</span> date_time::Aug;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">using</span> date_time::Sep;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">using</span> date_time::Oct;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">using</span> date_time::Nov;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">using</span> date_time::Dec;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">using</span> date_time::NotAMonth;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">using</span> date_time::NumMonths;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structboost_1_1gregorian_1_1bad__month.html">   40</a></span>&#160;  <span class="keyword">struct </span>BOOST_SYMBOL_VISIBLE <a class="code" href="structboost_1_1gregorian_1_1bad__month.html">bad_month</a> : <span class="keyword">public</span> std::out_of_range</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="structboost_1_1gregorian_1_1bad__month.html">bad_month</a>() : std::out_of_range(std::string(<span class="stringliteral">&quot;Month number is out of range 1..12&quot;</span>)) {}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  };</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespaceboost_1_1gregorian.html#a179f4a28ace18a732ba8914b326bc8d1">   45</a></span>&#160;  <span class="keyword">typedef</span> <a class="code" href="classboost_1_1_c_v_1_1simple__exception__policy.html">CV::simple_exception_policy&lt;unsigned short, 1, 12, bad_month&gt;</a> <a class="code" href="namespaceboost_1_1gregorian.html#a179f4a28ace18a732ba8914b326bc8d1">greg_month_policies</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="namespaceboost_1_1gregorian.html#a87b065fe3dfa8ec8432a432be7aa6c6b">   47</a></span>&#160;  <span class="keyword">typedef</span> <a class="code" href="classboost_1_1_c_v_1_1constrained__value.html">CV::constrained_value&lt;greg_month_policies&gt;</a> <a class="code" href="namespaceboost_1_1gregorian.html#a87b065fe3dfa8ec8432a432be7aa6c6b">greg_month_rep</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classboost_1_1gregorian_1_1greg__month.html">   51</a></span>&#160;  <span class="keyword">class </span>BOOST_SYMBOL_VISIBLE <a class="code" href="classboost_1_1gregorian_1_1greg__month.html">greg_month</a> : <span class="keyword">public</span> <a class="code" href="classboost_1_1_c_v_1_1constrained__value.html">greg_month_rep</a> {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">typedef</span> date_time::months_of_year month_enum;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classboost_1_1gregorian_1_1greg__month.html#a52b873098e83de21ae61d4ccf62df5ec">   56</a></span>&#160;    BOOST_CXX14_CONSTEXPR <a class="code" href="classboost_1_1gregorian_1_1greg__month.html#a52b873098e83de21ae61d4ccf62df5ec">greg_month</a>(month_enum theMonth) :</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <a class="code" href="classboost_1_1_c_v_1_1constrained__value.html">greg_month_rep</a>(static_cast&lt;<a class="code" href="classboost_1_1_c_v_1_1constrained__value.html">greg_month_rep</a>::value_type&gt;(theMonth)) {}</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classboost_1_1gregorian_1_1greg__month.html#a2b39b80647cb03fe2b3601f8538c544f">   59</a></span>&#160;    BOOST_CXX14_CONSTEXPR <a class="code" href="classboost_1_1gregorian_1_1greg__month.html#a2b39b80647cb03fe2b3601f8538c544f">greg_month</a>(value_type theMonth) : <a class="code" href="classboost_1_1_c_v_1_1constrained__value.html">greg_month_rep</a>(theMonth) {}</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classboost_1_1gregorian_1_1greg__month.html#ad1e06a5f7d5636704621e0c4f6d416d1">   61</a></span>&#160;    BOOST_CXX14_CONSTEXPR <span class="keyword">operator</span> value_type()<span class="keyword">  const </span>{<span class="keywordflow">return</span> value_;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classboost_1_1gregorian_1_1greg__month.html#a4eb04e4553202c5cbb7ddf8dcbb7f644">   63</a></span>&#160;    BOOST_CXX14_CONSTEXPR value_type <a class="code" href="classboost_1_1gregorian_1_1greg__month.html#a4eb04e4553202c5cbb7ddf8dcbb7f644">as_number</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> value_;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    BOOST_CXX14_CONSTEXPR month_enum as_enum()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>month_enum<span class="keyword">&gt;</span>(value_);}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>*</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classboost_1_1gregorian_1_1greg__month.html#a7135e9880eadc51e84d1b71ab186dcb6">   68</a></span>&#160;    <a class="code" href="classboost_1_1gregorian_1_1greg__month.html#a7135e9880eadc51e84d1b71ab186dcb6">as_short_string</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">const</span> short_month_names[NumMonths]</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        = {<span class="stringliteral">&quot;Jan&quot;</span>,<span class="stringliteral">&quot;Feb&quot;</span>,<span class="stringliteral">&quot;Mar&quot;</span>,<span class="stringliteral">&quot;Apr&quot;</span>,<span class="stringliteral">&quot;May&quot;</span>,<span class="stringliteral">&quot;Jun&quot;</span>,<span class="stringliteral">&quot;Jul&quot;</span>,<span class="stringliteral">&quot;Aug&quot;</span>,<span class="stringliteral">&quot;Sep&quot;</span>,<span class="stringliteral">&quot;Oct&quot;</span>,<span class="stringliteral">&quot;Nov&quot;</span>,<span class="stringliteral">&quot;Dec&quot;</span>, <span class="stringliteral">&quot;NAM&quot;</span>};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordflow">return</span> short_month_names[value_-1];</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>*</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classboost_1_1gregorian_1_1greg__month.html#a839422459416173a99d46f6b49971128">   77</a></span>&#160;    <a class="code" href="classboost_1_1gregorian_1_1greg__month.html#a839422459416173a99d46f6b49971128">as_long_string</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">const</span> long_month_names[NumMonths]</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        = {<span class="stringliteral">&quot;January&quot;</span>,<span class="stringliteral">&quot;February&quot;</span>,<span class="stringliteral">&quot;March&quot;</span>,<span class="stringliteral">&quot;April&quot;</span>,<span class="stringliteral">&quot;May&quot;</span>,<span class="stringliteral">&quot;June&quot;</span>,<span class="stringliteral">&quot;July&quot;</span>,<span class="stringliteral">&quot;August&quot;</span>,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;           <span class="stringliteral">&quot;September&quot;</span>,<span class="stringliteral">&quot;October&quot;</span>,<span class="stringliteral">&quot;November&quot;</span>,<span class="stringliteral">&quot;December&quot;</span>,<span class="stringliteral">&quot;NotAMonth&quot;</span>};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keywordflow">return</span> long_month_names[value_-1];</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#ifndef BOOST_NO_STD_WSTRING</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>*</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classboost_1_1gregorian_1_1greg__month.html#a2db6525f27c8c497378b8d0727cc99d1">   89</a></span>&#160;    <a class="code" href="classboost_1_1gregorian_1_1greg__month.html#a2db6525f27c8c497378b8d0727cc99d1">as_short_wstring</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* <span class="keyword">const</span> w_short_month_names[NumMonths]</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        = {L<span class="stringliteral">&quot;Jan&quot;</span>,L<span class="stringliteral">&quot;Feb&quot;</span>,L<span class="stringliteral">&quot;Mar&quot;</span>,L<span class="stringliteral">&quot;Apr&quot;</span>,L<span class="stringliteral">&quot;May&quot;</span>,L<span class="stringliteral">&quot;Jun&quot;</span>,L<span class="stringliteral">&quot;Jul&quot;</span>,L<span class="stringliteral">&quot;Aug&quot;</span>,L<span class="stringliteral">&quot;Sep&quot;</span>,L<span class="stringliteral">&quot;Oct&quot;</span>,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;           L<span class="stringliteral">&quot;Nov&quot;</span>,L<span class="stringliteral">&quot;Dec&quot;</span>,L<span class="stringliteral">&quot;NAM&quot;</span>};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keywordflow">return</span> w_short_month_names[value_-1];</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>*</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classboost_1_1gregorian_1_1greg__month.html#a1fe98f38d0d51d45d94399d16b02b83a">   99</a></span>&#160;    <a class="code" href="classboost_1_1gregorian_1_1greg__month.html#a1fe98f38d0d51d45d94399d16b02b83a">as_long_wstring</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* <span class="keyword">const</span> w_long_month_names[NumMonths]</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        = {L<span class="stringliteral">&quot;January&quot;</span>,L<span class="stringliteral">&quot;February&quot;</span>,L<span class="stringliteral">&quot;March&quot;</span>,L<span class="stringliteral">&quot;April&quot;</span>,L<span class="stringliteral">&quot;May&quot;</span>,L<span class="stringliteral">&quot;June&quot;</span>,L<span class="stringliteral">&quot;July&quot;</span>,L<span class="stringliteral">&quot;August&quot;</span>,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;           L<span class="stringliteral">&quot;September&quot;</span>,L<span class="stringliteral">&quot;October&quot;</span>,L<span class="stringliteral">&quot;November&quot;</span>,L<span class="stringliteral">&quot;December&quot;</span>,L<span class="stringliteral">&quot;NotAMonth&quot;</span>};</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="keywordflow">return</span> w_long_month_names[value_-1];</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif // BOOST_NO_STD_WSTRING</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">/* parameterized as_*_string functions are intended to be called</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">     * from a template function: &quot;... as_short_string(charT c=&#39;\0&#39;);&quot; */</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* as_short_string(<span class="keywordtype">char</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="keywordflow">return</span> as_short_string();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* as_long_string(<span class="keywordtype">char</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="keywordflow">return</span> as_long_string();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#ifndef BOOST_NO_STD_WSTRING</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* as_short_string(<span class="keywordtype">wchar_t</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keywordflow">return</span> as_short_wstring();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* as_long_string(<span class="keywordtype">wchar_t</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      <span class="keywordflow">return</span> as_long_wstring();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#endif // BOOST_NO_STD_WSTRING</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  };</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;} } <span class="comment">//namespace gregorian</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassboost_1_1gregorian_1_1greg__month_html_a1fe98f38d0d51d45d94399d16b02b83a"><div class="ttname"><a href="classboost_1_1gregorian_1_1greg__month.html#a1fe98f38d0d51d45d94399d16b02b83a">boost::gregorian::greg_month::as_long_wstring</a></div><div class="ttdeci">const wchar_t * as_long_wstring() const</div><div class="ttdoc">Returns full name of month as wchar_t string in english ex: January, February</div><div class="ttdef"><b>Definition:</b> greg_month.hpp:99</div></div>
+<div class="ttc" id="aclassboost_1_1gregorian_1_1greg__month_html_a52b873098e83de21ae61d4ccf62df5ec"><div class="ttname"><a href="classboost_1_1gregorian_1_1greg__month.html#a52b873098e83de21ae61d4ccf62df5ec">boost::gregorian::greg_month::greg_month</a></div><div class="ttdeci">BOOST_CXX14_CONSTEXPR greg_month(month_enum theMonth)</div><div class="ttdoc">Construct a month from the months_of_year enumeration</div><div class="ttdef"><b>Definition:</b> greg_month.hpp:56</div></div>
+<div class="ttc" id="aclassboost_1_1_c_v_1_1constrained__value_html"><div class="ttname"><a href="classboost_1_1_c_v_1_1constrained__value.html">boost::CV::constrained_value</a></div><div class="ttdoc">A template to specify a constrained basic value type</div><div class="ttdef"><b>Definition:</b> constrained_value.hpp:42</div></div>
+<div class="ttc" id="anamespaceboost_html"><div class="ttname"><a href="namespaceboost.html">boost</a></div><div class="ttdoc">defined(BOOST_MOVE_DOXYGEN_INVOKED)</div><div class="ttdef"><b>Definition:</b> case_conv.hpp:32</div></div>
+<div class="ttc" id="anamespaceboost_1_1gregorian_html_a179f4a28ace18a732ba8914b326bc8d1"><div class="ttname"><a href="namespaceboost_1_1gregorian.html#a179f4a28ace18a732ba8914b326bc8d1">boost::gregorian::greg_month_policies</a></div><div class="ttdeci">CV::simple_exception_policy&lt; unsigned short, 1, 12, bad_month &gt; greg_month_policies</div><div class="ttdoc">Build a policy class for the greg_month_rep</div><div class="ttdef"><b>Definition:</b> greg_month.hpp:45</div></div>
+<div class="ttc" id="aclassboost_1_1gregorian_1_1greg__month_html"><div class="ttname"><a href="classboost_1_1gregorian_1_1greg__month.html">boost::gregorian::greg_month</a></div><div class="ttdoc">Wrapper class to represent months in gregorian based calendar</div><div class="ttdef"><b>Definition:</b> greg_month.hpp:51</div></div>
+<div class="ttc" id="aclassboost_1_1gregorian_1_1greg__month_html_a2db6525f27c8c497378b8d0727cc99d1"><div class="ttname"><a href="classboost_1_1gregorian_1_1greg__month.html#a2db6525f27c8c497378b8d0727cc99d1">boost::gregorian::greg_month::as_short_wstring</a></div><div class="ttdeci">const wchar_t * as_short_wstring() const</div><div class="ttdoc">Returns 3 wchar_t english string for the month ex: Jan, Feb, Mar, Apr</div><div class="ttdef"><b>Definition:</b> greg_month.hpp:89</div></div>
+<div class="ttc" id="aclassboost_1_1gregorian_1_1greg__month_html_a7135e9880eadc51e84d1b71ab186dcb6"><div class="ttname"><a href="classboost_1_1gregorian_1_1greg__month.html#a7135e9880eadc51e84d1b71ab186dcb6">boost::gregorian::greg_month::as_short_string</a></div><div class="ttdeci">const char * as_short_string() const</div><div class="ttdoc">Returns 3 char english string for the month ex: Jan, Feb, Mar, Apr</div><div class="ttdef"><b>Definition:</b> greg_month.hpp:68</div></div>
+<div class="ttc" id="aclassboost_1_1gregorian_1_1greg__month_html_a4eb04e4553202c5cbb7ddf8dcbb7f644"><div class="ttname"><a href="classboost_1_1gregorian_1_1greg__month.html#a4eb04e4553202c5cbb7ddf8dcbb7f644">boost::gregorian::greg_month::as_number</a></div><div class="ttdeci">BOOST_CXX14_CONSTEXPR value_type as_number() const</div><div class="ttdoc">Returns month as number from 1 to 12</div><div class="ttdef"><b>Definition:</b> greg_month.hpp:63</div></div>
+<div class="ttc" id="aclassboost_1_1gregorian_1_1greg__month_html_a2b39b80647cb03fe2b3601f8538c544f"><div class="ttname"><a href="classboost_1_1gregorian_1_1greg__month.html#a2b39b80647cb03fe2b3601f8538c544f">boost::gregorian::greg_month::greg_month</a></div><div class="ttdeci">BOOST_CXX14_CONSTEXPR greg_month(value_type theMonth)</div><div class="ttdoc">Construct from a short value</div><div class="ttdef"><b>Definition:</b> greg_month.hpp:59</div></div>
+<div class="ttc" id="anamespaceboost_1_1gregorian_html_a87b065fe3dfa8ec8432a432be7aa6c6b"><div class="ttname"><a href="namespaceboost_1_1gregorian.html#a87b065fe3dfa8ec8432a432be7aa6c6b">boost::gregorian::greg_month_rep</a></div><div class="ttdeci">CV::constrained_value&lt; greg_month_policies &gt; greg_month_rep</div><div class="ttdoc">A constrained range that implements the gregorian_month rules</div><div class="ttdef"><b>Definition:</b> greg_month.hpp:47</div></div>
+<div class="ttc" id="astructboost_1_1gregorian_1_1bad__month_html"><div class="ttname"><a href="structboost_1_1gregorian_1_1bad__month.html">boost::gregorian::bad_month</a></div><div class="ttdoc">Exception thrown if a greg_month is constructed with a value out of range</div><div class="ttdef"><b>Definition:</b> greg_month.hpp:40</div></div>
+<div class="ttc" id="aclassboost_1_1_c_v_1_1simple__exception__policy_html"><div class="ttname"><a href="classboost_1_1_c_v_1_1simple__exception__policy.html">boost::CV::simple_exception_policy</a></div><div class="ttdoc">Template to shortcut the constrained_value policy creation process</div><div class="ttdef"><b>Definition:</b> constrained_value.hpp:87</div></div>
+<div class="ttc" id="aclassboost_1_1gregorian_1_1greg__month_html_a839422459416173a99d46f6b49971128"><div class="ttname"><a href="classboost_1_1gregorian_1_1greg__month.html#a839422459416173a99d46f6b49971128">boost::gregorian::greg_month::as_long_string</a></div><div class="ttdeci">const char * as_long_string() const</div><div class="ttdoc">Returns full name of month as string in english ex: January, February</div><div class="ttdef"><b>Definition:</b> greg_month.hpp:77</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1794b65aa62003e11b03e0565def47fa.html">external</a></li><li class="navelem"><a class="el" href="dir_c08529bcc08f755a4d16428f71043471.html">boost</a></li><li class="navelem"><a class="el" href="dir_08e916b1ba9423845cffef83795e9545.html">boost</a></li><li class="navelem"><a class="el" href="dir_f067cf1a5df1416201cd70b21b75b7e9.html">date_time</a></li><li class="navelem"><a class="el" href="dir_d435339b415ee045ce169ebaa1c5d522.html">gregorian</a></li><li class="navelem"><b>greg_month.hpp</b></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

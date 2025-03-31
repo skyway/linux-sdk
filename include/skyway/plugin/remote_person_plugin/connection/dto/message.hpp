@@ -9,9 +9,10 @@
 #ifndef SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_CONNECTION_DTO_MESSAGE_HPP_
 #define SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_CONNECTION_DTO_MESSAGE_HPP_
 
-#include <boost/optional.hpp>
-#include <json.hpp>
 #include <string>
+#include <optional>
+
+#include <json.hpp>
 
 namespace skyway {
 namespace plugin {
@@ -33,7 +34,7 @@ struct IceCandidate {
 struct ProducePayloadPayloadInfo {
     std::string publication_id;
     std::string stream_id;
-    boost::optional<std::string> mid;
+    std::optional<std::string> mid;
 };
 
 struct ProducePayloadPayload {
@@ -107,7 +108,7 @@ struct IceCandidateMessage {
 
 struct SendResult {
     bool is_success;
-    boost::optional<std::string> error_reason;
+    std::optional<std::string> error_reason;
     bool IsTargetNotFound();
 };
 

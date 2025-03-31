@@ -25,11 +25,12 @@ struct StartForwardingResult {
 class SfuConnection {
 public:
     virtual ~SfuConnection() = default;
-    virtual boost::optional<StartForwardingResult> StartForwarding(
-        core::interface::Publication* publication, ForwardingConfigure configure) = 0;
-    virtual bool StopForwarding(Forwarding* forwarding, bool with_api_request)    = 0;
-    virtual void StartReceiving(core::interface::Subscription* subscription)      = 0;
-    virtual bool StopReceiving(const std::string& subscription_id)                = 0;
+    virtual std::optional<StartForwardingResult> StartForwarding(
+        std::shared_ptr<core::interface::Publication> publication,
+        ForwardingConfigure configure)                                                       = 0;
+    virtual bool StopForwarding(Forwarding* forwarding, bool with_api_request)               = 0;
+    virtual void StartReceiving(std::shared_ptr<core::interface::Subscription> subscription) = 0;
+    virtual bool StopReceiving(const std::string& subscription_id)                           = 0;
 };
 
 }  // namespace interface

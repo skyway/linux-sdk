@@ -49,7 +49,7 @@ public:
 
     /// @brief ネゴシエーションを開始してStreamを受信します。
     /// @param subscription Subscription
-    bool Subscribe(core::interface::Subscription* subscription);
+    bool Subscribe(std::shared_ptr<core::interface::Subscription> subscription);
 
     bool Unsubscribe(const std::string& subscription_id);
 
@@ -69,8 +69,8 @@ public:
     void OnMessage(const webrtc::DataBuffer& buffer, const DataChannelLabel& label) override;
 
     // Impl core::interface::Subscription::Callback
-    const boost::optional<nlohmann::json> GetStatsReport(
-        core::interface::Subscription* subscription) override;
+    const std::optional<nlohmann::json> GetStatsReport(
+        std::shared_ptr<core::interface::Subscription> subscription) override;
 
 protected:
     // Impl `webrtc::PeerConnectionObserver`
@@ -87,10 +87,9 @@ private:
     bool IsInvalidSignalingState();
     void NotifyConnectionStateChanged(const core::ConnectionState new_state);
 
-    std::mutex target_subscription_mutex_;
-    core::interface::Subscription* target_subscription_ = nullptr;
+    std::weak_ptr<core::interface::Subscription> target_subscription_;
     std::mutex subscriptions_mutex_;
-    std::unordered_set<core::interface::Subscription*> subscriptions_;
+    std::vector<std::weak_ptr<core::interface::Subscription>> subscriptions_;
     std::mutex publication_info_mutex_;
     std::vector<dto::ProducePayloadPayloadInfo> publication_info_;
     std::atomic<core::ConnectionState> connection_state_;

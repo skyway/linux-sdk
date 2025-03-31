@@ -1,0 +1,4 @@
+var structboost_1_1asio_1_1detail_1_1associated__executor__forwarding__base_3_01_t_00_01_e_00_01type12b2a60152433a3809d550158a732082 =
+[
+    [ "asio_associated_executor_is_unspecialised", "structboost_1_1asio_1_1detail_1_1associated__executor__forwarding__base_3_01_t_00_01_e_00_01type12b2a60152433a3809d550158a732082.html#aad50dd7b51e5dda32a33daaecb00be3c", null ]
+];

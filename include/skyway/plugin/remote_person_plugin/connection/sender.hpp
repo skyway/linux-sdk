@@ -56,9 +56,11 @@ public:
     /// @brief ネゴシエーションを開始してStreamを送信します。
     /// @param publication Publication
     /// @param subscription_id SubscriptionのID
-    bool Publish(core::interface::Publication* publication, const SubscriptionId& subscription_id);
+    bool Publish(std::shared_ptr<core::interface::Publication> publication,
+                 const SubscriptionId& subscription_id);
 
-    bool Unpublish(core::interface::Publication* publication);
+    bool Unpublish(std::shared_ptr<core::interface::Publication> publication,
+                   const bool skip_response_wait = false);
 
     /// アンサーペイロードを処理します。
     /// @param payload アンサーペイロード
@@ -67,18 +69,18 @@ public:
     bool ShouldClose();
 
     // core::stream::local::LocalDataStream::InternalListener
-    void OnWriteData(const core::stream::local::LocalDataStream::SendingData& buffer,
+    bool OnWriteData(const core::stream::local::LocalDataStream::SendingData& buffer,
                      const std::string& publication_id) override;
 
     // core::interface::Publication::Listener
-    void OnEncodingsUpdated(core::interface::Publication* publication,
+    void OnEncodingsUpdated(std::shared_ptr<core::interface::Publication> publication,
                             std::vector<model::Encoding> encodings) override;
-    void OnStreamReplaced(core::interface::Publication* publication,
+    void OnStreamReplaced(std::shared_ptr<core::interface::Publication>,
                           std::shared_ptr<core::interface::LocalMediaStream> stream) override;
 
     // core::interface::Publication::Callback
-    const boost::optional<nlohmann::json> GetStatsReport(
-        core::interface::Publication* publication) override;
+    const std::optional<nlohmann::json> GetStatsReport(
+        std::shared_ptr<core::interface::Publication> publication) override;
 
 protected:
     void OnConnectionChange(
@@ -96,7 +98,7 @@ private:
         const std::string& publication_id,
         std::shared_ptr<core::interface::LocalStream> stream,
         const std::string& sdp,
-        boost::optional<std::string> mid);
+        std::optional<std::string> mid);
 
     rtc::scoped_refptr<webrtc::RtpTransceiverInterface> GetTransceiver(
         const std::string& publication_id);
@@ -106,9 +108,9 @@ private:
 
     void NotifyConnectionStateChanged(const core::ConnectionState new_state);
     void UpdateIceServers();
-    void AddPublication(core::interface::Publication* publication);
-    void RemovePublication(core::interface::Publication* publication);
-    void RemoveFromPublication(core::interface::Publication* publication);
+    void AddPublication(std::shared_ptr<core::interface::Publication> publication);
+    void RemovePublication(std::shared_ptr<core::interface::Publication> publication);
+    void RemoveFromPublication(std::shared_ptr<core::interface::Publication> publication);
     void Reconnect(int max_ice_restart_count);
 
     using PublicationId = std::string;
@@ -116,7 +118,7 @@ private:
     std::unordered_map<PublicationId, rtc::scoped_refptr<webrtc::RtpTransceiverInterface>>
         transceivers_;
     std::mutex publications_mutex_;
-    std::unordered_set<core::interface::Publication*> publications_;
+    std::vector<std::weak_ptr<core::interface::Publication>> publications_;
     std::mutex restart_ice_threads_mtx;
     std::vector<std::unique_ptr<std::thread>> restart_ice_threads_;
 

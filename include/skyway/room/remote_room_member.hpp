@@ -20,15 +20,15 @@ namespace room {
 /// @brief RemoteRoomMemberの操作を行うクラス
 class RemoteRoomMember : public abstract::RoomMember, public interface::RemoteRoomMember {
 public:
-    RemoteRoomMember(plugin::remote_person::RemotePerson* person,
+    RemoteRoomMember(std::shared_ptr<plugin::remote_person::RemotePerson> person,
                      std::shared_ptr<interface::Room> room,
                      interface::RoomDomainFactory* factory);
-    std::unique_ptr<interface::RoomSubscription> Subscribe(
+    std::shared_ptr<interface::RoomSubscription> Subscribe(
         const std::string& publication_id) override;
     bool Unsubscribe(const std::string& subscription_id) override;
 
 private:
-    plugin::remote_person::RemotePerson* RemotePerson();
+    std::shared_ptr<plugin::remote_person::RemotePerson> RemotePerson();
 };
 
 }  // namespace room

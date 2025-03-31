@@ -1,0 +1,4 @@
+var structboost_1_1asio_1_1execution_1_1detail_1_1outstanding__work__t_1_1convertible__from__outstanding__work__t =
+[
+    [ "convertible_from_outstanding_work_t", "structboost_1_1asio_1_1execution_1_1detail_1_1outstanding__work__t_1_1convertible__from__outstanding__work__t.html#a09e00dc5af4250e82b6ad1bf71d72e46", null ]
+];

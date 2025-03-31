@@ -13,6 +13,7 @@
 #include <json.hpp>
 #include <string>
 #include <unordered_map>
+#include <optional>
 
 #include "skyway/signaling/dto/response.hpp"
 #include "skyway/signaling/interface/member.hpp"
@@ -53,9 +54,9 @@ public:
         };
     };
     struct Options {
-        boost::optional<int> connectivity_check_interval_sec;
-        boost::optional<std::string> signaling_domain;
-        boost::optional<bool> use_secure_protocol;
+        std::optional<int> connectivity_check_interval_sec;
+        std::optional<std::string> signaling_domain;
+        std::optional<bool> use_secure_protocol;
         bool operator==(const Options& rhs) const {
             if (connectivity_check_interval_sec == rhs.connectivity_check_interval_sec &&
                 signaling_domain == rhs.signaling_domain &&
@@ -66,6 +67,10 @@ public:
         }
     };
     virtual ~SignalingClient() = default;
+
+    virtual void InterruptBlocking(const std::string& member_id) = 0;
+
+    virtual void ResetBlocking(const std::string& member_id) = 0;
 
     /// @brief イベントリスナを設定します。
     /// @param listener リスナクラスのポインタ
@@ -89,7 +94,8 @@ public:
     /// @return 正常処理完了の場合、受信したJSONを含む構造体
     virtual signaling::dto::RequestResult Request(const Member& target,
                                                   const nlohmann::json& data,
-                                                  const int timeout_sec) = 0;
+                                                  const int timeout_sec,
+                                                  const bool skip_response_wait = false) = 0;
 
     /// @brief 対象のクライアントに対し、応答を必要とするメッセージを送信します。
     /// @details この関数を呼ぶ前にConnect関数を呼んでいる必要があります。
@@ -97,7 +103,8 @@ public:
     /// @param data 送信するメッセージデータ
     /// @return 正常処理完了の場合、受信したJSONを含む構造体
     virtual signaling::dto::RequestResult Request(const Member& target,
-                                                  const nlohmann::json& data) = 0;
+                                                  const nlohmann::json& data,
+                                                  const bool skip_response_wait = false) = 0;
 };
 
 }  // namespace interface

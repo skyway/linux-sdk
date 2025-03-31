@@ -36,7 +36,7 @@ set( SKYWAY_LINUX_LIBS
 # List of includes
 set( SKYWAY_LINUX_INCLUDES 
         ${CMAKE_CURRENT_SOURCE_DIR}/../include/external/libmediasoupclient/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/../include/external/libmediasoupclient/deps/libsdptransform/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/../include/external/libsdptransform
         ${CMAKE_CURRENT_SOURCE_DIR}/../include/external/libwebrtc
         ${CMAKE_CURRENT_SOURCE_DIR}/../include/external/libskyway/include
         ${CMAKE_CURRENT_SOURCE_DIR}/../include/external/libwebrtc/third_party/abseil-cpp
@@ -45,3 +45,28 @@ set( SKYWAY_LINUX_INCLUDES
         ${CMAKE_CURRENT_SOURCE_DIR}/../include)
 
 add_subdirectory("quickstart")
+
+# Enable opencv examples
+if(ENABLE_OPENCV_EXAMPLE)
+        # Find package/library
+        find_package(OpenCV 4.6.0 REQUIRED)
+        find_library(AVUTIL_LIBRARY avutil)
+        find_library(SWSCALE_LIBRARY swscale)
+        # Add opencv definitions
+        set( SKYWAY_LINUX_DEFINITIONS
+                ${SKYWAY_LINUX_DEFINITIONS}
+                SKYWAY_ENABLE_OPENCV=1)
+        # Add opencv libs
+        set( SKYWAY_LINUX_LIBS
+                ${SKYWAY_LINUX_LIBS}
+                ${OpenCV_LIBRARIES}
+                ${AVUTIL_LIBRARY}
+                ${SWSCALE_LIBRARY})
+        # Add opencv includes
+        set( SKYWAY_LINUX_INCLUDES 
+                ${SKYWAY_LINUX_INCLUDES}
+                ${OpenCV_INCLUDE_DIRS}
+                ${AVUTIL_INCLUDE_DIR}
+                ${SWSCALE_INCLUDE_DIR})
+        add_subdirectory("opencv")
+endif()

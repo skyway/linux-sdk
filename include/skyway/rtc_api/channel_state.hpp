@@ -23,10 +23,11 @@ namespace rtc_api {
 class ChannelState : public interface::ChannelState, public EventObserver::Listener {
 public:
     ChannelState(const model::Channel& channel, const std::unique_ptr<EventObserver> observer);
+    ~ChannelState();
 
     std::string Id() override;
-    boost::optional<std::string> Name() override;
-    boost::optional<std::string> Metadata() override;
+    std::optional<std::string> Name() override;
+    std::optional<std::string> Metadata() override;
     std::vector<model::Member> Members() override;
     std::vector<model::Publication> Publications() override;
     std::vector<model::Subscription> Subscriptions() override;
@@ -58,8 +59,6 @@ private:
     void OnPublicationMetadataUpdated(const dto::PublicationMetadataUpdatedEventData& data);
     void OnPublicationSubscribed(const dto::StreamSubscribedEventData& data);
     void OnPublicationUnsubscribed(const dto::StreamUnsubscribedEventData& data);
-    void OnSubscriptionEnabled(const dto::SubscriptionEnabledEventData& data);
-    void OnSubscriptionDisabled(const dto::SubscriptionDisabledEventData& data);
 
 public:
     friend class RtcApiChannelStateTest;

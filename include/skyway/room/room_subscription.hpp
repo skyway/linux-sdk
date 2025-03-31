@@ -21,21 +21,22 @@ namespace room {
 class RoomSubscription : public interface::RoomSubscription,
                          public core::interface::Subscription::EventListener {
 public:
-    RoomSubscription(core::interface::Subscription* core, interface::RoomDomainFactory* factory);
+    RoomSubscription(std::shared_ptr<core::interface::Subscription> core,
+                     interface::RoomDomainFactory* factory);
     ~RoomSubscription();
     std::string Id() override;
     model::ContentType ContentType() override;
-    std::unique_ptr<interface::RoomPublication> Publication() override;
-    std::unique_ptr<interface::RoomMember> Subscriber() override;
+    std::shared_ptr<interface::RoomPublication> Publication() override;
+    std::shared_ptr<interface::RoomMember> Subscriber() override;
     core::interface::SubscriptionState State() override;
     std::shared_ptr<core::interface::RemoteStream> Stream() override;
-    boost::optional<std::string> PreferredEncodingId() override;
+    std::optional<std::string> PreferredEncodingId() override;
 
     void AddEventListener(interface::RoomSubscription::EventListener* listener) override;
     void RemoveEventListener(interface::RoomSubscription::EventListener* listener) override;
-    void ChangePreferredEncoding(const std::string& id) override;
+    bool ChangePreferredEncoding(const std::string& id) override;
     bool Cancel() override;
-    boost::optional<model::WebRTCStats> GetStats() override;
+    std::optional<model::WebRTCStats> GetStats() override;
 
 private:
     // core::interface::Subscription::EventListener
@@ -44,7 +45,7 @@ private:
     //    void OnDisabled() override;
     void OnConnectionStateChanged(const core::ConnectionState state) override;
 
-    core::interface::Subscription* core_;
+    std::shared_ptr<core::interface::Subscription> core_;
     interface::RoomDomainFactory* factory_;
     std::mutex listener_mtx_;
     interface::RoomSubscription::EventListener* listener_;

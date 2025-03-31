@@ -18,8 +18,6 @@
 #include <modules/video_capture/video_capture.h>
 #include <pc/local_audio_source.h>
 
-#include "skyway/media/capturer_video_source.hpp"
-
 namespace skyway {
 namespace media {
 
@@ -38,7 +36,6 @@ public:
         std::string unique_id;
         webrtc::VideoCaptureCapability capability;
     };
-    static rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> GetPeerConnectionFactory();
     /// @brief 利用する音声入力デバイスの一覧を取得します。
     static std::vector<AudioDevice> GetRecordDevices();
 
@@ -55,9 +52,10 @@ public:
     static bool SetPlayoutDevice(AudioDevice device);
 
     /// @cond INTERNAL_SECTION
+    static rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> GetPeerConnectionFactory();
     static rtc::scoped_refptr<webrtc::AudioTrackInterface> CreateAudioTrack();
     static rtc::scoped_refptr<webrtc::VideoTrackInterface> CreateVideoTrack(
-        rtc::scoped_refptr<CapturerVideoSource> capturer_ptr);
+        rtc::scoped_refptr<webrtc::VideoTrackSourceInterface> source);
     /// @endcond
 
 private:

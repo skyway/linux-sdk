@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('encoded__image_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">encoded_image.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *  Copyright (c) 2014 The WebRTC project authors. All Rights Reserved.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Use of this source code is governed by a BSD-style license</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  that can be found in the LICENSE file in the root of the source</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  tree. An additional intellectual property rights grant can be found</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  in the file PATENTS.  All contributing project authors may</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  be found in the AUTHORS file in the root of the source tree.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef API_VIDEO_ENCODED_IMAGE_H_</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define API_VIDEO_ENCODED_IMAGE_H_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;absl/types/optional.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;api/rtp_packet_infos.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;api/scoped_refptr.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;api/units/timestamp.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;api/video/color_space.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;api/video/video_codec_constants.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;api/video/video_content_type.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;api/video/video_frame_type.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;api/video/video_rotation.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;api/video/video_timing.h&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;rtc_base/checks.h&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;rtc_base/ref_count.h&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;rtc_base/system/rtc_export.h&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span>webrtc {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// Abstract interface for buffer storage. Intended to support buffers owned by</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// external encoders with special release requirements, e.g, java encoders with</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// releaseOutputBuffer.</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classwebrtc_1_1_encoded_image_buffer_interface.html">   38</a></span>&#160;<span class="keyword">class </span><a class="code" href="classwebrtc_1_1_encoded_image_buffer_interface.html">EncodedImageBufferInterface</a> : <span class="keyword">public</span> <a class="code" href="classrtc_1_1_ref_count_interface.html">rtc::RefCountInterface</a> {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">virtual</span> <span class="keyword">const</span> uint8_t* data() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">// TODO(bugs.webrtc.org/9378): Make interface essentially read-only, delete</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="comment">// this non-const data method.</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">virtual</span> uint8_t* data() = 0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> size() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">// Basic implementation of EncodedImageBufferInterface.</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classwebrtc_1_1_encoded_image_buffer.html">   48</a></span>&#160;<span class="keyword">class </span>RTC_EXPORT <a class="code" href="classwebrtc_1_1_encoded_image_buffer.html">EncodedImageBuffer</a> : <span class="keyword">public</span> <a class="code" href="classwebrtc_1_1_encoded_image_buffer_interface.html">EncodedImageBufferInterface</a> {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">static</span> <a class="code" href="classrtc_1_1scoped__refptr.html">rtc::scoped_refptr&lt;EncodedImageBuffer&gt;</a> Create() { <span class="keywordflow">return</span> Create(0); }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">static</span> <a class="code" href="classrtc_1_1scoped__refptr.html">rtc::scoped_refptr&lt;EncodedImageBuffer&gt;</a> Create(<span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">static</span> <a class="code" href="classrtc_1_1scoped__refptr.html">rtc::scoped_refptr&lt;EncodedImageBuffer&gt;</a> Create(<span class="keyword">const</span> uint8_t* data,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                                       <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">const</span> uint8_t* data() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  uint8_t* data() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">size_t</span> size() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">void</span> Realloc(<span class="keywordtype">size_t</span> t);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classwebrtc_1_1_encoded_image_buffer.html">EncodedImageBuffer</a>(<span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="classwebrtc_1_1_encoded_image_buffer.html">EncodedImageBuffer</a>(<span class="keyword">const</span> uint8_t* data, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  ~<a class="code" href="classwebrtc_1_1_encoded_image_buffer.html">EncodedImageBuffer</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">size_t</span> size_;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  uint8_t* buffer_;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">// TODO(bug.webrtc.org/9378): This is a legacy api class, which is slowly being</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">// cleaned up. Direct use of its members is strongly discouraged.</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classwebrtc_1_1_encoded_image.html">   71</a></span>&#160;<span class="keyword">class </span>RTC_EXPORT <a class="code" href="classwebrtc_1_1_encoded_image.html">EncodedImage</a> {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="classwebrtc_1_1_encoded_image.html">EncodedImage</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <a class="code" href="classwebrtc_1_1_encoded_image.html">EncodedImage</a>(<a class="code" href="classwebrtc_1_1_encoded_image.html">EncodedImage</a>&amp;&amp;);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <a class="code" href="classwebrtc_1_1_encoded_image.html">EncodedImage</a>(<span class="keyword">const</span> <a class="code" href="classwebrtc_1_1_encoded_image.html">EncodedImage</a>&amp;);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  ~<a class="code" href="classwebrtc_1_1_encoded_image.html">EncodedImage</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="classwebrtc_1_1_encoded_image.html">EncodedImage</a>&amp; operator=(<a class="code" href="classwebrtc_1_1_encoded_image.html">EncodedImage</a>&amp;&amp;);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="classwebrtc_1_1_encoded_image.html">EncodedImage</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classwebrtc_1_1_encoded_image.html">EncodedImage</a>&amp;);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="comment">// Frame capture time in RTP timestamp representation (90kHz).</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">void</span> SetRtpTimestamp(uint32_t timestamp) { timestamp_rtp_ = timestamp; }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  uint32_t RtpTimestamp()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> timestamp_rtp_; }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">void</span> SetEncodeTime(int64_t encode_start_ms, int64_t encode_finish_ms);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="comment">// Frame capture time in local time.</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="classwebrtc_1_1_timestamp.html">Timestamp</a> CaptureTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="comment">// Frame capture time in ntp epoch time, i.e. time since 1st Jan 1900</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  int64_t NtpTimeMs()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ntp_time_ms_; }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="comment">// Every simulcast layer (= encoding) has its own encoder and RTP stream.</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="comment">// There can be no dependencies between different simulcast layers.</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <a class="code" href="classabsl_1_1optional.html">absl::optional&lt;int&gt;</a> SimulcastIndex()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> simulcast_index_; }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">void</span> SetSimulcastIndex(<a class="code" href="classabsl_1_1optional.html">absl::optional&lt;int&gt;</a> simulcast_index) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    RTC_DCHECK_GE(simulcast_index.value_or(0), 0);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    RTC_DCHECK_LT(simulcast_index.value_or(0), kMaxSimulcastStreams);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    simulcast_index_ = simulcast_index;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keyword">const</span> <a class="code" href="classabsl_1_1optional.html">absl::optional&lt;Timestamp&gt;</a>&amp; CaptureTimeIdentifier()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">return</span> capture_time_identifier_;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">void</span> SetCaptureTimeIdentifier(</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keyword">const</span> <a class="code" href="classabsl_1_1optional.html">absl::optional&lt;Timestamp&gt;</a>&amp; capture_time_identifier) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    capture_time_identifier_ = capture_time_identifier;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="comment">// Encoded images can have dependencies between spatial and/or temporal</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="comment">// layers, depending on the scalability mode used by the encoder. See diagrams</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="comment">// at https://w3c.github.io/webrtc-svc/#dependencydiagrams*.</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <a class="code" href="classabsl_1_1optional.html">absl::optional&lt;int&gt;</a> SpatialIndex()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> spatial_index_; }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordtype">void</span> SetSpatialIndex(<a class="code" href="classabsl_1_1optional.html">absl::optional&lt;int&gt;</a> spatial_index) {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    RTC_DCHECK_GE(spatial_index.value_or(0), 0);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    RTC_DCHECK_LT(spatial_index.value_or(0), kMaxSpatialLayers);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    spatial_index_ = spatial_index;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <a class="code" href="classabsl_1_1optional.html">absl::optional&lt;int&gt;</a> TemporalIndex()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> temporal_index_; }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordtype">void</span> SetTemporalIndex(<a class="code" href="classabsl_1_1optional.html">absl::optional&lt;int&gt;</a> temporal_index) {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    RTC_DCHECK_GE(temporal_index_.value_or(0), 0);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    RTC_DCHECK_LT(temporal_index_.value_or(0), kMaxTemporalStreams);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    temporal_index_ = temporal_index;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="comment">// These methods can be used to set/get size of subframe with spatial index</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="comment">// `spatial_index` on encoded frames that consist of multiple spatial layers.</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <a class="code" href="classabsl_1_1optional.html">absl::optional&lt;size_t&gt;</a> SpatialLayerFrameSize(<span class="keywordtype">int</span> spatial_index) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordtype">void</span> SetSpatialLayerFrameSize(<span class="keywordtype">int</span> spatial_index, <span class="keywordtype">size_t</span> size_bytes);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keyword">const</span> <a class="code" href="classwebrtc_1_1_color_space.html">webrtc::ColorSpace</a>* <a class="code" href="classwebrtc_1_1_color_space.html">ColorSpace</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">return</span> color_space_ ? &amp;*color_space_ : <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordtype">void</span> SetColorSpace(<span class="keyword">const</span> <a class="code" href="classabsl_1_1optional.html">absl::optional&lt;webrtc::ColorSpace&gt;</a>&amp; color_space) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    color_space_ = color_space;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <a class="code" href="classabsl_1_1optional.html">absl::optional&lt;VideoPlayoutDelay&gt;</a> PlayoutDelay()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">return</span> playout_delay_;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordtype">void</span> SetPlayoutDelay(<a class="code" href="classabsl_1_1optional.html">absl::optional&lt;VideoPlayoutDelay&gt;</a> playout_delay) {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    playout_delay_ = playout_delay;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="comment">// These methods along with the private member video_frame_tracking_id_ are</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="comment">// meant for media quality testing purpose only.</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <a class="code" href="classabsl_1_1optional.html">absl::optional&lt;uint16_t&gt;</a> VideoFrameTrackingId()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">return</span> video_frame_tracking_id_;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordtype">void</span> SetVideoFrameTrackingId(<a class="code" href="classabsl_1_1optional.html">absl::optional&lt;uint16_t&gt;</a> tracking_id) {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    video_frame_tracking_id_ = tracking_id;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keyword">const</span> <a class="code" href="classwebrtc_1_1_rtp_packet_infos.html">RtpPacketInfos</a>&amp; PacketInfos()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> packet_infos_; }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordtype">void</span> SetPacketInfos(<a class="code" href="classwebrtc_1_1_rtp_packet_infos.html">RtpPacketInfos</a> packet_infos) {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    packet_infos_ = std::move(packet_infos);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keywordtype">bool</span> RetransmissionAllowed()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> retransmission_allowed_; }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordtype">void</span> SetRetransmissionAllowed(<span class="keywordtype">bool</span> retransmission_allowed) {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    retransmission_allowed_ = retransmission_allowed;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keywordtype">size_t</span> size()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> size_; }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordtype">void</span> set_size(<span class="keywordtype">size_t</span> new_size) {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="comment">// Allow set_size(0) even if we have no buffer.</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    RTC_DCHECK_LE(new_size, new_size == 0 ? 0 : capacity());</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    size_ = new_size;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keywordtype">void</span> SetEncodedData(</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      <a class="code" href="classrtc_1_1scoped__refptr.html">rtc::scoped_refptr&lt;EncodedImageBufferInterface&gt;</a> encoded_data) {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    encoded_data_ = encoded_data;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    size_ = encoded_data-&gt;size();</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keywordtype">void</span> ClearEncodedData() {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    encoded_data_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    size_ = 0;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <a class="code" href="classrtc_1_1scoped__refptr.html">rtc::scoped_refptr&lt;EncodedImageBufferInterface&gt;</a> GetEncodedData()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">return</span> encoded_data_;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keyword">const</span> uint8_t* data()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">return</span> encoded_data_ ? encoded_data_-&gt;data() : <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <span class="comment">// Returns whether the encoded image can be considered to be of target</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="comment">// quality.</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keywordtype">bool</span> IsAtTargetQuality()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> at_target_quality_; }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="comment">// Sets that the encoded image can be considered to be of target quality to</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="comment">// true or false.</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keywordtype">void</span> SetAtTargetQuality(<span class="keywordtype">bool</span> at_target_quality) {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    at_target_quality_ = at_target_quality;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  webrtc::VideoFrameType FrameType()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _frameType; }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keywordtype">void</span> SetFrameType(webrtc::VideoFrameType frame_type) {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    _frameType = frame_type;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  VideoContentType contentType()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> content_type_; }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  VideoRotation rotation()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> rotation_; }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  uint32_t _encodedWidth = 0;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  uint32_t _encodedHeight = 0;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="comment">// NTP time of the capture time in local timebase in milliseconds.</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="comment">// TODO(minyue): make this member private.</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  int64_t ntp_time_ms_ = 0;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  int64_t capture_time_ms_ = 0;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  VideoFrameType _frameType = VideoFrameType::kVideoFrameDelta;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  VideoRotation rotation_ = kVideoRotation_0;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  VideoContentType content_type_ = VideoContentType::UNSPECIFIED;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keywordtype">int</span> qp_ = -1;  <span class="comment">// Quantizer value.</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="structwebrtc_1_1_encoded_image_1_1_timing.html">  222</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structwebrtc_1_1_encoded_image_1_1_timing.html">Timing</a> {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    uint8_t flags = VideoSendTiming::kInvalid;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    int64_t encode_start_ms = 0;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    int64_t encode_finish_ms = 0;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    int64_t packetization_finish_ms = 0;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    int64_t pacer_exit_ms = 0;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    int64_t network_timestamp_ms = 0;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    int64_t network2_timestamp_ms = 0;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    int64_t receive_start_ms = 0;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    int64_t receive_finish_ms = 0;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  } timing_;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <a class="code" href="structwebrtc_1_1_encoded_image_1_1_timing.html">EncodedImage::Timing</a> video_timing()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> timing_; }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <a class="code" href="structwebrtc_1_1_encoded_image_1_1_timing.html">EncodedImage::Timing</a>* video_timing_mutable() { <span class="keywordflow">return</span> &amp;timing_; }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="keywordtype">size_t</span> capacity()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> encoded_data_ ? encoded_data_-&gt;size() : 0; }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="comment">// When set, indicates that all future frames will be constrained with those</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="comment">// limits until the application indicates a change again.</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <a class="code" href="classabsl_1_1optional.html">absl::optional&lt;VideoPlayoutDelay&gt;</a> playout_delay_;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <a class="code" href="classrtc_1_1scoped__refptr.html">rtc::scoped_refptr&lt;EncodedImageBufferInterface&gt;</a> encoded_data_;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keywordtype">size_t</span> size_ = 0;  <span class="comment">// Size of encoded frame data.</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  uint32_t timestamp_rtp_ = 0;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <a class="code" href="classabsl_1_1optional.html">absl::optional&lt;int&gt;</a> simulcast_index_;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <a class="code" href="classabsl_1_1optional.html">absl::optional&lt;Timestamp&gt;</a> capture_time_identifier_;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <a class="code" href="classabsl_1_1optional.html">absl::optional&lt;int&gt;</a> spatial_index_;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <a class="code" href="classabsl_1_1optional.html">absl::optional&lt;int&gt;</a> temporal_index_;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  std::map&lt;int, size_t&gt; spatial_layer_frame_size_bytes_;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <a class="code" href="classabsl_1_1optional.html">absl::optional&lt;webrtc::ColorSpace&gt;</a> color_space_;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="comment">// This field is meant for media quality testing purpose only. When enabled it</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="comment">// carries the webrtc::VideoFrame id field from the sender to the receiver.</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <a class="code" href="classabsl_1_1optional.html">absl::optional&lt;uint16_t&gt;</a> video_frame_tracking_id_;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="comment">// Information about packets used to assemble this video frame. This is needed</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="comment">// by `SourceTracker` when the frame is delivered to the RTCRtpReceiver&#39;s</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="comment">// MediaStreamTrack, in order to implement getContributingSources(). See:</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="comment">// https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver-getcontributingsources</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  RtpPacketInfos packet_infos_;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keywordtype">bool</span> retransmission_allowed_ = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="comment">// True if the encoded image can be considered to be of target quality.</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="keywordtype">bool</span> at_target_quality_ = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;};</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}  <span class="comment">// namespace webrtc</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="preprocessor">#endif  // API_VIDEO_ENCODED_IMAGE_H_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassrtc_1_1_ref_count_interface_html"><div class="ttname"><a href="classrtc_1_1_ref_count_interface.html">rtc::RefCountInterface</a></div><div class="ttdef"><b>Definition:</b> ref_count.h:54</div></div>
+<div class="ttc" id="aclasswebrtc_1_1_color_space_html"><div class="ttname"><a href="classwebrtc_1_1_color_space.html">webrtc::ColorSpace</a></div><div class="ttdef"><b>Definition:</b> color_space.h:37</div></div>
+<div class="ttc" id="aclasswebrtc_1_1_encoded_image_buffer_html"><div class="ttname"><a href="classwebrtc_1_1_encoded_image_buffer.html">webrtc::EncodedImageBuffer</a></div><div class="ttdef"><b>Definition:</b> encoded_image.h:48</div></div>
+<div class="ttc" id="aclassabsl_1_1optional_html"><div class="ttname"><a href="classabsl_1_1optional.html">absl::optional&lt; int &gt;</a></div></div>
+<div class="ttc" id="aclasswebrtc_1_1_rtp_packet_infos_html"><div class="ttname"><a href="classwebrtc_1_1_rtp_packet_infos.html">webrtc::RtpPacketInfos</a></div><div class="ttdef"><b>Definition:</b> rtp_packet_infos.h:34</div></div>
+<div class="ttc" id="aclasswebrtc_1_1_encoded_image_html"><div class="ttname"><a href="classwebrtc_1_1_encoded_image.html">webrtc::EncodedImage</a></div><div class="ttdef"><b>Definition:</b> encoded_image.h:71</div></div>
+<div class="ttc" id="aclassrtc_1_1scoped__refptr_html"><div class="ttname"><a href="classrtc_1_1scoped__refptr.html">rtc::scoped_refptr</a></div><div class="ttdef"><b>Definition:</b> scoped_refptr.h:72</div></div>
+<div class="ttc" id="aclasswebrtc_1_1_timestamp_html"><div class="ttname"><a href="classwebrtc_1_1_timestamp.html">webrtc::Timestamp</a></div><div class="ttdef"><b>Definition:</b> timestamp.h:30</div></div>
+<div class="ttc" id="aclasswebrtc_1_1_encoded_image_buffer_interface_html"><div class="ttname"><a href="classwebrtc_1_1_encoded_image_buffer_interface.html">webrtc::EncodedImageBufferInterface</a></div><div class="ttdef"><b>Definition:</b> encoded_image.h:38</div></div>
+<div class="ttc" id="astructwebrtc_1_1_encoded_image_1_1_timing_html"><div class="ttname"><a href="structwebrtc_1_1_encoded_image_1_1_timing.html">webrtc::EncodedImage::Timing</a></div><div class="ttdef"><b>Definition:</b> encoded_image.h:222</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1794b65aa62003e11b03e0565def47fa.html">external</a></li><li class="navelem"><a class="el" href="dir_3b2981cbb116c36ad9ad7225b84e71bc.html">libwebrtc</a></li><li class="navelem"><a class="el" href="dir_1bc69d95fd95caf2e2a2bf45fefe9e3b.html">api</a></li><li class="navelem"><a class="el" href="dir_6ad2ae427cab7bce6c04b93dcb5bdfef.html">video</a></li><li class="navelem"><b>encoded_image.h</b></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+var classboost_1_1asio_1_1detail_1_1consuming__buffers_3_01mutable__buffer_00_01mutable__buffer_00_0079c8b92505a8a7c1896ea77c66aace3 =
+[
+    [ "consuming_buffers", "classboost_1_1asio_1_1detail_1_1consuming__buffers_3_01mutable__buffer_00_01mutable__buffer_00_0079c8b92505a8a7c1896ea77c66aace3.html#a7f71e9d6a71e10d64180eec37ed5f4fd", null ]
+];

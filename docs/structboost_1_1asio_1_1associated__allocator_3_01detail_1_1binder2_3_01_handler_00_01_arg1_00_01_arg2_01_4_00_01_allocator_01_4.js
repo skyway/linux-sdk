@@ -1,0 +1,5 @@
+var structboost_1_1asio_1_1associated__allocator_3_01detail_1_1binder2_3_01_handler_00_01_arg1_00_01_arg2_01_4_00_01_allocator_01_4 =
+[
+    [ "type", "structboost_1_1asio_1_1associated__allocator_3_01detail_1_1binder2_3_01_handler_00_01_arg1_00_01_arg2_01_4_00_01_allocator_01_4.html#aee36e6d2976c2a6a55c7de3a4c4d100f", null ],
+    [ "get", "structboost_1_1asio_1_1associated__allocator_3_01detail_1_1binder2_3_01_handler_00_01_arg1_00_01_arg2_01_4_00_01_allocator_01_4.html#ac00a9c0fe953026951ff2be8c4d78496", null ]
+];

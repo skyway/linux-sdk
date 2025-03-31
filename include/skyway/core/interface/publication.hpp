@@ -19,14 +19,16 @@ namespace skyway {
 namespace core {
 namespace interface {
 
-using MemberInterface = interface::Member;
 using LocalStream     = interface::LocalStream;
 
 /// @brief Publicationの状態
 enum class PublicationState { kEnabled, kDisabled, kCanceled };
 
 /// @brief Publicationのインターフェース
-class Publication : public ConnectionStateChangeNotifiable {
+// `std::enable_shared_from_this<T>` is supposed to be inherited by concrete classes.
+// (e.g. skyway/core/publication.hpp)
+// however if so, compile failed on the Android SDK that includes interfaces.
+class Publication : public std::enable_shared_from_this<Publication>, public ConnectionStateChangeNotifiable {
 public:
     /// @brief イベントリスナ
     class EventListener {
@@ -36,9 +38,9 @@ public:
         [[deprecated]] virtual void OnUnpublished() {}
         /// @brief このPublicationがSubscribeされた時に発火するイベント
         /// @param subscription 対象のSubscription。まだstreamがsetされていない可能性があります。
-        virtual void OnSubscribed(Subscription* subscription) {}
+        virtual void OnSubscribed(std::shared_ptr<interface::Subscription> subscription) {}
         /// @brief このPublicationがUnsubscribeされた時に発火するイベント
-        virtual void OnUnsubscribed(Subscription* subscription) {}
+        virtual void OnUnsubscribed(std::shared_ptr<interface::Subscription> subscription) {}
         /// @brief このPublicationに対するSubscriptionの数が変更された時に発火するイベント
         virtual void OnSubscriptionListChanged() {}
         /// @brief このPublicationのMetadataが変化した時に発火するイベント
@@ -57,15 +59,15 @@ public:
     /// @cond INTERNAL_SECTION
     class InternalListener {
     public:
-        virtual void OnEncodingsUpdated(Publication* publication,
+        virtual void OnEncodingsUpdated(std::shared_ptr<interface::Publication> publication,
                                         std::vector<model::Encoding> encodings) {}
-        virtual void OnStreamReplaced(Publication* publication,
+        virtual void OnStreamReplaced(std::shared_ptr<interface::Publication> publication,
                                       std::shared_ptr<LocalMediaStream> stream) {}
-        virtual void OnSubscribed(Subscription* subscription) {}
+        virtual void OnSubscribed(std::shared_ptr<interface::Subscription> subscription) {}
     };
     class Callback {
     public:
-        virtual const boost::optional<nlohmann::json> GetStatsReport(Publication* publication) = 0;
+        virtual const std::optional<nlohmann::json> GetStatsReport(std::shared_ptr<interface::Publication> publication) = 0;
     };
     /// @endcond
     virtual ~Publication() = default;
@@ -84,15 +86,15 @@ public:
     /// @brief Idを取得します。
     virtual std::string Id() const = 0;
     /// @brief このPublicationをPublishしているMemberを取得します。
-    virtual MemberInterface* Publisher() const = 0;
+    virtual std::shared_ptr<interface::Member> Publisher() const = 0;
     /// @brief このPublicationを購読しているSubsciptionの一覧を取得します。
-    virtual std::vector<Subscription*> Subscriptions() const = 0;
+    virtual std::vector<std::shared_ptr<interface::Subscription>> Subscriptions() const = 0;
     /// @brief ContentType(VideoかAudioかDataか)を取得します。
     virtual model::ContentType ContentType() const = 0;
     /// @brief Metadataを取得します。
-    virtual boost::optional<std::string> Metadata() const = 0;
+    virtual std::optional<std::string> Metadata() const = 0;
     /// @brief このPublicationのOriginを取得します。
-    virtual Publication* Origin() const = 0;
+    virtual std::shared_ptr<interface::Publication> Origin() const = 0;
     /// @brief このPublicationのコーデック一覧を取得します。
     virtual std::vector<model::Codec> CodecCapabilities() const = 0;
     /// @brief このPublicationのエンコーディング設定の一覧を取得します。
@@ -107,7 +109,7 @@ public:
     /// @brief Metadataを更新します。
     virtual bool UpdateMetadata(const std::string& metadata) = 0;
     /// @brief エンコーディング設定を更新します。
-    virtual void UpdateEncodings(std::vector<model::Encoding> encodings) = 0;
+    virtual bool UpdateEncodings(std::vector<model::Encoding> encodings) = 0;
     /// @brief 公開しているStreamを変更します。
     virtual bool ReplaceStream(std::shared_ptr<LocalStream> stream) = 0;
     /// @deprecated 本機能は非推奨です。
@@ -120,7 +122,7 @@ public:
     /// @deprecated 本機能は非推奨です。
     /// @brief 統計情報を取得します。
     /// @param selector 取得対象のmemberID
-    [[deprecated]] virtual boost::optional<model::WebRTCStats> GetStats(
+    [[deprecated]] virtual std::optional<model::WebRTCStats> GetStats(
         const std::string& selector) = 0;
     /// @cond INTERNAL_SECTION
     virtual void AddGetStatsCallback(const std::string& remote_member_id, Callback* callback) = 0;
@@ -136,8 +138,8 @@ public:
     virtual void Dispose()                                                          = 0;
 
     virtual void OnUnpublished()                                = 0;
-    virtual void OnSubscribed(Subscription* subscription)       = 0;
-    virtual void OnUnsubscribed(Subscription* subscription)     = 0;
+    virtual void OnSubscribed(std::shared_ptr<interface::Subscription> subscription)       = 0;
+    virtual void OnUnsubscribed(std::shared_ptr<interface::Subscription> subscription)     = 0;
     virtual void OnMetadataUpdated(const std::string& metadata) = 0;
     virtual void OnEnabled()                                    = 0;
     virtual void OnDisabled()                                   = 0;

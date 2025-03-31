@@ -18,13 +18,11 @@ namespace plugin {
 namespace sfu_bot {
 namespace interface {
 
-using PublicationInterface = core::interface::Publication;
-
 class SfuApiClient {
 public:
     virtual ~SfuApiClient() = default;
     // For Plugin
-    virtual boost::optional<dto::CreateBotResponse> CreateBot(const std::string& app_id,
+    virtual std::optional<dto::CreateBotResponse> CreateBot(const std::string& app_id,
                                                               const std::string& channel_id) = 0;
     virtual bool DeleteBot(const std::string& bot_id)                                        = 0;
 
@@ -32,41 +30,41 @@ public:
                          const nlohmann::json& dtls_parameters) = 0;
 
     // For Sender
-    virtual boost::optional<dto::StartForwardingResponse> StartForwarding(
+    virtual std::optional<dto::StartForwardingResponse> StartForwarding(
         const std::string& bot_id,
-        const PublicationInterface* publication,
+        const std::shared_ptr<core::interface::Publication> publication,
         ForwardingConfigure configure)                                                       = 0;
     virtual bool StopForwarding(const std::string& bot_id, const std::string& forwarding_id) = 0;
-    virtual boost::optional<dto::ConfirmSubscriptionResponse> ConfirmSubscription(
+    virtual std::optional<dto::ConfirmSubscriptionResponse> ConfirmSubscription(
         const std::string& forwarding_id,
         const std::string& subscription_id,
         const std::string& identifier_key) = 0;
-    virtual boost::optional<dto::CreateProducerResponse> CreateProducer(
+    virtual std::optional<dto::CreateProducerResponse> CreateProducer(
         const std::string& bot_id,
         const std::string& forwarding_id,
         const std::string& transport_id,
         const nlohmann::json& producer_options) = 0;
 
     // For Receiver
-    virtual boost::optional<dto::GetCapabilitiesResponse> GetCapabilities(
+    virtual std::optional<dto::GetCapabilitiesResponse> GetCapabilities(
         const std::string& bot_id,
         const std::string& publication_id,
         const std::string& origin_publication_id) = 0;
-    virtual boost::optional<dto::CreateConsumerResponse> CreateConsumer(
+    virtual std::optional<dto::CreateConsumerResponse> CreateConsumer(
         const std::string& bot_id,
         const std::string& forwarding_id,
         const nlohmann::json& rtp_capabilities,
         const std::string& subscription_id,
         const std::string& subscriber_id,
         const std::string& origin_publication_id,
-        const boost::optional<int> spatial_layer) = 0;
-    virtual boost::optional<dto::ChangeConsumerLayerResponse> ChangeConsumerLayer(
+        const std::optional<int> spatial_layer) = 0;
+    virtual std::optional<dto::ChangeConsumerLayerResponse> ChangeConsumerLayer(
         const std::string& transport_id,
         const std::string& consumer_id,
         const std::string& publication_id,
         const int spatial_layer) = 0;
 
-    virtual boost::optional<dto::IceRestartResponse> IceRestart(
+    virtual std::optional<dto::IceRestartResponse> IceRestart(
         const std::string& transport_id) = 0;
 };
 

@@ -9,9 +9,10 @@
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_DTO_RESPONSE_HPP_
 #define SKYWAY_PLUGIN_SFU_BOT_PLUGIN_DTO_RESPONSE_HPP_
 
-#include <boost/optional.hpp>
-#include <json.hpp>
 #include <string>
+#include <optional>
+
+#include <json.hpp>
 
 namespace skyway {
 namespace plugin {
@@ -25,8 +26,8 @@ struct CreateBotResponse {
 struct StartForwardingResponse {
     std::string forwarding_id;
     std::string broadcaster_transport_id;
-    boost::optional<nlohmann::json> rtp_capabilities;
-    boost::optional<nlohmann::json> broadcaster_transport_options;
+    std::optional<nlohmann::json> rtp_capabilities;
+    std::optional<nlohmann::json> broadcaster_transport_options;
     std::string identifier_key;
 };
 
@@ -38,7 +39,7 @@ struct ConfirmSubscriptionResponse {
 struct CreateProducerResponse {
     std::string producer_id;
     std::string transportId;
-    boost::optional<nlohmann::json> transport_options;
+    std::optional<nlohmann::json> transport_options;
 };
 
 struct GetCapabilitiesResponse {
@@ -49,7 +50,7 @@ struct CreateConsumerResponse {
     nlohmann::json consumer_options;
     std::string producer_id;
     std::string transport_id;
-    boost::optional<nlohmann::json> transport_options;
+    std::optional<nlohmann::json> transport_options;
 };
 
 struct ChangeConsumerLayerResponse {};
@@ -58,8 +59,8 @@ enum ResponseStatusCode { kOK, kCLIENT_ERROR, kSERVER_ERROR };
 
 struct IceRestartResponse {
     ResponseStatusCode status;
-    boost::optional<nlohmann::json> ice_parameters;
-    boost::optional<std::string> message;
+    std::optional<nlohmann::json> ice_parameters;
+    std::optional<std::string> message;
 };
 
 void from_json(const nlohmann::json& j, CreateBotResponse& response);

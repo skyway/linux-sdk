@@ -9,8 +9,6 @@
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_SFU_OPTIONS_HPP_
 #define SKYWAY_PLUGIN_SFU_BOT_PLUGIN_SFU_OPTIONS_HPP_
 
-#include <boost/optional.hpp>
-
 namespace skyway {
 namespace plugin {
 namespace sfu_options {
@@ -18,11 +16,11 @@ namespace sfu_options {
 /// @brief SfuBotのオプション
 struct SfuOptionsParams {
     /// @brief Sfuサーバーの接続先
-    boost::optional<std::string> domain;
+    std::optional<std::string> domain;
     /// @brief Sfuサーバーのバージョン
-    boost::optional<int> version;
+    std::optional<int> version;
     /// @brief Sfuサーバーのセキュリティフラグ
-    boost::optional<bool> secure;
+    std::optional<bool> secure;
 };
 
 }  // namespace sfu_options

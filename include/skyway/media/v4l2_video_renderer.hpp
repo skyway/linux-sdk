@@ -23,7 +23,7 @@ struct V4l2VideoRendererOptions {
 };
 
 /// @brief 映像の描画を行うクラス
-class V4l2VideoRenderer : public I420VideoRenderer, I420VideoRenderer::Listener {
+class V4l2VideoRenderer : public I420VideoRenderer {
 public:
     /// @brief コンストラクタ
     /// @param video_out_path 映像出力デバイスの絶対パス
@@ -31,8 +31,8 @@ public:
     V4l2VideoRenderer(const std::string& video_out_path, const V4l2VideoRendererOptions& options);
     ~V4l2VideoRenderer();
 
-    // I420VideoRenderer::Listerner
-    void OnFrame(const uint8_t* y, const uint8_t* u, const uint8_t* v, int width, int height);
+    // Impl I420VideoRenderer
+    void OnFrame(const webrtc::VideoFrame& frame) override;
 
 private:
     const std::string video_out_path_;

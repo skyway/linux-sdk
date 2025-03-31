@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('execution__context_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">execution_context.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// execution_context.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Copyright (c) 2003-2020 Christopher M. Kohlhoff (chris at kohlhoff dot com)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0. (See accompanying</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef BOOST_ASIO_EXECUTION_CONTEXT_HPP</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define BOOST_ASIO_EXECUTION_CONTEXT_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"># pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif // defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1200)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;boost/asio/detail/config.hpp&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;typeinfo&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;boost/asio/detail/noncopyable.hpp&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;boost/asio/detail/variadic_templates.hpp&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;boost/asio/detail/push_options.hpp&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceboost.html">boost</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>asio {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">class </span>execution_context;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">class </span>io_context;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#if !defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Service&gt; Service&amp; use_service(execution_context&amp;);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Service&gt; Service&amp; use_service(io_context&amp;);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Service&gt; <span class="keywordtype">void</span> add_service(execution_context&amp;, Service*);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Service&gt; <span class="keywordtype">bool</span> has_service(execution_context&amp;);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif // !defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacedetail.html">detail</a> { <span class="keyword">class </span>service_registry; }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1execution__context.html">  106</a></span>&#160;<span class="keyword">class </span><a class="code" href="classboost_1_1asio_1_1execution__context.html">execution_context</a></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  : <span class="keyword">private</span> <a class="code" href="classboost_1_1asio_1_1detail_1_1noncopyable.html">noncopyable</a></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keyword">class </span><a class="code" href="classboost_1_1asio_1_1execution__context_1_1id.html">id</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keyword">class </span><a class="code" href="classboost_1_1asio_1_1execution__context_1_1service.html">service</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  BOOST_ASIO_DECL <a class="code" href="classboost_1_1asio_1_1execution__context.html#aa5dc782f774d2e9ef5b2b15b66f6fd4a">execution_context</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  BOOST_ASIO_DECL <a class="code" href="classboost_1_1asio_1_1execution__context.html#ad3e7f73d5917d1150388f1b15760c34e">~execution_context</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1execution__context.html#ac8a01e3462e831b0b31ca1085a08114d">shutdown</a>();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1execution__context.html#a42e2175a2d338aa06861d4eac34044a3">destroy</a>();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1execution__context.html#ad0e79f590ec7ac8c6b1a840557c32311">  143</a></span>&#160;  <span class="keyword">enum</span> <a class="code" href="classboost_1_1asio_1_1execution__context.html#ad0e79f590ec7ac8c6b1a840557c32311">fork_event</a></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  {</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1execution__context.html#ad0e79f590ec7ac8c6b1a840557c32311a2a87e5df6d05b51feb8dd7eb9322c290">  146</a></span>&#160;    <a class="code" href="classboost_1_1asio_1_1execution__context.html#ad0e79f590ec7ac8c6b1a840557c32311a2a87e5df6d05b51feb8dd7eb9322c290">fork_prepare</a>,</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1execution__context.html#ad0e79f590ec7ac8c6b1a840557c32311ae3328f1ca7325e8ddec96f50671c105e">  149</a></span>&#160;    <a class="code" href="classboost_1_1asio_1_1execution__context.html#ad0e79f590ec7ac8c6b1a840557c32311ae3328f1ca7325e8ddec96f50671c105e">fork_parent</a>,</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1execution__context.html#ad0e79f590ec7ac8c6b1a840557c32311a336fa931580c80df121caff30ce9da6f">  152</a></span>&#160;    <a class="code" href="classboost_1_1asio_1_1execution__context.html#ad0e79f590ec7ac8c6b1a840557c32311a336fa931580c80df121caff30ce9da6f">fork_child</a></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  };</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  BOOST_ASIO_DECL <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1execution__context.html#a1f4f65daa82a57fc402ae22ab229cf8d">notify_fork</a>(<a class="code" href="classboost_1_1asio_1_1execution__context.html#ad0e79f590ec7ac8c6b1a840557c32311">fork_event</a> event);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Service&gt;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  <span class="keyword">friend</span> Service&amp; <a class="code" href="classboost_1_1asio_1_1execution__context.html#a7044429cdd225d9421c831b0612c958f">use_service</a>(<a class="code" href="classboost_1_1asio_1_1execution__context.html">execution_context</a>&amp; e);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Service&gt;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keyword">friend</span> Service&amp; <a class="code" href="classboost_1_1asio_1_1execution__context.html#a7044429cdd225d9421c831b0612c958f">use_service</a>(<a class="code" href="classboost_1_1asio_1_1io__context.html">io_context</a>&amp; ioc);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="preprocessor">#if defined(GENERATING_DOCUMENTATION)</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Service, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="keyword">friend</span> Service&amp; make_service(<a class="code" href="classboost_1_1asio_1_1execution__context.html">execution_context</a>&amp; e, Args&amp;&amp;... args);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor">#elif defined(BOOST_ASIO_HAS_VARIADIC_TEMPLATES)</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Service, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="keyword">friend</span> Service&amp; make_service(<a class="code" href="classboost_1_1asio_1_1execution__context.html">execution_context</a>&amp; e,</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      BOOST_ASIO_MOVE_ARG(Args)... args);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="preprocessor">#else // defined(BOOST_ASIO_HAS_VARIADIC_TEMPLATES)</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Service&gt;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="keyword">friend</span> Service&amp; make_service(<a class="code" href="classboost_1_1asio_1_1execution__context.html">execution_context</a>&amp; e);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="preprocessor">#define BOOST_ASIO_PRIVATE_MAKE_SERVICE_DEF(n) \</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="preprocessor">  template &lt;typename Service, BOOST_ASIO_VARIADIC_TPARAMS(n)&gt; \</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="preprocessor">  friend Service&amp; make_service(execution_context&amp; e, \</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor">      BOOST_ASIO_VARIADIC_MOVE_PARAMS(n)); \</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="preprocessor">  </span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  BOOST_ASIO_VARIADIC_GENERATE(BOOST_ASIO_PRIVATE_MAKE_SERVICE_DEF)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">#undef BOOST_ASIO_PRIVATE_MAKE_SERVICE_DEF</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="preprocessor">#endif // defined(BOOST_ASIO_HAS_VARIADIC_TEMPLATES)</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Service&gt;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code" href="classboost_1_1asio_1_1execution__context.html#a3014a17a4b521b57a7fdbd8c2c41f312">add_service</a>(<a class="code" href="classboost_1_1asio_1_1execution__context.html">execution_context</a>&amp; e, Service* svc);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Service&gt;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code" href="classboost_1_1asio_1_1execution__context.html#aed1173384b9ee24ce9f1633f6e772583">has_service</a>(<a class="code" href="classboost_1_1asio_1_1execution__context.html">execution_context</a>&amp; e);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  <span class="comment">// The service registry.</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  <a class="code" href="classboost_1_1asio_1_1detail_1_1service__registry.html">boost::asio::detail::service_registry</a>* service_registry_;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;};</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1execution__context_1_1id.html">  307</a></span>&#160;<span class="keyword">class </span><a class="code" href="classboost_1_1asio_1_1execution__context_1_1id.html">execution_context::id</a></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  : <span class="keyword">private</span> <a class="code" href="classboost_1_1asio_1_1detail_1_1noncopyable.html">noncopyable</a></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;{</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1execution__context_1_1id.html#a9529394202c854ac36d0ebc1267c2c67">  312</a></span>&#160;  <a class="code" href="classboost_1_1asio_1_1execution__context_1_1id.html#a9529394202c854ac36d0ebc1267c2c67">id</a>() {}</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;};</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1execution__context_1_1service.html">  316</a></span>&#160;<span class="keyword">class </span><a class="code" href="classboost_1_1asio_1_1execution__context_1_1service.html">execution_context::service</a></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  : <span class="keyword">private</span> <a class="code" href="classboost_1_1asio_1_1detail_1_1noncopyable.html">noncopyable</a></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;{</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  <a class="code" href="classboost_1_1asio_1_1execution__context.html">execution_context</a>&amp; <a class="code" href="classboost_1_1asio_1_1execution__context_1_1service.html#a8963249dd741dbb9ab238c1831583533">context</a>();</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  BOOST_ASIO_DECL <a class="code" href="classboost_1_1asio_1_1execution__context_1_1service.html#a21be9f36db79cf6daafb435de4a78234">service</a>(<a class="code" href="classboost_1_1asio_1_1execution__context.html">execution_context</a>&amp; owner);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  BOOST_ASIO_DECL <span class="keyword">virtual</span> <a class="code" href="classboost_1_1asio_1_1execution__context_1_1service.html#a2962145ed2bfa6e5abef5778fe80aa45">~service</a>();</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> shutdown() = 0;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  BOOST_ASIO_DECL <span class="keyword">virtual</span> <span class="keywordtype">void</span> notify_fork(</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;      <a class="code" href="classboost_1_1asio_1_1execution__context.html#ad0e79f590ec7ac8c6b1a840557c32311">execution_context::fork_event</a> event);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classboost_1_1asio_1_1detail_1_1service__registry.html">boost::asio::detail::service_registry</a>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;  <span class="keyword">struct </span>key</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  {</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    key() : type_info_(0), id_(0) {}</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keyword">const</span> std::type_info* type_info_;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keyword">const</span> <a class="code" href="classboost_1_1asio_1_1execution__context_1_1id.html">execution_context::id</a>* id_;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  } key_;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  <a class="code" href="classboost_1_1asio_1_1execution__context.html">execution_context</a>&amp; owner_;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  <a class="code" href="classboost_1_1asio_1_1execution__context_1_1service.html">service</a>* next_;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;};</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
+<div class="line"><a name="l00360"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1service__already__exists.html">  360</a></span>&#160;<span class="keyword">class </span><a class="code" href="classboost_1_1asio_1_1service__already__exists.html">service_already_exists</a></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  : <span class="keyword">public</span> std::logic_error</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;{</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  BOOST_ASIO_DECL <a class="code" href="classboost_1_1asio_1_1service__already__exists.html">service_already_exists</a>();</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;};</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
+<div class="line"><a name="l00369"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1invalid__service__owner.html">  369</a></span>&#160;<span class="keyword">class </span><a class="code" href="classboost_1_1asio_1_1invalid__service__owner.html">invalid_service_owner</a></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  : <span class="keyword">public</span> std::logic_error</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;{</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;  BOOST_ASIO_DECL <a class="code" href="classboost_1_1asio_1_1invalid__service__owner.html">invalid_service_owner</a>();</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;};</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacedetail.html">detail</a> {</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160; </div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="comment">// Special derived service id type to keep classes header-file only.</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Type&gt;</div>
+<div class="line"><a name="l00380"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1detail_1_1service__id.html">  380</a></span>&#160;<span class="keyword">class </span><a class="code" href="classboost_1_1asio_1_1detail_1_1service__id.html">service_id</a></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  : <span class="keyword">public</span> <a class="code" href="classboost_1_1asio_1_1execution__context_1_1id.html">execution_context::id</a></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;{</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;};</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="comment">// Special service base class to keep classes header-file only.</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Type&gt;</div>
+<div class="line"><a name="l00387"></a><span class="lineno"><a class="line" href="classboost_1_1asio_1_1detail_1_1execution__context__service__base.html">  387</a></span>&#160;<span class="keyword">class </span><a class="code" href="classboost_1_1asio_1_1detail_1_1execution__context__service__base.html">execution_context_service_base</a></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;  : <span class="keyword">public</span> <a class="code" href="classboost_1_1asio_1_1execution__context_1_1service.html">execution_context::service</a></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;{</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;  <span class="keyword">static</span> <a class="code" href="classboost_1_1asio_1_1detail_1_1service__id.html">service_id&lt;Type&gt;</a> id;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160; </div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;  <span class="comment">// Constructor.</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  <a class="code" href="classboost_1_1asio_1_1detail_1_1execution__context__service__base.html">execution_context_service_base</a>(<a class="code" href="classboost_1_1asio_1_1execution__context.html">execution_context</a>&amp; e)</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    : <a class="code" href="classboost_1_1asio_1_1execution__context_1_1service.html">execution_context::service</a>(e)</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  {</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  }</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;};</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Type&gt;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<a class="code" href="classboost_1_1asio_1_1detail_1_1service__id.html">service_id&lt;Type&gt;</a> <a class="code" href="classboost_1_1asio_1_1detail_1_1execution__context__service__base.html">execution_context_service_base&lt;Type&gt;::id</a>;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;} <span class="comment">// namespace asio</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;} <span class="comment">// namespace boost</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160; </div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="preprocessor">#include &lt;boost/asio/detail/pop_options.hpp&gt;</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="preprocessor">#include &lt;boost/asio/impl/execution_context.hpp&gt;</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="preprocessor">#if defined(BOOST_ASIO_HEADER_ONLY)</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="preprocessor"># include &lt;boost/asio/impl/execution_context.ipp&gt;</span></div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;<span class="preprocessor">#endif // defined(BOOST_ASIO_HEADER_ONLY)</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="preprocessor">#endif // BOOST_ASIO_EXECUTION_CONTEXT_HPP</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_html_ad0e79f590ec7ac8c6b1a840557c32311a336fa931580c80df121caff30ce9da6f"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context.html#ad0e79f590ec7ac8c6b1a840557c32311a336fa931580c80df121caff30ce9da6f">boost::asio::execution_context::fork_child</a></div><div class="ttdeci">@ fork_child</div><div class="ttdoc">Notify the context that the process has forked and is the child.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:152</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1detail_1_1execution__context__service__base_html"><div class="ttname"><a href="classboost_1_1asio_1_1detail_1_1execution__context__service__base.html">boost::asio::detail::execution_context_service_base</a></div><div class="ttdef"><b>Definition:</b> execution_context.hpp:387</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_html_a42e2175a2d338aa06861d4eac34044a3"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context.html#a42e2175a2d338aa06861d4eac34044a3">boost::asio::execution_context::destroy</a></div><div class="ttdeci">BOOST_ASIO_DECL void destroy()</div><div class="ttdoc">Destroys all services in the context.</div><div class="ttdef"><b>Definition:</b> execution_context.ipp:44</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_html_ad0e79f590ec7ac8c6b1a840557c32311a2a87e5df6d05b51feb8dd7eb9322c290"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context.html#ad0e79f590ec7ac8c6b1a840557c32311a2a87e5df6d05b51feb8dd7eb9322c290">boost::asio::execution_context::fork_prepare</a></div><div class="ttdeci">@ fork_prepare</div><div class="ttdoc">Notify the context that the process is about to fork.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:146</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_html_a7044429cdd225d9421c831b0612c958f"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context.html#a7044429cdd225d9421c831b0612c958f">boost::asio::execution_context::use_service</a></div><div class="ttdeci">friend Service &amp; use_service(execution_context &amp;e)</div><div class="ttdoc">Obtain the service object corresponding to the given type.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:30</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1detail_1_1service__id_html"><div class="ttname"><a href="classboost_1_1asio_1_1detail_1_1service__id.html">boost::asio::detail::service_id</a></div><div class="ttdef"><b>Definition:</b> execution_context.hpp:380</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1detail_1_1noncopyable_html"><div class="ttname"><a href="classboost_1_1asio_1_1detail_1_1noncopyable.html">boost::asio::detail::noncopyable</a></div><div class="ttdef"><b>Definition:</b> noncopyable.hpp:26</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1io__context_html"><div class="ttname"><a href="classboost_1_1asio_1_1io__context.html">boost::asio::io_context</a></div><div class="ttdoc">Provides core I/O functionality.</div><div class="ttdef"><b>Definition:</b> io_context.hpp:212</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_1_1service_html_a21be9f36db79cf6daafb435de4a78234"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context_1_1service.html#a21be9f36db79cf6daafb435de4a78234">boost::asio::execution_context::service::service</a></div><div class="ttdeci">BOOST_ASIO_DECL service(execution_context &amp;owner)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> execution_context.ipp:55</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_1_1id_html_a9529394202c854ac36d0ebc1267c2c67"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context_1_1id.html#a9529394202c854ac36d0ebc1267c2c67">boost::asio::execution_context::id::id</a></div><div class="ttdeci">id()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:312</div></div>
+<div class="ttc" id="anamespacedetail_html"><div class="ttname"><a href="namespacedetail.html">detail</a></div><div class="ttdoc">detail namespace with internal helper functions</div><div class="ttdef"><b>Definition:</b> json.hpp:246</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_1_1service_html"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context_1_1service.html">boost::asio::execution_context::service</a></div><div class="ttdoc">Base class for all io_context services.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:316</div></div>
+<div class="ttc" id="anamespaceboost_html"><div class="ttname"><a href="namespaceboost.html">boost</a></div><div class="ttdoc">defined(BOOST_MOVE_DOXYGEN_INVOKED)</div><div class="ttdef"><b>Definition:</b> case_conv.hpp:32</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_html_aa5dc782f774d2e9ef5b2b15b66f6fd4a"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context.html#aa5dc782f774d2e9ef5b2b15b66f6fd4a">boost::asio::execution_context::execution_context</a></div><div class="ttdeci">BOOST_ASIO_DECL execution_context()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> execution_context.ipp:27</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_1_1service_html_a2962145ed2bfa6e5abef5778fe80aa45"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context_1_1service.html#a2962145ed2bfa6e5abef5778fe80aa45">boost::asio::execution_context::service::~service</a></div><div class="ttdeci">virtual BOOST_ASIO_DECL ~service()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> execution_context.ipp:61</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_1_1service_html_a8963249dd741dbb9ab238c1831583533"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context_1_1service.html#a8963249dd741dbb9ab238c1831583533">boost::asio::execution_context::service::context</a></div><div class="ttdeci">execution_context &amp; context()</div><div class="ttdoc">Get the context object that owns the service.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:101</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_html_a3014a17a4b521b57a7fdbd8c2c41f312"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context.html#a3014a17a4b521b57a7fdbd8c2c41f312">boost::asio::execution_context::add_service</a></div><div class="ttdeci">friend void add_service(execution_context &amp;e, Service *svc)</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:82</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_html_ad3e7f73d5917d1150388f1b15760c34e"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context.html#ad3e7f73d5917d1150388f1b15760c34e">boost::asio::execution_context::~execution_context</a></div><div class="ttdeci">BOOST_ASIO_DECL ~execution_context()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> execution_context.ipp:32</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_html_ad0e79f590ec7ac8c6b1a840557c32311ae3328f1ca7325e8ddec96f50671c105e"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context.html#ad0e79f590ec7ac8c6b1a840557c32311ae3328f1ca7325e8ddec96f50671c105e">boost::asio::execution_context::fork_parent</a></div><div class="ttdeci">@ fork_parent</div><div class="ttdoc">Notify the context that the process has forked and is the parent.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:149</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1detail_1_1service__registry_html"><div class="ttname"><a href="classboost_1_1asio_1_1detail_1_1service__registry.html">boost::asio::detail::service_registry</a></div><div class="ttdef"><b>Definition:</b> service_registry.hpp:37</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1invalid__service__owner_html"><div class="ttname"><a href="classboost_1_1asio_1_1invalid__service__owner.html">boost::asio::invalid_service_owner</a></div><div class="ttdef"><b>Definition:</b> execution_context.hpp:369</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_html_a1f4f65daa82a57fc402ae22ab229cf8d"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context.html#a1f4f65daa82a57fc402ae22ab229cf8d">boost::asio::execution_context::notify_fork</a></div><div class="ttdeci">BOOST_ASIO_DECL void notify_fork(fork_event event)</div><div class="ttdoc">Notify the execution_context of a fork-related event.</div><div class="ttdef"><b>Definition:</b> execution_context.ipp:49</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_html"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context.html">boost::asio::execution_context</a></div><div class="ttdoc">A context for function object execution.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:106</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_html_aed1173384b9ee24ce9f1633f6e772583"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context.html#aed1173384b9ee24ce9f1633f6e772583">boost::asio::execution_context::has_service</a></div><div class="ttdeci">friend bool has_service(execution_context &amp;e)</div><div class="ttdoc">Determine if an execution_context contains a specified service type.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:91</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_1_1id_html"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context_1_1id.html">boost::asio::execution_context::id</a></div><div class="ttdoc">Class used to uniquely identify a service.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:307</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_html_ac8a01e3462e831b0b31ca1085a08114d"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context.html#ac8a01e3462e831b0b31ca1085a08114d">boost::asio::execution_context::shutdown</a></div><div class="ttdeci">BOOST_ASIO_DECL void shutdown()</div><div class="ttdoc">Shuts down all services in the context.</div><div class="ttdef"><b>Definition:</b> execution_context.ipp:39</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1execution__context_html_ad0e79f590ec7ac8c6b1a840557c32311"><div class="ttname"><a href="classboost_1_1asio_1_1execution__context.html#ad0e79f590ec7ac8c6b1a840557c32311">boost::asio::execution_context::fork_event</a></div><div class="ttdeci">fork_event</div><div class="ttdoc">Fork-related event notifications.</div><div class="ttdef"><b>Definition:</b> execution_context.hpp:143</div></div>
+<div class="ttc" id="aclassboost_1_1asio_1_1service__already__exists_html"><div class="ttname"><a href="classboost_1_1asio_1_1service__already__exists.html">boost::asio::service_already_exists</a></div><div class="ttdef"><b>Definition:</b> execution_context.hpp:360</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1794b65aa62003e11b03e0565def47fa.html">external</a></li><li class="navelem"><a class="el" href="dir_c08529bcc08f755a4d16428f71043471.html">boost</a></li><li class="navelem"><a class="el" href="dir_08e916b1ba9423845cffef83795e9545.html">boost</a></li><li class="navelem"><a class="el" href="dir_95a6475d294165210308bf5d4f5823e3.html">asio</a></li><li class="navelem"><b>execution_context.hpp</b></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

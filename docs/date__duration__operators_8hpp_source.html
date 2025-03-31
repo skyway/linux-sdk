@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('date__duration__operators_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">date_duration_operators.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="date__duration__operators_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DATE_DURATION_OPERATORS_HPP___</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define DATE_DURATION_OPERATORS_HPP___</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/* Copyright (c) 2004 CrystalClear Software, Inc.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Subject to the Boost Software License, Version 1.0. </span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * (See accompanying file LICENSE_1_0.txt or </span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * Author: Jeff Garland, Bart Garst</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * $Date$</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;boost/date_time/gregorian/greg_duration_types.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;boost/date_time/posix_time/ptime.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceboost.html">boost</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>posix_time {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">inline</span> BOOST_CXX14_CONSTEXPR</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  ptime </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="namespaceboost_1_1posix__time.html#af03a275ea12238ea0a15f2b6f68b8176">   31</a></span>&#160;  <a class="code" href="namespaceboost_1_1posix__time.html#af03a275ea12238ea0a15f2b6f68b8176">operator+</a>(<span class="keyword">const</span> <a class="code" href="classboost_1_1posix__time_1_1ptime.html">ptime</a>&amp; t, <span class="keyword">const</span> <a class="code" href="classboost_1_1date__time_1_1months__duration.html">boost::gregorian::months</a>&amp; m)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span> t + m.get_offset(t.date());</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">inline</span> BOOST_CXX14_CONSTEXPR</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  ptime </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="namespaceboost_1_1posix__time.html#a14918562720dc81ab24597d47655acad">   41</a></span>&#160;  <a class="code" href="namespaceboost_1_1posix__time.html#a14918562720dc81ab24597d47655acad">operator+=</a>(<a class="code" href="classboost_1_1posix__time_1_1ptime.html">ptime</a>&amp; t, <span class="keyword">const</span> <a class="code" href="classboost_1_1date__time_1_1months__duration.html">boost::gregorian::months</a>&amp; m)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// get_neg_offset returns a negative duration, so we add</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> t += m.get_offset(t.date());</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">inline</span> BOOST_CXX14_CONSTEXPR</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  ptime </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespaceboost_1_1posix__time.html#a44c900bde80c138c7a1161c39fa2a4da">   52</a></span>&#160;  <a class="code" href="namespaceboost_1_1posix__time.html#a44c900bde80c138c7a1161c39fa2a4da">operator-</a>(<span class="keyword">const</span> <a class="code" href="classboost_1_1posix__time_1_1ptime.html">ptime</a>&amp; t, <span class="keyword">const</span> <a class="code" href="classboost_1_1date__time_1_1months__duration.html">boost::gregorian::months</a>&amp; m)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// get_neg_offset returns a negative duration, so we add</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> t + m.<a class="code" href="classboost_1_1date__time_1_1months__duration.html#ac217c5edfe6a02996e5ee3704cd0eac4">get_neg_offset</a>(t.date());</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">inline</span> BOOST_CXX14_CONSTEXPR</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  ptime </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="namespaceboost_1_1posix__time.html#aecc451d199cb2f88df557bb8716fd831">   63</a></span>&#160;  <a class="code" href="namespaceboost_1_1posix__time.html#aecc451d199cb2f88df557bb8716fd831">operator-=</a>(<a class="code" href="classboost_1_1posix__time_1_1ptime.html">ptime</a>&amp; t, <span class="keyword">const</span> <a class="code" href="classboost_1_1date__time_1_1months__duration.html">boost::gregorian::months</a>&amp; m)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> t += m.<a class="code" href="classboost_1_1date__time_1_1months__duration.html#ac217c5edfe6a02996e5ee3704cd0eac4">get_neg_offset</a>(t.date());</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="comment">// ptime &amp; years</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keyword">inline</span> BOOST_CXX14_CONSTEXPR</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  ptime </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="namespaceboost_1_1posix__time.html#ac5ee0c2fac6a41c454d5d9db0850a349">   75</a></span>&#160;  <a class="code" href="namespaceboost_1_1posix__time.html#af03a275ea12238ea0a15f2b6f68b8176">operator+</a>(<span class="keyword">const</span> <a class="code" href="classboost_1_1posix__time_1_1ptime.html">ptime</a>&amp; t, <span class="keyword">const</span> <a class="code" href="classboost_1_1date__time_1_1years__duration.html">boost::gregorian::years</a>&amp; y)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> t + y.get_offset(t.date());</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">inline</span> BOOST_CXX14_CONSTEXPR</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  ptime </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="namespaceboost_1_1posix__time.html#ae0972f966b04c970d8dc53d7dd3b7db4">   85</a></span>&#160;  <a class="code" href="namespaceboost_1_1posix__time.html#a14918562720dc81ab24597d47655acad">operator+=</a>(<a class="code" href="classboost_1_1posix__time_1_1ptime.html">ptime</a>&amp; t, <span class="keyword">const</span> <a class="code" href="classboost_1_1date__time_1_1years__duration.html">boost::gregorian::years</a>&amp; y)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> t += y.get_offset(t.date());</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keyword">inline</span> BOOST_CXX14_CONSTEXPR</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  ptime </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="namespaceboost_1_1posix__time.html#a1e29f9cf938420183a483887e6fde674">   95</a></span>&#160;  <a class="code" href="namespaceboost_1_1posix__time.html#a44c900bde80c138c7a1161c39fa2a4da">operator-</a>(<span class="keyword">const</span> <a class="code" href="classboost_1_1posix__time_1_1ptime.html">ptime</a>&amp; t, <span class="keyword">const</span> <a class="code" href="classboost_1_1date__time_1_1years__duration.html">boost::gregorian::years</a>&amp; y)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">// get_neg_offset returns a negative duration, so we add</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> t + y.<a class="code" href="classboost_1_1date__time_1_1years__duration.html#af5350bba6765542df20ec7784e24344d">get_neg_offset</a>(t.date());</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">inline</span> BOOST_CXX14_CONSTEXPR</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  ptime </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="namespaceboost_1_1posix__time.html#a3b168b0775585fd807f67e74ac8c2b0e">  106</a></span>&#160;  <a class="code" href="namespaceboost_1_1posix__time.html#aecc451d199cb2f88df557bb8716fd831">operator-=</a>(<a class="code" href="classboost_1_1posix__time_1_1ptime.html">ptime</a>&amp; t, <span class="keyword">const</span> <a class="code" href="classboost_1_1date__time_1_1years__duration.html">boost::gregorian::years</a>&amp; y)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// get_neg_offset returns a negative duration, so we add</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">return</span> t += y.<a class="code" href="classboost_1_1date__time_1_1years__duration.html#af5350bba6765542df20ec7784e24344d">get_neg_offset</a>(t.date());</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}} <span class="comment">// namespaces</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif // DATE_DURATION_OPERATORS_HPP___</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="anamespaceboost_1_1posix__time_html_a14918562720dc81ab24597d47655acad"><div class="ttname"><a href="namespaceboost_1_1posix__time.html#a14918562720dc81ab24597d47655acad">boost::posix_time::operator+=</a></div><div class="ttdeci">BOOST_CXX14_CONSTEXPR ptime operator+=(ptime &amp;t, const boost::gregorian::months &amp;m)</div><div class="ttdef"><b>Definition:</b> date_duration_operators.hpp:41</div></div>
+<div class="ttc" id="aclassboost_1_1posix__time_1_1ptime_html"><div class="ttname"><a href="classboost_1_1posix__time_1_1ptime.html">boost::posix_time::ptime</a></div><div class="ttdoc">Time type with no timezone or other adjustments</div><div class="ttdef"><b>Definition:</b> ptime.hpp:32</div></div>
+<div class="ttc" id="anamespaceboost_html"><div class="ttname"><a href="namespaceboost.html">boost</a></div><div class="ttdoc">defined(BOOST_MOVE_DOXYGEN_INVOKED)</div><div class="ttdef"><b>Definition:</b> case_conv.hpp:32</div></div>
+<div class="ttc" id="aclassboost_1_1date__time_1_1years__duration_html_af5350bba6765542df20ec7784e24344d"><div class="ttname"><a href="classboost_1_1date__time_1_1years__duration.html#af5350bba6765542df20ec7784e24344d">boost::date_time::years_duration::get_neg_offset</a></div><div class="ttdeci">BOOST_CXX14_CONSTEXPR duration_type get_neg_offset(const date_type &amp;d) const</div><div class="ttdoc">returns a negative duration</div><div class="ttdef"><b>Definition:</b> date_duration_types.hpp:179</div></div>
+<div class="ttc" id="aclassboost_1_1date__time_1_1years__duration_html"><div class="ttname"><a href="classboost_1_1date__time_1_1years__duration.html">boost::date_time::years_duration</a></div><div class="ttdoc">additional duration type that represents a logical year</div><div class="ttdef"><b>Definition:</b> date_duration_types.hpp:161</div></div>
+<div class="ttc" id="anamespaceboost_1_1posix__time_html_af03a275ea12238ea0a15f2b6f68b8176"><div class="ttname"><a href="namespaceboost_1_1posix__time.html#af03a275ea12238ea0a15f2b6f68b8176">boost::posix_time::operator+</a></div><div class="ttdeci">BOOST_CXX14_CONSTEXPR ptime operator+(const ptime &amp;t, const boost::gregorian::months &amp;m)</div><div class="ttdef"><b>Definition:</b> date_duration_operators.hpp:31</div></div>
+<div class="ttc" id="aclassboost_1_1date__time_1_1months__duration_html_ac217c5edfe6a02996e5ee3704cd0eac4"><div class="ttname"><a href="classboost_1_1date__time_1_1months__duration.html#ac217c5edfe6a02996e5ee3704cd0eac4">boost::date_time::months_duration::get_neg_offset</a></div><div class="ttdeci">BOOST_CXX14_CONSTEXPR duration_type get_neg_offset(const date_type &amp;d) const</div><div class="ttdoc">returns a negative duration</div><div class="ttdef"><b>Definition:</b> date_duration_types.hpp:59</div></div>
+<div class="ttc" id="anamespaceboost_1_1posix__time_html_aecc451d199cb2f88df557bb8716fd831"><div class="ttname"><a href="namespaceboost_1_1posix__time.html#aecc451d199cb2f88df557bb8716fd831">boost::posix_time::operator-=</a></div><div class="ttdeci">BOOST_CXX14_CONSTEXPR ptime operator-=(ptime &amp;t, const boost::gregorian::months &amp;m)</div><div class="ttdef"><b>Definition:</b> date_duration_operators.hpp:63</div></div>
+<div class="ttc" id="anamespaceboost_1_1posix__time_html_a44c900bde80c138c7a1161c39fa2a4da"><div class="ttname"><a href="namespaceboost_1_1posix__time.html#a44c900bde80c138c7a1161c39fa2a4da">boost::posix_time::operator-</a></div><div class="ttdeci">BOOST_CXX14_CONSTEXPR ptime operator-(const ptime &amp;t, const boost::gregorian::months &amp;m)</div><div class="ttdef"><b>Definition:</b> date_duration_operators.hpp:52</div></div>
+<div class="ttc" id="aclassboost_1_1date__time_1_1months__duration_html"><div class="ttname"><a href="classboost_1_1date__time_1_1months__duration.html">boost::date_time::months_duration</a></div><div class="ttdoc">additional duration type that represents a logical month</div><div class="ttdef"><b>Definition:</b> date_duration_types.hpp:41</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1794b65aa62003e11b03e0565def47fa.html">external</a></li><li class="navelem"><a class="el" href="dir_c08529bcc08f755a4d16428f71043471.html">boost</a></li><li class="navelem"><a class="el" href="dir_08e916b1ba9423845cffef83795e9545.html">boost</a></li><li class="navelem"><a class="el" href="dir_f067cf1a5df1416201cd70b21b75b7e9.html">date_time</a></li><li class="navelem"><a class="el" href="dir_3701dcbde1019a5a8ae45f9fd419e877.html">posix_time</a></li><li class="navelem"><a class="el" href="date__duration__operators_8hpp.html">date_duration_operators.hpp</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

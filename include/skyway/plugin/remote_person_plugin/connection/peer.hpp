@@ -32,6 +32,8 @@ namespace connection {
 using MessageMember           = signaling::interface::Member;
 using ChunkMessengerInterface = core::interface::ChunkMessenger;
 
+const std::string kRemotePersonConnectionStateThreadName = "remo_psn_conn";
+
 /// P2Pを行う抽象的なピア
 class Peer : public webrtc::PeerConnectionObserver {
 public:
@@ -86,7 +88,7 @@ public:
         void OnStateChange() override;
         void OnMessage(const webrtc::DataBuffer& buffer) override;
         rtc::scoped_refptr<webrtc::DataChannelInterface> GetDataChannel();
-        boost::optional<DataChannelLabel> GetParsedLabel();
+        std::optional<DataChannelLabel> GetParsedLabel();
 
     private:
         Listener* listener_;
@@ -135,7 +137,7 @@ public:
     void Dispose();
 
 protected:
-    dto::SendResult SendMessage(const nlohmann::json& message);
+    dto::SendResult SendMessage(const nlohmann::json& message, const bool skip_response_wait = false);
     void ResolvePendingCandidates();
 
     rtc::scoped_refptr<webrtc::DataChannelInterface> GetDataChannel(
@@ -187,7 +189,7 @@ protected:
     std::mutex negotiation_mtx_;
 
     std::string rtc_peer_connection_id_;
-    std::unique_ptr<global::interface::Worker> connection_state_worker_ = std::make_unique<global::Worker>();
+    std::unique_ptr<global::interface::Worker> connection_state_worker_ = std::make_unique<global::Worker>(kRemotePersonConnectionStateThreadName);
     std::atomic<bool> is_disposed_ = false;
 
 private:

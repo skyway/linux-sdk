@@ -20,17 +20,17 @@ namespace core {
 namespace ice {
 class IceManager : public interface::IceManager {
 public:
-    IceManager(interface::Channel* channel);
-    IceManager(token::interface::AuthTokenManager* auth,
-               interface::Channel* channel,
+    IceManager(std::shared_ptr<interface::Channel> channel);
+    IceManager(std::weak_ptr<token::interface::AuthTokenManager> auth,
+               std::shared_ptr<interface::Channel> channel,
                std::unique_ptr<interface::IceParamsClient> ice_client);
 
     webrtc::PeerConnectionInterface::IceServers FetchIceServers() override;
 
 private:
     std::unique_ptr<interface::IceParamsClient> ice_client_;
-    token::interface::AuthTokenManager* auth_;
-    interface::Channel* channel_;
+    std::weak_ptr<token::interface::AuthTokenManager> auth_;
+    std::weak_ptr<interface::Channel> channel_;
 };
 
 }  // namespace ice

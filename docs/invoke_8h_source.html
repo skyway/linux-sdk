@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NN5JX4B');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="Doxygen 1.9.8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SkyWay Linux SDK</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="dynsections.js"></script>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN5JX4B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr id="projectrow">
+                    <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                    <td id="projectalign">
+                        <div id="projectname">SkyWay Linux SDK
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('invoke_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">invoke.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2017 The Abseil Authors.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// you may not use this file except in compliance with the License.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// You may obtain a copy of the License at</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//      https://www.apache.org/licenses/LICENSE-2.0</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Unless required by applicable law or agreed to in writing, software</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// See the License for the specific language governing permissions and</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// limitations under the License.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// absl::base_internal::invoke(f, args...) is an implementation of</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// INVOKE(f, args...) from section [func.require] of the C++ standard.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// When compiled as C++17 and later versions, it is implemented as an alias of</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// std::invoke.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// [func.require]</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Define INVOKE (f, t1, t2, ..., tN) as follows:</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// 1. (t1.*f)(t2, ..., tN) when f is a pointer to a member function of a class T</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//    and t1 is an object of type T or a reference to an object of type T or a</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//    reference to an object of a type derived from T;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// 2. ((*t1).*f)(t2, ..., tN) when f is a pointer to a member function of a</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//    class T and t1 is not one of the types described in the previous item;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// 3. t1.*f when N == 1 and f is a pointer to member data of a class T and t1 is</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//    an object of type T or a reference to an object of type T or a reference</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//    to an object of a type derived from T;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// 4. (*t1).*f when N == 1 and f is a pointer to member data of a class T and t1</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//    is not one of the types described in the previous item;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// 5. f(t1, t2, ..., tN) in all other cases.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// The implementation is SFINAE-friendly: substitution failure within invoke()</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// isn&#39;t an error.</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifndef ABSL_BASE_INTERNAL_INVOKE_H_</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define ABSL_BASE_INTERNAL_INVOKE_H_</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;absl/base/config.h&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#if ABSL_INTERNAL_CPLUSPLUS_LANG &gt;= 201703L</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">namespace </span>absl {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;ABSL_NAMESPACE_BEGIN</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">namespace </span>base_internal {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">using</span> std::invoke;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">using</span> std::invoke_result_t;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">using</span> std::is_invocable_r;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}  <span class="comment">// namespace base_internal</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;ABSL_NAMESPACE_END</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}  <span class="comment">// namespace absl</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#else  // ABSL_INTERNAL_CPLUSPLUS_LANG &gt;= 201703L</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#include &quot;absl/meta/type_traits.h&quot;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">// The following code is internal implementation detail.  See the comment at the</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">// top of this file for the API documentation.</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">namespace </span>absl {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;ABSL_NAMESPACE_BEGIN</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">namespace </span>base_internal {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">// The five classes below each implement one of the clauses from the definition</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">// of INVOKE. The inner class template Accept&lt;F, Args...&gt; checks whether the</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">// clause is applicable; static function template Invoke(f, args...) does the</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">// invocation.</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">// By separating the clause selection logic from invocation we make sure that</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">// Invoke() does exactly what the standard says.</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived&gt;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_stripped_accept.html">   82</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_stripped_accept.html">StrippedAccept</a> {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_stripped_accept_1_1_accept.html">   84</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_stripped_accept_1_1_accept.html">Accept</a> : Derived::template AcceptImpl&lt;typename std::remove_cv&lt;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                      typename std::remove_reference&lt;Args&gt;::type&gt;::type...&gt; {};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">// (t1.*f)(t2, ..., tN) when f is a pointer to a member function of a class T</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">// and t1 is an object of type T or a reference to an object of type T or a</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">// reference to an object of a type derived from T.</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_mem_fun_and_ref.html">   91</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_mem_fun_and_ref.html">MemFunAndRef</a> : <a class="code" href="structabsl_1_1base__internal_1_1_stripped_accept.html">StrippedAccept</a>&lt;MemFunAndRef&gt; {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_mem_fun_and_ref_1_1_accept_impl.html">   93</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_mem_fun_and_ref_1_1_accept_impl.html">AcceptImpl</a> : std::false_type {};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MemFunType, <span class="keyword">typename</span> C, <span class="keyword">typename</span> Obj, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_mem_fun_and_ref_1_1_accept_impl_3_01_mem_fun_type_01_c_1_1_5_00_01_obj_00_01_args_8_8_8_01_4.html">   96</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_mem_fun_and_ref_1_1_accept_impl.html">AcceptImpl</a>&lt;MemFunType C::*, Obj, Args...&gt;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      : std::integral_constant&lt;bool, std::is_base_of&lt;C, Obj&gt;::value &amp;&amp;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                                         absl::is_function&lt;MemFunType&gt;::value&gt; {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  };</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MemFun, <span class="keyword">typename</span> Obj, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keyword">static</span> decltype((std::declval&lt;Obj&gt;().*</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                   std::declval&lt;MemFun&gt;())(std::declval&lt;Args&gt;()...))</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  Invoke(MemFun&amp;&amp; mem_fun, Obj&amp;&amp; obj, Args&amp;&amp;... args) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">// Ignore bogus GCC warnings on this line.</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">// See https://gcc.gnu.org/bugzilla/show_bug.cgi?id=101436 for similar example.</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#if ABSL_INTERNAL_HAVE_MIN_GNUC_VERSION(11, 0)</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Warray-bounds&quot;</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wmaybe-uninitialized&quot;</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> (std::forward&lt;Obj&gt;(obj).*</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            std::forward&lt;MemFun&gt;(mem_fun))(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#if ABSL_INTERNAL_HAVE_MIN_GNUC_VERSION(11, 0)</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;};</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">// ((*t1).*f)(t2, ..., tN) when f is a pointer to a member function of a</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">// class T and t1 is not one of the types described in the previous item.</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_mem_fun_and_ptr.html">  122</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_mem_fun_and_ptr.html">MemFunAndPtr</a> : <a class="code" href="structabsl_1_1base__internal_1_1_stripped_accept.html">StrippedAccept</a>&lt;MemFunAndPtr&gt; {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_mem_fun_and_ptr_1_1_accept_impl.html">  124</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_mem_fun_and_ptr_1_1_accept_impl.html">AcceptImpl</a> : std::false_type {};</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MemFunType, <span class="keyword">typename</span> C, <span class="keyword">typename</span> Ptr, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_mem_fun_and_ptr_1_1_accept_impl_3_01_mem_fun_type_01_c_1_1_5_00_01_ptr_00_01_args_8_8_8_01_4.html">  127</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_mem_fun_and_ptr_1_1_accept_impl.html">AcceptImpl</a>&lt;MemFunType C::*, Ptr, Args...&gt;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      : std::integral_constant&lt;bool, !std::is_base_of&lt;C, Ptr&gt;::value &amp;&amp;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                                         absl::is_function&lt;MemFunType&gt;::value&gt; {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  };</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MemFun, <span class="keyword">typename</span> Ptr, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keyword">static</span> decltype(((*std::declval&lt;Ptr&gt;()).*</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                   std::declval&lt;MemFun&gt;())(std::declval&lt;Args&gt;()...))</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  Invoke(MemFun&amp;&amp; mem_fun, Ptr&amp;&amp; ptr, Args&amp;&amp;... args) {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">return</span> ((*std::forward&lt;Ptr&gt;(ptr)).*</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            std::forward&lt;MemFun&gt;(mem_fun))(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;};</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">// t1.*f when N == 1 and f is a pointer to member data of a class T and t1 is</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">// an object of type T or a reference to an object of type T or a reference</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">// to an object of a type derived from T.</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_data_mem_and_ref.html">  144</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_data_mem_and_ref.html">DataMemAndRef</a> : <a class="code" href="structabsl_1_1base__internal_1_1_stripped_accept.html">StrippedAccept</a>&lt;DataMemAndRef&gt; {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_data_mem_and_ref_1_1_accept_impl.html">  146</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_data_mem_and_ref_1_1_accept_impl.html">AcceptImpl</a> : std::false_type {};</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> C, <span class="keyword">typename</span> Obj&gt;</div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_data_mem_and_ref_1_1_accept_impl_3_01_r_01_c_1_1_5_00_01_obj_01_4.html">  149</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_data_mem_and_ref_1_1_accept_impl.html">AcceptImpl</a>&lt;R C::*, Obj&gt;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      : std::integral_constant&lt;bool, std::is_base_of&lt;C, Obj&gt;::value &amp;&amp;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                                         !absl::is_function&lt;R&gt;::value&gt; {};</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataMem, <span class="keyword">typename</span> Ref&gt;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keyword">static</span> decltype(std::declval&lt;Ref&gt;().*std::declval&lt;DataMem&gt;()) Invoke(</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      DataMem&amp;&amp; data_mem, Ref&amp;&amp; <a class="code" href="namespaceboost.html#ad1b74511c1257b0e99d433245fd89558">ref</a>) {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">return</span> std::forward&lt;Ref&gt;(<a class="code" href="namespaceboost.html#ad1b74511c1257b0e99d433245fd89558">ref</a>).*std::forward&lt;DataMem&gt;(data_mem);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;};</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">// (*t1).*f when N == 1 and f is a pointer to member data of a class T and t1</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">// is not one of the types described in the previous item.</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_data_mem_and_ptr.html">  162</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_data_mem_and_ptr.html">DataMemAndPtr</a> : <a class="code" href="structabsl_1_1base__internal_1_1_stripped_accept.html">StrippedAccept</a>&lt;DataMemAndPtr&gt; {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_data_mem_and_ptr_1_1_accept_impl.html">  164</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_data_mem_and_ptr_1_1_accept_impl.html">AcceptImpl</a> : std::false_type {};</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> C, <span class="keyword">typename</span> Ptr&gt;</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_data_mem_and_ptr_1_1_accept_impl_3_01_r_01_c_1_1_5_00_01_ptr_01_4.html">  167</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_data_mem_and_ptr_1_1_accept_impl.html">AcceptImpl</a>&lt;R C::*, Ptr&gt;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      : std::integral_constant&lt;bool, !std::is_base_of&lt;C, Ptr&gt;::value &amp;&amp;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                                         !absl::is_function&lt;R&gt;::value&gt; {};</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataMem, <span class="keyword">typename</span> Ptr&gt;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keyword">static</span> decltype((*std::declval&lt;Ptr&gt;()).*std::declval&lt;DataMem&gt;()) Invoke(</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      DataMem&amp;&amp; data_mem, Ptr&amp;&amp; ptr) {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">return</span> (*std::forward&lt;Ptr&gt;(ptr)).*std::forward&lt;DataMem&gt;(data_mem);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;};</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment">// f(t1, t2, ..., tN) in all other cases.</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_callable.html">  179</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_callable.html">Callable</a> {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="comment">// Callable doesn&#39;t have Accept because it&#39;s the last clause that gets picked</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="comment">// when none of the previous clauses are applicable.</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keyword">static</span> decltype(std::declval&lt;F&gt;()(std::declval&lt;Args&gt;()...)) Invoke(</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      F&amp;&amp; f, Args&amp;&amp;... args) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">return</span> std::forward&lt;F&gt;(f)(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;};</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment">// Resolves to the first matching clause.</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_invoker.html">  191</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_invoker.html">Invoker</a> {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span> std::conditional&lt;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      MemFunAndRef::Accept&lt;Args...&gt;::value, <a class="code" href="structabsl_1_1base__internal_1_1_mem_fun_and_ref.html">MemFunAndRef</a>,</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      <span class="keyword">typename</span> std::conditional&lt;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;          MemFunAndPtr::Accept&lt;Args...&gt;::value, <a class="code" href="structabsl_1_1base__internal_1_1_mem_fun_and_ptr.html">MemFunAndPtr</a>,</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;          <span class="keyword">typename</span> std::conditional&lt;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;              DataMemAndRef::Accept&lt;Args...&gt;::value, <a class="code" href="structabsl_1_1base__internal_1_1_data_mem_and_ref.html">DataMemAndRef</a>,</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;              <span class="keyword">typename</span> std::conditional&lt;DataMemAndPtr::Accept&lt;Args...&gt;::value,</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                                        <a class="code" href="structabsl_1_1base__internal_1_1_data_mem_and_ptr.html">DataMemAndPtr</a>, <a class="code" href="structabsl_1_1base__internal_1_1_callable.html">Callable</a>&gt;::type&gt;::type&gt;::</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;          type&gt;::type type;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;};</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">// The result type of Invoke&lt;F, Args...&gt;.</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="keyword">using</span> invoke_result_t = decltype(<a class="code" href="structabsl_1_1base__internal_1_1_invoker.html">Invoker&lt;F, Args...&gt;::type::Invoke</a>(</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    std::declval&lt;F&gt;(), std::declval&lt;Args&gt;()...));</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment">// Invoke(f, args...) is an implementation of INVOKE(f, args...) from section</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment">// [func.require] of the C++ standard.</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;invoke_result_t&lt;F, Args...&gt; invoke(F&amp;&amp; f, Args&amp;&amp;... args) {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="structabsl_1_1base__internal_1_1_invoker.html">Invoker&lt;F, Args...&gt;::type::Invoke</a>(std::forward&lt;F&gt;(f),</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                                           std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;}</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AlwaysVoid, <span class="keyword">typename</span>, <span class="keyword">typename</span>, <span class="keyword">typename</span>...&gt;</div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_is_invocable_r_impl.html">  217</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_is_invocable_r_impl.html">IsInvocableRImpl</a> : std::false_type {};</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> F, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="structabsl_1_1base__internal_1_1_is_invocable_r_impl_3_01absl_1_1void__t_3_01absl_1_1base__inter40d3ad7581cf4bcde4c04772bc35a868.html">  220</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structabsl_1_1base__internal_1_1_is_invocable_r_impl.html">IsInvocableRImpl</a>&lt;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    absl::void_t&lt;absl::base_internal::invoke_result_t&lt;F, Args...&gt; &gt;, R, F,</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    Args...&gt;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    : std::integral_constant&lt;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;          bool,</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;          std::is_convertible&lt;absl::base_internal::invoke_result_t&lt;F, Args...&gt;,</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                              R&gt;::value ||</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;              std::is_void&lt;R&gt;::value&gt; {};</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment">// Type trait whose member `value` is true if invoking `F` with `Args` is valid,</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">// and either the return type is convertible to `R`, or `R` is void.</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">// C++11-compatible version of `std::is_invocable_r`.</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> F, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="keyword">using</span> <a class="code" href="structabsl_1_1base__internal_1_1_is_invocable_r_impl.html">is_invocable_r</a> = <a class="code" href="structabsl_1_1base__internal_1_1_is_invocable_r_impl.html">IsInvocableRImpl</a>&lt;void, R, F, Args...&gt;;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}  <span class="comment">// namespace base_internal</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;ABSL_NAMESPACE_END</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;}  <span class="comment">// namespace absl</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">#endif  // ABSL_INTERNAL_CPLUSPLUS_LANG &gt;= 201703L</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">#endif  // ABSL_BASE_INTERNAL_INVOKE_H_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astructabsl_1_1base__internal_1_1_invoker_html"><div class="ttname"><a href="structabsl_1_1base__internal_1_1_invoker.html">absl::base_internal::Invoker</a></div><div class="ttdef"><b>Definition:</b> invoke.h:191</div></div>
+<div class="ttc" id="astructabsl_1_1base__internal_1_1_mem_fun_and_ref_1_1_accept_impl_html"><div class="ttname"><a href="structabsl_1_1base__internal_1_1_mem_fun_and_ref_1_1_accept_impl.html">absl::base_internal::MemFunAndRef::AcceptImpl</a></div><div class="ttdef"><b>Definition:</b> invoke.h:93</div></div>
+<div class="ttc" id="astructabsl_1_1base__internal_1_1_mem_fun_and_ptr_1_1_accept_impl_html"><div class="ttname"><a href="structabsl_1_1base__internal_1_1_mem_fun_and_ptr_1_1_accept_impl.html">absl::base_internal::MemFunAndPtr::AcceptImpl</a></div><div class="ttdef"><b>Definition:</b> invoke.h:124</div></div>
+<div class="ttc" id="astructabsl_1_1base__internal_1_1_data_mem_and_ptr_html"><div class="ttname"><a href="structabsl_1_1base__internal_1_1_data_mem_and_ptr.html">absl::base_internal::DataMemAndPtr</a></div><div class="ttdef"><b>Definition:</b> invoke.h:162</div></div>
+<div class="ttc" id="anamespaceboost_html_ad1b74511c1257b0e99d433245fd89558"><div class="ttname"><a href="namespaceboost.html#ad1b74511c1257b0e99d433245fd89558">boost::ref</a></div><div class="ttdeci">BOOST_FORCEINLINE reference_wrapper&lt; T &gt; BOOST_REF_CONST ref(T &amp;t)</div><div class="ttdef"><b>Definition:</b> ref.hpp:132</div></div>
+<div class="ttc" id="astructabsl_1_1base__internal_1_1_data_mem_and_ref_1_1_accept_impl_html"><div class="ttname"><a href="structabsl_1_1base__internal_1_1_data_mem_and_ref_1_1_accept_impl.html">absl::base_internal::DataMemAndRef::AcceptImpl</a></div><div class="ttdef"><b>Definition:</b> invoke.h:146</div></div>
+<div class="ttc" id="astructabsl_1_1base__internal_1_1_mem_fun_and_ref_html"><div class="ttname"><a href="structabsl_1_1base__internal_1_1_mem_fun_and_ref.html">absl::base_internal::MemFunAndRef</a></div><div class="ttdef"><b>Definition:</b> invoke.h:91</div></div>
+<div class="ttc" id="astructabsl_1_1base__internal_1_1_data_mem_and_ptr_1_1_accept_impl_html"><div class="ttname"><a href="structabsl_1_1base__internal_1_1_data_mem_and_ptr_1_1_accept_impl.html">absl::base_internal::DataMemAndPtr::AcceptImpl</a></div><div class="ttdef"><b>Definition:</b> invoke.h:164</div></div>
+<div class="ttc" id="astructabsl_1_1base__internal_1_1_is_invocable_r_impl_html"><div class="ttname"><a href="structabsl_1_1base__internal_1_1_is_invocable_r_impl.html">absl::base_internal::IsInvocableRImpl</a></div><div class="ttdef"><b>Definition:</b> invoke.h:217</div></div>
+<div class="ttc" id="astructabsl_1_1base__internal_1_1_mem_fun_and_ptr_html"><div class="ttname"><a href="structabsl_1_1base__internal_1_1_mem_fun_and_ptr.html">absl::base_internal::MemFunAndPtr</a></div><div class="ttdef"><b>Definition:</b> invoke.h:122</div></div>
+<div class="ttc" id="astructabsl_1_1base__internal_1_1_data_mem_and_ref_html"><div class="ttname"><a href="structabsl_1_1base__internal_1_1_data_mem_and_ref.html">absl::base_internal::DataMemAndRef</a></div><div class="ttdef"><b>Definition:</b> invoke.h:144</div></div>
+<div class="ttc" id="astructabsl_1_1base__internal_1_1_callable_html"><div class="ttname"><a href="structabsl_1_1base__internal_1_1_callable.html">absl::base_internal::Callable</a></div><div class="ttdef"><b>Definition:</b> invoke.h:179</div></div>
+<div class="ttc" id="astructabsl_1_1base__internal_1_1_stripped_accept_1_1_accept_html"><div class="ttname"><a href="structabsl_1_1base__internal_1_1_stripped_accept_1_1_accept.html">absl::base_internal::StrippedAccept::Accept</a></div><div class="ttdef"><b>Definition:</b> invoke.h:84</div></div>
+<div class="ttc" id="astructabsl_1_1base__internal_1_1_stripped_accept_html"><div class="ttname"><a href="structabsl_1_1base__internal_1_1_stripped_accept.html">absl::base_internal::StrippedAccept</a></div><div class="ttdef"><b>Definition:</b> invoke.h:82</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1794b65aa62003e11b03e0565def47fa.html">external</a></li><li class="navelem"><a class="el" href="dir_3b2981cbb116c36ad9ad7225b84e71bc.html">libwebrtc</a></li><li class="navelem"><a class="el" href="dir_8ce0b117d0c708dd3bc7f5ef1112bf20.html">third_party</a></li><li class="navelem"><a class="el" href="dir_8066ced739504639363a98f1c64d6b40.html">abseil-cpp</a></li><li class="navelem"><a class="el" href="dir_6e2c803b5743c1bced3ede47b31ffcf7.html">absl</a></li><li class="navelem"><a class="el" href="dir_718ec2072b52e6599cc2403339c96264.html">base</a></li><li class="navelem"><a class="el" href="dir_91928032077c332cd8c86ba48644c081.html">internal</a></li><li class="navelem"><b>invoke.h</b></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+var structboost_1_1numeric_1_1numeric__cast__traits_3_01boost_1_1long__long__type_00_01boost_1_1long__long__type_01_4 =
+[
+    [ "overflow_policy", "structboost_1_1numeric_1_1numeric__cast__traits_3_01boost_1_1long__long__type_00_01boost_1_1long__long__type_01_4.html#ac3eafd79342c9b25feaa55bb1e6db16c", null ],
+    [ "range_checking_policy", "structboost_1_1numeric_1_1numeric__cast__traits_3_01boost_1_1long__long__type_00_01boost_1_1long__long__type_01_4.html#ab1485e630760c2dd4cd041ad0cce16b7", null ],
+    [ "rounding_policy", "structboost_1_1numeric_1_1numeric__cast__traits_3_01boost_1_1long__long__type_00_01boost_1_1long__long__type_01_4.html#addee981c2256eeb68df3b90e3febd7d2", null ]
+];

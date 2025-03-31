@@ -1,0 +1,4 @@
+var classboost_1_1asio_1_1detail_1_1consuming__buffers_3_01const__buffer_00_01const__buffer_00_01const_01const__buffer_01_5_01_4 =
+[
+    [ "consuming_buffers", "classboost_1_1asio_1_1detail_1_1consuming__buffers_3_01const__buffer_00_01const__buffer_00_01const_01const__buffer_01_5_01_4.html#ab7165301f65bf29c15ee0ce03fc949fc", null ]
+];

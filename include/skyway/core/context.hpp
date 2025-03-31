@@ -27,6 +27,9 @@ namespace channel {
 class CoreChannelTest;
 
 }  // namespace channel
+namespace ice {
+class CoreIceManagerTest;
+}  // namespace ice
 }  // namespace core
 }  // namespace skyway
 
@@ -34,8 +37,6 @@ namespace skyway {
 namespace core {
 
 using RemoteMemberPluginInterface     = interface::RemoteMemberPlugin;
-using AuthTokenManagerInterface       = token::interface::AuthTokenManager;
-using RtcApiClientInterface           = rtc_api::interface::Client;
 using HttpClientInterface             = network::interface::HttpClient;
 using WebSocketClientFactoryInterface = network::interface::WebSocketClientFactory;
 using PlatformInfoDelegatorInterface  = platform::interface::PlatformInfoDelegator;
@@ -100,11 +101,11 @@ public:
     /// @cond INTERNAL_SECTION
     /// @brief AuthTokenManagerを取得します。
     /// @details BridgeはこのメソッドをWrapしません。
-    static AuthTokenManagerInterface* AuthTokenManager();
+    static std::weak_ptr<token::interface::AuthTokenManager> AuthTokenManager();
 
     /// @brief RtcApiClientを取得します。
     /// @details BridgeはこのメソッドをWrapしません。
-    static RtcApiClientInterface* RtcApi();
+    static std::weak_ptr<rtc_api::interface::Client> RtcApi();
 
     /// @brief Setupで入力されたオプションを取得します。
     /// @details BridgeはこのメソッドをWrapしません。
@@ -137,8 +138,8 @@ private:
     static EventListener* listener_;
     static bool is_setup_;
     static std::mutex setup_mtx_;
-    static std::unique_ptr<RtcApiClientInterface> rtc_api_;
-    static std::unique_ptr<AuthTokenManagerInterface> token_manager_;
+    static std::shared_ptr<rtc_api::interface::Client> rtc_api_;
+    static std::shared_ptr<token::interface::AuthTokenManager> token_manager_;
     static ContextOptions options_;
     static std::vector<std::unique_ptr<RemoteMemberPluginInterface>> plugins_;
 
@@ -146,6 +147,7 @@ public:
     /// @cond INTERNAL_SECTION
     friend class CoreContextTest;
     friend class channel::CoreChannelTest;
+    friend class ice::CoreIceManagerTest;
     /// @endcond
 };
 
