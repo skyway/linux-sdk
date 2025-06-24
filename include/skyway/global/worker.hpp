@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by Naoto Takahashi on 2024/03/05.
-//  Copyright © 2024 NTT Communications. All rights reserved.
+//  Copyright © 2024 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_GLOBAL_WORKER_HPP_

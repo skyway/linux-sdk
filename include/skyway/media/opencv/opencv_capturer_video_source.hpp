@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by ogura on 2024/12/11.
-//  Copyright © 2024 NTT Communications. All rights reserved.
+//  Copyright © 2024 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 // Define “SKYWAY_ENABLE_OPENCV” if you want to use OpenCV functionality

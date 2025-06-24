@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by ogura on 2025/1/10.
-//  Copyright © 2025 NTT Communications. All rights reserved.
+//  Copyright © 2025 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_MEDIA_INTERFACE_CAPTURER_VIDEO_SOURCE_HPP_

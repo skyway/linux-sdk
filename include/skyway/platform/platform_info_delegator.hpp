@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by iorar on 2024/05/08.
-//  Copyright © 2024 NTT Communications. All rights reserved.
+//  Copyright © 2024 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_PLATFORM_PLATFORM_INFO_DELEGATOR_HPP_

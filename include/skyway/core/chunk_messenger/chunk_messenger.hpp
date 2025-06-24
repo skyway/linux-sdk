@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by sandabu on 2021/05/20.
-//  Copyright © 2020 NTT Communications. All rights reserved.
+//  Copyright © 2020 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_CORE_CHUNK_MESSENGER_CHUNK_MESSENGER_HPP_

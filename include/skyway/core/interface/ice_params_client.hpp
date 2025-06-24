@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by salmon on 2023/05/16.
-//  Copyright © 2023 NTT Communications. All rights reserved.
+//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_CORE_INTERFACE_ICE_PARAMS_CLIENT_HPP_

@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by Muranaka Kei on 2024/01/15.
-//  Copyright © 2024 NTT Communications. All rights reserved.
+//  Copyright © 2024 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_CORE_ANALYTICS_CLIENT_FACTORY_HPP_

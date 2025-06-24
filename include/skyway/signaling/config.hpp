@@ -3,7 +3,7 @@
 //  config
 //
 //  Created by sandabu on 2021/09/07.
-//  Copyright © 2021 NTT Communications. All rights reserved.
+//  Copyright © 2021 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_SIGNALING_CONFIG_HPP_

@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by riad on 2023/05/08.
-//  Copyright © 2022 NTT Communications. All rights reserved.
+//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_SFU_OPTIONS_HPP_
