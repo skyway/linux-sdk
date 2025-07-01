@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by Naoto Takahashi on 2022/09/29.
-//  Copyright © 2022 NTT Communications. All rights reserved.
+//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_GLOBAL_CONFIG_HPP_

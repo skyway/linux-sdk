@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by ogura on 2023/02/07.
-//  Copyright © 2023 NTT Communications. All rights reserved.
+//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_CORE_INTERFACE_REMOTE_MEDIA_STREAM_HPP_

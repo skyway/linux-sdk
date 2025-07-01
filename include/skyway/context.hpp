@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by iorar on 2023/10/02.
-//  Copyright © 2023 NTT Communications. All rights reserved.
+//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_CONTEXT_HPP_

@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by sandabu on 2021/11/16.
-//  Copyright © 2021 NTT Communications. All rights reserved.
+//  Copyright © 2021 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_CONNECTION_RECEIVER_HPP_

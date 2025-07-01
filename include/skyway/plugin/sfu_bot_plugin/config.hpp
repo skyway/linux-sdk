@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by salmon on 2022/2/22.
-//  Copyright © 2022 NTT Communications. All rights reserved.
+//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONFIG_HPP_

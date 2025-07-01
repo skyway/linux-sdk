@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by ogura on 2023/09/15.
-//  Copyright © 2023 NTT Communications. All rights reserved.
+//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_SIGNALING_DTO_RESPONSE_HPP_

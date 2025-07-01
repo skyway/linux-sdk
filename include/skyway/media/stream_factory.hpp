@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by iorar on 2024/10/28.
-//  Copyright © 2024 NTT Communications. All rights reserved.
+//  Copyright © 2024 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_MEDIA_STREAM_FACTORY_HPP_

@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by ogura on 2024/4/2.
-//  Copyright © 2024 NTT Communications. All rights reserved.
+//  Copyright © 2024 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_MEDIA_I420_VIDEO_RENDERER_HPP_

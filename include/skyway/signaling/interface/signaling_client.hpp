@@ -3,7 +3,7 @@
 //  skyway
 //
 //  Created by sandabu on 2021/10/14.
-//  Copyright © 2021 NTT Communications. All rights reserved.
+//  Copyright © 2021 NTT DOCOMO BUSINESS, Inc. All rights reserved.
 //
 
 #ifndef SKYWAY_SIGNALING_INTERFACE_SIGNALING_CLIENT_HPP_
