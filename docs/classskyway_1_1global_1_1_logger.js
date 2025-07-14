@@ -2,6 +2,7 @@ var classskyway_1_1global_1_1_logger =
 [
     [ "Listener", "classskyway_1_1global_1_1_logger_1_1_listener.html", "classskyway_1_1global_1_1_logger_1_1_listener" ],
     [ "Logger", "classskyway_1_1global_1_1_logger.html#a1403c831aa78035f51affb218ef56213", null ],
+    [ "~Logger", "classskyway_1_1global_1_1_logger.html#a310f0d703749d713719ac21547ac48c7", null ],
     [ "Debug", "classskyway_1_1global_1_1_logger.html#ac75de165a72418e588e3d373fd1c5311", null ],
     [ "Error", "classskyway_1_1global_1_1_logger.html#aef7e893ddf7f903b86715e3efa8133a5", null ],
     [ "Info", "classskyway_1_1global_1_1_logger.html#ab75de2cca229894998d5d4fce17f9536", null ],

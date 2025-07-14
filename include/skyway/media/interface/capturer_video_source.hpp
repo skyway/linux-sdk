@@ -10,15 +10,12 @@
 #define SKYWAY_MEDIA_INTERFACE_CAPTURER_VIDEO_SOURCE_HPP_
 
 #include <media/base/adapted_video_track_source.h>
-#include <modules/video_capture/video_capture.h>
-#include <modules/video_capture/video_capture_factory.h>
 
 namespace skyway {
 namespace media {
 namespace interface {
 
-class InternalCapturerVideoSource : public rtc::AdaptedVideoTrackSource,
-                                    public rtc::VideoSinkInterface<webrtc::VideoFrame> {
+class InternalCapturerVideoSource : public rtc::AdaptedVideoTrackSource {
 public:
     virtual ~InternalCapturerVideoSource() = default;
 };

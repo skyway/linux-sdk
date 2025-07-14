@@ -6,10 +6,10 @@
 - 任意のルームにJoinし、OpenCVを利用して作成したVideoをPublishします。また、他のメンバーがPublishしたVideoをSubscribeし、cv::imshowを利用して表示します。
 
 ## ビルド/実行方法
-- 本サンプルでは追加でいくつかのパッケージが必要となります。aptを利用してinstallしてください。
+- 本サンプルでは追加のパッケージが必要となります。aptを利用してinstallしてください。
 ```
 apt update 
-apt install ffmpeg libswscale-dev 
+apt install libswscale-dev 
 ```
 利用するOpenCVのバージョンは4.6.0を想定しています。
 `Ubuntu24.04`の場合はaptを利用してinstallしてください。

@@ -24,7 +24,7 @@ class Context : public core::Context {
 public:
     static const unsigned int VERSION_MAJOR = 2;
     static const unsigned int VERSION_MINOR = 0;
-    static const unsigned int VERSION_PATCH = 0;
+    static const unsigned int VERSION_PATCH = 1;
 
     /// @brief SkyWayの利用に関する設定
     struct SkyWayOptions : core::ContextOptions {
