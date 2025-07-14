@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('classskyway_1_1room_1_1abstract_1_1_room.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,9 +87,16 @@ $(document).ready(function(){initNavTree('classskyway_1_1room_1_1abstract_1_1_ro
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -97,8 +105,7 @@ $(document).ready(function(){initNavTree('classskyway_1_1room_1_1abstract_1_1_ro
 <a href="#pro-methods">限定公開メンバ関数</a> &#124;
 <a href="#pro-attribs">限定公開変数類</a> &#124;
 <a href="classskyway_1_1room_1_1abstract_1_1_room-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">skyway::room::abstract::Room クラス</div>  </div>
+  <div class="headertitle"><div class="title">skyway::room::abstract::Room クラス</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -118,170 +125,445 @@ skyway::room::abstract::Room の継承関係図</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a5045dc96dea57dbf1dadfcd8860b7d1b"><td class="memItemLeft" align="right" valign="top"><a id="a5045dc96dea57dbf1dadfcd8860b7d1b"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a5045dc96dea57dbf1dadfcd8860b7d1b">Id</a> () override</td></tr>
-<tr class="memdesc:a5045dc96dea57dbf1dadfcd8860b7d1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Idを取得します。 <br /></td></tr>
+<tr class="memitem:a5045dc96dea57dbf1dadfcd8860b7d1b" id="r_a5045dc96dea57dbf1dadfcd8860b7d1b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a5045dc96dea57dbf1dadfcd8860b7d1b">Id</a> () override</td></tr>
+<tr class="memdesc:a5045dc96dea57dbf1dadfcd8860b7d1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Idを取得します。  <br /></td></tr>
 <tr class="separator:a5045dc96dea57dbf1dadfcd8860b7d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef7b8ff5cd45357d8e4c527eccbbb38b"><td class="memItemLeft" align="right" valign="top"><a id="aef7b8ff5cd45357d8e4c527eccbbb38b"></a>
-std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#aef7b8ff5cd45357d8e4c527eccbbb38b">Name</a> () override</td></tr>
-<tr class="memdesc:aef7b8ff5cd45357d8e4c527eccbbb38b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nameを取得します。 <br /></td></tr>
-<tr class="separator:aef7b8ff5cd45357d8e4c527eccbbb38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f225e92a0db0f11ec38894338adc694"><td class="memItemLeft" align="right" valign="top"><a id="a6f225e92a0db0f11ec38894338adc694"></a>
-std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a6f225e92a0db0f11ec38894338adc694">Metadata</a> () override</td></tr>
-<tr class="memdesc:a6f225e92a0db0f11ec38894338adc694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadataを取得します。 <br /></td></tr>
-<tr class="separator:a6f225e92a0db0f11ec38894338adc694"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc1e79c0fd1270e53fd4f047b1da1649"><td class="memItemLeft" align="right" valign="top"><a id="acc1e79c0fd1270e53fd4f047b1da1649"></a>
-core::interface::ChannelState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#acc1e79c0fd1270e53fd4f047b1da1649">State</a> () override</td></tr>
-<tr class="memdesc:acc1e79c0fd1270e53fd4f047b1da1649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateを取得します。 <br /></td></tr>
+<tr class="memitem:ac76ef42a87690fcfdd73425c9b1b87ef" id="r_ac76ef42a87690fcfdd73425c9b1b87ef"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#ac76ef42a87690fcfdd73425c9b1b87ef">Name</a> () override</td></tr>
+<tr class="memdesc:ac76ef42a87690fcfdd73425c9b1b87ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nameを取得します。  <br /></td></tr>
+<tr class="separator:ac76ef42a87690fcfdd73425c9b1b87ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f1d2b6b79bc47d91405cda926ff7d21" id="r_a2f1d2b6b79bc47d91405cda926ff7d21"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a2f1d2b6b79bc47d91405cda926ff7d21">Metadata</a> () override</td></tr>
+<tr class="memdesc:a2f1d2b6b79bc47d91405cda926ff7d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadataを取得します。  <br /></td></tr>
+<tr class="separator:a2f1d2b6b79bc47d91405cda926ff7d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc1e79c0fd1270e53fd4f047b1da1649" id="r_acc1e79c0fd1270e53fd4f047b1da1649"><td class="memItemLeft" align="right" valign="top">core::interface::ChannelState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#acc1e79c0fd1270e53fd4f047b1da1649">State</a> () override</td></tr>
+<tr class="memdesc:acc1e79c0fd1270e53fd4f047b1da1649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateを取得します。  <br /></td></tr>
 <tr class="separator:acc1e79c0fd1270e53fd4f047b1da1649"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a159bacdcdad09fced24657c425418b47"><td class="memItemLeft" align="right" valign="top"><a id="a159bacdcdad09fced24657c425418b47"></a>
-std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html">interface::RoomPublication</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a159bacdcdad09fced24657c425418b47">Publications</a> () override</td></tr>
-<tr class="memdesc:a159bacdcdad09fced24657c425418b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roomインスタンスに紐づくPublicationの一覧を取得します。 <br /></td></tr>
-<tr class="separator:a159bacdcdad09fced24657c425418b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f8294928de85303f5036c5eae2eee61"><td class="memItemLeft" align="right" valign="top"><a id="a5f8294928de85303f5036c5eae2eee61"></a>
-std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html">interface::RoomSubscription</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a5f8294928de85303f5036c5eae2eee61">Subscriptions</a> () override</td></tr>
-<tr class="memdesc:a5f8294928de85303f5036c5eae2eee61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roomインスタンスに紐づくSubscriptionの一覧を取得します。 <br /></td></tr>
-<tr class="separator:a5f8294928de85303f5036c5eae2eee61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa947f5ce2f3826e46a67d4943155c529"><td class="memItemLeft" align="right" valign="top"><a id="aa947f5ce2f3826e46a67d4943155c529"></a>
-std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html">interface::RoomMember</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#aa947f5ce2f3826e46a67d4943155c529">Members</a> () override</td></tr>
-<tr class="memdesc:aa947f5ce2f3826e46a67d4943155c529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roomインスタンスに紐づくRoomMemberの一覧を取得します。 <br /></td></tr>
-<tr class="separator:aa947f5ce2f3826e46a67d4943155c529"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8d7808271c34edd3e956d6ad8f0b199"><td class="memItemLeft" align="right" valign="top"><a id="ab8d7808271c34edd3e956d6ad8f0b199"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#ab8d7808271c34edd3e956d6ad8f0b199">AddEventListener</a> (<a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">interface::Room::EventListener</a> *listener) override</td></tr>
-<tr class="memdesc:ab8d7808271c34edd3e956d6ad8f0b199"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントを購読します。 <br /></td></tr>
+<tr class="memitem:a7235afb26d64f8e96611c3fa2d057714" id="r_a7235afb26d64f8e96611c3fa2d057714"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html">interface::RoomPublication</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a7235afb26d64f8e96611c3fa2d057714">Publications</a> () override</td></tr>
+<tr class="memdesc:a7235afb26d64f8e96611c3fa2d057714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roomインスタンスに紐づくPublicationの一覧を取得します。  <br /></td></tr>
+<tr class="separator:a7235afb26d64f8e96611c3fa2d057714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae56b0f69ee7bc11c7a30cf4ae32d1f" id="r_a0ae56b0f69ee7bc11c7a30cf4ae32d1f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html">interface::RoomSubscription</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a0ae56b0f69ee7bc11c7a30cf4ae32d1f">Subscriptions</a> () override</td></tr>
+<tr class="memdesc:a0ae56b0f69ee7bc11c7a30cf4ae32d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roomインスタンスに紐づくSubscriptionの一覧を取得します。  <br /></td></tr>
+<tr class="separator:a0ae56b0f69ee7bc11c7a30cf4ae32d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a908aa4d66d9ad22ec93db6dae96e1d7f" id="r_a908aa4d66d9ad22ec93db6dae96e1d7f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html">interface::RoomMember</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a908aa4d66d9ad22ec93db6dae96e1d7f">Members</a> () override</td></tr>
+<tr class="memdesc:a908aa4d66d9ad22ec93db6dae96e1d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roomインスタンスに紐づくRoomMemberの一覧を取得します。  <br /></td></tr>
+<tr class="separator:a908aa4d66d9ad22ec93db6dae96e1d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8d7808271c34edd3e956d6ad8f0b199" id="r_ab8d7808271c34edd3e956d6ad8f0b199"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#ab8d7808271c34edd3e956d6ad8f0b199">AddEventListener</a> (<a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">interface::Room::EventListener</a> *listener) override</td></tr>
+<tr class="memdesc:ab8d7808271c34edd3e956d6ad8f0b199"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントを購読します。  <br /></td></tr>
 <tr class="separator:ab8d7808271c34edd3e956d6ad8f0b199"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e4e507a38a89abe375dd565461e96bd"><td class="memItemLeft" align="right" valign="top"><a id="a7e4e507a38a89abe375dd565461e96bd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a7e4e507a38a89abe375dd565461e96bd">RemoveEventListener</a> (<a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">interface::Room::EventListener</a> *listener) override</td></tr>
-<tr class="memdesc:a7e4e507a38a89abe375dd565461e96bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントの購読を中止します。 <br /></td></tr>
+<tr class="memitem:a7e4e507a38a89abe375dd565461e96bd" id="r_a7e4e507a38a89abe375dd565461e96bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a7e4e507a38a89abe375dd565461e96bd">RemoveEventListener</a> (<a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">interface::Room::EventListener</a> *listener) override</td></tr>
+<tr class="memdesc:a7e4e507a38a89abe375dd565461e96bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントの購読を中止します。  <br /></td></tr>
 <tr class="separator:a7e4e507a38a89abe375dd565461e96bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5b08ea123c4ffd28d65736460a55206"><td class="memItemLeft" align="right" valign="top"><a id="ad5b08ea123c4ffd28d65736460a55206"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#ad5b08ea123c4ffd28d65736460a55206">UpdateMetadata</a> (const std::string &amp;metadata) override</td></tr>
-<tr class="memdesc:ad5b08ea123c4ffd28d65736460a55206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadataを更新します。 <br /></td></tr>
+<tr class="memitem:ad5b08ea123c4ffd28d65736460a55206" id="r_ad5b08ea123c4ffd28d65736460a55206"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#ad5b08ea123c4ffd28d65736460a55206">UpdateMetadata</a> (const std::string &amp;metadata) override</td></tr>
+<tr class="memdesc:ad5b08ea123c4ffd28d65736460a55206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadataを更新します。  <br /></td></tr>
 <tr class="separator:ad5b08ea123c4ffd28d65736460a55206"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ee752198a87004020d592cf8040b983"><td class="memItemLeft" align="right" valign="top"><a id="a7ee752198a87004020d592cf8040b983"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a7ee752198a87004020d592cf8040b983">Leave</a> (<a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html">interface::RoomMember</a> *member) override</td></tr>
-<tr class="memdesc:a7ee752198a87004020d592cf8040b983"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したMemberをRoomから退室させます。 <br /></td></tr>
+<tr class="memitem:a7ee752198a87004020d592cf8040b983" id="r_a7ee752198a87004020d592cf8040b983"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a7ee752198a87004020d592cf8040b983">Leave</a> (<a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html">interface::RoomMember</a> *member) override</td></tr>
+<tr class="memdesc:a7ee752198a87004020d592cf8040b983"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したMemberをRoomから退室させます。  <br /></td></tr>
 <tr class="separator:a7ee752198a87004020d592cf8040b983"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8ff369a3d2eefa00c847cb5a37c350d"><td class="memItemLeft" align="right" valign="top"><a id="aa8ff369a3d2eefa00c847cb5a37c350d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#aa8ff369a3d2eefa00c847cb5a37c350d">Close</a> () override</td></tr>
-<tr class="memdesc:aa8ff369a3d2eefa00c847cb5a37c350d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roomを閉じます。 <br /></td></tr>
+<tr class="memitem:aa8ff369a3d2eefa00c847cb5a37c350d" id="r_aa8ff369a3d2eefa00c847cb5a37c350d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#aa8ff369a3d2eefa00c847cb5a37c350d">Close</a> () override</td></tr>
+<tr class="memdesc:aa8ff369a3d2eefa00c847cb5a37c350d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roomを閉じます。  <br /></td></tr>
 <tr class="separator:aa8ff369a3d2eefa00c847cb5a37c350d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9641d6835066b3cb7f1ee62db5e9f3c5"><td class="memItemLeft" align="right" valign="top"><a id="a9641d6835066b3cb7f1ee62db5e9f3c5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a9641d6835066b3cb7f1ee62db5e9f3c5">Dispose</a> () override</td></tr>
-<tr class="memdesc:a9641d6835066b3cb7f1ee62db5e9f3c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roomを破棄します。破棄されたRoomではイベントが発火しなくなります。 <br /></td></tr>
+<tr class="memitem:a9641d6835066b3cb7f1ee62db5e9f3c5" id="r_a9641d6835066b3cb7f1ee62db5e9f3c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a9641d6835066b3cb7f1ee62db5e9f3c5">Dispose</a> () override</td></tr>
+<tr class="memdesc:a9641d6835066b3cb7f1ee62db5e9f3c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roomを破棄します。破棄されたRoomではイベントが発火しなくなります。  <br /></td></tr>
 <tr class="separator:a9641d6835066b3cb7f1ee62db5e9f3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classskyway_1_1room_1_1interface_1_1_room"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classskyway_1_1room_1_1interface_1_1_room')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html">skyway::room::interface::Room</a> に属する継承公開メンバ関数</td></tr>
-<tr class="memitem:ab883b23bb7bc67e52c1b347c75ba7e2e inherit pub_methods_classskyway_1_1room_1_1interface_1_1_room"><td class="memItemLeft" align="right" valign="top"><a id="ab883b23bb7bc67e52c1b347c75ba7e2e"></a>
-virtual RoomType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#ab883b23bb7bc67e52c1b347c75ba7e2e">Type</a> ()=0</td></tr>
-<tr class="memdesc:ab883b23bb7bc67e52c1b347c75ba7e2e inherit pub_methods_classskyway_1_1room_1_1interface_1_1_room"><td class="mdescLeft">&#160;</td><td class="mdescRight">RoomのTypeを取得します。 <br /></td></tr>
+<tr class="memitem:ab883b23bb7bc67e52c1b347c75ba7e2e inherit pub_methods_classskyway_1_1room_1_1interface_1_1_room" id="r_ab883b23bb7bc67e52c1b347c75ba7e2e"><td class="memItemLeft" align="right" valign="top">virtual RoomType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#ab883b23bb7bc67e52c1b347c75ba7e2e">Type</a> ()=0</td></tr>
+<tr class="memdesc:ab883b23bb7bc67e52c1b347c75ba7e2e inherit pub_methods_classskyway_1_1room_1_1interface_1_1_room"><td class="mdescLeft">&#160;</td><td class="mdescRight">RoomのTypeを取得します。  <br /></td></tr>
 <tr class="separator:ab883b23bb7bc67e52c1b347c75ba7e2e inherit pub_methods_classskyway_1_1room_1_1interface_1_1_room"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html">skyway::core::interface::Channel::EventListener</a> に属する継承公開メンバ関数</td></tr>
-<tr class="memitem:a729a6a4274d1e0273403a575d02269cb inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a729a6a4274d1e0273403a575d02269cb">OnMemberJoined</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html">interface::Member</a> &gt; member)</td></tr>
-<tr class="memdesc:a729a6a4274d1e0273403a575d02269cb inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">ChannelにMemberが参加した時に発生するイベント  <a href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a729a6a4274d1e0273403a575d02269cb">[詳解]</a><br /></td></tr>
+<tr class="memitem:a729a6a4274d1e0273403a575d02269cb inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener" id="r_a729a6a4274d1e0273403a575d02269cb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a729a6a4274d1e0273403a575d02269cb">OnMemberJoined</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html">interface::Member</a> &gt; member)</td></tr>
+<tr class="memdesc:a729a6a4274d1e0273403a575d02269cb inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">ChannelにMemberが参加した時に発生するイベント  <br /></td></tr>
 <tr class="separator:a729a6a4274d1e0273403a575d02269cb inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64a02edc2f50faa2595dcd306240ee7b inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a64a02edc2f50faa2595dcd306240ee7b">OnMemberLeft</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html">interface::Member</a> &gt; member)</td></tr>
-<tr class="memdesc:a64a02edc2f50faa2595dcd306240ee7b inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">ChannelからMemberが退出した時に発生するイベント  <a href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a64a02edc2f50faa2595dcd306240ee7b">[詳解]</a><br /></td></tr>
+<tr class="memitem:a64a02edc2f50faa2595dcd306240ee7b inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener" id="r_a64a02edc2f50faa2595dcd306240ee7b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a64a02edc2f50faa2595dcd306240ee7b">OnMemberLeft</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html">interface::Member</a> &gt; member)</td></tr>
+<tr class="memdesc:a64a02edc2f50faa2595dcd306240ee7b inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">ChannelからMemberが退出した時に発生するイベント  <br /></td></tr>
 <tr class="separator:a64a02edc2f50faa2595dcd306240ee7b inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46667d2a48af5376624fdb0f09d6239a inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a46667d2a48af5376624fdb0f09d6239a">OnMemberMetadataUpdated</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html">interface::Member</a> &gt; member, const std::string &amp;metadata)</td></tr>
-<tr class="memdesc:a46667d2a48af5376624fdb0f09d6239a inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">MemberのMetadataが更新された時に発生するイベント  <a href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a46667d2a48af5376624fdb0f09d6239a">[詳解]</a><br /></td></tr>
+<tr class="memitem:a46667d2a48af5376624fdb0f09d6239a inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener" id="r_a46667d2a48af5376624fdb0f09d6239a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a46667d2a48af5376624fdb0f09d6239a">OnMemberMetadataUpdated</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html">interface::Member</a> &gt; member, const std::string &amp;metadata)</td></tr>
+<tr class="memdesc:a46667d2a48af5376624fdb0f09d6239a inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">MemberのMetadataが更新された時に発生するイベント  <br /></td></tr>
 <tr class="separator:a46667d2a48af5376624fdb0f09d6239a inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad928f63bd5aeb8f9531175666ef51a38 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#ad928f63bd5aeb8f9531175666ef51a38">OnPublicationMetadataUpdated</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">interface::Publication</a> &gt; publication, const std::string &amp;metadata)</td></tr>
-<tr class="memdesc:ad928f63bd5aeb8f9531175666ef51a38 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">PublicationのMetadataが更新された時に発生するイベント  <a href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#ad928f63bd5aeb8f9531175666ef51a38">[詳解]</a><br /></td></tr>
+<tr class="memitem:ad928f63bd5aeb8f9531175666ef51a38 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener" id="r_ad928f63bd5aeb8f9531175666ef51a38"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#ad928f63bd5aeb8f9531175666ef51a38">OnPublicationMetadataUpdated</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">interface::Publication</a> &gt; publication, const std::string &amp;metadata)</td></tr>
+<tr class="memdesc:ad928f63bd5aeb8f9531175666ef51a38 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">PublicationのMetadataが更新された時に発生するイベント  <br /></td></tr>
 <tr class="separator:ad928f63bd5aeb8f9531175666ef51a38 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3ae89072b6b0913bff5462b9d7fc520 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#aa3ae89072b6b0913bff5462b9d7fc520">OnStreamPublished</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">interface::Publication</a> &gt; publication)</td></tr>
-<tr class="memdesc:aa3ae89072b6b0913bff5462b9d7fc520 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">StreamがPublishされた時に発生するイベント  <a href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#aa3ae89072b6b0913bff5462b9d7fc520">[詳解]</a><br /></td></tr>
+<tr class="memitem:aa3ae89072b6b0913bff5462b9d7fc520 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener" id="r_aa3ae89072b6b0913bff5462b9d7fc520"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#aa3ae89072b6b0913bff5462b9d7fc520">OnStreamPublished</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">interface::Publication</a> &gt; publication)</td></tr>
+<tr class="memdesc:aa3ae89072b6b0913bff5462b9d7fc520 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">StreamがPublishされた時に発生するイベント  <br /></td></tr>
 <tr class="separator:aa3ae89072b6b0913bff5462b9d7fc520 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15ea7e6e543566c0c4d0c88233f1e968 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a15ea7e6e543566c0c4d0c88233f1e968">OnStreamUnpublished</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">interface::Publication</a> &gt; publication)</td></tr>
-<tr class="memdesc:a15ea7e6e543566c0c4d0c88233f1e968 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">StreamがUnpublishされた時に発生するイベント  <a href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a15ea7e6e543566c0c4d0c88233f1e968">[詳解]</a><br /></td></tr>
+<tr class="memitem:a15ea7e6e543566c0c4d0c88233f1e968 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener" id="r_a15ea7e6e543566c0c4d0c88233f1e968"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a15ea7e6e543566c0c4d0c88233f1e968">OnStreamUnpublished</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">interface::Publication</a> &gt; publication)</td></tr>
+<tr class="memdesc:a15ea7e6e543566c0c4d0c88233f1e968 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">StreamがUnpublishされた時に発生するイベント  <br /></td></tr>
 <tr class="separator:a15ea7e6e543566c0c4d0c88233f1e968 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8eb98d0d97b31b460f3a92f48372984 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#ab8eb98d0d97b31b460f3a92f48372984">OnPublicationEnabled</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">interface::Publication</a> &gt; publication)</td></tr>
-<tr class="memdesc:ab8eb98d0d97b31b460f3a92f48372984 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">PublicationがEnableになった時に発生するイベント  <a href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#ab8eb98d0d97b31b460f3a92f48372984">[詳解]</a><br /></td></tr>
+<tr class="memitem:ab8eb98d0d97b31b460f3a92f48372984 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener" id="r_ab8eb98d0d97b31b460f3a92f48372984"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#ab8eb98d0d97b31b460f3a92f48372984">OnPublicationEnabled</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">interface::Publication</a> &gt; publication)</td></tr>
+<tr class="memdesc:ab8eb98d0d97b31b460f3a92f48372984 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">PublicationがEnableになった時に発生するイベント  <br /></td></tr>
 <tr class="separator:ab8eb98d0d97b31b460f3a92f48372984 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0873e7c1271e077e19cd7884dbec146 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#ad0873e7c1271e077e19cd7884dbec146">OnPublicationDisabled</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">interface::Publication</a> &gt; publication)</td></tr>
-<tr class="memdesc:ad0873e7c1271e077e19cd7884dbec146 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">PublicationがDisableになった時に発生するイベント  <a href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#ad0873e7c1271e077e19cd7884dbec146">[詳解]</a><br /></td></tr>
+<tr class="memitem:ad0873e7c1271e077e19cd7884dbec146 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener" id="r_ad0873e7c1271e077e19cd7884dbec146"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#ad0873e7c1271e077e19cd7884dbec146">OnPublicationDisabled</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">interface::Publication</a> &gt; publication)</td></tr>
+<tr class="memdesc:ad0873e7c1271e077e19cd7884dbec146 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">PublicationがDisableになった時に発生するイベント  <br /></td></tr>
 <tr class="separator:ad0873e7c1271e077e19cd7884dbec146 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5df11773ab19f62528f7c4a3a7125090 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a5df11773ab19f62528f7c4a3a7125090">OnPublicationSubscribed</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">interface::Subscription</a> &gt; subscription)</td></tr>
-<tr class="memdesc:a5df11773ab19f62528f7c4a3a7125090 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">PublicationがSubscribeされた時に発生するイベント  <a href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a5df11773ab19f62528f7c4a3a7125090">[詳解]</a><br /></td></tr>
+<tr class="memitem:a5df11773ab19f62528f7c4a3a7125090 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener" id="r_a5df11773ab19f62528f7c4a3a7125090"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a5df11773ab19f62528f7c4a3a7125090">OnPublicationSubscribed</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">interface::Subscription</a> &gt; subscription)</td></tr>
+<tr class="memdesc:a5df11773ab19f62528f7c4a3a7125090 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">PublicationがSubscribeされた時に発生するイベント  <br /></td></tr>
 <tr class="separator:a5df11773ab19f62528f7c4a3a7125090 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac84f8b059de0a9f2206c07933969dac3 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#ac84f8b059de0a9f2206c07933969dac3">OnPublicationUnsubscribed</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">interface::Subscription</a> &gt; subscription)</td></tr>
-<tr class="memdesc:ac84f8b059de0a9f2206c07933969dac3 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">PublicationがUnsubscribeされた時に発生するイベント  <a href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#ac84f8b059de0a9f2206c07933969dac3">[詳解]</a><br /></td></tr>
+<tr class="memitem:ac84f8b059de0a9f2206c07933969dac3 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener" id="r_ac84f8b059de0a9f2206c07933969dac3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#ac84f8b059de0a9f2206c07933969dac3">OnPublicationUnsubscribed</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">interface::Subscription</a> &gt; subscription)</td></tr>
+<tr class="memdesc:ac84f8b059de0a9f2206c07933969dac3 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">PublicationがUnsubscribeされた時に発生するイベント  <br /></td></tr>
 <tr class="separator:ac84f8b059de0a9f2206c07933969dac3 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 限定公開メンバ関数</h2></td></tr>
-<tr class="memitem:a20708860f3588e63436edf040c26adcc"><td class="memItemLeft" align="right" valign="top"><a id="a20708860f3588e63436edf040c26adcc"></a>
+<tr class="memitem:a20708860f3588e63436edf040c26adcc" id="r_a20708860f3588e63436edf040c26adcc"><td class="memItemLeft" align="right" valign="top"><a id="a20708860f3588e63436edf040c26adcc" name="a20708860f3588e63436edf040c26adcc"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Room</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">core::interface::Channel</a> &gt; core, std::unique_ptr&lt; interface::RoomDomainFactory &gt; factory)</td></tr>
 <tr class="separator:a20708860f3588e63436edf040c26adcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a523cb4006f062249ed82141a0de255aa"><td class="memItemLeft" align="right" valign="top"><a id="a523cb4006f062249ed82141a0de255aa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a523cb4006f062249ed82141a0de255aa">OnClosed</a> () override</td></tr>
-<tr class="memdesc:a523cb4006f062249ed82141a0de255aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">このChannelが閉じられた時に発生するイベント <br /></td></tr>
+<tr class="memitem:a523cb4006f062249ed82141a0de255aa" id="r_a523cb4006f062249ed82141a0de255aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a523cb4006f062249ed82141a0de255aa">OnClosed</a> () override</td></tr>
+<tr class="memdesc:a523cb4006f062249ed82141a0de255aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">このChannelが閉じられた時に発生するイベント  <br /></td></tr>
 <tr class="separator:a523cb4006f062249ed82141a0de255aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80ef50c6e9789a02e5701fcb2ca4fc34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a80ef50c6e9789a02e5701fcb2ca4fc34">OnMetadataUpdated</a> (const std::string &amp;metadata) override</td></tr>
-<tr class="memdesc:a80ef50c6e9789a02e5701fcb2ca4fc34"><td class="mdescLeft">&#160;</td><td class="mdescRight">このChannelのMetadataが更新された時に発生するイベント  <a href="classskyway_1_1room_1_1abstract_1_1_room.html#a80ef50c6e9789a02e5701fcb2ca4fc34">[詳解]</a><br /></td></tr>
+<tr class="memitem:a80ef50c6e9789a02e5701fcb2ca4fc34" id="r_a80ef50c6e9789a02e5701fcb2ca4fc34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a80ef50c6e9789a02e5701fcb2ca4fc34">OnMetadataUpdated</a> (const std::string &amp;metadata) override</td></tr>
+<tr class="memdesc:a80ef50c6e9789a02e5701fcb2ca4fc34"><td class="mdescLeft">&#160;</td><td class="mdescRight">このChannelのMetadataが更新された時に発生するイベント  <br /></td></tr>
 <tr class="separator:a80ef50c6e9789a02e5701fcb2ca4fc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbbcac1950a21bb3d4c39e7b23f11935"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#acbbcac1950a21bb3d4c39e7b23f11935">OnMemberListChanged</a> () override</td></tr>
-<tr class="memdesc:acbbcac1950a21bb3d4c39e7b23f11935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Member が入退出したときに発生するイベント  <a href="classskyway_1_1room_1_1abstract_1_1_room.html#acbbcac1950a21bb3d4c39e7b23f11935">[詳解]</a><br /></td></tr>
+<tr class="memitem:acbbcac1950a21bb3d4c39e7b23f11935" id="r_acbbcac1950a21bb3d4c39e7b23f11935"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#acbbcac1950a21bb3d4c39e7b23f11935">OnMemberListChanged</a> () override</td></tr>
+<tr class="memdesc:acbbcac1950a21bb3d4c39e7b23f11935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Member が入退出したときに発生するイベント  <br /></td></tr>
 <tr class="separator:acbbcac1950a21bb3d4c39e7b23f11935"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8e44edde6984b67b798417a955537a8"><td class="memItemLeft" align="right" valign="top"><a id="ac8e44edde6984b67b798417a955537a8"></a>
+<tr class="memitem:ac8e44edde6984b67b798417a955537a8" id="r_ac8e44edde6984b67b798417a955537a8"><td class="memItemLeft" align="right" valign="top"><a id="ac8e44edde6984b67b798417a955537a8" name="ac8e44edde6984b67b798417a955537a8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnMemberJoined</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html">core::interface::Member</a> &gt; member) override</td></tr>
 <tr class="separator:ac8e44edde6984b67b798417a955537a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55c2e4849fa84c28575e815526b3a6a4"><td class="memItemLeft" align="right" valign="top"><a id="a55c2e4849fa84c28575e815526b3a6a4"></a>
+<tr class="memitem:a55c2e4849fa84c28575e815526b3a6a4" id="r_a55c2e4849fa84c28575e815526b3a6a4"><td class="memItemLeft" align="right" valign="top"><a id="a55c2e4849fa84c28575e815526b3a6a4" name="a55c2e4849fa84c28575e815526b3a6a4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnMemberLeft</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html">core::interface::Member</a> &gt; member) override</td></tr>
 <tr class="separator:a55c2e4849fa84c28575e815526b3a6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95e8d26061d5ae0861ee0ecd161089fd"><td class="memItemLeft" align="right" valign="top"><a id="a95e8d26061d5ae0861ee0ecd161089fd"></a>
+<tr class="memitem:a95e8d26061d5ae0861ee0ecd161089fd" id="r_a95e8d26061d5ae0861ee0ecd161089fd"><td class="memItemLeft" align="right" valign="top"><a id="a95e8d26061d5ae0861ee0ecd161089fd" name="a95e8d26061d5ae0861ee0ecd161089fd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnMemberMetadataUpdated</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html">core::interface::Member</a> &gt; member, const std::string &amp;metadata) override</td></tr>
 <tr class="separator:a95e8d26061d5ae0861ee0ecd161089fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51fc5c14c6bf19716611dc3d8cea0a67"><td class="memItemLeft" align="right" valign="top"><a id="a51fc5c14c6bf19716611dc3d8cea0a67"></a>
+<tr class="memitem:a51fc5c14c6bf19716611dc3d8cea0a67" id="r_a51fc5c14c6bf19716611dc3d8cea0a67"><td class="memItemLeft" align="right" valign="top"><a id="a51fc5c14c6bf19716611dc3d8cea0a67" name="a51fc5c14c6bf19716611dc3d8cea0a67"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPublicationMetadataUpdated</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">core::interface::Publication</a> &gt; publication, const std::string &amp;metadata) override</td></tr>
 <tr class="separator:a51fc5c14c6bf19716611dc3d8cea0a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43ae2baf9ec5c4e15808aef5556ea339"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a43ae2baf9ec5c4e15808aef5556ea339">OnPublicationListChanged</a> () override</td></tr>
-<tr class="memdesc:a43ae2baf9ec5c4e15808aef5556ea339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publicationが作成または削除された時に発生するイベント  <a href="classskyway_1_1room_1_1abstract_1_1_room.html#a43ae2baf9ec5c4e15808aef5556ea339">[詳解]</a><br /></td></tr>
+<tr class="memitem:a43ae2baf9ec5c4e15808aef5556ea339" id="r_a43ae2baf9ec5c4e15808aef5556ea339"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#a43ae2baf9ec5c4e15808aef5556ea339">OnPublicationListChanged</a> () override</td></tr>
+<tr class="memdesc:a43ae2baf9ec5c4e15808aef5556ea339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publicationが作成または削除された時に発生するイベント  <br /></td></tr>
 <tr class="separator:a43ae2baf9ec5c4e15808aef5556ea339"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5e5c3b1cbd73971dd38b2c3da8169f4"><td class="memItemLeft" align="right" valign="top"><a id="ad5e5c3b1cbd73971dd38b2c3da8169f4"></a>
+<tr class="memitem:ad5e5c3b1cbd73971dd38b2c3da8169f4" id="r_ad5e5c3b1cbd73971dd38b2c3da8169f4"><td class="memItemLeft" align="right" valign="top"><a id="ad5e5c3b1cbd73971dd38b2c3da8169f4" name="ad5e5c3b1cbd73971dd38b2c3da8169f4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStreamPublished</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">core::interface::Publication</a> &gt; publication) override</td></tr>
 <tr class="separator:ad5e5c3b1cbd73971dd38b2c3da8169f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8316ab8ad9bff8620d570ab28ecd42f9"><td class="memItemLeft" align="right" valign="top"><a id="a8316ab8ad9bff8620d570ab28ecd42f9"></a>
+<tr class="memitem:a8316ab8ad9bff8620d570ab28ecd42f9" id="r_a8316ab8ad9bff8620d570ab28ecd42f9"><td class="memItemLeft" align="right" valign="top"><a id="a8316ab8ad9bff8620d570ab28ecd42f9" name="a8316ab8ad9bff8620d570ab28ecd42f9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStreamUnpublished</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">core::interface::Publication</a> &gt; publication) override</td></tr>
 <tr class="separator:a8316ab8ad9bff8620d570ab28ecd42f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a4c331a9f8db47ef8b5a5185b0aa2c4"><td class="memItemLeft" align="right" valign="top"><a id="a7a4c331a9f8db47ef8b5a5185b0aa2c4"></a>
+<tr class="memitem:a7a4c331a9f8db47ef8b5a5185b0aa2c4" id="r_a7a4c331a9f8db47ef8b5a5185b0aa2c4"><td class="memItemLeft" align="right" valign="top"><a id="a7a4c331a9f8db47ef8b5a5185b0aa2c4" name="a7a4c331a9f8db47ef8b5a5185b0aa2c4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPublicationEnabled</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">core::interface::Publication</a> &gt; publication) override</td></tr>
 <tr class="separator:a7a4c331a9f8db47ef8b5a5185b0aa2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac365f07d34ff6a969ba370f677ac339a"><td class="memItemLeft" align="right" valign="top"><a id="ac365f07d34ff6a969ba370f677ac339a"></a>
+<tr class="memitem:ac365f07d34ff6a969ba370f677ac339a" id="r_ac365f07d34ff6a969ba370f677ac339a"><td class="memItemLeft" align="right" valign="top"><a id="ac365f07d34ff6a969ba370f677ac339a" name="ac365f07d34ff6a969ba370f677ac339a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPublicationDisabled</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">core::interface::Publication</a> &gt; publication) override</td></tr>
 <tr class="separator:ac365f07d34ff6a969ba370f677ac339a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff052fc7dfe4ce5be0edf06206299af1"><td class="memItemLeft" align="right" valign="top"><a id="aff052fc7dfe4ce5be0edf06206299af1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#aff052fc7dfe4ce5be0edf06206299af1">OnSubscriptionListChanged</a> () override</td></tr>
-<tr class="memdesc:aff052fc7dfe4ce5be0edf06206299af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">StreamがSubscribeまたはUnsubscribeされた時に発生するイベント <br /></td></tr>
+<tr class="memitem:aff052fc7dfe4ce5be0edf06206299af1" id="r_aff052fc7dfe4ce5be0edf06206299af1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#aff052fc7dfe4ce5be0edf06206299af1">OnSubscriptionListChanged</a> () override</td></tr>
+<tr class="memdesc:aff052fc7dfe4ce5be0edf06206299af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">StreamがSubscribeまたはUnsubscribeされた時に発生するイベント  <br /></td></tr>
 <tr class="separator:aff052fc7dfe4ce5be0edf06206299af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afeb0a44895cfec29cec1fc2f516edf92"><td class="memItemLeft" align="right" valign="top"><a id="afeb0a44895cfec29cec1fc2f516edf92"></a>
+<tr class="memitem:afeb0a44895cfec29cec1fc2f516edf92" id="r_afeb0a44895cfec29cec1fc2f516edf92"><td class="memItemLeft" align="right" valign="top"><a id="afeb0a44895cfec29cec1fc2f516edf92" name="afeb0a44895cfec29cec1fc2f516edf92"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPublicationSubscribed</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">core::interface::Subscription</a> &gt; subscription) override</td></tr>
 <tr class="separator:afeb0a44895cfec29cec1fc2f516edf92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56a6f0a949cf76e00dd94e30be1934e2"><td class="memItemLeft" align="right" valign="top"><a id="a56a6f0a949cf76e00dd94e30be1934e2"></a>
+<tr class="memitem:a56a6f0a949cf76e00dd94e30be1934e2" id="r_a56a6f0a949cf76e00dd94e30be1934e2"><td class="memItemLeft" align="right" valign="top"><a id="a56a6f0a949cf76e00dd94e30be1934e2" name="a56a6f0a949cf76e00dd94e30be1934e2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPublicationUnsubscribed</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">core::interface::Subscription</a> &gt; subscription) override</td></tr>
 <tr class="separator:a56a6f0a949cf76e00dd94e30be1934e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 限定公開変数類</h2></td></tr>
-<tr class="memitem:ad2e0381c49c28fb5b4b222168f41901a"><td class="memItemLeft" align="right" valign="top"><a id="ad2e0381c49c28fb5b4b222168f41901a"></a>
+<tr class="memitem:ad2e0381c49c28fb5b4b222168f41901a" id="r_ad2e0381c49c28fb5b4b222168f41901a"><td class="memItemLeft" align="right" valign="top"><a id="ad2e0381c49c28fb5b4b222168f41901a" name="ad2e0381c49c28fb5b4b222168f41901a"></a>
 std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">core::interface::Channel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>core_</b></td></tr>
 <tr class="separator:ad2e0381c49c28fb5b4b222168f41901a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a135a074a94e06be6ef2d7af507b318ff"><td class="memItemLeft" align="right" valign="top"><a id="a135a074a94e06be6ef2d7af507b318ff"></a>
+<tr class="memitem:a135a074a94e06be6ef2d7af507b318ff" id="r_a135a074a94e06be6ef2d7af507b318ff"><td class="memItemLeft" align="right" valign="top"><a id="a135a074a94e06be6ef2d7af507b318ff" name="a135a074a94e06be6ef2d7af507b318ff"></a>
 std::unique_ptr&lt; interface::RoomDomainFactory &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>factory_</b></td></tr>
 <tr class="separator:a135a074a94e06be6ef2d7af507b318ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae52f3746797cf8d1820d0aa487e31b86"><td class="memItemLeft" align="right" valign="top"><a id="ae52f3746797cf8d1820d0aa487e31b86"></a>
+<tr class="memitem:ae52f3746797cf8d1820d0aa487e31b86" id="r_ae52f3746797cf8d1820d0aa487e31b86"><td class="memItemLeft" align="right" valign="top"><a id="ae52f3746797cf8d1820d0aa487e31b86" name="ae52f3746797cf8d1820d0aa487e31b86"></a>
 std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>listener_mtx_</b></td></tr>
 <tr class="separator:ae52f3746797cf8d1820d0aa487e31b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90b09578d0fb74058bbb27d0e2b6e168"><td class="memItemLeft" align="right" valign="top"><a id="a90b09578d0fb74058bbb27d0e2b6e168"></a>
+<tr class="memitem:a90b09578d0fb74058bbb27d0e2b6e168" id="r_a90b09578d0fb74058bbb27d0e2b6e168"><td class="memItemLeft" align="right" valign="top"><a id="a90b09578d0fb74058bbb27d0e2b6e168" name="a90b09578d0fb74058bbb27d0e2b6e168"></a>
 <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">interface::Room::EventListener</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>listener_</b></td></tr>
 <tr class="separator:a90b09578d0fb74058bbb27d0e2b6e168"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>Roomの操作を行う抽象クラス </p>
-</div><h2 class="groupheader">関数詳解</h2>
-<a id="acbbcac1950a21bb3d4c39e7b23f11935"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbbcac1950a21bb3d4c39e7b23f11935">&#9670;&nbsp;</a></span>OnMemberListChanged()</h2>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ab35a6a48cdcb4c60c2d8f1c6cbdf060e" name="ab35a6a48cdcb4c60c2d8f1c6cbdf060e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab35a6a48cdcb4c60c2d8f1c6cbdf060e">&#9670;&#160;</a></span>~Room()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual skyway::room::abstract::Room::~Room </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html">skyway::room::interface::Room</a>を再実装しています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ab8d7808271c34edd3e956d6ad8f0b199" name="ab8d7808271c34edd3e956d6ad8f0b199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8d7808271c34edd3e956d6ad8f0b199">&#9670;&#160;</a></span>AddEventListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void skyway::room::abstract::Room::AddEventListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">interface::Room::EventListener</a> *&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>イベントを購読します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#aec757a42c895920f05b576c8797b19cb">skyway::room::interface::Room</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="aa8ff369a3d2eefa00c847cb5a37c350d" name="aa8ff369a3d2eefa00c847cb5a37c350d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8ff369a3d2eefa00c847cb5a37c350d">&#9670;&#160;</a></span>Close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool skyway::room::abstract::Room::Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Roomを閉じます。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#a1da8a4a619516ab94a794d1e477147c4">skyway::room::interface::Room</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a9641d6835066b3cb7f1ee62db5e9f3c5" name="a9641d6835066b3cb7f1ee62db5e9f3c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9641d6835066b3cb7f1ee62db5e9f3c5">&#9670;&#160;</a></span>Dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void skyway::room::abstract::Room::Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Roomを破棄します。破棄されたRoomではイベントが発火しなくなります。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#a0387f196e74d01416feb8c0e71193bbc">skyway::room::interface::Room</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a5045dc96dea57dbf1dadfcd8860b7d1b" name="a5045dc96dea57dbf1dadfcd8860b7d1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5045dc96dea57dbf1dadfcd8860b7d1b">&#9670;&#160;</a></span>Id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string skyway::room::abstract::Room::Id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Idを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#ab9fd9338c934f52e7c4d4dbf12ffd357">skyway::room::interface::Room</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a7ee752198a87004020d592cf8040b983" name="a7ee752198a87004020d592cf8040b983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ee752198a87004020d592cf8040b983">&#9670;&#160;</a></span>Leave()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool skyway::room::abstract::Room::Leave </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html">interface::RoomMember</a> *&#160;</td>
+          <td class="paramname"><em>member</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定したMemberをRoomから退室させます。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#a8556352393af87ca76fbfcf91dce68e3">skyway::room::interface::Room</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a908aa4d66d9ad22ec93db6dae96e1d7f" name="a908aa4d66d9ad22ec93db6dae96e1d7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a908aa4d66d9ad22ec93db6dae96e1d7f">&#9670;&#160;</a></span>Members()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html">interface::RoomMember</a> &gt; &gt; skyway::room::abstract::Room::Members </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Roomインスタンスに紐づくRoomMemberの一覧を取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#a6d5fdc9d816134ad3e2f488be9b53a20">skyway::room::interface::Room</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a2f1d2b6b79bc47d91405cda926ff7d21" name="a2f1d2b6b79bc47d91405cda926ff7d21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f1d2b6b79bc47d91405cda926ff7d21">&#9670;&#160;</a></span>Metadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; std::string &gt; skyway::room::abstract::Room::Metadata </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metadataを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#aea591b3a94a7c5cf4c6fc6c692f8d859">skyway::room::interface::Room</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="ac76ef42a87690fcfdd73425c9b1b87ef" name="ac76ef42a87690fcfdd73425c9b1b87ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac76ef42a87690fcfdd73425c9b1b87ef">&#9670;&#160;</a></span>Name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; std::string &gt; skyway::room::abstract::Room::Name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Nameを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#a5ec1339733e2122506e7daa4004c1eb8">skyway::room::interface::Room</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a523cb4006f062249ed82141a0de255aa" name="a523cb4006f062249ed82141a0de255aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a523cb4006f062249ed82141a0de255aa">&#9670;&#160;</a></span>OnClosed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void skyway::room::abstract::Room::OnClosed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>このChannelが閉じられた時に発生するイベント </p>
+
+<p><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a8b57c31baacb6f99cff2661bef57930b">skyway::core::interface::Channel::EventListener</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="acbbcac1950a21bb3d4c39e7b23f11935" name="acbbcac1950a21bb3d4c39e7b23f11935"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbbcac1950a21bb3d4c39e7b23f11935">&#9670;&#160;</a></span>OnMemberListChanged()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -310,8 +592,8 @@ std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>listener_mtx_</
 
 </div>
 </div>
-<a id="a80ef50c6e9789a02e5701fcb2ca4fc34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80ef50c6e9789a02e5701fcb2ca4fc34">&#9670;&nbsp;</a></span>OnMetadataUpdated()</h2>
+<a id="a80ef50c6e9789a02e5701fcb2ca4fc34" name="a80ef50c6e9789a02e5701fcb2ca4fc34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80ef50c6e9789a02e5701fcb2ca4fc34">&#9670;&#160;</a></span>OnMetadataUpdated()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -346,8 +628,8 @@ std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>listener_mtx_</
 
 </div>
 </div>
-<a id="a43ae2baf9ec5c4e15808aef5556ea339"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43ae2baf9ec5c4e15808aef5556ea339">&#9670;&nbsp;</a></span>OnPublicationListChanged()</h2>
+<a id="a43ae2baf9ec5c4e15808aef5556ea339" name="a43ae2baf9ec5c4e15808aef5556ea339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43ae2baf9ec5c4e15808aef5556ea339">&#9670;&#160;</a></span>OnPublicationListChanged()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -376,6 +658,182 @@ std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>listener_mtx_</
 
 </div>
 </div>
+<a id="aff052fc7dfe4ce5be0edf06206299af1" name="aff052fc7dfe4ce5be0edf06206299af1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff052fc7dfe4ce5be0edf06206299af1">&#9670;&#160;</a></span>OnSubscriptionListChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void skyway::room::abstract::Room::OnSubscriptionListChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>StreamがSubscribeまたはUnsubscribeされた時に発生するイベント </p>
+
+<p><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html#a3f6d3fdf421b7c24e6b1ca2d241466e4">skyway::core::interface::Channel::EventListener</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a7235afb26d64f8e96611c3fa2d057714" name="a7235afb26d64f8e96611c3fa2d057714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7235afb26d64f8e96611c3fa2d057714">&#9670;&#160;</a></span>Publications()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html">interface::RoomPublication</a> &gt; &gt; skyway::room::abstract::Room::Publications </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Roomインスタンスに紐づくPublicationの一覧を取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#a01feb404d179fae08cf2137dafa15690">skyway::room::interface::Room</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a7e4e507a38a89abe375dd565461e96bd" name="a7e4e507a38a89abe375dd565461e96bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e4e507a38a89abe375dd565461e96bd">&#9670;&#160;</a></span>RemoveEventListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void skyway::room::abstract::Room::RemoveEventListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">interface::Room::EventListener</a> *&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>イベントの購読を中止します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#a6ba6cd3eec8c322dfd01723fac508627">skyway::room::interface::Room</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="acc1e79c0fd1270e53fd4f047b1da1649" name="acc1e79c0fd1270e53fd4f047b1da1649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc1e79c0fd1270e53fd4f047b1da1649">&#9670;&#160;</a></span>State()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">core::interface::ChannelState skyway::room::abstract::Room::State </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stateを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#af23ddc51289e52b1f41dcdd5e15cf783">skyway::room::interface::Room</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a0ae56b0f69ee7bc11c7a30cf4ae32d1f" name="a0ae56b0f69ee7bc11c7a30cf4ae32d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ae56b0f69ee7bc11c7a30cf4ae32d1f">&#9670;&#160;</a></span>Subscriptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html">interface::RoomSubscription</a> &gt; &gt; skyway::room::abstract::Room::Subscriptions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Roomインスタンスに紐づくSubscriptionの一覧を取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#a93654c6ba6f86e36eb256f6e181be293">skyway::room::interface::Room</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="ad5b08ea123c4ffd28d65736460a55206" name="ad5b08ea123c4ffd28d65736460a55206"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5b08ea123c4ffd28d65736460a55206">&#9670;&#160;</a></span>UpdateMetadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool skyway::room::abstract::Room::UpdateMetadata </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>metadata</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metadataを更新します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#a795ea36406bb887202b395e82e86b37e">skyway::room::interface::Room</a>を実装しています。</p>
+
+</div>
+</div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>include/skyway/room/abstract/<a class="el" href="abstract_2room_8hpp_source.html">room.hpp</a></li>
 </ul>
@@ -385,7 +843,7 @@ std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>listener_mtx_</
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>skyway</b></li><li class="navelem"><b>room</b></li><li class="navelem"><b>abstract</b></li><li class="navelem"><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html">Room</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

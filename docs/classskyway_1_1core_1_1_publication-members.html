@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('classskyway_1_1core_1_1_publication.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,46 +87,52 @@ $(document).ready(function(){initNavTree('classskyway_1_1core_1_1_publication.ht
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">skyway::core::Publication メンバ一覧</div>  </div>
+  <div class="headertitle"><div class="title">skyway::core::Publication メンバ一覧</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>継承メンバを含む <a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a> の全メンバ一覧です。</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#af14b7075345258d12b42ee8e4f3b733e">AddEventListener</a>(interface::Publication::EventListener *listener) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a8d28b7e1e13b4eb9d3b6899fe10fff9f">Cancel</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a1fab2c57ef285637205f8a37fbbf3fe0">CodecCapabilities</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a17164fe737f804334422b6a8fe42289f">ContentType</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a8d28b7e1e13b4eb9d3b6899fe10fff9f">Cancel</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#ad05c3a455d128da7035a41acc9da6e88">CodecCapabilities</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a17164fe737f804334422b6a8fe42289f">ContentType</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a5e81ffc8c307fea32ddbab65ced37e88">Disable</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a90a2808bfda05de2ac2eb828d9ce92d9">Enable</a>() override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#ab8a5a0d4f1d7f86d7ada1e110e47bda7">Encodings</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a78b61770c451ff5255383c93f9260572">GetStats</a>(const std::string &amp;selector) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a90a2808bfda05de2ac2eb828d9ce92d9">Enable</a>() override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a0bfd27cb6b82423a0031c4dbf5b63205">Encodings</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#ad73ec93896472ab2fd383a0577dc0005">GetStats</a>(const std::string &amp;selector) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#af32006f6b76795e28aeea517066543b6">Id</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#ad81f6c86a063c2548c3cd401a9673696">Metadata</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#ac1613e39b8531591ed1b8d0532107216">Origin</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a98409211208f006ef0697e6f90361ed0">Publisher</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a00d8ee67402723bdcc7542f4aae06558">Metadata</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a400827013c6f6f5c097c52d5e7304de9">Origin</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a24e7c8090b718fafb2365ac50fdfcf87">Publisher</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a0d7493308611b359262289ba7108330c">RemoveEventListener</a>(interface::Publication::EventListener *listener) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>ReplaceStream</b>(std::shared_ptr&lt; interface::LocalStream &gt; stream) override (定義場所: <a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a>)</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>ReplaceStream</b>(std::shared_ptr&lt; interface::LocalStream &gt; stream) override (定義場所: <a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a>)</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html#af8b8252697b4dc1a834dde362ecd6556">skyway::core::interface::Publication::ReplaceStream</a>(std::shared_ptr&lt; LocalStream &gt; stream)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">skyway::core::interface::Publication</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a0069e6bf77d6add34284a2e9b00fe78f">State</a>() override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#accb0f8a31bc97649580d4d9dac17d8cf">Stream</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#acec5d3d0fd7d1ecdd33ed6c863959842">Subscriptions</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a0069e6bf77d6add34284a2e9b00fe78f">State</a>() override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a6d050b4a786dca3b487683f3812b740f">Stream</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a21b1b7e115b91e43e8bd370da35d706a">Subscriptions</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#a5e70bb6844e9a6aebb1555d5bf800e57">UpdateEncodings</a>(std::vector&lt; model::Encoding &gt; encodings) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#aa48be4b20329ac5d8e833fb4aa915329">UpdateMetadata</a>(const std::string &amp;metadata) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html#aa48be4b20329ac5d8e833fb4aa915329">UpdateMetadata</a>(const std::string &amp;metadata) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~Publication</b>() (定義場所: <a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a>)</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1_publication.html">skyway::core::Publication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
