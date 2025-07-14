@@ -145,38 +145,36 @@ $(document).ready(function(){initNavTree('i420__capturer__video__source_8hpp_sou
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        absl::optional&lt;bool&gt; needs_denoising() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        webrtc::MediaSourceInterface::SourceState state() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">bool</span> remote() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">void</span> OnFrame(<span class="keyword">const</span> webrtc::VideoFrame&amp; frame) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        I420InternalCapturerVideoSource();</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    };</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_class" href="classskyway_1_1media_1_1_i420_capturer_video_source.html">I420CapturerVideoSource</a>();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_class" href="classskyway_1_1media_1_1_i420_capturer_video_source.html">~I420CapturerVideoSource</a>();</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1_i420_capturer_video_source.html#a5a3712946febc71913a19fc0d7d60677">   49</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1media_1_1_i420_capturer_video_source.html#a5a3712946febc71913a19fc0d7d60677">Render</a>(<span class="keywordtype">int</span> width,</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                <span class="keywordtype">int</span> height,</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="keyword">const</span> uint8_t* y,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="keyword">const</span> uint8_t* u,</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                <span class="keyword">const</span> uint8_t* v,</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                <span class="keywordtype">int</span> stride_y,</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <span class="keywordtype">int</span> stride_u,</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="keywordtype">int</span> stride_v);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// Impl interface::InternalCapturerVideoSource</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    rtc::scoped_refptr&lt;interface::InternalCapturerVideoSource&gt; GetSource();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    rtc::scoped_refptr&lt;I420InternalCapturerVideoSource&gt; source_;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        I420InternalCapturerVideoSource();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    };</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_class" href="classskyway_1_1media_1_1_i420_capturer_video_source.html">I420CapturerVideoSource</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_class" href="classskyway_1_1media_1_1_i420_capturer_video_source.html">~I420CapturerVideoSource</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1_i420_capturer_video_source.html#a5a3712946febc71913a19fc0d7d60677">   48</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1media_1_1_i420_capturer_video_source.html#a5a3712946febc71913a19fc0d7d60677">Render</a>(<span class="keywordtype">int</span> width,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                <span class="keywordtype">int</span> height,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                <span class="keyword">const</span> uint8_t* y,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="keyword">const</span> uint8_t* u,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="keyword">const</span> uint8_t* v,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                <span class="keywordtype">int</span> stride_y,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                <span class="keywordtype">int</span> stride_u,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <span class="keywordtype">int</span> stride_v);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">// Impl interface::InternalCapturerVideoSource</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    rtc::scoped_refptr&lt;interface::InternalCapturerVideoSource&gt; GetSource();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    rtc::scoped_refptr&lt;I420InternalCapturerVideoSource&gt; source_;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
 </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}  <span class="comment">// namespace media</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_MEDIA_I420_CAPTURER_VIDEO_SOURCE_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}  <span class="comment">// namespace media</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_MEDIA_I420_CAPTURER_VIDEO_SOURCE_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aclassskyway_1_1media_1_1_i420_capturer_video_source_html"><div class="ttname"><a href="classskyway_1_1media_1_1_i420_capturer_video_source.html">skyway::media::I420CapturerVideoSource</a></div><div class="ttdoc">I420形式となっている映像の描画処理を行うクラス</div><div class="ttdef"><b>Definition</b> i420_capturer_video_source.hpp:18</div></div>
 <div class="ttc" id="aclassskyway_1_1media_1_1_i420_capturer_video_source_html_a5a3712946febc71913a19fc0d7d60677"><div class="ttname"><a href="classskyway_1_1media_1_1_i420_capturer_video_source.html#a5a3712946febc71913a19fc0d7d60677">skyway::media::I420CapturerVideoSource::Render</a></div><div class="ttdeci">void Render(int width, int height, const uint8_t *y, const uint8_t *u, const uint8_t *v, int stride_y, int stride_u, int stride_v)</div><div class="ttdoc">I420形式の画像を描画、送信します。</div></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1interface_1_1_capturer_video_source_html"><div class="ttname"><a href="classskyway_1_1media_1_1interface_1_1_capturer_video_source.html">skyway::media::interface::CapturerVideoSource</a></div><div class="ttdef"><b>Definition</b> capturer_video_source.hpp:26</div></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1interface_1_1_internal_capturer_video_source_html"><div class="ttname"><a href="classskyway_1_1media_1_1interface_1_1_internal_capturer_video_source.html">skyway::media::interface::InternalCapturerVideoSource</a></div><div class="ttdef"><b>Definition</b> capturer_video_source.hpp:21</div></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1interface_1_1_capturer_video_source_html"><div class="ttname"><a href="classskyway_1_1media_1_1interface_1_1_capturer_video_source.html">skyway::media::interface::CapturerVideoSource</a></div><div class="ttdef"><b>Definition</b> capturer_video_source.hpp:23</div></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1interface_1_1_internal_capturer_video_source_html"><div class="ttname"><a href="classskyway_1_1media_1_1interface_1_1_internal_capturer_video_source.html">skyway::media::interface::InternalCapturerVideoSource</a></div><div class="ttdef"><b>Definition</b> capturer_video_source.hpp:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

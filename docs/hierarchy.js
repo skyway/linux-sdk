@@ -157,7 +157,6 @@ var hierarchy =
     [ "skyway::media::V4l2VideoRendererOptions", "structskyway_1_1media_1_1_v4l2_video_renderer_options.html", null ],
     [ "skyway::media::DeviceManager::VideoDevice", "structskyway_1_1media_1_1_device_manager_1_1_video_device.html", null ],
     [ "rtc::VideoSinkInterface", null, [
-      [ "skyway::media::interface::InternalCapturerVideoSource", "classskyway_1_1media_1_1interface_1_1_internal_capturer_video_source.html", null ],
       [ "skyway::media::interface::VideoRenderer", "classskyway_1_1media_1_1interface_1_1_video_renderer.html", [
         [ "skyway::media::interface::I420VideoRenderer", "classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html", [
           [ "skyway::media::I420VideoRenderer", "classskyway_1_1media_1_1_i420_video_renderer.html", [

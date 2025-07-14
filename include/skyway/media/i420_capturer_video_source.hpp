@@ -36,7 +36,6 @@ public:
         absl::optional<bool> needs_denoising() const override;
         webrtc::MediaSourceInterface::SourceState state() const override;
         bool remote() const override;
-        void OnFrame(const webrtc::VideoFrame& frame) override;
 
     protected:
         I420InternalCapturerVideoSource();
@@ -59,7 +58,6 @@ public:
     // Impl interface::InternalCapturerVideoSource
     rtc::scoped_refptr<interface::InternalCapturerVideoSource> GetSource();
     /// @endcond
-
 private:
     rtc::scoped_refptr<I420InternalCapturerVideoSource> source_;
 };
