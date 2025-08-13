@@ -44,22 +44,28 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -72,7 +78,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('logger_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,97 +92,107 @@ $(document).ready(function(){initNavTree('logger_8hpp_source.html',''); initResi
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">logger.hpp</div>  </div>
+  <div class="headertitle"><div class="title">logger.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  logger.hpp</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  skyway</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by ossan20 on 2023/8/18.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef SKYWAY_GLOBAL_LOGGER_HPP</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define SKYWAY_GLOBAL_LOGGER_HPP</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;rtc_base/logging.h&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;skyway/global/interface/logger.hpp&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>skyway {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>global {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classskyway_1_1global_1_1_logger.html">Logger</a> : <span class="keyword">public</span> <a class="code" href="classskyway_1_1global_1_1interface_1_1_logger.html">interface::Logger</a>, <span class="keyword">public</span> rtc::LogSink {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger_1_1_listener.html">   27</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classskyway_1_1global_1_1_logger_1_1_listener.html">Listener</a> {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classskyway_1_1global_1_1_logger_1_1_listener.html">Listener</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger_1_1_listener.html#a96b8470ab320fc4913127f876d04274c">   34</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1global_1_1_logger_1_1_listener.html#a96b8470ab320fc4913127f876d04274c">OnLog</a>(<a class="code" href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">Level</a> level, <span class="keyword">const</span> std::string&amp; text) = 0;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#a1403c831aa78035f51affb218ef56213">   39</a></span>&#160;    <a class="code" href="classskyway_1_1global_1_1_logger.html#a1403c831aa78035f51affb218ef56213">Logger</a>(<a class="code" href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">Level</a> level = kInfo, <span class="keywordtype">bool</span> enable_webrtc_log = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    ~<a class="code" href="classskyway_1_1global_1_1_logger.html">Logger</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#a11c411ed86a1ce8836b9a8e54c0189ad">   44</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1global_1_1_logger.html#a11c411ed86a1ce8836b9a8e54c0189ad">Log</a>(<a class="code" href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">Level</a> level,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;             <span class="keyword">const</span> std::string&amp; message,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;             <span class="keyword">const</span> std::string&amp; filename = <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;             <span class="keyword">const</span> std::string&amp; <span class="keyword">function</span> = <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;             <span class="keywordtype">int</span> line                    = -1);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#a4dca8ee38aee8566000e04d49d1287a5">   52</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1global_1_1_logger.html#a4dca8ee38aee8566000e04d49d1287a5">Trace</a>(<span class="keyword">const</span> std::string&amp; message,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;               <span class="keyword">const</span> std::string&amp; filename = __builtin_FILE(),</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;               <span class="keyword">const</span> std::string&amp; <span class="keyword">function</span> = __builtin_FUNCTION(),</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;               <span class="keywordtype">int</span> line                    = __builtin_LINE()) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#ac75de165a72418e588e3d373fd1c5311">   58</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1global_1_1_logger.html#ac75de165a72418e588e3d373fd1c5311">Debug</a>(<span class="keyword">const</span> std::string&amp; message,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;               <span class="keyword">const</span> std::string&amp; filename = __builtin_FILE(),</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;               <span class="keyword">const</span> std::string&amp; <span class="keyword">function</span> = __builtin_FUNCTION(),</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;               <span class="keywordtype">int</span> line                    = __builtin_LINE()) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#ab75de2cca229894998d5d4fce17f9536">   64</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1global_1_1_logger.html#ab75de2cca229894998d5d4fce17f9536">Info</a>(<span class="keyword">const</span> std::string&amp; message,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;              <span class="keyword">const</span> std::string&amp; filename = __builtin_FILE(),</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;              <span class="keyword">const</span> std::string&amp; <span class="keyword">function</span> = __builtin_FUNCTION(),</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;              <span class="keywordtype">int</span> line                    = __builtin_LINE()) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#a44c8173cc4242b56774a2a3bb93d63d4">   70</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1global_1_1_logger.html#a44c8173cc4242b56774a2a3bb93d63d4">Warn</a>(<span class="keyword">const</span> std::string&amp; message,</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;              <span class="keyword">const</span> std::string&amp; filename = __builtin_FILE(),</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;              <span class="keyword">const</span> std::string&amp; <span class="keyword">function</span> = __builtin_FUNCTION(),</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;              <span class="keywordtype">int</span> line                    = __builtin_LINE()) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#aef7e893ddf7f903b86715e3efa8133a5">   76</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1global_1_1_logger.html#aef7e893ddf7f903b86715e3efa8133a5">Error</a>(<span class="keyword">const</span> std::string&amp; message,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;               <span class="keyword">const</span> std::string&amp; filename = __builtin_FILE(),</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;               <span class="keyword">const</span> std::string&amp; <span class="keyword">function</span> = __builtin_FUNCTION(),</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;               <span class="keywordtype">int</span> line                    = __builtin_LINE()) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#a28062884750b77401f00ec3ded74629b">   83</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1global_1_1_logger.html#a28062884750b77401f00ec3ded74629b">OnLogMessage</a>(<span class="keyword">const</span> std::string&amp; message) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#ae0fbf1a1c5667650c5dcbfea0bb602d9">   87</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1global_1_1_logger.html#ae0fbf1a1c5667650c5dcbfea0bb602d9">OnLogMessage</a>(<span class="keyword">const</span> std::string&amp; message, rtc::LoggingSeverity severity) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#a4919f1b76e8e527fa2a3048bd38549ef">   92</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1global_1_1_logger.html#a4919f1b76e8e527fa2a3048bd38549ef">RegisterListener</a>(<span class="keyword">const</span> std::shared_ptr&lt;Listener&gt; listener);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#a07fb269062747355745c3b03b3578a9f">   95</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1global_1_1_logger.html#a07fb269062747355745c3b03b3578a9f">UnregisterListener</a>();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> SetLogLevel(<a class="code" href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">Level</a> level);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">Level</a> WebRTCSeverityToLogLevel(rtc::LoggingSeverity severity);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">bool</span> enable_webrtc_log_ = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">Level</a> level_            = kInfo;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> std::mutex listener_mtx_;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> std::shared_ptr&lt;Listener&gt; listener_ = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}  <span class="comment">// namespace global</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_GLOBAL_LOGGER_HPP */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclassskyway_1_1global_1_1_logger_1_1_listener_html"><div class="ttname"><a href="classskyway_1_1global_1_1_logger_1_1_listener.html">skyway::global::Logger::Listener</a></div><div class="ttdoc">Logger のリスナー</div><div class="ttdef"><b>Definition:</b> logger.hpp:27</div></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//  logger.hpp</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//  skyway</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Created by ossan20 on 2023/8/18.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef SKYWAY_GLOBAL_LOGGER_HPP</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define SKYWAY_GLOBAL_LOGGER_HPP</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;rtc_base/logging.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;skyway/global/interface/logger.hpp&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span>skyway {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span>global {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1global_1_1_logger.html">Logger</a> : <span class="keyword">public</span> <a class="code hl_class" href="classskyway_1_1global_1_1interface_1_1_logger.html">interface::Logger</a>, <span class="keyword">public</span> rtc::LogSink {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger_1_1_listener.html">   27</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1global_1_1_logger_1_1_listener.html">Listener</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">virtual</span> <a class="code hl_class" href="classskyway_1_1global_1_1_logger_1_1_listener.html">~Listener</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger_1_1_listener.html#a96b8470ab320fc4913127f876d04274c">   34</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1global_1_1_logger_1_1_listener.html#a96b8470ab320fc4913127f876d04274c">OnLog</a>(<a class="code hl_enumeration" href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">Level</a> level, <span class="keyword">const</span> std::string&amp; text) = 0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    };</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#a1403c831aa78035f51affb218ef56213">   39</a></span>    <a class="code hl_function" href="classskyway_1_1global_1_1_logger.html#a1403c831aa78035f51affb218ef56213">Logger</a>(<a class="code hl_enumeration" href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">Level</a> level = kInfo, <span class="keywordtype">bool</span> enable_webrtc_log = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_class" href="classskyway_1_1global_1_1_logger.html">~Logger</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#a11c411ed86a1ce8836b9a8e54c0189ad">   44</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1global_1_1_logger.html#a11c411ed86a1ce8836b9a8e54c0189ad">Log</a>(<a class="code hl_enumeration" href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">Level</a> level,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>             <span class="keyword">const</span> std::string&amp; message,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>             <span class="keyword">const</span> std::string&amp; filename = <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>             <span class="keyword">const</span> std::string&amp; function = <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>             <span class="keywordtype">int</span> line                    = -1);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#a4dca8ee38aee8566000e04d49d1287a5">   52</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1global_1_1_logger.html#a4dca8ee38aee8566000e04d49d1287a5">Trace</a>(<span class="keyword">const</span> std::string&amp; message,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>               <span class="keyword">const</span> std::string&amp; filename = __builtin_FILE(),</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>               <span class="keyword">const</span> std::string&amp; function = __builtin_FUNCTION(),</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>               <span class="keywordtype">int</span> line                    = __builtin_LINE()) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#ac75de165a72418e588e3d373fd1c5311">   58</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1global_1_1_logger.html#ac75de165a72418e588e3d373fd1c5311">Debug</a>(<span class="keyword">const</span> std::string&amp; message,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>               <span class="keyword">const</span> std::string&amp; filename = __builtin_FILE(),</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>               <span class="keyword">const</span> std::string&amp; function = __builtin_FUNCTION(),</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>               <span class="keywordtype">int</span> line                    = __builtin_LINE()) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#ab75de2cca229894998d5d4fce17f9536">   64</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1global_1_1_logger.html#ab75de2cca229894998d5d4fce17f9536">Info</a>(<span class="keyword">const</span> std::string&amp; message,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>              <span class="keyword">const</span> std::string&amp; filename = __builtin_FILE(),</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>              <span class="keyword">const</span> std::string&amp; function = __builtin_FUNCTION(),</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>              <span class="keywordtype">int</span> line                    = __builtin_LINE()) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#a44c8173cc4242b56774a2a3bb93d63d4">   70</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1global_1_1_logger.html#a44c8173cc4242b56774a2a3bb93d63d4">Warn</a>(<span class="keyword">const</span> std::string&amp; message,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>              <span class="keyword">const</span> std::string&amp; filename = __builtin_FILE(),</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>              <span class="keyword">const</span> std::string&amp; function = __builtin_FUNCTION(),</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>              <span class="keywordtype">int</span> line                    = __builtin_LINE()) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#aef7e893ddf7f903b86715e3efa8133a5">   76</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1global_1_1_logger.html#aef7e893ddf7f903b86715e3efa8133a5">Error</a>(<span class="keyword">const</span> std::string&amp; message,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>               <span class="keyword">const</span> std::string&amp; filename = __builtin_FILE(),</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>               <span class="keyword">const</span> std::string&amp; function = __builtin_FUNCTION(),</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>               <span class="keywordtype">int</span> line                    = __builtin_LINE()) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#a28062884750b77401f00ec3ded74629b">   83</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1global_1_1_logger.html#a28062884750b77401f00ec3ded74629b">OnLogMessage</a>(<span class="keyword">const</span> std::string&amp; message) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#ae0fbf1a1c5667650c5dcbfea0bb602d9">   87</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1global_1_1_logger.html#ae0fbf1a1c5667650c5dcbfea0bb602d9">OnLogMessage</a>(<span class="keyword">const</span> std::string&amp; message, rtc::LoggingSeverity severity) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#a4919f1b76e8e527fa2a3048bd38549ef">   92</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1global_1_1_logger.html#a4919f1b76e8e527fa2a3048bd38549ef">RegisterListener</a>(<span class="keyword">const</span> std::shared_ptr&lt;Listener&gt; listener);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classskyway_1_1global_1_1_logger.html#a07fb269062747355745c3b03b3578a9f">   95</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1global_1_1_logger.html#a07fb269062747355745c3b03b3578a9f">UnregisterListener</a>();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">void</span> SetLogLevel(<a class="code hl_enumeration" href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">Level</a> level);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_enumeration" href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">Level</a> WebRTCSeverityToLogLevel(rtc::LoggingSeverity severity);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">bool</span> enable_webrtc_log_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_enumeration" href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">Level</a> level_            = kInfo;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">inline</span> <span class="keyword">static</span> std::mutex listener_mtx_;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">inline</span> <span class="keyword">static</span> std::shared_ptr&lt;Listener&gt; listener_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>};</div>
+</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}  <span class="comment">// namespace global</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_GLOBAL_LOGGER_HPP */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassskyway_1_1global_1_1_logger_1_1_listener_html"><div class="ttname"><a href="classskyway_1_1global_1_1_logger_1_1_listener.html">skyway::global::Logger::Listener</a></div><div class="ttdoc">Logger のリスナー</div><div class="ttdef"><b>Definition</b> logger.hpp:27</div></div>
 <div class="ttc" id="aclassskyway_1_1global_1_1_logger_1_1_listener_html_a96b8470ab320fc4913127f876d04274c"><div class="ttname"><a href="classskyway_1_1global_1_1_logger_1_1_listener.html#a96b8470ab320fc4913127f876d04274c">skyway::global::Logger::Listener::OnLog</a></div><div class="ttdeci">virtual void OnLog(Level level, const std::string &amp;text)=0</div><div class="ttdoc">SkyWayのログが出力されたときのイベント</div></div>
-<div class="ttc" id="aclassskyway_1_1global_1_1_logger_html"><div class="ttname"><a href="classskyway_1_1global_1_1_logger.html">skyway::global::Logger</a></div><div class="ttdoc">SkyWayのログを出力するクラス</div><div class="ttdef"><b>Definition:</b> logger.hpp:21</div></div>
+<div class="ttc" id="aclassskyway_1_1global_1_1_logger_html"><div class="ttname"><a href="classskyway_1_1global_1_1_logger.html">skyway::global::Logger</a></div><div class="ttdoc">SkyWayのログを出力するクラス</div><div class="ttdef"><b>Definition</b> logger.hpp:21</div></div>
 <div class="ttc" id="aclassskyway_1_1global_1_1_logger_html_a07fb269062747355745c3b03b3578a9f"><div class="ttname"><a href="classskyway_1_1global_1_1_logger.html#a07fb269062747355745c3b03b3578a9f">skyway::global::Logger::UnregisterListener</a></div><div class="ttdeci">static void UnregisterListener()</div><div class="ttdoc">登録済みのロガーのリスナーを消去します。</div></div>
 <div class="ttc" id="aclassskyway_1_1global_1_1_logger_html_a11c411ed86a1ce8836b9a8e54c0189ad"><div class="ttname"><a href="classskyway_1_1global_1_1_logger.html#a11c411ed86a1ce8836b9a8e54c0189ad">skyway::global::Logger::Log</a></div><div class="ttdeci">void Log(Level level, const std::string &amp;message, const std::string &amp;filename=&quot;&quot;, const std::string &amp;function=&quot;&quot;, int line=-1)</div><div class="ttdoc">ログを出力します。</div></div>
 <div class="ttc" id="aclassskyway_1_1global_1_1_logger_html_a1403c831aa78035f51affb218ef56213"><div class="ttname"><a href="classskyway_1_1global_1_1_logger.html#a1403c831aa78035f51affb218ef56213">skyway::global::Logger::Logger</a></div><div class="ttdeci">Logger(Level level=kInfo, bool enable_webrtc_log=false)</div><div class="ttdoc">内部向けコンストラクタ</div></div>
@@ -188,15 +204,15 @@ $(document).ready(function(){initNavTree('logger_8hpp_source.html',''); initResi
 <div class="ttc" id="aclassskyway_1_1global_1_1_logger_html_ac75de165a72418e588e3d373fd1c5311"><div class="ttname"><a href="classskyway_1_1global_1_1_logger.html#ac75de165a72418e588e3d373fd1c5311">skyway::global::Logger::Debug</a></div><div class="ttdeci">void Debug(const std::string &amp;message, const std::string &amp;filename=__builtin_FILE(), const std::string &amp;function=__builtin_FUNCTION(), int line=__builtin_LINE()) override</div><div class="ttdoc">Debugレベルのログを出力します。</div></div>
 <div class="ttc" id="aclassskyway_1_1global_1_1_logger_html_ae0fbf1a1c5667650c5dcbfea0bb602d9"><div class="ttname"><a href="classskyway_1_1global_1_1_logger.html#ae0fbf1a1c5667650c5dcbfea0bb602d9">skyway::global::Logger::OnLogMessage</a></div><div class="ttdeci">void OnLogMessage(const std::string &amp;message, rtc::LoggingSeverity severity) override</div><div class="ttdoc">WebRTCのログが出力されたときのイベント</div></div>
 <div class="ttc" id="aclassskyway_1_1global_1_1_logger_html_aef7e893ddf7f903b86715e3efa8133a5"><div class="ttname"><a href="classskyway_1_1global_1_1_logger.html#aef7e893ddf7f903b86715e3efa8133a5">skyway::global::Logger::Error</a></div><div class="ttdeci">void Error(const std::string &amp;message, const std::string &amp;filename=__builtin_FILE(), const std::string &amp;function=__builtin_FUNCTION(), int line=__builtin_LINE()) override</div><div class="ttdoc">Errorレベルのログを出力します。</div></div>
-<div class="ttc" id="aclassskyway_1_1global_1_1interface_1_1_logger_html"><div class="ttname"><a href="classskyway_1_1global_1_1interface_1_1_logger.html">skyway::global::interface::Logger</a></div><div class="ttdoc">SkyWayのログを処理するクラス</div><div class="ttdef"><b>Definition:</b> logger.hpp:63</div></div>
-<div class="ttc" id="aclassskyway_1_1global_1_1interface_1_1_logger_html_ad1ac1d2acceda3d35def685cd25622fa"><div class="ttname"><a href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">skyway::global::interface::Logger::Level</a></div><div class="ttdeci">Level</div><div class="ttdoc">ログレベル</div><div class="ttdef"><b>Definition:</b> logger.hpp:66</div></div>
+<div class="ttc" id="aclassskyway_1_1global_1_1interface_1_1_logger_html"><div class="ttname"><a href="classskyway_1_1global_1_1interface_1_1_logger.html">skyway::global::interface::Logger</a></div><div class="ttdoc">SkyWayのログを処理するクラス</div><div class="ttdef"><b>Definition</b> logger.hpp:63</div></div>
+<div class="ttc" id="aclassskyway_1_1global_1_1interface_1_1_logger_html_ad1ac1d2acceda3d35def685cd25622fa"><div class="ttname"><a href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">skyway::global::interface::Logger::Level</a></div><div class="ttdeci">Level</div><div class="ttdoc">ログレベル</div><div class="ttdef"><b>Definition</b> logger.hpp:66</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_77f3510bf786cf3c12f65f3b0b944be3.html">skyway</a></li><li class="navelem"><a class="el" href="dir_e54d7bb9883a4f29b7ab2a2ca78d80aa.html">global</a></li><li class="navelem"><b>logger.hpp</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

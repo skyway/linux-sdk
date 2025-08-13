@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('classskyway_1_1core_1_1interface_1_1_remote_member_plugin.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,17 +87,23 @@ $(document).ready(function(){initNavTree('classskyway_1_1core_1_1interface_1_1_r
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="classskyway_1_1core_1_1interface_1_1_remote_member_plugin-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">skyway::core::interface::RemoteMemberPlugin クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+  <div class="headertitle"><div class="title">skyway::core::interface::RemoteMemberPlugin クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -110,13 +117,42 @@ skyway::core::interface::RemoteMemberPlugin の継承関係図</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a09288b4393adc11122d09cb6d451b6a2"><td class="memItemLeft" align="right" valign="top"><a id="a09288b4393adc11122d09cb6d451b6a2"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_member_plugin.html#a09288b4393adc11122d09cb6d451b6a2">GetSubtype</a> () const =0</td></tr>
-<tr class="memdesc:a09288b4393adc11122d09cb6d451b6a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pluginのサブタイプ <br /></td></tr>
+<tr class="memitem:a09288b4393adc11122d09cb6d451b6a2" id="r_a09288b4393adc11122d09cb6d451b6a2"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_member_plugin.html#a09288b4393adc11122d09cb6d451b6a2">GetSubtype</a> () const =0</td></tr>
+<tr class="memdesc:a09288b4393adc11122d09cb6d451b6a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pluginのサブタイプ  <br /></td></tr>
 <tr class="separator:a09288b4393adc11122d09cb6d451b6a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a09288b4393adc11122d09cb6d451b6a2" name="a09288b4393adc11122d09cb6d451b6a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09288b4393adc11122d09cb6d451b6a2">&#9670;&#160;</a></span>GetSubtype()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string skyway::core::interface::RemoteMemberPlugin::GetSubtype </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pluginのサブタイプ </p>
+
+<p><a class="el" href="classskyway_1_1plugin_1_1remote__person_1_1_plugin.html#ad9e536a104f5ad8a8a495269f38bd3aa">skyway::plugin::remote_person::Plugin</a>, <a class="el" href="classskyway_1_1plugin_1_1unknown__plugin_1_1_plugin.html#a02ebd52d8eec00f186f224d4a99788ed">skyway::plugin::unknown_plugin::Plugin</a>で実装されています。</p>
+
+</div>
+</div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>include/skyway/core/interface/<a class="el" href="remote__member__plugin_8hpp_source.html">remote_member_plugin.hpp</a></li>
 </ul>
@@ -126,7 +162,7 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>skyway</b></li><li class="navelem"><b>core</b></li><li class="navelem"><b>interface</b></li><li class="navelem"><a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_member_plugin.html">RemoteMemberPlugin</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
