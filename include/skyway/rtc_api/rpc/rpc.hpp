@@ -32,7 +32,7 @@ public:
     /// コンストラクタ
     Rpc(std::weak_ptr<token::interface::AuthTokenManager> auth,
         RpcInterface::Listener* listener,
-        int timeout_for_send_ms = config::DEFAULT_TIMEOUT_FOR_SEND);
+        int timeout_for_send_ms = config::kDefaultTimeoutForSend);
     ~Rpc();
     bool Connect(const std::string& domain, bool secure) override;
     std::optional<nlohmann::json> Request(const std::string& method,
@@ -46,7 +46,7 @@ public:
 
     // WebSocketClientInterface::Listener
     void OnMessage(const std::string& message) override;
-    void OnClose(const int code) override;
+    void OnClose(const int code, const std::string& reason) override;
     void OnError(const int code) override;
 
 private:

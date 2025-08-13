@@ -38,8 +38,8 @@ public:
            const std::weak_ptr<token::interface::AuthTokenManager> auth,
            const std::shared_ptr<network::interface::WebSocketClient>& ws,
            const platform::interface::PlatformInfoDelegator* platform_info,
-           const int max_socket_reconnect_count   = config::MAX_SOCKET_RECONNECT_COUNT,
-           const int socket_open_timeout_millisec = config::SOCKET_OPEN_TIMEOUT_MILLISEC);
+           const int max_socket_reconnect_count   = config::kMaxSocketReconnectCount,
+           const int socket_open_timeout_millisec = config::kSocketOpenTimeoutMillisec);
     ~Socket();
 
     void RegisterListener(interface::Socket::Listener* listener) override;
@@ -51,7 +51,7 @@ public:
 
     // network::interface::WebSocketClient::Listener
     void OnMessage(const std::string& message) override;
-    void OnClose(int code) override;
+    void OnClose(int code, const std::string& reason) override;
     void OnError(int code) override;
 
 private:

@@ -52,7 +52,8 @@ public:
     static bool SetPlayoutDevice(AudioDevice device);
 
     /// @cond INTERNAL_SECTION
-    static rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> GetPeerConnectionFactory();
+    static rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> CreatePeerConnectionFactory();
+    static void Dispose();
     static rtc::scoped_refptr<webrtc::AudioTrackInterface> CreateAudioTrack();
     static rtc::scoped_refptr<webrtc::VideoTrackInterface> CreateVideoTrack(
         rtc::scoped_refptr<webrtc::VideoTrackSourceInterface> source);
@@ -61,8 +62,8 @@ public:
 private:
     static rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory_;
     static rtc::scoped_refptr<webrtc::AudioDeviceModule> adm_;
-    static rtc::Thread *signaling_thread_;
-    static rtc::Thread *worker_thread_;
+    static std::unique_ptr<rtc::Thread> signaling_thread_;
+    static std::unique_ptr<rtc::Thread> worker_thread_;
     static std::unique_ptr<webrtc::TaskQueueFactory> task_queue_factory_;
 };
 

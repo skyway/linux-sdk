@@ -16,27 +16,27 @@ namespace core {
 namespace config {
 
 namespace ice {
-extern const std::string DEFAULT_PARAMS_SERVER_DOMAIN;
-extern const int DEFAULT_PARAMS_SERVER_VERSION;
-extern const bool DEFAULT_USE_SECURE_PROTOCOL;
-extern const int TTL;
+extern const std::string kDefaultParamsServerDomain;
+extern const int kDefaultParamsServerVersion;
+extern const bool kDefaultUseSecureProtocol;
+extern const int kTtl;
 
 }  // namespace ice
 
 namespace channel {
-extern const int LOCAL_PERSON_CREATION_TIMEOUT_SEC;
+extern const int kLocalPersonCreationTimeoutSec;
 }
 
 namespace member {
 /// The extra sec for `UpdateMemberTtl`
-extern const int DEFAULT_KEEP_ALIVE_INTERVAL_GAP_SEC;
-extern const int DEFAULT_KEEP_ALIVE_INTERVAL_SEC;
-extern const int INFINITE_KEEP_ALIVE_INTERVAL;
+extern const int kDefaultKeepAliveIntervalGapSec;
+extern const int kDefaultKeepAliveIntervalSec;
+extern const int kInfiniteKeepAliveInterval;
 }  // namespace member
 
-extern const std::string LOCAL_DATA_STREAM_LABEL;
+extern const std::string kLocalDataStreamLabel;
 /// JS-SDKにおいてobject型を送信される時に付与されるフラグ文字列
-extern const std::string REMOTE_DATA_STREAM_JS_OBJECT_FLAG;
+extern const std::string kRemoteDataStreamJsObjectFlag;
 
 }  // namespace config
 }  // namespace core

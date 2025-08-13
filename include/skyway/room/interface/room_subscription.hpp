@@ -33,6 +33,8 @@ public:
         /// @brief Subscribe中のStream接続状態が変更された後に発生するイベント
         /// @param state 接続状態
         virtual void OnConnectionStateChanged(const core::ConnectionState state) {}
+
+        virtual void OnStreamAttached(std::shared_ptr<core::interface::RemoteStream> stream) {}
     };
     virtual ~RoomSubscription() = default;
     /// @brief Idを取得します。

@@ -55,7 +55,9 @@ struct ContextOptions {
     };
     /// @brief トークンに関する設定
     struct Token {
-        std::optional<int> remind_time_sec;
+        /// @deprecated 非推奨です。update_remind_sec を使用してください。
+        [[deprecated]] std::optional<int> remind_time_sec;
+        std::optional<int> update_remind_sec;
         token::interface::AuthTokenManager::Listener* listener = nullptr;
     };
     RtcApi rtc_api;

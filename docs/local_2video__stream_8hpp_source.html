@@ -138,18 +138,19 @@ $(document).ready(function(){initNavTree('local_2video__stream_8hpp_source.html'
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">bool</span> Enable() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">bool</span> Disable() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    rtc::scoped_refptr&lt;webrtc::VideoTrackInterface&gt; track_;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> SetContentHint(webrtc::VideoTrackInterface::ContentHint content_hint);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    rtc::scoped_refptr&lt;webrtc::VideoTrackInterface&gt; track_;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
 </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}  <span class="comment">// namespace local</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}  <span class="comment">// namespace stream</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}  <span class="comment">// namespace core</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_CORE_STREAM_LOCAL_VIDEO_STREAM_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}  <span class="comment">// namespace local</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}  <span class="comment">// namespace stream</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}  <span class="comment">// namespace core</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_CORE_STREAM_LOCAL_VIDEO_STREAM_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_local_media_stream_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_local_media_stream.html">skyway::core::interface::LocalMediaStream</a></div><div class="ttdoc">LocalPersonで扱うMediaStream</div><div class="ttdef"><b>Definition</b> local_media_stream.hpp:21</div></div>
 <div class="ttc" id="aclassskyway_1_1core_1_1stream_1_1local_1_1_local_video_stream_html"><div class="ttname"><a href="classskyway_1_1core_1_1stream_1_1local_1_1_local_video_stream.html">skyway::core::stream::local::LocalVideoStream</a></div><div class="ttdoc">LocalPersonで扱うVideoStream</div><div class="ttdef"><b>Definition</b> video_stream.hpp:24</div></div>
 <div class="ttc" id="aclassskyway_1_1core_1_1stream_1_1local_1_1_local_video_stream_html_acb12783c13ff11e891c3db802a2d37a0"><div class="ttname"><a href="classskyway_1_1core_1_1stream_1_1local_1_1_local_video_stream.html#acb12783c13ff11e891c3db802a2d37a0">skyway::core::stream::local::LocalVideoStream::Track</a></div><div class="ttdeci">rtc::scoped_refptr&lt; webrtc::MediaStreamTrackInterface &gt; Track() const override</div><div class="ttdoc">Trackを取得します。</div></div>

@@ -14,17 +14,17 @@ namespace analytics {
 namespace config {
 
 /// デフォルトドメイン
-constexpr char DEFAULT_DOMAIN[] = "analytics-logging.skyway.ntt.com";
+constexpr char kDefaultDomain[] = "analytics-logging.skyway.ntt.com";
 /// セキュアプロトコル(HTTPS, WS)を利用するかどうか
-constexpr bool DEFAULT_USE_SECURE_PROTOCOL = true;
+constexpr bool kDefaultUseSecureProtocol = true;
 /// APIバージョン
-constexpr char API_VERSION[] = "v1";
+constexpr char kApiVersion[] = "v1";
 /// Websocketの最大再接続試行回数
-constexpr int MAX_SOCKET_RECONNECT_COUNT = 8;
+constexpr int kMaxSocketReconnectCount = 8;
 /// ソケットオープンまでのタイムアウト時間(ミリ秒)
-constexpr int SOCKET_OPEN_TIMEOUT_MILLISEC = 10 * 1000;
+constexpr int kSocketOpenTimeoutMillisec = 10 * 1000;
 /// ソケットクローズまでのタイムアウト時間(ミリ秒)
-constexpr int SOCKET_CLOSE_TIMEOUT_MILLISEC = 10 * 1000;
+constexpr int kSocketCloseTimeoutMillisec = 10 * 1000;
 
 }  // namespace config
 }  // namespace analytics

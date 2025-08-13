@@ -134,6 +134,12 @@ skyway::Context の継承関係図</div>
 <tr class="memitem:aef39b53a0f1ade4a21f7fc698b1aae3e" id="r_aef39b53a0f1ade4a21f7fc698b1aae3e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1_context.html#aef39b53a0f1ade4a21f7fc698b1aae3e">Setup</a> (const std::string &amp;token, <a class="el" href="classskyway_1_1core_1_1_context_1_1_event_listener.html">core::Context::EventListener</a> *listener, const <a class="el" href="structskyway_1_1_context_1_1_sky_way_options.html">SkyWayOptions</a> &amp;options)</td></tr>
 <tr class="memdesc:aef39b53a0f1ade4a21f7fc698b1aae3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contextを初期化します。  <br /></td></tr>
 <tr class="separator:aef39b53a0f1ade4a21f7fc698b1aae3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a491ab44754ec48bd566d8359ae1228bc" id="r_a491ab44754ec48bd566d8359ae1228bc"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1_context.html#a491ab44754ec48bd566d8359ae1228bc">SetupForDev</a> (const std::string &amp;app_id, const std::string &amp;secret_key, <a class="el" href="classskyway_1_1core_1_1_context_1_1_event_listener.html">core::Context::EventListener</a> *listener, const <a class="el" href="structskyway_1_1_context_1_1_sky_way_options.html">SkyWayOptions</a> &amp;options)</td></tr>
+<tr class="memdesc:a491ab44754ec48bd566d8359ae1228bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contextを初期化します。このメソッドは動作確認用です。  <br /></td></tr>
+<tr class="separator:a491ab44754ec48bd566d8359ae1228bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac538fa00dde85d18bd6cf194d608290b" id="r_ac538fa00dde85d18bd6cf194d608290b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1_context.html#ac538fa00dde85d18bd6cf194d608290b">Dispose</a> ()</td></tr>
+<tr class="memdesc:ac538fa00dde85d18bd6cf194d608290b"><td class="mdescLeft">&#160;</td><td class="mdescRight">SkyWayを終了し、Contextを破棄します。  <br /></td></tr>
+<tr class="separator:ac538fa00dde85d18bd6cf194d608290b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a043c8eaf8fdbe6cfd97e68e59b6d007b" id="r_a043c8eaf8fdbe6cfd97e68e59b6d007b"><td class="memItemLeft" align="right" valign="top"><a id="a043c8eaf8fdbe6cfd97e68e59b6d007b" name="a043c8eaf8fdbe6cfd97e68e59b6d007b"></a>
 static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetVersionString</b> ()</td></tr>
 <tr class="memdesc:a043c8eaf8fdbe6cfd97e68e59b6d007b"><td class="mdescLeft">&#160;</td><td class="mdescRight">SkyWay Linux SDKのバージョンを取得します。 <br /></td></tr>
@@ -154,20 +160,48 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetVers
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 静的公開変数類</h2></td></tr>
-<tr class="memitem:a4bac818c302373fc57bfb1f1fec04498" id="r_a4bac818c302373fc57bfb1f1fec04498"><td class="memItemLeft" align="right" valign="top"><a id="a4bac818c302373fc57bfb1f1fec04498" name="a4bac818c302373fc57bfb1f1fec04498"></a>
-static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>VERSION_MAJOR</b> = 2</td></tr>
-<tr class="separator:a4bac818c302373fc57bfb1f1fec04498"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3c5ed1243b9d461fba782b7e003e723" id="r_ad3c5ed1243b9d461fba782b7e003e723"><td class="memItemLeft" align="right" valign="top"><a id="ad3c5ed1243b9d461fba782b7e003e723" name="ad3c5ed1243b9d461fba782b7e003e723"></a>
-static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>VERSION_MINOR</b> = 0</td></tr>
-<tr class="separator:ad3c5ed1243b9d461fba782b7e003e723"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a087f7a35180c2f983480adc6e40854d2" id="r_a087f7a35180c2f983480adc6e40854d2"><td class="memItemLeft" align="right" valign="top"><a id="a087f7a35180c2f983480adc6e40854d2" name="a087f7a35180c2f983480adc6e40854d2"></a>
-static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>VERSION_PATCH</b> = 1</td></tr>
-<tr class="separator:a087f7a35180c2f983480adc6e40854d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa06d99be0adf17c6e9398272a042783" id="r_afa06d99be0adf17c6e9398272a042783"><td class="memItemLeft" align="right" valign="top"><a id="afa06d99be0adf17c6e9398272a042783" name="afa06d99be0adf17c6e9398272a042783"></a>
+static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>kVersionMajor</b> = 3</td></tr>
+<tr class="separator:afa06d99be0adf17c6e9398272a042783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0524954975019715eec72242f28a3bc4" id="r_a0524954975019715eec72242f28a3bc4"><td class="memItemLeft" align="right" valign="top"><a id="a0524954975019715eec72242f28a3bc4" name="a0524954975019715eec72242f28a3bc4"></a>
+static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>kVersionMinor</b> = 0</td></tr>
+<tr class="separator:a0524954975019715eec72242f28a3bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86b0f135816e75e0b317d8653437405e" id="r_a86b0f135816e75e0b317d8653437405e"><td class="memItemLeft" align="right" valign="top"><a id="a86b0f135816e75e0b317d8653437405e" name="a86b0f135816e75e0b317d8653437405e"></a>
+static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>kVersionPatch</b> = 0</td></tr>
+<tr class="separator:a86b0f135816e75e0b317d8653437405e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>アプリケーションでSkyWay全体の設定、取得を行うStaticなコンテキスト </p>
 <p>特別な理由がない場合はcore::Contextでなく、こちらを利用してください。 </p>
 </div><h2 class="groupheader">関数詳解</h2>
+<a id="ac538fa00dde85d18bd6cf194d608290b" name="ac538fa00dde85d18bd6cf194d608290b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac538fa00dde85d18bd6cf194d608290b">&#9670;&#160;</a></span>Dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void skyway::Context::Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SkyWayを終了し、Contextを破棄します。 </p>
+<p>コンテキストを破棄し、全ての接続を切断します。 SkyWayの利用が不要になった時にコールしてください。 Dispose完了後にSDKで生成されたリソースにアクセスしないでください。 <a class="el" href="classskyway_1_1_context.html#aef39b53a0f1ade4a21f7fc698b1aae3e" title="Contextを初期化します。">skyway::Context::Setup()</a>を再度コールすることで利用可能になります。 </p>
+
+</div>
+</div>
 <a id="aef39b53a0f1ade4a21f7fc698b1aae3e" name="aef39b53a0f1ade4a21f7fc698b1aae3e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef39b53a0f1ade4a21f7fc698b1aae3e">&#9670;&#160;</a></span>Setup()</h2>
 
@@ -212,6 +246,65 @@ static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>
 <p>SkyWayを利用するためには必ずこのメソッドを最初にコールする必要があります。 </p><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">token</td><td>JWT形式のAuthトークン </td></tr>
+    <tr><td class="paramname">listener</td><td>イベントリスナ </td></tr>
+    <tr><td class="paramname">options</td><td>オプション </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a491ab44754ec48bd566d8359ae1228bc" name="a491ab44754ec48bd566d8359ae1228bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a491ab44754ec48bd566d8359ae1228bc">&#9670;&#160;</a></span>SetupForDev()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool skyway::Context::SetupForDev </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>app_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>secret_key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classskyway_1_1core_1_1_context_1_1_event_listener.html">core::Context::EventListener</a> *&#160;</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structskyway_1_1_context_1_1_sky_way_options.html">SkyWayOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Contextを初期化します。このメソッドは動作確認用です。 </p>
+<p>認証情報の漏洩を防ぐため、このメソッドをリリース版で利用することは控えてください。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">app_id</td><td>アプリケーションID </td></tr>
+    <tr><td class="paramname">secret_key</td><td>アプリケーションのシークレットキー </td></tr>
     <tr><td class="paramname">listener</td><td>イベントリスナ </td></tr>
     <tr><td class="paramname">options</td><td>オプション </td></tr>
   </table>

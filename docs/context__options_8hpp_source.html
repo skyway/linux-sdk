@@ -169,23 +169,24 @@ $(document).ready(function(){initNavTree('context__options_8hpp_source.html','')
 </div>
 <div class="foldopen" id="foldopen00057" data-start="{" data-end="};">
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structskyway_1_1core_1_1_context_options_1_1_token.html">   57</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1core_1_1_context_options_1_1_token.html">Token</a> {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        std::optional&lt;int&gt; remind_time_sec;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        token::interface::AuthTokenManager::Listener* listener = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    };</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structskyway_1_1core_1_1_context_options_1_1_token.html#af019a7cff4710a053c4d63ba6743f27b">   59</a></span>        [[deprecated]] std::optional&lt;int&gt; <a class="code hl_variable" href="structskyway_1_1core_1_1_context_options_1_1_token.html#af019a7cff4710a053c4d63ba6743f27b">remind_time_sec</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        std::optional&lt;int&gt; update_remind_sec;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        token::interface::AuthTokenManager::Listener* listener = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    };</div>
 </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_struct" href="structskyway_1_1core_1_1_context_options_1_1_rtc_api.html">RtcApi</a> rtc_api;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_struct" href="structskyway_1_1core_1_1_context_options_1_1_ice_params.html">IceParams</a> ice_params;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_struct" href="structskyway_1_1core_1_1_context_options_1_1_signaling.html">Signaling</a> signaling;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_struct" href="structskyway_1_1core_1_1_context_options_1_1_analytics.html">Analytics</a> analytics;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_struct" href="structskyway_1_1core_1_1_context_options_1_1_rtc_config.html">RtcConfig</a> rtc_config;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_struct" href="structskyway_1_1core_1_1_context_options_1_1_token.html">Token</a> token;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_struct" href="structskyway_1_1core_1_1_context_options_1_1_rtc_api.html">RtcApi</a> rtc_api;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_struct" href="structskyway_1_1core_1_1_context_options_1_1_ice_params.html">IceParams</a> ice_params;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_struct" href="structskyway_1_1core_1_1_context_options_1_1_signaling.html">Signaling</a> signaling;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_struct" href="structskyway_1_1core_1_1_context_options_1_1_analytics.html">Analytics</a> analytics;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_struct" href="structskyway_1_1core_1_1_context_options_1_1_rtc_config.html">RtcConfig</a> rtc_config;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_struct" href="structskyway_1_1core_1_1_context_options_1_1_token.html">Token</a> token;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>};</div>
 </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}  <span class="comment">// namespace core</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_CORE_CONTEXT_OPTIONS_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}  <span class="comment">// namespace core</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_CORE_CONTEXT_OPTIONS_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="astructskyway_1_1core_1_1_context_options_1_1_analytics_html"><div class="ttname"><a href="structskyway_1_1core_1_1_context_options_1_1_analytics.html">skyway::core::ContextOptions::Analytics</a></div><div class="ttdoc">Analyticsサーバーへの接続に関する設定</div><div class="ttdef"><b>Definition</b> context_options.hpp:46</div></div>
 <div class="ttc" id="astructskyway_1_1core_1_1_context_options_1_1_ice_params_html"><div class="ttname"><a href="structskyway_1_1core_1_1_context_options_1_1_ice_params.html">skyway::core::ContextOptions::IceParams</a></div><div class="ttdoc">ICEサーバーへの接続に関する設定</div><div class="ttdef"><b>Definition</b> context_options.hpp:33</div></div>
 <div class="ttc" id="astructskyway_1_1core_1_1_context_options_1_1_rtc_api_html"><div class="ttname"><a href="structskyway_1_1core_1_1_context_options_1_1_rtc_api.html">skyway::core::ContextOptions::RtcApi</a></div><div class="ttdoc">RTCAPIサーバーへの接続に関する設定</div><div class="ttdef"><b>Definition</b> context_options.hpp:28</div></div>
@@ -193,6 +194,7 @@ $(document).ready(function(){initNavTree('context__options_8hpp_source.html','')
 <div class="ttc" id="astructskyway_1_1core_1_1_context_options_1_1_rtc_config_html_a10b1441a1ad38039ff94b834e1cf7d67"><div class="ttname"><a href="structskyway_1_1core_1_1_context_options_1_1_rtc_config.html#a10b1441a1ad38039ff94b834e1cf7d67">skyway::core::ContextOptions::RtcConfig::policy</a></div><div class="ttdeci">std::optional&lt; TurnPolicy &gt; policy</div><div class="ttdoc">TURN接続に関するポリシーを選択します。</div><div class="ttdef"><b>Definition</b> context_options.hpp:54</div></div>
 <div class="ttc" id="astructskyway_1_1core_1_1_context_options_1_1_signaling_html"><div class="ttname"><a href="structskyway_1_1core_1_1_context_options_1_1_signaling.html">skyway::core::ContextOptions::Signaling</a></div><div class="ttdoc">Signalingサーバーへの接続に関する設定</div><div class="ttdef"><b>Definition</b> context_options.hpp:40</div></div>
 <div class="ttc" id="astructskyway_1_1core_1_1_context_options_1_1_token_html"><div class="ttname"><a href="structskyway_1_1core_1_1_context_options_1_1_token.html">skyway::core::ContextOptions::Token</a></div><div class="ttdoc">トークンに関する設定</div><div class="ttdef"><b>Definition</b> context_options.hpp:57</div></div>
+<div class="ttc" id="astructskyway_1_1core_1_1_context_options_1_1_token_html_af019a7cff4710a053c4d63ba6743f27b"><div class="ttname"><a href="structskyway_1_1core_1_1_context_options_1_1_token.html#af019a7cff4710a053c4d63ba6743f27b">skyway::core::ContextOptions::Token::remind_time_sec</a></div><div class="ttdeci">std::optional&lt; int &gt; remind_time_sec</div><div class="ttdef"><b>Definition</b> context_options.hpp:59</div></div>
 <div class="ttc" id="astructskyway_1_1core_1_1_context_options_html"><div class="ttname"><a href="structskyway_1_1core_1_1_context_options.html">skyway::core::ContextOptions</a></div><div class="ttdoc">ContextのSetup時に使用するオプション</div><div class="ttdef"><b>Definition</b> context_options.hpp:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

@@ -168,6 +168,9 @@ skyway::room::RoomSubscription の継承関係図</div>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnConnectionStateChanged</b> (const ConnectionState state)</td></tr>
 <tr class="memdesc:ac049fcc102fc38e6c699018a8919782d inherit pub_methods_classskyway_1_1core_1_1interface_1_1_subscription_1_1_event_listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">このSubscriptionのメディア通信の状態が変化した時に発火するイベント <br /></td></tr>
 <tr class="separator:ac049fcc102fc38e6c699018a8919782d inherit pub_methods_classskyway_1_1core_1_1interface_1_1_subscription_1_1_event_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea38548f0f4aefe4ba2ccc3589bdadf inherit pub_methods_classskyway_1_1core_1_1interface_1_1_subscription_1_1_event_listener" id="r_afea38548f0f4aefe4ba2ccc3589bdadf"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStreamAttached</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_stream.html">RemoteStream</a> &gt; stream)</td></tr>
+<tr class="separator:afea38548f0f4aefe4ba2ccc3589bdadf inherit pub_methods_classskyway_1_1core_1_1interface_1_1_subscription_1_1_event_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>RoomSubscriptionの操作を行うクラス </p>
@@ -254,7 +257,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnConnectionS
 </div><div class="memdoc">
 
 <p>Subscribeを中止します。 </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">非推奨:</a></b></dt><dd>本機能は非推奨です。 </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">非推奨:</a></b></dt><dd>本機能は非推奨です。 </dd></dl>
 
 <p><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a29c7317e47219f315f1fd810a408770a">skyway::room::interface::RoomSubscription</a>を実装しています。</p>
 
@@ -343,7 +346,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnConnectionS
 </div><div class="memdoc">
 
 <p>統計情報を取得します。 </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">非推奨:</a></b></dt><dd>本機能は非推奨です。 </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">非推奨:</a></b></dt><dd>本機能は非推奨です。 </dd></dl>
 <p>試験的なAPIです。今後インターフェースや仕様が変更される可能性があります。 </p>
 
 <p><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a823d85cb25e90ffe0e120c32724ffaf1">skyway::room::interface::RoomSubscription</a>を実装しています。</p>

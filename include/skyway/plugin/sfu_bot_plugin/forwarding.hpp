@@ -20,7 +20,7 @@ namespace sfu_bot {
 /// @brief Fowardingの設定
 struct ForwardingConfigure {
     /// @brief FowardingをSubscribe出来る最大人数
-    int max_subscribers = config::DEFAULT_MAX_SUBSCRIBERS;
+    int max_subscribers = config::kDefaultMaxSubscribers;
 };
 
 enum class ForwardingState { kStarted, kStopped };

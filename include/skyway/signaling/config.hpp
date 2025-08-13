@@ -16,29 +16,29 @@ namespace signaling {
 namespace config {
 
 /// デフォルトドメイン
-extern const std::string DEFAULT_DOMAIN;
+extern const std::string kDefaultDomain;
 /// セキュアプロトコル(HTTPS, WS)を利用するかどうか
-extern const bool DEFAULT_USE_SECURE_PROTOCOL;
+extern const bool kDefaultUseSecureProtocol;
 /// APIバージョン
-extern const std::string API_VERSION;
+extern const std::string kApiVersion;
 /// Websocketの最大再接続試行回数
-extern const int MAX_SOCKET_RECONNECT_COUNT;
+extern const int kMaxSocketReconnectCount;
 /// メッセージの最大文字数
-extern const int MAX_PAYLOAD_LENGTH;
+extern const int kMaxPayloadLength;
 /// 接続チェック応答のデフォルトインターバル時間(秒)
-extern const int DEFAULT_CONNECTIVITY_CHECK_INTERVAL_SEC;
+extern const int kDefaultConnectivityCheckIntervalSec;
 /// ソケットオープンまでのタイムアウト時間(秒)
-extern const int SOCKET_OPEN_TIMEOUT_SEC;
+extern const int kSocketOpenTimeoutSec;
 /// ソケットクローズまでのタイムアウト時間(秒)
-extern const int SOCKET_CLOSE_TIMEOUT_SEC;
+extern const int kSocketCloseTimeoutSec;
 /// UpdateSkywayAuthTokenまでのタイムアウト時間(秒)
-extern const int UPDATE_AUTH_TOKEN_TIMEOUT_SEC;
+extern const int kUpdateAuthTokenTimeoutSec;
 /// リクエスト送信のタイムアウト時間(秒)
-extern const int REQUEST_TIMEOUT_SEC;
+extern const int kRequestTimeoutSec;
 /// レスポンス送信のタイムアウト時間(秒)
-extern const int RESPONSE_TIMEOUT_SEC;
+extern const int kResponseTimeoutSec;
 /// ConnectivityCheckのタイムアウト時間(秒)
-extern const int CONNECTIVITY_CHECK_TIMEOUT_SEC;
+extern const int kConnectivityCheckTimeoutSec;
 
 }  // namespace config
 }  // namespace signaling

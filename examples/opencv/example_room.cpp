@@ -10,30 +10,31 @@
 
 #include <iostream>
 
-ExampleRoom::ExampleRoom(bool is_notify)
+ExampleRoom::ExampleRoom()
     : p2proom_(nullptr),
       room_member_(nullptr),
       renderer_(nullptr),
       capturer_(nullptr),
       threads_(std::vector<std::unique_ptr<std::thread>>()),
-      is_leaving_(false),
-      is_notify_(is_notify) {}
+      is_leaving_(false) {}
 
 // SkyWayの利用を開始します。
-bool ExampleRoom::Setup(const std::string& token) {
+bool ExampleRoom::Setup(const std::string& app_id, const std::string& secret_key) {
     skyway::Context::SkyWayOptions context_options{};
 
     // SkyWayのログレベルの設定が行えます。
-    // context_options.log_level = skyway::global::interface::Logger::kInfo;
+    context_options.log_level = skyway::global::interface::Logger::kWarn;
 
-    if (!skyway::Context::Setup(token, nullptr, context_options)) {
+    // SkyWayのAppIdとSecretKeyを使用して、SkyWayContextをセットアップします。
+    // 本番環境ではContext::Setupを使用してください。
+    if (!skyway::Context::SetupForDev(app_id, secret_key, nullptr, context_options)) {
         std::cerr << "- [Error] setup failed." << std::endl;
         return false;
     }
     return true;
 }
 
-// P2PRoomを検索/作成し、Joinします。
+// P2PRoomを検索/作成し、入室します。
 bool ExampleRoom::JoinRoom(const std::string& room_name) {
     // P2PRoomを検索/作成します。
     skyway::room::interface::RoomInitOptions room_init;
@@ -59,7 +60,7 @@ bool ExampleRoom::JoinRoom(const std::string& room_name) {
         std::cout << "  - Id: " << members->Id() << std::endl;
     }
 
-    // P2PRoomにメンバーをJoinさせます。
+    // P2PRoomにメンバーを入室させます。
     skyway::room::interface::RoomMemberInitOptions room_options;
     room_member_ = p2proom_->Join(room_options);
     if (!room_member_) {
@@ -101,12 +102,12 @@ void ExampleRoom::Publish() {
     skyway::room::interface::LocalRoomMember::PublicationOptions publication_options {};
     auto publication = room_member_->Publish(video_stream, publication_options);
     if (publication) {
-        std::cout << "  - VideoStream Published" << std::endl;
-        std::cout << "    - Publication Id: " << publication->Id() << std::endl;
+        std::cout << "- VideoStream Published" << std::endl;
+        std::cout << "  - Publication Id: " << publication->Id() << std::endl;
     }
 }
 
-// 指定のpublicationをsubscribeします。
+// 指定のPublicationをSubscribeします。
 bool ExampleRoom::Subscribe(std::shared_ptr<skyway::room::interface::RoomPublication> publication) {
     if (publication->ContentType() == skyway::model::ContentType::kVideo) {
         if (room_member_->Id() == publication->Publisher()->Id()) {
@@ -178,9 +179,7 @@ void ExampleRoom::Dispose() { skyway::Context::Dispose(); }
 // Impl skyway::room::interface::Room::EventListener
 void ExampleRoom::OnStreamPublished(
     std::shared_ptr<skyway::room::interface::RoomPublication> publication) {
-    if (is_notify_) {
-        std::cout << "<!-- [Event] StreamPublished: Id " << publication->Id() << "-->" << std::endl;
-    }
+    std::cout << "- [Event] StreamPublished: Id " << publication->Id() << std::endl;
 
     // イベントリスナーからSkyWayの操作を行う場合は別スレッドで実行する必要があります。
     auto subscribe_thread = std::make_unique<std::thread>(

@@ -15,14 +15,14 @@ namespace skyway {
 namespace rtc_api {
 namespace config {
 
-extern const std::string JSON_RPC_VERSION;
-extern const std::string DEFAULT_RAPI_DOMAIN;
-extern const bool DEFAULT_SECURE;
-extern const int MAX_RETRY_CONNECT;
-extern const int WAITING_TIME_FOR_CONNECT;
-extern const int WAITING_TIME_FOR_PACKET;
-extern const int MAX_RETRY_SEND;
-extern const int DEFAULT_TIMEOUT_FOR_SEND;
+extern const std::string kJsonRpcVersion;
+extern const std::string kDefaultRapiDomain;
+extern const bool kDefaultSecure;
+extern const int kMaxRetryConnect;
+extern const int kWaitingTimeForConnect;
+extern const int kWaitingTimeForPacket;
+extern const int kMaxRetrySend;
+extern const int kDefaultTimeoutForSend;
 
 }  // namespace config
 }  // namespace rtc_api

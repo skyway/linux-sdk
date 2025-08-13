@@ -21,10 +21,10 @@ namespace core {
 namespace ice {
 
 enum class Status {
-    SUCCESS                = 200,
-    INVALID_REQUEST_PARAMS = 400,
-    INVALID_TOKEN          = 401,
-    INTERNAL_SERVER_ERROR  = 500
+    kSuccess              = 200,
+    kInvalidRequestParams = 400,
+    kInvalidToken         = 401,
+    kInternalServerError  = 500
 };
 
 /// IceParamsサーバのステートレスなクライアント

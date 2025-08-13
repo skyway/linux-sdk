@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['opencvcapturervideosource_0',['OpenCVCapturerVideoSource',['../classskyway_1_1media_1_1opencv_1_1_open_c_v_capturer_video_source.html',1,'skyway::media::opencv']]],
-  ['opencvvideorenderer_1',['OpenCVVideoRenderer',['../classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html',1,'skyway::media::opencv']]]
+  ['member_0',['member',['../classskyway_1_1core_1_1interface_1_1_member.html',1,'skyway::core::interface::Member'],['../structskyway_1_1model_1_1_member.html',1,'skyway::model::Member']]]
 ];

@@ -3,10 +3,10 @@
 - 内容については[QuickStart](https://skyway.ntt.com/ja/docs/user-guide/linux-sdk/quickstart/)を実施済みの方を対象としております。
 
 ## サンプル概要
-- 任意のルームにJoinし、OpenCVを利用して作成したVideoをPublishします。また、他のメンバーがPublishしたVideoをSubscribeし、cv::imshowを利用して表示します。
+- 任意のルームに入室し、OpenCVを利用して作成したVideoをPublishします。また、他のメンバーがPublishしたVideoをSubscribeし、cv::imshowを利用して表示します。
 
 ## ビルド/実行方法
-- 本サンプルでは追加のパッケージが必要となります。aptを利用してinstallしてください。
+- 本サンプルでは追加のパッケージが必要となります。aptを利用してインストールしてください。
 ```
 apt update 
 apt install libswscale-dev 
@@ -50,7 +50,7 @@ make -j
 - 環境変数の`SKYWAY_AUTH_TOKEN`に生成したトークンを設定します。
     - トークンの設定方法などは[QuickStart](https://skyway.ntt.com/ja/docs/user-guide/linux-sdk/quickstart/)の「トークンの準備」をご覧ください。
 
-- 引数にJoinしたいルーム名を指定して実行します。
+- 引数に入室したいルーム名を指定して実行します。
 ```
 opencv.out test_room
 ```

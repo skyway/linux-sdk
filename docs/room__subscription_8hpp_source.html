@@ -155,17 +155,19 @@ $(document).ready(function(){initNavTree('room__subscription_8hpp_source.html','
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">//    void OnDisabled() override;</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> OnConnectionStateChanged(<span class="keyword">const</span> core::ConnectionState state) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    std::shared_ptr&lt;core::interface::Subscription&gt; core_;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    interface::RoomDomainFactory* factory_;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::mutex listener_mtx_;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_class" href="classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html">interface::RoomSubscription::EventListener</a>* listener_;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> OnStreamAttached(std::shared_ptr&lt;core::interface::RemoteStream&gt; stream) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::shared_ptr&lt;core::interface::Subscription&gt; core_;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    interface::RoomDomainFactory* factory_;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    std::mutex listener_mtx_;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_class" href="classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html">interface::RoomSubscription::EventListener</a>* listener_;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
 </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}  <span class="comment">// namespace room</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_ROOM_ROOM_SUBSCRIPTION_HPP */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}  <span class="comment">// namespace room</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_ROOM_ROOM_SUBSCRIPTION_HPP */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_subscription_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_subscription_1_1_event_listener.html">skyway::core::interface::Subscription::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition</b> subscription.hpp:34</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1_room_subscription_html"><div class="ttname"><a href="classskyway_1_1room_1_1_room_subscription.html">skyway::room::RoomSubscription</a></div><div class="ttdoc">RoomSubscriptionの操作を行うクラス</div><div class="ttdef"><b>Definition</b> room_subscription.hpp:22</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1_room_subscription_html_a17fa5b051b2031bc949891012c3f2d63"><div class="ttname"><a href="classskyway_1_1room_1_1_room_subscription.html#a17fa5b051b2031bc949891012c3f2d63">skyway::room::RoomSubscription::Subscriber</a></div><div class="ttdeci">std::shared_ptr&lt; interface::RoomMember &gt; Subscriber() override</div><div class="ttdoc">このSubscriptionを購読しているMemberを取得します。</div></div>

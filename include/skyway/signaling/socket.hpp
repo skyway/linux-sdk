@@ -54,7 +54,7 @@ public:
 
     // WebSocketClientInterface::Listener
     void OnMessage(const std::string& message) override;
-    void OnClose(const int code) override;
+    void OnClose(const int code, const std::string& reason) override;
     void OnError(const int code) override;
 
 private:

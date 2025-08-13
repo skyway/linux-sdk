@@ -15,7 +15,7 @@ namespace skyway {
 namespace plugin {
 namespace remote_person {
 namespace config {
-extern const int MAX_RESTART_ICE_COUNT;
+extern const int kMaxRestartIceCount;
 
 }  // namespace config
 }  // namespace remote_person

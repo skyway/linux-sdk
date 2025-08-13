@@ -10,31 +10,32 @@
 
 #include <iostream>
 
-ExampleRoom::ExampleRoom(const std::string& renderer_device_name, bool is_notify)
+ExampleRoom::ExampleRoom(const std::string& renderer_device_name)
     : p2proom_(nullptr),
       room_member_(nullptr),
       renderer_(nullptr),
       data_stream_(nullptr),
       renderer_device_name_(renderer_device_name),
       threads_(std::vector<std::unique_ptr<std::thread>>()),
-      is_leaving_(false),
-      is_notify_(is_notify) {}
+      is_leaving_(false) {}
 
 // SkyWayの利用を開始します。
-bool ExampleRoom::Setup(const std::string& token) {
+bool ExampleRoom::Setup(const std::string& app_id, const std::string& secret_key) {
     skyway::Context::SkyWayOptions context_options{};
 
     // SkyWayのログレベルの設定が行えます。
-    // context_options.log_level = skyway::global::interface::Logger::kInfo;
+    context_options.log_level = skyway::global::interface::Logger::kWarn;
 
-    if (!skyway::Context::Setup(token, nullptr, context_options)) {
+    // SkyWayのAppIdとSecretKeyを使用して、SkyWayContextをセットアップします。
+    // 本番環境ではContext::Setupを使用してください。
+    if (!skyway::Context::SetupForDev(app_id, secret_key, nullptr, context_options)) {
         std::cerr << "- [Error] setup failed." << std::endl;
         return false;
     }
     return true;
 }
 
-// P2PRoomを検索/作成し、Joinします。
+// P2PRoomを検索/作成し、入室します。
 bool ExampleRoom::JoinRoom(const std::string& room_name) {
     // P2PRoomを検索/作成します。
     skyway::room::interface::RoomInitOptions room_init;
@@ -60,7 +61,7 @@ bool ExampleRoom::JoinRoom(const std::string& room_name) {
         std::cout << "  - Id: " << members->Id() << std::endl;
     }
 
-    // P2PRoomにメンバーをJoinさせます。
+    // P2PRoomにメンバーを入室させます。
     skyway::room::interface::RoomMemberInitOptions room_options;
     room_member_ = p2proom_->Join(room_options);
     if (!room_member_) {
@@ -75,7 +76,7 @@ bool ExampleRoom::JoinRoom(const std::string& room_name) {
 
 // Video/Audio/DataをPublishします。
 void ExampleRoom::Publish() {
-    // ビデオデバイスを列挙し、任意のデバイスをpublishします。
+    // ビデオデバイスを列挙し、任意のデバイスをPublishします。
     auto video_devices = skyway::media::DeviceManager::GetVideoDevices();
     if (video_devices.size() > 0) {
         std::cout << "- VideoDevices" << std::endl;
@@ -126,10 +127,7 @@ void ExampleRoom::Publish() {
         while (!is_leaving_) {
             auto data = "send msg: " + std::to_string(count);
             data_stream_->Write(data);
-            if (is_notify_) {
-                std::cout << "<!-- [Event] DataStream Message Send: " << data << " -->"
-                          << std::endl;
-            }
+            std::cout << "- DataStream Message Send: " << data << std::endl;
             count++;
             std::this_thread::sleep_for(std::chrono::seconds(1));
         }
@@ -144,7 +142,7 @@ void ExampleRoom::Publish() {
     }
 }
 
-// 指定のpublicationをsubscribeします。
+// 指定のPublicationをSubscribeします。
 bool ExampleRoom::Subscribe(std::shared_ptr<skyway::room::interface::RoomPublication> publication) {
     if (room_member_->Id() == publication->Publisher()->Id()) {
         // 自身がPublishしたPublicationはSubscribeできないので無視します。
@@ -256,9 +254,7 @@ void ExampleRoom::Dispose() { skyway::Context::Dispose(); }
 // Impl skyway::room::interface::Room::EventListener
 void ExampleRoom::OnStreamPublished(
     std::shared_ptr<skyway::room::interface::RoomPublication> publication) {
-    if (is_notify_) {
-        std::cout << "<!-- [Event] StreamPublished: Id " << publication->Id() << "-->" << std::endl;
-    }
+    std::cout << "- [Event] StreamPublished: Id " << publication->Id() << std::endl;
 
     // イベントリスナーからSkyWayの操作を行う場合は別スレッドで実行する必要があります。
     auto subscribe_thread = std::make_unique<std::thread>(
@@ -270,15 +266,11 @@ void ExampleRoom::OnStreamPublished(
 
 // Impl skyway::core::stream::remote::RemoteDataStream::Listener
 void ExampleRoom::OnData(const std::string& data) {
-    if (is_notify_) {
-        std::cout << "<!-- [Event] DataStream Message Received: " << data << "-->" << std::endl;
-    }
+    std::cout << "- [Event] DataStream Message Received: " << data << std::endl;
 }
+
 void ExampleRoom::OnDataBuffer(const uint8_t* data, size_t length) {
-    if (is_notify_) {
-        std::cout << "<!-- [Event] DataStream BinaryData Received: Length=" << length << "-->"
-                  << std::endl;
-    }
+    std::cout << "- [Event] DataStream BinaryData Received: Length=" << length << std::endl;
 };
 
 // 指定のPublicationをSubscribeしているかチェックします。

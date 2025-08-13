@@ -47,6 +47,11 @@ var annotated_dup =
         [ "Logger", "classskyway_1_1global_1_1_logger.html", "classskyway_1_1global_1_1_logger" ]
       ] ],
       [ "media", null, [
+        [ "codec", null, [
+          [ "H264", "structskyway_1_1media_1_1codec_1_1_h264.html", "structskyway_1_1media_1_1codec_1_1_h264" ],
+          [ "VideoCodec", "structskyway_1_1media_1_1codec_1_1_video_codec.html", "structskyway_1_1media_1_1codec_1_1_video_codec" ],
+          [ "VP8", "structskyway_1_1media_1_1codec_1_1_v_p8.html", "structskyway_1_1media_1_1codec_1_1_v_p8" ]
+        ] ],
         [ "interface", null, [
           [ "CapturerVideoSource", "classskyway_1_1media_1_1interface_1_1_capturer_video_source.html", null ],
           [ "I420CapturerVideoSource", "classskyway_1_1media_1_1interface_1_1_i420_capturer_video_source.html", null ],
@@ -59,6 +64,13 @@ var annotated_dup =
         [ "opencv", null, [
           [ "OpenCVCapturerVideoSource", "classskyway_1_1media_1_1opencv_1_1_open_c_v_capturer_video_source.html", "classskyway_1_1media_1_1opencv_1_1_open_c_v_capturer_video_source" ],
           [ "OpenCVVideoRenderer", "classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html", "classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer" ]
+        ] ],
+        [ "rtp", null, [
+          [ "interface", null, [
+            [ "RtpCapturerVideoSource", "classskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source.html", "classskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source" ],
+            [ "RtpCapturerVideoSourceOptions", "structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html", "structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options" ]
+          ] ],
+          [ "RtpCapturerVideoSource", "classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html", "classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source" ]
         ] ],
         [ "DeviceManager", "classskyway_1_1media_1_1_device_manager.html", "classskyway_1_1media_1_1_device_manager" ],
         [ "I420CapturerVideoSource", "classskyway_1_1media_1_1_i420_capturer_video_source.html", "classskyway_1_1media_1_1_i420_capturer_video_source" ],

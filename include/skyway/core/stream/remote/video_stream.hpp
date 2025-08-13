@@ -23,6 +23,7 @@ class RemoteVideoStream : public interface::RemoteMediaStream {
 public:
     RemoteVideoStream(const std::string& id,
                       rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track);
+    ~RemoteVideoStream();
     rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> GetTrack() const override;
 
     /// @cond INTERNAL_SECTION
