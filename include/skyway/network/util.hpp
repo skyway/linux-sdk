@@ -45,6 +45,8 @@ inline nlohmann::json CreateBearerAuthHeader(const std::string& token) {
     // clang-format on
 }
 
+std::string FormatCloseLog(int code, const std::string& reason);
+
 }  // namespace util
 }  // namespace network
 }  // namespace skyway

@@ -135,6 +135,7 @@ public:
     static void OnFatalError(const SkyWayError& error);
     /// @endcond
 private:
+    static std::mutex listener_mtx_;
     static EventListener* listener_;
     static bool is_setup_;
     static std::mutex setup_mtx_;

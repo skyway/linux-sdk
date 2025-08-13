@@ -20,7 +20,7 @@ public:
     /// @cond INTERNAL_SECTION
     class I420InternalCapturerVideoSource : public interface::InternalCapturerVideoSource {
     public:
-        ~I420InternalCapturerVideoSource();
+        virtual ~I420InternalCapturerVideoSource() = default;
 
         static rtc::scoped_refptr<I420InternalCapturerVideoSource> Create();
 
@@ -32,6 +32,15 @@ public:
                     int stride_y,
                     int stride_u,
                     int stride_v);
+        void Render(int width,
+                    int height,
+                    const uint8_t* y,
+                    const uint8_t* u,
+                    const uint8_t* v,
+                    int stride_y,
+                    int stride_u,
+                    int stride_v,
+                    uint16_t frame_id);
         bool is_screencast() const override;
         absl::optional<bool> needs_denoising() const override;
         webrtc::MediaSourceInterface::SourceState state() const override;

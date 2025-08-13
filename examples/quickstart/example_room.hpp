@@ -20,18 +20,18 @@
 class ExampleRoom : public skyway::room::interface::Room::EventListener,
                     public skyway::core::stream::remote::RemoteDataStream::Listener {
 public:
-    ExampleRoom(const std::string& renderer_device_name, bool is_notify);
+    ExampleRoom(const std::string& renderer_device_name);
 
     // SkyWayの利用を開始します。
-    bool Setup(const std::string& token);
+    bool Setup(const std::string& app_id, const std::string& secret_key);
 
-    // P2PRoomを検索/作成し、Joinします。
+    // P2PRoomを検索/作成し、入室します。
     bool JoinRoom(const std::string& room_name);
 
     // Video/Audio/DataをPublishします。
     void Publish();
 
-    // 指定のpublicationをsubscribeします。
+    // 指定のPublicationをSubscribeします。
     bool Subscribe(std::shared_ptr<skyway::room::interface::RoomPublication> publication);
 
     // P2PRoomに存在するPublication全てに対してSubscribeを試みます。
@@ -62,7 +62,6 @@ private:
     std::string renderer_device_name_;
     std::vector<std::unique_ptr<std::thread>> threads_;
     std::atomic<bool> is_leaving_;
-    bool is_notify_;
 };
 
 #endif  // SKYWAY_EXAMPLES_QUICKSTART_EXAMPLE_ROOM_HPP_

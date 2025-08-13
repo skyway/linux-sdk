@@ -11,13 +11,14 @@
 
 #include <skyway/core/interface/channel.hpp>
 
+#include "skyway/room/interface/room_domain_cache_manager.hpp"
 #include "skyway/room/interface/room_domain_factory.hpp"
 
 namespace skyway {
 namespace room {
 namespace interface {
 
-enum class RoomType { kP2P, kSfu };
+enum class RoomType { kP2P, kSFU };
 
 /// @brief Roomの`Create`/`FindOrCreate`で扱うオプション
 struct RoomInitOptions {
@@ -180,6 +181,17 @@ public:
     virtual bool Close() = 0;
     /// @brief Roomを破棄します。破棄されたRoomではイベントが発火しなくなります。
     virtual void Dispose() = 0;
+
+    /// @cond INTERNAL_SECTION
+    virtual std::shared_ptr<interface::RoomDomainCacheManager<interface::RoomPublication>>
+    GetRoomPublicationCacheManager() = 0;
+    virtual std::shared_ptr<interface::RoomDomainCacheManager<interface::RoomSubscription>>
+    GetRoomSubscriptionCacheManager() = 0;
+    virtual std::shared_ptr<interface::RoomDomainCacheManager<interface::LocalRoomMember>>
+    GetLocalRoomMemberCacheManager() = 0;
+    virtual std::shared_ptr<interface::RoomDomainCacheManager<interface::RemoteRoomMember>>
+    GetRemoteRoomMemberCacheManager() = 0;
+    /// @endcond
 };
 
 /// @cond INTERNAL_SECTION

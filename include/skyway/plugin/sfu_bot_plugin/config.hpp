@@ -16,13 +16,13 @@ namespace plugin {
 namespace sfu_bot {
 namespace config {
 
-extern const std::string DEFAULT_SFU_API_URL;
-extern const bool DEFAULT_SFU_USE_SECURE_PROTOCOL;
-extern const int DEFAULT_SFU_API_VERSION;
-extern const std::string SUBTYPE;
-extern const int DEFAULT_MAX_SUBSCRIBERS;
-extern const int DEFAULT_MAX_RESTART_ICE_COUNT;
-extern const int DEFAULT_RESTART_ICE_CHECKING_TIME_SEC;
+extern const std::string kDefaultSfuApiUrl;
+extern const bool kDefaultSfuUseSecureProtocol;
+extern const int kDefaultSfuApiVersion;
+extern const std::string kSubtype;
+extern const int kDefaultMaxSubscribers;
+extern const int kDefaultMaxRestartIceCount;
+extern const int kDefaultRestartIceCheckingTimeSec;
 
 }  // namespace config
 }  // namespace sfu_bot

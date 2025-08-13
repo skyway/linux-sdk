@@ -16,10 +16,12 @@ int main(int argc, char* argv[]) {
         return -1;
     }
 
-    // SkyWayのAuthTokenを環境変数から取得します。
-    const char* token = getenv("SKYWAY_AUTH_TOKEN");
-    if (!token) {
-        std::cerr << "Please set SKYWAY_AUTH_TOKEN environment variable." << std::endl;
+    // SkyWayのAppIdとSecretKeyを環境変数から取得します。
+    const char* app_id     = getenv("SKYWAY_APP_ID");
+    const char* secret_key = getenv("SKYWAY_SECRET_KEY");
+    if (!app_id || !secret_key) {
+        std::cerr << "Please set SKYWAY_APP_ID and SKYWAY_SECRET_KEY environment variables."
+                  << std::endl;
         return -1;
     }
 
@@ -29,9 +31,8 @@ int main(int argc, char* argv[]) {
         video_output_device = argv[2];
     }
 
-    // イベント関連のログを出力が不要であれば第二引数をfalseにしてください。
-    auto example_room = ExampleRoom(video_output_device, true);
-    if (!example_room.Setup(token)) {
+    auto example_room = ExampleRoom(video_output_device);
+    if (!example_room.Setup(app_id, secret_key)) {
         return -1;
     }
     if (!example_room.JoinRoom(room_name)) {

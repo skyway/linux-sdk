@@ -44,22 +44,21 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.8 -->
+    </div><!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -73,7 +72,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(document).ready(function(){initNavTree('classskyway_1_1room_1_1interface_1_1_room_subscription.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -87,16 +86,9 @@ $(document).ready(function(){initNavTree('classskyway_1_1room_1_1interface_1_1_r
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">読み取り中…</div>
-<div class="SRStatus" id="Searching">検索中…</div>
-<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -104,7 +96,8 @@ $(document).ready(function(){initNavTree('classskyway_1_1room_1_1interface_1_1_r
 <a href="#nested-classes">クラス</a> &#124;
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="classskyway_1_1room_1_1interface_1_1_room_subscription-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle"><div class="title">skyway::room::interface::RoomSubscription クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+  <div class="headertitle">
+<div class="title">skyway::room::interface::RoomSubscription クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -122,86 +115,66 @@ skyway::room::interface::RoomSubscription の継承関係図</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 クラス</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html">EventListener</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントリスナ  <a href="classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a34d0254638e7daf39faa3ab4570b6cff" id="r_a34d0254638e7daf39faa3ab4570b6cff"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a34d0254638e7daf39faa3ab4570b6cff">Id</a> ()=0</td></tr>
-<tr class="memdesc:a34d0254638e7daf39faa3ab4570b6cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Idを取得します。  <br /></td></tr>
+<tr class="memitem:a34d0254638e7daf39faa3ab4570b6cff"><td class="memItemLeft" align="right" valign="top"><a id="a34d0254638e7daf39faa3ab4570b6cff"></a>
+virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a34d0254638e7daf39faa3ab4570b6cff">Id</a> ()=0</td></tr>
+<tr class="memdesc:a34d0254638e7daf39faa3ab4570b6cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Idを取得します。 <br /></td></tr>
 <tr class="separator:a34d0254638e7daf39faa3ab4570b6cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e5d6fe1fa7e22645f886c6da206e11b" id="r_a9e5d6fe1fa7e22645f886c6da206e11b"><td class="memItemLeft" align="right" valign="top">virtual model::ContentType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a9e5d6fe1fa7e22645f886c6da206e11b">ContentType</a> ()=0</td></tr>
-<tr class="memdesc:a9e5d6fe1fa7e22645f886c6da206e11b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ContentType(VideoかAudioかDataか)を取得します。  <br /></td></tr>
+<tr class="memitem:a9e5d6fe1fa7e22645f886c6da206e11b"><td class="memItemLeft" align="right" valign="top"><a id="a9e5d6fe1fa7e22645f886c6da206e11b"></a>
+virtual model::ContentType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a9e5d6fe1fa7e22645f886c6da206e11b">ContentType</a> ()=0</td></tr>
+<tr class="memdesc:a9e5d6fe1fa7e22645f886c6da206e11b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ContentType(VideoかAudioかDataか)を取得します。 <br /></td></tr>
 <tr class="separator:a9e5d6fe1fa7e22645f886c6da206e11b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c02ae3bb78b18df2434351f2b7d551f" id="r_a0c02ae3bb78b18df2434351f2b7d551f"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html">RoomPublication</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a0c02ae3bb78b18df2434351f2b7d551f">Publication</a> ()=0</td></tr>
-<tr class="memdesc:a0c02ae3bb78b18df2434351f2b7d551f"><td class="mdescLeft">&#160;</td><td class="mdescRight">このSubscriptionに紐づくPublicationを取得します。  <br /></td></tr>
-<tr class="separator:a0c02ae3bb78b18df2434351f2b7d551f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6c5d3559256c0f25703a4af36c1a5fb" id="r_ac6c5d3559256c0f25703a4af36c1a5fb"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html">RoomMember</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#ac6c5d3559256c0f25703a4af36c1a5fb">Subscriber</a> ()=0</td></tr>
-<tr class="memdesc:ac6c5d3559256c0f25703a4af36c1a5fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">このSubscriptionを購読しているMemberを取得します。  <br /></td></tr>
-<tr class="separator:ac6c5d3559256c0f25703a4af36c1a5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a285de1de96ac4faff90640f9cf9f56e8" id="r_a285de1de96ac4faff90640f9cf9f56e8"><td class="memItemLeft" align="right" valign="top">virtual core::interface::SubscriptionState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a285de1de96ac4faff90640f9cf9f56e8">State</a> ()=0</td></tr>
-<tr class="memdesc:a285de1de96ac4faff90640f9cf9f56e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">State(公開状態がEnableかDisabelかCancelか)を取得します。  <br /></td></tr>
+<tr class="memitem:aa10b9ad9b77421bf335090d037abc2fe"><td class="memItemLeft" align="right" valign="top"><a id="aa10b9ad9b77421bf335090d037abc2fe"></a>
+virtual std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html">RoomPublication</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#aa10b9ad9b77421bf335090d037abc2fe">Publication</a> ()=0</td></tr>
+<tr class="memdesc:aa10b9ad9b77421bf335090d037abc2fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">このSubscriptionに紐づくPublicationを取得します。 <br /></td></tr>
+<tr class="separator:aa10b9ad9b77421bf335090d037abc2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83a70fc8f568f739701c7f86801d91d7"><td class="memItemLeft" align="right" valign="top"><a id="a83a70fc8f568f739701c7f86801d91d7"></a>
+virtual std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html">RoomMember</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a83a70fc8f568f739701c7f86801d91d7">Subscriber</a> ()=0</td></tr>
+<tr class="memdesc:a83a70fc8f568f739701c7f86801d91d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">このSubscriptionを購読しているMemberを取得します。 <br /></td></tr>
+<tr class="separator:a83a70fc8f568f739701c7f86801d91d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a285de1de96ac4faff90640f9cf9f56e8"><td class="memItemLeft" align="right" valign="top"><a id="a285de1de96ac4faff90640f9cf9f56e8"></a>
+virtual core::interface::SubscriptionState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a285de1de96ac4faff90640f9cf9f56e8">State</a> ()=0</td></tr>
+<tr class="memdesc:a285de1de96ac4faff90640f9cf9f56e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">State(公開状態がEnableかDisabelかCancelか)を取得します。 <br /></td></tr>
 <tr class="separator:a285de1de96ac4faff90640f9cf9f56e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc9d7c537e7b56bca13834a38e4fa3f6" id="r_adc9d7c537e7b56bca13834a38e4fa3f6"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_stream.html">core::interface::RemoteStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#adc9d7c537e7b56bca13834a38e4fa3f6">Stream</a> ()=0</td></tr>
-<tr class="memdesc:adc9d7c537e7b56bca13834a38e4fa3f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publisherが持つStreamを取得します。  <br /></td></tr>
-<tr class="separator:adc9d7c537e7b56bca13834a38e4fa3f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03135b401aef1bf0ce8c4caed78efb01" id="r_a03135b401aef1bf0ce8c4caed78efb01"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a03135b401aef1bf0ce8c4caed78efb01">PreferredEncodingId</a> ()=0</td></tr>
-<tr class="memdesc:a03135b401aef1bf0ce8c4caed78efb01"><td class="mdescLeft">&#160;</td><td class="mdescRight">このSubscriptionの優先エンコーディングIDを取得します。  <br /></td></tr>
-<tr class="separator:a03135b401aef1bf0ce8c4caed78efb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad85517d4c075494592cbd93216b0dd37" id="r_ad85517d4c075494592cbd93216b0dd37"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#ad85517d4c075494592cbd93216b0dd37">AddEventListener</a> (<a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html">EventListener</a> *listener)=0</td></tr>
-<tr class="memdesc:ad85517d4c075494592cbd93216b0dd37"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントを購読します。  <br /></td></tr>
+<tr class="memitem:a9c8e954dfb20fc17c0f39ef0916bd7b4"><td class="memItemLeft" align="right" valign="top"><a id="a9c8e954dfb20fc17c0f39ef0916bd7b4"></a>
+virtual std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_stream.html">core::interface::RemoteStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a9c8e954dfb20fc17c0f39ef0916bd7b4">Stream</a> ()=0</td></tr>
+<tr class="memdesc:a9c8e954dfb20fc17c0f39ef0916bd7b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publisherが持つStreamを取得します。 <br /></td></tr>
+<tr class="separator:a9c8e954dfb20fc17c0f39ef0916bd7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade9c08889f7c14fba76096ed4e12ca82"><td class="memItemLeft" align="right" valign="top"><a id="ade9c08889f7c14fba76096ed4e12ca82"></a>
+virtual std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#ade9c08889f7c14fba76096ed4e12ca82">PreferredEncodingId</a> ()=0</td></tr>
+<tr class="memdesc:ade9c08889f7c14fba76096ed4e12ca82"><td class="mdescLeft">&#160;</td><td class="mdescRight">このSubscriptionの優先エンコーディングIDを取得します。 <br /></td></tr>
+<tr class="separator:ade9c08889f7c14fba76096ed4e12ca82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad85517d4c075494592cbd93216b0dd37"><td class="memItemLeft" align="right" valign="top"><a id="ad85517d4c075494592cbd93216b0dd37"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#ad85517d4c075494592cbd93216b0dd37">AddEventListener</a> (<a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html">EventListener</a> *listener)=0</td></tr>
+<tr class="memdesc:ad85517d4c075494592cbd93216b0dd37"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントを購読します。 <br /></td></tr>
 <tr class="separator:ad85517d4c075494592cbd93216b0dd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20eae1d901523955e628d3105aa4fdf9" id="r_a20eae1d901523955e628d3105aa4fdf9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a20eae1d901523955e628d3105aa4fdf9">RemoveEventListener</a> (<a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html">EventListener</a> *listener)=0</td></tr>
-<tr class="memdesc:a20eae1d901523955e628d3105aa4fdf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントの購読を中止します。  <br /></td></tr>
+<tr class="memitem:a20eae1d901523955e628d3105aa4fdf9"><td class="memItemLeft" align="right" valign="top"><a id="a20eae1d901523955e628d3105aa4fdf9"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a20eae1d901523955e628d3105aa4fdf9">RemoveEventListener</a> (<a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html">EventListener</a> *listener)=0</td></tr>
+<tr class="memdesc:a20eae1d901523955e628d3105aa4fdf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントの購読を中止します。 <br /></td></tr>
 <tr class="separator:a20eae1d901523955e628d3105aa4fdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a402623fe8b40d997969f7182cefcb210" id="r_a402623fe8b40d997969f7182cefcb210"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a402623fe8b40d997969f7182cefcb210">ChangePreferredEncoding</a> (const std::string &amp;id)=0</td></tr>
-<tr class="memdesc:a402623fe8b40d997969f7182cefcb210"><td class="mdescLeft">&#160;</td><td class="mdescRight">受信するエンコード設定を切り替えます。  <br /></td></tr>
+<tr class="memitem:a402623fe8b40d997969f7182cefcb210"><td class="memItemLeft" align="right" valign="top"><a id="a402623fe8b40d997969f7182cefcb210"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a402623fe8b40d997969f7182cefcb210">ChangePreferredEncoding</a> (const std::string &amp;id)=0</td></tr>
+<tr class="memdesc:a402623fe8b40d997969f7182cefcb210"><td class="mdescLeft">&#160;</td><td class="mdescRight">受信するエンコード設定を切り替えます。 <br /></td></tr>
 <tr class="separator:a402623fe8b40d997969f7182cefcb210"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29c7317e47219f315f1fd810a408770a" id="r_a29c7317e47219f315f1fd810a408770a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a29c7317e47219f315f1fd810a408770a">Cancel</a> ()=0</td></tr>
-<tr class="memdesc:a29c7317e47219f315f1fd810a408770a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribeを中止します。  <br /></td></tr>
+<tr class="memitem:a29c7317e47219f315f1fd810a408770a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a29c7317e47219f315f1fd810a408770a">Cancel</a> ()=0</td></tr>
+<tr class="memdesc:a29c7317e47219f315f1fd810a408770a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribeを中止します。  <a href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a29c7317e47219f315f1fd810a408770a">[詳解]</a><br /></td></tr>
 <tr class="separator:a29c7317e47219f315f1fd810a408770a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a823d85cb25e90ffe0e120c32724ffaf1" id="r_a823d85cb25e90ffe0e120c32724ffaf1"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; <a class="el" href="structskyway_1_1model_1_1_web_r_t_c_stats.html">model::WebRTCStats</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a823d85cb25e90ffe0e120c32724ffaf1">GetStats</a> ()=0</td></tr>
-<tr class="memdesc:a823d85cb25e90ffe0e120c32724ffaf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">統計情報を取得します。  <br /></td></tr>
-<tr class="separator:a823d85cb25e90ffe0e120c32724ffaf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b421494749046ba94dca3d05a618765"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; <a class="el" href="structskyway_1_1model_1_1_web_r_t_c_stats.html">model::WebRTCStats</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a0b421494749046ba94dca3d05a618765">GetStats</a> ()=0</td></tr>
+<tr class="memdesc:a0b421494749046ba94dca3d05a618765"><td class="mdescLeft">&#160;</td><td class="mdescRight">統計情報を取得します。  <a href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a0b421494749046ba94dca3d05a618765">[詳解]</a><br /></td></tr>
+<tr class="separator:a0b421494749046ba94dca3d05a618765"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>RoomのSubscriptionを操作するインタフェース </p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="ad85517d4c075494592cbd93216b0dd37" name="ad85517d4c075494592cbd93216b0dd37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad85517d4c075494592cbd93216b0dd37">&#9670;&#160;</a></span>AddEventListener()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void skyway::room::interface::RoomSubscription::AddEventListener </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html">EventListener</a> *&#160;</td>
-          <td class="paramname"><em>listener</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>イベントを購読します。 </p>
-
-<p><a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a20190ea6f5e4c06e7f0309ddd80e93ea">skyway::room::RoomSubscription</a>で実装されています。</p>
-
-</div>
-</div>
-<a id="a29c7317e47219f315f1fd810a408770a" name="a29c7317e47219f315f1fd810a408770a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29c7317e47219f315f1fd810a408770a">&#9670;&#160;</a></span>Cancel()</h2>
+<a id="a29c7317e47219f315f1fd810a408770a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29c7317e47219f315f1fd810a408770a">&#9670;&nbsp;</a></span>Cancel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,14 +197,14 @@ skyway::room::interface::RoomSubscription の継承関係図</div>
 </div><div class="memdoc">
 
 <p>Subscribeを中止します。 </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">非推奨:</a></b></dt><dd>本機能は非推奨です。 </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">非推奨:</a></b></dt><dd>本機能は非推奨です。 </dd></dl>
 
 <p><a class="el" href="classskyway_1_1room_1_1_room_subscription.html#ae4e56aa8055e833562ff739318ecf44d">skyway::room::RoomSubscription</a>で実装されています。</p>
 
 </div>
 </div>
-<a id="a402623fe8b40d997969f7182cefcb210" name="a402623fe8b40d997969f7182cefcb210"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a402623fe8b40d997969f7182cefcb210">&#9670;&#160;</a></span>ChangePreferredEncoding()</h2>
+<a id="a0b421494749046ba94dca3d05a618765"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b421494749046ba94dca3d05a618765">&#9670;&nbsp;</a></span>GetStats()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,66 +213,7 @@ skyway::room::interface::RoomSubscription の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool skyway::room::interface::RoomSubscription::ChangePreferredEncoding </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>受信するエンコード設定を切り替えます。 </p>
-
-<p><a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a96f7ad3c2647c9d26795e6a911ee0611">skyway::room::RoomSubscription</a>で実装されています。</p>
-
-</div>
-</div>
-<a id="a9e5d6fe1fa7e22645f886c6da206e11b" name="a9e5d6fe1fa7e22645f886c6da206e11b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e5d6fe1fa7e22645f886c6da206e11b">&#9670;&#160;</a></span>ContentType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual model::ContentType skyway::room::interface::RoomSubscription::ContentType </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>ContentType(VideoかAudioかDataか)を取得します。 </p>
-
-<p><a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a65b45ad7ac9474aa67c5ff0c61b86907">skyway::room::RoomSubscription</a>で実装されています。</p>
-
-</div>
-</div>
-<a id="a823d85cb25e90ffe0e120c32724ffaf1" name="a823d85cb25e90ffe0e120c32724ffaf1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a823d85cb25e90ffe0e120c32724ffaf1">&#9670;&#160;</a></span>GetStats()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::optional&lt; <a class="el" href="structskyway_1_1model_1_1_web_r_t_c_stats.html">model::WebRTCStats</a> &gt; skyway::room::interface::RoomSubscription::GetStats </td>
+          <td class="memname">virtual std::optional&lt;<a class="el" href="structskyway_1_1model_1_1_web_r_t_c_stats.html">model::WebRTCStats</a>&gt; skyway::room::interface::RoomSubscription::GetStats </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -313,214 +227,10 @@ skyway::room::interface::RoomSubscription の継承関係図</div>
 </div><div class="memdoc">
 
 <p>統計情報を取得します。 </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">非推奨:</a></b></dt><dd>本機能は非推奨です。 </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">非推奨:</a></b></dt><dd>本機能は非推奨です。 </dd></dl>
 <p>試験的なAPIです。今後インターフェースや仕様が変更される可能性があります。 </p>
 
-<p><a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a78dab51e639da63146c5b75df246e5a4">skyway::room::RoomSubscription</a>で実装されています。</p>
-
-</div>
-</div>
-<a id="a34d0254638e7daf39faa3ab4570b6cff" name="a34d0254638e7daf39faa3ab4570b6cff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34d0254638e7daf39faa3ab4570b6cff">&#9670;&#160;</a></span>Id()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::string skyway::room::interface::RoomSubscription::Id </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Idを取得します。 </p>
-
-<p><a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a5350f7d8f5fcfcc900e6bb4c813399f4">skyway::room::RoomSubscription</a>で実装されています。</p>
-
-</div>
-</div>
-<a id="a03135b401aef1bf0ce8c4caed78efb01" name="a03135b401aef1bf0ce8c4caed78efb01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03135b401aef1bf0ce8c4caed78efb01">&#9670;&#160;</a></span>PreferredEncodingId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::optional&lt; std::string &gt; skyway::room::interface::RoomSubscription::PreferredEncodingId </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>このSubscriptionの優先エンコーディングIDを取得します。 </p>
-
-<p><a class="el" href="classskyway_1_1room_1_1_room_subscription.html#af087a4e831eb2dae0db212ff2144d81a">skyway::room::RoomSubscription</a>で実装されています。</p>
-
-</div>
-</div>
-<a id="a0c02ae3bb78b18df2434351f2b7d551f" name="a0c02ae3bb78b18df2434351f2b7d551f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c02ae3bb78b18df2434351f2b7d551f">&#9670;&#160;</a></span>Publication()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html">RoomPublication</a> &gt; skyway::room::interface::RoomSubscription::Publication </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>このSubscriptionに紐づくPublicationを取得します。 </p>
-
-<p><a class="el" href="classskyway_1_1room_1_1_room_subscription.html#ac490bc26e2ad6f6f5952090eedc0c250">skyway::room::RoomSubscription</a>で実装されています。</p>
-
-</div>
-</div>
-<a id="a20eae1d901523955e628d3105aa4fdf9" name="a20eae1d901523955e628d3105aa4fdf9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20eae1d901523955e628d3105aa4fdf9">&#9670;&#160;</a></span>RemoveEventListener()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void skyway::room::interface::RoomSubscription::RemoveEventListener </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html">EventListener</a> *&#160;</td>
-          <td class="paramname"><em>listener</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>イベントの購読を中止します。 </p>
-
-<p><a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a422e6a4b1f67acdd201ccb1cf7679fe8">skyway::room::RoomSubscription</a>で実装されています。</p>
-
-</div>
-</div>
-<a id="a285de1de96ac4faff90640f9cf9f56e8" name="a285de1de96ac4faff90640f9cf9f56e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a285de1de96ac4faff90640f9cf9f56e8">&#9670;&#160;</a></span>State()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual core::interface::SubscriptionState skyway::room::interface::RoomSubscription::State </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>State(公開状態がEnableかDisabelかCancelか)を取得します。 </p>
-
-<p><a class="el" href="classskyway_1_1room_1_1_room_subscription.html#af7d7a6dae3d0385ac8d8784ead88a72a">skyway::room::RoomSubscription</a>で実装されています。</p>
-
-</div>
-</div>
-<a id="adc9d7c537e7b56bca13834a38e4fa3f6" name="adc9d7c537e7b56bca13834a38e4fa3f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc9d7c537e7b56bca13834a38e4fa3f6">&#9670;&#160;</a></span>Stream()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_stream.html">core::interface::RemoteStream</a> &gt; skyway::room::interface::RoomSubscription::Stream </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Publisherが持つStreamを取得します。 </p>
-
-<p><a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a662318a6710c5a8666fcbbc3dd9ebab0">skyway::room::RoomSubscription</a>で実装されています。</p>
-
-</div>
-</div>
-<a id="ac6c5d3559256c0f25703a4af36c1a5fb" name="ac6c5d3559256c0f25703a4af36c1a5fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6c5d3559256c0f25703a4af36c1a5fb">&#9670;&#160;</a></span>Subscriber()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html">RoomMember</a> &gt; skyway::room::interface::RoomSubscription::Subscriber </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>このSubscriptionを購読しているMemberを取得します。 </p>
-
-<p><a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a17fa5b051b2031bc949891012c3f2d63">skyway::room::RoomSubscription</a>で実装されています。</p>
+<p><a class="el" href="classskyway_1_1room_1_1_room_subscription.html#ab35f3530d27298c0329ba93cb0610aa5">skyway::room::RoomSubscription</a>で実装されています。</p>
 
 </div>
 </div>
@@ -533,7 +243,7 @@ skyway::room::interface::RoomSubscription の継承関係図</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>skyway</b></li><li class="navelem"><b>room</b></li><li class="navelem"><b>interface</b></li><li class="navelem"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html">RoomSubscription</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

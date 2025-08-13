@@ -1,9 +1,24 @@
 var searchData=
 [
-  ['signaling_0',['Signaling',['../structskyway_1_1core_1_1_context_options_1_1_signaling.html',1,'skyway::core::ContextOptions']]],
-  ['skywayoptions_1',['SkyWayOptions',['../structskyway_1_1_context_1_1_sky_way_options.html',1,'skyway::Context']]],
-  ['stream_2',['Stream',['../classskyway_1_1core_1_1interface_1_1_stream.html',1,'skyway::core::interface']]],
-  ['streamfactory_3',['StreamFactory',['../classskyway_1_1media_1_1_stream_factory.html',1,'skyway::media']]],
-  ['subscription_4',['subscription',['../classskyway_1_1core_1_1interface_1_1_subscription.html',1,'skyway::core::interface::Subscription'],['../classskyway_1_1core_1_1_subscription.html',1,'skyway::core::Subscription'],['../structskyway_1_1model_1_1_subscription.html',1,'skyway::model::Subscription']]],
-  ['subscriptionoptions_5',['subscriptionoptions',['../structskyway_1_1core_1_1interface_1_1_local_person_1_1_subscription_options.html',1,'skyway::core::interface::LocalPerson::SubscriptionOptions'],['../structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_subscription_options.html',1,'skyway::room::interface::LocalRoomMember::SubscriptionOptions']]]
+  ['remoteaudiostream_274',['RemoteAudioStream',['../classskyway_1_1core_1_1stream_1_1remote_1_1_remote_audio_stream.html',1,'skyway::core::stream::remote']]],
+  ['remotedatastream_275',['RemoteDataStream',['../classskyway_1_1core_1_1stream_1_1remote_1_1_remote_data_stream.html',1,'skyway::core::stream::remote']]],
+  ['remotemediastream_276',['RemoteMediaStream',['../classskyway_1_1core_1_1interface_1_1_remote_media_stream.html',1,'skyway::core::interface']]],
+  ['remotemember_277',['RemoteMember',['../classskyway_1_1core_1_1interface_1_1_remote_member.html',1,'skyway::core::interface']]],
+  ['remotememberplugin_278',['RemoteMemberPlugin',['../classskyway_1_1core_1_1interface_1_1_remote_member_plugin.html',1,'skyway::core::interface']]],
+  ['remoteperson_279',['RemotePerson',['../classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html',1,'skyway::plugin::remote_person']]],
+  ['remoteroommember_280',['RemoteRoomMember',['../classskyway_1_1room_1_1interface_1_1_remote_room_member.html',1,'skyway::room::interface::RemoteRoomMember'],['../classskyway_1_1room_1_1_remote_room_member.html',1,'skyway::room::RemoteRoomMember']]],
+  ['remotestream_281',['RemoteStream',['../classskyway_1_1core_1_1interface_1_1_remote_stream.html',1,'skyway::core::interface']]],
+  ['remotevideostream_282',['RemoteVideoStream',['../classskyway_1_1core_1_1stream_1_1remote_1_1_remote_video_stream.html',1,'skyway::core::stream::remote']]],
+  ['room_283',['Room',['../classskyway_1_1room_1_1abstract_1_1_room.html',1,'skyway::room::abstract::Room'],['../classskyway_1_1room_1_1interface_1_1_room.html',1,'skyway::room::interface::Room']]],
+  ['roominitoptions_284',['RoomInitOptions',['../structskyway_1_1room_1_1interface_1_1_room_init_options.html',1,'skyway::room::interface']]],
+  ['roommember_285',['RoomMember',['../classskyway_1_1room_1_1abstract_1_1_room_member.html',1,'skyway::room::abstract::RoomMember'],['../classskyway_1_1room_1_1interface_1_1_room_member.html',1,'skyway::room::interface::RoomMember']]],
+  ['roommemberinitoptions_286',['RoomMemberInitOptions',['../structskyway_1_1room_1_1interface_1_1_room_member_init_options.html',1,'skyway::room::interface']]],
+  ['roompublication_287',['RoomPublication',['../classskyway_1_1room_1_1interface_1_1_room_publication.html',1,'skyway::room::interface::RoomPublication'],['../classskyway_1_1room_1_1_room_publication.html',1,'skyway::room::RoomPublication']]],
+  ['roomquery_288',['RoomQuery',['../structskyway_1_1room_1_1interface_1_1_room_query.html',1,'skyway::room::interface']]],
+  ['roomsubscription_289',['RoomSubscription',['../classskyway_1_1room_1_1interface_1_1_room_subscription.html',1,'skyway::room::interface::RoomSubscription'],['../classskyway_1_1room_1_1_room_subscription.html',1,'skyway::room::RoomSubscription']]],
+  ['rtcapi_290',['RtcApi',['../structskyway_1_1core_1_1_context_options_1_1_rtc_api.html',1,'skyway::core::ContextOptions']]],
+  ['rtcconfig_291',['RtcConfig',['../structskyway_1_1core_1_1_context_options_1_1_rtc_config.html',1,'skyway::core::ContextOptions']]],
+  ['rtp_292',['Rtp',['../structskyway_1_1_context_1_1_sky_way_options_1_1_rtp.html',1,'skyway::Context::SkyWayOptions']]],
+  ['rtpcapturervideosource_293',['RtpCapturerVideoSource',['../classskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source.html',1,'skyway::media::rtp::interface::RtpCapturerVideoSource'],['../classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html',1,'skyway::media::rtp::RtpCapturerVideoSource']]],
+  ['rtpcapturervideosourceoptions_294',['RtpCapturerVideoSourceOptions',['../structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html',1,'skyway::media::rtp::interface']]]
 ];

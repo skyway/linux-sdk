@@ -45,6 +45,8 @@ private:
     //    void OnDisabled() override;
     void OnConnectionStateChanged(const core::ConnectionState state) override;
 
+    void OnStreamAttached(std::shared_ptr<core::interface::RemoteStream> stream) override;
+
     std::shared_ptr<core::interface::Subscription> core_;
     interface::RoomDomainFactory* factory_;
     std::mutex listener_mtx_;

@@ -11,6 +11,7 @@
 
 #include <chrono>
 #include <json.hpp>
+#include <optional>
 #include <string>
 
 #include "skyway/model/domain.hpp"
@@ -23,6 +24,8 @@ struct AcknowledgePayload;
 
 class ServerEvent {
 public:
+    static std::optional<ServerEvent> Parse(const std::string& json_string);
+
     bool IsOpenEvent() const;
     bool IsAcknowledgeEvent() const;
 

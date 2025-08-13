@@ -1,13 +1,11 @@
 var searchData=
 [
-  ['listener_0',['listener',['../classskyway_1_1core_1_1stream_1_1remote_1_1_remote_data_stream_1_1_listener.html',1,'skyway::core::stream::remote::RemoteDataStream::Listener'],['../classskyway_1_1global_1_1_logger_1_1_listener.html',1,'skyway::global::Logger::Listener'],['../classskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener.html',1,'skyway::media::interface::I420VideoRenderer::Listener'],['../classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_1_1_listener.html',1,'skyway::media::opencv::OpenCVVideoRenderer::Listener']]],
-  ['localaudiostream_1',['LocalAudioStream',['../classskyway_1_1core_1_1stream_1_1local_1_1_local_audio_stream.html',1,'skyway::core::stream::local']]],
-  ['localdatastream_2',['LocalDataStream',['../classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream.html',1,'skyway::core::stream::local']]],
-  ['localmediastream_3',['LocalMediaStream',['../classskyway_1_1core_1_1interface_1_1_local_media_stream.html',1,'skyway::core::interface']]],
-  ['localp2proommember_4',['LocalP2PRoomMember',['../classskyway_1_1room_1_1p2p_1_1_local_p2_p_room_member.html',1,'skyway::room::p2p']]],
-  ['localperson_5',['localperson',['../classskyway_1_1core_1_1channel_1_1member_1_1_local_person.html',1,'skyway::core::channel::member::LocalPerson'],['../classskyway_1_1core_1_1interface_1_1_local_person.html',1,'skyway::core::interface::LocalPerson']]],
-  ['localroommember_6',['localroommember',['../classskyway_1_1room_1_1abstract_1_1_local_room_member.html',1,'skyway::room::abstract::LocalRoomMember'],['../classskyway_1_1room_1_1interface_1_1_local_room_member.html',1,'skyway::room::interface::LocalRoomMember']]],
-  ['localstream_7',['LocalStream',['../classskyway_1_1core_1_1interface_1_1_local_stream.html',1,'skyway::core::interface']]],
-  ['localvideostream_8',['LocalVideoStream',['../classskyway_1_1core_1_1stream_1_1local_1_1_local_video_stream.html',1,'skyway::core::stream::local']]],
-  ['logger_9',['logger',['../classskyway_1_1global_1_1interface_1_1_logger.html',1,'skyway::global::interface::Logger'],['../classskyway_1_1global_1_1_logger.html',1,'skyway::global::Logger']]]
+  ['i420capturervideosource_247',['I420CapturerVideoSource',['../classskyway_1_1media_1_1_i420_capturer_video_source.html',1,'skyway::media::I420CapturerVideoSource'],['../classskyway_1_1media_1_1interface_1_1_i420_capturer_video_source.html',1,'skyway::media::interface::I420CapturerVideoSource']]],
+  ['i420frame_248',['I420Frame',['../structskyway_1_1media_1_1interface_1_1_i420_frame.html',1,'skyway::media::interface']]],
+  ['i420videorenderer_249',['I420VideoRenderer',['../classskyway_1_1media_1_1_i420_video_renderer.html',1,'skyway::media::I420VideoRenderer'],['../classskyway_1_1media_1_1interface_1_1_i420_video_renderer.html',1,'skyway::media::interface::I420VideoRenderer']]],
+  ['i420videorendereroptions_250',['I420VideoRendererOptions',['../structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html',1,'skyway::media::interface']]],
+  ['iceparams_251',['IceParams',['../structskyway_1_1core_1_1_context_options_1_1_ice_params.html',1,'skyway::core::ContextOptions']]],
+  ['init_252',['Init',['../structskyway_1_1model_1_1_channel_1_1_init.html',1,'skyway::model::Channel::Init'],['../structskyway_1_1model_1_1_member_1_1_init.html',1,'skyway::model::Member::Init'],['../structskyway_1_1model_1_1_publication_1_1_init.html',1,'skyway::model::Publication::Init'],['../structskyway_1_1model_1_1_subscription_1_1_init.html',1,'skyway::model::Subscription::Init']]],
+  ['input_253',['Input',['../structskyway_1_1_context_1_1_sky_way_options_1_1_rtp_1_1_input.html',1,'skyway::Context::SkyWayOptions::Rtp']]],
+  ['internalcapturervideosource_254',['InternalCapturerVideoSource',['../classskyway_1_1media_1_1interface_1_1_internal_capturer_video_source.html',1,'skyway::media::interface']]]
 ];

@@ -83,6 +83,8 @@ public:
     /// @brief Metadataを更新します。
     virtual bool UpdateMetadata(const std::string& metadata) = 0;
     /// @brief エンコーディング設定を更新します。
+    /// @details
+    /// この機能はRTP映像入力モードでは機能しません。
     virtual bool UpdateEncodings(std::vector<model::Encoding> encodings) = 0;
     /// @brief 公開しているStreamを変更します。
     virtual bool ReplaceStream(std::shared_ptr<core::interface::LocalStream> stream) = 0;

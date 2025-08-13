@@ -14,15 +14,15 @@
 namespace skyway {
 
 // General
-static const unsigned VERSION_MAJOR = 4;
-static const unsigned VERSION_MINOR = 0;
-static const unsigned VERSION_PATCH = 0;
+static const unsigned kVersionMajor = 6;
+static const unsigned kVersionMinor = 1;
+static const unsigned kVersionPatch = 0;
 
 inline std::string GetVersionString() {
     // clang-format off
-    return std::to_string(VERSION_MAJOR)
-        + "." + std::to_string(VERSION_MINOR)
-        + "." + std::to_string(VERSION_PATCH);
+    return std::to_string(kVersionMajor)
+        + "." + std::to_string(kVersionMinor)
+        + "." + std::to_string(kVersionPatch);
     // clang-format on
 }
 

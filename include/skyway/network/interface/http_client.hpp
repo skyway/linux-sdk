@@ -45,10 +45,10 @@ public:
     /// HTTPクライアントポインタを取得します。
     static HttpClient* Shared();
 
-    static const std::string METHOD_GET;
-    static const std::string METHOD_POST;
-    static const std::string METHOD_PUT;
-    static const std::string METHOD_DELETE;
+    static const std::string kMethodGet;
+    static const std::string kMethodPost;
+    static const std::string kMethodPut;
+    static const std::string kMethodDelete;
 
 private:
     static std::unique_ptr<HttpClient> shared_;

@@ -15,7 +15,7 @@ namespace skyway {
 namespace token {
 namespace config {
 
-extern const int DEFAULT_TOKEN_EXPIRATION_REMINDER_TIME_SEC;
+extern const int kDefaultTokenExpirationReminderTimeSec;
 
 }  // namespace config
 }  // namespace token

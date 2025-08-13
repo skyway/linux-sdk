@@ -38,6 +38,8 @@ public:
         [[deprecated]] virtual void OnCanceled() {}
         /// @brief このSubscriptionのメディア通信の状態が変化した時に発火するイベント
         virtual void OnConnectionStateChanged(const ConnectionState state) {}
+        
+        virtual void OnStreamAttached(std::shared_ptr<RemoteStream> stream) {}
     };
     /// @cond INTERNAL_SECTION
     class InternalListener {

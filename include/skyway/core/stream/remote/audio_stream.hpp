@@ -24,6 +24,7 @@ public:
     RemoteAudioStream(const std::string& id,
                       rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track);
     rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> GetTrack() const override;
+    ~RemoteAudioStream();
 
     /// @cond INTERNAL_SECTION
     /// @brief Audioの再生を開始します。

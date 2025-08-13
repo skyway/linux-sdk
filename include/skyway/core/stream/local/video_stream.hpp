@@ -31,6 +31,8 @@ public:
     bool Enable() override;
     /// @brief Videoの再生を停止します。
     bool Disable() override;
+    /// @brief ContentHintを設定します。
+    void SetContentHint(webrtc::VideoTrackInterface::ContentHint content_hint);
     /// @endcond
 
 private:

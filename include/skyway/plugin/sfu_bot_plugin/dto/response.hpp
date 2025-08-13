@@ -55,7 +55,7 @@ struct CreateConsumerResponse {
 
 struct ChangeConsumerLayerResponse {};
 
-enum ResponseStatusCode { kOK, kCLIENT_ERROR, kSERVER_ERROR };
+enum ResponseStatusCode { kOk, kClientError, kServerError };
 
 struct IceRestartResponse {
     ResponseStatusCode status;

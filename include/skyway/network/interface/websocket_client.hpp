@@ -35,7 +35,7 @@ public:
         /// @details
         /// この関数はlibskyway内部で重い同期処理をする可能性があるため、PFではサブスレッドからコールしてください。
         /// @param code Closeコード
-        virtual void OnClose(const int code) {}
+        virtual void OnClose(const int code, const std::string& reason) {}
         /// @brief WebSocketサーバからエラーが返ってきた時にコールされます。
         /// @param code Responseステータスコード
         virtual void OnError(const int code) {}

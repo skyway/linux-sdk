@@ -27,8 +27,8 @@ public:
     ConnectionStateObserver(
         interface::SfuApiClient* client,
         analytics::interface::AnalyticsClient* analytics_client,
-        const int max_restart_ice_count          = config::DEFAULT_MAX_RESTART_ICE_COUNT,
-        const int check_restart_ice_time_seconds = config::DEFAULT_RESTART_ICE_CHECKING_TIME_SEC);
+        const int max_restart_ice_count          = config::kDefaultMaxRestartIceCount,
+        const int check_restart_ice_time_seconds = config::kDefaultRestartIceCheckingTimeSec);
     ~ConnectionStateObserver() override;
 
     void AddListener(std::shared_ptr<core::ConnectionStateChangeNotifiable> listener) override;

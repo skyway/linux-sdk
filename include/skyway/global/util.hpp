@@ -76,12 +76,12 @@ inline bool SpinLockWithTimeoutMs(std::atomic<bool>& release_condition, int time
 /// @param release_condition ブロックを抜けるための解放条件
 /// @param timeout_sec タイムアウト秒
 inline bool SpinLockWithTimeout(std::function<bool()> release_condition,
-                                int timeout_sec = config::DEFAULT_TIMEOUT_SEC) {
+                                int timeout_sec = config::kDefaultTimeoutSec) {
     return SpinLockWithTimeoutMs(release_condition, timeout_sec * 1000);
 }
 
 inline bool SpinLockWithTimeout(std::atomic<bool>& release_condition,
-                                int timeout_sec = config::DEFAULT_TIMEOUT_SEC) {
+                                int timeout_sec = config::kDefaultTimeoutSec) {
     return SpinLockWithTimeoutMs(release_condition, timeout_sec * 1000);
 }
 
