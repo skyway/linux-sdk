@@ -31,7 +31,7 @@ class PassthroughVideoEncoderFactoryTest;
 class Context : public core::Context {
 public:
     static const unsigned int kVersionMajor = 3;
-    static const unsigned int kVersionMinor = 0;
+    static const unsigned int kVersionMinor = 1;
     static const unsigned int kVersionPatch = 0;
 
     /// @brief SkyWayの利用に関する設定
@@ -57,6 +57,11 @@ public:
                      * @brief RTP映像入力のコーデック
                      * @details
                      * `enabled`が`true`の場合、必ず設定する必要があります。
+                     *
+                     * Linux SDK
+                     * では現在H.264のデコードに対応していないため、H.264を利用したPublicationをSubscribeすることはできません。
+                     *
+                     * 各SDKが対応するコーデックについては[こちら](https://skyway.ntt.com/en/docs/user-guide/commons/codecs/)に記載しております。
                      */
                     std::shared_ptr<media::codec::VideoCodec> codec;
                     Video() : enabled(false), codec(nullptr) {}

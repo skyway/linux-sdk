@@ -1,5 +1,8 @@
 var NAVTREEINDEX3 =
 {
+"structskyway_1_1model_1_1_web_r_t_c_stats.html":[3,0,0,3,6],
+"structskyway_1_1model_1_1_web_r_t_c_stats.html#a9d30d7ca0821dd7d86d81f5ecf5861cb":[3,0,0,3,6,0],
+"structskyway_1_1model_1_1_web_r_t_c_stats_report.html":[3,0,0,3,7],
 "structskyway_1_1model_1_1_web_r_t_c_stats_report.html#aa9ed919dfa14dfe9f53d86f9a9861258":[3,0,0,3,7,0],
 "structskyway_1_1model_1_1_web_r_t_c_stats_report.html#ab85cfbc3258435615f971f4546a48819":[3,0,0,3,7,1],
 "structskyway_1_1model_1_1_web_r_t_c_stats_report.html#aed6522a420ebf1719604e1c5dfc86c30":[3,0,0,3,7,2],

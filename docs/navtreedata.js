@@ -50,7 +50,7 @@ var NAVTREEINDEX =
 "abstract_2local__room__member_8hpp_source.html",
 "classskyway_1_1media_1_1_i420_video_renderer.html#aa8ae4061596602a0bc1dd116f8389649",
 "dir_446f9a35b4d27bbbce6cce5d66434d97.html",
-"structskyway_1_1model_1_1_web_r_t_c_stats_report.html#aa9ed919dfa14dfe9f53d86f9a9861258"
+"structskyway_1_1model_1_1_web_r_t_c_stats.html"
 ];
 
 var SYNCONMSG = 'クリックで同期表示が無効になります';

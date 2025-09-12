@@ -130,8 +130,9 @@ var NAVTREEINDEX2 =
 "room__domain__cache__manager_8hpp_source.html":[4,0,0,0,5,5],
 "room__publication_8hpp_source.html":[4,0,0,0,5,6],
 "room__subscription_8hpp_source.html":[4,0,0,0,5,7],
-"rtp__capturer__video__source_8hpp_source.html":[4,0,0,0,2,3,3],
-"rtp__capturer__video__source__repository_8hpp_source.html":[4,0,0,0,2,3,4],
+"rtcp__transport_8hpp_source.html":[4,0,0,0,2,3,3],
+"rtp__capturer__video__source_8hpp_source.html":[4,0,0,0,2,3,4],
+"rtp__capturer__video__source__repository_8hpp_source.html":[4,0,0,0,2,3,5],
 "skyway_8hpp_source.html":[4,0,0,0,7],
 "stream_8hpp_source.html":[4,0,0,0,0,1,10],
 "stream__factory_8hpp_source.html":[4,0,0,0,2,7],
@@ -193,6 +194,8 @@ var NAVTREEINDEX2 =
 "structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#aa666c749aead62702386e3057dc507d5":[3,0,0,2,1,4,1],
 "structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#ab99005e6a592c647a9f8fde38782f23b":[3,0,0,2,1,4,0],
 "structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html":[3,0,0,2,3,0,1],
+"structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a18e1f4a277dd2f9b5e86431950ce0104":[3,0,0,2,3,0,1,2],
+"structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a3fc31290117b1bb496e78398b622058c":[3,0,0,2,3,0,1,3],
 "structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a4a455351fb34bc9dcdc0700a23e877c4":[3,0,0,2,3,0,1,0],
 "structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a51fe02658fd9b3c85810f6b588cd6b70":[3,0,0,2,3,0,1,1],
 "structskyway_1_1model_1_1_channel.html":[3,0,0,3,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX2 =
 "structskyway_1_1model_1_1_subscription.html#acfbc445312952443434a96a925e93151":[3,0,0,3,5,4],
 "structskyway_1_1model_1_1_subscription.html#ae9753ad69106bdeba67be33c9565013a":[3,0,0,3,5,1],
 "structskyway_1_1model_1_1_subscription.html#af10f807700e5dd6f8b0770a38950b3c5":[3,0,0,3,5,2],
-"structskyway_1_1model_1_1_subscription_1_1_init.html":[3,0,0,3,5,0],
-"structskyway_1_1model_1_1_web_r_t_c_stats.html":[3,0,0,3,6],
-"structskyway_1_1model_1_1_web_r_t_c_stats.html#a9d30d7ca0821dd7d86d81f5ecf5861cb":[3,0,0,3,6,0],
-"structskyway_1_1model_1_1_web_r_t_c_stats_report.html":[3,0,0,3,7]
+"structskyway_1_1model_1_1_subscription_1_1_init.html":[3,0,0,3,5,0]
 };

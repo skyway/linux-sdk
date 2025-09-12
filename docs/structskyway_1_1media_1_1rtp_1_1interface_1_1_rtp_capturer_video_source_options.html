@@ -120,6 +120,12 @@ $(document).ready(function(){initNavTree('structskyway_1_1media_1_1rtp_1_1interf
 <tr class="memitem:a51fe02658fd9b3c85810f6b588cd6b70" id="r_a51fe02658fd9b3c85810f6b588cd6b70"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a51fe02658fd9b3c85810f6b588cd6b70">recv_rtp_port</a> = 0</td></tr>
 <tr class="memdesc:a51fe02658fd9b3c85810f6b588cd6b70"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTPパケットを受け付けるUDPサーバのPort番号  <br /></td></tr>
 <tr class="separator:a51fe02658fd9b3c85810f6b588cd6b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18e1f4a277dd2f9b5e86431950ce0104" id="r_a18e1f4a277dd2f9b5e86431950ce0104"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a18e1f4a277dd2f9b5e86431950ce0104">send_rtcp_ipv4</a></td></tr>
+<tr class="memdesc:a18e1f4a277dd2f9b5e86431950ce0104"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTCPパケット送信先のIPv4アドレス  <br /></td></tr>
+<tr class="separator:a18e1f4a277dd2f9b5e86431950ce0104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc31290117b1bb496e78398b622058c" id="r_a3fc31290117b1bb496e78398b622058c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a3fc31290117b1bb496e78398b622058c">send_rtcp_port</a> = -1</td></tr>
+<tr class="memdesc:a3fc31290117b1bb496e78398b622058c"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTCPパケット送信先のPort番号  <br /></td></tr>
+<tr class="separator:a3fc31290117b1bb496e78398b622058c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>RTPキャプチャビデオソースのオプション </p>
@@ -138,7 +144,7 @@ $(document).ready(function(){initNavTree('structskyway_1_1media_1_1rtp_1_1interf
 </div><div class="memdoc">
 
 <p>RTPパケットを受け付けるUDPサーバのIPv4アドレス </p>
-<p>RTPパケットを受信するためにSkyWay内部でUDPサーバをLISTENするためのIPv4アドレスです。</p>
+<p>RTPパケットを受信するためにSkyWay内部でUDPサーバをLISTENするためのIPv4アドレスです。 RTP映像入力を行う場合は必ずIPv4アドレスを指定する必要があります。</p>
 <p>例: Gstreamerにおいて、<code>udpsink host=127.0.0.1　port=50000</code>であれば"127.0.0.1"を指定します。 </p>
 
 </div>
@@ -156,8 +162,44 @@ $(document).ready(function(){initNavTree('structskyway_1_1media_1_1rtp_1_1interf
 </div><div class="memdoc">
 
 <p>RTPパケットを受け付けるUDPサーバのPort番号 </p>
-<p>RTPパケットを受信するためにSkyWay内部でUDPサーバをLISTENするためのPort番号です。</p>
+<p>RTPパケットを受信するためにSkyWay内部でUDPサーバをLISTENするためのPort番号です。 RTP映像入力を行う場合は必ずPort番号を指定する必要があります。</p>
 <p>例: Gstreamerにおいて、<code>udpsink host=127.0.0.1　port=50000</code>であれば50000を指定します。 </p>
+
+</div>
+</div>
+<a id="a18e1f4a277dd2f9b5e86431950ce0104" name="a18e1f4a277dd2f9b5e86431950ce0104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18e1f4a277dd2f9b5e86431950ce0104">&#9670;&#160;</a></span>send_rtcp_ipv4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string skyway::media::rtp::interface::RtpCapturerVideoSourceOptions::send_rtcp_ipv4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RTCPパケット送信先のIPv4アドレス </p>
+<p>RTCPパケットを送信する際に利用する送信先アドレスです。 受信側でRTCPを待ち受けているIPv4アドレスを指定します。</p>
+<p>例: Gstreamerにおいて、<code>udpsrc address=127.0.0.1 port=50001</code>で待ち受けている場合は"127.0.0.1"を指定します。 </p>
+
+</div>
+</div>
+<a id="a3fc31290117b1bb496e78398b622058c" name="a3fc31290117b1bb496e78398b622058c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fc31290117b1bb496e78398b622058c">&#9670;&#160;</a></span>send_rtcp_port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int skyway::media::rtp::interface::RtpCapturerVideoSourceOptions::send_rtcp_port = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RTCPパケット送信先のPort番号 </p>
+<p>RTCPパケットを送信する際に利用する送信先Port番号です。 受信側でRTCPを待ち受けているPort番号を指定します。 -1は未設定値として扱い、RTCPを送信しません。 RTCPパケットを送信する場合はPort番号を指定する必要があります。</p>
+<p>例: Gstreamerにおいて、<code>udpsrc address=127.0.0.1 port=50001</code>で待ち受けている場合は50001を指定します。 </p>
 
 </div>
 </div>

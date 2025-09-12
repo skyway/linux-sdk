@@ -20,6 +20,11 @@ inline constexpr std::string_view kDefaultH264ProfileLevelId = "42e01f";
  * @brief H264コーデック
  * @details
  * ※この機能はβ版です。
+ *
+ * Linux SDK
+ * では現在H.264のデコードに対応していないため、このコーデックを利用したPublicationをSubscribeすることはできません。
+ *
+ * 各SDKが対応するコーデックについては[こちら](https://skyway.ntt.com/en/docs/user-guide/commons/codecs/)に記載しております。
  */
 struct H264 : public VideoCodec {
     /**
