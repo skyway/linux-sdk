@@ -25,6 +25,7 @@ struct RtpCapturerVideoSourceOptions {
      * @brief RTPパケットを受け付けるUDPサーバのIPv4アドレス
      * @details
      * RTPパケットを受信するためにSkyWay内部でUDPサーバをLISTENするためのIPv4アドレスです。
+     * RTP映像入力を行う場合は必ずIPv4アドレスを指定する必要があります。
      *
      * 例: Gstreamerにおいて、`udpsink host=127.0.0.1　port=50000`であれば"127.0.0.1"を指定します。
      */
@@ -33,10 +34,34 @@ struct RtpCapturerVideoSourceOptions {
      * @brief RTPパケットを受け付けるUDPサーバのPort番号
      * @details
      * RTPパケットを受信するためにSkyWay内部でUDPサーバをLISTENするためのPort番号です。
+     * RTP映像入力を行う場合は必ずPort番号を指定する必要があります。
      *
      * 例: Gstreamerにおいて、`udpsink host=127.0.0.1　port=50000`であれば50000を指定します。
      */
     int recv_rtp_port = 0;
+    /**
+     * @brief RTCPパケット送信先のIPv4アドレス
+     * @details
+     * RTCPパケットを送信する際に利用する送信先アドレスです。
+     * 受信側でRTCPを待ち受けているIPv4アドレスを指定します。
+     *
+     *
+     * 例: Gstreamerにおいて、`udpsrc address=127.0.0.1
+     * port=50001`で待ち受けている場合は"127.0.0.1"を指定します。
+     */
+    std::string send_rtcp_ipv4;
+    /**
+     * @brief RTCPパケット送信先のPort番号
+     * @details
+     * RTCPパケットを送信する際に利用する送信先Port番号です。
+     * 受信側でRTCPを待ち受けているPort番号を指定します。
+     * -1は未設定値として扱い、RTCPを送信しません。
+     * RTCPパケットを送信する場合はPort番号を指定する必要があります。
+     *
+     * 例: Gstreamerにおいて、`udpsrc address=127.0.0.1
+     * port=50001`で待ち受けている場合は50001を指定します。
+     */
+    int send_rtcp_port = -1;
 };
 /**
  * @brief RTPキャプチャビデオソース
@@ -85,6 +110,7 @@ public:
     virtual void RegisterCallback(webrtc::EncodedImageCallback* callback)  = 0;
     virtual std::string Endpoint() const                                   = 0;
     virtual void OnEncoderReleased(webrtc::EncodedImageCallback* callback) = 0;
+    virtual void SendKeyFrameRequest()                                     = 0;
     /// @endcond
 };
 

@@ -12,27 +12,18 @@
 #include <api/field_trials.h>
 #include <video/rtp_video_stream_receiver2.h>
 
-#include "skyway/global/worker.hpp"
+#include "skyway/global/interface/worker.hpp"
 #include "skyway/media/codec/video_codec.hpp"
 #include "skyway/media/i420_capturer_video_source.hpp"
 #include "skyway/media/rtp/interface/rtp_capturer_video_source.hpp"
 #include "skyway/media/rtp/interface/rtp_capturer_video_source_repository.hpp"
+#include "skyway/media/rtp/rtcp_transport.hpp"
+#include "skyway/network/interface/udp_client.hpp"
 #include "skyway/network/interface/udp_server.hpp"
 
 namespace skyway {
 namespace media {
 namespace rtp {
-/// @cond INTERNAL_SECTION
-class FakeTransport : public webrtc::Transport {
-public:
-    bool SendRtp(rtc::ArrayView<const uint8_t> packet,
-                 const webrtc::PacketOptions& options) override {
-        return true;
-    }
-
-    bool SendRtcp(rtc::ArrayView<const uint8_t> packet) override { return true; }
-};
-// @endcond
 
 class RtpCapturerVideoSource : public interface::RtpCapturerVideoSource,
                                public network::interface::UdpServer::PacketHandler,
@@ -75,6 +66,7 @@ public:
     void OnPacketReceived(const uint8_t* data, size_t size) override;
     // Impl webrtc::RtpVideoStreamReceiver2::OnCompleteFrameCallback
     void OnCompleteFrame(std::unique_ptr<webrtc::EncodedFrame> frame) override;
+    void SendKeyFrameRequest() override;
     /// @endcond
 private:
     RtpCapturerVideoSource(const interface::RtpCapturerVideoSourceOptions& options);
@@ -82,12 +74,12 @@ private:
         const webrtc::RtpPacketReceived& packet);
     void DummyFrameLoop(uint16_t frame_id);
     uint64_t GenerateSsrc() const;
-    webrtc::VideoReceiveStreamInterface::Config CreateFakeConfig() const;
+    webrtc::VideoReceiveStreamInterface::Config CreateRtpVideoStreamReceiver2Config();
 
     std::shared_ptr<codec::VideoCodec> codec_;
     std::unique_ptr<rtc::Thread> depacketize_th_ = nullptr;
-    FakeTransport transport_;
     interface::RtpCapturerVideoSourceOptions options_;
+    RtcpTransport transport_;
     rtc::scoped_refptr<I420CapturerVideoSource::I420InternalCapturerVideoSource> source_;
     std::unique_ptr<network::interface::UdpServer> udp_server_;
     std::mutex callbacks_mtx_;
@@ -97,8 +89,8 @@ private:
     std::unique_ptr<webrtc::TaskQueueBase, webrtc::TaskQueueDeleter> encoded_image_queue_ = nullptr;
     std::unique_ptr<webrtc::RtpVideoStreamReceiver2> receiver_                            = nullptr;
     std::atomic<bool> frame_loop_stopped_                                                 = true;
-    global::Worker dummy_frame_worker_;
-    std::optional<uint16_t> frame_id_;
+    std::unique_ptr<global::interface::Worker> dummy_frame_worker_;
+    std::atomic<std::optional<uint16_t>> frame_id_;
     std::atomic<bool> is_receiving = false;
     std::weak_ptr<interface::RtpCapturerVideoSourceRepository> repo_;
 

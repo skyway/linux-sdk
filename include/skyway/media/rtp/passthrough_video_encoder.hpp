@@ -39,7 +39,6 @@ public:
     webrtc::VideoEncoder::EncoderInfo GetEncoderInfo() const override;
 
 private:
-    std::unique_ptr<global::interface::Worker> worker_;
     std::shared_ptr<interface::RtpCapturerVideoSource> video_source_ = nullptr;
     webrtc::EncodedImageCallback* callback_                          = nullptr;
     std::weak_ptr<interface::RtpCapturerVideoSourceRepository> source_repo_;
