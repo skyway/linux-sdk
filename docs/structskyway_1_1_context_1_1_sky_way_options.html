@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('structskyway_1_1_context_1_1_sky_way_options.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,9 +87,16 @@ $(document).ready(function(){initNavTree('structskyway_1_1_context_1_1_sky_way_o
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -96,8 +104,7 @@ $(document).ready(function(){initNavTree('structskyway_1_1_context_1_1_sky_way_o
 <a href="#nested-classes">クラス</a> &#124;
 <a href="#pub-attribs">公開変数類</a> &#124;
 <a href="structskyway_1_1_context_1_1_sky_way_options-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">skyway::Context::SkyWayOptions 構造体</div>  </div>
+  <div class="headertitle"><div class="title">skyway::Context::SkyWayOptions 構造体</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -115,43 +122,43 @@ skyway::Context::SkyWayOptions の継承関係図</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 クラス</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1_context_1_1_sky_way_options_1_1_rtp.html">Rtp</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SkyWayのRTPに関する設定  <a href="structskyway_1_1_context_1_1_sky_way_options_1_1_rtp.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 公開変数類</h2></td></tr>
-<tr class="memitem:a2ceb4fad69c23785486b8c1f3447db08"><td class="memItemLeft" align="right" valign="top"><a id="a2ceb4fad69c23785486b8c1f3447db08"></a>
-<a class="el" href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">global::interface::Logger::Level</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1_context_1_1_sky_way_options.html#a2ceb4fad69c23785486b8c1f3447db08">log_level</a> = global::interface::Logger::kInfo</td></tr>
+<tr class="memitem:a2ceb4fad69c23785486b8c1f3447db08" id="r_a2ceb4fad69c23785486b8c1f3447db08"><td class="memItemLeft" align="right" valign="top"><a id="a2ceb4fad69c23785486b8c1f3447db08" name="a2ceb4fad69c23785486b8c1f3447db08"></a>
+<a class="el" href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">global::interface::Logger::Level</a>&#160;</td><td class="memItemRight" valign="bottom"><b>log_level</b> = global::interface::Logger::kInfo</td></tr>
 <tr class="memdesc:a2ceb4fad69c23785486b8c1f3447db08"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログレベル <br /></td></tr>
 <tr class="separator:a2ceb4fad69c23785486b8c1f3447db08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a096dc2fb87930b564a6aff7977fd27e5"><td class="memItemLeft" align="right" valign="top"><a id="a096dc2fb87930b564a6aff7977fd27e5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1_context_1_1_sky_way_options.html#a096dc2fb87930b564a6aff7977fd27e5">enable_webrtc_log</a> = false</td></tr>
+<tr class="memitem:a096dc2fb87930b564a6aff7977fd27e5" id="r_a096dc2fb87930b564a6aff7977fd27e5"><td class="memItemLeft" align="right" valign="top"><a id="a096dc2fb87930b564a6aff7977fd27e5" name="a096dc2fb87930b564a6aff7977fd27e5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>enable_webrtc_log</b> = false</td></tr>
 <tr class="memdesc:a096dc2fb87930b564a6aff7977fd27e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">WebRTCのログを有効にします <br /></td></tr>
 <tr class="separator:a096dc2fb87930b564a6aff7977fd27e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace37c5935f4c6d4a63f7c0920ef05cfa"><td class="memItemLeft" align="right" valign="top"><a id="ace37c5935f4c6d4a63f7c0920ef05cfa"></a>
-<a class="el" href="structskyway_1_1_context_1_1_sky_way_options_1_1_rtp.html">Rtp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1_context_1_1_sky_way_options.html#ace37c5935f4c6d4a63f7c0920ef05cfa">rtp</a></td></tr>
+<tr class="memitem:ace37c5935f4c6d4a63f7c0920ef05cfa" id="r_ace37c5935f4c6d4a63f7c0920ef05cfa"><td class="memItemLeft" align="right" valign="top"><a id="ace37c5935f4c6d4a63f7c0920ef05cfa" name="ace37c5935f4c6d4a63f7c0920ef05cfa"></a>
+<a class="el" href="structskyway_1_1_context_1_1_sky_way_options_1_1_rtp.html">Rtp</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rtp</b></td></tr>
 <tr class="memdesc:ace37c5935f4c6d4a63f7c0920ef05cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTPに関する設定 <br /></td></tr>
 <tr class="separator:ace37c5935f4c6d4a63f7c0920ef05cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_structskyway_1_1core_1_1_context_options"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structskyway_1_1core_1_1_context_options')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="structskyway_1_1core_1_1_context_options.html">skyway::core::ContextOptions</a> に属する継承公開変数類</td></tr>
-<tr class="memitem:a429f52dc7ec3fff350a2d2896b7bb41c inherit pub_attribs_structskyway_1_1core_1_1_context_options"><td class="memItemLeft" align="right" valign="top"><a id="a429f52dc7ec3fff350a2d2896b7bb41c"></a>
+<tr class="memitem:a429f52dc7ec3fff350a2d2896b7bb41c inherit pub_attribs_structskyway_1_1core_1_1_context_options" id="r_a429f52dc7ec3fff350a2d2896b7bb41c"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="structskyway_1_1core_1_1_context_options_1_1_rtc_api.html">RtcApi</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rtc_api</b></td></tr>
 <tr class="separator:a429f52dc7ec3fff350a2d2896b7bb41c inherit pub_attribs_structskyway_1_1core_1_1_context_options"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1ed3fbbe0c8d0d0d63ff4c194779644 inherit pub_attribs_structskyway_1_1core_1_1_context_options"><td class="memItemLeft" align="right" valign="top"><a id="ae1ed3fbbe0c8d0d0d63ff4c194779644"></a>
+<tr class="memitem:ae1ed3fbbe0c8d0d0d63ff4c194779644 inherit pub_attribs_structskyway_1_1core_1_1_context_options" id="r_ae1ed3fbbe0c8d0d0d63ff4c194779644"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="structskyway_1_1core_1_1_context_options_1_1_ice_params.html">IceParams</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ice_params</b></td></tr>
 <tr class="separator:ae1ed3fbbe0c8d0d0d63ff4c194779644 inherit pub_attribs_structskyway_1_1core_1_1_context_options"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbdc5ee1b97bbaefe06ce3d1ae79b7b6 inherit pub_attribs_structskyway_1_1core_1_1_context_options"><td class="memItemLeft" align="right" valign="top"><a id="abbdc5ee1b97bbaefe06ce3d1ae79b7b6"></a>
+<tr class="memitem:abbdc5ee1b97bbaefe06ce3d1ae79b7b6 inherit pub_attribs_structskyway_1_1core_1_1_context_options" id="r_abbdc5ee1b97bbaefe06ce3d1ae79b7b6"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="structskyway_1_1core_1_1_context_options_1_1_signaling.html">Signaling</a>&#160;</td><td class="memItemRight" valign="bottom"><b>signaling</b></td></tr>
 <tr class="separator:abbdc5ee1b97bbaefe06ce3d1ae79b7b6 inherit pub_attribs_structskyway_1_1core_1_1_context_options"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0cd8b3a3804618647c1ee9ab2a39407 inherit pub_attribs_structskyway_1_1core_1_1_context_options"><td class="memItemLeft" align="right" valign="top"><a id="ae0cd8b3a3804618647c1ee9ab2a39407"></a>
+<tr class="memitem:ae0cd8b3a3804618647c1ee9ab2a39407 inherit pub_attribs_structskyway_1_1core_1_1_context_options" id="r_ae0cd8b3a3804618647c1ee9ab2a39407"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="structskyway_1_1core_1_1_context_options_1_1_analytics.html">Analytics</a>&#160;</td><td class="memItemRight" valign="bottom"><b>analytics</b></td></tr>
 <tr class="separator:ae0cd8b3a3804618647c1ee9ab2a39407 inherit pub_attribs_structskyway_1_1core_1_1_context_options"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a1e9f575206952ac60ff255ab8aa4bd inherit pub_attribs_structskyway_1_1core_1_1_context_options"><td class="memItemLeft" align="right" valign="top"><a id="a2a1e9f575206952ac60ff255ab8aa4bd"></a>
+<tr class="memitem:a2a1e9f575206952ac60ff255ab8aa4bd inherit pub_attribs_structskyway_1_1core_1_1_context_options" id="r_a2a1e9f575206952ac60ff255ab8aa4bd"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="structskyway_1_1core_1_1_context_options_1_1_rtc_config.html">RtcConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rtc_config</b></td></tr>
 <tr class="separator:a2a1e9f575206952ac60ff255ab8aa4bd inherit pub_attribs_structskyway_1_1core_1_1_context_options"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a079b4768a8a0aaca8213701d3fa68c17 inherit pub_attribs_structskyway_1_1core_1_1_context_options"><td class="memItemLeft" align="right" valign="top"><a id="a079b4768a8a0aaca8213701d3fa68c17"></a>
+<tr class="memitem:a079b4768a8a0aaca8213701d3fa68c17 inherit pub_attribs_structskyway_1_1core_1_1_context_options" id="r_a079b4768a8a0aaca8213701d3fa68c17"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="structskyway_1_1core_1_1_context_options_1_1_token.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><b>token</b></td></tr>
 <tr class="separator:a079b4768a8a0aaca8213701d3fa68c17 inherit pub_attribs_structskyway_1_1core_1_1_context_options"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -166,7 +173,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>skyway</b></li><li class="navelem"><a class="el" href="classskyway_1_1_context.html">Context</a></li><li class="navelem"><a class="el" href="structskyway_1_1_context_1_1_sky_way_options.html">SkyWayOptions</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
