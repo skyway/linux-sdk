@@ -44,22 +44,28 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -72,7 +78,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('rtp__capturer__video__source_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,120 +92,128 @@ $(document).ready(function(){initNavTree('rtp__capturer__video__source_8hpp_sour
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">rtp_capturer_video_source.hpp</div>  </div>
+  <div class="headertitle"><div class="title">rtp_capturer_video_source.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  rtp_capturer_video_source.hpp</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  skyway</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Naoto Takahashi on 2025/06/30.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright © 2025 NTT DOCOMO BUSINESS, Inc. All rights reserved.</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef SKYWAY_MEDIA_RTP_RTP_CAPTURER_VIDEO_SOURCE_HPP_</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define SKYWAY_MEDIA_RTP_RTP_CAPTURER_VIDEO_SOURCE_HPP_</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;api/field_trials.h&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;video/rtp_video_stream_receiver2.h&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;skyway/global/interface/worker.hpp&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;skyway/media/codec/video_codec.hpp&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;skyway/media/i420_capturer_video_source.hpp&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;skyway/media/rtp/interface/rtp_capturer_video_source.hpp&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;skyway/media/rtp/interface/rtp_capturer_video_source_repository.hpp&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;skyway/media/rtp/rtcp_transport.hpp&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;skyway/network/interface/udp_client.hpp&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;skyway/network/interface/udp_server.hpp&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>skyway {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>media {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>rtp {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html">RtpCapturerVideoSource</a> : <span class="keyword">public</span> <a class="code" href="classskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source.html">interface::RtpCapturerVideoSource</a>,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                               <span class="keyword">public</span> network::interface::UdpServer::PacketHandler,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                               <span class="keyword">public</span> webrtc::RtpVideoStreamReceiver2::OnCompleteFrameCallback,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                               <span class="keyword">public</span> std::enable_shared_from_this&lt;RtpCapturerVideoSource&gt; {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html">RtpCapturerVideoSource</a>(<span class="keyword">const</span> <a class="code" href="structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html">interface::RtpCapturerVideoSourceOptions</a>&amp; options,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                           std::shared_ptr&lt;codec::VideoCodec&gt; codec,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                           std::unique_ptr&lt;network::interface::UdpServer&gt; udp_server,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                           std::shared_ptr&lt;interface::RtpCapturerVideoSourceRepository&gt; repository,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                           std::unique_ptr&lt;rtc::Thread&gt; depacketize_th);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source.html#ab71ebc31afc16c8f0f9873b4c736a3a2">~RtpCapturerVideoSource</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a8cbf8633ed5bb73bce59c5789a154f2c">   53</a></span>&#160;    <span class="keyword">static</span> std::shared_ptr&lt;RtpCapturerVideoSource&gt; <a class="code" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a8cbf8633ed5bb73bce59c5789a154f2c">Create</a>(</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">const</span> <a class="code" href="structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html">interface::RtpCapturerVideoSourceOptions</a>&amp; options);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a81c3620af08d7a783aa84e7260eb8da6">   56</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a81c3620af08d7a783aa84e7260eb8da6">StartReceiving</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a11371054785b3dead7bf6f17c2dfc444">   57</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a11371054785b3dead7bf6f17c2dfc444">StopReceiving</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    std::optional&lt;uint8_t&gt; GetFrameId() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> RegisterCallback(webrtc::EncodedImageCallback* callback) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    std::string Endpoint() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> OnEncoderReleased(webrtc::EncodedImageCallback* callback) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    rtc::scoped_refptr&lt;media::interface::InternalCapturerVideoSource&gt; GetSource() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// Impl network::interface::UdpServer::PacketHandler</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> OnPacketReceived(<span class="keyword">const</span> uint8_t* data, <span class="keywordtype">size_t</span> size) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// Impl webrtc::RtpVideoStreamReceiver2::OnCompleteFrameCallback</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> OnCompleteFrame(std::unique_ptr&lt;webrtc::EncodedFrame&gt; frame) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> SendKeyFrameRequest() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html">RtpCapturerVideoSource</a>(<span class="keyword">const</span> <a class="code" href="structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html">interface::RtpCapturerVideoSourceOptions</a>&amp; options);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    std::unique_ptr&lt;webrtc::RtpVideoStreamReceiver2&gt; CreateReceiver(</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">const</span> webrtc::RtpPacketReceived&amp; packet);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> DummyFrameLoop(uint16_t frame_id);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    uint64_t GenerateSsrc() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    webrtc::VideoReceiveStreamInterface::Config CreateRtpVideoStreamReceiver2Config();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::shared_ptr&lt;codec::VideoCodec&gt; codec_;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::unique_ptr&lt;rtc::Thread&gt; depacketize_th_ = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html">interface::RtpCapturerVideoSourceOptions</a> options_;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    RtcpTransport transport_;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    rtc::scoped_refptr&lt;I420CapturerVideoSource::I420InternalCapturerVideoSource&gt; source_;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::unique_ptr&lt;network::interface::UdpServer&gt; udp_server_;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    std::mutex callbacks_mtx_;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::unordered_set&lt;webrtc::EncodedImageCallback*&gt; callbacks_;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    std::unique_ptr&lt;webrtc::FieldTrials&gt; trials_ = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    webrtc::VideoReceiveStreamInterface::Config config_;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    std::unique_ptr&lt;webrtc::TaskQueueBase, webrtc::TaskQueueDeleter&gt; encoded_image_queue_ = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::unique_ptr&lt;webrtc::RtpVideoStreamReceiver2&gt; receiver_                            = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    std::atomic&lt;bool&gt; frame_loop_stopped_                                                 = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::unique_ptr&lt;global::interface::Worker&gt; dummy_frame_worker_;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::atomic&lt;std::optional&lt;uint16_t&gt;&gt; frame_id_;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    std::atomic&lt;bool&gt; is_receiving = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    std::weak_ptr&lt;interface::RtpCapturerVideoSourceRepository&gt; repo_;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>RtpCapturerVideoSourceTest;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}  <span class="comment">// namespace rtp</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}  <span class="comment">// namespace media</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_MEDIA_RTP_RTP_CAPTURER_VIDEO_SOURCE_HPP_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source_html"><div class="ttname"><a href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html">skyway::media::rtp::RtpCapturerVideoSource</a></div><div class="ttdef"><b>Definition:</b> rtp_capturer_video_source.hpp:31</div></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//  rtp_capturer_video_source.hpp</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//  skyway</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Created by Naoto Takahashi on 2025/06/30.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  Copyright © 2025 NTT DOCOMO BUSINESS, Inc. All rights reserved.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef SKYWAY_MEDIA_RTP_RTP_CAPTURER_VIDEO_SOURCE_HPP_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define SKYWAY_MEDIA_RTP_RTP_CAPTURER_VIDEO_SOURCE_HPP_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;api/field_trials.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;video/rtp_video_stream_receiver2.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;skyway/global/interface/worker.hpp&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;skyway/media/codec/video_codec.hpp&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;skyway/media/i420_capturer_video_source.hpp&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;skyway/media/rtp/interface/rtp_capturer_video_source.hpp&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;skyway/media/rtp/interface/rtp_capturer_video_source_repository.hpp&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;skyway/media/rtp/rtcp_transport.hpp&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;skyway/network/interface/udp_client.hpp&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;skyway/network/interface/udp_server.hpp&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span>skyway {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span>media {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">namespace </span>rtp {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html">   28</a></span><span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html">RtpCapturerVideoSource</a> : <span class="keyword">public</span> <a class="code hl_class" href="classskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source.html">interface::RtpCapturerVideoSource</a>,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                               <span class="keyword">public</span> network::interface::UdpServer::PacketHandler,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                               <span class="keyword">public</span> webrtc::RtpVideoStreamReceiver2::OnCompleteFrameCallback,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                               <span class="keyword">public</span> std::enable_shared_from_this&lt;RtpCapturerVideoSource&gt; {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_class" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html">RtpCapturerVideoSource</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html">interface::RtpCapturerVideoSourceOptions</a>&amp; options,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                           std::shared_ptr&lt;codec::VideoCodec&gt; codec,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                           std::unique_ptr&lt;network::interface::UdpServer&gt; udp_server,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                           std::shared_ptr&lt;interface::RtpCapturerVideoSourceRepository&gt; repository,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                           std::unique_ptr&lt;rtc::Thread&gt; depacketize_th);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_function" href="classskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source.html#ab71ebc31afc16c8f0f9873b4c736a3a2">~RtpCapturerVideoSource</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a99e4d57d975be591e55b5967be674def">   53</a></span>    <span class="keyword">static</span> std::shared_ptr&lt;RtpCapturerVideoSource&gt; <a class="code hl_function" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a99e4d57d975be591e55b5967be674def">Create</a>(</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html">interface::RtpCapturerVideoSourceOptions</a>&amp; options);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a81c3620af08d7a783aa84e7260eb8da6">   56</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a81c3620af08d7a783aa84e7260eb8da6">StartReceiving</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a11371054785b3dead7bf6f17c2dfc444">   57</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a11371054785b3dead7bf6f17c2dfc444">StopReceiving</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::optional&lt;uint8_t&gt; GetFrameId() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> RegisterCallback(webrtc::EncodedImageCallback* callback) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    std::string Endpoint() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> OnEncoderReleased(webrtc::EncodedImageCallback* callback) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    rtc::scoped_refptr&lt;media::interface::InternalCapturerVideoSource&gt; GetSource() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">// Impl network::interface::UdpServer::PacketHandler</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> OnPacketReceived(<span class="keyword">const</span> uint8_t* data, <span class="keywordtype">size_t</span> size) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">// Impl webrtc::RtpVideoStreamReceiver2::OnCompleteFrameCallback</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> OnCompleteFrame(std::unique_ptr&lt;webrtc::EncodedFrame&gt; frame) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> SendKeyFrameRequest() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_class" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html">RtpCapturerVideoSource</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html">interface::RtpCapturerVideoSourceOptions</a>&amp; options);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    std::unique_ptr&lt;webrtc::RtpVideoStreamReceiver2&gt; CreateReceiver(</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keyword">const</span> webrtc::RtpPacketReceived&amp; packet);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">void</span> DummyFrameLoop(uint16_t frame_id);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    uint64_t GenerateSsrc() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    webrtc::VideoReceiveStreamInterface::Config CreateRtpVideoStreamReceiver2Config();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    std::shared_ptr&lt;codec::VideoCodec&gt; codec_;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::unique_ptr&lt;rtc::Thread&gt; depacketize_th_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_struct" href="structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html">interface::RtpCapturerVideoSourceOptions</a> options_;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    RtcpTransport transport_;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    rtc::scoped_refptr&lt;I420CapturerVideoSource::I420InternalCapturerVideoSource&gt; source_;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    std::unique_ptr&lt;network::interface::UdpServer&gt; udp_server_;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    std::mutex callbacks_mtx_;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    std::unordered_set&lt;webrtc::EncodedImageCallback*&gt; callbacks_;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    std::unique_ptr&lt;webrtc::FieldTrials&gt; trials_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    webrtc::VideoReceiveStreamInterface::Config config_;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    std::unique_ptr&lt;webrtc::TaskQueueBase, webrtc::TaskQueueDeleter&gt; encoded_image_queue_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    std::unique_ptr&lt;webrtc::RtpVideoStreamReceiver2&gt; receiver_                            = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    std::atomic&lt;bool&gt; frame_loop_stopped_                                                 = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    std::unique_ptr&lt;global::interface::Worker&gt; dummy_frame_worker_;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    std::atomic&lt;std::optional&lt;uint16_t&gt;&gt; frame_id_;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    std::atomic&lt;bool&gt; is_receiving = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    std::weak_ptr&lt;interface::RtpCapturerVideoSourceRepository&gt; repo_;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keyword">friend</span> <span class="keyword">class </span>RtpCapturerVideoSourceTest;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>};</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}  <span class="comment">// namespace rtp</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}  <span class="comment">// namespace media</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_MEDIA_RTP_RTP_CAPTURER_VIDEO_SOURCE_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source_html"><div class="ttname"><a href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html">skyway::media::rtp::RtpCapturerVideoSource</a></div><div class="ttdef"><b>Definition</b> rtp_capturer_video_source.hpp:31</div></div>
 <div class="ttc" id="aclassskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source_html_a11371054785b3dead7bf6f17c2dfc444"><div class="ttname"><a href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a11371054785b3dead7bf6f17c2dfc444">skyway::media::rtp::RtpCapturerVideoSource::StopReceiving</a></div><div class="ttdeci">bool StopReceiving() override</div><div class="ttdoc">UDPサーバを停止し、RTPパケットの受信を停止します。</div></div>
 <div class="ttc" id="aclassskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source_html_a81c3620af08d7a783aa84e7260eb8da6"><div class="ttname"><a href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a81c3620af08d7a783aa84e7260eb8da6">skyway::media::rtp::RtpCapturerVideoSource::StartReceiving</a></div><div class="ttdeci">bool StartReceiving() override</div><div class="ttdoc">UDPサーバを起動し、RTPパケットの受信を開始します。</div></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source_html_a8cbf8633ed5bb73bce59c5789a154f2c"><div class="ttname"><a href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a8cbf8633ed5bb73bce59c5789a154f2c">skyway::media::rtp::RtpCapturerVideoSource::Create</a></div><div class="ttdeci">static std::shared_ptr&lt; RtpCapturerVideoSource &gt; Create(const interface::RtpCapturerVideoSourceOptions &amp;options)</div><div class="ttdoc">RTPキャプチャビデオソースのインスタンスを作成します。</div></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_html"><div class="ttname"><a href="classskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source.html">skyway::media::rtp::interface::RtpCapturerVideoSource</a></div><div class="ttdoc">RTPキャプチャビデオソース</div><div class="ttdef"><b>Definition:</b> rtp_capturer_video_source.hpp:75</div></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source_html_a99e4d57d975be591e55b5967be674def"><div class="ttname"><a href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a99e4d57d975be591e55b5967be674def">skyway::media::rtp::RtpCapturerVideoSource::Create</a></div><div class="ttdeci">static std::shared_ptr&lt; RtpCapturerVideoSource &gt; Create(const interface::RtpCapturerVideoSourceOptions &amp;options)</div><div class="ttdoc">RTPキャプチャビデオソースのインスタンスを作成します。</div></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_html"><div class="ttname"><a href="classskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source.html">skyway::media::rtp::interface::RtpCapturerVideoSource</a></div><div class="ttdoc">RTPキャプチャビデオソース</div><div class="ttdef"><b>Definition</b> rtp_capturer_video_source.hpp:75</div></div>
 <div class="ttc" id="aclassskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_html_ab71ebc31afc16c8f0f9873b4c736a3a2"><div class="ttname"><a href="classskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source.html#ab71ebc31afc16c8f0f9873b4c736a3a2">skyway::media::rtp::interface::RtpCapturerVideoSource::~RtpCapturerVideoSource</a></div><div class="ttdeci">virtual ~RtpCapturerVideoSource()=default</div><div class="ttdoc">デストラクタ</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options_html"><div class="ttname"><a href="structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html">skyway::media::rtp::interface::RtpCapturerVideoSourceOptions</a></div><div class="ttdoc">RTPキャプチャビデオソースのオプション</div><div class="ttdef"><b>Definition:</b> rtp_capturer_video_source.hpp:23</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options_html"><div class="ttname"><a href="structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html">skyway::media::rtp::interface::RtpCapturerVideoSourceOptions</a></div><div class="ttdoc">RTPキャプチャビデオソースのオプション</div><div class="ttdef"><b>Definition</b> rtp_capturer_video_source.hpp:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_77f3510bf786cf3c12f65f3b0b944be3.html">skyway</a></li><li class="navelem"><a class="el" href="dir_e0a5df88c41d0cefa5f5ef07a5fde6bd.html">media</a></li><li class="navelem"><a class="el" href="dir_61edee19f05eb662ec2217aa7f1e5130.html">rtp</a></li><li class="navelem"><b>rtp_capturer_video_source.hpp</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

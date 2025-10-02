@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('classskyway_1_1media_1_1_stream_factory.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,29 +87,35 @@ $(document).ready(function(){initNavTree('classskyway_1_1media_1_1_stream_factor
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">skyway::media::StreamFactory メンバ一覧</div>  </div>
+  <div class="headertitle"><div class="title">skyway::media::StreamFactory メンバ一覧</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>継承メンバを含む <a class="el" href="classskyway_1_1media_1_1_stream_factory.html">skyway::media::StreamFactory</a> の全メンバ一覧です。</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html#a9cb43359712b2405751abdee0a807f4a">CreateAudioStream</a>()</td><td class="entry"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html">skyway::media::StreamFactory</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html#a1e576b2f7feb5d1a5f410078472710f1">CreateDataStream</a>()</td><td class="entry"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html">skyway::media::StreamFactory</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html#a547ae1ea932e02bda5695342a75bd8be">CreateVideoStream</a>(std::shared_ptr&lt; interface::CapturerVideoSource &gt; capturer)</td><td class="entry"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html">skyway::media::StreamFactory</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html#ac4e9e25f0cda9f8c2487eab8da11f070">CreateVideoStream</a>(const DeviceManager::VideoDevice &amp;device)</td><td class="entry"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html">skyway::media::StreamFactory</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html#ae6f1267c07231eb6feb972d657343433">CreateAudioStream</a>()</td><td class="entry"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html">skyway::media::StreamFactory</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html#a7200a8105e0d6ee14a9230df73087c2b">CreateDataStream</a>()</td><td class="entry"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html">skyway::media::StreamFactory</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html#ad25a3f1dd6a1dd9f31f72b77d635b07d">CreateVideoStream</a>(std::shared_ptr&lt; interface::CapturerVideoSource &gt; capturer)</td><td class="entry"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html">skyway::media::StreamFactory</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html#afd9706d0e4a2edfb9a7d2de02407f9b2">CreateVideoStream</a>(const DeviceManager::VideoDevice &amp;device)</td><td class="entry"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html">skyway::media::StreamFactory</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
