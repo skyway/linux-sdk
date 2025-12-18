@@ -1,9 +1,5 @@
 //
-//  logger.hpp
-//  skyway
-//
-//  Created by sandabu on 2021/05/26.
-//  Copyright © 2021 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_GLOBAL_INTERFACE_LOGGER_HPP_

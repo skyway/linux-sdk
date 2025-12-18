@@ -1,9 +1,5 @@
 //
-//  room_domain_cache_manager.hpp
-//  skyway
-//
-//  Created by iorar on 2025/07/18.
-//  Copyright © 2025 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_ROOM_INTERFACE_ROOM_DOMAIN_CACHE_MANAGER_HPP

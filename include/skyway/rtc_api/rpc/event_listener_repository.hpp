@@ -1,9 +1,5 @@
 //
-//  event_listener_repository.hpp
-//  skyway
-//
-//  Created by Naoto Takahashi on 2024/04/18.
-//  Copyright © 2024 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_RTC_API_RPC_EVENT_LISTENER_REPOSITORY_HPP_

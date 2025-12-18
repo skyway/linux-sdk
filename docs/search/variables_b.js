@@ -1,14 +1,10 @@
 var searchData=
 [
-  ['scale_5fresolution_5fdown_5fby_0',['scale_resolution_down_by',['../structskyway_1_1model_1_1_encoding.html#a8bfc1d6bc1fae783547bb8cec3ff5c80',1,'skyway::model::Encoding']]],
-  ['scaled_5fheight_1',['scaled_height',['../structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#ab99005e6a592c647a9f8fde38782f23b',1,'skyway::media::interface::I420VideoRendererOptions::scaled_height'],['../structskyway_1_1media_1_1_v4l2_video_renderer_options.html#a67e52409fdbc6a3ce299c1c8354fe974',1,'skyway::media::V4l2VideoRendererOptions::scaled_height']]],
-  ['scaled_5fwidth_2',['scaled_width',['../structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#aa666c749aead62702386e3057dc507d5',1,'skyway::media::interface::I420VideoRendererOptions::scaled_width'],['../structskyway_1_1media_1_1_v4l2_video_renderer_options.html#a814fc79a259fa18529f781a9317fb176',1,'skyway::media::V4l2VideoRendererOptions::scaled_width']]],
-  ['send_5frtcp_5fipv4_3',['send_rtcp_ipv4',['../structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a18e1f4a277dd2f9b5e86431950ce0104',1,'skyway::media::rtp::interface::RtpCapturerVideoSourceOptions']]],
-  ['send_5frtcp_5fport_4',['send_rtcp_port',['../structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a3fc31290117b1bb496e78398b622058c',1,'skyway::media::rtp::interface::RtpCapturerVideoSourceOptions']]],
-  ['stride_5fu_5',['stride_u',['../structskyway_1_1media_1_1interface_1_1_i420_frame.html#a1691036c8c16d2dd8c384cd496215aa7',1,'skyway::media::interface::I420Frame']]],
-  ['stride_5fv_6',['stride_v',['../structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae2896ec958fe67f7df873a59ca17fff8',1,'skyway::media::interface::I420Frame']]],
-  ['stride_5fy_7',['stride_y',['../structskyway_1_1media_1_1interface_1_1_i420_frame.html#afaa26a8bc0768ce89a64cc0594673106',1,'skyway::media::interface::I420Frame']]],
-  ['subscriber_5fid_8',['subscriber_id',['../structskyway_1_1model_1_1_subscription.html#acfbc445312952443434a96a925e93151',1,'skyway::model::Subscription']]],
-  ['subscriptions_9',['subscriptions',['../structskyway_1_1model_1_1_channel.html#a83f131ef2aed17d12e89ea572a5a7475',1,'skyway::model::Channel']]],
-  ['subtype_10',['subtype',['../structskyway_1_1model_1_1_member_1_1_init.html#a47f343f6d47cf92ea3ae5fc83f085bfb',1,'skyway::model::Member::Init::subtype'],['../structskyway_1_1model_1_1_member.html#a3536f2b00fa4c134dea89ab74603aa6c',1,'skyway::model::Member::subtype']]]
+  ['parameters_476',['parameters',['../structskyway_1_1model_1_1_codec.html#aa14ab85e4a597fe6f9b63e38d0a9c725',1,'skyway::model::Codec']]],
+  ['params_477',['params',['../structskyway_1_1model_1_1_web_r_t_c_stats_report.html#ab85cfbc3258435615f971f4546a48819',1,'skyway::model::WebRTCStatsReport']]],
+  ['policy_478',['policy',['../structskyway_1_1core_1_1_context_options_1_1_rtc_config.html#a10b1441a1ad38039ff94b834e1cf7d67',1,'skyway::core::ContextOptions::RtcConfig']]],
+  ['preferred_5fencoding_5fid_479',['preferred_encoding_id',['../structskyway_1_1core_1_1interface_1_1_local_person_1_1_subscription_options.html#af8faf9d0e8cf1eae7c4dab4bedd31501',1,'skyway::core::interface::LocalPerson::SubscriptionOptions::preferred_encoding_id()'],['../structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_subscription_options.html#acd99f4aa014c14b7bfef373755a01374',1,'skyway::room::interface::LocalRoomMember::SubscriptionOptions::preferred_encoding_id()']]],
+  ['publication_5fid_480',['publication_id',['../structskyway_1_1model_1_1_subscription.html#ab7e69ac0cc4ffc9ffecb81eaf05902cf',1,'skyway::model::Subscription']]],
+  ['publications_481',['publications',['../structskyway_1_1model_1_1_channel.html#abc65fdfba871f4ca8c23dda3522e79bf',1,'skyway::model::Channel']]],
+  ['publisher_5fid_482',['publisher_id',['../structskyway_1_1model_1_1_publication.html#a2a13a3e089e1f6b1290c64ccba346ed6',1,'skyway::model::Publication']]]
 ];

@@ -1,10 +1,7 @@
 //
-//  udp_client.hpp
-//  skyway
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
-//  Created by array on 2025/08/04.
-//  Copyright © 2025 NTT DOCOMO BUSINESS, Inc. All rights reserved.
-//
+
 #ifndef SKYWAY_NETWORK_INTERFACE_UDP_CLIENT_HPP
 #define SKYWAY_NETWORK_INTERFACE_UDP_CLIENT_HPP
 

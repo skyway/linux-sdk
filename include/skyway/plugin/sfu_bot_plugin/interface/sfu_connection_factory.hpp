@@ -1,9 +1,5 @@
 //
-//  sfu_connection_factory.hpp
-//  skyway
-//
-//  Created by Naoto Takahashi on 2023/08/04.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_SFU_CONNECTION_FACTORY_HPP_

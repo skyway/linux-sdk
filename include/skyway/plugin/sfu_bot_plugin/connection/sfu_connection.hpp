@@ -1,9 +1,5 @@
 //
-//  connection.hpp
-//  skyway
-//
-//  Created by salmon on 2022/1/25.
-//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_SFU_CONNECTION_HPP_
@@ -11,7 +7,6 @@
 
 #include <api/peer_connection_interface.h>
 
-#include <mediasoupclient.hpp>
 #include <unordered_map>
 
 #include "skyway/analytics/interface/analytics_client.hpp"
@@ -51,6 +46,7 @@ public:
     bool StopForwarding(Forwarding* forwarding, bool with_api_request) override;
     void StartReceiving(std::shared_ptr<core::interface::Subscription> subscription) override;
     bool StopReceiving(const std::string& subscription_id) override;
+    void Dispose() override;
 
 private:
     Sender* CreateSender(std::shared_ptr<core::interface::Publication> publication, ForwardingConfigure configure);
@@ -75,6 +71,8 @@ private:
     std::unordered_map<SubscriptionId, std::unique_ptr<Receiver>> receivers_;
 
     interface::Device::PeerConnectionOptions peer_connection_options_;
+    std::mutex dispose_mtx_;
+    std::atomic<bool> is_disposed_ = false;
 };
 
 }  // namespace connection

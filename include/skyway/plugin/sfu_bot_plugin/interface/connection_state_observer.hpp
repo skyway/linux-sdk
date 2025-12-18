@@ -1,9 +1,5 @@
 //
-//  connection_state_observer.hpp
-//  skyway
-//
-//  Created by Hiroaki Shimono on 2023/10/06.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_CONNECTION_STATE_OBSERVER_HPP_

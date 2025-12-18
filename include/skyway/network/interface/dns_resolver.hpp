@@ -1,10 +1,7 @@
 //
-//  dns_resolver.hpp
-//  skyway
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
-//  Created by sandabu on 2025/8/13.
-//  Copyright © 2025 NTT DOCOMO BUSINESS, Inc. All rights reserved.
-//
+
 #ifndef SKYWAY_NETWORK_INTERFACE_DNS_RESOLVER_HPP
 #define SKYWAY_NETWORK_INTERFACE_DNS_RESOLVER_HPP
 

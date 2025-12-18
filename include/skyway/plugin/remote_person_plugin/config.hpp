@@ -1,9 +1,5 @@
 //
-//  config.hpp
-//  skyway
-//
-//  Created by salmon on 2023/04/07.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_CONFIG_HPP_

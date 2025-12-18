@@ -1,9 +1,5 @@
 //
-//  http_client.hpp
-//  skyway
-//
-//  Created by sandabu on 2021/10/11.
-//  Copyright © 2021 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_NETWORK_INTERFACE_HTTP_CLIENT_HPP_

@@ -1,9 +1,5 @@
 //
-//  remote_member.hpp
-//  skyway
-//
-//  Created by sandabu on 2021/12/21.
-//  Copyright © 2021 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_CORE_INTERFACE_REMOTE_MEMBER_HPP_

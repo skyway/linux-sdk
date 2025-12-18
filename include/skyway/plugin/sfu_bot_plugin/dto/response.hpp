@@ -1,9 +1,5 @@
 //
-//  response.hpp
-//  skyway
-//
-//  Created by salmon on 2022/03/2.
-//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_DTO_RESPONSE_HPP_

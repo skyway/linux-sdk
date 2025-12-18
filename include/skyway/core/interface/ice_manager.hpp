@@ -1,9 +1,5 @@
 //
-//  ice_manager.hpp
-//  skyway
-//
-//  Created by salmon on 2023/04/28.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_CORE_INTERFACE_ICE_MANAGER_HPP_

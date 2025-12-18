@@ -1,9 +1,5 @@
 //
-//  peer.hpp
-//  skyway
-//
-//  Created by sandabu on 2021/11/16.
-//  Copyright © 2021 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_CONNECTION_PEER_HPP_
@@ -191,9 +187,10 @@ protected:
     std::string rtc_peer_connection_id_;
     std::unique_ptr<global::interface::Worker> connection_state_worker_ = std::make_unique<global::Worker>(kRemotePersonConnectionStateThreadName);
     std::atomic<bool> is_disposed_ = false;
+    std::unique_ptr<global::interface::Worker> signaling_worker_ = std::make_unique<global::Worker>("signaling");
 
 private:
-    bool SendCandidate(const webrtc::IceCandidateInterface* candidate);
+    void SendCandidate(const webrtc::IceCandidateInterface* candidate);
     rtc::scoped_refptr<webrtc::PeerConnectionInterface> CreatePeerConnection(
         webrtc::PeerConnectionInterface::RTCConfiguration& config,
         rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory);

@@ -1,9 +1,5 @@
 //
-//  connection.hpp
-//  skyway
-//
-//  Created by Naoto Takahashi on 2023/08/04.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_SFU_CONNECTION_HPP_
@@ -31,6 +27,7 @@ public:
     virtual bool StopForwarding(Forwarding* forwarding, bool with_api_request)               = 0;
     virtual void StartReceiving(std::shared_ptr<core::interface::Subscription> subscription) = 0;
     virtual bool StopReceiving(const std::string& subscription_id)                           = 0;
+    virtual void Dispose()                                                                   = 0;
 };
 
 }  // namespace interface

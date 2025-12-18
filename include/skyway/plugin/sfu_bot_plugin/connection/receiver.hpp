@@ -1,16 +1,12 @@
 //
-//  receiver.hpp
-//  skyway
-//
-//  Created by salmon on 2022/1/25.
-//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_RECEIVER_HPP_
 #define SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_RECEIVER_HPP_
 
 #include <atomic>
-#include <mediasoupclient.hpp>
+#include <Consumer.hpp>
 #include <unordered_map>
 
 #include "skyway/analytics/interface/analytics_client.hpp"

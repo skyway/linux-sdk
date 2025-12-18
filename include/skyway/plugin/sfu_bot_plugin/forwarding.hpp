@@ -1,9 +1,5 @@
 //
-//  forwarding.hpp
-//  skyway
-//
-//  Created by salmon on 2022/2/23.
-//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_FORWARDING_HPP_

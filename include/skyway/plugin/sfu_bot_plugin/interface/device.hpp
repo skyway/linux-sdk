@@ -1,15 +1,11 @@
 //
-//  device.hpp
-//  skyway
-//
-//  Created by Hiroaki Shimono on 2023/09/29.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_DEVICE_HPP_
 #define SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_DEVICE_HPP_
 
-#include <mediasoupclient.hpp>
+#include <Device.hpp>
 
 #include "skyway/analytics/interface/analytics_client.hpp"
 #include "skyway/plugin/sfu_bot_plugin/interface/recv_transport.hpp"

@@ -1,9 +1,5 @@
 //
-//  skyway.hpp
-//  skyway
-//
-//  Created by sandabu on 2021/05/20.
-//  Copyright © 2021 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_SKYWAY_HPP_
@@ -14,8 +10,8 @@
 namespace skyway {
 
 // General
-static const unsigned kVersionMajor = 6;
-static const unsigned kVersionMinor = 1;
+static const unsigned kVersionMajor = 8;
+static const unsigned kVersionMinor = 0;
 static const unsigned kVersionPatch = 0;
 
 inline std::string GetVersionString() {

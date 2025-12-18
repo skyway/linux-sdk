@@ -1,15 +1,11 @@
 //
-//  transport.hpp
-//  skyway
-//
-//  Created by Muranaka Kei on 2024/03/13.
-//  Copyright © 2024 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_ABSTRACT_TRANSPORT_HPP_
 #define SKYWAY_PLUGIN_SFU_BOT_PLUGIN_ABSTRACT_TRANSPORT_HPP_
 
-#include <mediasoupclient.hpp>
+#include <Transport.hpp>
 
 #include "skyway/plugin/sfu_bot_plugin/interface/connection_state_observer.hpp"
 #include "skyway/plugin/sfu_bot_plugin/interface/sfu_api_client.hpp"

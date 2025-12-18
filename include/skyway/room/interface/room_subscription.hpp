@@ -1,9 +1,5 @@
 //
-//  room_subscription.hpp
-//  skyway
-//
-//  Created by Naoto Takahashi on 2023/11/21.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_ROOM_INTERFACE_ROOM_SUBSCRIPTION_HPP

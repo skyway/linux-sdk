@@ -1,10 +1,7 @@
 //
-//  logger.hpp
-//  skyway
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
-//  Created by ossan20 on 2023/8/18.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
-//
+
 #ifndef SKYWAY_GLOBAL_LOGGER_HPP
 #define SKYWAY_GLOBAL_LOGGER_HPP
 

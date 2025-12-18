@@ -1,9 +1,5 @@
 //
-//  chunk_messenger.hpp
-//  skyway
-//
-//  Created by sandabu on 2021/05/20.
-//  Copyright © 2020 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_CORE_CHUNK_MESSENGER_CHUNK_MESSENGER_HPP_

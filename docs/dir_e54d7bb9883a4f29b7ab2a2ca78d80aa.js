@@ -5,6 +5,7 @@ var dir_e54d7bb9883a4f29b7ab2a2ca78d80aa =
     [ "config.hpp", "global_2config_8hpp_source.html", null ],
     [ "error.hpp", "error_8hpp_source.html", null ],
     [ "logger.hpp", "logger_8hpp_source.html", null ],
+    [ "thread_utils.hpp", "thread__utils_8hpp_source.html", null ],
     [ "util.hpp", "global_2util_8hpp_source.html", null ],
     [ "worker.hpp", "worker_8hpp_source.html", null ]
 ];

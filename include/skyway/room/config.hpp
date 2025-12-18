@@ -1,9 +1,5 @@
 //
-//  config.hpp
-//  skyway
-//
-//  Created by Kenta Katsura on 2025/07/17.
-//  Copyright © 2025 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_ROOM_CONFIG_HPP_

@@ -1,9 +1,5 @@
 //
-//  remote_stream.hpp
-//  skyway
-//
-//  Created by sandabu on 2022/01/28.
-//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_CORE_INTERFACE_REMOTE_STREAM_HPP_

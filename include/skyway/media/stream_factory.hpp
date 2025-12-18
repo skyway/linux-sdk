@@ -1,9 +1,5 @@
 //
-//  stream_factory.hpp
-//  skyway
-//
-//  Created by iorar on 2024/10/28.
-//  Copyright © 2024 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_MEDIA_STREAM_FACTORY_HPP_
@@ -15,6 +11,7 @@
 #include <skyway/core/stream/local/data_stream.hpp>
 #include <skyway/core/stream/local/video_stream.hpp>
 
+#include "skyway/media/audio/interface/pcm_audio_source.hpp"
 #include "skyway/media/interface/capturer_video_source.hpp"
 
 namespace skyway {
@@ -28,6 +25,11 @@ public:
 
     /// @brief LocalAudioStreamを生成します。
     static std::shared_ptr<core::stream::local::LocalAudioStream> CreateAudioStream();
+
+    /// @brief LocalAudioStreamを生成します。
+    /// @param source StreamのソースになるPcmAudioSource
+    static std::shared_ptr<core::stream::local::LocalAudioStream> CreateAudioStream(
+        std::shared_ptr<audio::interface::PcmAudioSource> source);
 
     /// @brief LocalVideoStreamを生成します。
     /// @param track StreamのソースになるCapture

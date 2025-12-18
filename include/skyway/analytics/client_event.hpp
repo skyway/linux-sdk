@@ -1,9 +1,5 @@
 //
-//  client_event.hpp
-//  skyway
-//
-//  Created by Muranaka Kei on 2023/11/22.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_ANALYTICS_CLIENT_EVENT_HPP_
@@ -36,10 +32,15 @@ struct ClientEvent {
     bool operator==(const ClientEvent& rhs) const { return id == rhs.id; }
 };
 
-struct ClientEventHash {
-    std::size_t operator()(const ClientEvent& event) const {
-        return std::hash<std::string>()(event.id);
-    }
+struct PendingClientEvent {
+    ClientEvent event;
+    int retry_count = 0;
+    std::chrono::steady_clock::time_point next_due;
+
+    PendingClientEvent(
+            const ClientEvent& event,
+            std::chrono::steady_clock::time_point next_due = std::chrono::steady_clock::now()
+    ): event(event), next_due(next_due) {}
 };
 
 struct BindingRtcPeerConnectionToSubscriptionPayload {

@@ -1,15 +1,11 @@
 //
-//  sender.hpp
-//  skyway
-//
-//  Created by salmon on 2022/1/25.
-//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_SENDER_HPP_
 #define SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_SENDER_HPP_
 
-#include <mediasoupclient.hpp>
+#include <Transport.hpp>
 #include <unordered_map>
 
 #include "skyway/analytics/interface/analytics_client.hpp"
@@ -43,6 +39,7 @@ public:
     std::optional<interface::StartForwardingResult> StartForwarding(
         const interface::Device::PeerConnectionOptions* pc_options);
     bool StopForwarding(bool with_api_request);
+    void Dispose();
 
     // SendTransport::Listener;
     std::future<std::string> OnProduce(mediasoupclient::SendTransport* transport,
@@ -85,6 +82,7 @@ private:
 
     std::optional<std::string> forwarding_id_;
     std::optional<std::string> transaction_id_;
+    std::atomic<bool> is_disposed_ = false;
 
 public:
     friend class SfuBotPluginSenderTest;

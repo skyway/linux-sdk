@@ -1,9 +1,5 @@
 //
-//  opencv_capturer_video_source.hpp
-//  skyway
-//
-//  Created by ogura on 2024/12/11.
-//  Copyright © 2024 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 // Define “SKYWAY_ENABLE_OPENCV” if you want to use OpenCV functionality

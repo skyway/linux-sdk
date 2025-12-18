@@ -1,10 +1,7 @@
 //
-//  room_domain_factory.hpp
-//  skyway
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
-//  Created by Naoto Takahashi on 2023/12/11.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
-//
+
 #ifndef SKYWAY_ROOM_P2P_ROOM_DOMAIN_FACTORY_HPP
 #define SKYWAY_ROOM_P2P_ROOM_DOMAIN_FACTORY_HPP
 

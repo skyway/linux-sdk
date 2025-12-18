@@ -1,9 +1,5 @@
 //
-//  analytics_client_factory.hpp
-//  skyway
-//
-//  Created by Muranaka Kei on 2024/01/15.
-//  Copyright © 2024 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_CORE_ANALYTICS_CLIENT_FACTORY_HPP_

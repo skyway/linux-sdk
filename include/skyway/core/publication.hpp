@@ -1,9 +1,5 @@
 //
-//  publication.hpp
-//  skyway
-//
-//  Created by sandabu on 2022/01/12.
-//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_CORE_PUBLICATION_HPP_
@@ -34,6 +30,7 @@ public:
     std::string Id() const override;
     std::shared_ptr<interface::Member> Publisher() const override;
     std::vector<std::shared_ptr<interface::Subscription>> Subscriptions() const override;
+    model::PublicationType Type() const override;
     model::ContentType ContentType() const override;
     std::optional<std::string> Metadata() const override;
     std::shared_ptr<interface::Publication> Origin() const override;
