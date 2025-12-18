@@ -44,22 +44,28 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -72,7 +78,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('room__publication_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,108 +92,116 @@ $(document).ready(function(){initNavTree('room__publication_8hpp_source.html',''
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">room_publication.hpp</div>  </div>
+  <div class="headertitle"><div class="title">room_publication.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef SKYWAY_ROOM_ROOM_PUBLICATION_HPP</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define SKYWAY_ROOM_ROOM_PUBLICATION_HPP</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;skyway/core/interface/publication.hpp&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;skyway/room/interface/room_domain_factory.hpp&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;skyway/room/interface/room_publication.hpp&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>skyway {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>room {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classskyway_1_1room_1_1_room_publication.html">RoomPublication</a> : <span class="keyword">public</span> <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_publication.html">interface::RoomPublication</a>,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                        <span class="keyword">public</span> <a class="code" href="classskyway_1_1core_1_1interface_1_1_publication_1_1_event_listener.html">core::interface::Publication::EventListener</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classskyway_1_1room_1_1_room_publication.html">RoomPublication</a>(std::shared_ptr&lt;core::interface::Publication&gt; core,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                    interface::RoomDomainFactory* factory);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    ~<a class="code" href="classskyway_1_1room_1_1_room_publication.html">RoomPublication</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#af983c3925482f044a603f50697abf9c9">   23</a></span>&#160;    std::string <a class="code" href="classskyway_1_1room_1_1_room_publication.html#af983c3925482f044a603f50697abf9c9">Id</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a339ffa8020622ff390fac13bf17bd7f4">   24</a></span>&#160;    std::shared_ptr&lt;interface::RoomMember&gt; <a class="code" href="classskyway_1_1room_1_1_room_publication.html#a339ffa8020622ff390fac13bf17bd7f4">Publisher</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#afb7a744362dc60cad53cd29e13c84658">   25</a></span>&#160;    std::vector&lt;std::shared_ptr&lt;interface::RoomSubscription&gt;&gt; <a class="code" href="classskyway_1_1room_1_1_room_publication.html#afb7a744362dc60cad53cd29e13c84658">Subscriptions</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#ac9c2a9fd738aaeb724d0ea933b8676c1">   26</a></span>&#160;    model::ContentType <a class="code" href="classskyway_1_1room_1_1_room_publication.html#ac9c2a9fd738aaeb724d0ea933b8676c1">ContentType</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a74f5c7e1445256450372e675c0bc1666">   27</a></span>&#160;    std::optional&lt;std::string&gt; <a class="code" href="classskyway_1_1room_1_1_room_publication.html#a74f5c7e1445256450372e675c0bc1666">Metadata</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#ab35cb4bf8599fd1409ba7219c7aabbd4">   28</a></span>&#160;    std::vector&lt;model::Codec&gt; <a class="code" href="classskyway_1_1room_1_1_room_publication.html#ab35cb4bf8599fd1409ba7219c7aabbd4">CodecCapabilities</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#aae1d1374dfa29c0be542ac1cddddc471">   29</a></span>&#160;    std::vector&lt;model::Encoding&gt; <a class="code" href="classskyway_1_1room_1_1_room_publication.html#aae1d1374dfa29c0be542ac1cddddc471">Encodings</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#acfafe7cf447b5ee92d9a72f2d20a3317">   30</a></span>&#160;    core::interface::PublicationState <a class="code" href="classskyway_1_1room_1_1_room_publication.html#acfafe7cf447b5ee92d9a72f2d20a3317">State</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a67386f4669d1288150f0d071706b4fdc">   31</a></span>&#160;    std::shared_ptr&lt;core::interface::LocalStream&gt; <a class="code" href="classskyway_1_1room_1_1_room_publication.html#a67386f4669d1288150f0d071706b4fdc">Stream</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a2e6127e21c8a129b46e806c64c5b3f7e">   32</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1room_1_1_room_publication.html#a2e6127e21c8a129b46e806c64c5b3f7e">AddEventListener</a>(<a class="code" href="classskyway_1_1room_1_1interface_1_1_room_publication_1_1_event_listener.html">interface::RoomPublication::EventListener</a>* listener) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#aaf2bf24843f7ab516d778b30758fe20e">   33</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1room_1_1_room_publication.html#aaf2bf24843f7ab516d778b30758fe20e">RemoveEventListener</a>(<a class="code" href="classskyway_1_1room_1_1interface_1_1_room_publication_1_1_event_listener.html">interface::RoomPublication::EventListener</a>* listener) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a4830cf61c71ba76fe4f3004e4663418e">   34</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1room_1_1_room_publication.html#a4830cf61c71ba76fe4f3004e4663418e">UpdateMetadata</a>(<span class="keyword">const</span> std::string&amp; metadata) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a805f5c6d92e21b2496dafde98d24d8cb">   35</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1room_1_1_room_publication.html#a805f5c6d92e21b2496dafde98d24d8cb">UpdateEncodings</a>(std::vector&lt;model::Encoding&gt; encodings) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a25e772029e3d7823e97f8136a42268e6">   36</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1room_1_1_room_publication.html#a25e772029e3d7823e97f8136a42268e6">ReplaceStream</a>(std::shared_ptr&lt;core::interface::LocalStream&gt; stream) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#af514237feb237e1ebcb9a6ce161f13e5">   37</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1room_1_1_room_publication.html#af514237feb237e1ebcb9a6ce161f13e5">Cancel</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a6391f35a4214c801da58b7311eccc139">   38</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1room_1_1_room_publication.html#a6391f35a4214c801da58b7311eccc139">Enable</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a4ac1291366f124bdc18615689b0d7b42">   39</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1room_1_1_room_publication.html#a4ac1291366f124bdc18615689b0d7b42">Disable</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a03159df27e23ca4e700f623cf2a4fc71">   40</a></span>&#160;    std::optional&lt;model::WebRTCStats&gt; <a class="code" href="classskyway_1_1room_1_1_room_publication.html#a03159df27e23ca4e700f623cf2a4fc71">GetStats</a>(<span class="keyword">const</span> std::string&amp; selector) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// core::interface::Publication::EventListener</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> OnUnpublished() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> OnSubscribed(std::shared_ptr&lt;core::interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> OnUnsubscribed(std::shared_ptr&lt;core::interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> OnSubscriptionListChanged() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> OnMetadataUpdated(<span class="keyword">const</span> std::string&amp; metadata) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> OnEnabled() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> OnDisabled() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> OnStateChanged() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> OnConnectionStateChanged(<span class="keyword">const</span> core::ConnectionState new_state) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::shared_ptr&lt;core::interface::Publication&gt; core_;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    interface::RoomDomainFactory* factory_;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    std::mutex listener_mtx_;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_publication_1_1_event_listener.html">interface::RoomPublication::EventListener</a>* listener_;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}  <span class="comment">// namespace room</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_ROOM_ROOM_PUBLICATION_HPP */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_publication_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_publication_1_1_event_listener.html">skyway::core::interface::Publication::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition:</b> publication.hpp:30</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html">skyway::room::RoomPublication</a></div><div class="ttdoc">RoomPublicationの操作を行うクラス</div><div class="ttdef"><b>Definition:</b> room_publication.hpp:18</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_a03159df27e23ca4e700f623cf2a4fc71"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#a03159df27e23ca4e700f623cf2a4fc71">skyway::room::RoomPublication::GetStats</a></div><div class="ttdeci">std::optional&lt; model::WebRTCStats &gt; GetStats(const std::string &amp;selector) override</div><div class="ttdoc">統計情報を取得します。</div></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef SKYWAY_ROOM_ROOM_PUBLICATION_HPP</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define SKYWAY_ROOM_ROOM_PUBLICATION_HPP</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;skyway/core/interface/publication.hpp&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;skyway/room/interface/room_domain_factory.hpp&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;skyway/room/interface/room_publication.hpp&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>skyway {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span>room {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1room_1_1_room_publication.html">RoomPublication</a> : <span class="keyword">public</span> <a class="code hl_class" href="classskyway_1_1room_1_1interface_1_1_room_publication.html">interface::RoomPublication</a>,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                        <span class="keyword">public</span> <a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_publication_1_1_event_listener.html">core::interface::Publication::EventListener</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_class" href="classskyway_1_1room_1_1_room_publication.html">RoomPublication</a>(std::shared_ptr&lt;core::interface::Publication&gt; core,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                    interface::RoomDomainFactory* factory);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_class" href="classskyway_1_1room_1_1_room_publication.html">~RoomPublication</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#af983c3925482f044a603f50697abf9c9">   23</a></span>    std::string <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#af983c3925482f044a603f50697abf9c9">Id</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#aa52e6b85b31109fd80d878da942f1be6">   24</a></span>    std::shared_ptr&lt;interface::RoomMember&gt; <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#aa52e6b85b31109fd80d878da942f1be6">Publisher</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#ae23765c9081c471f13a018fb9af6c274">   25</a></span>    std::vector&lt;std::shared_ptr&lt;interface::RoomSubscription&gt;&gt; <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#ae23765c9081c471f13a018fb9af6c274">Subscriptions</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#ac9c2a9fd738aaeb724d0ea933b8676c1">   26</a></span>    model::ContentType <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#ac9c2a9fd738aaeb724d0ea933b8676c1">ContentType</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a2c8115b9ad62b4bfc817d8a54ef8b4f1">   27</a></span>    std::optional&lt;std::string&gt; <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#a2c8115b9ad62b4bfc817d8a54ef8b4f1">Metadata</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a6cfbc930b41826e5c056c777148d26c4">   28</a></span>    std::vector&lt;model::Codec&gt; <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#a6cfbc930b41826e5c056c777148d26c4">CodecCapabilities</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a401fa83e75c71651c83a7de5e3d1678e">   29</a></span>    std::vector&lt;model::Encoding&gt; <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#a401fa83e75c71651c83a7de5e3d1678e">Encodings</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#acfafe7cf447b5ee92d9a72f2d20a3317">   30</a></span>    core::interface::PublicationState <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#acfafe7cf447b5ee92d9a72f2d20a3317">State</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a2d6a9201ce00b080bb013fa2ab73a40f">   31</a></span>    std::shared_ptr&lt;core::interface::LocalStream&gt; <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#a2d6a9201ce00b080bb013fa2ab73a40f">Stream</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a2e6127e21c8a129b46e806c64c5b3f7e">   32</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#a2e6127e21c8a129b46e806c64c5b3f7e">AddEventListener</a>(<a class="code hl_class" href="classskyway_1_1room_1_1interface_1_1_room_publication_1_1_event_listener.html">interface::RoomPublication::EventListener</a>* listener) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#aaf2bf24843f7ab516d778b30758fe20e">   33</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#aaf2bf24843f7ab516d778b30758fe20e">RemoveEventListener</a>(<a class="code hl_class" href="classskyway_1_1room_1_1interface_1_1_room_publication_1_1_event_listener.html">interface::RoomPublication::EventListener</a>* listener) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a4830cf61c71ba76fe4f3004e4663418e">   34</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#a4830cf61c71ba76fe4f3004e4663418e">UpdateMetadata</a>(<span class="keyword">const</span> std::string&amp; metadata) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a805f5c6d92e21b2496dafde98d24d8cb">   35</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#a805f5c6d92e21b2496dafde98d24d8cb">UpdateEncodings</a>(std::vector&lt;model::Encoding&gt; encodings) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a25e772029e3d7823e97f8136a42268e6">   36</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#a25e772029e3d7823e97f8136a42268e6">ReplaceStream</a>(std::shared_ptr&lt;core::interface::LocalStream&gt; stream) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#af514237feb237e1ebcb9a6ce161f13e5">   37</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#af514237feb237e1ebcb9a6ce161f13e5">Cancel</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a6391f35a4214c801da58b7311eccc139">   38</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#a6391f35a4214c801da58b7311eccc139">Enable</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a4ac1291366f124bdc18615689b0d7b42">   39</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#a4ac1291366f124bdc18615689b0d7b42">Disable</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1_room_publication.html#a59fd5acc046bfb716baae32c2d9cdfcc">   40</a></span>    std::optional&lt;model::WebRTCStats&gt; <a class="code hl_function" href="classskyway_1_1room_1_1_room_publication.html#a59fd5acc046bfb716baae32c2d9cdfcc">GetStats</a>(<span class="keyword">const</span> std::string&amp; selector) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">// core::interface::Publication::EventListener</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> OnUnpublished() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> OnSubscribed(std::shared_ptr&lt;core::interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> OnUnsubscribed(std::shared_ptr&lt;core::interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> OnSubscriptionListChanged() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> OnMetadataUpdated(<span class="keyword">const</span> std::string&amp; metadata) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> OnEnabled() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> OnDisabled() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> OnStateChanged() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> OnConnectionStateChanged(<span class="keyword">const</span> core::ConnectionState new_state) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    std::shared_ptr&lt;core::interface::Publication&gt; core_;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    interface::RoomDomainFactory* factory_;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    std::mutex listener_mtx_;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_class" href="classskyway_1_1room_1_1interface_1_1_room_publication_1_1_event_listener.html">interface::RoomPublication::EventListener</a>* listener_;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}  <span class="comment">// namespace room</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_ROOM_ROOM_PUBLICATION_HPP */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_publication_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_publication_1_1_event_listener.html">skyway::core::interface::Publication::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition</b> publication.hpp:30</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html">skyway::room::RoomPublication</a></div><div class="ttdoc">RoomPublicationの操作を行うクラス</div><div class="ttdef"><b>Definition</b> room_publication.hpp:18</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_a25e772029e3d7823e97f8136a42268e6"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#a25e772029e3d7823e97f8136a42268e6">skyway::room::RoomPublication::ReplaceStream</a></div><div class="ttdeci">bool ReplaceStream(std::shared_ptr&lt; core::interface::LocalStream &gt; stream) override</div><div class="ttdoc">公開しているStreamを変更します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_a2c8115b9ad62b4bfc817d8a54ef8b4f1"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#a2c8115b9ad62b4bfc817d8a54ef8b4f1">skyway::room::RoomPublication::Metadata</a></div><div class="ttdeci">std::optional&lt; std::string &gt; Metadata() override</div><div class="ttdoc">Metadataを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_a2d6a9201ce00b080bb013fa2ab73a40f"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#a2d6a9201ce00b080bb013fa2ab73a40f">skyway::room::RoomPublication::Stream</a></div><div class="ttdeci">std::shared_ptr&lt; core::interface::LocalStream &gt; Stream() override</div><div class="ttdoc">Publisherが持つStreamを取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_a2e6127e21c8a129b46e806c64c5b3f7e"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#a2e6127e21c8a129b46e806c64c5b3f7e">skyway::room::RoomPublication::AddEventListener</a></div><div class="ttdeci">void AddEventListener(interface::RoomPublication::EventListener *listener) override</div><div class="ttdoc">イベントを購読します。</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_a339ffa8020622ff390fac13bf17bd7f4"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#a339ffa8020622ff390fac13bf17bd7f4">skyway::room::RoomPublication::Publisher</a></div><div class="ttdeci">std::shared_ptr&lt; interface::RoomMember &gt; Publisher() override</div><div class="ttdoc">このPublicationを公開しているMemberを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_a401fa83e75c71651c83a7de5e3d1678e"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#a401fa83e75c71651c83a7de5e3d1678e">skyway::room::RoomPublication::Encodings</a></div><div class="ttdeci">std::vector&lt; model::Encoding &gt; Encodings() override</div><div class="ttdoc">このPublicationのエンコーディング設定の一覧を取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_a4830cf61c71ba76fe4f3004e4663418e"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#a4830cf61c71ba76fe4f3004e4663418e">skyway::room::RoomPublication::UpdateMetadata</a></div><div class="ttdeci">bool UpdateMetadata(const std::string &amp;metadata) override</div><div class="ttdoc">Metadataを更新します。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_a4ac1291366f124bdc18615689b0d7b42"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#a4ac1291366f124bdc18615689b0d7b42">skyway::room::RoomPublication::Disable</a></div><div class="ttdeci">bool Disable() override</div><div class="ttdoc">Publicationの公開を一時停止します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_a59fd5acc046bfb716baae32c2d9cdfcc"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#a59fd5acc046bfb716baae32c2d9cdfcc">skyway::room::RoomPublication::GetStats</a></div><div class="ttdeci">std::optional&lt; model::WebRTCStats &gt; GetStats(const std::string &amp;selector) override</div><div class="ttdoc">統計情報を取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_a6391f35a4214c801da58b7311eccc139"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#a6391f35a4214c801da58b7311eccc139">skyway::room::RoomPublication::Enable</a></div><div class="ttdeci">bool Enable() override</div><div class="ttdoc">Publicationの公開を開始します。disableによって停止していた場合は再開します。</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_a67386f4669d1288150f0d071706b4fdc"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#a67386f4669d1288150f0d071706b4fdc">skyway::room::RoomPublication::Stream</a></div><div class="ttdeci">std::shared_ptr&lt; core::interface::LocalStream &gt; Stream() override</div><div class="ttdoc">Publisherが持つStreamを取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_a74f5c7e1445256450372e675c0bc1666"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#a74f5c7e1445256450372e675c0bc1666">skyway::room::RoomPublication::Metadata</a></div><div class="ttdeci">std::optional&lt; std::string &gt; Metadata() override</div><div class="ttdoc">Metadataを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_a6cfbc930b41826e5c056c777148d26c4"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#a6cfbc930b41826e5c056c777148d26c4">skyway::room::RoomPublication::CodecCapabilities</a></div><div class="ttdeci">std::vector&lt; model::Codec &gt; CodecCapabilities() override</div><div class="ttdoc">このPublicationのコーデック一覧を取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_a805f5c6d92e21b2496dafde98d24d8cb"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#a805f5c6d92e21b2496dafde98d24d8cb">skyway::room::RoomPublication::UpdateEncodings</a></div><div class="ttdeci">bool UpdateEncodings(std::vector&lt; model::Encoding &gt; encodings) override</div><div class="ttdoc">エンコーディング設定を更新します。</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_aae1d1374dfa29c0be542ac1cddddc471"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#aae1d1374dfa29c0be542ac1cddddc471">skyway::room::RoomPublication::Encodings</a></div><div class="ttdeci">std::vector&lt; model::Encoding &gt; Encodings() override</div><div class="ttdoc">このPublicationのエンコーディング設定の一覧を取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_aa52e6b85b31109fd80d878da942f1be6"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#aa52e6b85b31109fd80d878da942f1be6">skyway::room::RoomPublication::Publisher</a></div><div class="ttdeci">std::shared_ptr&lt; interface::RoomMember &gt; Publisher() override</div><div class="ttdoc">このPublicationを公開しているMemberを取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_aaf2bf24843f7ab516d778b30758fe20e"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#aaf2bf24843f7ab516d778b30758fe20e">skyway::room::RoomPublication::RemoveEventListener</a></div><div class="ttdeci">void RemoveEventListener(interface::RoomPublication::EventListener *listener) override</div><div class="ttdoc">イベントの購読を中止します。</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_ab35cb4bf8599fd1409ba7219c7aabbd4"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#ab35cb4bf8599fd1409ba7219c7aabbd4">skyway::room::RoomPublication::CodecCapabilities</a></div><div class="ttdeci">std::vector&lt; model::Codec &gt; CodecCapabilities() override</div><div class="ttdoc">このPublicationのコーデック一覧を取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_ac9c2a9fd738aaeb724d0ea933b8676c1"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#ac9c2a9fd738aaeb724d0ea933b8676c1">skyway::room::RoomPublication::ContentType</a></div><div class="ttdeci">model::ContentType ContentType() override</div><div class="ttdoc">ContentType(VideoかAudioかDataか)を取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_acfafe7cf447b5ee92d9a72f2d20a3317"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#acfafe7cf447b5ee92d9a72f2d20a3317">skyway::room::RoomPublication::State</a></div><div class="ttdeci">core::interface::PublicationState State() override</div><div class="ttdoc">State(公開状態がEnableかDisabelかCancelか)を取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_ae23765c9081c471f13a018fb9af6c274"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#ae23765c9081c471f13a018fb9af6c274">skyway::room::RoomPublication::Subscriptions</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; interface::RoomSubscription &gt; &gt; Subscriptions() override</div><div class="ttdoc">このPublicationを購読しているSubsciptionの一覧を取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_af514237feb237e1ebcb9a6ce161f13e5"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#af514237feb237e1ebcb9a6ce161f13e5">skyway::room::RoomPublication::Cancel</a></div><div class="ttdeci">bool Cancel() override</div><div class="ttdoc">Publishを中止します。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_af983c3925482f044a603f50697abf9c9"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#af983c3925482f044a603f50697abf9c9">skyway::room::RoomPublication::Id</a></div><div class="ttdeci">std::string Id() override</div><div class="ttdoc">Idを取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1_room_publication_html_afb7a744362dc60cad53cd29e13c84658"><div class="ttname"><a href="classskyway_1_1room_1_1_room_publication.html#afb7a744362dc60cad53cd29e13c84658">skyway::room::RoomPublication::Subscriptions</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; interface::RoomSubscription &gt; &gt; Subscriptions() override</div><div class="ttdoc">このPublicationを購読しているSubsciptionの一覧を取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_publication_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_publication_1_1_event_listener.html">skyway::room::interface::RoomPublication::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition:</b> room_publication.hpp:21</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_publication_html"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_publication.html">skyway::room::interface::RoomPublication</a></div><div class="ttdoc">RoomのPublicationを操作するインタフェース</div><div class="ttdef"><b>Definition:</b> room_publication.hpp:18</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_publication_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_publication_1_1_event_listener.html">skyway::room::interface::RoomPublication::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition</b> room_publication.hpp:21</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_publication_html"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_publication.html">skyway::room::interface::RoomPublication</a></div><div class="ttdoc">RoomのPublicationを操作するインタフェース</div><div class="ttdef"><b>Definition</b> room_publication.hpp:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_77f3510bf786cf3c12f65f3b0b944be3.html">skyway</a></li><li class="navelem"><a class="el" href="dir_64c8f5548683072db6c673aefb9e2785.html">room</a></li><li class="navelem"><b>room_publication.hpp</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

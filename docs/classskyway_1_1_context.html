@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('classskyway_1_1_context.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,9 +87,16 @@ $(document).ready(function(){initNavTree('classskyway_1_1_context.html',''); ini
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -97,8 +105,7 @@ $(document).ready(function(){initNavTree('classskyway_1_1_context.html',''); ini
 <a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
 <a href="#pub-static-attribs">静的公開変数類</a> &#124;
 <a href="classskyway_1_1_context-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">skyway::Context クラス</div>  </div>
+  <div class="headertitle"><div class="title">skyway::Context クラス</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -116,50 +123,50 @@ skyway::Context の継承関係図</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 クラス</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1_context_1_1_sky_way_options.html">SkyWayOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SkyWayの利用に関する設定  <a href="structskyway_1_1_context_1_1_sky_way_options.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
-<tr class="memitem:aef39b53a0f1ade4a21f7fc698b1aae3e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1_context.html#aef39b53a0f1ade4a21f7fc698b1aae3e">Setup</a> (const std::string &amp;token, <a class="el" href="classskyway_1_1core_1_1_context_1_1_event_listener.html">core::Context::EventListener</a> *listener, const <a class="el" href="structskyway_1_1_context_1_1_sky_way_options.html">SkyWayOptions</a> &amp;options)</td></tr>
-<tr class="memdesc:aef39b53a0f1ade4a21f7fc698b1aae3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contextを初期化します。  <a href="classskyway_1_1_context.html#aef39b53a0f1ade4a21f7fc698b1aae3e">[詳解]</a><br /></td></tr>
+<tr class="memitem:aef39b53a0f1ade4a21f7fc698b1aae3e" id="r_aef39b53a0f1ade4a21f7fc698b1aae3e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1_context.html#aef39b53a0f1ade4a21f7fc698b1aae3e">Setup</a> (const std::string &amp;token, <a class="el" href="classskyway_1_1core_1_1_context_1_1_event_listener.html">core::Context::EventListener</a> *listener, const <a class="el" href="structskyway_1_1_context_1_1_sky_way_options.html">SkyWayOptions</a> &amp;options)</td></tr>
+<tr class="memdesc:aef39b53a0f1ade4a21f7fc698b1aae3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contextを初期化します。  <br /></td></tr>
 <tr class="separator:aef39b53a0f1ade4a21f7fc698b1aae3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a491ab44754ec48bd566d8359ae1228bc"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1_context.html#a491ab44754ec48bd566d8359ae1228bc">SetupForDev</a> (const std::string &amp;app_id, const std::string &amp;secret_key, <a class="el" href="classskyway_1_1core_1_1_context_1_1_event_listener.html">core::Context::EventListener</a> *listener, const <a class="el" href="structskyway_1_1_context_1_1_sky_way_options.html">SkyWayOptions</a> &amp;options)</td></tr>
-<tr class="memdesc:a491ab44754ec48bd566d8359ae1228bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contextを初期化します。このメソッドは動作確認用です。  <a href="classskyway_1_1_context.html#a491ab44754ec48bd566d8359ae1228bc">[詳解]</a><br /></td></tr>
+<tr class="memitem:a491ab44754ec48bd566d8359ae1228bc" id="r_a491ab44754ec48bd566d8359ae1228bc"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1_context.html#a491ab44754ec48bd566d8359ae1228bc">SetupForDev</a> (const std::string &amp;app_id, const std::string &amp;secret_key, <a class="el" href="classskyway_1_1core_1_1_context_1_1_event_listener.html">core::Context::EventListener</a> *listener, const <a class="el" href="structskyway_1_1_context_1_1_sky_way_options.html">SkyWayOptions</a> &amp;options)</td></tr>
+<tr class="memdesc:a491ab44754ec48bd566d8359ae1228bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contextを初期化します。このメソッドは動作確認用です。  <br /></td></tr>
 <tr class="separator:a491ab44754ec48bd566d8359ae1228bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac538fa00dde85d18bd6cf194d608290b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1_context.html#ac538fa00dde85d18bd6cf194d608290b">Dispose</a> ()</td></tr>
-<tr class="memdesc:ac538fa00dde85d18bd6cf194d608290b"><td class="mdescLeft">&#160;</td><td class="mdescRight">SkyWayを終了し、Contextを破棄します。  <a href="classskyway_1_1_context.html#ac538fa00dde85d18bd6cf194d608290b">[詳解]</a><br /></td></tr>
+<tr class="memitem:ac538fa00dde85d18bd6cf194d608290b" id="r_ac538fa00dde85d18bd6cf194d608290b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1_context.html#ac538fa00dde85d18bd6cf194d608290b">Dispose</a> ()</td></tr>
+<tr class="memdesc:ac538fa00dde85d18bd6cf194d608290b"><td class="mdescLeft">&#160;</td><td class="mdescRight">SkyWayを終了し、Contextを破棄します。  <br /></td></tr>
 <tr class="separator:ac538fa00dde85d18bd6cf194d608290b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a043c8eaf8fdbe6cfd97e68e59b6d007b"><td class="memItemLeft" align="right" valign="top"><a id="a043c8eaf8fdbe6cfd97e68e59b6d007b"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1_context.html#a043c8eaf8fdbe6cfd97e68e59b6d007b">GetVersionString</a> ()</td></tr>
+<tr class="memitem:a043c8eaf8fdbe6cfd97e68e59b6d007b" id="r_a043c8eaf8fdbe6cfd97e68e59b6d007b"><td class="memItemLeft" align="right" valign="top"><a id="a043c8eaf8fdbe6cfd97e68e59b6d007b" name="a043c8eaf8fdbe6cfd97e68e59b6d007b"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetVersionString</b> ()</td></tr>
 <tr class="memdesc:a043c8eaf8fdbe6cfd97e68e59b6d007b"><td class="mdescLeft">&#160;</td><td class="mdescRight">SkyWay Linux SDKのバージョンを取得します。 <br /></td></tr>
 <tr class="separator:a043c8eaf8fdbe6cfd97e68e59b6d007b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classskyway_1_1core_1_1_context"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classskyway_1_1core_1_1_context')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classskyway_1_1core_1_1_context.html">skyway::core::Context</a> に属する継承静的公開メンバ関数</td></tr>
-<tr class="memitem:a4c3af25c6554efb0ae5a8b2686a34d14 inherit pub_static_methods_classskyway_1_1core_1_1_context"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1_context.html#a4c3af25c6554efb0ae5a8b2686a34d14">Setup</a> (const std::string &amp;token, std::unique_ptr&lt; HttpClientInterface &gt; http, std::unique_ptr&lt; WebSocketClientFactoryInterface &gt; ws_factory, std::unique_ptr&lt; PlatformInfoDelegatorInterface &gt; platform_info, std::unique_ptr&lt; <a class="el" href="classskyway_1_1global_1_1interface_1_1_logger.html">LoggerInterface</a> &gt; logger, <a class="el" href="classskyway_1_1core_1_1_context_1_1_event_listener.html">EventListener</a> *listener, const <a class="el" href="structskyway_1_1core_1_1_context_options.html">ContextOptions</a> &amp;options)</td></tr>
-<tr class="memdesc:a4c3af25c6554efb0ae5a8b2686a34d14 inherit pub_static_methods_classskyway_1_1core_1_1_context"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contextを初期化します。  <a href="classskyway_1_1core_1_1_context.html#a4c3af25c6554efb0ae5a8b2686a34d14">[詳解]</a><br /></td></tr>
+<tr class="memitem:a4c3af25c6554efb0ae5a8b2686a34d14 inherit pub_static_methods_classskyway_1_1core_1_1_context" id="r_a4c3af25c6554efb0ae5a8b2686a34d14"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1_context.html#a4c3af25c6554efb0ae5a8b2686a34d14">Setup</a> (const std::string &amp;token, std::unique_ptr&lt; HttpClientInterface &gt; http, std::unique_ptr&lt; WebSocketClientFactoryInterface &gt; ws_factory, std::unique_ptr&lt; PlatformInfoDelegatorInterface &gt; platform_info, std::unique_ptr&lt; <a class="el" href="classskyway_1_1global_1_1interface_1_1_logger.html">LoggerInterface</a> &gt; logger, <a class="el" href="classskyway_1_1core_1_1_context_1_1_event_listener.html">EventListener</a> *listener, const <a class="el" href="structskyway_1_1core_1_1_context_options.html">ContextOptions</a> &amp;options)</td></tr>
+<tr class="memdesc:a4c3af25c6554efb0ae5a8b2686a34d14 inherit pub_static_methods_classskyway_1_1core_1_1_context"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contextを初期化します。  <br /></td></tr>
 <tr class="separator:a4c3af25c6554efb0ae5a8b2686a34d14 inherit pub_static_methods_classskyway_1_1core_1_1_context"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab36df81aa98f9e3155c0073e7bc57b50 inherit pub_static_methods_classskyway_1_1core_1_1_context"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1_context.html#ab36df81aa98f9e3155c0073e7bc57b50">UpdateAuthToken</a> (const std::string &amp;token)</td></tr>
-<tr class="memdesc:ab36df81aa98f9e3155c0073e7bc57b50 inherit pub_static_methods_classskyway_1_1core_1_1_context"><td class="mdescLeft">&#160;</td><td class="mdescRight">JWTを更新します。  <a href="classskyway_1_1core_1_1_context.html#ab36df81aa98f9e3155c0073e7bc57b50">[詳解]</a><br /></td></tr>
+<tr class="memitem:ab36df81aa98f9e3155c0073e7bc57b50 inherit pub_static_methods_classskyway_1_1core_1_1_context" id="r_ab36df81aa98f9e3155c0073e7bc57b50"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1_context.html#ab36df81aa98f9e3155c0073e7bc57b50">UpdateAuthToken</a> (const std::string &amp;token)</td></tr>
+<tr class="memdesc:ab36df81aa98f9e3155c0073e7bc57b50 inherit pub_static_methods_classskyway_1_1core_1_1_context"><td class="mdescLeft">&#160;</td><td class="mdescRight">JWTを更新します。  <br /></td></tr>
 <tr class="separator:ab36df81aa98f9e3155c0073e7bc57b50 inherit pub_static_methods_classskyway_1_1core_1_1_context"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c3a3c24d787b6c8b66c1d648549032b inherit pub_static_methods_classskyway_1_1core_1_1_context"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1_context.html#a4c3a3c24d787b6c8b66c1d648549032b">RegisterPlugin</a> (std::unique_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_member_plugin.html">RemoteMemberPluginInterface</a> &gt; plugin)</td></tr>
-<tr class="memdesc:a4c3a3c24d787b6c8b66c1d648549032b inherit pub_static_methods_classskyway_1_1core_1_1_context"><td class="mdescLeft">&#160;</td><td class="mdescRight">RemoteMemberPluginを登録します。  <a href="classskyway_1_1core_1_1_context.html#a4c3a3c24d787b6c8b66c1d648549032b">[詳解]</a><br /></td></tr>
+<tr class="memitem:a4c3a3c24d787b6c8b66c1d648549032b inherit pub_static_methods_classskyway_1_1core_1_1_context" id="r_a4c3a3c24d787b6c8b66c1d648549032b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1_context.html#a4c3a3c24d787b6c8b66c1d648549032b">RegisterPlugin</a> (std::unique_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_member_plugin.html">RemoteMemberPluginInterface</a> &gt; plugin)</td></tr>
+<tr class="memdesc:a4c3a3c24d787b6c8b66c1d648549032b inherit pub_static_methods_classskyway_1_1core_1_1_context"><td class="mdescLeft">&#160;</td><td class="mdescRight">RemoteMemberPluginを登録します。  <br /></td></tr>
 <tr class="separator:a4c3a3c24d787b6c8b66c1d648549032b inherit pub_static_methods_classskyway_1_1core_1_1_context"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab46eb841fab1755d98c73dacacbe5341 inherit pub_static_methods_classskyway_1_1core_1_1_context"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1_context.html#ab46eb841fab1755d98c73dacacbe5341">Dispose</a> ()</td></tr>
-<tr class="memdesc:ab46eb841fab1755d98c73dacacbe5341 inherit pub_static_methods_classskyway_1_1core_1_1_context"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンテキストを破棄し、全ての接続を切断します。  <a href="classskyway_1_1core_1_1_context.html#ab46eb841fab1755d98c73dacacbe5341">[詳解]</a><br /></td></tr>
+<tr class="memitem:ab46eb841fab1755d98c73dacacbe5341 inherit pub_static_methods_classskyway_1_1core_1_1_context" id="r_ab46eb841fab1755d98c73dacacbe5341"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1_context.html#ab46eb841fab1755d98c73dacacbe5341">Dispose</a> ()</td></tr>
+<tr class="memdesc:ab46eb841fab1755d98c73dacacbe5341 inherit pub_static_methods_classskyway_1_1core_1_1_context"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンテキストを破棄し、全ての接続を切断します。  <br /></td></tr>
 <tr class="separator:ab46eb841fab1755d98c73dacacbe5341 inherit pub_static_methods_classskyway_1_1core_1_1_context"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 静的公開変数類</h2></td></tr>
-<tr class="memitem:afa06d99be0adf17c6e9398272a042783"><td class="memItemLeft" align="right" valign="top"><a id="afa06d99be0adf17c6e9398272a042783"></a>
+<tr class="memitem:afa06d99be0adf17c6e9398272a042783" id="r_afa06d99be0adf17c6e9398272a042783"><td class="memItemLeft" align="right" valign="top"><a id="afa06d99be0adf17c6e9398272a042783" name="afa06d99be0adf17c6e9398272a042783"></a>
 static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>kVersionMajor</b> = 3</td></tr>
 <tr class="separator:afa06d99be0adf17c6e9398272a042783"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0524954975019715eec72242f28a3bc4"><td class="memItemLeft" align="right" valign="top"><a id="a0524954975019715eec72242f28a3bc4"></a>
+<tr class="memitem:a0524954975019715eec72242f28a3bc4" id="r_a0524954975019715eec72242f28a3bc4"><td class="memItemLeft" align="right" valign="top"><a id="a0524954975019715eec72242f28a3bc4" name="a0524954975019715eec72242f28a3bc4"></a>
 static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>kVersionMinor</b> = 2</td></tr>
 <tr class="separator:a0524954975019715eec72242f28a3bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86b0f135816e75e0b317d8653437405e"><td class="memItemLeft" align="right" valign="top"><a id="a86b0f135816e75e0b317d8653437405e"></a>
+<tr class="memitem:a86b0f135816e75e0b317d8653437405e" id="r_a86b0f135816e75e0b317d8653437405e"><td class="memItemLeft" align="right" valign="top"><a id="a86b0f135816e75e0b317d8653437405e" name="a86b0f135816e75e0b317d8653437405e"></a>
 static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>kVersionPatch</b> = 0</td></tr>
 <tr class="separator:a86b0f135816e75e0b317d8653437405e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -167,8 +174,8 @@ static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>
 <div class="textblock"><p>アプリケーションでSkyWay全体の設定、取得を行うStaticなコンテキスト </p>
 <p>特別な理由がない場合はcore::Contextでなく、こちらを利用してください。 </p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="ac538fa00dde85d18bd6cf194d608290b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac538fa00dde85d18bd6cf194d608290b">&#9670;&nbsp;</a></span>Dispose()</h2>
+<a id="ac538fa00dde85d18bd6cf194d608290b" name="ac538fa00dde85d18bd6cf194d608290b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac538fa00dde85d18bd6cf194d608290b">&#9670;&#160;</a></span>Dispose()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,8 +202,8 @@ static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>
 
 </div>
 </div>
-<a id="aef39b53a0f1ade4a21f7fc698b1aae3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef39b53a0f1ade4a21f7fc698b1aae3e">&#9670;&nbsp;</a></span>Setup()</h2>
+<a id="aef39b53a0f1ade4a21f7fc698b1aae3e" name="aef39b53a0f1ade4a21f7fc698b1aae3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef39b53a0f1ade4a21f7fc698b1aae3e">&#9670;&#160;</a></span>Setup()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,8 +254,8 @@ static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>
 
 </div>
 </div>
-<a id="a491ab44754ec48bd566d8359ae1228bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a491ab44754ec48bd566d8359ae1228bc">&#9670;&nbsp;</a></span>SetupForDev()</h2>
+<a id="a491ab44754ec48bd566d8359ae1228bc" name="a491ab44754ec48bd566d8359ae1228bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a491ab44754ec48bd566d8359ae1228bc">&#9670;&#160;</a></span>SetupForDev()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -315,7 +322,7 @@ static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>skyway</b></li><li class="navelem"><a class="el" href="classskyway_1_1_context.html">Context</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
