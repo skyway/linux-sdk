@@ -1,6 +1,14 @@
 var annotated_dup =
 [
     [ "skyway", null, [
+      [ "content", null, [
+        [ "audio", null, [
+          [ "AudioDataForwarder", "classskyway_1_1content_1_1audio_1_1_audio_data_forwarder.html", null ],
+          [ "AudioDataListener", "classskyway_1_1content_1_1audio_1_1_audio_data_listener.html", null ],
+          [ "AudioProcessingManager", "classskyway_1_1content_1_1audio_1_1_audio_processing_manager.html", null ],
+          [ "CustomProcessingImpl", "classskyway_1_1content_1_1audio_1_1_custom_processing_impl.html", null ]
+        ] ]
+      ] ],
       [ "core", null, [
         [ "channel", null, [
           [ "member", null, [
@@ -47,6 +55,14 @@ var annotated_dup =
         [ "Logger", "classskyway_1_1global_1_1_logger.html", "classskyway_1_1global_1_1_logger" ]
       ] ],
       [ "media", null, [
+        [ "audio", null, [
+          [ "interface", null, [
+            [ "AudioFrame", "structskyway_1_1media_1_1audio_1_1interface_1_1_audio_frame.html", "structskyway_1_1media_1_1audio_1_1interface_1_1_audio_frame" ],
+            [ "PcmAudioSource", "classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html", "classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source" ]
+          ] ],
+          [ "CustomAudioDeviceModule", "classskyway_1_1media_1_1audio_1_1_custom_audio_device_module.html", null ],
+          [ "PcmAudioSource", "classskyway_1_1media_1_1audio_1_1_pcm_audio_source.html", "classskyway_1_1media_1_1audio_1_1_pcm_audio_source" ]
+        ] ],
         [ "codec", null, [
           [ "H264", "structskyway_1_1media_1_1codec_1_1_h264.html", "structskyway_1_1media_1_1codec_1_1_h264" ],
           [ "VideoCodec", "structskyway_1_1media_1_1codec_1_1_video_codec.html", "structskyway_1_1media_1_1codec_1_1_video_codec" ],
@@ -71,6 +87,18 @@ var annotated_dup =
             [ "RtpCapturerVideoSourceOptions", "structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html", "structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options" ]
           ] ],
           [ "RtpCapturerVideoSource", "classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html", "classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source" ]
+        ] ],
+        [ "stream", null, [
+          [ "local", null, [
+            [ "LocalAudioStream", "classskyway_1_1media_1_1stream_1_1local_1_1_local_audio_stream.html", null ],
+            [ "LocalDataStream", "classskyway_1_1media_1_1stream_1_1local_1_1_local_data_stream.html", null ],
+            [ "LocalVideoStream", "classskyway_1_1media_1_1stream_1_1local_1_1_local_video_stream.html", null ]
+          ] ],
+          [ "remote", null, [
+            [ "RemoteAudioStream", "classskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream.html", "classskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream" ],
+            [ "RemoteDataStream", "classskyway_1_1media_1_1stream_1_1remote_1_1_remote_data_stream.html", "classskyway_1_1media_1_1stream_1_1remote_1_1_remote_data_stream" ],
+            [ "RemoteVideoStream", "classskyway_1_1media_1_1stream_1_1remote_1_1_remote_video_stream.html", null ]
+          ] ]
         ] ],
         [ "DeviceManager", "classskyway_1_1media_1_1_device_manager.html", "classskyway_1_1media_1_1_device_manager" ],
         [ "I420CapturerVideoSource", "classskyway_1_1media_1_1_i420_capturer_video_source.html", "classskyway_1_1media_1_1_i420_capturer_video_source" ],

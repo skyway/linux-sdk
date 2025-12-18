@@ -1,9 +1,5 @@
 //
-//  i420_video_renderer.hpp
-//  skyway
-//
-//  Created by ogura on 2025/1/10.
-//  Copyright © 2025 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_MEDIA_INTERFACE_I420_VIDEO_RENDERER_HPP_

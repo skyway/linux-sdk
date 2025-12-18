@@ -1,10 +1,7 @@
 //
-//  rtp_capturer_video_source_repository.hpp
-//  skyway
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
-//  Created by Naoto Takahashi on 2025/06/30.
-//  Copyright © 2025 NTT DOCOMO BUSINESS, Inc. All rights reserved.
-//
+
 #ifndef SKYWAY_MEDIA_RTP_INTERFACE_RTP_CAPTURER_VIDEO_SOURCE_REPOSITORY_HPP_
 #define SKYWAY_MEDIA_RTP_INTERFACE_RTP_CAPTURER_VIDEO_SOURCE_REPOSITORY_HPP_
 

@@ -1,9 +1,5 @@
 //
-//  sfu_bot.hpp
-//  skyway
-//
-//  Created by salmon on 2022/1/25.
-//  Copyright © 2021 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_SFU_BOT_HPP_
@@ -82,6 +78,8 @@ private:
     std::unordered_map<ForwardingId, std::unique_ptr<Forwarding>> forwardings_;
     // Mutex for `forwardings_`
     std::mutex forwardings_mtx_;
+    std::mutex dispose_mtx_;
+    std::atomic<bool> is_connection_disposed_ = false;
 
 public:
     /// @cond INTERNAL_SECTION

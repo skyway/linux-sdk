@@ -109,71 +109,67 @@ $(document).ready(function(){initNavTree('opencv__video__renderer_8hpp_source.ht
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//  opencv_video_renderer.hpp</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//  skyway</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Created by ogura on 2024/12/11.</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  Copyright © 2024 NTT DOCOMO BUSINESS, Inc. All rights reserved.</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// Define “SKYWAY_ENABLE_OPENCV” if you want to use OpenCV functionality</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifdef SKYWAY_ENABLE_OPENCV</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef SKYWAY_MEDIA_OPENCV_VIDEO_RENDERER_HPP_</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define SKYWAY_MEDIA_OPENCV_VIDEO_RENDERER_HPP_</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;skyway/media/i420_video_renderer.hpp&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Define “SKYWAY_ENABLE_OPENCV” if you want to use OpenCV functionality</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifdef SKYWAY_ENABLE_OPENCV</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef SKYWAY_MEDIA_OPENCV_VIDEO_RENDERER_HPP_</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define SKYWAY_MEDIA_OPENCV_VIDEO_RENDERER_HPP_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;skyway/media/i420_video_renderer.hpp&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;opencv2/opencv.hpp&gt;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;opencv2/opencv.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span>skyway {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span>media {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span>opencv {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span>skyway {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span>media {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">namespace </span>opencv {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html">   30</a></span><span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html">OpenCVVideoRenderer</a> : <span class="keyword">public</span> <a class="code hl_class" href="classskyway_1_1media_1_1_i420_video_renderer.html">I420VideoRenderer</a> {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_1_1_listener.html">   32</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_1_1_listener.html">Listener</a> {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">virtual</span> <a class="code hl_class" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_1_1_listener.html">~Listener</a>()               = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnFrame(cv::Mat mat) = 0;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    };</div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html">OpenCVVideoRenderer</a> : <span class="keyword">public</span> <a class="code hl_class" href="classskyway_1_1media_1_1_i420_video_renderer.html">I420VideoRenderer</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_1_1_listener.html">   28</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_1_1_listener.html">Listener</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">virtual</span> <a class="code hl_class" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_1_1_listener.html">~Listener</a>()               = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnFrame(cv::Mat mat) = 0;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    };</div>
 </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html#afdb6785995e42f33e9d038c95900e9f4">   35</a></span>    <a class="code hl_function" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html#afdb6785995e42f33e9d038c95900e9f4">OpenCVVideoRenderer</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_class" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html">~OpenCVVideoRenderer</a>();</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html#afdb6785995e42f33e9d038c95900e9f4">   39</a></span>    <a class="code hl_function" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html#afdb6785995e42f33e9d038c95900e9f4">OpenCVVideoRenderer</a>();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_class" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html">~OpenCVVideoRenderer</a>();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html#a0366975d7ea97532ad0ab119c922c0ee">   44</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html#a0366975d7ea97532ad0ab119c922c0ee">RegisterListener</a>(<a class="code hl_class" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_1_1_listener.html">Listener</a>* listener);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html#aa35a6aacaba1e01954758c0fd8309352">   47</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html#aa35a6aacaba1e01954758c0fd8309352">UnregisterListener</a>(<a class="code hl_class" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_1_1_listener.html">Listener</a>* listener);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">// Impl I420VideoRenderer</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> OnFrame(<span class="keyword">const</span> webrtc::VideoFrame&amp; frame) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    cv::Mat I420ToMat(<span class="keyword">const</span> <a class="code hl_struct" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html">interface::I420Frame</a>&amp; frame);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    std::mutex listeners_mtx_;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::unordered_set&lt;Listener*&gt; listeners_;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html#a0366975d7ea97532ad0ab119c922c0ee">   40</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html#a0366975d7ea97532ad0ab119c922c0ee">RegisterListener</a>(<a class="code hl_class" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_1_1_listener.html">Listener</a>* listener);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html#aa35a6aacaba1e01954758c0fd8309352">   43</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html#aa35a6aacaba1e01954758c0fd8309352">UnregisterListener</a>(<a class="code hl_class" href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_1_1_listener.html">Listener</a>* listener);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">// Impl I420VideoRenderer</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> OnFrame(<span class="keyword">const</span> webrtc::VideoFrame&amp; frame) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    cv::Mat I420ToMat(<span class="keyword">const</span> <a class="code hl_struct" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html">interface::I420Frame</a>&amp; frame);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::mutex listeners_mtx_;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    std::unordered_set&lt;Listener*&gt; listeners_;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
 </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}  <span class="comment">// namespace opencv</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}  <span class="comment">// namespace media</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_MEDIA_V4L2_VIDEO_RENDERER_HPP_ */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_ENABLE_OPENCV */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1_i420_video_renderer_html"><div class="ttname"><a href="classskyway_1_1media_1_1_i420_video_renderer.html">skyway::media::I420VideoRenderer</a></div><div class="ttdoc">SubscribeしたVideoStreamの映像を取得するクラス</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:20</div></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_1_1_listener_html"><div class="ttname"><a href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_1_1_listener.html">skyway::media::opencv::OpenCVVideoRenderer::Listener</a></div><div class="ttdef"><b>Definition</b> opencv_video_renderer.hpp:32</div></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_html"><div class="ttname"><a href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html">skyway::media::opencv::OpenCVVideoRenderer</a></div><div class="ttdoc">映像の描画を行うクラス</div><div class="ttdef"><b>Definition</b> opencv_video_renderer.hpp:30</div></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}  <span class="comment">// namespace opencv</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}  <span class="comment">// namespace media</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_MEDIA_V4L2_VIDEO_RENDERER_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_ENABLE_OPENCV */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1_i420_video_renderer_html"><div class="ttname"><a href="classskyway_1_1media_1_1_i420_video_renderer.html">skyway::media::I420VideoRenderer</a></div><div class="ttdoc">SubscribeしたVideoStreamの映像を取得するクラス</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:16</div></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_1_1_listener_html"><div class="ttname"><a href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_1_1_listener.html">skyway::media::opencv::OpenCVVideoRenderer::Listener</a></div><div class="ttdef"><b>Definition</b> opencv_video_renderer.hpp:28</div></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_html"><div class="ttname"><a href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html">skyway::media::opencv::OpenCVVideoRenderer</a></div><div class="ttdoc">映像の描画を行うクラス</div><div class="ttdef"><b>Definition</b> opencv_video_renderer.hpp:26</div></div>
 <div class="ttc" id="aclassskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_html_a0366975d7ea97532ad0ab119c922c0ee"><div class="ttname"><a href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html#a0366975d7ea97532ad0ab119c922c0ee">skyway::media::opencv::OpenCVVideoRenderer::RegisterListener</a></div><div class="ttdeci">void RegisterListener(Listener *listener)</div><div class="ttdoc">リスナーを登録します</div></div>
 <div class="ttc" id="aclassskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_html_aa35a6aacaba1e01954758c0fd8309352"><div class="ttname"><a href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html#aa35a6aacaba1e01954758c0fd8309352">skyway::media::opencv::OpenCVVideoRenderer::UnregisterListener</a></div><div class="ttdeci">void UnregisterListener(Listener *listener)</div><div class="ttdoc">登録しているリスナーを解除します</div></div>
 <div class="ttc" id="aclassskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_html_afdb6785995e42f33e9d038c95900e9f4"><div class="ttname"><a href="classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer.html#afdb6785995e42f33e9d038c95900e9f4">skyway::media::opencv::OpenCVVideoRenderer::OpenCVVideoRenderer</a></div><div class="ttdeci">OpenCVVideoRenderer()</div><div class="ttdoc">コンストラクタ</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html">skyway::media::interface::I420Frame</a></div><div class="ttdoc">映像フレーム</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:31</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1interface_1_1_i420_frame_html"><div class="ttname"><a href="structskyway_1_1media_1_1interface_1_1_i420_frame.html">skyway::media::interface::I420Frame</a></div><div class="ttdoc">映像フレーム</div><div class="ttdef"><b>Definition</b> i420_video_renderer.hpp:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

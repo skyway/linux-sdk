@@ -1,9 +1,5 @@
 //
-//  device_manager.hpp
-//  skyway
-//
-//  Created by iorar on 2023/11/01.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_MEDIA_DEVICE_MANAGER_HPP_
@@ -18,8 +14,18 @@
 #include <modules/video_capture/video_capture.h>
 #include <pc/local_audio_source.h>
 
+#include "skyway/global/logger.hpp"
+
 namespace skyway {
 namespace media {
+
+/// @brief  オーディオバックエンドの種類
+enum class AudioBackendType {
+    /// @brief PulseAudioを使用します
+    kPulseAudio,
+    /// @brief オーディオバックエンドを使用しません
+    kNone,
+};
 
 /// @brief デバイスの情報を取得するクラス
 class DeviceManager {
@@ -52,11 +58,15 @@ public:
     static bool SetPlayoutDevice(AudioDevice device);
 
     /// @cond INTERNAL_SECTION
-    static rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> CreatePeerConnectionFactory();
+    static void Init(AudioBackendType audio_backend, skyway::global::Logger *logger);
+    static rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> GetPeerConnectionFactory();
     static void Dispose();
     static rtc::scoped_refptr<webrtc::AudioTrackInterface> CreateAudioTrack();
+    static rtc::scoped_refptr<webrtc::AudioTrackInterface> CreateAudioTrack(
+        rtc::scoped_refptr<webrtc::AudioSourceInterface> source);
     static rtc::scoped_refptr<webrtc::VideoTrackInterface> CreateVideoTrack(
         rtc::scoped_refptr<webrtc::VideoTrackSourceInterface> source);
+    static AudioBackendType GetAudioBackend();
     /// @endcond
 
 private:
@@ -65,6 +75,7 @@ private:
     static std::unique_ptr<rtc::Thread> signaling_thread_;
     static std::unique_ptr<rtc::Thread> worker_thread_;
     static std::unique_ptr<webrtc::TaskQueueFactory> task_queue_factory_;
+    static AudioBackendType audio_backend_;
 };
 
 }  // namespace media

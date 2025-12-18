@@ -1,15 +1,9 @@
 //
-//  transport_repository.hpp
-//  skyway
-//
-//  Created by sandabu on 2022/06/27.
-//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_TRANSPORT_REPOSITORY_HPP_
 #define SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_TRANSPORT_REPOSITORY_HPP_
-
-#include <mediasoupclient.hpp>
 
 #include "skyway/core/connection_state.hpp"
 #include "skyway/plugin/sfu_bot_plugin/config.hpp"

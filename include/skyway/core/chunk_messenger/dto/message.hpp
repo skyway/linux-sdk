@@ -1,9 +1,5 @@
 //
-//  message.hpp
-//  skyway
-//
-//  Created by sandabu on 2021/11/11.
-//  Copyright © 2021 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_CORE_CHUNK_MESSENGER_DTO_MESSAGE_HPP_

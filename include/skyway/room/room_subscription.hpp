@@ -1,9 +1,5 @@
 //
-//  room_subscription.hpp
-//  skyway
-//
-//  Created by Naoto Takahashi on 2023/12/08.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_ROOM_ROOM_SUBSCRIPTION_HPP
@@ -39,6 +35,8 @@ public:
     std::optional<model::WebRTCStats> GetStats() override;
 
 private:
+    void SetStream();
+
     // core::interface::Subscription::EventListener
     void OnCanceled() override;
     //    void OnEnabled() override;
@@ -46,6 +44,9 @@ private:
     void OnConnectionStateChanged(const core::ConnectionState state) override;
 
     void OnStreamAttached(std::shared_ptr<core::interface::RemoteStream> stream) override;
+
+    std::mutex stream_mtx_;
+    std::shared_ptr<core::interface::RemoteStream> stream_;
 
     std::shared_ptr<core::interface::Subscription> core_;
     interface::RoomDomainFactory* factory_;

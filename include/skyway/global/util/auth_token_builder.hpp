@@ -1,9 +1,5 @@
 //
-//  auth_token_builder.hpp
-//  skyway
-//
-//  Created by Kenta Katsura on 2025/07/29.
-//  Copyright © 2025 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_GLOBAL_UTIL_AUTH_TOKEN_BUILDER_HPP_

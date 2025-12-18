@@ -1,9 +1,5 @@
 //
-//  domain.hpp
-//  skyway
-//
-//  Created by sandabu on 2021/12/21.
-//  Copyright © 2021 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_MODEL_DOMAIN_HPP_
@@ -17,14 +13,17 @@ namespace model {
 
 enum class Side { kLocal, kRemote };
 enum class MemberType { kPerson, kBot };
+enum class PublicationType { kP2P, kSFU };
 enum class ContentType { kAudio, kVideo, kData };
 
 std::string ToString(Side side);
 std::string ToString(MemberType type);
+std::string ToString(PublicationType type);
 std::string ToString(ContentType type);
 
 std::optional<Side> ToSide(const std::string& side);
 std::optional<MemberType> ToMemberType(const std::string& type);
+std::optional<PublicationType> ToPublicationType(const std::string& type);
 std::optional<ContentType> ToContentType(const std::string& type);
 
 /// @brief コーデック情報
@@ -93,6 +92,7 @@ struct Publication {
     struct Init {
         std::string channel_id;
         std::string publisher_id;
+        PublicationType type;
         ContentType content_type;
         std::optional<std::string> origin;
         std::optional<std::string> metadata;
@@ -106,6 +106,7 @@ struct Publication {
     std::string publisher_id;
     /// @brief Origin
     std::optional<std::string> origin;
+    PublicationType type;
     /// @brief コンテンツの種類
     ContentType content_type;
     /// @brief Metadata
@@ -121,6 +122,7 @@ struct Publication {
         this->id           = id;
         publisher_id       = init.publisher_id;
         origin             = init.origin;
+        type               = init.type;
         content_type       = init.content_type;
         metadata           = init.metadata;
         codec_capabilities = init.codec_capabilities;

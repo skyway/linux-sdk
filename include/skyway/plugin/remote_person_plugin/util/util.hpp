@@ -1,9 +1,5 @@
 //
-//  util.hpp
-//  skyway
-//
-//  Created by Muranaka Kei on 2024/09/18.
-//  Copyright © 2024 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_UTIL_CONFIG_HPP_

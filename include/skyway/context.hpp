@@ -1,9 +1,5 @@
 //
-//  context.hpp
-//  skyway
-//
-//  Created by iorar on 2023/10/02.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_CONTEXT_HPP_
@@ -16,6 +12,7 @@
 #include <skyway/network/interface/http_client.hpp>
 #include <skyway/network/interface/websocket_client.hpp>
 #include "skyway/media/codec/video_codec.hpp"
+#include "skyway/media/device_manager.hpp"
 
 namespace skyway {
 namespace media {
@@ -31,8 +28,8 @@ class PassthroughVideoEncoderFactoryTest;
 class Context : public core::Context {
 public:
     static const unsigned int kVersionMajor = 3;
-    static const unsigned int kVersionMinor = 1;
-    static const unsigned int kVersionPatch = 2;
+    static const unsigned int kVersionMinor = 2;
+    static const unsigned int kVersionPatch = 0;
 
     /// @brief SkyWayの利用に関する設定
     struct SkyWayOptions : core::ContextOptions {
@@ -76,6 +73,10 @@ public:
         global::interface::Logger::Level log_level = global::interface::Logger::kInfo;
         /// @brief WebRTCのログを有効にします
         bool enable_webrtc_log = false;
+
+        /// @brief オーディオバックエンドを指定します
+        skyway::media::AudioBackendType audio_backend =
+            skyway::media::AudioBackendType::kPulseAudio;
 
         /// @brief RTPに関する設定
         Rtp rtp;

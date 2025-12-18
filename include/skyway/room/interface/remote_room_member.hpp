@@ -1,9 +1,5 @@
 //
-//  remote_room_member.hpp
-//  skyway
-//
-//  Created by Naoto Takahashi on 2023/12/08.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_ROOM_INTERFACE_REMOTE_ROOM_MEMBER_HPP

@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "abcdefghijklmnopqrstuvwy~商非",
   1: "acdehilmopqrstuvw",
   2: "abcdefghijlmnoprstuvw~",
-  3: "cehiklmnoprstuvwy",
+  3: "abcehiklmnoprstuvwy",
   4: "l",
   5: "ls非"
 };

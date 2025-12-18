@@ -1,9 +1,5 @@
 //
-//  chunk_messenger_factory.hpp
-//  skyway
-//
-//  Created by Naoto Takahashi on 2023/07/05.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_CORE_INTERFACE_CHUNK_MESSENGER_FACTORY_HPP_

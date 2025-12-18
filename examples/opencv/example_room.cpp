@@ -1,9 +1,5 @@
 //
-//  example_room.cpp
-//  skyway
-//
-//  Created by ogura on 2024/12/13.
-//  Copyright © 2024 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #include "example_room.hpp"

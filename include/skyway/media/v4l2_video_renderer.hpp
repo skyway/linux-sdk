@@ -1,9 +1,5 @@
 //
-//  v4l2_video_renderer.hpp
-//  skyway
-//
-//  Created by iorar on 2023/12/19.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_MEDIA_V4L2_VIDEO_RENDERER_HPP_

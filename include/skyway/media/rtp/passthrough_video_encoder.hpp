@@ -1,10 +1,7 @@
 //
-//  passthrough_video_encoder.hpp
-//  skyway
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
-//  Created by sandabu on 2025/5/21.
-//  Copyright © 2025 NTT DOCOMO BUSINESS, Inc. All rights reserved.
-//
+
 #ifndef SKYWAY_MEDIA_PASSTHROUGH_VIDEO_ENCODER_HPP_
 #define SKYWAY_MEDIA_PASSTHROUGH_VIDEO_ENCODER_HPP_
 

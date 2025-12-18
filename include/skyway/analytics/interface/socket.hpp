@@ -1,9 +1,5 @@
 //
-//  socket.hpp
-//  skyway
-//
-//  Created by Muranaka Kei on 2023/11/22.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_ANALYTICS_INTERFACE_SOCKET_HPP_

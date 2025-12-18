@@ -1,9 +1,5 @@
 //
-//  config.hpp
-//  skyway
-//
-//  Created by Muranaka Kei on 2023/11/24.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_ANALYTICS_CONFIG_HPP_
@@ -25,6 +21,11 @@ constexpr int kMaxSocketReconnectCount = 8;
 constexpr int kSocketOpenTimeoutMillisec = 10 * 1000;
 /// ソケットクローズまでのタイムアウト時間(ミリ秒)
 constexpr int kSocketCloseTimeoutMillisec = 10 * 1000;
+/// ソケット送信再試行間隔(ミリ秒)
+constexpr int kSocketResendIntervalMillisec = 30 * 1000;
+constexpr int kMaxRetryCount = 6;
+constexpr std::chrono::seconds kInitialBackoff{1};
+constexpr std::chrono::seconds kMaxBackoff{16};
 
 }  // namespace config
 }  // namespace analytics

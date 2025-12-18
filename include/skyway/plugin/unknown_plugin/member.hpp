@@ -1,9 +1,5 @@
 //
-//  member.hpp
-//  skyway
-//
-//  Created by Naoto Takahashi on 2023/07/14.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_UNKNOWN_PLUGIN_MEMBER_HPP_

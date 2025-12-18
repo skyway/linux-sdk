@@ -1,9 +1,5 @@
 //
-//  sfu_api_client.hpp
-//  skyway
-//
-//  Created by salmon on 2022/2/1.
-//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_SFU_API_CLIENT_HPP_

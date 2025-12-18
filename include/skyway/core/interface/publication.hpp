@@ -1,9 +1,5 @@
 //
-//  publication.hpp
-//  skyway
-//
-//  Created by sandabu on 2022/01/13.
-//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_CORE_INTERFACE_PUBLICATION_HPP_
@@ -89,6 +85,7 @@ public:
     virtual std::shared_ptr<interface::Member> Publisher() const = 0;
     /// @brief このPublicationを購読しているSubsciptionの一覧を取得します。
     virtual std::vector<std::shared_ptr<interface::Subscription>> Subscriptions() const = 0;
+    virtual model::PublicationType Type() const = 0;
     /// @brief ContentType(VideoかAudioかDataか)を取得します。
     virtual model::ContentType ContentType() const = 0;
     /// @brief Metadataを取得します。

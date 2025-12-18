@@ -1,9 +1,5 @@
 //
-//  local_person.hpp
-//  skyway
-//
-//  Created by Naoto Takahashi on 2023/08/04.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_CORE_INTERFACE_LOCAL_PERSON_HPP_
@@ -45,8 +41,10 @@ public:
         std::vector<model::Encoding> encodings;
         /// @brief `Publish`時の公開状態
         bool is_enabled;
+        model::PublicationType type;
 
-        PublicationOptions(bool is_enabled = true) : is_enabled(is_enabled) {}
+        PublicationOptions(bool is_enabled = true, model::PublicationType type = model::PublicationType::kP2P)
+            : is_enabled(is_enabled), type(type) {}
     };
     /// @brief `Subscribe`でSubscriptionに対して指定するオプション
     struct SubscriptionOptions {

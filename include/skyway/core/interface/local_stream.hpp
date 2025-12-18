@@ -1,9 +1,5 @@
 //
-//  local_stream.hpp
-//  skyway
-//
-//  Created by sandabu on 2022/01/12.
-//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_CORE_INTERFACE_LOCAL_STREAM_HPP_

@@ -1,9 +1,5 @@
 //
-//  platform_info_delegator.hpp
-//  skyway
-//
-//  Created by Muranaka Kei on 2023/12/04.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLATFORM_INTERFACE_PLATFORM_INFO_DELEGATOR_HPP_

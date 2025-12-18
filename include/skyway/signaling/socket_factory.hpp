@@ -1,9 +1,5 @@
 //
-//  socket_factory.hpp
-//  skyway
-//
-//  Created by Naoto Takahashi on 2022/10/07.
-//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_SIGNALING_SOCKET_FACTORY_HPP_

@@ -1,10 +1,7 @@
 //
-//  udp_server.hpp
-//  skyway
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
-//  Created by sandabu on 2025/04/30.
-//  Copyright © 2025 NTT DOCOMO BUSINESS, Inc. All rights reserved.
-//
+
 #ifndef SKYWAY_NETWORK_INTERFACE_UDP_SERVER_HPP
 #define SKYWAY_NETWORK_INTERFACE_UDP_SERVER_HPP
 

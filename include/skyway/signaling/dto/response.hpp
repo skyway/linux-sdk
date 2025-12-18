@@ -1,9 +1,5 @@
 //
-//  response.hpp
-//  skyway
-//
-//  Created by ogura on 2023/09/15.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_SIGNALING_DTO_RESPONSE_HPP_

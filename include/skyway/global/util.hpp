@@ -1,9 +1,5 @@
 //
-//  util.hpp
-//  skyway
-//
-//  Created by sandabu on 2021/10/14.
-//  Copyright © 2021 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_GLOBAL_UTIL_HPP_
@@ -43,22 +39,22 @@ inline bool SpinLockWithTimeoutMs(std::function<bool()> release_condition, int t
     {
         std::unique_lock<std::mutex> lock(mtx);
         // The flag used for Spurious Wakeup
-        bool is_notified                  = false;
-        std::atomic<bool> result_returned = false;
-        observer_thread                   = std::make_unique<std::thread>([&] {
+        auto is_notified     = std::make_shared<bool>(false);
+        auto result_returned = std::make_shared<std::atomic<bool>>(false);
+        observer_thread                   = std::make_unique<std::thread>([&, result_returned, is_notified] {
             while (!release_condition()) {
                 // Block this thread until release_condition will be true
-                if (result_returned) {
+                if (result_returned->load()) {
                     return;
                 }
             }
             std::lock_guard<std::mutex> lk(mtx);
-            is_notified = true;
+            *is_notified = true;
             cv.notify_one();
         });
         is_succeeded =
-            cv.wait_for(lock, std::chrono::milliseconds(timeout_ms), [&] { return is_notified; });
-        result_returned = true;
+            cv.wait_for(lock, std::chrono::milliseconds(timeout_ms), [&] { return *is_notified; });
+        result_returned->store(true);
     }
     observer_thread->join();
 

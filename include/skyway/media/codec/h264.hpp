@@ -1,9 +1,5 @@
 //
-//  h264.hpp
-//  skyway
-//
-//  Created by sandabu on 2025/07/15.
-//  Copyright © 2025 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_MEDIA_CODEC_H264_HPP_

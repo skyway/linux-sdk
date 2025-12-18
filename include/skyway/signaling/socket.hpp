@@ -1,9 +1,5 @@
 //
-//  socket.hpp
-//  skyway
-//
-//  Created by sandabu on 2021/08/13.
-//  Copyright © 2021 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_SIGNALING_SOCKET_HPP_

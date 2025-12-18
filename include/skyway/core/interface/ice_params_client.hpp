@@ -1,9 +1,5 @@
 //
-//  ice_params_client.hpp
-//  skyway
-//
-//  Created by salmon on 2023/05/16.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_CORE_INTERFACE_ICE_PARAMS_CLIENT_HPP_

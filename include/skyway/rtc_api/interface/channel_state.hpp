@@ -1,9 +1,5 @@
 //
-//  channel_state.hpp
-//  skyway
-//
-//  Created by Naoto Takahashi on 2023/04/17.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_RTC_API_INTERFACE_CHANNEL_STATE_HPP_

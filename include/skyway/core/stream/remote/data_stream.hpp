@@ -1,9 +1,5 @@
 //
-//  data_stream.hpp
-//  skyway
-//
-//  Created by sandabu on 2022/01/31.
-//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_CORE_STREAM_REMOTE_DATA_STREAM_HPP_
@@ -33,7 +29,7 @@ public:
     RemoteDataStream(const std::string& id);
     /// @brief データ受信イベントリスナを購読します。
     /// @param listener データ受信イベントリスナ
-    void AddListener(Listener* listener);
+    virtual void AddListener(Listener* listener);
 
     /// @cond INTERNAL_SECTION
     void OnDataBuffer(const webrtc::DataBuffer& buffer);

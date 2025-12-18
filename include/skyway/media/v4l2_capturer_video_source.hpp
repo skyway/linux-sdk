@@ -1,9 +1,5 @@
 //
-//  capturer_video_source.hpp
-//  skyway
-//
-//  Created by iorar on 2023/11/15.
-//  Copyright © 2023 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_MEDIA_V4L2_CAPTURER_VIDEO_SOURCE_HPP_

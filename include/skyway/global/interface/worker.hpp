@@ -1,9 +1,5 @@
 //
-//  worker.hpp
-//  skyway
-//
-//  Created by Naoto Takahashi on 2024/03/05.
-//  Copyright © 2024 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_GLOBAL_INTERFACE_WORKER_HPP_

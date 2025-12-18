@@ -1,9 +1,5 @@
 //
-//  data_channel_label.hpp
-//  skyway
-//
-//  Created by sandabu on 2022/01/27.
-//  Copyright © 2022 NTT DOCOMO BUSINESS, Inc. All rights reserved.
+// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
 #ifndef SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_CONNECTION_DATA_CHANNEL_LABEL_HPP_
