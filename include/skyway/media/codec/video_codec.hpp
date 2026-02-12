@@ -18,8 +18,6 @@ namespace codec {
 /**
  * @brief 映像コーデック
  * @details
- * ※この機能はβ版です。
- *
  * SkyWayOptionsのRtp::Input::Video::enabledがtrueの時、Rtp::Input::Video::codecに設定するコーデック
  *
  * VideoSourceは`RtpCapturerVideoSource`のみ利用可能になり、その他のVideoSourceは利用できません。

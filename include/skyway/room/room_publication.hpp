@@ -40,6 +40,15 @@ public:
     std::optional<model::WebRTCStats> GetStats(const std::string& selector) override;
 
 private:
+    class OriginEventPropagater : public core::interface::Publication::EventListener {
+    public:
+        OriginEventPropagater(RoomPublication* outer);
+        void OnMetadataUpdated(const std::string& metadata) override;
+
+    private:
+        RoomPublication* outer_;
+    };
+
     // core::interface::Publication::EventListener
     void OnUnpublished() override;
     void OnSubscribed(std::shared_ptr<core::interface::Subscription> subscription) override;
@@ -56,6 +65,7 @@ private:
 
     std::mutex listener_mtx_;
     interface::RoomPublication::EventListener* listener_;
+    OriginEventPropagater* origin_event_propagater_;
 };
 
 }  // namespace room

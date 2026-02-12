@@ -5,8 +5,6 @@
 #ifndef SKYWAY_CORE_STREAM_REMOTE_AUDIO_STREAM_HPP_
 #define SKYWAY_CORE_STREAM_REMOTE_AUDIO_STREAM_HPP_
 
-#include <api/media_stream_interface.h>
-
 #include "skyway/core/interface/remote_media_stream.hpp"
 
 namespace skyway {
@@ -28,8 +26,10 @@ public:
     /// @brief Audioの再生を停止します。
     bool Disable() override;
     /// @endcond
-
 private:
+    void Dispose();
+
+    std::atomic<bool> is_disposed_ = false;
     rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track_;
 };
 

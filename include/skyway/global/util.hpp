@@ -26,6 +26,29 @@ namespace skyway {
 namespace global {
 namespace util {
 
+/// @cond INTERNAL_SECTION
+enum class SleepIntervalMs : int {
+    kLocal   = config::kLocalSleepIntervalMs,
+    kNetwork = config::kNetworkSleepIntervalMs,
+};
+
+bool WaitUntilWithTimeoutMs(std::function<bool()> release_condition,
+                            int interval_ms,
+                            int timeout_ms);
+
+bool WaitUntilWithTimeoutMs(std::function<bool()> release_condition,
+                            SleepIntervalMs interval,
+                            int timeout_ms);
+
+bool WaitUntilWithTimeoutMs(std::atomic<bool>& release_condition_boolean,
+                            int interval_ms,
+                            int timeout_ms);
+
+bool WaitUntilWithTimeoutMs(std::atomic<bool>& release_condition_boolean,
+                            SleepIntervalMs interval,
+                            int timeout_ms);
+/// @endcond
+
 /// @brief タイムアウト付きスピンロックを実行します。
 /// @details 指定したタイムアウトミリ秒まで呼び出しスレッドをブロックします。
 /// 解放条件を満たしたときtrueを返し、タイムアウトした場合はfalseを返します。
@@ -41,7 +64,7 @@ inline bool SpinLockWithTimeoutMs(std::function<bool()> release_condition, int t
         // The flag used for Spurious Wakeup
         auto is_notified     = std::make_shared<bool>(false);
         auto result_returned = std::make_shared<std::atomic<bool>>(false);
-        observer_thread                   = std::make_unique<std::thread>([&, result_returned, is_notified] {
+        observer_thread      = std::make_unique<std::thread>([&, result_returned, is_notified] {
             while (!release_condition()) {
                 // Block this thread until release_condition will be true
                 if (result_returned->load()) {

@@ -67,6 +67,7 @@ struct AuthToken {
     virtual std::string AppId() const = 0;
     std::string Jwt() const;
     virtual bool IsAnalyticsEnabled() const = 0;
+    virtual bool IsSfuEnabled() const = 0;
 
     std::string jti;
     time_t iat;
@@ -77,6 +78,7 @@ struct AuthToken {
 struct AuthTokenV2 : AuthToken {
     std::string AppId() const override;
     bool IsAnalyticsEnabled() const override;
+    bool IsSfuEnabled() const override;
 
     AuthTokenScopeV2 scope;
 };
@@ -119,6 +121,7 @@ struct AuthTokenScopeV3 {
 struct AuthTokenV3 : AuthToken {
     std::string AppId() const override;
     bool IsAnalyticsEnabled() const override;
+    bool IsSfuEnabled() const override;
 
     AuthTokenScopeV3 scope;
 };

@@ -47,6 +47,10 @@ public:
         std::vector<model::Encoding> encodings;
         /// @brief `Publish`時の公開状態
         bool is_enabled = true;
+        /// @brief `Subscriber`の最大人数
+        /// @details この設定はSFU Roomでのみ有効です。
+        /// 最大値は99です。
+        int max_subscribers = 10;
         /// @cond INTERNAL_SECTION
         core::interface::LocalPerson::PublicationOptions ToCore() {
             core::interface::LocalPerson::PublicationOptions core_opt;

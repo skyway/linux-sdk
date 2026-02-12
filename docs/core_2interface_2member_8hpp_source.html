@@ -44,28 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.8 -->
+    </div><!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -78,7 +72,7 @@ $(document).ready(function() { init_codefold(0); });
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(document).ready(function(){initNavTree('core_2interface_2member_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -92,127 +86,117 @@ $(document).ready(function(){initNavTree('core_2interface_2member_8hpp_source.ht
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">読み取り中…</div>
-<div class="SRStatus" id="Searching">検索中…</div>
-<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">member.hpp</div></div>
+  <div class="headertitle">
+<div class="title">member.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef SKYWAY_CORE_INTERFACE_MEMBER_HPP_</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define SKYWAY_CORE_INTERFACE_MEMBER_HPP_</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;skyway/model/domain.hpp&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span>skyway {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span>core {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span>interface {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">class </span>Channel;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">class </span>Publication;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">class </span>Subscription;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">enum class</span> MemberState { kJoined, kLeft };</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html">   27</a></span><span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_member.html">Member</a>: <span class="keyword">public</span> std::enable_shared_from_this&lt;Member&gt; {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">   30</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">EventListener</a> {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#a5f79390748cd3cbf77df6dfc21b17dee">   33</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#a5f79390748cd3cbf77df6dfc21b17dee">OnLeft</a>() {}</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#aaaa30f3d77716e012391954ba0cbb385">   35</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#aaaa30f3d77716e012391954ba0cbb385">OnMetadataUpdated</a>(<span class="keyword">const</span> std::string&amp; metadata) {}</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#aa129d4cf558f6d06de8ff45657e4b191">   37</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#aa129d4cf558f6d06de8ff45657e4b191">OnPublicationListChanged</a>() {}</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#a2e5362dfe0da66475a4e80c858b4a321">   39</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#a2e5362dfe0da66475a4e80c858b4a321">OnSubscriptionListChanged</a>() {}</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    };</div>
-</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_member.html">~Member</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#ac3138887980843c35d61aa9a7e08620f">   45</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member.html#ac3138887980843c35d61aa9a7e08620f">AddEventListener</a>(<a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">EventListener</a>* listener);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#adc74c338c6b5e754cc726a784517330d">   48</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member.html#adc74c338c6b5e754cc726a784517330d">RemoveEventListener</a>(<a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">EventListener</a>* listener);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#a5152089a42f30c770769fce449b55e05">   51</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member.html#a5152089a42f30c770769fce449b55e05">UpdateMetadata</a>(<span class="keyword">const</span> std::string&amp; metadata);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#a5a68d5a302e8ec6ce98d92cf5ce27419">   53</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member.html#a5a68d5a302e8ec6ce98d92cf5ce27419">Leave</a>();</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#af94e6847ee78edd16b75171e4bcee012">   56</a></span>    std::string <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member.html#af94e6847ee78edd16b75171e4bcee012">Id</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#a68197cabb7dd3c1cd6f5320187f0de40">   58</a></span>    std::optional&lt;std::string&gt; <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member.html#a68197cabb7dd3c1cd6f5320187f0de40">Name</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#ac93b350c922b6720385b813c3f9a0a7c">   60</a></span>    std::optional&lt;std::string&gt; <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member.html#ac93b350c922b6720385b813c3f9a0a7c">Metadata</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#a8d62aa76ee702ecbdba6e9d2aae86d8b">   62</a></span>    model::MemberType <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member.html#a8d62aa76ee702ecbdba6e9d2aae86d8b">Type</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#a883b3657cdc617e99d65c1b64f234de5">   64</a></span>    std::string <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member.html#a883b3657cdc617e99d65c1b64f234de5">Subtype</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#ae742f1b23db502e082861d67e9633827">   66</a></span>    model::Side <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member.html#ae742f1b23db502e082861d67e9633827">Side</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#a25c1aac6a1d06ec2b2361a0ed78ba639">   68</a></span>    MemberState <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member.html#a25c1aac6a1d06ec2b2361a0ed78ba639">State</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#a1e6223e54e96a514e071c9e9255ad652">   71</a></span>    std::vector&lt;std::shared_ptr&lt;interface::Publication&gt;&gt; <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member.html#a1e6223e54e96a514e071c9e9255ad652">Publications</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#a5b84b79da075758df300e1172ce3926e">   73</a></span>    std::vector&lt;std::shared_ptr&lt;interface::Subscription&gt;&gt; <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_member.html#a5b84b79da075758df300e1172ce3926e">Subscriptions</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnLeft();</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">void</span> OnMetadataUpdated(<span class="keyword">const</span> std::string&amp; metadata);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnPublicationListChanged();</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnSubscriptionListChanged();</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_member.html">Member</a>(std::shared_ptr&lt;interface::Channel&gt; channel, <span class="keyword">const</span> <a class="code hl_struct" href="structskyway_1_1model_1_1_member.html">model::Member</a>&amp; initial_dto, <span class="keyword">const</span> model::Side&amp; side);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    std::weak_ptr&lt;interface::Channel&gt; channel_;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_struct" href="structskyway_1_1model_1_1_member.html">model::Member</a> initial_dto_;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    model::Side side_;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    MemberState state_;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    std::mutex listeners_mtx_;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    std::unordered_set&lt;EventListener*&gt; listeners_;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    std::atomic&lt;bool&gt; metadata_updated_;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>};</div>
-</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}  <span class="comment">// namespace interface</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}  <span class="comment">// namespace core</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_CORE_INTERFACE_MEMBER_HPP_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">skyway::core::interface::Member::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition</b> member.hpp:30</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_1_1_event_listener_html_a2e5362dfe0da66475a4e80c858b4a321"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#a2e5362dfe0da66475a4e80c858b4a321">skyway::core::interface::Member::EventListener::OnSubscriptionListChanged</a></div><div class="ttdeci">virtual void OnSubscriptionListChanged()</div><div class="ttdoc">MemberのSubscriptionの一覧が更新した時に発火するイベント</div><div class="ttdef"><b>Definition</b> member.hpp:39</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_1_1_event_listener_html_a5f79390748cd3cbf77df6dfc21b17dee"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#a5f79390748cd3cbf77df6dfc21b17dee">skyway::core::interface::Member::EventListener::OnLeft</a></div><div class="ttdeci">virtual void OnLeft()</div><div class="ttdoc">MemberがChannelから退出した時に発火するイベント</div><div class="ttdef"><b>Definition</b> member.hpp:33</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_1_1_event_listener_html_aa129d4cf558f6d06de8ff45657e4b191"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#aa129d4cf558f6d06de8ff45657e4b191">skyway::core::interface::Member::EventListener::OnPublicationListChanged</a></div><div class="ttdeci">virtual void OnPublicationListChanged()</div><div class="ttdoc">MemberのPublicationの一覧が更新した時に発火するイベント</div><div class="ttdef"><b>Definition</b> member.hpp:37</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_1_1_event_listener_html_aaaa30f3d77716e012391954ba0cbb385"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#aaaa30f3d77716e012391954ba0cbb385">skyway::core::interface::Member::EventListener::OnMetadataUpdated</a></div><div class="ttdeci">virtual void OnMetadataUpdated(const std::string &amp;metadata)</div><div class="ttdoc">MemberのMetadataが更新した時に発火するイベント</div><div class="ttdef"><b>Definition</b> member.hpp:35</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html">skyway::core::interface::Member</a></div><div class="ttdoc">LocalPersonおよびRemoteMemberの基底クラス</div><div class="ttdef"><b>Definition</b> member.hpp:27</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_a1e6223e54e96a514e071c9e9255ad652"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#a1e6223e54e96a514e071c9e9255ad652">skyway::core::interface::Member::Publications</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; interface::Publication &gt; &gt; Publications() const</div><div class="ttdoc">自身が持つ全てのPublicationを取得します。</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef SKYWAY_CORE_INTERFACE_MEMBER_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define SKYWAY_CORE_INTERFACE_MEMBER_HPP_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;skyway/model/domain.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>skyway {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>core {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>interface {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span>Channel;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">class </span>Publication;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">class </span>Subscription;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">enum class</span> MemberState { kJoined, kLeft };</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classskyway_1_1core_1_1interface_1_1_member.html">Member</a>: <span class="keyword">public</span> std::enable_shared_from_this&lt;Member&gt; {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">   30</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">EventListener</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#a5f79390748cd3cbf77df6dfc21b17dee">   33</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#a5f79390748cd3cbf77df6dfc21b17dee">OnLeft</a>() {}</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#aaaa30f3d77716e012391954ba0cbb385">   35</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#aaaa30f3d77716e012391954ba0cbb385">OnMetadataUpdated</a>(<span class="keyword">const</span> std::string&amp; metadata) {}</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#aa129d4cf558f6d06de8ff45657e4b191">   37</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#aa129d4cf558f6d06de8ff45657e4b191">OnPublicationListChanged</a>() {}</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#a2e5362dfe0da66475a4e80c858b4a321">   39</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#a2e5362dfe0da66475a4e80c858b4a321">OnSubscriptionListChanged</a>() {}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    };</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classskyway_1_1core_1_1interface_1_1_member.html">Member</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#ac3138887980843c35d61aa9a7e08620f">   45</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1core_1_1interface_1_1_member.html#ac3138887980843c35d61aa9a7e08620f">AddEventListener</a>(<a class="code" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">EventListener</a>* listener);</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#adc74c338c6b5e754cc726a784517330d">   48</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1core_1_1interface_1_1_member.html#adc74c338c6b5e754cc726a784517330d">RemoveEventListener</a>(<a class="code" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">EventListener</a>* listener);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#a5152089a42f30c770769fce449b55e05">   51</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1core_1_1interface_1_1_member.html#a5152089a42f30c770769fce449b55e05">UpdateMetadata</a>(<span class="keyword">const</span> std::string&amp; metadata);</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#a5a68d5a302e8ec6ce98d92cf5ce27419">   53</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1core_1_1interface_1_1_member.html#a5a68d5a302e8ec6ce98d92cf5ce27419">Leave</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#af94e6847ee78edd16b75171e4bcee012">   56</a></span>&#160;    std::string <a class="code" href="classskyway_1_1core_1_1interface_1_1_member.html#af94e6847ee78edd16b75171e4bcee012">Id</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#a42210557981aef9a3e70e352b3ccf37d">   58</a></span>&#160;    std::optional&lt;std::string&gt; <a class="code" href="classskyway_1_1core_1_1interface_1_1_member.html#a42210557981aef9a3e70e352b3ccf37d">Name</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#a997b1ecc7f7a16a0f23085f8e1847561">   60</a></span>&#160;    std::optional&lt;std::string&gt; <a class="code" href="classskyway_1_1core_1_1interface_1_1_member.html#a997b1ecc7f7a16a0f23085f8e1847561">Metadata</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#a8d62aa76ee702ecbdba6e9d2aae86d8b">   62</a></span>&#160;    model::MemberType <a class="code" href="classskyway_1_1core_1_1interface_1_1_member.html#a8d62aa76ee702ecbdba6e9d2aae86d8b">Type</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#a883b3657cdc617e99d65c1b64f234de5">   64</a></span>&#160;    std::string <a class="code" href="classskyway_1_1core_1_1interface_1_1_member.html#a883b3657cdc617e99d65c1b64f234de5">Subtype</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#ae742f1b23db502e082861d67e9633827">   66</a></span>&#160;    model::Side <a class="code" href="classskyway_1_1core_1_1interface_1_1_member.html#ae742f1b23db502e082861d67e9633827">Side</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#a25c1aac6a1d06ec2b2361a0ed78ba639">   68</a></span>&#160;    MemberState <a class="code" href="classskyway_1_1core_1_1interface_1_1_member.html#a25c1aac6a1d06ec2b2361a0ed78ba639">State</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#ad1bb80e087e264e2a80129907df1a875">   71</a></span>&#160;    std::vector&lt;std::shared_ptr&lt;interface::Publication&gt;&gt; <a class="code" href="classskyway_1_1core_1_1interface_1_1_member.html#ad1bb80e087e264e2a80129907df1a875">Publications</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html#a874c364fe8d031cd1d4a3324c4c9fba0">   73</a></span>&#160;    std::vector&lt;std::shared_ptr&lt;interface::Subscription&gt;&gt; <a class="code" href="classskyway_1_1core_1_1interface_1_1_member.html#a874c364fe8d031cd1d4a3324c4c9fba0">Subscriptions</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnLeft();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> OnMetadataUpdated(<span class="keyword">const</span> std::string&amp; metadata);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnPublicationListChanged();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnSubscriptionListChanged();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classskyway_1_1core_1_1interface_1_1_member.html">Member</a>(std::shared_ptr&lt;interface::Channel&gt; channel, <span class="keyword">const</span> <a class="code" href="structskyway_1_1model_1_1_member.html">model::Member</a>&amp; initial_dto, <span class="keyword">const</span> model::Side&amp; side);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    std::weak_ptr&lt;interface::Channel&gt; channel_;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="structskyway_1_1model_1_1_member.html">model::Member</a> initial_dto_;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    model::Side side_;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    MemberState state_;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    std::mutex listeners_mtx_;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::unordered_set&lt;EventListener*&gt; listeners_;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    std::atomic&lt;bool&gt; metadata_updated_;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}  <span class="comment">// namespace interface</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}  <span class="comment">// namespace core</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_CORE_INTERFACE_MEMBER_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">skyway::core::interface::Member::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition:</b> member.hpp:30</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_1_1_event_listener_html_a2e5362dfe0da66475a4e80c858b4a321"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#a2e5362dfe0da66475a4e80c858b4a321">skyway::core::interface::Member::EventListener::OnSubscriptionListChanged</a></div><div class="ttdeci">virtual void OnSubscriptionListChanged()</div><div class="ttdoc">MemberのSubscriptionの一覧が更新した時に発火するイベント</div><div class="ttdef"><b>Definition:</b> member.hpp:39</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_1_1_event_listener_html_a5f79390748cd3cbf77df6dfc21b17dee"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#a5f79390748cd3cbf77df6dfc21b17dee">skyway::core::interface::Member::EventListener::OnLeft</a></div><div class="ttdeci">virtual void OnLeft()</div><div class="ttdoc">MemberがChannelから退出した時に発火するイベント</div><div class="ttdef"><b>Definition:</b> member.hpp:33</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_1_1_event_listener_html_aa129d4cf558f6d06de8ff45657e4b191"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#aa129d4cf558f6d06de8ff45657e4b191">skyway::core::interface::Member::EventListener::OnPublicationListChanged</a></div><div class="ttdeci">virtual void OnPublicationListChanged()</div><div class="ttdoc">MemberのPublicationの一覧が更新した時に発火するイベント</div><div class="ttdef"><b>Definition:</b> member.hpp:37</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_1_1_event_listener_html_aaaa30f3d77716e012391954ba0cbb385"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#aaaa30f3d77716e012391954ba0cbb385">skyway::core::interface::Member::EventListener::OnMetadataUpdated</a></div><div class="ttdeci">virtual void OnMetadataUpdated(const std::string &amp;metadata)</div><div class="ttdoc">MemberのMetadataが更新した時に発火するイベント</div><div class="ttdef"><b>Definition:</b> member.hpp:35</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html">skyway::core::interface::Member</a></div><div class="ttdoc">LocalPersonおよびRemoteMemberの基底クラス</div><div class="ttdef"><b>Definition:</b> member.hpp:27</div></div>
 <div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_a25c1aac6a1d06ec2b2361a0ed78ba639"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#a25c1aac6a1d06ec2b2361a0ed78ba639">skyway::core::interface::Member::State</a></div><div class="ttdeci">MemberState State() const</div><div class="ttdoc">State(Memberの入室状態)を取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_a42210557981aef9a3e70e352b3ccf37d"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#a42210557981aef9a3e70e352b3ccf37d">skyway::core::interface::Member::Name</a></div><div class="ttdeci">std::optional&lt; std::string &gt; Name() const</div><div class="ttdoc">Nameを取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_a5152089a42f30c770769fce449b55e05"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#a5152089a42f30c770769fce449b55e05">skyway::core::interface::Member::UpdateMetadata</a></div><div class="ttdeci">bool UpdateMetadata(const std::string &amp;metadata)</div><div class="ttdoc">Metadataを更新します</div></div>
 <div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_a5a68d5a302e8ec6ce98d92cf5ce27419"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#a5a68d5a302e8ec6ce98d92cf5ce27419">skyway::core::interface::Member::Leave</a></div><div class="ttdeci">bool Leave()</div><div class="ttdoc">Channelから退室します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_a5b84b79da075758df300e1172ce3926e"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#a5b84b79da075758df300e1172ce3926e">skyway::core::interface::Member::Subscriptions</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; interface::Subscription &gt; &gt; Subscriptions() const</div><div class="ttdoc">自身が持つ全てのSubscriptionを取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_a68197cabb7dd3c1cd6f5320187f0de40"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#a68197cabb7dd3c1cd6f5320187f0de40">skyway::core::interface::Member::Name</a></div><div class="ttdeci">std::optional&lt; std::string &gt; Name() const</div><div class="ttdoc">Nameを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_a874c364fe8d031cd1d4a3324c4c9fba0"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#a874c364fe8d031cd1d4a3324c4c9fba0">skyway::core::interface::Member::Subscriptions</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; interface::Subscription &gt; &gt; Subscriptions() const</div><div class="ttdoc">自身が持つ全てのSubscriptionを取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_a883b3657cdc617e99d65c1b64f234de5"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#a883b3657cdc617e99d65c1b64f234de5">skyway::core::interface::Member::Subtype</a></div><div class="ttdeci">std::string Subtype() const</div><div class="ttdoc">Subtypeを取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_a8d62aa76ee702ecbdba6e9d2aae86d8b"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#a8d62aa76ee702ecbdba6e9d2aae86d8b">skyway::core::interface::Member::Type</a></div><div class="ttdeci">model::MemberType Type() const</div><div class="ttdoc">MemberTypeを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_a997b1ecc7f7a16a0f23085f8e1847561"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#a997b1ecc7f7a16a0f23085f8e1847561">skyway::core::interface::Member::Metadata</a></div><div class="ttdeci">std::optional&lt; std::string &gt; Metadata() const</div><div class="ttdoc">Metadataを取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_ac3138887980843c35d61aa9a7e08620f"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#ac3138887980843c35d61aa9a7e08620f">skyway::core::interface::Member::AddEventListener</a></div><div class="ttdeci">void AddEventListener(EventListener *listener)</div><div class="ttdoc">イベントを購読します。</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_ac93b350c922b6720385b813c3f9a0a7c"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#ac93b350c922b6720385b813c3f9a0a7c">skyway::core::interface::Member::Metadata</a></div><div class="ttdeci">std::optional&lt; std::string &gt; Metadata() const</div><div class="ttdoc">Metadataを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_ad1bb80e087e264e2a80129907df1a875"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#ad1bb80e087e264e2a80129907df1a875">skyway::core::interface::Member::Publications</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; interface::Publication &gt; &gt; Publications() const</div><div class="ttdoc">自身が持つ全てのPublicationを取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_adc74c338c6b5e754cc726a784517330d"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#adc74c338c6b5e754cc726a784517330d">skyway::core::interface::Member::RemoveEventListener</a></div><div class="ttdeci">void RemoveEventListener(EventListener *listener)</div><div class="ttdoc">イベントの購読を中止します。</div></div>
 <div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_ae742f1b23db502e082861d67e9633827"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#ae742f1b23db502e082861d67e9633827">skyway::core::interface::Member::Side</a></div><div class="ttdeci">model::Side Side() const</div><div class="ttdoc">Side(LocalかRemoteか)を取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_html_af94e6847ee78edd16b75171e4bcee012"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member.html#af94e6847ee78edd16b75171e4bcee012">skyway::core::interface::Member::Id</a></div><div class="ttdeci">std::string Id() const</div><div class="ttdoc">Idを取得します。</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_member_html"><div class="ttname"><a href="structskyway_1_1model_1_1_member.html">skyway::model::Member</a></div><div class="ttdoc">メンバー情報</div><div class="ttdef"><b>Definition</b> domain.hpp:53</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_member_html"><div class="ttname"><a href="structskyway_1_1model_1_1_member.html">skyway::model::Member</a></div><div class="ttdoc">メンバー情報</div><div class="ttdef"><b>Definition:</b> domain.hpp:53</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_77f3510bf786cf3c12f65f3b0b944be3.html">skyway</a></li><li class="navelem"><a class="el" href="dir_c969e10abcf9ecdc3862a30832440b35.html">core</a></li><li class="navelem"><a class="el" href="dir_50fc7b49caacc067d3b98b901fa55b16.html">interface</a></li><li class="navelem"><b>member.hpp</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -27,6 +27,7 @@ public:
     std::string AppId() const override;
     std::string Jwt() const override;
     bool IsAnalyticsEnabled() const override;
+    bool IsSfuEnabled() const override;
 
     void AddInternalListener(InternalListener* listener) override;
     void RemoveInternalListener(InternalListener* listener) override;

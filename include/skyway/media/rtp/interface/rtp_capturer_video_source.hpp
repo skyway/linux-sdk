@@ -15,7 +15,6 @@ namespace rtp {
 namespace interface {
 
 /// @brief RTPキャプチャビデオソースのオプション
-/// @details ※この機能はβ版です。
 struct RtpCapturerVideoSourceOptions {
     /**
      * @brief RTPパケットを受け付けるUDPサーバのIPv4アドレス
@@ -62,8 +61,6 @@ struct RtpCapturerVideoSourceOptions {
 /**
  * @brief RTPキャプチャビデオソース
  * @details
- * ※この機能はβ版です。
- *
  * この機能を利用するためには`Context::Setup`におけるSkyWayOptionsのRtp::Input::Videoにおいて、`enabled`を`true`に設定し、`codec`に適切なコーデックを設定する必要があります。
  *
  * また、RTP映像入力モードが有効な場合は、他のVideoSourceは利用できません。

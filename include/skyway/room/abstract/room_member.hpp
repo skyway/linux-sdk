@@ -28,7 +28,6 @@ public:
     model::Side Side() override;
     core::interface::MemberState State() override;
 
-    std::vector<std::shared_ptr<interface::RoomPublication>> Publications() override;
     std::vector<std::shared_ptr<interface::RoomSubscription>> Subscriptions() override;
 
     bool UpdateMetadata(const std::string& metadata) override;

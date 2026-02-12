@@ -28,14 +28,13 @@ class PassthroughVideoEncoderFactoryTest;
 class Context : public core::Context {
 public:
     static const unsigned int kVersionMajor = 3;
-    static const unsigned int kVersionMinor = 2;
+    static const unsigned int kVersionMinor = 3;
     static const unsigned int kVersionPatch = 0;
 
     /// @brief SkyWayの利用に関する設定
     struct SkyWayOptions : core::ContextOptions {
         /**
          * @brief SkyWayのRTPに関する設定
-         * @details この機能はβ版です。
          */
         struct Rtp {
             /// @brief RTP入力に関する設定
@@ -71,6 +70,7 @@ public:
         };
         /// @brief ログレベル
         global::interface::Logger::Level log_level = global::interface::Logger::kInfo;
+
         /// @brief WebRTCのログを有効にします
         bool enable_webrtc_log = false;
 
@@ -80,6 +80,14 @@ public:
 
         /// @brief RTPに関する設定
         Rtp rtp;
+
+        /// @brief SFUサーバーの接続に関する設定
+        struct SFU {
+            std::optional<std::string> domain;
+            std::optional<int> version;
+            std::optional<bool> secure;
+        };
+        SFU sfu;
     };
 
     /// @brief Contextを初期化します。

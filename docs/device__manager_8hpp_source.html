@@ -44,28 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.8 -->
+    </div><!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -78,7 +72,7 @@ $(document).ready(function() { init_codefold(0); });
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(document).ready(function(){initNavTree('device__manager_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -92,115 +86,103 @@ $(document).ready(function(){initNavTree('device__manager_8hpp_source.html','');
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">読み取り中…</div>
-<div class="SRStatus" id="Searching">検索中…</div>
-<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">device_manager.hpp</div></div>
+  <div class="headertitle">
+<div class="title">device_manager.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef SKYWAY_MEDIA_DEVICE_MANAGER_HPP_</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define SKYWAY_MEDIA_DEVICE_MANAGER_HPP_</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;api/create_peerconnection_factory.h&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;api/media_stream_interface.h&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;audio/audio_transport_impl.h&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;common_audio/resampler/include/push_resampler.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;modules/audio_device/include/audio_device.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;modules/audio_mixer/audio_mixer_impl.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;modules/video_capture/video_capture.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;pc/local_audio_source.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;skyway/global/logger.hpp&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span>skyway {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span>media {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">enum class</span> AudioBackendType {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    kPulseAudio,</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    kNone,</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1_device_manager.html">   31</a></span><span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1media_1_1_device_manager.html">DeviceManager</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1_device_manager_1_1_audio_device.html">   34</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1media_1_1_device_manager_1_1_audio_device.html">AudioDevice</a> {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">int</span> index;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        std::string name;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    };</div>
-</div>
-<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1_device_manager_1_1_video_device.html">   39</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1media_1_1_device_manager_1_1_video_device.html">VideoDevice</a> {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">int</span> index;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        std::string name;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        std::string unique_id;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        webrtc::VideoCaptureCapability capability;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    };</div>
-</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1_device_manager.html#a76b0eeddeda6457378987e54167ce305">   46</a></span>    <span class="keyword">static</span> std::vector&lt;AudioDevice&gt; <a class="code hl_function" href="classskyway_1_1media_1_1_device_manager.html#a76b0eeddeda6457378987e54167ce305">GetRecordDevices</a>();</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1_device_manager.html#a70229bac68283f936a2e51a3ab186959">   49</a></span>    <span class="keyword">static</span> std::vector&lt;AudioDevice&gt; <a class="code hl_function" href="classskyway_1_1media_1_1_device_manager.html#a70229bac68283f936a2e51a3ab186959">GetPlayoutDevices</a>();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1_device_manager.html#ab3819f4a759012bd5d024a5911b7cb53">   52</a></span>    <span class="keyword">static</span> std::vector&lt;VideoDevice&gt; <a class="code hl_function" href="classskyway_1_1media_1_1_device_manager.html#ab3819f4a759012bd5d024a5911b7cb53">GetVideoDevices</a>();</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1_device_manager.html#aa438ea93d2173ff89fb2efb5de50392d">   55</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1media_1_1_device_manager.html#aa438ea93d2173ff89fb2efb5de50392d">SetRecordingDevice</a>(<a class="code hl_struct" href="structskyway_1_1media_1_1_device_manager_1_1_audio_device.html">AudioDevice</a> device);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1_device_manager.html#a6e60ac6f8cbf1e0f5d09ccf1e72f4ada">   58</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1media_1_1_device_manager.html#a6e60ac6f8cbf1e0f5d09ccf1e72f4ada">SetPlayoutDevice</a>(<a class="code hl_struct" href="structskyway_1_1media_1_1_device_manager_1_1_audio_device.html">AudioDevice</a> device);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> Init(AudioBackendType audio_backend, <a class="code hl_class" href="classskyway_1_1global_1_1_logger.html">skyway::global::Logger</a> *logger);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">static</span> rtc::scoped_refptr&lt;webrtc::PeerConnectionFactoryInterface&gt; GetPeerConnectionFactory();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> Dispose();</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">static</span> rtc::scoped_refptr&lt;webrtc::AudioTrackInterface&gt; CreateAudioTrack();</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">static</span> rtc::scoped_refptr&lt;webrtc::AudioTrackInterface&gt; CreateAudioTrack(</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        rtc::scoped_refptr&lt;webrtc::AudioSourceInterface&gt; source);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">static</span> rtc::scoped_refptr&lt;webrtc::VideoTrackInterface&gt; CreateVideoTrack(</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        rtc::scoped_refptr&lt;webrtc::VideoTrackSourceInterface&gt; source);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">static</span> AudioBackendType GetAudioBackend();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">static</span> rtc::scoped_refptr&lt;webrtc::PeerConnectionFactoryInterface&gt; peer_connection_factory_;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">static</span> rtc::scoped_refptr&lt;webrtc::AudioDeviceModule&gt; adm_;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">static</span> std::unique_ptr&lt;rtc::Thread&gt; signaling_thread_;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">static</span> std::unique_ptr&lt;rtc::Thread&gt; worker_thread_;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">static</span> std::unique_ptr&lt;webrtc::TaskQueueFactory&gt; task_queue_factory_;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">static</span> AudioBackendType audio_backend_;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
-</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}  <span class="comment">// namespace media</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_MEDIA_DEVICE_MANAGER_HPP_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclassskyway_1_1global_1_1_logger_html"><div class="ttname"><a href="classskyway_1_1global_1_1_logger.html">skyway::global::Logger</a></div><div class="ttdoc">SkyWayのログを出力するクラス</div><div class="ttdef"><b>Definition</b> logger.hpp:18</div></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1_device_manager_html"><div class="ttname"><a href="classskyway_1_1media_1_1_device_manager.html">skyway::media::DeviceManager</a></div><div class="ttdoc">デバイスの情報を取得するクラス</div><div class="ttdef"><b>Definition</b> device_manager.hpp:31</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef SKYWAY_MEDIA_DEVICE_MANAGER_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define SKYWAY_MEDIA_DEVICE_MANAGER_HPP_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;api/create_peerconnection_factory.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;api/media_stream_interface.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;audio/audio_transport_impl.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;common_audio/resampler/include/push_resampler.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;modules/audio_device/include/audio_device.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;modules/audio_mixer/audio_mixer_impl.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;modules/video_capture/video_capture.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;pc/local_audio_source.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;skyway/global/logger.hpp&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>skyway {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>media {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">enum class</span> AudioBackendType {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    kPulseAudio,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    kNone,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1_device_manager.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="classskyway_1_1media_1_1_device_manager.html">DeviceManager</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1_device_manager_1_1_audio_device.html">   34</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structskyway_1_1media_1_1_device_manager_1_1_audio_device.html">AudioDevice</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">int</span> index;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        std::string name;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    };</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1_device_manager_1_1_video_device.html">   39</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structskyway_1_1media_1_1_device_manager_1_1_video_device.html">VideoDevice</a> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">int</span> index;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        std::string name;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        std::string unique_id;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        webrtc::VideoCaptureCapability capability;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    };</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1_device_manager.html#a00e384c64490ebeabd2e2f2bd47b6dab">   46</a></span>&#160;    <span class="keyword">static</span> std::vector&lt;AudioDevice&gt; <a class="code" href="classskyway_1_1media_1_1_device_manager.html#a00e384c64490ebeabd2e2f2bd47b6dab">GetRecordDevices</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1_device_manager.html#af6aefda93132ea0311c47abf391543bc">   49</a></span>&#160;    <span class="keyword">static</span> std::vector&lt;AudioDevice&gt; <a class="code" href="classskyway_1_1media_1_1_device_manager.html#af6aefda93132ea0311c47abf391543bc">GetPlayoutDevices</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1_device_manager.html#afb543142c071d648b3143a5248367c74">   52</a></span>&#160;    <span class="keyword">static</span> std::vector&lt;VideoDevice&gt; <a class="code" href="classskyway_1_1media_1_1_device_manager.html#afb543142c071d648b3143a5248367c74">GetVideoDevices</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1_device_manager.html#aa438ea93d2173ff89fb2efb5de50392d">   55</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1media_1_1_device_manager.html#aa438ea93d2173ff89fb2efb5de50392d">SetRecordingDevice</a>(<a class="code" href="structskyway_1_1media_1_1_device_manager_1_1_audio_device.html">AudioDevice</a> device);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1_device_manager.html#a6e60ac6f8cbf1e0f5d09ccf1e72f4ada">   58</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1media_1_1_device_manager.html#a6e60ac6f8cbf1e0f5d09ccf1e72f4ada">SetPlayoutDevice</a>(<a class="code" href="structskyway_1_1media_1_1_device_manager_1_1_audio_device.html">AudioDevice</a> device);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> Init(AudioBackendType audio_backend, <a class="code" href="classskyway_1_1global_1_1_logger.html">skyway::global::Logger</a> *logger);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">static</span> rtc::scoped_refptr&lt;webrtc::PeerConnectionFactoryInterface&gt; GetPeerConnectionFactory();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> Dispose();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">static</span> rtc::scoped_refptr&lt;webrtc::AudioTrackInterface&gt; CreateAudioTrack();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">static</span> rtc::scoped_refptr&lt;webrtc::AudioTrackInterface&gt; CreateAudioTrack(</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        rtc::scoped_refptr&lt;webrtc::AudioSourceInterface&gt; source);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">static</span> rtc::scoped_refptr&lt;webrtc::VideoTrackInterface&gt; CreateVideoTrack(</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        rtc::scoped_refptr&lt;webrtc::VideoTrackSourceInterface&gt; source);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">static</span> AudioBackendType GetAudioBackend();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">static</span> rtc::scoped_refptr&lt;webrtc::PeerConnectionFactoryInterface&gt; peer_connection_factory_;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">static</span> rtc::scoped_refptr&lt;webrtc::AudioDeviceModule&gt; adm_;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">static</span> std::unique_ptr&lt;rtc::Thread&gt; signaling_thread_;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">static</span> std::unique_ptr&lt;rtc::Thread&gt; worker_thread_;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">static</span> std::unique_ptr&lt;webrtc::TaskQueueFactory&gt; task_queue_factory_;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">static</span> AudioBackendType audio_backend_;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}  <span class="comment">// namespace media</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_MEDIA_DEVICE_MANAGER_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassskyway_1_1global_1_1_logger_html"><div class="ttname"><a href="classskyway_1_1global_1_1_logger.html">skyway::global::Logger</a></div><div class="ttdoc">SkyWayのログを出力するクラス</div><div class="ttdef"><b>Definition:</b> logger.hpp:18</div></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1_device_manager_html"><div class="ttname"><a href="classskyway_1_1media_1_1_device_manager.html">skyway::media::DeviceManager</a></div><div class="ttdoc">デバイスの情報を取得するクラス</div><div class="ttdef"><b>Definition:</b> device_manager.hpp:31</div></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1_device_manager_html_a00e384c64490ebeabd2e2f2bd47b6dab"><div class="ttname"><a href="classskyway_1_1media_1_1_device_manager.html#a00e384c64490ebeabd2e2f2bd47b6dab">skyway::media::DeviceManager::GetRecordDevices</a></div><div class="ttdeci">static std::vector&lt; AudioDevice &gt; GetRecordDevices()</div><div class="ttdoc">利用する音声入力デバイスの一覧を取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1media_1_1_device_manager_html_a6e60ac6f8cbf1e0f5d09ccf1e72f4ada"><div class="ttname"><a href="classskyway_1_1media_1_1_device_manager.html#a6e60ac6f8cbf1e0f5d09ccf1e72f4ada">skyway::media::DeviceManager::SetPlayoutDevice</a></div><div class="ttdeci">static bool SetPlayoutDevice(AudioDevice device)</div><div class="ttdoc">利用する音声出力デバイスの設定します。</div></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1_device_manager_html_a70229bac68283f936a2e51a3ab186959"><div class="ttname"><a href="classskyway_1_1media_1_1_device_manager.html#a70229bac68283f936a2e51a3ab186959">skyway::media::DeviceManager::GetPlayoutDevices</a></div><div class="ttdeci">static std::vector&lt; AudioDevice &gt; GetPlayoutDevices()</div><div class="ttdoc">利用する音声出力デバイスの一覧を取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1_device_manager_html_a76b0eeddeda6457378987e54167ce305"><div class="ttname"><a href="classskyway_1_1media_1_1_device_manager.html#a76b0eeddeda6457378987e54167ce305">skyway::media::DeviceManager::GetRecordDevices</a></div><div class="ttdeci">static std::vector&lt; AudioDevice &gt; GetRecordDevices()</div><div class="ttdoc">利用する音声入力デバイスの一覧を取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1media_1_1_device_manager_html_aa438ea93d2173ff89fb2efb5de50392d"><div class="ttname"><a href="classskyway_1_1media_1_1_device_manager.html#aa438ea93d2173ff89fb2efb5de50392d">skyway::media::DeviceManager::SetRecordingDevice</a></div><div class="ttdeci">static bool SetRecordingDevice(AudioDevice device)</div><div class="ttdoc">利用する音声入力デバイスの設定します。</div></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1_device_manager_html_ab3819f4a759012bd5d024a5911b7cb53"><div class="ttname"><a href="classskyway_1_1media_1_1_device_manager.html#ab3819f4a759012bd5d024a5911b7cb53">skyway::media::DeviceManager::GetVideoDevices</a></div><div class="ttdeci">static std::vector&lt; VideoDevice &gt; GetVideoDevices()</div><div class="ttdoc">利用する映像入力デバイスの一覧を取得します。</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1_device_manager_1_1_audio_device_html"><div class="ttname"><a href="structskyway_1_1media_1_1_device_manager_1_1_audio_device.html">skyway::media::DeviceManager::AudioDevice</a></div><div class="ttdoc">音声デバイス</div><div class="ttdef"><b>Definition</b> device_manager.hpp:34</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1_device_manager_1_1_video_device_html"><div class="ttname"><a href="structskyway_1_1media_1_1_device_manager_1_1_video_device.html">skyway::media::DeviceManager::VideoDevice</a></div><div class="ttdoc">映像デバイス</div><div class="ttdef"><b>Definition</b> device_manager.hpp:39</div></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1_device_manager_html_af6aefda93132ea0311c47abf391543bc"><div class="ttname"><a href="classskyway_1_1media_1_1_device_manager.html#af6aefda93132ea0311c47abf391543bc">skyway::media::DeviceManager::GetPlayoutDevices</a></div><div class="ttdeci">static std::vector&lt; AudioDevice &gt; GetPlayoutDevices()</div><div class="ttdoc">利用する音声出力デバイスの一覧を取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1_device_manager_html_afb543142c071d648b3143a5248367c74"><div class="ttname"><a href="classskyway_1_1media_1_1_device_manager.html#afb543142c071d648b3143a5248367c74">skyway::media::DeviceManager::GetVideoDevices</a></div><div class="ttdeci">static std::vector&lt; VideoDevice &gt; GetVideoDevices()</div><div class="ttdoc">利用する映像入力デバイスの一覧を取得します。</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1_device_manager_1_1_audio_device_html"><div class="ttname"><a href="structskyway_1_1media_1_1_device_manager_1_1_audio_device.html">skyway::media::DeviceManager::AudioDevice</a></div><div class="ttdoc">音声デバイス</div><div class="ttdef"><b>Definition:</b> device_manager.hpp:34</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1_device_manager_1_1_video_device_html"><div class="ttname"><a href="structskyway_1_1media_1_1_device_manager_1_1_video_device.html">skyway::media::DeviceManager::VideoDevice</a></div><div class="ttdoc">映像デバイス</div><div class="ttdef"><b>Definition:</b> device_manager.hpp:39</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_77f3510bf786cf3c12f65f3b0b944be3.html">skyway</a></li><li class="navelem"><a class="el" href="dir_e0a5df88c41d0cefa5f5ef07a5fde6bd.html">media</a></li><li class="navelem"><b>device_manager.hpp</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

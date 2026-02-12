@@ -18,6 +18,8 @@ public:
 
     // skyway::core::stream::remote::RemoteDataStream
     void AddListener(skyway::core::stream::remote::RemoteDataStream::Listener* listener) override;
+    void RemoveListener(
+        skyway::core::stream::remote::RemoteDataStream::Listener* listener) override;
 
 private:
     std::shared_ptr<skyway::core::stream::remote::RemoteDataStream> core_;

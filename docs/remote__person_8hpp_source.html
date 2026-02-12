@@ -44,28 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.8 -->
+    </div><!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -78,7 +72,7 @@ $(document).ready(function() { init_codefold(0); });
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(document).ready(function(){initNavTree('remote__person_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -92,115 +86,105 @@ $(document).ready(function(){initNavTree('remote__person_8hpp_source.html',''); 
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">読み取り中…</div>
-<div class="SRStatus" id="Searching">検索中…</div>
-<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">remote_person.hpp</div></div>
+  <div class="headertitle">
+<div class="title">remote_person.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_REMOTE_PERSON_HPP_</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_REMOTE_PERSON_HPP_</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;skyway/core/ice/ice_manager.hpp&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;skyway/core/interface/channel.hpp&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;skyway/core/interface/publication.hpp&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;skyway/core/interface/remote_member.hpp&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;skyway/core/interface/stream.hpp&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;skyway/core/interface/subscription.hpp&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;skyway/plugin/remote_person_plugin/connection/p2p_connection.hpp&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span>skyway {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span>plugin {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span>remote_person {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">using </span>SubscriptionId        = std::string;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html">RemotePerson</a> : <span class="keyword">public</span> <a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_remote_member.html">core::interface::RemoteMember</a> {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person_1_1_event_listener.html">   26</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person_1_1_event_listener.html">EventListener</a> : <span class="keyword">public</span> <a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">core::interface::Member::EventListener</a> {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnPublicationSubscribed(std::shared_ptr&lt;core::interface::Subscription&gt; subscription) {}</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnPublicationUnsubscribed(std::shared_ptr&lt;core::interface::Subscription&gt; subscription) {}</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    };</div>
-</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_class" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html">RemotePerson</a>(</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        std::shared_ptr&lt;core::interface::Channel&gt; channel,</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structskyway_1_1model_1_1_member.html">model::Member</a>&amp; dto,</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        rtc::scoped_refptr&lt;webrtc::PeerConnectionFactoryInterface&gt; peer_connection_factory);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_class" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html">~RemotePerson</a>();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html#a28696c70d7e84b4059e8c26cd876daf6">   45</a></span>    std::shared_ptr&lt;core::interface::Subscription&gt; <a class="code hl_function" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html#a28696c70d7e84b4059e8c26cd876daf6">Subscribe</a>(<span class="keyword">const</span> std::string&amp; publication_id);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html#a1a570c88dc6e8328bb9c4f7f8960982c">   52</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html#a1a570c88dc6e8328bb9c4f7f8960982c">Unsubscribe</a>(<span class="keyword">const</span> std::string&amp; subscription_id);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> OnSubscribedLocalPersonsPublication(std::shared_ptr&lt;core::interface::Publication&gt; publication,</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                                             <span class="keyword">const</span> SubscriptionId&amp; subscription_id) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> OnUnsubscribedLocalPersonsPublication(std::shared_ptr&lt;core::interface::Publication&gt; publication) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> OnLocalPersonSubscribed(std::shared_ptr&lt;core::interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">void</span> OnLocalPersonUnsubscribed(std::shared_ptr&lt;core::interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_remote_member.html#ac4ce159350264f0a4b8cacd6642fe3ac">OnPublicationSubscribed</a>(std::shared_ptr&lt;core::interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1core_1_1interface_1_1_remote_member.html#aedb6200bf7cbaa46661f8c236d9553ba">OnPublicationUnsubscribed</a>(std::shared_ptr&lt;core::interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="comment">// core::interface::Member</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">void</span> OnLeft() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">void</span> Dispose() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    connection::P2PConnection* GetOrCreateConnection();</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    connection::P2PConnection* CreateConnection();</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">bool</span> IsLocalPersonSubscribing();</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">bool</span> IsSubscribingLocalPersonsPublication();</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">bool</span> ShouldClose();</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordtype">void</span> CloseConnection();</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    std::mutex connection_mtx_;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    std::unique_ptr&lt;connection::P2PConnection&gt; connection_;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    rtc::scoped_refptr&lt;webrtc::PeerConnectionFactoryInterface&gt; peer_connection_factory_;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    std::unique_ptr&lt;core::interface::IceManager&gt; ice_manager_;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>};</div>
-</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>}  <span class="comment">// namespace remote_person</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>}  <span class="comment">// namespace plugin</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_REMOTE_PERSON_HPP_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">skyway::core::interface::Member::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition</b> member.hpp:30</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_remote_member_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_remote_member.html">skyway::core::interface::RemoteMember</a></div><div class="ttdoc">このSDK以外で生成されたメンバ</div><div class="ttdef"><b>Definition</b> remote_member.hpp:28</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_remote_member_html_ac4ce159350264f0a4b8cacd6642fe3ac"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_remote_member.html#ac4ce159350264f0a4b8cacd6642fe3ac">skyway::core::interface::RemoteMember::OnPublicationSubscribed</a></div><div class="ttdeci">virtual void OnPublicationSubscribed(std::shared_ptr&lt; interface::Subscription &gt; subscription)</div><div class="ttdoc">PublicationがSubscribeされた時に発生するイベント</div><div class="ttdef"><b>Definition</b> remote_member.hpp:62</div></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_remote_member_html_aedb6200bf7cbaa46661f8c236d9553ba"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_remote_member.html#aedb6200bf7cbaa46661f8c236d9553ba">skyway::core::interface::RemoteMember::OnPublicationUnsubscribed</a></div><div class="ttdeci">virtual void OnPublicationUnsubscribed(std::shared_ptr&lt; interface::Subscription &gt; subscription)</div><div class="ttdoc">PublicationがUnsubscribeされた時に発生するイベント</div><div class="ttdef"><b>Definition</b> remote_member.hpp:66</div></div>
-<div class="ttc" id="aclassskyway_1_1plugin_1_1remote__person_1_1_remote_person_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person_1_1_event_listener.html">skyway::plugin::remote_person::RemotePerson::EventListener</a></div><div class="ttdef"><b>Definition</b> remote_person.hpp:26</div></div>
-<div class="ttc" id="aclassskyway_1_1plugin_1_1remote__person_1_1_remote_person_html"><div class="ttname"><a href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html">skyway::plugin::remote_person::RemotePerson</a></div><div class="ttdoc">RemotePersonの機能を持つメンバー</div><div class="ttdef"><b>Definition</b> remote_person.hpp:24</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_REMOTE_PERSON_HPP_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_REMOTE_PERSON_HPP_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;skyway/core/ice/ice_manager.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;skyway/core/interface/channel.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;skyway/core/interface/publication.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;skyway/core/interface/remote_member.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;skyway/core/interface/stream.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;skyway/core/interface/subscription.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;skyway/plugin/remote_person_plugin/connection/p2p_connection.hpp&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>skyway {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>plugin {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>remote_person {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> SubscriptionId        = std::string;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html">RemotePerson</a> : <span class="keyword">public</span> <a class="code" href="classskyway_1_1core_1_1interface_1_1_remote_member.html">core::interface::RemoteMember</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person_1_1_event_listener.html">   26</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person_1_1_event_listener.html">EventListener</a> : <span class="keyword">public</span> <a class="code" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">core::interface::Member::EventListener</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnPublicationSubscribed(std::shared_ptr&lt;core::interface::Subscription&gt; subscription) {}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnPublicationUnsubscribed(std::shared_ptr&lt;core::interface::Subscription&gt; subscription) {}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    };</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html">RemotePerson</a>(</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::shared_ptr&lt;core::interface::Channel&gt; channel,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">const</span> <a class="code" href="structskyway_1_1model_1_1_member.html">model::Member</a>&amp; dto,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        rtc::scoped_refptr&lt;webrtc::PeerConnectionFactoryInterface&gt; peer_connection_factory);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    ~<a class="code" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html">RemotePerson</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html#a15d24411fe20b465a6cae846b46f2796">   45</a></span>&#160;    std::shared_ptr&lt;core::interface::Subscription&gt; <a class="code" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html#a15d24411fe20b465a6cae846b46f2796">Subscribe</a>(<span class="keyword">const</span> std::string&amp; publication_id);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html#a1a570c88dc6e8328bb9c4f7f8960982c">   52</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html#a1a570c88dc6e8328bb9c4f7f8960982c">Unsubscribe</a>(<span class="keyword">const</span> std::string&amp; subscription_id);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> OnSubscribedLocalPersonsPublication(std::shared_ptr&lt;core::interface::Publication&gt; publication,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                             <span class="keyword">const</span> SubscriptionId&amp; subscription_id) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> OnUnsubscribedLocalPersonsPublication(std::shared_ptr&lt;core::interface::Publication&gt; publication) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> OnLocalPersonSubscribed(std::shared_ptr&lt;core::interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> OnLocalPersonUnsubscribed(std::shared_ptr&lt;core::interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1core_1_1interface_1_1_remote_member.html#ac4ce159350264f0a4b8cacd6642fe3ac">OnPublicationSubscribed</a>(std::shared_ptr&lt;core::interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1core_1_1interface_1_1_remote_member.html#aedb6200bf7cbaa46661f8c236d9553ba">OnPublicationUnsubscribed</a>(std::shared_ptr&lt;core::interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">// core::interface::Member</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> OnLeft() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> Dispose() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    connection::P2PConnection* GetOrCreateConnection();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    connection::P2PConnection* CreateConnection();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">bool</span> IsLocalPersonSubscribing();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">bool</span> IsSubscribingLocalPersonsPublication();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">bool</span> ShouldClose();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">void</span> CloseConnection();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    std::mutex connection_mtx_;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    std::unique_ptr&lt;connection::P2PConnection&gt; connection_;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    rtc::scoped_refptr&lt;webrtc::PeerConnectionFactoryInterface&gt; peer_connection_factory_;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::unique_ptr&lt;core::interface::IceManager&gt; ice_manager_;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;};</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}  <span class="comment">// namespace remote_person</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}  <span class="comment">// namespace plugin</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_REMOTE_PERSON_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">skyway::core::interface::Member::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition:</b> member.hpp:30</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_remote_member_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_remote_member.html">skyway::core::interface::RemoteMember</a></div><div class="ttdoc">このSDK以外で生成されたメンバ</div><div class="ttdef"><b>Definition:</b> remote_member.hpp:28</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_remote_member_html_ac4ce159350264f0a4b8cacd6642fe3ac"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_remote_member.html#ac4ce159350264f0a4b8cacd6642fe3ac">skyway::core::interface::RemoteMember::OnPublicationSubscribed</a></div><div class="ttdeci">virtual void OnPublicationSubscribed(std::shared_ptr&lt; interface::Subscription &gt; subscription)</div><div class="ttdoc">PublicationがSubscribeされた時に発生するイベント</div><div class="ttdef"><b>Definition:</b> remote_member.hpp:62</div></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_remote_member_html_aedb6200bf7cbaa46661f8c236d9553ba"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_remote_member.html#aedb6200bf7cbaa46661f8c236d9553ba">skyway::core::interface::RemoteMember::OnPublicationUnsubscribed</a></div><div class="ttdeci">virtual void OnPublicationUnsubscribed(std::shared_ptr&lt; interface::Subscription &gt; subscription)</div><div class="ttdoc">PublicationがUnsubscribeされた時に発生するイベント</div><div class="ttdef"><b>Definition:</b> remote_member.hpp:66</div></div>
+<div class="ttc" id="aclassskyway_1_1plugin_1_1remote__person_1_1_remote_person_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person_1_1_event_listener.html">skyway::plugin::remote_person::RemotePerson::EventListener</a></div><div class="ttdef"><b>Definition:</b> remote_person.hpp:26</div></div>
+<div class="ttc" id="aclassskyway_1_1plugin_1_1remote__person_1_1_remote_person_html"><div class="ttname"><a href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html">skyway::plugin::remote_person::RemotePerson</a></div><div class="ttdoc">RemotePersonの機能を持つメンバー</div><div class="ttdef"><b>Definition:</b> remote_person.hpp:24</div></div>
+<div class="ttc" id="aclassskyway_1_1plugin_1_1remote__person_1_1_remote_person_html_a15d24411fe20b465a6cae846b46f2796"><div class="ttname"><a href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html#a15d24411fe20b465a6cae846b46f2796">skyway::plugin::remote_person::RemotePerson::Subscribe</a></div><div class="ttdeci">std::shared_ptr&lt; core::interface::Subscription &gt; Subscribe(const std::string &amp;publication_id)</div><div class="ttdoc">Subscribeをさせます。</div></div>
 <div class="ttc" id="aclassskyway_1_1plugin_1_1remote__person_1_1_remote_person_html_a1a570c88dc6e8328bb9c4f7f8960982c"><div class="ttname"><a href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html#a1a570c88dc6e8328bb9c4f7f8960982c">skyway::plugin::remote_person::RemotePerson::Unsubscribe</a></div><div class="ttdeci">bool Unsubscribe(const std::string &amp;subscription_id)</div><div class="ttdoc">Subscribeを中止させます。</div></div>
-<div class="ttc" id="aclassskyway_1_1plugin_1_1remote__person_1_1_remote_person_html_a28696c70d7e84b4059e8c26cd876daf6"><div class="ttname"><a href="classskyway_1_1plugin_1_1remote__person_1_1_remote_person.html#a28696c70d7e84b4059e8c26cd876daf6">skyway::plugin::remote_person::RemotePerson::Subscribe</a></div><div class="ttdeci">std::shared_ptr&lt; core::interface::Subscription &gt; Subscribe(const std::string &amp;publication_id)</div><div class="ttdoc">Subscribeをさせます。</div></div>
-<div class="ttc" id="astructskyway_1_1model_1_1_member_html"><div class="ttname"><a href="structskyway_1_1model_1_1_member.html">skyway::model::Member</a></div><div class="ttdoc">メンバー情報</div><div class="ttdef"><b>Definition</b> domain.hpp:53</div></div>
+<div class="ttc" id="astructskyway_1_1model_1_1_member_html"><div class="ttname"><a href="structskyway_1_1model_1_1_member.html">skyway::model::Member</a></div><div class="ttdoc">メンバー情報</div><div class="ttdef"><b>Definition:</b> domain.hpp:53</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_77f3510bf786cf3c12f65f3b0b944be3.html">skyway</a></li><li class="navelem"><a class="el" href="dir_2f5c5cafdc41375a45daccc6a7112dee.html">plugin</a></li><li class="navelem"><a class="el" href="dir_446f9a35b4d27bbbce6cce5d66434d97.html">remote_person_plugin</a></li><li class="navelem"><b>remote_person.hpp</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

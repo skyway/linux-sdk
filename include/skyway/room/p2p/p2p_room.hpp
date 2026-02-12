@@ -34,6 +34,12 @@ public:
     P2PRoom(std::shared_ptr<core::interface::Channel> channel,
             std::unique_ptr<interface::RoomDomainFactory> factory);
     interface::RoomType Type() override;
+    /// @brief P2PRoomに存在するPublicationを取得します。
+    std::vector<std::shared_ptr<interface::RoomPublication>> Publications() override;
+    /// @brief P2PRoomに存在するSubscriptionを取得します。
+    std::vector<std::shared_ptr<interface::RoomSubscription>> Subscriptions() override;
+    /// @brief P2PRoomに存在するMemberを取得します。
+    std::vector<std::shared_ptr<interface::RoomMember>> Members() override;
 
     /// @brief P2PRoomを作成します。
     static std::shared_ptr<P2PRoom> Create(
@@ -57,6 +63,26 @@ public:
             std::make_unique<RoomDomainFactory>());
     /// @brief P2PRoomへ参加します。
     std::shared_ptr<LocalP2PRoomMember> Join(interface::RoomMemberInitOptions options);
+
+protected:
+    // core::interface::Channel::EventListener
+    void OnMemberListChanged() override;
+    void OnMemberJoined(std::shared_ptr<core::interface::Member> member) override;
+    void OnMemberLeft(std::shared_ptr<core::interface::Member> member) override;
+    void OnMemberMetadataUpdated(std::shared_ptr<core::interface::Member> member,
+                                 const std::string& metadata) override;
+    void OnPublicationMetadataUpdated(std::shared_ptr<core::interface::Publication> publication,
+                                      const std::string& metadata) override;
+    void OnPublicationListChanged() override;
+    void OnStreamPublished(std::shared_ptr<core::interface::Publication> publication) override;
+    void OnStreamUnpublished(std::shared_ptr<core::interface::Publication> publication) override;
+    void OnPublicationEnabled(std::shared_ptr<core::interface::Publication> publication) override;
+    void OnPublicationDisabled(std::shared_ptr<core::interface::Publication> publication) override;
+    void OnSubscriptionListChanged() override;
+    void OnPublicationSubscribed(
+        std::shared_ptr<core::interface::Subscription> subscription) override;
+    void OnPublicationUnsubscribed(
+        std::shared_ptr<core::interface::Subscription> subscription) override;
 
 private:
     static std::shared_ptr<P2PRoom> CreateShared(

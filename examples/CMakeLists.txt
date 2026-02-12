@@ -45,6 +45,7 @@ set( SKYWAY_LINUX_INCLUDES
         ${CMAKE_CURRENT_SOURCE_DIR}/../include)
 
 add_subdirectory("quickstart")
+add_subdirectory("sfu")
 
 # Enable opencv examples
 if(ENABLE_OPENCV_EXAMPLE)

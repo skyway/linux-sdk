@@ -44,28 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.8 -->
+    </div><!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -78,7 +72,7 @@ $(document).ready(function() { init_codefold(0); });
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(document).ready(function(){initNavTree('abstract_2room_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -92,152 +86,117 @@ $(document).ready(function(){initNavTree('abstract_2room_8hpp_source.html',''); 
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">読み取り中…</div>
-<div class="SRStatus" id="Searching">検索中…</div>
-<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">room.hpp</div></div>
+  <div class="headertitle">
+<div class="title">room.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef SKYWAY_ROOM_ABSTRACT_ROOM_HPP</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define SKYWAY_ROOM_ABSTRACT_ROOM_HPP</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;skyway/room/interface/room.hpp&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;skyway/room/interface/room_domain_cache_manager.hpp&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;skyway/room/interface/room_domain_factory.hpp&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;skyway/room/interface/room_subscription.hpp&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span>skyway {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span>room {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span>abstract {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1room_1_1abstract_1_1_room.html">Room</a> : <span class="keyword">public</span> <a class="code hl_class" href="classskyway_1_1room_1_1interface_1_1_room.html">interface::Room</a>, <span class="keyword">public</span> <a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html">core::interface::Channel::EventListener</a> {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classskyway_1_1room_1_1abstract_1_1_room.html">~Room</a>();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a5045dc96dea57dbf1dadfcd8860b7d1b">   22</a></span>    std::string <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#a5045dc96dea57dbf1dadfcd8860b7d1b">Id</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#ac76ef42a87690fcfdd73425c9b1b87ef">   23</a></span>    std::optional&lt;std::string&gt; <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#ac76ef42a87690fcfdd73425c9b1b87ef">Name</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a2f1d2b6b79bc47d91405cda926ff7d21">   24</a></span>    std::optional&lt;std::string&gt; <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#a2f1d2b6b79bc47d91405cda926ff7d21">Metadata</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#acc1e79c0fd1270e53fd4f047b1da1649">   25</a></span>    core::interface::ChannelState <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#acc1e79c0fd1270e53fd4f047b1da1649">State</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a7235afb26d64f8e96611c3fa2d057714">   26</a></span>    std::vector&lt;std::shared_ptr&lt;interface::RoomPublication&gt;&gt; <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#a7235afb26d64f8e96611c3fa2d057714">Publications</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a0ae56b0f69ee7bc11c7a30cf4ae32d1f">   27</a></span>    std::vector&lt;std::shared_ptr&lt;interface::RoomSubscription&gt;&gt; <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#a0ae56b0f69ee7bc11c7a30cf4ae32d1f">Subscriptions</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a908aa4d66d9ad22ec93db6dae96e1d7f">   28</a></span>    std::vector&lt;std::shared_ptr&lt;interface::RoomMember&gt;&gt; <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#a908aa4d66d9ad22ec93db6dae96e1d7f">Members</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#ab8d7808271c34edd3e956d6ad8f0b199">   29</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#ab8d7808271c34edd3e956d6ad8f0b199">AddEventListener</a>(<a class="code hl_class" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">interface::Room::EventListener</a>* listener) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a7e4e507a38a89abe375dd565461e96bd">   30</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#a7e4e507a38a89abe375dd565461e96bd">RemoveEventListener</a>(<a class="code hl_class" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">interface::Room::EventListener</a>* listener) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#ad5b08ea123c4ffd28d65736460a55206">   31</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#ad5b08ea123c4ffd28d65736460a55206">UpdateMetadata</a>(<span class="keyword">const</span> std::string&amp; metadata) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a7ee752198a87004020d592cf8040b983">   32</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#a7ee752198a87004020d592cf8040b983">Leave</a>(<a class="code hl_class" href="classskyway_1_1room_1_1interface_1_1_room_member.html">interface::RoomMember</a>* member) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#aa8ff369a3d2eefa00c847cb5a37c350d">   33</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#aa8ff369a3d2eefa00c847cb5a37c350d">Close</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a9641d6835066b3cb7f1ee62db5e9f3c5">   34</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#a9641d6835066b3cb7f1ee62db5e9f3c5">Dispose</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RoomPublication&gt;&gt;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    GetRoomPublicationCacheManager() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RoomSubscription&gt;&gt;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    GetRoomSubscriptionCacheManager() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::LocalRoomMember&gt;&gt;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    GetLocalRoomMemberCacheManager() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RemoteRoomMember&gt;&gt;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    GetRemoteRoomMemberCacheManager() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_class" href="classskyway_1_1room_1_1abstract_1_1_room.html">Room</a>(std::shared_ptr&lt;core::interface::Channel&gt; core,</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>         std::unique_ptr&lt;interface::RoomDomainFactory&gt; factory,</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>         std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RoomPublication&gt;&gt;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>             room_publication_cache_manager,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>         std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RoomSubscription&gt;&gt;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>             room_subscription_cache_manager,</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>         std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::LocalRoomMember&gt;&gt;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>             local_room_member_cache_manager,</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>         std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RemoteRoomMember&gt;&gt;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>             remote_room_member_cache_manager);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// core::interface::Channel::EventListener</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a523cb4006f062249ed82141a0de255aa">   60</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#a523cb4006f062249ed82141a0de255aa">OnClosed</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a80ef50c6e9789a02e5701fcb2ca4fc34">   61</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#a80ef50c6e9789a02e5701fcb2ca4fc34">OnMetadataUpdated</a>(<span class="keyword">const</span> std::string&amp; metadata) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#acbbcac1950a21bb3d4c39e7b23f11935">   62</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#acbbcac1950a21bb3d4c39e7b23f11935">OnMemberListChanged</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> OnMemberJoined(std::shared_ptr&lt;core::interface::Member&gt; member) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> OnMemberLeft(std::shared_ptr&lt;core::interface::Member&gt; member) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> OnMemberMetadataUpdated(std::shared_ptr&lt;core::interface::Member&gt; member,</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                                 <span class="keyword">const</span> std::string&amp; metadata) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> OnPublicationMetadataUpdated(std::shared_ptr&lt;core::interface::Publication&gt; publication,</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                                      <span class="keyword">const</span> std::string&amp; metadata) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a43ae2baf9ec5c4e15808aef5556ea339">   69</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#a43ae2baf9ec5c4e15808aef5556ea339">OnPublicationListChanged</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> OnStreamPublished(std::shared_ptr&lt;core::interface::Publication&gt; publication) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> OnStreamUnpublished(std::shared_ptr&lt;core::interface::Publication&gt; publication) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> OnPublicationEnabled(std::shared_ptr&lt;core::interface::Publication&gt; publication) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> OnPublicationDisabled(std::shared_ptr&lt;core::interface::Publication&gt; publication) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#aff052fc7dfe4ce5be0edf06206299af1">   74</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1room_1_1abstract_1_1_room.html#aff052fc7dfe4ce5be0edf06206299af1">OnSubscriptionListChanged</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">void</span> OnPublicationSubscribed(</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        std::shared_ptr&lt;core::interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">void</span> OnPublicationUnsubscribed(</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        std::shared_ptr&lt;core::interface::Subscription&gt; subscription) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::shared_ptr&lt;core::interface::Channel&gt; core_;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    std::unique_ptr&lt;interface::RoomDomainFactory&gt; factory_;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    std::mutex listener_mtx_;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_class" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">interface::Room::EventListener</a>* listener_;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">const</span> std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RoomPublication&gt;&gt;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        room_publication_cache_manager_;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">const</span> std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RoomSubscription&gt;&gt;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        room_subscription_cache_manager_;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">const</span> std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::LocalRoomMember&gt;&gt;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        local_room_member_cache_manager_;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">const</span> std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RemoteRoomMember&gt;&gt;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        remote_room_member_cache_manager_;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>};</div>
-</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}  <span class="comment">// namespace abstract</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}  <span class="comment">// namespace room</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_ROOM_ABSTRACT_ROOM_HPP */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html">skyway::core::interface::Channel::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition</b> channel.hpp:30</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html">skyway::room::abstract::Room</a></div><div class="ttdoc">Roomの操作を行う抽象クラス</div><div class="ttdef"><b>Definition</b> room.hpp:19</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_a0ae56b0f69ee7bc11c7a30cf4ae32d1f"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#a0ae56b0f69ee7bc11c7a30cf4ae32d1f">skyway::room::abstract::Room::Subscriptions</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; interface::RoomSubscription &gt; &gt; Subscriptions() override</div><div class="ttdoc">Roomインスタンスに紐づくSubscriptionの一覧を取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_a2f1d2b6b79bc47d91405cda926ff7d21"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#a2f1d2b6b79bc47d91405cda926ff7d21">skyway::room::abstract::Room::Metadata</a></div><div class="ttdeci">std::optional&lt; std::string &gt; Metadata() override</div><div class="ttdoc">Metadataを取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_a43ae2baf9ec5c4e15808aef5556ea339"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#a43ae2baf9ec5c4e15808aef5556ea339">skyway::room::abstract::Room::OnPublicationListChanged</a></div><div class="ttdeci">void OnPublicationListChanged() override</div><div class="ttdoc">Publicationが作成または削除された時に発生するイベント</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef SKYWAY_ROOM_ABSTRACT_ROOM_HPP</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define SKYWAY_ROOM_ABSTRACT_ROOM_HPP</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;skyway/room/interface/room.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;skyway/room/interface/room_domain_cache_manager.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;skyway/room/interface/room_domain_factory.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;skyway/room/interface/room_subscription.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>skyway {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>room {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>abstract {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classskyway_1_1room_1_1abstract_1_1_room.html">Room</a> : <span class="keyword">public</span> <a class="code" href="classskyway_1_1room_1_1interface_1_1_room.html">interface::Room</a>, <span class="keyword">public</span> <a class="code" href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html">core::interface::Channel::EventListener</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classskyway_1_1room_1_1abstract_1_1_room.html">Room</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a5045dc96dea57dbf1dadfcd8860b7d1b">   22</a></span>&#160;    std::string <a class="code" href="classskyway_1_1room_1_1abstract_1_1_room.html#a5045dc96dea57dbf1dadfcd8860b7d1b">Id</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#aef7b8ff5cd45357d8e4c527eccbbb38b">   23</a></span>&#160;    std::optional&lt;std::string&gt; <a class="code" href="classskyway_1_1room_1_1abstract_1_1_room.html#aef7b8ff5cd45357d8e4c527eccbbb38b">Name</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a6f225e92a0db0f11ec38894338adc694">   24</a></span>&#160;    std::optional&lt;std::string&gt; <a class="code" href="classskyway_1_1room_1_1abstract_1_1_room.html#a6f225e92a0db0f11ec38894338adc694">Metadata</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#acc1e79c0fd1270e53fd4f047b1da1649">   25</a></span>&#160;    core::interface::ChannelState <a class="code" href="classskyway_1_1room_1_1abstract_1_1_room.html#acc1e79c0fd1270e53fd4f047b1da1649">State</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#ab8d7808271c34edd3e956d6ad8f0b199">   26</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1room_1_1abstract_1_1_room.html#ab8d7808271c34edd3e956d6ad8f0b199">AddEventListener</a>(<a class="code" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">interface::Room::EventListener</a>* listener) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a7e4e507a38a89abe375dd565461e96bd">   27</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1room_1_1abstract_1_1_room.html#a7e4e507a38a89abe375dd565461e96bd">RemoveEventListener</a>(<a class="code" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">interface::Room::EventListener</a>* listener) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#ad5b08ea123c4ffd28d65736460a55206">   28</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1room_1_1abstract_1_1_room.html#ad5b08ea123c4ffd28d65736460a55206">UpdateMetadata</a>(<span class="keyword">const</span> std::string&amp; metadata) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a7ee752198a87004020d592cf8040b983">   29</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1room_1_1abstract_1_1_room.html#a7ee752198a87004020d592cf8040b983">Leave</a>(<a class="code" href="classskyway_1_1room_1_1interface_1_1_room_member.html">interface::RoomMember</a>* member) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#aa8ff369a3d2eefa00c847cb5a37c350d">   30</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1room_1_1abstract_1_1_room.html#aa8ff369a3d2eefa00c847cb5a37c350d">Close</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a9641d6835066b3cb7f1ee62db5e9f3c5">   31</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1room_1_1abstract_1_1_room.html#a9641d6835066b3cb7f1ee62db5e9f3c5">Dispose</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RoomPublication&gt;&gt;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    GetRoomPublicationCacheManager() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RoomSubscription&gt;&gt;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    GetRoomSubscriptionCacheManager() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::LocalRoomMember&gt;&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    GetLocalRoomMemberCacheManager() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RemoteRoomMember&gt;&gt;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    GetRemoteRoomMemberCacheManager() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classskyway_1_1room_1_1abstract_1_1_room.html">Room</a>(std::shared_ptr&lt;core::interface::Channel&gt; core,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;         std::unique_ptr&lt;interface::RoomDomainFactory&gt; factory,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;         std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RoomPublication&gt;&gt;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;             room_publication_cache_manager,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;         std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RoomSubscription&gt;&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;             room_subscription_cache_manager,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;         std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::LocalRoomMember&gt;&gt;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;             local_room_member_cache_manager,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;         std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RemoteRoomMember&gt;&gt;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;             remote_room_member_cache_manager);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// core::interface::Channel::EventListener</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a523cb4006f062249ed82141a0de255aa">   56</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1room_1_1abstract_1_1_room.html#a523cb4006f062249ed82141a0de255aa">OnClosed</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classskyway_1_1room_1_1abstract_1_1_room.html#a80ef50c6e9789a02e5701fcb2ca4fc34">   57</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classskyway_1_1room_1_1abstract_1_1_room.html#a80ef50c6e9789a02e5701fcb2ca4fc34">OnMetadataUpdated</a>(<span class="keyword">const</span> std::string&amp; metadata) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    std::shared_ptr&lt;core::interface::Channel&gt; core_;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    std::unique_ptr&lt;interface::RoomDomainFactory&gt; factory_;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    std::mutex listener_mtx_;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">interface::Room::EventListener</a>* listener_;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RoomPublication&gt;&gt;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        room_publication_cache_manager_;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RoomSubscription&gt;&gt;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        room_subscription_cache_manager_;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::LocalRoomMember&gt;&gt;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        local_room_member_cache_manager_;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;interface::RoomDomainCacheManager&lt;interface::RemoteRoomMember&gt;&gt;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        remote_room_member_cache_manager_;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}  <span class="comment">// namespace abstract</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}  <span class="comment">// namespace room</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_ROOM_ABSTRACT_ROOM_HPP */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html">skyway::core::interface::Channel::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition:</b> channel.hpp:30</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html">skyway::room::abstract::Room</a></div><div class="ttdoc">Roomの操作を行う抽象クラス</div><div class="ttdef"><b>Definition:</b> room.hpp:19</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_a5045dc96dea57dbf1dadfcd8860b7d1b"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#a5045dc96dea57dbf1dadfcd8860b7d1b">skyway::room::abstract::Room::Id</a></div><div class="ttdeci">std::string Id() override</div><div class="ttdoc">Idを取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_a523cb4006f062249ed82141a0de255aa"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#a523cb4006f062249ed82141a0de255aa">skyway::room::abstract::Room::OnClosed</a></div><div class="ttdeci">void OnClosed() override</div><div class="ttdoc">このChannelが閉じられた時に発生するイベント</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_a7235afb26d64f8e96611c3fa2d057714"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#a7235afb26d64f8e96611c3fa2d057714">skyway::room::abstract::Room::Publications</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; interface::RoomPublication &gt; &gt; Publications() override</div><div class="ttdoc">Roomインスタンスに紐づくPublicationの一覧を取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_a6f225e92a0db0f11ec38894338adc694"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#a6f225e92a0db0f11ec38894338adc694">skyway::room::abstract::Room::Metadata</a></div><div class="ttdeci">std::optional&lt; std::string &gt; Metadata() override</div><div class="ttdoc">Metadataを取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_a7e4e507a38a89abe375dd565461e96bd"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#a7e4e507a38a89abe375dd565461e96bd">skyway::room::abstract::Room::RemoveEventListener</a></div><div class="ttdeci">void RemoveEventListener(interface::Room::EventListener *listener) override</div><div class="ttdoc">イベントの購読を中止します。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_a7ee752198a87004020d592cf8040b983"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#a7ee752198a87004020d592cf8040b983">skyway::room::abstract::Room::Leave</a></div><div class="ttdeci">bool Leave(interface::RoomMember *member) override</div><div class="ttdoc">指定したMemberをRoomから退室させます。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_a80ef50c6e9789a02e5701fcb2ca4fc34"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#a80ef50c6e9789a02e5701fcb2ca4fc34">skyway::room::abstract::Room::OnMetadataUpdated</a></div><div class="ttdeci">void OnMetadataUpdated(const std::string &amp;metadata) override</div><div class="ttdoc">このChannelのMetadataが更新された時に発生するイベント</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_a908aa4d66d9ad22ec93db6dae96e1d7f"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#a908aa4d66d9ad22ec93db6dae96e1d7f">skyway::room::abstract::Room::Members</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; interface::RoomMember &gt; &gt; Members() override</div><div class="ttdoc">Roomインスタンスに紐づくRoomMemberの一覧を取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_a9641d6835066b3cb7f1ee62db5e9f3c5"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#a9641d6835066b3cb7f1ee62db5e9f3c5">skyway::room::abstract::Room::Dispose</a></div><div class="ttdeci">void Dispose() override</div><div class="ttdoc">Roomを破棄します。破棄されたRoomではイベントが発火しなくなります。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_aa8ff369a3d2eefa00c847cb5a37c350d"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#aa8ff369a3d2eefa00c847cb5a37c350d">skyway::room::abstract::Room::Close</a></div><div class="ttdeci">bool Close() override</div><div class="ttdoc">Roomを閉じます。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_ab8d7808271c34edd3e956d6ad8f0b199"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#ab8d7808271c34edd3e956d6ad8f0b199">skyway::room::abstract::Room::AddEventListener</a></div><div class="ttdeci">void AddEventListener(interface::Room::EventListener *listener) override</div><div class="ttdoc">イベントを購読します。</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_ac76ef42a87690fcfdd73425c9b1b87ef"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#ac76ef42a87690fcfdd73425c9b1b87ef">skyway::room::abstract::Room::Name</a></div><div class="ttdeci">std::optional&lt; std::string &gt; Name() override</div><div class="ttdoc">Nameを取得します。</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_acbbcac1950a21bb3d4c39e7b23f11935"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#acbbcac1950a21bb3d4c39e7b23f11935">skyway::room::abstract::Room::OnMemberListChanged</a></div><div class="ttdeci">void OnMemberListChanged() override</div><div class="ttdoc">Member が入退出したときに発生するイベント</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_acc1e79c0fd1270e53fd4f047b1da1649"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#acc1e79c0fd1270e53fd4f047b1da1649">skyway::room::abstract::Room::State</a></div><div class="ttdeci">core::interface::ChannelState State() override</div><div class="ttdoc">Stateを取得します。</div></div>
 <div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_ad5b08ea123c4ffd28d65736460a55206"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#ad5b08ea123c4ffd28d65736460a55206">skyway::room::abstract::Room::UpdateMetadata</a></div><div class="ttdeci">bool UpdateMetadata(const std::string &amp;metadata) override</div><div class="ttdoc">Metadataを更新します。</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_aff052fc7dfe4ce5be0edf06206299af1"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#aff052fc7dfe4ce5be0edf06206299af1">skyway::room::abstract::Room::OnSubscriptionListChanged</a></div><div class="ttdeci">void OnSubscriptionListChanged() override</div><div class="ttdoc">StreamがSubscribeまたはUnsubscribeされた時に発生するイベント</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition</b> room.hpp:77</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_html"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room.html">skyway::room::interface::Room</a></div><div class="ttdoc">Roomの操作を行うインターフェース</div><div class="ttdef"><b>Definition</b> room.hpp:74</div></div>
-<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_html"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member.html">skyway::room::interface::RoomMember</a></div><div class="ttdoc">RoomMemberの操作を行うインターフェース</div><div class="ttdef"><b>Definition</b> room_member.hpp:19</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1abstract_1_1_room_html_aef7b8ff5cd45357d8e4c527eccbbb38b"><div class="ttname"><a href="classskyway_1_1room_1_1abstract_1_1_room.html#aef7b8ff5cd45357d8e4c527eccbbb38b">skyway::room::abstract::Room::Name</a></div><div class="ttdeci">std::optional&lt; std::string &gt; Name() override</div><div class="ttdoc">Nameを取得します。</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html">skyway::room::interface::Room::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition:</b> room.hpp:77</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_html"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room.html">skyway::room::interface::Room</a></div><div class="ttdoc">Roomの操作を行うインターフェース</div><div class="ttdef"><b>Definition:</b> room.hpp:74</div></div>
+<div class="ttc" id="aclassskyway_1_1room_1_1interface_1_1_room_member_html"><div class="ttname"><a href="classskyway_1_1room_1_1interface_1_1_room_member.html">skyway::room::interface::RoomMember</a></div><div class="ttdoc">RoomMemberの操作を行うインターフェース</div><div class="ttdef"><b>Definition:</b> room_member.hpp:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_77f3510bf786cf3c12f65f3b0b944be3.html">skyway</a></li><li class="navelem"><a class="el" href="dir_64c8f5548683072db6c673aefb9e2785.html">room</a></li><li class="navelem"><a class="el" href="dir_3f45900417246bb582aeff61acad8ab6.html">abstract</a></li><li class="navelem"><b>room.hpp</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

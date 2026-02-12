@@ -5,6 +5,8 @@
 #ifndef SKYWAY_CORE_STREAM_REMOTE_DATA_STREAM_HPP_
 #define SKYWAY_CORE_STREAM_REMOTE_DATA_STREAM_HPP_
 
+#include <mutex>
+
 #include <api/data_channel_interface.h>
 
 #include "skyway/core/interface/remote_stream.hpp"
@@ -30,6 +32,10 @@ public:
     /// @brief データ受信イベントリスナを購読します。
     /// @param listener データ受信イベントリスナ
     virtual void AddListener(Listener* listener);
+    
+    /// @brief データ受信イベントリスナの購読を中止します。
+    /// @param listener データ受信イベントリスナ
+    virtual void RemoveListener(Listener* listener);
 
     /// @cond INTERNAL_SECTION
     void OnDataBuffer(const webrtc::DataBuffer& buffer);
@@ -40,6 +46,7 @@ public:
     /// @endcond
 
 private:
+    std::mutex listeners_mutex_;
     std::vector<Listener*> listeners_;
     std::atomic<bool> is_enabled_;
 };

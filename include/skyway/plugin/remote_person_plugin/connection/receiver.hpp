@@ -82,6 +82,7 @@ private:
     void SetupTransportAccessForStream();
     bool IsInvalidSignalingState();
     void NotifyConnectionStateChanged(const core::ConnectionState new_state);
+    std::optional<std::weak_ptr<core::interface::Subscription>> FindSubscription(const std::string& stream_id);
 
     std::weak_ptr<core::interface::Subscription> target_subscription_;
     std::mutex subscriptions_mutex_;

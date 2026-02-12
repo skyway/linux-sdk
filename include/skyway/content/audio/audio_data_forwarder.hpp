@@ -7,6 +7,7 @@
 
 #include "audio_data_listener.hpp"
 #include <mutex>
+#include <set>
 #include <memory>
 
 namespace skyway {
@@ -17,13 +18,13 @@ class AudioDataForwarder {
 public:
     AudioDataForwarder();
     ~AudioDataForwarder();
-    void onAudioData(size_t num_channels, size_t num_frames, int sample_rate, std::vector<int16_t>& audio_data);
-
-    void SetAudioDataListener(std::shared_ptr<AudioDataListener> listener);
-    void RemoveAudioDataListener();
+    void OnAudioData(size_t num_channels, size_t num_frames, int sample_rate, std::vector<int16_t>& audio_data);
+    void AddAudioDataListener(std::shared_ptr<AudioDataListener> listener);
+    void RemoveAudioDataListener(std::shared_ptr<AudioDataListener> listener);
+    void ClearAudioDataListeners();
 private:
-    std::shared_ptr<AudioDataListener> audio_data_listener_;
-    std::mutex audio_data_listener_mutex_;
+    std::vector<std::shared_ptr<AudioDataListener>> audio_data_listeners_;
+    std::mutex audio_data_listeners_mutex_;
 };
 }
 }

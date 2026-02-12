@@ -26,6 +26,7 @@ public:
         interface::LocalRoomMember::SubscriptionOptions options) override;
     bool Unpublish(const std::string& publication_id) override;
     bool Unsubscribe(const std::string& subscription_id) override;
+    std::vector<std::shared_ptr<interface::RoomPublication>> Publications() override;
 
 private:
     std::shared_ptr<core::interface::LocalPerson> LocalPerson();
