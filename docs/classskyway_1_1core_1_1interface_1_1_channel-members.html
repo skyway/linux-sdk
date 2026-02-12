@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('classskyway_1_1core_1_1interface_1_1_channel.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,42 +87,48 @@ $(document).ready(function(){initNavTree('classskyway_1_1core_1_1interface_1_1_c
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">skyway::core::interface::Channel メンバ一覧</div>  </div>
+  <div class="headertitle"><div class="title">skyway::core::interface::Channel メンバ一覧</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>継承メンバを含む <a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a> の全メンバ一覧です。</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a15ae248a5311cccd7a7bd155cfcc12d0">AddEventListener</a>(EventListener *listener)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#aa63dccd3eee997016601e65e808fc530">Bots</a>(bool active_only=true)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a95c689a7b7dc8080b4d6c2a67bad3fe7">Bots</a>(bool active_only=true)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a79b779d3526e16620749d1fc7424cffa">Close</a>()=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a2cc0752f2e40e371dbf344ac2b1d668e">Dispose</a>(bool remove_myself_if_needed)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a2cc0752f2e40e371dbf344ac2b1d668e">Dispose</a>(bool remove_myself_if_needed)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a51a43d3c304660777d0a29b5d8dc68e4">Id</a>() const =0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a9f2f0e01b4534e44fd939a804e59acc4">Join</a>(const model::Member::Init &amp;init)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#ad71ba4275af341f581905a22b0d71405">Join</a>(const model::Member::Init &amp;init)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#ac7508e2d8b311dfb1b6b7a0b25d2f325">Leave</a>(std::shared_ptr&lt; interface::Member &gt; member)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a36fa344412ae338a9d613f0ada88d3f4">LocalPerson</a>()=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a3d8a7a9fa21c2f6da3cb1f3a8f7534c0">Members</a>(bool active_only=true)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#aa8c291ff96197d74702d9a19c804e6e1">Metadata</a>() const =0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a7dd718de5ff3760281bc1e639b51e56b">Name</a>() const =0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a29381dbdfe2b346226f9c229b64ef5b5">Publications</a>(bool active_only=true)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a8297389a7ae8f4f693aa452f957729a9">LocalPerson</a>()=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#acfb9868a66e73a3ededffc2c071cc0a6">Members</a>(bool active_only=true)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a5a0a19bd80d07aade2053cc0698c1c64">Metadata</a>() const =0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a83eaf3b2f2773a0124ee80aa000a326d">Name</a>() const =0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a98c3b6e1693e918cfd34f7b1de1a542a">Publications</a>(bool active_only=true)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a3029f7ae43d178fa2d3dbdda663ad0e7">RemoveEventListener</a>(EventListener *listener)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a4b7e99b924ae4ee1bf9dce12d5a846ce">State</a>() const =0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a3ad3b576dce912ffde0e93d8bc833910">Subscriptions</a>(bool active_only=true)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a35de7b3a342e7cd7faa6d668001c027b">UpdateMetadata</a>(const std::string &amp;metadata)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a4b7e99b924ae4ee1bf9dce12d5a846ce">State</a>() const =0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#ab0e207f4bf2efe87a5c914359c9f7d26">Subscriptions</a>(bool active_only=true)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a35de7b3a342e7cd7faa6d668001c027b">UpdateMetadata</a>(const std::string &amp;metadata)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~Channel</b>()=default (定義場所: <a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a>)</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

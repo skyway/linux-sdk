@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['非推奨一覧_259',['非推奨一覧',['../deprecated.html',1,'']]]
+  ['商標_0',['商標',['../index.html#autotoc_md2',1,'']]]
 ];

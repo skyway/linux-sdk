@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('functions_func_c.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,77 +87,38 @@ $(document).ready(function(){initNavTree('functions_func_c.html',''); initResiza
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="contents">
-&#160;
+<div class="textblock">&#160;</div>
 
-<h3><a id="index_c"></a>- c -</h3><ul>
-<li>Cancel()
-: <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html#a89a549a3979e7b1bc8a1140b18a79f3e">skyway::core::interface::Publication</a>
-, <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html#a946d0d66845450217a94f761d74ac05c">skyway::core::interface::Subscription</a>
-, <a class="el" href="classskyway_1_1core_1_1_publication.html#a8d28b7e1e13b4eb9d3b6899fe10fff9f">skyway::core::Publication</a>
-, <a class="el" href="classskyway_1_1core_1_1_subscription.html#aedde056c6478297b32b396924728c0c5">skyway::core::Subscription</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html#aba2de3d7714fd08001e75220c20671f1">skyway::room::interface::RoomPublication</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a29c7317e47219f315f1fd810a408770a">skyway::room::interface::RoomSubscription</a>
-, <a class="el" href="classskyway_1_1room_1_1_room_publication.html#af514237feb237e1ebcb9a6ce161f13e5">skyway::room::RoomPublication</a>
-, <a class="el" href="classskyway_1_1room_1_1_room_subscription.html#ae4e56aa8055e833562ff739318ecf44d">skyway::room::RoomSubscription</a>
-</li>
-<li>ChangePreferredEncoding()
-: <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html#a1d481353896e7ff6bda5cea5b7983ed1">skyway::core::interface::Subscription</a>
-, <a class="el" href="classskyway_1_1core_1_1_subscription.html#a2586a488dcd566eecb6ca3de8ed0ca01">skyway::core::Subscription</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a402623fe8b40d997969f7182cefcb210">skyway::room::interface::RoomSubscription</a>
-, <a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a96f7ad3c2647c9d26795e6a911ee0611">skyway::room::RoomSubscription</a>
-</li>
-<li>Close()
-: <a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a62eedbaddc908e7f06398355305529ab">skyway::core::channel::Channel</a>
-, <a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a79b779d3526e16620749d1fc7424cffa">skyway::core::interface::Channel</a>
-, <a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#aa8ff369a3d2eefa00c847cb5a37c350d">skyway::room::abstract::Room</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#a1da8a4a619516ab94a794d1e477147c4">skyway::room::interface::Room</a>
-</li>
-<li>CodecCapabilities()
-: <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html#aecbc929e907906a41b2fd346dca1bb68">skyway::core::interface::Publication</a>
-, <a class="el" href="classskyway_1_1core_1_1_publication.html#a1fab2c57ef285637205f8a37fbbf3fe0">skyway::core::Publication</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html#aed28674b28651b889cd7ecf794c1645f">skyway::room::interface::RoomPublication</a>
-, <a class="el" href="classskyway_1_1room_1_1_room_publication.html#ab35cb4bf8599fd1409ba7219c7aabbd4">skyway::room::RoomPublication</a>
-</li>
-<li>ContentType()
-: <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html#ae5720af0aa69711426fc90e6ef847dbb">skyway::core::interface::Publication</a>
-, <a class="el" href="classskyway_1_1core_1_1interface_1_1_stream.html#ad5e136124332272c163aa046689bfaba">skyway::core::interface::Stream</a>
-, <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html#a1e0e4ef0f6837a8a5ae2ed96238870fe">skyway::core::interface::Subscription</a>
-, <a class="el" href="classskyway_1_1core_1_1_publication.html#a17164fe737f804334422b6a8fe42289f">skyway::core::Publication</a>
-, <a class="el" href="classskyway_1_1core_1_1_subscription.html#abef87daaa0865f97d55f036986a28df8">skyway::core::Subscription</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html#acb0be4751a68592e2d71827bf2f2be28">skyway::room::interface::RoomPublication</a>
-, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a9e5d6fe1fa7e22645f886c6da206e11b">skyway::room::interface::RoomSubscription</a>
-, <a class="el" href="classskyway_1_1room_1_1_room_publication.html#ac9c2a9fd738aaeb724d0ea933b8676c1">skyway::room::RoomPublication</a>
-, <a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a65b45ad7ac9474aa67c5ff0c61b86907">skyway::room::RoomSubscription</a>
-</li>
-<li>Create()
-: <a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a8be3375d2ffd41fb50e756c107f5be95">skyway::core::channel::Channel</a>
-, <a class="el" href="classskyway_1_1media_1_1audio_1_1_pcm_audio_source.html#a0ddbfea08b1ae5dc6dfdb64fcc83ca36">skyway::media::audio::PcmAudioSource</a>
-, <a class="el" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a8cbf8633ed5bb73bce59c5789a154f2c">skyway::media::rtp::RtpCapturerVideoSource</a>
-, <a class="el" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#a1e80cc6bfdb60420608705180046ca56">skyway::room::p2p::P2PRoom</a>
-, <a class="el" href="classskyway_1_1room_1_1sfu_1_1_s_f_u_room.html#a6384c806327d9727a267d80112330574">skyway::room::sfu::SFURoom</a>
-</li>
-<li>CreateAudioStream()
-: <a class="el" href="classskyway_1_1media_1_1_stream_factory.html#a9cb43359712b2405751abdee0a807f4a">skyway::media::StreamFactory</a>
-</li>
-<li>CreateDataStream()
-: <a class="el" href="classskyway_1_1media_1_1_stream_factory.html#a1e576b2f7feb5d1a5f410078472710f1">skyway::media::StreamFactory</a>
-</li>
-<li>CreateVideoStream()
-: <a class="el" href="classskyway_1_1media_1_1_stream_factory.html#a547ae1ea932e02bda5695342a75bd8be">skyway::media::StreamFactory</a>
-</li>
+<h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>Cancel()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html#a89a549a3979e7b1bc8a1140b18a79f3e">skyway::core::interface::Publication</a>, <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html#a946d0d66845450217a94f761d74ac05c">skyway::core::interface::Subscription</a>, <a class="el" href="classskyway_1_1core_1_1_publication.html#a8d28b7e1e13b4eb9d3b6899fe10fff9f">skyway::core::Publication</a>, <a class="el" href="classskyway_1_1core_1_1_subscription.html#aedde056c6478297b32b396924728c0c5">skyway::core::Subscription</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html#aba2de3d7714fd08001e75220c20671f1">skyway::room::interface::RoomPublication</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a29c7317e47219f315f1fd810a408770a">skyway::room::interface::RoomSubscription</a>, <a class="el" href="classskyway_1_1room_1_1_room_publication.html#af514237feb237e1ebcb9a6ce161f13e5">skyway::room::RoomPublication</a>, <a class="el" href="classskyway_1_1room_1_1_room_subscription.html#ae4e56aa8055e833562ff739318ecf44d">skyway::room::RoomSubscription</a></li>
+<li>ChangePreferredEncoding()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html#a1d481353896e7ff6bda5cea5b7983ed1">skyway::core::interface::Subscription</a>, <a class="el" href="classskyway_1_1core_1_1_subscription.html#a2586a488dcd566eecb6ca3de8ed0ca01">skyway::core::Subscription</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a402623fe8b40d997969f7182cefcb210">skyway::room::interface::RoomSubscription</a>, <a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a96f7ad3c2647c9d26795e6a911ee0611">skyway::room::RoomSubscription</a></li>
+<li>Close()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a62eedbaddc908e7f06398355305529ab">skyway::core::channel::Channel</a>, <a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#a79b779d3526e16620749d1fc7424cffa">skyway::core::interface::Channel</a>, <a class="el" href="classskyway_1_1room_1_1abstract_1_1_room.html#aa8ff369a3d2eefa00c847cb5a37c350d">skyway::room::abstract::Room</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room.html#a1da8a4a619516ab94a794d1e477147c4">skyway::room::interface::Room</a></li>
+<li>CodecCapabilities()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html#aa087f10c350c52d986a8c930a1e45f34">skyway::core::interface::Publication</a>, <a class="el" href="classskyway_1_1core_1_1_publication.html#ad05c3a455d128da7035a41acc9da6e88">skyway::core::Publication</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html#affd51794819b701b736025b2ab6a6e88">skyway::room::interface::RoomPublication</a>, <a class="el" href="classskyway_1_1room_1_1_room_publication.html#a6cfbc930b41826e5c056c777148d26c4">skyway::room::RoomPublication</a></li>
+<li>ContentType()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html#ae5720af0aa69711426fc90e6ef847dbb">skyway::core::interface::Publication</a>, <a class="el" href="classskyway_1_1core_1_1interface_1_1_stream.html#ad5e136124332272c163aa046689bfaba">skyway::core::interface::Stream</a>, <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html#a1e0e4ef0f6837a8a5ae2ed96238870fe">skyway::core::interface::Subscription</a>, <a class="el" href="classskyway_1_1core_1_1_publication.html#a17164fe737f804334422b6a8fe42289f">skyway::core::Publication</a>, <a class="el" href="classskyway_1_1core_1_1_subscription.html#abef87daaa0865f97d55f036986a28df8">skyway::core::Subscription</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html#acb0be4751a68592e2d71827bf2f2be28">skyway::room::interface::RoomPublication</a>, <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html#a9e5d6fe1fa7e22645f886c6da206e11b">skyway::room::interface::RoomSubscription</a>, <a class="el" href="classskyway_1_1room_1_1_room_publication.html#ac9c2a9fd738aaeb724d0ea933b8676c1">skyway::room::RoomPublication</a>, <a class="el" href="classskyway_1_1room_1_1_room_subscription.html#a65b45ad7ac9474aa67c5ff0c61b86907">skyway::room::RoomSubscription</a></li>
+<li>Create()&#160;:&#160;<a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a6c23925f64bc82bcfb16191aff5eca5f">skyway::core::channel::Channel</a>, <a class="el" href="classskyway_1_1media_1_1audio_1_1_pcm_audio_source.html#a960cfec8184989203c0681c56baa3a03">skyway::media::audio::PcmAudioSource</a>, <a class="el" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a99e4d57d975be591e55b5967be674def">skyway::media::rtp::RtpCapturerVideoSource</a>, <a class="el" href="classskyway_1_1room_1_1p2p_1_1_p2_p_room.html#af3c7caa7e0133aea9f0bff1ed20be981">skyway::room::p2p::P2PRoom</a>, <a class="el" href="classskyway_1_1room_1_1sfu_1_1_s_f_u_room.html#a646e15236ab786f66ea5ef81d7bb153f">skyway::room::sfu::SFURoom</a></li>
+<li>CreateAudioStream()&#160;:&#160;<a class="el" href="classskyway_1_1media_1_1_stream_factory.html#ae6f1267c07231eb6feb972d657343433">skyway::media::StreamFactory</a></li>
+<li>CreateDataStream()&#160;:&#160;<a class="el" href="classskyway_1_1media_1_1_stream_factory.html#a7200a8105e0d6ee14a9230df73087c2b">skyway::media::StreamFactory</a></li>
+<li>CreateVideoStream()&#160;:&#160;<a class="el" href="classskyway_1_1media_1_1_stream_factory.html#ad25a3f1dd6a1dd9f31f72b77d635b07d">skyway::media::StreamFactory</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

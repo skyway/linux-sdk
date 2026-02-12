@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['非推奨一覧_524',['非推奨一覧',['../deprecated.html',1,'']]]
+  ['sdk_0',['SkyWay Linux SDK',['../index.html',1,'']]],
+  ['skyway_20linux_20sdk_1',['SkyWay Linux SDK',['../index.html',1,'']]]
 ];

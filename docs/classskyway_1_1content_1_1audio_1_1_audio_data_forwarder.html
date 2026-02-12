@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('classskyway_1_1content_1_1audio_1_1_audio_data_forwarder.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,17 +87,23 @@ $(document).ready(function(){initNavTree('classskyway_1_1content_1_1audio_1_1_au
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="classskyway_1_1content_1_1audio_1_1_audio_data_forwarder-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">skyway::content::audio::AudioDataForwarder クラス</div>  </div>
+  <div class="headertitle"><div class="title">skyway::content::audio::AudioDataForwarder クラス</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -109,18 +116,18 @@ skyway::content::audio::AudioDataForwarder の継承関係図</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:aab5523d4e22a2d6c3727e96e80a50dd5"><td class="memItemLeft" align="right" valign="top"><a id="aab5523d4e22a2d6c3727e96e80a50dd5"></a>
+<tr class="memitem:aab5523d4e22a2d6c3727e96e80a50dd5" id="r_aab5523d4e22a2d6c3727e96e80a50dd5"><td class="memItemLeft" align="right" valign="top"><a id="aab5523d4e22a2d6c3727e96e80a50dd5" name="aab5523d4e22a2d6c3727e96e80a50dd5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAudioData</b> (size_t num_channels, size_t num_frames, int sample_rate, std::vector&lt; int16_t &gt; &amp;audio_data)</td></tr>
 <tr class="separator:aab5523d4e22a2d6c3727e96e80a50dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47bf07b443f61f84cb051f2cb6a287db"><td class="memItemLeft" align="right" valign="top"><a id="a47bf07b443f61f84cb051f2cb6a287db"></a>
+<tr class="memitem:a47bf07b443f61f84cb051f2cb6a287db" id="r_a47bf07b443f61f84cb051f2cb6a287db"><td class="memItemLeft" align="right" valign="top"><a id="a47bf07b443f61f84cb051f2cb6a287db" name="a47bf07b443f61f84cb051f2cb6a287db"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>AddAudioDataListener</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1content_1_1audio_1_1_audio_data_listener.html">AudioDataListener</a> &gt; listener)</td></tr>
 <tr class="separator:a47bf07b443f61f84cb051f2cb6a287db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c1e7567c854edf1759d56315f1c2e08"><td class="memItemLeft" align="right" valign="top"><a id="a6c1e7567c854edf1759d56315f1c2e08"></a>
+<tr class="memitem:a6c1e7567c854edf1759d56315f1c2e08" id="r_a6c1e7567c854edf1759d56315f1c2e08"><td class="memItemLeft" align="right" valign="top"><a id="a6c1e7567c854edf1759d56315f1c2e08" name="a6c1e7567c854edf1759d56315f1c2e08"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveAudioDataListener</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1content_1_1audio_1_1_audio_data_listener.html">AudioDataListener</a> &gt; listener)</td></tr>
 <tr class="separator:a6c1e7567c854edf1759d56315f1c2e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1566d0e3ad974a501d641205599c988c"><td class="memItemLeft" align="right" valign="top"><a id="a1566d0e3ad974a501d641205599c988c"></a>
+<tr class="memitem:a1566d0e3ad974a501d641205599c988c" id="r_a1566d0e3ad974a501d641205599c988c"><td class="memItemLeft" align="right" valign="top"><a id="a1566d0e3ad974a501d641205599c988c" name="a1566d0e3ad974a501d641205599c988c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearAudioDataListeners</b> ()</td></tr>
 <tr class="separator:a1566d0e3ad974a501d641205599c988c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -133,7 +140,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearAudioDataListene
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>skyway</b></li><li class="navelem"><b>content</b></li><li class="navelem"><b>audio</b></li><li class="navelem"><a class="el" href="classskyway_1_1content_1_1audio_1_1_audio_data_forwarder.html">AudioDataForwarder</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
