@@ -7,7 +7,8 @@ var searchData=
   ['localp2proommember_4',['LocalP2PRoomMember',['../classskyway_1_1room_1_1p2p_1_1_local_p2_p_room_member.html',1,'skyway::room::p2p']]],
   ['localperson_5',['localperson',['../classskyway_1_1core_1_1channel_1_1member_1_1_local_person.html',1,'skyway::core::channel::member::LocalPerson'],['../classskyway_1_1core_1_1interface_1_1_local_person.html',1,'skyway::core::interface::LocalPerson']]],
   ['localroommember_6',['localroommember',['../classskyway_1_1room_1_1abstract_1_1_local_room_member.html',1,'skyway::room::abstract::LocalRoomMember'],['../classskyway_1_1room_1_1interface_1_1_local_room_member.html',1,'skyway::room::interface::LocalRoomMember']]],
-  ['localstream_7',['LocalStream',['../classskyway_1_1core_1_1interface_1_1_local_stream.html',1,'skyway::core::interface']]],
-  ['localvideostream_8',['localvideostream',['../classskyway_1_1core_1_1stream_1_1local_1_1_local_video_stream.html',1,'skyway::core::stream::local::LocalVideoStream'],['../classskyway_1_1media_1_1stream_1_1local_1_1_local_video_stream.html',1,'skyway::media::stream::local::LocalVideoStream']]],
-  ['logger_9',['logger',['../classskyway_1_1global_1_1interface_1_1_logger.html',1,'skyway::global::interface::Logger'],['../classskyway_1_1global_1_1_logger.html',1,'skyway::global::Logger']]]
+  ['localsfuroommember_7',['LocalSFURoomMember',['../classskyway_1_1room_1_1sfu_1_1_local_s_f_u_room_member.html',1,'skyway::room::sfu']]],
+  ['localstream_8',['LocalStream',['../classskyway_1_1core_1_1interface_1_1_local_stream.html',1,'skyway::core::interface']]],
+  ['localvideostream_9',['localvideostream',['../classskyway_1_1core_1_1stream_1_1local_1_1_local_video_stream.html',1,'skyway::core::stream::local::LocalVideoStream'],['../classskyway_1_1media_1_1stream_1_1local_1_1_local_video_stream.html',1,'skyway::media::stream::local::LocalVideoStream']]],
+  ['logger_10',['logger',['../classskyway_1_1global_1_1interface_1_1_logger.html',1,'skyway::global::interface::Logger'],['../classskyway_1_1global_1_1_logger.html',1,'skyway::global::Logger']]]
 ];

@@ -17,15 +17,21 @@ class AudioProcessingManager {
 public:
     static rtc::scoped_refptr<webrtc::AudioProcessing> CreateAudioProcessing();
 
-    static void SetAudioDataListener(std::shared_ptr<AudioDataListener> listener);
+    static void AddAudioDataListener(std::shared_ptr<AudioDataListener> listener);
 
-    static void RemoveAudioDataListener();
+    static void RemoveAudioDataListener(std::shared_ptr<AudioDataListener> listener);
 
     static bool SetEchoCancellerMobileModeEnabled(bool enabled);
 
     static bool SetEchoCancellerEnabled(bool is_enabled);
 
     static bool SetNoiseSuppressionEnabled(bool is_enabled);
+
+    static bool SetGainController1Enabled(bool is_enabled);
+
+    static bool SetCompressionGainDB(int compression_gain_db);
+
+    static bool SetTargetLevelDBFS(int target_level_dbfs);
 
     static void Dispose();
 

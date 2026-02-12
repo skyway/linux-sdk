@@ -4,7 +4,6 @@ var classskyway_1_1room_1_1abstract_1_1_room_member =
     [ "Leave", "classskyway_1_1room_1_1abstract_1_1_room_member.html#a64b3f747f79d6f1f50b9901c5b69a650", null ],
     [ "Metadata", "classskyway_1_1room_1_1abstract_1_1_room_member.html#a7173536f5cf98ca21cbedf62d811550d", null ],
     [ "Name", "classskyway_1_1room_1_1abstract_1_1_room_member.html#a5bf197ea6ea9c441ad352cc58fa3635d", null ],
-    [ "Publications", "classskyway_1_1room_1_1abstract_1_1_room_member.html#a2a42bbab69246f74786371c8d534ff6f", null ],
     [ "RoomId", "classskyway_1_1room_1_1abstract_1_1_room_member.html#a27ac878b8af96f1f8291a19a4760ffcc", null ],
     [ "RoomName", "classskyway_1_1room_1_1abstract_1_1_room_member.html#a6e81a30f98fff507a553384699f115ee", null ],
     [ "Side", "classskyway_1_1room_1_1abstract_1_1_room_member.html#afdaa9c28b506feeaa93f039388875cfa", null ],

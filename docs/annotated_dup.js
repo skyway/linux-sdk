@@ -3,9 +3,13 @@ var annotated_dup =
     [ "skyway", null, [
       [ "content", null, [
         [ "audio", null, [
+          [ "voice_detection", null, [
+            [ "AudioLevelCalculator", "classskyway_1_1content_1_1audio_1_1voice__detection_1_1_audio_level_calculator.html", null ]
+          ] ],
           [ "AudioDataForwarder", "classskyway_1_1content_1_1audio_1_1_audio_data_forwarder.html", null ],
           [ "AudioDataListener", "classskyway_1_1content_1_1audio_1_1_audio_data_listener.html", null ],
           [ "AudioProcessingManager", "classskyway_1_1content_1_1audio_1_1_audio_processing_manager.html", null ],
+          [ "AudioTrackSinkImpl", "classskyway_1_1content_1_1audio_1_1_audio_track_sink_impl.html", null ],
           [ "CustomProcessingImpl", "classskyway_1_1content_1_1audio_1_1_custom_processing_impl.html", null ]
         ] ]
       ] ],
@@ -131,6 +135,7 @@ var annotated_dup =
         [ "abstract", null, [
           [ "LocalRoomMember", "classskyway_1_1room_1_1abstract_1_1_local_room_member.html", "classskyway_1_1room_1_1abstract_1_1_local_room_member" ],
           [ "Room", "classskyway_1_1room_1_1abstract_1_1_room.html", "classskyway_1_1room_1_1abstract_1_1_room" ],
+          [ "RoomDomainFactory", "classskyway_1_1room_1_1abstract_1_1_room_domain_factory.html", null ],
           [ "RoomMember", "classskyway_1_1room_1_1abstract_1_1_room_member.html", "classskyway_1_1room_1_1abstract_1_1_room_member" ]
         ] ],
         [ "interface", null, [
@@ -147,6 +152,11 @@ var annotated_dup =
         [ "p2p", null, [
           [ "LocalP2PRoomMember", "classskyway_1_1room_1_1p2p_1_1_local_p2_p_room_member.html", "classskyway_1_1room_1_1p2p_1_1_local_p2_p_room_member" ],
           [ "P2PRoom", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html", "classskyway_1_1room_1_1p2p_1_1_p2_p_room" ]
+        ] ],
+        [ "sfu", null, [
+          [ "LocalSFURoomMember", "classskyway_1_1room_1_1sfu_1_1_local_s_f_u_room_member.html", "classskyway_1_1room_1_1sfu_1_1_local_s_f_u_room_member" ],
+          [ "RoomDomainFactory", "classskyway_1_1room_1_1sfu_1_1_room_domain_factory.html", null ],
+          [ "SFURoom", "classskyway_1_1room_1_1sfu_1_1_s_f_u_room.html", "classskyway_1_1room_1_1sfu_1_1_s_f_u_room" ]
         ] ],
         [ "RemoteRoomMember", "classskyway_1_1room_1_1_remote_room_member.html", "classskyway_1_1room_1_1_remote_room_member" ],
         [ "RoomPublication", "classskyway_1_1room_1_1_room_publication.html", "classskyway_1_1room_1_1_room_publication" ],

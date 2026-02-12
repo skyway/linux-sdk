@@ -106,18 +106,30 @@ $(document).ready(function(){initNavTree('classskyway_1_1content_1_1audio_1_1_au
   <div class="headertitle"><div class="title">skyway::content::audio::AudioDataForwarder クラス</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+skyway::content::audio::AudioDataForwarder の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classskyway_1_1content_1_1audio_1_1_audio_data_forwarder.png" usemap="#skyway::content::audio::AudioDataForwarder_map" alt=""/>
+  <map id="skyway::content::audio::AudioDataForwarder_map" name="skyway::content::audio::AudioDataForwarder_map">
+<area href="classskyway_1_1content_1_1audio_1_1_audio_track_sink_impl.html" alt="skyway::content::audio::AudioTrackSinkImpl" shape="rect" coords="0,56,263,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a6999cf4e594d3d52a4547325297bfb17" id="r_a6999cf4e594d3d52a4547325297bfb17"><td class="memItemLeft" align="right" valign="top"><a id="a6999cf4e594d3d52a4547325297bfb17" name="a6999cf4e594d3d52a4547325297bfb17"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onAudioData</b> (size_t num_channels, size_t num_frames, int sample_rate, std::vector&lt; int16_t &gt; &amp;audio_data)</td></tr>
-<tr class="separator:a6999cf4e594d3d52a4547325297bfb17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c375972c8df48ea5bd265979895bb0a" id="r_a0c375972c8df48ea5bd265979895bb0a"><td class="memItemLeft" align="right" valign="top"><a id="a0c375972c8df48ea5bd265979895bb0a" name="a0c375972c8df48ea5bd265979895bb0a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAudioDataListener</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1content_1_1audio_1_1_audio_data_listener.html">AudioDataListener</a> &gt; listener)</td></tr>
-<tr class="separator:a0c375972c8df48ea5bd265979895bb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a6beda93e24211f92ecbc3eab92e7f8" id="r_a8a6beda93e24211f92ecbc3eab92e7f8"><td class="memItemLeft" align="right" valign="top"><a id="a8a6beda93e24211f92ecbc3eab92e7f8" name="a8a6beda93e24211f92ecbc3eab92e7f8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveAudioDataListener</b> ()</td></tr>
-<tr class="separator:a8a6beda93e24211f92ecbc3eab92e7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab5523d4e22a2d6c3727e96e80a50dd5" id="r_aab5523d4e22a2d6c3727e96e80a50dd5"><td class="memItemLeft" align="right" valign="top"><a id="aab5523d4e22a2d6c3727e96e80a50dd5" name="aab5523d4e22a2d6c3727e96e80a50dd5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAudioData</b> (size_t num_channels, size_t num_frames, int sample_rate, std::vector&lt; int16_t &gt; &amp;audio_data)</td></tr>
+<tr class="separator:aab5523d4e22a2d6c3727e96e80a50dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47bf07b443f61f84cb051f2cb6a287db" id="r_a47bf07b443f61f84cb051f2cb6a287db"><td class="memItemLeft" align="right" valign="top"><a id="a47bf07b443f61f84cb051f2cb6a287db" name="a47bf07b443f61f84cb051f2cb6a287db"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddAudioDataListener</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1content_1_1audio_1_1_audio_data_listener.html">AudioDataListener</a> &gt; listener)</td></tr>
+<tr class="separator:a47bf07b443f61f84cb051f2cb6a287db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c1e7567c854edf1759d56315f1c2e08" id="r_a6c1e7567c854edf1759d56315f1c2e08"><td class="memItemLeft" align="right" valign="top"><a id="a6c1e7567c854edf1759d56315f1c2e08" name="a6c1e7567c854edf1759d56315f1c2e08"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveAudioDataListener</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1content_1_1audio_1_1_audio_data_listener.html">AudioDataListener</a> &gt; listener)</td></tr>
+<tr class="separator:a6c1e7567c854edf1759d56315f1c2e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1566d0e3ad974a501d641205599c988c" id="r_a1566d0e3ad974a501d641205599c988c"><td class="memItemLeft" align="right" valign="top"><a id="a1566d0e3ad974a501d641205599c988c" name="a1566d0e3ad974a501d641205599c988c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearAudioDataListeners</b> ()</td></tr>
+<tr class="separator:a1566d0e3ad974a501d641205599c988c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>include/skyway/content/audio/<a class="el" href="audio__data__forwarder_8hpp_source.html">audio_data_forwarder.hpp</a></li>

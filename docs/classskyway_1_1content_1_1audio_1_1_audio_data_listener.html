@@ -102,16 +102,38 @@ $(document).ready(function(){initNavTree('classskyway_1_1content_1_1audio_1_1_au
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
 <a href="classskyway_1_1content_1_1audio_1_1_audio_data_listener-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle"><div class="title">skyway::content::audio::AudioDataListener クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+skyway::content::audio::AudioDataListener の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classskyway_1_1content_1_1audio_1_1_audio_data_listener.png" usemap="#skyway::content::audio::AudioDataListener_map" alt=""/>
+  <map id="skyway::content::audio::AudioDataListener_map" name="skyway::content::audio::AudioDataListener_map">
+<area href="classskyway_1_1content_1_1audio_1_1voice__detection_1_1_audio_level_calculator.html" alt="skyway::content::audio::voice_detection::AudioLevelCalculator" shape="rect" coords="0,56,361,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a69b7008979ecfc5d37e7040ea97c0f76" id="r_a69b7008979ecfc5d37e7040ea97c0f76"><td class="memItemLeft" align="right" valign="top"><a id="a69b7008979ecfc5d37e7040ea97c0f76" name="a69b7008979ecfc5d37e7040ea97c0f76"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onAudioData</b> (size_t num_channels, size_t num_frames, int sample_rate, std::vector&lt; int16_t &gt; &amp;audio_data)=0</td></tr>
-<tr class="separator:a69b7008979ecfc5d37e7040ea97c0f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a804e0e730b37d1a9eb2d50aa462f17a0" id="r_a804e0e730b37d1a9eb2d50aa462f17a0"><td class="memItemLeft" align="right" valign="top"><a id="a804e0e730b37d1a9eb2d50aa462f17a0" name="a804e0e730b37d1a9eb2d50aa462f17a0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AudioDataListener</b> (int priority=0)</td></tr>
+<tr class="separator:a804e0e730b37d1a9eb2d50aa462f17a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b8baf183e2c6b41f64332af9dd4cfa8" id="r_a0b8baf183e2c6b41f64332af9dd4cfa8"><td class="memItemLeft" align="right" valign="top"><a id="a0b8baf183e2c6b41f64332af9dd4cfa8" name="a0b8baf183e2c6b41f64332af9dd4cfa8"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAudioData</b> (size_t num_channels, size_t num_frames, int sample_rate, std::vector&lt; int16_t &gt; &amp;audio_data)=0</td></tr>
+<tr class="separator:a0b8baf183e2c6b41f64332af9dd4cfa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1e9ef364d92c48b25efe52d16cba231" id="r_af1e9ef364d92c48b25efe52d16cba231"><td class="memItemLeft" align="right" valign="top"><a id="af1e9ef364d92c48b25efe52d16cba231" name="af1e9ef364d92c48b25efe52d16cba231"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetPriority</b> () const</td></tr>
+<tr class="separator:af1e9ef364d92c48b25efe52d16cba231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:ab90cd8558e2a4856071a55fe4a4e8bf4" id="r_ab90cd8558e2a4856071a55fe4a4e8bf4"><td class="memItemLeft" align="right" valign="top"><a id="ab90cd8558e2a4856071a55fe4a4e8bf4" name="ab90cd8558e2a4856071a55fe4a4e8bf4"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>priority_</b></td></tr>
+<tr class="separator:ab90cd8558e2a4856071a55fe4a4e8bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>include/skyway/content/audio/<a class="el" href="audio__data__listener_8hpp_source.html">audio_data_listener.hpp</a></li>

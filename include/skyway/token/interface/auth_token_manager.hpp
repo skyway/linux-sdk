@@ -43,6 +43,9 @@ public:
     /// @brief Analyticsが有効かどうかを返します。
     virtual bool IsAnalyticsEnabled() const = 0;
 
+    /// @brief SFUが有効かどうかを返します。
+    virtual bool IsSfuEnabled() const = 0;
+
     virtual void AddInternalListener(InternalListener* listener)    = 0;
     virtual void RemoveInternalListener(InternalListener* listener) = 0;
 };

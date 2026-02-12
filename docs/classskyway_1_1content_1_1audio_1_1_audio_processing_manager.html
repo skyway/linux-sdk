@@ -112,12 +112,12 @@ $(document).ready(function(){initNavTree('classskyway_1_1content_1_1audio_1_1_au
 <tr class="memitem:ac7b651709ce489061bc47fc5160b2e96" id="r_ac7b651709ce489061bc47fc5160b2e96"><td class="memItemLeft" align="right" valign="top"><a id="ac7b651709ce489061bc47fc5160b2e96" name="ac7b651709ce489061bc47fc5160b2e96"></a>
 static rtc::scoped_refptr&lt; webrtc::AudioProcessing &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CreateAudioProcessing</b> ()</td></tr>
 <tr class="separator:ac7b651709ce489061bc47fc5160b2e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab13f80343de6b1844357ab0d7bd8c7ce" id="r_ab13f80343de6b1844357ab0d7bd8c7ce"><td class="memItemLeft" align="right" valign="top"><a id="ab13f80343de6b1844357ab0d7bd8c7ce" name="ab13f80343de6b1844357ab0d7bd8c7ce"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAudioDataListener</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1content_1_1audio_1_1_audio_data_listener.html">AudioDataListener</a> &gt; listener)</td></tr>
-<tr class="separator:ab13f80343de6b1844357ab0d7bd8c7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d77d32beecd561c087a426ebb1101fb" id="r_a2d77d32beecd561c087a426ebb1101fb"><td class="memItemLeft" align="right" valign="top"><a id="a2d77d32beecd561c087a426ebb1101fb" name="a2d77d32beecd561c087a426ebb1101fb"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveAudioDataListener</b> ()</td></tr>
-<tr class="separator:a2d77d32beecd561c087a426ebb1101fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b62a2c6f322827751ed4c6755e827ec" id="r_a8b62a2c6f322827751ed4c6755e827ec"><td class="memItemLeft" align="right" valign="top"><a id="a8b62a2c6f322827751ed4c6755e827ec" name="a8b62a2c6f322827751ed4c6755e827ec"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>AddAudioDataListener</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1content_1_1audio_1_1_audio_data_listener.html">AudioDataListener</a> &gt; listener)</td></tr>
+<tr class="separator:a8b62a2c6f322827751ed4c6755e827ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad020d7cd3a42f2731c4395c4eee6e19b" id="r_ad020d7cd3a42f2731c4395c4eee6e19b"><td class="memItemLeft" align="right" valign="top"><a id="ad020d7cd3a42f2731c4395c4eee6e19b" name="ad020d7cd3a42f2731c4395c4eee6e19b"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveAudioDataListener</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1content_1_1audio_1_1_audio_data_listener.html">AudioDataListener</a> &gt; listener)</td></tr>
+<tr class="separator:ad020d7cd3a42f2731c4395c4eee6e19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a294056cb82cdb9d24286df6636ca8d58" id="r_a294056cb82cdb9d24286df6636ca8d58"><td class="memItemLeft" align="right" valign="top"><a id="a294056cb82cdb9d24286df6636ca8d58" name="a294056cb82cdb9d24286df6636ca8d58"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetEchoCancellerMobileModeEnabled</b> (bool enabled)</td></tr>
 <tr class="separator:a294056cb82cdb9d24286df6636ca8d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,6 +127,15 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetEchoCancell
 <tr class="memitem:ad426a167c46acbabf31e4fb0d358f232" id="r_ad426a167c46acbabf31e4fb0d358f232"><td class="memItemLeft" align="right" valign="top"><a id="ad426a167c46acbabf31e4fb0d358f232" name="ad426a167c46acbabf31e4fb0d358f232"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetNoiseSuppressionEnabled</b> (bool is_enabled)</td></tr>
 <tr class="separator:ad426a167c46acbabf31e4fb0d358f232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a6dcb3548ebb8fdd75039a8c53c907" id="r_a54a6dcb3548ebb8fdd75039a8c53c907"><td class="memItemLeft" align="right" valign="top"><a id="a54a6dcb3548ebb8fdd75039a8c53c907" name="a54a6dcb3548ebb8fdd75039a8c53c907"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetGainController1Enabled</b> (bool is_enabled)</td></tr>
+<tr class="separator:a54a6dcb3548ebb8fdd75039a8c53c907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5d0655dc3296de9b812ba301dec979" id="r_a3a5d0655dc3296de9b812ba301dec979"><td class="memItemLeft" align="right" valign="top"><a id="a3a5d0655dc3296de9b812ba301dec979" name="a3a5d0655dc3296de9b812ba301dec979"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetCompressionGainDB</b> (int compression_gain_db)</td></tr>
+<tr class="separator:a3a5d0655dc3296de9b812ba301dec979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa29d0128807fe998b6f17446de261004" id="r_aa29d0128807fe998b6f17446de261004"><td class="memItemLeft" align="right" valign="top"><a id="aa29d0128807fe998b6f17446de261004" name="aa29d0128807fe998b6f17446de261004"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetTargetLevelDBFS</b> (int target_level_dbfs)</td></tr>
+<tr class="separator:aa29d0128807fe998b6f17446de261004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeecf6aef7a8c9f87fd9c23a85631dad0" id="r_aeecf6aef7a8c9f87fd9c23a85631dad0"><td class="memItemLeft" align="right" valign="top"><a id="aeecf6aef7a8c9f87fd9c23a85631dad0" name="aeecf6aef7a8c9f87fd9c23a85631dad0"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>Dispose</b> ()</td></tr>
 <tr class="separator:aeecf6aef7a8c9f87fd9c23a85631dad0"><td class="memSeparator" colspan="2">&#160;</td></tr>

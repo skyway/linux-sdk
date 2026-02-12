@@ -20,6 +20,8 @@ public:
     LocalAudioStream(rtc::scoped_refptr<webrtc::AudioTrackInterface> track);
     rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> Track() const override;
 
+    ~LocalAudioStream() override;
+
     /// @cond INTERNAL_SECTION
     /// @brief Audioの再生を開始します。
     bool Enable() override;
@@ -28,6 +30,9 @@ public:
     /// @endcond
 
 private:
+    void Dispose();
+
+    std::atomic<bool> is_disposed_ = false;
     rtc::scoped_refptr<webrtc::AudioTrackInterface> track_;
 };
 

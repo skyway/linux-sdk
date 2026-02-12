@@ -39,7 +39,7 @@ public:
 
     /**
      * DNATIVE-2856
-     * For disturbing Request's SpinLock when P2PConnection close
+     * For disturbing Request's WaitUntilWithTimeoutMs when P2PConnection close
      */
     void InterruptBlocking(const std::string&  member_id) override;
     void ResetBlocking(const std::string&  member_id) override;

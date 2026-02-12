@@ -13,7 +13,6 @@ namespace codec {
 
 /**
  * @brief VP8コーデック
- * @details ※この機能はβ版です。
  */
 struct VP8 : public VideoCodec {
     std::string Name() const override { return "VP8"; }

@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <stdint.h>
+#include <stddef.h>
 
 namespace skyway {
 namespace content {
@@ -14,8 +15,14 @@ namespace audio {
 
 class AudioDataListener {
 public:
-    virtual void onAudioData(size_t num_channels, size_t num_frames, int sample_rate, std::vector<int16_t>& audio_data) = 0;
+    AudioDataListener(int priority = 0) : priority_(priority) {}
 
+    virtual void OnAudioData(size_t num_channels, size_t num_frames, int sample_rate, std::vector<int16_t>& audio_data) = 0;
+    virtual int GetPriority() const {
+        return priority_;
+    }
+protected:
+    const int priority_;
 };
 
 }

@@ -10,9 +10,13 @@ namespace global {
 namespace config {
 
 extern const int kDefaultTimeoutSec;
+extern const int kDefaultTimeoutMs;
 extern const int kMaxThreadNameSize;
 
-}
+constexpr int kLocalSleepIntervalMs = 1;
+constexpr int kNetworkSleepIntervalMs = 10;
+
+}  // namespace config
 }  // namespace global
 }  // namespace skyway
 

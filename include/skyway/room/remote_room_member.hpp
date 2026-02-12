@@ -22,6 +22,7 @@ public:
     std::shared_ptr<interface::RoomSubscription> Subscribe(
         const std::string& publication_id) override;
     bool Unsubscribe(const std::string& subscription_id) override;
+    std::vector<std::shared_ptr<interface::RoomPublication>> Publications() override;
 
 private:
     std::shared_ptr<plugin::remote_person::RemotePerson> RemotePerson();

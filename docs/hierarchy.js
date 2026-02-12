@@ -6,14 +6,21 @@ var hierarchy =
       ] ]
     ] ],
     [ "skyway::core::ContextOptions::Analytics", "structskyway_1_1core_1_1_context_options_1_1_analytics.html", null ],
-    [ "skyway::content::audio::AudioDataForwarder", "classskyway_1_1content_1_1audio_1_1_audio_data_forwarder.html", null ],
-    [ "skyway::content::audio::AudioDataListener", "classskyway_1_1content_1_1audio_1_1_audio_data_listener.html", null ],
+    [ "skyway::content::audio::AudioDataForwarder", "classskyway_1_1content_1_1audio_1_1_audio_data_forwarder.html", [
+      [ "skyway::content::audio::AudioTrackSinkImpl", "classskyway_1_1content_1_1audio_1_1_audio_track_sink_impl.html", null ]
+    ] ],
+    [ "skyway::content::audio::AudioDataListener", "classskyway_1_1content_1_1audio_1_1_audio_data_listener.html", [
+      [ "skyway::content::audio::voice_detection::AudioLevelCalculator", "classskyway_1_1content_1_1audio_1_1voice__detection_1_1_audio_level_calculator.html", null ]
+    ] ],
     [ "skyway::media::DeviceManager::AudioDevice", "structskyway_1_1media_1_1_device_manager_1_1_audio_device.html", null ],
     [ "webrtc::AudioDeviceModule", null, [
       [ "skyway::media::audio::CustomAudioDeviceModule", "classskyway_1_1media_1_1audio_1_1_custom_audio_device_module.html", null ]
     ] ],
     [ "skyway::media::audio::interface::AudioFrame", "structskyway_1_1media_1_1audio_1_1interface_1_1_audio_frame.html", null ],
     [ "skyway::content::audio::AudioProcessingManager", "classskyway_1_1content_1_1audio_1_1_audio_processing_manager.html", null ],
+    [ "webrtc::AudioTrackSinkInterface", null, [
+      [ "skyway::content::audio::AudioTrackSinkImpl", "classskyway_1_1content_1_1audio_1_1_audio_track_sink_impl.html", null ]
+    ] ],
     [ "skyway::media::interface::CapturerVideoSource", "classskyway_1_1media_1_1interface_1_1_capturer_video_source.html", [
       [ "skyway::media::I420CapturerVideoSource", "classskyway_1_1media_1_1_i420_capturer_video_source.html", null ],
       [ "skyway::media::opencv::OpenCVCapturerVideoSource", "classskyway_1_1media_1_1opencv_1_1_open_c_v_capturer_video_source.html", null ],
@@ -60,7 +67,8 @@ var hierarchy =
       [ "skyway::core::interface::Publication", "classskyway_1_1core_1_1interface_1_1_publication.html", null ],
       [ "skyway::core::interface::Subscription", "classskyway_1_1core_1_1interface_1_1_subscription.html", null ],
       [ "skyway::media::rtp::RtpCapturerVideoSource", "classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html", null ],
-      [ "skyway::room::p2p::P2PRoom", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html", null ]
+      [ "skyway::room::p2p::P2PRoom", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html", null ],
+      [ "skyway::room::sfu::SFURoom", "classskyway_1_1room_1_1sfu_1_1_s_f_u_room.html", null ]
     ] ],
     [ "skyway::model::Encoding", "structskyway_1_1model_1_1_encoding.html", null ],
     [ "skyway::global::Error", "structskyway_1_1global_1_1_error.html", null ],
@@ -70,13 +78,15 @@ var hierarchy =
     [ "skyway::core::Context::EventListener", "classskyway_1_1core_1_1_context_1_1_event_listener.html", null ],
     [ "skyway::core::interface::Channel::EventListener", "classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html", [
       [ "skyway::room::abstract::Room", "classskyway_1_1room_1_1abstract_1_1_room.html", [
-        [ "skyway::room::p2p::P2PRoom", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html", null ]
+        [ "skyway::room::p2p::P2PRoom", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html", null ],
+        [ "skyway::room::sfu::SFURoom", "classskyway_1_1room_1_1sfu_1_1_s_f_u_room.html", null ]
       ] ]
     ] ],
     [ "skyway::core::interface::Member::EventListener", "classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html", [
       [ "skyway::core::interface::LocalPerson::EventListener", "classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html", [
         [ "skyway::room::abstract::LocalRoomMember", "classskyway_1_1room_1_1abstract_1_1_local_room_member.html", [
-          [ "skyway::room::p2p::LocalP2PRoomMember", "classskyway_1_1room_1_1p2p_1_1_local_p2_p_room_member.html", null ]
+          [ "skyway::room::p2p::LocalP2PRoomMember", "classskyway_1_1room_1_1p2p_1_1_local_p2_p_room_member.html", null ],
+          [ "skyway::room::sfu::LocalSFURoomMember", "classskyway_1_1room_1_1sfu_1_1_local_s_f_u_room_member.html", null ]
         ] ]
       ] ],
       [ "skyway::plugin::remote_person::RemotePerson::EventListener", "classskyway_1_1plugin_1_1remote__person_1_1_remote_person_1_1_event_listener.html", null ]
@@ -135,6 +145,11 @@ var hierarchy =
     [ "skyway::room::interface::Room", "classskyway_1_1room_1_1interface_1_1_room.html", [
       [ "skyway::room::abstract::Room", "classskyway_1_1room_1_1abstract_1_1_room.html", null ]
     ] ],
+    [ "interface::RoomDomainFactory", null, [
+      [ "skyway::room::abstract::RoomDomainFactory", "classskyway_1_1room_1_1abstract_1_1_room_domain_factory.html", [
+        [ "skyway::room::sfu::RoomDomainFactory", "classskyway_1_1room_1_1sfu_1_1_room_domain_factory.html", null ]
+      ] ]
+    ] ],
     [ "skyway::room::interface::RoomInitOptions", "structskyway_1_1room_1_1interface_1_1_room_init_options.html", null ],
     [ "skyway::room::interface::RoomMember", "classskyway_1_1room_1_1interface_1_1_room_member.html", [
       [ "skyway::room::abstract::RoomMember", "classskyway_1_1room_1_1abstract_1_1_room_member.html", [
@@ -160,6 +175,7 @@ var hierarchy =
     [ "skyway::core::ContextOptions::RtcConfig", "structskyway_1_1core_1_1_context_options_1_1_rtc_config.html", null ],
     [ "skyway::Context::SkyWayOptions::Rtp", "structskyway_1_1_context_1_1_sky_way_options_1_1_rtp.html", null ],
     [ "skyway::media::rtp::interface::RtpCapturerVideoSourceOptions", "structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html", null ],
+    [ "skyway::Context::SkyWayOptions::SFU", "structskyway_1_1_context_1_1_sky_way_options_1_1_s_f_u.html", null ],
     [ "skyway::core::ContextOptions::Signaling", "structskyway_1_1core_1_1_context_options_1_1_signaling.html", null ],
     [ "skyway::core::interface::Stream", "classskyway_1_1core_1_1interface_1_1_stream.html", [
       [ "skyway::core::interface::LocalStream", "classskyway_1_1core_1_1interface_1_1_local_stream.html", [
