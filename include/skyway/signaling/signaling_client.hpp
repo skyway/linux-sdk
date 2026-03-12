@@ -10,6 +10,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "skyway/global/worker.hpp"
 #include "skyway/signaling/client_event.hpp"
 #include "skyway/signaling/config.hpp"
 #include "skyway/signaling/dto/payload.hpp"
@@ -17,7 +18,6 @@
 #include "skyway/signaling/interface/signaling_client.hpp"
 #include "skyway/signaling/socket.hpp"
 #include "skyway/token/interface/auth_token_manager.hpp"
-#include "skyway/global/worker.hpp"
 
 namespace skyway {
 namespace signaling {
@@ -27,13 +27,14 @@ using Member                           = interface::Member;
 using SocketListener                   = SocketInterface::Listener;
 using AuthTokenManagerInternalListener = token::interface::AuthTokenManager::InternalListener;
 
-const std::string kSignalingWebSocketThreadName           = "sign_websocket";
+const std::string kSignalingWebSocketThreadName = "sign_websocket";
 
 class SignalingClient : public SignalingClientInterface,
                         public SocketListener,
                         public AuthTokenManagerInternalListener {
 public:
-    SignalingClient(std::weak_ptr<token::interface::AuthTokenManager> auth, std::unique_ptr<SocketInterface> socket);
+    SignalingClient(std::weak_ptr<token::interface::AuthTokenManager> auth,
+                    std::unique_ptr<SocketInterface> socket);
 
     ~SignalingClient();
 
@@ -41,8 +42,8 @@ public:
      * DNATIVE-2856
      * For disturbing Request's WaitUntilWithTimeoutMs when P2PConnection close
      */
-    void InterruptBlocking(const std::string&  member_id) override;
-    void ResetBlocking(const std::string&  member_id) override;
+    void InterruptBlocking(const std::string& member_id) override;
+    void ResetBlocking(const std::string& member_id) override;
 
     void AddListener(SignalingClientInterface::Listener* listener) override;
     void RemoveListener(SignalingClientInterface::Listener* listener) override;
@@ -54,14 +55,15 @@ public:
                                const int timeout_sec,
                                const bool skip_response_wait = false) override;
 
-    dto::RequestResult Request(const Member& target, const nlohmann::json& data, const bool skip_response_wait = false) override;
+    dto::RequestResult Request(const Member& target,
+                               const nlohmann::json& data,
+                               const bool skip_response_wait = false) override;
     // SocketListener
     void OnConnectionFailed() override;
     void OnDataReceived(const nlohmann::json& data) override;
 
 private:
-
-    bool IsBlocking(const std::string & member_id);
+    bool IsBlocking(const std::string& member_id);
     bool StartConnectivityCheck(int interval_sec);
 
     bool StopConnectivityCheck();
@@ -69,6 +71,9 @@ private:
     bool Response(const Member& target,
                   const std::string& request_event_id,
                   const nlohmann::json& data);
+
+    bool TryEnterSendEvent();
+    void LeaveSendEvent();
 
     dto::SendResult SendEvent(const ClientEvent& event, const int timeout_sec);
 
@@ -79,9 +84,9 @@ private:
 
     // AuthTokenManager::InternalListener
     void OnTokenUpdated(const token::AuthToken* token) override;
-                            
+
     std::weak_ptr<token::interface::AuthTokenManager> auth_;
-                            
+
     std::unique_ptr<SocketInterface> socket_;
 
     std::atomic<bool> is_sending_connectivity_check_;
@@ -102,12 +107,17 @@ private:
 
     SignalingClientInterface::Delegator* delegator_;
 
-    std::unique_ptr<global::interface::Worker> worker_ = std::make_unique<skyway::global::Worker>(kSignalingWebSocketThreadName);
+    std::unique_ptr<global::interface::Worker> worker_ =
+        std::make_unique<skyway::global::Worker>(kSignalingWebSocketThreadName);
 
     std::atomic<bool> interrupt_blocking_ = false;
 
     std::mutex interrupt_blocking_map_mtx_;
     std::unordered_map<std::string, bool> interrupt_blocking_map_;
+
+    std::mutex lifecycle_mtx_;
+    bool is_disposing_ = false;
+    int active_send_event_count_ = 0;
 
 public:
     friend class SignalingClientTest;

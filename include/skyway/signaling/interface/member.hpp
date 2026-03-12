@@ -5,10 +5,9 @@
 #ifndef SKYWAY_SIGNALING_INTERFACE_MEMBER_HPP_
 #define SKYWAY_SIGNALING_INTERFACE_MEMBER_HPP_
 
-#include <string>
-#include <optional>
-
 #include <json.hpp>
+#include <optional>
+#include <string>
 
 namespace skyway {
 namespace signaling {

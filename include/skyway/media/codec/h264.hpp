@@ -33,9 +33,7 @@ struct H264 : public VideoCodec {
     H264(const std::string& profile_level_id) {
         // clang-format off
         parameters = {
-            // `1` is interleaved mode which is used in WebRTC.
             { "packetization-mode",      "1" },
-            // `1` is asymmetrical mode which is used in WebRTC.
             { "level-asymmetry-allowed", "1" },
             { "profile-level-id",        profile_level_id }
         };

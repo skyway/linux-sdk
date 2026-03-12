@@ -26,8 +26,8 @@ namespace plugin {
 namespace sfu_bot {
 namespace connection {
 
-using StreamInterface       = core::interface::Stream;
-using SfuApiClient          = plugin::sfu_bot::SfuApiClient;
+using StreamInterface = core::interface::Stream;
+using SfuApiClient    = plugin::sfu_bot::SfuApiClient;
 
 class SfuConnection : public interface::SfuConnection {
 public:
@@ -38,18 +38,19 @@ public:
         const core::ContextOptions& options,
         webrtc::PeerConnectionInterface::IceServers ice_servers,
         rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory,
-        interface::TransportRepository* transport_repo,
-        analytics::interface::AnalyticsClient* analytics_client);
+        interface::TransportRepository* transport_repo);
     ~SfuConnection();
     std::optional<interface::StartForwardingResult> StartForwarding(
-            std::shared_ptr<core::interface::Publication> publication, ForwardingConfigure configure) override;
+        std::shared_ptr<core::interface::Publication> publication,
+        ForwardingConfigure configure) override;
     bool StopForwarding(Forwarding* forwarding, bool with_api_request) override;
     void StartReceiving(std::shared_ptr<core::interface::Subscription> subscription) override;
     bool StopReceiving(const std::string& subscription_id) override;
     void Dispose() override;
 
 private:
-    Sender* CreateSender(std::shared_ptr<core::interface::Publication> publication, ForwardingConfigure configure);
+    Sender* CreateSender(std::shared_ptr<core::interface::Publication> publication,
+                         ForwardingConfigure configure);
     Sender* GetSender(const std::string& publication_id);
     Receiver* CreateReceiver(std::shared_ptr<core::interface::Subscription> subscription);
     Receiver* GetReceiver(const std::string& subscription_id);
@@ -59,8 +60,6 @@ private:
     interface::SfuApiClient* client_;
 
     interface::TransportRepository* transport_repo_;
-
-    analytics::interface::AnalyticsClient* analytics_client_;
 
     using OriginPublicationId = std::string;
     using SubscriptionId      = std::string;

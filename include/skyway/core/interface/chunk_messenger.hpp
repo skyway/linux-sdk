@@ -35,9 +35,9 @@ public:
         /// @param message メッセージ
         virtual void OnMessage(const nlohmann::json& message) = 0;
     };
-    virtual void ResetBlocking(const std::string& member_id) = 0;
+    virtual void ResetBlocking(const std::string& member_id)     = 0;
     virtual void InterruptBlocking(const std::string& member_id) = 0;
-    virtual ~ChunkMessenger() = default;
+    virtual ~ChunkMessenger()                                    = default;
     /// @brief リスナーを追加します。
     /// @param remote_member 登録対象のRemoteMember
     /// @param listener リスナー

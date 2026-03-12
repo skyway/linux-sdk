@@ -38,26 +38,20 @@ public:
     virtual nlohmann::json GetRtpCapabilities() = 0;
 
     /// @brief SendTransportを作成し、Repositoryに保存します。
-    /// @param analytics_client Analyticsクライアント
     /// @param transport_options Transportオプション
     /// @param pc_options PeerConnectionオプション
     /// @param local_person_id LocalPersonID
-    virtual SendTransport* CreateSendTransport(
-        analytics::interface::AnalyticsClient* analytics_client,
-        const nlohmann::json& transport_options,
-        const Device::PeerConnectionOptions* pc_options,
-        const LocalPersonId& local_person_id) = 0;
+    virtual SendTransport* CreateSendTransport(const nlohmann::json& transport_options,
+                                               const Device::PeerConnectionOptions* pc_options,
+                                               const LocalPersonId& local_person_id) = 0;
 
     /// @brief RecvTransportを作成し、Repositoryに保存します。
-    /// @param analytics_client Analyticsクライアント
     /// @param transport_options Transportオプション
     /// @param pc_options PeerConnectionオプション
     /// @param local_person_id LocalPersonID
-    virtual RecvTransport* CreateRecvTransport(
-        analytics::interface::AnalyticsClient* analytics_client,
-        const nlohmann::json& transport_options,
-        const Device::PeerConnectionOptions* pc_options,
-        const LocalPersonId& local_person_id) = 0;
+    virtual RecvTransport* CreateRecvTransport(const nlohmann::json& transport_options,
+                                               const Device::PeerConnectionOptions* pc_options,
+                                               const LocalPersonId& local_person_id) = 0;
 
     /// @brief SendTransportを取得します。
     /// @param transport_id Transport ID

@@ -26,6 +26,7 @@ public:
     /// @brief Audioの再生を停止します。
     bool Disable() override;
     /// @endcond
+
 private:
     void Dispose();
 

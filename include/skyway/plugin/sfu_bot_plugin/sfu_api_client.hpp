@@ -16,15 +16,15 @@ namespace skyway {
 namespace plugin {
 namespace sfu_bot {
 
-using HttpClientInterface  = network::interface::HttpClient;
-using SfuOptions           = sfu_options::SfuOptionsParams;
+using HttpClientInterface = network::interface::HttpClient;
+using SfuOptions          = sfu_options::SfuOptionsParams;
 
 class SfuApiClient : public interface::SfuApiClient {
 public:
     SfuApiClient(HttpClientInterface* http, SfuOptions sfu_options);
 
     std::optional<dto::CreateBotResponse> CreateBot(const std::string& app_id,
-                                                      const std::string& channel_id) override;
+                                                    const std::string& channel_id) override;
     bool DeleteBot(const std::string& bot_id) override;
 
     bool Connect(const std::string& transport_id, const nlohmann::json& dtls_parameters) override;
@@ -68,8 +68,8 @@ public:
 
 private:
     std::optional<HttpClientInterface::Response> Request(const std::string& path,
-                                                           const std::string& method,
-                                                           const nlohmann::json& body) const;
+                                                         const std::string& method,
+                                                         const nlohmann::json& body) const;
     std::string GetSfuParamsEndPoint() const;
     bool IsSuccessfulStatusCode(int status);
     bool IsClientErrorStatusCode(int status);

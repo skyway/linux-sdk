@@ -15,7 +15,7 @@ namespace skyway {
 namespace core {
 namespace interface {
 
-using LocalStream     = interface::LocalStream;
+using LocalStream = interface::LocalStream;
 
 /// @brief Publicationの状態
 enum class PublicationState { kEnabled, kDisabled, kCanceled };
@@ -24,7 +24,8 @@ enum class PublicationState { kEnabled, kDisabled, kCanceled };
 // `std::enable_shared_from_this<T>` is supposed to be inherited by concrete classes.
 // (e.g. skyway/core/publication.hpp)
 // however if so, compile failed on the Android SDK that includes interfaces.
-class Publication : public std::enable_shared_from_this<Publication>, public ConnectionStateChangeNotifiable {
+class Publication : public std::enable_shared_from_this<Publication>,
+                    public ConnectionStateChangeNotifiable {
 public:
     /// @brief イベントリスナ
     class EventListener {
@@ -63,7 +64,8 @@ public:
     };
     class Callback {
     public:
-        virtual const std::optional<nlohmann::json> GetStatsReport(std::shared_ptr<interface::Publication> publication) = 0;
+        virtual const std::optional<nlohmann::json> GetStatsReport(
+            std::shared_ptr<interface::Publication> publication) = 0;
     };
     /// @endcond
     virtual ~Publication() = default;
@@ -85,7 +87,7 @@ public:
     virtual std::shared_ptr<interface::Member> Publisher() const = 0;
     /// @brief このPublicationを購読しているSubsciptionの一覧を取得します。
     virtual std::vector<std::shared_ptr<interface::Subscription>> Subscriptions() const = 0;
-    virtual model::PublicationType Type() const = 0;
+    virtual model::PublicationType Type() const                                         = 0;
     /// @brief ContentType(VideoかAudioかDataか)を取得します。
     virtual model::ContentType ContentType() const = 0;
     /// @brief Metadataを取得します。
@@ -134,12 +136,12 @@ public:
     virtual bool IsEnabling()                                                       = 0;
     virtual void Dispose()                                                          = 0;
 
-    virtual void OnUnpublished()                                = 0;
-    virtual void OnSubscribed(std::shared_ptr<interface::Subscription> subscription)       = 0;
-    virtual void OnUnsubscribed(std::shared_ptr<interface::Subscription> subscription)     = 0;
-    virtual void OnMetadataUpdated(const std::string& metadata) = 0;
-    virtual void OnEnabled()                                    = 0;
-    virtual void OnDisabled()                                   = 0;
+    virtual void OnUnpublished()                                                       = 0;
+    virtual void OnSubscribed(std::shared_ptr<interface::Subscription> subscription)   = 0;
+    virtual void OnUnsubscribed(std::shared_ptr<interface::Subscription> subscription) = 0;
+    virtual void OnMetadataUpdated(const std::string& metadata)                        = 0;
+    virtual void OnEnabled()                                                           = 0;
+    virtual void OnDisabled()                                                          = 0;
     /// @endcond
 };
 

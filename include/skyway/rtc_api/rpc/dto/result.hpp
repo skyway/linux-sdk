@@ -5,9 +5,8 @@
 #ifndef SKYWAY_RTC_API_RPC_DTO_RESULT_HPP_
 #define SKYWAY_RTC_API_RPC_DTO_RESULT_HPP_
 
-#include <optional>
-
 #include <json.hpp>
+#include <optional>
 
 #include "skyway/model/domain.hpp"
 

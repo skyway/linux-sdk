@@ -17,23 +17,29 @@ class AnalyticsClient : public interface::AnalyticsClient,
                         public interface::Socket::Listener,
                         public token::interface::AuthTokenManager::InternalListener {
 public:
-    AnalyticsClient(std::weak_ptr<token::interface::AuthTokenManager> auth, std::unique_ptr<interface::Socket> socket);
+    AnalyticsClient(std::weak_ptr<token::interface::AuthTokenManager> auth,
+                    std::unique_ptr<interface::Socket> socket);
 
     // interface::AnalyticsClient
     ~AnalyticsClient() override;
 
-    std::future<bool> ConnectAsync(const Delegator* const delegator) override;
+    void SetDelegator(std::weak_ptr<Delegator> delegator) override;
+    void RemoveDelegator() override;
+
+    std::future<bool> ConnectAsync() override;
 
     std::future<bool> SendBindingRtcPeerConnectionToSubscriptionClientEventAsync(
         const BindingRtcPeerConnectionToSubscriptionPayload& payload) override;
-    std::future<bool> SendSubscriptionStatsReportClientEventAsync(
-        SubscriptionStats stats) override;
+    std::future<bool> SendSubscriptionStatsReportClientEventAsync(SubscriptionStats stats) override;
     std::future<bool> SendRtcPeerConnectionEventReportClientEventAsync(
         const RtcPeerConnectionEventReportPayload& payload) override;
     std::future<bool> SendPublicationUpdateEncodingsReportClientEventAsync(
         PublicationUpdateEncodingsReportPayload payload) override;
     std::future<bool> SendSubscriptionUpdatePreferredEncodingReportClientEventAsync(
         SubscriptionUpdatePreferredEncodingReportPayload payload) override;
+    std::future<bool> SendSDKLogAsync(const SDKLogsPayload& event) override;
+    std::future<bool> SendJoinChannelClientEventAsync(
+        const JoinChannelEventPayload& payload) override;
 
     // interface::Socket::Listener
     void OnConnectionFailed() override;
@@ -62,10 +68,10 @@ private:
 
     std::unique_ptr<Impl> pimpl_;
     mutable std::mutex pimpl_mutex_;
-                            
+
     std::weak_ptr<token::interface::AuthTokenManager> auth_;
-                            
-    const Delegator* delegator_;
+
+    std::weak_ptr<Delegator> delegator_;
     bool disposed_;
     std::mutex disposed_mutex_;
 
@@ -76,8 +82,7 @@ private:
     std::atomic<bool> should_stop_subscription_stats_report_;
     std::condition_variable subscription_stats_report_cv_;
     std::vector<OpenPayload::StatsRequest::Type> subscription_stats_request_types_;
-    std::unordered_map<SubscriptionId, SubscriptionStats>
-        previous_subscription_stats_;
+    std::unordered_map<SubscriptionId, SubscriptionStats> previous_subscription_stats_;
 
     std::unordered_map<PublicationId, unsigned int> encodings_versions_;
     std::mutex encodings_versions_mutex_;

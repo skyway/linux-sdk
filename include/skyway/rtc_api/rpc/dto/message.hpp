@@ -5,9 +5,8 @@
 #ifndef SKYWAY_RTC_API_RPC_DTO_MESSAGE_HPP_
 #define SKYWAY_RTC_API_RPC_DTO_MESSAGE_HPP_
 
-#include <optional>
-
 #include <json.hpp>
+#include <optional>
 
 namespace skyway {
 namespace rtc_api {

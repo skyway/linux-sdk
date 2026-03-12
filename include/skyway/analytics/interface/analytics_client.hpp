@@ -8,6 +8,7 @@
 #include <future>
 
 #include "skyway/analytics/client_event.hpp"
+#include "skyway/global/logger_observer.hpp"
 #include "skyway/model/domain.hpp"
 
 namespace skyway {
@@ -15,7 +16,7 @@ namespace analytics {
 namespace interface {
 
 /// @brief アナリティクスサーバと相互通信するクライアント
-class AnalyticsClient {
+class AnalyticsClient : public global::LoggerObserver {
 public:
     struct [[deprecated]] SubscriptionStats {
         model::ContentType content_type = model::ContentType::kAudio;
@@ -32,8 +33,8 @@ public:
     public:
         virtual ~Delegator() = default;
 
-        [[deprecated]] virtual std::vector<SubscriptionStats>
-        GetSubscriptionStatsForAnalytics() const = 0;
+        [[deprecated]] virtual std::vector<SubscriptionStats> GetSubscriptionStatsForAnalytics()
+            const = 0;
     };
 
     struct Options {
@@ -43,10 +44,12 @@ public:
 
     virtual ~AnalyticsClient() = default;
 
+    virtual void SetDelegator(std::weak_ptr<Delegator> delegator) = 0;
+    virtual void RemoveDelegator()                                = 0;
+
     /// @brief アナリティクスサーバとの接続処理を行います。
-    /// @param delegator デリゲータのポインタ
     /// @return 正常処理完了かどうか
-    virtual std::future<bool> ConnectAsync(const Delegator* const delegator) = 0;
+    virtual std::future<bool> ConnectAsync() = 0;
 
     /// @brief
     /// アナリティクスサーバにBindingRtcPeerConnectionToSubscriptionのクライアントイベントを送信します。
@@ -77,6 +80,9 @@ public:
     /// @return 正常処理完了かどうか
     virtual std::future<bool> SendSubscriptionUpdatePreferredEncodingReportClientEventAsync(
         SubscriptionUpdatePreferredEncodingReportPayload payload) = 0;
+
+    virtual std::future<bool> SendJoinChannelClientEventAsync(
+        const JoinChannelEventPayload& payload) = 0;
 
 private:
     virtual std::future<bool> SendClientEventAsync(const ClientEvent& event) = 0;

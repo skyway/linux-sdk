@@ -36,9 +36,12 @@ inline int CulculateRetryTimeoutMs(int current_retry) {
 /// @param release_condition_check_interval_ms 解放条件をチェックする間隔（ミリ秒）
 /// @return ブロックが解放条件を満たして抜けた場合はtrue、タイムアウトした場合はfalseを返します。
 inline bool ExponentialBackoffWaitWithReleaseCondition(
-    int current_retry, std::function<bool()> release_condition, global::util::SleepIntervalMs release_condition_check_interval) {
+    int current_retry,
+    std::function<bool()> release_condition,
+    global::util::SleepIntervalMs release_condition_check_interval) {
     int timeout = CulculateRetryTimeoutMs(current_retry);
-    return global::util::WaitUntilWithTimeoutMs(release_condition, release_condition_check_interval, timeout);
+    return global::util::WaitUntilWithTimeoutMs(
+        release_condition, release_condition_check_interval, timeout);
 }
 
 inline void ExponentialBackoffWait(int current_retry) {

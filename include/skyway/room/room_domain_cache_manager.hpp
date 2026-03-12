@@ -28,9 +28,6 @@ private:
     std::mutex mtx_;
     std::unordered_map<std::string, std::shared_ptr<T>> cached_room_domain_instances_;
 
-    // To prevent memory leaks, we keep track of deleted instances.
-    // For efficient searching, two types of containers are used: search by ID and search by
-    // time.
     std::unordered_map<std::string, std::chrono::steady_clock::time_point>
         deleted_room_domain_instance_ids_by_id_;
     std::multimap<std::chrono::steady_clock::time_point, std::string>

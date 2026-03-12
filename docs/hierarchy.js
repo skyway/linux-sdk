@@ -119,6 +119,9 @@ var hierarchy =
     [ "skyway::global::interface::Logger", "classskyway_1_1global_1_1interface_1_1_logger.html", [
       [ "skyway::global::Logger", "classskyway_1_1global_1_1_logger.html", null ]
     ] ],
+    [ "skyway::global::interface::LoggerObserver", "classskyway_1_1global_1_1interface_1_1_logger_observer.html", [
+      [ "skyway::global::LoggerObserver", "classskyway_1_1global_1_1_logger_observer.html", null ]
+    ] ],
     [ "rtc::LogSink", null, [
       [ "skyway::global::Logger", "classskyway_1_1global_1_1_logger.html", null ]
     ] ],
@@ -175,6 +178,8 @@ var hierarchy =
     [ "skyway::core::ContextOptions::RtcConfig", "structskyway_1_1core_1_1_context_options_1_1_rtc_config.html", null ],
     [ "skyway::Context::SkyWayOptions::Rtp", "structskyway_1_1_context_1_1_sky_way_options_1_1_rtp.html", null ],
     [ "skyway::media::rtp::interface::RtpCapturerVideoSourceOptions", "structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html", null ],
+    [ "skyway::global::util::ScopeExit", "classskyway_1_1global_1_1util_1_1_scope_exit.html", null ],
+    [ "skyway::global::interface::LoggerObserver::SdkLog", "structskyway_1_1global_1_1interface_1_1_logger_observer_1_1_sdk_log.html", null ],
     [ "skyway::Context::SkyWayOptions::SFU", "structskyway_1_1_context_1_1_sky_way_options_1_1_s_f_u.html", null ],
     [ "skyway::core::ContextOptions::Signaling", "structskyway_1_1core_1_1_context_options_1_1_signaling.html", null ],
     [ "skyway::core::interface::Stream", "classskyway_1_1core_1_1interface_1_1_stream.html", [

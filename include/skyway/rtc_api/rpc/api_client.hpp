@@ -17,8 +17,8 @@ namespace skyway {
 namespace rtc_api {
 namespace rpc {
 
-using ApiClientInterface        = interface::ApiClient;
-using RapiOptions               = core::ContextOptions::RtcApi;
+using ApiClientInterface = interface::ApiClient;
+using RapiOptions        = core::ContextOptions::RtcApi;
 
 class ApiClient : public ApiClientInterface {
 public:

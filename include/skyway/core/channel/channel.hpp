@@ -21,9 +21,9 @@ namespace skyway {
 namespace core {
 namespace channel {
 
-using ChannelState          = interface::ChannelState;
-using ChannelInit           = model::Channel::Init;
-using ChannelQuery          = model::Channel::Query;
+using ChannelState = interface::ChannelState;
+using ChannelInit  = model::Channel::Init;
+using ChannelQuery = model::Channel::Query;
 
 using SignalingClientDelegator = signaling::interface::SignalingClient::Delegator;
 
@@ -65,8 +65,10 @@ public:
     std::shared_ptr<interface::LocalPerson> LocalPerson() override;
     std::vector<std::shared_ptr<interface::RemoteMember>> Bots(bool active_only = true) override;
     std::vector<std::shared_ptr<interface::Member>> Members(bool active_only = true) override;
-    std::vector<std::shared_ptr<interface::Publication>> Publications(bool active_only = true) override;
-    std::vector<std::shared_ptr<interface::Subscription>> Subscriptions(bool active_only = true) override;
+    std::vector<std::shared_ptr<interface::Publication>> Publications(
+        bool active_only = true) override;
+    std::vector<std::shared_ptr<interface::Subscription>> Subscriptions(
+        bool active_only = true) override;
     ChannelState State() const override;
 
     std::shared_ptr<interface::LocalPerson> Join(const model::Member::Init& init) override;
@@ -76,12 +78,14 @@ public:
     void Dispose(bool remove_myself_if_needed = true) override;
 
     /// @cond INTERNAL_SECTION
-    std::shared_ptr<interface::Member> FindMember(const std::string& member_id, bool active_only = true) override;
-    std::shared_ptr<interface::RemoteMember> FindRemoteMember(const std::string& member_id, bool active_only = true) override;
+    std::shared_ptr<interface::Member> FindMember(const std::string& member_id,
+                                                  bool active_only = true) override;
+    std::shared_ptr<interface::RemoteMember> FindRemoteMember(const std::string& member_id,
+                                                              bool active_only = true) override;
     std::shared_ptr<interface::Publication> FindPublication(const std::string& publication_id,
-                                          bool active_only = true) override;
+                                                            bool active_only = true) override;
     std::shared_ptr<interface::Subscription> FindSubscription(const std::string& subscription_id,
-                                            bool active_only = true) override;
+                                                              bool active_only = true) override;
     std::vector<std::shared_ptr<interface::Subscription>> GetSubscriptionsByPublicationId(
         const std::string& publication_id, bool active_only = true) override;
     std::vector<std::shared_ptr<interface::Subscription>> GetSubscriptionsBySubscriberId(

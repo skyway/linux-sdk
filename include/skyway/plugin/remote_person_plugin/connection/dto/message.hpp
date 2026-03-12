@@ -5,10 +5,9 @@
 #ifndef SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_CONNECTION_DTO_MESSAGE_HPP_
 #define SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_CONNECTION_DTO_MESSAGE_HPP_
 
-#include <string>
-#include <optional>
-
 #include <json.hpp>
+#include <optional>
+#include <string>
 
 namespace skyway {
 namespace plugin {

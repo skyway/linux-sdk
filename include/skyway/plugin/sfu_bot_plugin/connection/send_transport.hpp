@@ -21,54 +21,53 @@ class SfuBotPluginSendTransportTest;
 
 class SendTransport : public interface::SendTransport {
 public:
-    SendTransport(interface::SfuApiClient *client,
-                  analytics::interface::AnalyticsClient *analytics_client);
+    SendTransport(interface::SfuApiClient* client);
     ~SendTransport();
 
-    void AddListener(const TransactionId &transaction_id,
-                     interface::SendTransport::Listener *listener) override;
+    void AddListener(const TransactionId& transaction_id,
+                     interface::SendTransport::Listener* listener) override;
 
-    void RemoveListener(const TransactionId &transaction_id) override;
-    ProducerId Produce(mediasoupclient::Producer::Listener *producer_listener,
+    void RemoveListener(const TransactionId& transaction_id) override;
+    ProducerId Produce(mediasoupclient::Producer::Listener* producer_listener,
                        rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track,
-                       const std::vector<webrtc::RtpEncodingParameters> *encodings,
-                       const nlohmann::json *codec_options,
-                       const nlohmann::json *codec,
-                       const nlohmann::json &app_data) override;
+                       const std::vector<webrtc::RtpEncodingParameters>* encodings,
+                       const nlohmann::json* codec_options,
+                       const nlohmann::json* codec,
+                       const nlohmann::json& app_data) override;
 
-    bool IsClosed(const ProducerId &producer_id) const override;
+    bool IsClosed(const ProducerId& producer_id) const override;
     rtc::scoped_refptr<webrtc::RtpSenderInterface> GetRtpSender(
-        const ProducerId &producer_id) const override;
+        const ProducerId& producer_id) const override;
     rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> GetTrack(
-        const ProducerId &producer_id) const override;
-    void Close(const ProducerId &producer_id) override;
-    nlohmann::json GetStats(const ProducerId &producer_id) const override;
-    void ReplaceTrack(const ProducerId &producer_id,
+        const ProducerId& producer_id) const override;
+    void Close(const ProducerId& producer_id) override;
+    nlohmann::json GetStats(const ProducerId& producer_id) const override;
+    void ReplaceTrack(const ProducerId& producer_id,
                       rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track) override;
 
     // mediasoupclient::SendTransport::Listener
-    std::future<std::string> OnProduce(mediasoupclient::SendTransport *transport,
-                                       const std::string &kind,
+    std::future<std::string> OnProduce(mediasoupclient::SendTransport* transport,
+                                       const std::string& kind,
                                        nlohmann::json rtp_parameters,
-                                       const nlohmann::json &app_data) override;
-    std::future<std::string> OnProduceData(mediasoupclient::SendTransport *transport,
-                                           const nlohmann::json &sctp_stream_parameters,
-                                           const std::string &label,
-                                           const std::string &protocol,
-                                           const nlohmann::json &app_data) override;
-    std::future<void> OnConnect(mediasoupclient::Transport *transport,
-                                const nlohmann::json &dtls_parameters) override;
-    void OnConnectionStateChange(mediasoupclient::Transport *transport,
-                                 const std::string &connection_state) override;
+                                       const nlohmann::json& app_data) override;
+    std::future<std::string> OnProduceData(mediasoupclient::SendTransport* transport,
+                                           const nlohmann::json& sctp_stream_parameters,
+                                           const std::string& label,
+                                           const std::string& protocol,
+                                           const nlohmann::json& app_data) override;
+    std::future<void> OnConnect(mediasoupclient::Transport* transport,
+                                const nlohmann::json& dtls_parameters) override;
+    void OnConnectionStateChange(mediasoupclient::Transport* transport,
+                                 const std::string& connection_state) override;
 
 private:
-    SendTransport(interface::SfuApiClient *client,
+    SendTransport(interface::SfuApiClient* client,
                   std::unique_ptr<interface::ConnectionStateObserver> observer);
 
-    mediasoupclient::Producer *FindProducer(const ProducerId &producer_id) const;
+    mediasoupclient::Producer* FindProducer(const ProducerId& producer_id) const;
 
     std::mutex listeners_mtx_;
-    std::unordered_map<TransactionId, interface::SendTransport::Listener *> listeners_;
+    std::unordered_map<TransactionId, interface::SendTransport::Listener*> listeners_;
 
     mutable std::mutex producer_operation_mtx_;
     mutable std::mutex producers_mtx_;

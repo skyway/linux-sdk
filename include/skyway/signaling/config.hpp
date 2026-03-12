@@ -35,6 +35,8 @@ extern const int kRequestTimeoutSec;
 extern const int kResponseTimeoutSec;
 /// ConnectivityCheckのタイムアウト時間(秒)
 extern const int kConnectivityCheckTimeoutSec;
+/// SignalingClient破棄時のSendEvent完了待機タイムアウト時間(秒)
+extern const int kDisposeWaitTimeoutSec;
 
 }  // namespace config
 }  // namespace signaling

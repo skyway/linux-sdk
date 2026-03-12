@@ -5,10 +5,9 @@
 #ifndef SKYWAY_CORE_CHUNK_MESSENGER_DTO_MESSAGE_HPP_
 #define SKYWAY_CORE_CHUNK_MESSENGER_DTO_MESSAGE_HPP_
 
-#include <string>
-#include <optional>
-
 #include <json.hpp>
+#include <optional>
+#include <string>
 
 namespace skyway {
 namespace core {

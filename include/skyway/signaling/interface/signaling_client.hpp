@@ -7,9 +7,9 @@
 
 #include <future>
 #include <json.hpp>
+#include <optional>
 #include <string>
 #include <unordered_map>
-#include <optional>
 
 #include "skyway/signaling/dto/response.hpp"
 #include "skyway/signaling/interface/member.hpp"

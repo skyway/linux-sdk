@@ -5,8 +5,8 @@
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_RECEIVER_HPP_
 #define SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_RECEIVER_HPP_
 
-#include <atomic>
 #include <Consumer.hpp>
+#include <atomic>
 #include <unordered_map>
 
 #include "skyway/analytics/interface/analytics_client.hpp"
@@ -30,8 +30,7 @@ public:
              const std::string& bot_id,
              interface::SfuApiClient* client,
              interface::TransportRepository* transport_repo,
-             std::shared_ptr<core::interface::Subscription> subscription,
-             analytics::interface::AnalyticsClient* analytics_client);
+             std::shared_ptr<core::interface::Subscription> subscription);
 
     ~Receiver();
     void StartReceiving(const interface::Device::PeerConnectionOptions* pc_options);
@@ -41,11 +40,12 @@ public:
     void OnTransportClose(mediasoupclient::Consumer* consumer) override;
 
     // core::interface::Subscription::InternalListener
-    void OnChangePreferredEncoding(std::shared_ptr<core::interface::Subscription> subscription) override;
+    void OnChangePreferredEncoding(
+        std::shared_ptr<core::interface::Subscription> subscription) override;
 
     // core::interface::Subscription::Callback
     const std::optional<nlohmann::json> GetStatsReport(
-            std::shared_ptr<core::interface::Subscription> subscription) override;
+        std::shared_ptr<core::interface::Subscription> subscription) override;
 
 private:
     bool LoadDevice(const std::string& publication_id,
@@ -63,7 +63,9 @@ private:
         const interface::Device::PeerConnectionOptions* pc_options);
 
     void SetupTransportAccessForStream();
-    void CreateConsumeThread(const std::string& publication_id, const std::string& origin_publication_id, const interface::Device::PeerConnectionOptions* pc_options);
+    void CreateConsumeThread(const std::string& publication_id,
+                             const std::string& origin_publication_id,
+                             const interface::Device::PeerConnectionOptions* pc_options);
 
     std::string local_person_id_;
     std::string bot_id_;
@@ -71,8 +73,6 @@ private:
     interface::TransportRepository* transport_repo_;
 
     std::weak_ptr<core::interface::Subscription> subscription_;
-
-    analytics::interface::AnalyticsClient* analytics_client_;
 
     interface::RecvTransport* transport_ = nullptr;
     ConsumerId consumer_id_;

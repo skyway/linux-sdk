@@ -34,8 +34,8 @@ public:
     bool UpdateChannelMetadata(const std::string& channel_id, const std::string& metadata) override;
 
     std::optional<model::Member> JoinChannel(const std::string& channel_id,
-                                               const model::Member::Init& init,
-                                               const std::optional<time_t> ttl_sec) override;
+                                             const model::Member::Init& init,
+                                             const std::optional<time_t> ttl_sec) override;
     bool UpdateMemberMetadata(const std::string& channel_id,
                               const std::string& member_id,
                               const std::string& metadata) override;

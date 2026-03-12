@@ -28,8 +28,6 @@ public:
 
 private:
     RtpCapturerVideoSourceRepository();
-    bool IsValidSource(
-        const std::shared_ptr<interface::RtpCapturerVideoSource>& video_source) const;
 
     mutable std::mutex video_sources_mtx_;
     std::unordered_set<std::shared_ptr<interface::RtpCapturerVideoSource>> video_sources_;

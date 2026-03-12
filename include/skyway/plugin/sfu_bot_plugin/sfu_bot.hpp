@@ -50,10 +50,14 @@ public:
     /// @cond INTERNAL_SECTION
     // Impl core::interface::RemoteMember
     void Dispose() override;
-    void OnUnsubscribedLocalPersonsPublication(std::shared_ptr<core::interface::Publication> publication) override;
-    void OnLocalPersonSubscribed(std::shared_ptr<core::interface::Subscription> subscription) override;
-    void OnLocalPersonUnsubscribed(std::shared_ptr<core::interface::Subscription> subscription) override;
-    void OnPublicationSubscribed(std::shared_ptr<core::interface::Subscription> subscription) override;
+    void OnUnsubscribedLocalPersonsPublication(
+        std::shared_ptr<core::interface::Publication> publication) override;
+    void OnLocalPersonSubscribed(
+        std::shared_ptr<core::interface::Subscription> subscription) override;
+    void OnLocalPersonUnsubscribed(
+        std::shared_ptr<core::interface::Subscription> subscription) override;
+    void OnPublicationSubscribed(
+        std::shared_ptr<core::interface::Subscription> subscription) override;
 
     // Impl core::interface::Member
     void OnLeft() override;
@@ -63,7 +67,8 @@ private:
     bool StopForwarding(Forwarding* forwarding, bool with_api_request);
     interface::SfuConnection* CreateConnection();
     interface::SfuConnection* GetOrCreateConnection();
-    bool ConfirmSubscription(Forwarding* forwarding, std::shared_ptr<core::interface::Subscription> subscription);
+    bool ConfirmSubscription(Forwarding* forwarding,
+                             std::shared_ptr<core::interface::Subscription> subscription);
 
     interface::SfuApiClient* client_;
     rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory_;

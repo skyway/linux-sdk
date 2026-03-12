@@ -31,13 +31,11 @@ public:
 
     virtual std::unique_ptr<SendTransport> CreateSendTransport(
         SfuApiClient* client,
-        analytics::interface::AnalyticsClient* analytics_client,
         const nlohmann::json& transport_options,
         const PeerConnectionOptions* pc_options) = 0;
 
     virtual std::unique_ptr<RecvTransport> CreateRecvTransport(
         SfuApiClient* client,
-        analytics::interface::AnalyticsClient* analytics_client,
         const nlohmann::json& transport_options,
         const PeerConnectionOptions* pc_options) = 0;
 };

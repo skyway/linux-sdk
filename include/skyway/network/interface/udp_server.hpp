@@ -26,13 +26,10 @@ public:
 
     virtual ~UdpServer() = default;
 
-    // Start the UDP server on specified address and port
     virtual bool Start(const std::string& local_address, uint16_t local_port) = 0;
 
-    // Stop the UDP server
     virtual void Stop() = 0;
 
-    // Set callback for received RTP packets
     virtual void RegisterPacketHandler(PacketHandler* handler) = 0;
 };
 

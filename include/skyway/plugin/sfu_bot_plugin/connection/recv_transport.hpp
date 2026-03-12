@@ -17,8 +17,7 @@ namespace connection {
 class RecvTransport : public interface::RecvTransport,
                       public mediasoupclient::RecvTransport::Listener {
 public:
-    RecvTransport(interface::SfuApiClient* client,
-                  analytics::interface::AnalyticsClient* analytics_client);
+    RecvTransport(interface::SfuApiClient* client);
     ~RecvTransport();
 
     // interface::RecvTransport
