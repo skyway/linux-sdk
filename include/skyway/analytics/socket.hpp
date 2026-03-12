@@ -22,20 +22,17 @@ class WebSocketIntegrationTest;  // Forward declaration for testing.
 
 namespace analytics {
 
-const std::string kWebSocketReconnectThreadName              = "analy_reconnect";
+const std::string kWebSocketReconnectThreadName = "analy_reconnect";
 
 class Socket : public interface::Socket, public network::interface::WebSocketClient::Listener {
 public:
     Socket(const std::string& session_endpoint,
-           const std::string& channel_id,
-           const std::optional<std::string>& channel_name,
-           const std::string& member_id,
-           const std::optional<std::string>& member_name,
+           const std::string& context_id,
            const std::weak_ptr<token::interface::AuthTokenManager> auth,
            const std::shared_ptr<network::interface::WebSocketClient>& ws,
            const platform::interface::PlatformInfoDelegator* platform_info,
-           const int max_socket_reconnect_count   = config::kMaxSocketReconnectCount,
-           const int socket_open_timeout_millisec = config::kSocketOpenTimeoutMillisec,
+           const int max_socket_reconnect_count      = config::kMaxSocketReconnectCount,
+           const int socket_open_timeout_millisec    = config::kSocketOpenTimeoutMillisec,
            const int socket_resend_interval_millisec = config::kSocketResendIntervalMillisec);
     ~Socket();
 
@@ -62,10 +59,7 @@ private:
     void OnAcknowledgeEvent(const AcknowledgePayload& payload);
     static std::string GetWebsocketUrl(
         const std::string& session_endpoint,
-        const std::string& channel_id,
-        const std::optional<std::string>& channel_name,
-        const std::string& member_id,
-        const std::optional<std::string>& member_name,
+        const std::string& context_id,
         const platform::interface::PlatformInfoDelegator* platform_info);
     std::vector<std::string> GetSubProtocols() const;
     static std::unordered_map<std::string, std::string> GetHeaders(
@@ -98,7 +92,7 @@ private:
     std::condition_variable send_pending_events_cv_;
 
     std::unique_ptr<global::interface::Worker> reconnect_worker_ =
-    std::make_unique<global::Worker>(kWebSocketReconnectThreadName);
+        std::make_unique<global::Worker>(kWebSocketReconnectThreadName);
 
 public:
     friend class AnalyticsSocketTest;

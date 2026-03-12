@@ -5,8 +5,8 @@
 #ifndef SKYWAY_MODEL_DOMAIN_HPP_
 #define SKYWAY_MODEL_DOMAIN_HPP_
 
-#include <optional>
 #include <json.hpp>
+#include <optional>
 
 namespace skyway {
 namespace model {

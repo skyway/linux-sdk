@@ -38,13 +38,15 @@ public:
     /// @details このAPIはlibskyway内部で利用される関数であり、ラップしないでください。
     /// @param publication Publication
     /// @param subscription_id SubscriptionのID
-    virtual void OnSubscribedLocalPersonsPublication(std::shared_ptr<core::interface::Publication> publication,
-                                                     const SubscriptionId& subscription_id) {};
+    virtual void OnSubscribedLocalPersonsPublication(
+        std::shared_ptr<core::interface::Publication> publication,
+        const SubscriptionId& subscription_id) {};
 
     /// @brief LocalPersonのPublicationがUnsubscribeされた時にコールされる関数
     /// @details このAPIはlibskyway内部で利用される関数であり、ラップしないでください。
     /// @param publication Publication
-    virtual void OnUnsubscribedLocalPersonsPublication(std::shared_ptr<core::interface::Publication> publication) {};
+    virtual void OnUnsubscribedLocalPersonsPublication(
+        std::shared_ptr<core::interface::Publication> publication) {};
 
     /// @brief LocalPersonがSubscribeした時にコールされる関数
     /// @details このAPIはlibskyway内部で利用される関数であり、ラップしないでください。
@@ -54,13 +56,14 @@ public:
     /// @brief LocalPersonがUnsubscribeした時にコールされる関数
     /// @details このAPIはlibskyway内部で利用される関数であり、ラップしないでください。
     /// @param subscription Subscription
-    virtual void OnLocalPersonUnsubscribed(std::shared_ptr<interface::Subscription> subscription) {};
+    virtual void OnLocalPersonUnsubscribed(std::shared_ptr<interface::Subscription> subscription) {
+    };
     /// @endcond
-    
+
     /// @brief PublicationがSubscribeされた時に発生するイベント
     /// @param subscription 対象のSubscription
     virtual void OnPublicationSubscribed(std::shared_ptr<interface::Subscription> subscription) {}
-    
+
     /// @brief PublicationがUnsubscribeされた時に発生するイベント
     /// @param subscription 対象のSubscription
     virtual void OnPublicationUnsubscribed(std::shared_ptr<interface::Subscription> subscription) {}

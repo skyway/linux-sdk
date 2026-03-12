@@ -81,6 +81,9 @@ public:
      *
      * Publish前・後どちらでも呼び出すことができます。
      *
+     * `Context::Setup()`から`Context::Dispose()`までの間で最大65535回まで呼び出すことができます。
+     * 上限に達した場合はfalseを返します。`Context::Dispose()`を実行し、再度`Context::Setup()`をコールすることでリセットされます。
+     *
      * @return 成功可否
      */
     virtual bool StartReceiving() = 0;
@@ -99,7 +102,7 @@ public:
     virtual bool StopReceiving() = 0;
 
     /// @cond INTERNAL_SECTION
-    virtual std::optional<uint8_t> GetFrameId()                            = 0;
+    virtual std::optional<uint16_t> GetFrameId()                           = 0;
     virtual void RegisterCallback(webrtc::EncodedImageCallback* callback)  = 0;
     virtual std::string Endpoint() const                                   = 0;
     virtual void OnEncoderReleased(webrtc::EncodedImageCallback* callback) = 0;

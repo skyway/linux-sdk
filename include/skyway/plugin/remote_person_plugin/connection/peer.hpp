@@ -15,10 +15,10 @@
 #include "skyway/analytics/interface/analytics_client.hpp"
 #include "skyway/core/interface/chunk_messenger.hpp"
 #include "skyway/core/interface/ice_manager.hpp"
+#include "skyway/global/worker.hpp"
 #include "skyway/plugin/remote_person_plugin/connection/data_channel_label.hpp"
 #include "skyway/plugin/remote_person_plugin/connection/dto/message.hpp"
 #include "skyway/signaling/interface/member.hpp"
-#include "skyway/global/worker.hpp"
 
 namespace skyway {
 namespace plugin {
@@ -109,8 +109,7 @@ public:
          core::interface::IceManager* ice_manager,
          ChunkMessengerInterface* messenger,
          Listener* listener,
-         rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory,
-         analytics::interface::AnalyticsClient* analytics_client);
+         rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory);
     virtual ~Peer();
     /// データチャネルが送信可能なオープン状態かどうか返します。
     /// @param publication_id Publication ID
@@ -133,7 +132,8 @@ public:
     void Dispose();
 
 protected:
-    dto::SendResult SendMessage(const nlohmann::json& message, const bool skip_response_wait = false);
+    dto::SendResult SendMessage(const nlohmann::json& message,
+                                const bool skip_response_wait = false);
     void ResolvePendingCandidates();
 
     rtc::scoped_refptr<webrtc::DataChannelInterface> GetDataChannel(
@@ -180,14 +180,14 @@ protected:
     MessageMember remote_member_;
     ChunkMessengerInterface* messenger_;
 
-    analytics::interface::AnalyticsClient* analytics_client_;
-
     std::mutex negotiation_mtx_;
 
     std::string rtc_peer_connection_id_;
-    std::unique_ptr<global::interface::Worker> connection_state_worker_ = std::make_unique<global::Worker>(kRemotePersonConnectionStateThreadName);
+    std::unique_ptr<global::interface::Worker> connection_state_worker_ =
+        std::make_unique<global::Worker>(kRemotePersonConnectionStateThreadName);
     std::atomic<bool> is_disposed_ = false;
-    std::unique_ptr<global::interface::Worker> signaling_worker_ = std::make_unique<global::Worker>("signaling");
+    std::unique_ptr<global::interface::Worker> signaling_worker_ =
+        std::make_unique<global::Worker>("signaling");
 
 private:
     void SendCandidate(const webrtc::IceCandidateInterface* candidate);

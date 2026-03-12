@@ -17,7 +17,7 @@ namespace skyway {
 namespace plugin {
 namespace remote_person {
 
-using SubscriptionId        = std::string;
+using SubscriptionId = std::string;
 
 /// @brief RemotePersonの機能を持つメンバー
 /// @details 他のSDKで生成されたRemoteMemberで、WebRTCコネクションにてStreamの受け渡しを行います。
@@ -25,8 +25,10 @@ class RemotePerson : public core::interface::RemoteMember {
 public:
     class EventListener : public core::interface::Member::EventListener {
     public:
-        virtual void OnPublicationSubscribed(std::shared_ptr<core::interface::Subscription> subscription) {}
-        virtual void OnPublicationUnsubscribed(std::shared_ptr<core::interface::Subscription> subscription) {}
+        virtual void OnPublicationSubscribed(
+            std::shared_ptr<core::interface::Subscription> subscription) {}
+        virtual void OnPublicationUnsubscribed(
+            std::shared_ptr<core::interface::Subscription> subscription) {}
     };
     RemotePerson(
         std::shared_ptr<core::interface::Channel> channel,
@@ -60,8 +62,9 @@ public:
     /// LocalPersonがDataPlaneにおいて、Senderとしての接続を開始します。
     /// @param publication LocalPersonのPublication
     /// @param subscription_id SubscriptionのID
-    void OnSubscribedLocalPersonsPublication(std::shared_ptr<core::interface::Publication> publication,
-                                             const SubscriptionId& subscription_id) override;
+    void OnSubscribedLocalPersonsPublication(
+        std::shared_ptr<core::interface::Publication> publication,
+        const SubscriptionId& subscription_id) override;
 
     /// @brief このRemotePersonがLocalPersonのPublicationをUnsubscribeしたときのイベント
     ///
@@ -70,7 +73,8 @@ public:
     ///
     /// LocalPersonがDataPlaneにおいて、Senderとしての接続を終了します。
     /// @param publication LocalPersonのPublication
-    void OnUnsubscribedLocalPersonsPublication(std::shared_ptr<core::interface::Publication> publication) override;
+    void OnUnsubscribedLocalPersonsPublication(
+        std::shared_ptr<core::interface::Publication> publication) override;
 
     /// @brief LocalPersonがこのRemotePersonのPublicationをSubscribeした時のイベント
     ///
@@ -79,7 +83,8 @@ public:
     ///
     /// LocalPersonがDataPlaneにおいて、Receiverとしての接続を開始します。
     /// @param subscription LocalPersonのSubscription
-    void OnLocalPersonSubscribed(std::shared_ptr<core::interface::Subscription> subscription) override;
+    void OnLocalPersonSubscribed(
+        std::shared_ptr<core::interface::Subscription> subscription) override;
 
     /// @brief LocalPersonがこのRemotePersonのPublicationをUnsubscribeした時のイベント
     ///
@@ -88,10 +93,13 @@ public:
     ///
     /// LocalPersonがDataPlaneにおいて、Receiverとしての接続を終了します。
     /// @param subscription LocalPersonのSubscription
-    void OnLocalPersonUnsubscribed(std::shared_ptr<core::interface::Subscription> subscription) override;
-    
-    void OnPublicationSubscribed(std::shared_ptr<core::interface::Subscription> subscription) override;
-    void OnPublicationUnsubscribed(std::shared_ptr<core::interface::Subscription> subscription) override;
+    void OnLocalPersonUnsubscribed(
+        std::shared_ptr<core::interface::Subscription> subscription) override;
+
+    void OnPublicationSubscribed(
+        std::shared_ptr<core::interface::Subscription> subscription) override;
+    void OnPublicationUnsubscribed(
+        std::shared_ptr<core::interface::Subscription> subscription) override;
 
     // core::interface::Member
     void OnLeft() override;

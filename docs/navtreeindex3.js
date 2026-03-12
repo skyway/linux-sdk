@@ -1,8 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"structskyway_1_1media_1_1audio_1_1interface_1_1_audio_frame.html#a4c1333a189b01f052fc5597f32faa81f":[3,0,0,3,0,0,0,3],
-"structskyway_1_1media_1_1audio_1_1interface_1_1_audio_frame.html#a4f3ac9875b13b474a26e542c943cedbb":[3,0,0,3,0,0,0,0],
-"structskyway_1_1media_1_1audio_1_1interface_1_1_audio_frame.html#aad8e5d2f1c3fee42689ad2f9a5c862ab":[3,0,0,3,0,0,0,2],
 "structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html":[3,0,0,3,0,0,1,0],
 "structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html#a50ca3377db3166ecc941dc1079a09e6d":[3,0,0,3,0,0,1,0,1],
 "structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html#a72bfa78438f0f0ecd7ff1ddfa3d03b24":[3,0,0,3,0,0,1,0,0],
@@ -112,12 +109,12 @@ var NAVTREEINDEX3 =
 "structskyway_1_1room_1_1interface_1_1_room_query.html#a9f42bd9763b982f80b9580352f796f9e":[3,0,0,6,1,7,1],
 "structskyway_1_1room_1_1interface_1_1_room_query.html#ac6e4cbc4016b7dfcb3262b3c5638a579":[3,0,0,6,1,7,0],
 "subscription_8hpp_source.html":[4,0,0,0,1,7],
-"thread__utils_8hpp_source.html":[4,0,0,0,2,5],
+"thread__utils_8hpp_source.html":[4,0,0,0,2,6],
 "unknown__plugin_2plugin_8hpp_source.html":[4,0,0,0,5,1,1],
 "v4l2__capturer__video__source_8hpp_source.html":[4,0,0,0,3,10],
 "v4l2__video__renderer_8hpp_source.html":[4,0,0,0,3,11],
 "video__codec_8hpp_source.html":[4,0,0,0,3,1,1],
 "video__renderer_8hpp_source.html":[4,0,0,0,3,2,3],
 "vp8_8hpp_source.html":[4,0,0,0,3,1,2],
-"worker_8hpp_source.html":[4,0,0,0,2,7]
+"worker_8hpp_source.html":[4,0,0,0,2,8]
 };

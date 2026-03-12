@@ -1,11 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622faa3cc7870e52b14d85f4f7abcf883e26d8":[3,0,0,2,0,0,0,3],
-"classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622faa69bc053d94295e30b9ef2649956c02a1":[3,0,0,2,0,0,0,4],
-"classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622faa7b149312bb1636c65baa428027fedfaf":[3,0,0,2,0,0,0,0],
-"classskyway_1_1media_1_1_device_manager.html":[3,0,0,3,6],
-"classskyway_1_1media_1_1_device_manager.html#a6e60ac6f8cbf1e0f5d09ccf1e72f4ada":[3,0,0,3,6,5],
-"classskyway_1_1media_1_1_device_manager.html#a70229bac68283f936a2e51a3ab186959":[3,0,0,3,6,2],
 "classskyway_1_1media_1_1_device_manager.html#a76b0eeddeda6457378987e54167ce305":[3,0,0,3,6,3],
 "classskyway_1_1media_1_1_device_manager.html#aa438ea93d2173ff89fb2efb5de50392d":[3,0,0,3,6,6],
 "classskyway_1_1media_1_1_device_manager.html#ab3819f4a759012bd5d024a5911b7cb53":[3,0,0,3,6,4],
@@ -249,5 +243,11 @@ var NAVTREEINDEX1 =
 "classskyway_1_1room_1_1interface_1_1_room_subscription.html#ad85517d4c075494592cbd93216b0dd37":[3,0,0,6,1,8,1],
 "classskyway_1_1room_1_1interface_1_1_room_subscription.html#adc9d7c537e7b56bca13834a38e4fa3f6":[3,0,0,6,1,8,11],
 "classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html":[3,0,0,6,1,8,0],
-"classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html#a32740066e022c859b241b2d71aadfb28":[3,0,0,6,1,8,0,1]
+"classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html#a32740066e022c859b241b2d71aadfb28":[3,0,0,6,1,8,0,1],
+"classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html#ac6b02199c161aa684000b3871ee971c7":[3,0,0,6,1,8,0,0],
+"classskyway_1_1room_1_1p2p_1_1_local_p2_p_room_member.html":[3,0,0,6,2,0],
+"classskyway_1_1room_1_1p2p_1_1_local_p2_p_room_member.html#a11384509f7aee8ad30399a710825d6a8":[3,0,0,6,2,0,4],
+"classskyway_1_1room_1_1p2p_1_1_local_p2_p_room_member.html#a257d8870325405bf65a721db5e77d7f5":[3,0,0,6,2,0,0],
+"classskyway_1_1room_1_1p2p_1_1_local_p2_p_room_member.html#a59a089a8aa8d1e616fe8fc8d3bf29eeb":[3,0,0,6,2,0,3],
+"classskyway_1_1room_1_1p2p_1_1_local_p2_p_room_member.html#a8e4d1fdd446535f4dd9ce22b401e8e92":[3,0,0,6,2,0,2]
 };

@@ -5,10 +5,10 @@
 #ifndef SKYWAY_GLOBAL_WORKER_HPP_
 #define SKYWAY_GLOBAL_WORKER_HPP_
 
+#include <condition_variable>
 #include <deque>
 #include <mutex>
 #include <thread>
-#include <condition_variable>
 
 #include "skyway/global/interface/worker.hpp"
 
@@ -19,7 +19,7 @@ namespace global {
 class Worker : public interface::Worker {
 public:
     using Task = std::function<void()>;
-    
+
     /// @brief コンストラクタ
     ///
     /// @details

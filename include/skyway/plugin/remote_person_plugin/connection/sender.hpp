@@ -45,8 +45,7 @@ public:
     Sender(const MessageMember& remote_member,
            core::interface::IceManager* ice_manager,
            core::interface::ChunkMessenger* messenger,
-           rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory,
-           analytics::interface::AnalyticsClient* analytics_client);
+           rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory);
     ~Sender();
 
     /// @brief ネゴシエーションを開始してStreamを送信します。

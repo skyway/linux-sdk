@@ -53,7 +53,7 @@ public:
     bool StopReceiving() override;
 
     /// @cond INTERNAL_SECTION
-    std::optional<uint8_t> GetFrameId() override;
+    std::optional<uint16_t> GetFrameId() override;
     void RegisterCallback(webrtc::EncodedImageCallback* callback) override;
     std::string Endpoint() const override;
     void OnEncoderReleased(webrtc::EncodedImageCallback* callback) override;

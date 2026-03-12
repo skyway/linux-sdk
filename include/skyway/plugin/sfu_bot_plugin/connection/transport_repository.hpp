@@ -37,13 +37,11 @@ public:
     nlohmann::json GetRtpCapabilities() override;
 
     interface::SendTransport* CreateSendTransport(
-        analytics::interface::AnalyticsClient* analytics_client,
         const nlohmann::json& transport_options,
         const interface::Device::PeerConnectionOptions* pc_options,
         const LocalPersonId& local_person_id) override;
 
     interface::RecvTransport* CreateRecvTransport(
-        analytics::interface::AnalyticsClient* analytics_client,
         const nlohmann::json& transport_options,
         const interface::Device::PeerConnectionOptions* pc_options,
         const LocalPersonId& local_person_id) override;

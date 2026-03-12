@@ -41,8 +41,7 @@ public:
         const MessageMember& remote_member,
         ChunkMessengerInterface* messenger,
         core::interface::IceManager* ice_manager,
-        rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory,
-        analytics::interface::AnalyticsClient* analytics_client);
+        rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory);
 
     ~P2PConnection();
 
@@ -52,7 +51,8 @@ public:
     /// Streamに応じてRTCPeerConnectionの操作を行い、ネゴシエーションが完了までブロックします。
     /// @param publication Publication
     /// @param subscription_id SubscriptionのID
-    void StartPublishing(std::shared_ptr<core::interface::Publication> publication, const SubscriptionId& subscription_id);
+    void StartPublishing(std::shared_ptr<core::interface::Publication> publication,
+                         const SubscriptionId& subscription_id);
 
     void StopPublishing(std::shared_ptr<core::interface::Publication> publication);
 
@@ -93,8 +93,10 @@ private:
     ChunkMessengerInterface* messenger_;
     std::unique_ptr<Sender> sender_;
     std::unique_ptr<Receiver> receiver_;
-    std::unique_ptr<global::interface::Worker> send_worker_ = std::make_unique<global::Worker>(kRemotePersonSendThreadName);
-    std::unique_ptr<global::interface::Worker> receive_worker_ = std::make_unique<global::Worker>(kRemotePersonRecvThreadName);
+    std::unique_ptr<global::interface::Worker> send_worker_ =
+        std::make_unique<global::Worker>(kRemotePersonSendThreadName);
+    std::unique_ptr<global::interface::Worker> receive_worker_ =
+        std::make_unique<global::Worker>(kRemotePersonRecvThreadName);
 
 public:
     friend class P2PConnectionTest;

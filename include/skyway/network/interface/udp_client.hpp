@@ -12,15 +12,12 @@ namespace skyway {
 namespace network {
 namespace interface {
 
-// Client interface for sending UDP packets
 class UdpClient {
 public:
     virtual ~UdpClient() = default;
 
-    // Open the socket
     virtual bool Open() = 0;
 
-    // Send data to the specified IPv4 address and port
     virtual bool Send(const uint8_t* data, size_t size) = 0;
 };
 

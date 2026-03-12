@@ -17,11 +17,12 @@ class ConnectionStateObserver {
 public:
     virtual ~ConnectionStateObserver() = default;
 
-    virtual void AddListener(std::shared_ptr<core::ConnectionStateChangeNotifiable> listener)    = 0;
-    virtual void RemoveListener(std::shared_ptr<core::ConnectionStateChangeNotifiable> listener) = 0;
+    virtual void AddListener(std::shared_ptr<core::ConnectionStateChangeNotifiable> listener) = 0;
+    virtual void RemoveListener(
+        std::shared_ptr<core::ConnectionStateChangeNotifiable> listener)      = 0;
     virtual void OnConnectionStateChange(Transport* transport,
-                                         const std::string& connection_state)    = 0;
-    virtual void Dispose()                                                       = 0;
+                                         const std::string& connection_state) = 0;
+    virtual void Dispose()                                                    = 0;
 };
 
 }  // namespace interface

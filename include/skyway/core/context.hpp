@@ -27,6 +27,23 @@ namespace ice {
 class CoreIceManagerTest;
 }  // namespace ice
 }  // namespace core
+
+namespace plugin {
+namespace remote_person {
+namespace connection {
+class RemotePersonPluginReceiverTest;
+class RemotePersonPluginSenderTest;
+}  // namespace connection
+}  // namespace remote_person
+
+namespace sfu_bot {
+namespace connection {
+class SfuBotPluginConnectionStateObserverTest;
+class SfuBotPluginSenderTest;
+}  // namespace connection
+}  // namespace sfu_bot
+}  // namespace plugin
+
 }  // namespace skyway
 
 namespace skyway {
@@ -103,6 +120,11 @@ public:
     /// @details BridgeはこのメソッドをWrapしません。
     static std::weak_ptr<rtc_api::interface::Client> RtcApi();
 
+    /// @cond INTERNAL_SECTION
+    /// @brief AnalyticsClientを取得します。
+    /// @details BridgeはこのメソッドをWrapしません。
+    static std::weak_ptr<analytics::interface::AnalyticsClient> AnalyticsClient();
+
     /// @brief Setupで入力されたオプションを取得します。
     /// @details BridgeはこのメソッドをWrapしません。
     static ContextOptions Options();
@@ -129,6 +151,11 @@ public:
     /// @details BridgeはこのメソッドをWrapしません。
     /// @param error エラー
     static void OnFatalError(const SkyWayError& error);
+
+    /// @cond INTERNAL_SECTION
+    /// @brief ContextIDを取得します。
+    /// @details BridgeはこのメソッドをWrapしません。
+    static std::string GetContextId();
     /// @endcond
 private:
     static std::mutex listener_mtx_;
@@ -137,6 +164,8 @@ private:
     static std::mutex setup_mtx_;
     static std::shared_ptr<rtc_api::interface::Client> rtc_api_;
     static std::shared_ptr<token::interface::AuthTokenManager> token_manager_;
+    static std::string context_id_;
+    static std::shared_ptr<analytics::interface::AnalyticsClient> analytics_client_;
     static ContextOptions options_;
     static std::vector<std::unique_ptr<RemoteMemberPluginInterface>> plugins_;
 
@@ -145,6 +174,13 @@ public:
     friend class CoreContextTest;
     friend class channel::CoreChannelTest;
     friend class ice::CoreIceManagerTest;
+    friend class plugin::sfu_bot::connection::
+        SfuBotPluginConnectionStateObserverTest;                       // For analytics client test
+    friend class plugin::sfu_bot::connection::SfuBotPluginSenderTest;  // For analytics client test
+    friend class plugin::remote_person::connection::
+        RemotePersonPluginReceiverTest;  // For analytics client test
+    friend class plugin::remote_person::connection::RemotePersonPluginSenderTest;  // For analytics
+                                                                                   // client test
     /// @endcond
 };
 

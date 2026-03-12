@@ -7,18 +7,18 @@
 
 #include <unordered_set>
 
+#include "skyway/global/worker.hpp"
 #include "skyway/network/interface/websocket_client.hpp"
 #include "skyway/rtc_api/config.hpp"
 #include "skyway/rtc_api/interface/rpc.hpp"
 #include "skyway/token/interface/auth_token_manager.hpp"
-#include "skyway/global/worker.hpp"
 
 namespace skyway {
 namespace rtc_api {
 namespace rpc {
 
-using RpcInterface              = interface::Rpc;
-using WebSocketClientInterface  = network::interface::WebSocketClient;
+using RpcInterface             = interface::Rpc;
+using WebSocketClientInterface = network::interface::WebSocketClient;
 
 const std::string kRapiReconnectThreadName = "rapi_reconnect";
 
@@ -32,8 +32,8 @@ public:
     ~Rpc();
     bool Connect(const std::string& domain, bool secure) override;
     std::optional<nlohmann::json> Request(const std::string& method,
-                                            const nlohmann::json& params,
-                                            const std::string& message_id) override;
+                                          const nlohmann::json& params,
+                                          const std::string& message_id) override;
     void Close() override;
     bool IsConnected() const override;
     void AddPendingRequest(const std::string& method,
@@ -60,7 +60,7 @@ private:
     void AddPendingRequest(dto::RequestMessage message);
     void ResolvePendingRequests();
     void Reconnect();
-    
+
     std::weak_ptr<token::interface::AuthTokenManager> auth_;
     RpcInterface::Listener* listener_;
     std::atomic<State> state_;
@@ -80,7 +80,8 @@ private:
     std::atomic<bool> disconnected_while_requesting_;
     std::atomic<bool> is_closed_;
 
-    std::unique_ptr<global::interface::Worker> reconnect_worker_ = std::make_unique<global::Worker>(kRapiReconnectThreadName);
+    std::unique_ptr<global::interface::Worker> reconnect_worker_ =
+        std::make_unique<global::Worker>(kRapiReconnectThreadName);
 
 public:
     friend class RtcApiRpcTest;

@@ -24,7 +24,7 @@ class Subscription;
 enum class MemberState { kJoined, kLeft };
 
 /// @brief LocalPersonおよびRemoteMemberの基底クラス
-class Member: public std::enable_shared_from_this<Member> {
+class Member : public std::enable_shared_from_this<Member> {
 public:
     /// @brief イベントリスナ
     class EventListener {
@@ -80,7 +80,9 @@ public:
     /// @endcond
 
 protected:
-    Member(std::shared_ptr<interface::Channel> channel, const model::Member& initial_dto, const model::Side& side);
+    Member(std::shared_ptr<interface::Channel> channel,
+           const model::Member& initial_dto,
+           const model::Side& side);
 
     std::weak_ptr<interface::Channel> channel_;
     model::Member initial_dto_;

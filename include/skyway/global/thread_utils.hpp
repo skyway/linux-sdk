@@ -14,7 +14,7 @@
 #endif
 #include <string>
 
-namespace skyway{
+namespace skyway {
 namespace global {
 namespace util {
 
@@ -36,8 +36,8 @@ inline int SetThreadName(const std::string& name) {
     return 0;
 }
 
-}
-}
-}
+}  // namespace util
+}  // namespace global
+}  // namespace skyway
 
-#endif //SKYWAY_ANDROID_SDK_THREAD_UTILS_HPP
+#endif  // SKYWAY_ANDROID_SDK_THREAD_UTILS_HPP

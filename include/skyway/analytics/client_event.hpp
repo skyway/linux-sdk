@@ -38,9 +38,9 @@ struct PendingClientEvent {
     std::chrono::steady_clock::time_point next_due;
 
     PendingClientEvent(
-            const ClientEvent& event,
-            std::chrono::steady_clock::time_point next_due = std::chrono::steady_clock::now()
-    ): event(event), next_due(next_due) {}
+        const ClientEvent& event,
+        std::chrono::steady_clock::time_point next_due = std::chrono::steady_clock::now())
+        : event(event), next_due(next_due) {}
 };
 
 struct BindingRtcPeerConnectionToSubscriptionPayload {
@@ -56,8 +56,7 @@ struct [[deprecated]] SubscriptionStatsReportPayload {
     std::chrono::milliseconds created_at;  // Unix Timestamp
 
     SubscriptionStatsReportPayload() = default;
-    SubscriptionStatsReportPayload(const std::string& subscription_id,
-                                   const std::string& role);
+    SubscriptionStatsReportPayload(const std::string& subscription_id, const std::string& role);
 };
 
 struct RtcPeerConnectionEventReportPayload {
@@ -144,6 +143,24 @@ struct SubscriptionUpdatePreferredEncodingReportPayload {
                                                      unsigned int preferred_encoding_index);
 };
 
+struct JoinChannelEventPayload {
+    std::string member_id;
+    JoinChannelEventPayload(const std::string& member_id) : member_id(member_id) {}
+};
+
+struct SDKLogsPayload {
+    struct SDKLog {
+        std::chrono::milliseconds timestamp;
+        std::string level;
+        std::string message;
+        SDKLog(const std::string& level, const std::string& message);
+    };
+
+    std::string context_id;
+    std::vector<SDKLog> sdk_logs;
+    SDKLogsPayload(const std::string& context_id, const std::vector<SDKLog>& sdk_logs);
+};
+
 void to_json(nlohmann::json& j, const ClientEvent& event);
 void to_json(nlohmann::json& j, const BindingRtcPeerConnectionToSubscriptionPayload& payload);
 /// @deprecated 本機能は非推奨な機能であるSubscriptionStatsReportPayloadを利用しています。
@@ -154,6 +171,9 @@ void to_json(nlohmann::json& j,
              const RtcPeerConnectionEventReportPayload::IceCandidateErrorEvent& event);
 void to_json(nlohmann::json& j, const PublicationUpdateEncodingsReportPayload& payload);
 void to_json(nlohmann::json& j, const SubscriptionUpdatePreferredEncodingReportPayload& payload);
+void to_json(nlohmann::json& j, const JoinChannelEventPayload& payload);
+void to_json(nlohmann::json& j, const SDKLogsPayload::SDKLog& log);
+void to_json(nlohmann::json& j, const SDKLogsPayload& payload);
 
 }  // namespace analytics
 }  // namespace skyway

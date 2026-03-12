@@ -46,17 +46,21 @@ var annotated_dup =
             [ "RemoteVideoStream", "classskyway_1_1core_1_1stream_1_1remote_1_1_remote_video_stream.html", "classskyway_1_1core_1_1stream_1_1remote_1_1_remote_video_stream" ]
           ] ]
         ] ],
-        [ "Context", "classskyway_1_1core_1_1_context.html", "classskyway_1_1core_1_1_context" ],
         [ "ContextOptions", "structskyway_1_1core_1_1_context_options.html", "structskyway_1_1core_1_1_context_options" ],
         [ "Publication", "classskyway_1_1core_1_1_publication.html", "classskyway_1_1core_1_1_publication" ],
         [ "Subscription", "classskyway_1_1core_1_1_subscription.html", "classskyway_1_1core_1_1_subscription" ]
       ] ],
       [ "global", null, [
         [ "interface", null, [
-          [ "Logger", "classskyway_1_1global_1_1interface_1_1_logger.html", "classskyway_1_1global_1_1interface_1_1_logger" ]
+          [ "Logger", "classskyway_1_1global_1_1interface_1_1_logger.html", "classskyway_1_1global_1_1interface_1_1_logger" ],
+          [ "LoggerObserver", "classskyway_1_1global_1_1interface_1_1_logger_observer.html", "classskyway_1_1global_1_1interface_1_1_logger_observer" ]
+        ] ],
+        [ "util", null, [
+          [ "ScopeExit", "classskyway_1_1global_1_1util_1_1_scope_exit.html", null ]
         ] ],
         [ "Error", "structskyway_1_1global_1_1_error.html", null ],
-        [ "Logger", "classskyway_1_1global_1_1_logger.html", "classskyway_1_1global_1_1_logger" ]
+        [ "Logger", "classskyway_1_1global_1_1_logger.html", "classskyway_1_1global_1_1_logger" ],
+        [ "LoggerObserver", "classskyway_1_1global_1_1_logger_observer.html", null ]
       ] ],
       [ "media", null, [
         [ "audio", null, [

@@ -10,9 +10,9 @@
 namespace skyway {
 
 // General
-static const unsigned kVersionMajor = 9;
-static const unsigned kVersionMinor = 1;
-static const unsigned kVersionPatch = 0;
+static const unsigned kVersionMajor = 10;
+static const unsigned kVersionMinor = 0;
+static const unsigned kVersionPatch = 1;
 
 inline std::string GetVersionString() {
     // clang-format off

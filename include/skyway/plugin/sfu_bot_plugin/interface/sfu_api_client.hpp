@@ -19,8 +19,8 @@ public:
     virtual ~SfuApiClient() = default;
     // For Plugin
     virtual std::optional<dto::CreateBotResponse> CreateBot(const std::string& app_id,
-                                                              const std::string& channel_id) = 0;
-    virtual bool DeleteBot(const std::string& bot_id)                                        = 0;
+                                                            const std::string& channel_id) = 0;
+    virtual bool DeleteBot(const std::string& bot_id)                                      = 0;
 
     virtual bool Connect(const std::string& transport_id,
                          const nlohmann::json& dtls_parameters) = 0;
@@ -60,8 +60,7 @@ public:
         const std::string& publication_id,
         const int spatial_layer) = 0;
 
-    virtual std::optional<dto::IceRestartResponse> IceRestart(
-        const std::string& transport_id) = 0;
+    virtual std::optional<dto::IceRestartResponse> IceRestart(const std::string& transport_id) = 0;
 };
 
 }  // namespace interface

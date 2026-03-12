@@ -33,8 +33,7 @@ public:
            interface::SfuApiClient* client,
            interface::TransportRepository* transport_repo,
            std::shared_ptr<core::interface::Publication> publication,
-           ForwardingConfigure configure,
-           analytics::interface::AnalyticsClient* analytics_client);
+           ForwardingConfigure configure);
     ~Sender();
     std::optional<interface::StartForwardingResult> StartForwarding(
         const interface::Device::PeerConnectionOptions* pc_options);
@@ -74,8 +73,6 @@ private:
 
     std::weak_ptr<core::interface::Publication> publication_;
     ForwardingConfigure configure_;
-
-    analytics::interface::AnalyticsClient* analytics_client_;
 
     interface::SendTransport* transport_ = nullptr;
     ProducerId producer_id_;

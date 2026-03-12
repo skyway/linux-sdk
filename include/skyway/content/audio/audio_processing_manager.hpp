@@ -6,6 +6,7 @@
 #define SKYWAY_CONTENT_AUDIO_PROCESSING_MANAGER_HPP
 
 #include <modules/audio_processing/include/audio_processing.h>
+
 #include "audio_data_forwarder.hpp"
 #include "skyway/global/interface/logger.hpp"
 
@@ -38,11 +39,10 @@ public:
 private:
     static rtc::scoped_refptr<webrtc::AudioProcessing> audio_processing_;
     static std::shared_ptr<AudioDataForwarder> audio_data_forwarder_;
-
 };
 
-}
-}
-}
+}  // namespace audio
+}  // namespace content
+}  // namespace skyway
 
-#endif //SKYWAY_CONTENT_AUDIO_PROCESSING_MANAGER_HPP
+#endif  // SKYWAY_CONTENT_AUDIO_PROCESSING_MANAGER_HPP

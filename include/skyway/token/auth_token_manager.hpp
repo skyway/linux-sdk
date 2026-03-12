@@ -36,6 +36,7 @@ private:
     void JoinTimerThreadsIfNeeded();
     bool SetupTimers();
     std::mutex update_token_mtx_;
+    std::mutex internal_listeners_mtx_;
     Listener* listener_;
     std::unordered_set<interface::AuthTokenManager::InternalListener*> internal_listeners_;
     std::optional<int> update_remind_sec_;

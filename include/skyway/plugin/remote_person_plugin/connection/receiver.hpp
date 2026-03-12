@@ -39,8 +39,7 @@ public:
     Receiver(const MessageMember& remote_member,
              core::interface::IceManager* ice_manager,
              core::interface::ChunkMessenger* messenger,
-             rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory,
-             analytics::interface::AnalyticsClient* analytics_client);
+             rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory);
     ~Receiver();
 
     /// @brief ネゴシエーションを開始してStreamを受信します。
@@ -82,7 +81,8 @@ private:
     void SetupTransportAccessForStream();
     bool IsInvalidSignalingState();
     void NotifyConnectionStateChanged(const core::ConnectionState new_state);
-    std::optional<std::weak_ptr<core::interface::Subscription>> FindSubscription(const std::string& stream_id);
+    std::optional<std::weak_ptr<core::interface::Subscription>> FindSubscription(
+        const std::string& stream_id);
 
     std::weak_ptr<core::interface::Subscription> target_subscription_;
     std::mutex subscriptions_mutex_;

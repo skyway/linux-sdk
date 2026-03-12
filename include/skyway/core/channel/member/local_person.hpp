@@ -31,17 +31,14 @@ public:
                 const model::Member& dto,
                 std::unique_ptr<ChunkMessengerInterface> messenger,
                 int keepalive_interval_sec,
-                int keepalive_interval_gap_sec,
-                std::unique_ptr<AnalyticsClientInterface> analytics_client);
+                int keepalive_interval_gap_sec);
     ~LocalPerson();
 
     ChunkMessengerInterface* Messenger() const override;
-
-    AnalyticsClientInterface* AnalyticsClient() const override;
     /// @endcond
-
-    std::shared_ptr<interface::Publication> Publish(std::shared_ptr<LocalStream> stream,
-                                  interface::LocalPerson::PublicationOptions options) override;
+    std::shared_ptr<interface::Publication> Publish(
+        std::shared_ptr<LocalStream> stream,
+        interface::LocalPerson::PublicationOptions options) override;
     std::shared_ptr<interface::Subscription> Subscribe(
         const std::string& publication_id,
         const interface::LocalPerson::SubscriptionOptions& options) override;
@@ -50,33 +47,35 @@ public:
     /// @cond INTERNAL_SECTION
     void OnPublished(std::shared_ptr<interface::Publication> publication) override;
     void OnUnpublished(std::shared_ptr<interface::Publication> publication) override;
-    void OnSubscribed(std::shared_ptr<interface::Subscription> subscription, std::shared_ptr<interface::RemoteMember> publisher) override;
-    void OnUnsubscribed(std::shared_ptr<interface::Subscription> subscription, std::shared_ptr<interface::RemoteMember> publisher) override;
-    void OnPublicationSubscribedByRemoteMember(std::shared_ptr<interface::Subscription> subscription,
-                                               std::shared_ptr<interface::RemoteMember> subscriber) override;
-    void OnPublicationUnsubscribedByRemoteMember(std::shared_ptr<interface::Subscription> subscription,
-                                                 std::shared_ptr<interface::RemoteMember> subscriber) override;
+    void OnSubscribed(std::shared_ptr<interface::Subscription> subscription,
+                      std::shared_ptr<interface::RemoteMember> publisher) override;
+    void OnUnsubscribed(std::shared_ptr<interface::Subscription> subscription,
+                        std::shared_ptr<interface::RemoteMember> publisher) override;
+    void OnPublicationSubscribedByRemoteMember(
+        std::shared_ptr<interface::Subscription> subscription,
+        std::shared_ptr<interface::RemoteMember> subscriber) override;
+    void OnPublicationUnsubscribedByRemoteMember(
+        std::shared_ptr<interface::Subscription> subscription,
+        std::shared_ptr<interface::RemoteMember> subscriber) override;
     void Dispose() override;
     /// @endcond
 
     // AnalyticsClientInterface::Delegator
-    std::vector<analytics::interface::AnalyticsClient::SubscriptionStats> GetSubscriptionStatsForAnalytics()
-        const override;
+    std::vector<analytics::interface::AnalyticsClient::SubscriptionStats>
+    GetSubscriptionStatsForAnalytics() const override;
 
 private:
     void UpdateMemberTtl(const std::string& channel_id, int keepalive_interval_sec);
     void SetupTtlTimer();
-    using SubscriptionId = std::string;
-    using SubscriptionPair =
-        std::pair<std::weak_ptr<interface::Subscription>, interface::LocalPerson::SubscriptionOptions>;
+    using SubscriptionId   = std::string;
+    using SubscriptionPair = std::pair<std::weak_ptr<interface::Subscription>,
+                                       interface::LocalPerson::SubscriptionOptions>;
 
     std::unique_ptr<ChunkMessengerInterface> messenger_;
     std::mutex tmp_subscriptions_mtx_;
     std::unordered_map<SubscriptionId, SubscriptionPair> tmp_subscriptions_;
     int keepalive_interval_sec_;
     int keepalive_interval_gap_sec_;
-
-    std::unique_ptr<AnalyticsClientInterface> analytics_client_;
 
     std::mutex stream_mtx_;
 

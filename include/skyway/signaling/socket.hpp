@@ -8,17 +8,17 @@
 #include <atomic>
 #include <future>
 
+#include "skyway/global/worker.hpp"
 #include "skyway/network/interface/websocket_client.hpp"
 #include "skyway/platform/interface/platform_info_delegator.hpp"
 #include "skyway/signaling/config.hpp"
 #include "skyway/signaling/dto/payload.hpp"
 #include "skyway/signaling/interface/socket.hpp"
 #include "skyway/token/interface/auth_token_manager.hpp"
-#include "skyway/global/worker.hpp"
 
 namespace skyway {
 
-class WebSocketIntegrationTest; // Forward declaration for testing.
+class WebSocketIntegrationTest;  // Forward declaration for testing.
 
 namespace signaling {
 
@@ -26,7 +26,7 @@ using SocketInterface                = interface::Socket;
 using WebSocketClientInterface       = network::interface::WebSocketClient;
 using PlatformInfoDelegatorInterface = platform::interface::PlatformInfoDelegator;
 
-const std::string kSignalingWebSocketReconnectThreadName  = "sign_reconnect";
+const std::string kSignalingWebSocketReconnectThreadName = "sign_reconnect";
 
 class Socket : public SocketInterface, public WebSocketClientInterface::Listener {
 public:
@@ -76,7 +76,8 @@ private:
     std::atomic<bool> is_open_;
     std::atomic<bool> is_disposed_;
     std::shared_ptr<WebSocketClientInterface> ws_;
-    std::unique_ptr<global::interface::Worker> reconnect_worker_ = std::make_unique<global::Worker>(kSignalingWebSocketReconnectThreadName);
+    std::unique_ptr<global::interface::Worker> reconnect_worker_ =
+        std::make_unique<global::Worker>(kSignalingWebSocketReconnectThreadName);
 
 public:
     friend class SignalingSocketTest;

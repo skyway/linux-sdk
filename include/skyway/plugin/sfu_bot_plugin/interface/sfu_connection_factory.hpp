@@ -25,8 +25,7 @@ public:
         const core::ContextOptions& options,
         webrtc::PeerConnectionInterface::IceServers ice_servers,
         rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory,
-        TransportRepository* transport_repo,
-        analytics::interface::AnalyticsClient* analytics_client) = 0;
+        TransportRepository* transport_repo) = 0;
 };
 
 }  // namespace interface

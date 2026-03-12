@@ -2,7 +2,7 @@
 // © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.
 //
 
-// Define “SKYWAY_ENABLE_OPENCV” if you want to use OpenCV functionality
+// OpenCVの機能を利用する際には、SKYWAY_ENABLE_OPENCVマクロを定義してください。
 #ifdef SKYWAY_ENABLE_OPENCV
 
 #ifndef SKYWAY_MEDIA_OPENCV_VIDEO_RENDERER_HPP_

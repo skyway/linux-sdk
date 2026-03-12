@@ -10,5 +10,6 @@ var searchData=
   ['localsfuroommember_7',['LocalSFURoomMember',['../classskyway_1_1room_1_1sfu_1_1_local_s_f_u_room_member.html',1,'skyway::room::sfu']]],
   ['localstream_8',['LocalStream',['../classskyway_1_1core_1_1interface_1_1_local_stream.html',1,'skyway::core::interface']]],
   ['localvideostream_9',['localvideostream',['../classskyway_1_1core_1_1stream_1_1local_1_1_local_video_stream.html',1,'skyway::core::stream::local::LocalVideoStream'],['../classskyway_1_1media_1_1stream_1_1local_1_1_local_video_stream.html',1,'skyway::media::stream::local::LocalVideoStream']]],
-  ['logger_10',['logger',['../classskyway_1_1global_1_1interface_1_1_logger.html',1,'skyway::global::interface::Logger'],['../classskyway_1_1global_1_1_logger.html',1,'skyway::global::Logger']]]
+  ['logger_10',['logger',['../classskyway_1_1global_1_1interface_1_1_logger.html',1,'skyway::global::interface::Logger'],['../classskyway_1_1global_1_1_logger.html',1,'skyway::global::Logger']]],
+  ['loggerobserver_11',['loggerobserver',['../classskyway_1_1global_1_1interface_1_1_logger_observer.html',1,'skyway::global::interface::LoggerObserver'],['../classskyway_1_1global_1_1_logger_observer.html',1,'skyway::global::LoggerObserver']]]
 ];

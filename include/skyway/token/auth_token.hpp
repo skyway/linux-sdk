@@ -6,10 +6,10 @@
 #define SKYWAY_TOKEN_AUTH_TOKEN_HPP_
 
 #include <json.hpp>
+#include <optional>
 #include <string>
 #include <thread>
 #include <vector>
-#include <optional>
 
 namespace skyway {
 namespace token {
@@ -67,7 +67,7 @@ struct AuthToken {
     virtual std::string AppId() const = 0;
     std::string Jwt() const;
     virtual bool IsAnalyticsEnabled() const = 0;
-    virtual bool IsSfuEnabled() const = 0;
+    virtual bool IsSfuEnabled() const       = 0;
 
     std::string jti;
     time_t iat;

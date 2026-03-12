@@ -133,7 +133,7 @@ $(document).ready(function(){initNavTree('core_2interface_2member_8hpp_source.ht
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">enum class</span> MemberState { kJoined, kLeft };</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html">   27</a></span><span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_member.html">Member</a>: <span class="keyword">public</span> std::enable_shared_from_this&lt;Member&gt; {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member.html">   27</a></span><span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_member.html">Member</a> : <span class="keyword">public</span> std::enable_shared_from_this&lt;Member&gt; {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">public</span>:</div>
 <div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">   30</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">EventListener</a> {</div>
@@ -169,23 +169,25 @@ $(document).ready(function(){initNavTree('core_2interface_2member_8hpp_source.ht
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnSubscriptionListChanged();</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_member.html">Member</a>(std::shared_ptr&lt;interface::Channel&gt; channel, <span class="keyword">const</span> <a class="code hl_struct" href="structskyway_1_1model_1_1_member.html">model::Member</a>&amp; initial_dto, <span class="keyword">const</span> model::Side&amp; side);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    std::weak_ptr&lt;interface::Channel&gt; channel_;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_struct" href="structskyway_1_1model_1_1_member.html">model::Member</a> initial_dto_;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    model::Side side_;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    MemberState state_;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    std::mutex listeners_mtx_;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    std::unordered_set&lt;EventListener*&gt; listeners_;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    std::atomic&lt;bool&gt; metadata_updated_;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>};</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_class" href="classskyway_1_1core_1_1interface_1_1_member.html">Member</a>(std::shared_ptr&lt;interface::Channel&gt; channel,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>           <span class="keyword">const</span> <a class="code hl_struct" href="structskyway_1_1model_1_1_member.html">model::Member</a>&amp; initial_dto,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>           <span class="keyword">const</span> model::Side&amp; side);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    std::weak_ptr&lt;interface::Channel&gt; channel_;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_struct" href="structskyway_1_1model_1_1_member.html">model::Member</a> initial_dto_;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    model::Side side_;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    MemberState state_;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    std::mutex listeners_mtx_;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    std::unordered_set&lt;EventListener*&gt; listeners_;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    std::atomic&lt;bool&gt; metadata_updated_;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>};</div>
 </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}  <span class="comment">// namespace interface</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}  <span class="comment">// namespace core</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_CORE_INTERFACE_MEMBER_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}  <span class="comment">// namespace interface</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}  <span class="comment">// namespace core</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_CORE_INTERFACE_MEMBER_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_1_1_event_listener_html"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">skyway::core::interface::Member::EventListener</a></div><div class="ttdoc">イベントリスナ</div><div class="ttdef"><b>Definition</b> member.hpp:30</div></div>
 <div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_1_1_event_listener_html_a2e5362dfe0da66475a4e80c858b4a321"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#a2e5362dfe0da66475a4e80c858b4a321">skyway::core::interface::Member::EventListener::OnSubscriptionListChanged</a></div><div class="ttdeci">virtual void OnSubscriptionListChanged()</div><div class="ttdoc">MemberのSubscriptionの一覧が更新した時に発火するイベント</div><div class="ttdef"><b>Definition</b> member.hpp:39</div></div>
 <div class="ttc" id="aclassskyway_1_1core_1_1interface_1_1_member_1_1_event_listener_html_a5f79390748cd3cbf77df6dfc21b17dee"><div class="ttname"><a href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#a5f79390748cd3cbf77df6dfc21b17dee">skyway::core::interface::Member::EventListener::OnLeft</a></div><div class="ttdeci">virtual void OnLeft()</div><div class="ttdoc">MemberがChannelから退出した時に発火するイベント</div><div class="ttdef"><b>Definition</b> member.hpp:33</div></div>

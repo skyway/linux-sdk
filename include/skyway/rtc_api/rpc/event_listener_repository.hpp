@@ -5,8 +5,8 @@
 #ifndef SKYWAY_RTC_API_RPC_EVENT_LISTENER_REPOSITORY_HPP_
 #define SKYWAY_RTC_API_RPC_EVENT_LISTENER_REPOSITORY_HPP_
 
-#include <unordered_set>
 #include <atomic>
+#include <unordered_set>
 
 #include "skyway/global/worker.hpp"
 #include "skyway/rtc_api/interface/api_client.hpp"
@@ -25,7 +25,8 @@ struct EventListener {
     std::string channel_id;
     interface::EventListenerRepository::Listener* listener;
     std::unique_ptr<global::interface::Worker> worker = nullptr;
-    EventListener(const std::string& channel_id, interface::EventListenerRepository::Listener* listener);
+    EventListener(const std::string& channel_id,
+                  interface::EventListenerRepository::Listener* listener);
     bool operator==(const EventListener& rhs) const;
     struct Hash {
         std::size_t operator()(const EventListener& event_listener) const;
@@ -50,7 +51,7 @@ private:
 
     std::mutex event_listeners_mtx_;
     std::unordered_set<EventListener, EventListener::Hash> event_listeners_ = {};
-    std::atomic<bool> is_queuing_ = false;
+    std::atomic<bool> is_queuing_                                           = false;
     std::mutex pending_events_mtx_;
     std::vector<Event> pending_events_ = {};
 

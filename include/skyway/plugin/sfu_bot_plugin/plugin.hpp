@@ -19,8 +19,8 @@ namespace skyway {
 namespace plugin {
 namespace sfu_bot {
 
-using PluginInterface       = core::interface::RemoteMemberPlugin;
-using HttpClientInterface   = network::interface::HttpClient;
+using PluginInterface     = core::interface::RemoteMemberPlugin;
+using HttpClientInterface = network::interface::HttpClient;
 
 /// @brief SfuBotのPlugin
 class Plugin : public PluginInterface {
@@ -30,8 +30,9 @@ public:
            sfu_options::SfuOptionsParams sfu_options);
     std::string GetSubtype() const override;
     /// @cond INTERNAL_SECTION
-    std::shared_ptr<core::interface::RemoteMember> Create(std::shared_ptr<core::interface::Channel> channel,
-                                                  const model::Member& member_dto) const override;
+    std::shared_ptr<core::interface::RemoteMember> Create(
+        std::shared_ptr<core::interface::Channel> channel,
+        const model::Member& member_dto) const override;
     /// @endcond
     /// @brief SFUBotを作成します。
     std::shared_ptr<SfuBot> CreateBot(std::shared_ptr<core::interface::Channel> channel);

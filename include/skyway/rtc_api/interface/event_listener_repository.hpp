@@ -24,8 +24,8 @@ public:
 
     virtual void AddListener(const std::string& channel_id, Listener* listener) = 0;
     virtual void RemoveListener(Listener* listener)                             = 0;
-    virtual void StartQueuingEvents() = 0;
-    virtual void ResolveQueuingEvents() = 0;
+    virtual void StartQueuingEvents()                                           = 0;
+    virtual void ResolveQueuingEvents()                                         = 0;
 };
 
 }  // namespace interface

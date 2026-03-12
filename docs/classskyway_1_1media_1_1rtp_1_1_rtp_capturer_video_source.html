@@ -205,6 +205,7 @@ virtual rtc::scoped_refptr&lt; <a class="el" href="classskyway_1_1media_1_1inter
 <p>UDPサーバを起動し、RTPパケットの受信を開始します。 </p>
 <p>このメソッドを呼び出すことで、SkyWay内部でUDPサーバが起動し、指定されたIPv4アドレスとPort番号でRTPパケットの受信を開始します。</p>
 <p>Publish前・後どちらでも呼び出すことができます。</p>
+<p><code><a class="el" href="classskyway_1_1_context.html#aef39b53a0f1ade4a21f7fc698b1aae3e" title="Contextを初期化します。">Context::Setup()</a></code>から<code><a class="el" href="classskyway_1_1_context.html#ac538fa00dde85d18bd6cf194d608290b" title="SkyWayを終了し、Contextを破棄します。">Context::Dispose()</a></code>までの間で最大65535回まで呼び出すことができます。 上限に達した場合はfalseを返します。<code><a class="el" href="classskyway_1_1_context.html#ac538fa00dde85d18bd6cf194d608290b" title="SkyWayを終了し、Contextを破棄します。">Context::Dispose()</a></code>を実行し、再度<code><a class="el" href="classskyway_1_1_context.html#aef39b53a0f1ade4a21f7fc698b1aae3e" title="Contextを初期化します。">Context::Setup()</a></code>をコールすることでリセットされます。</p>
 <dl class="section return"><dt>戻り値</dt><dd>成功可否 </dd></dl>
 
 <p><a class="el" href="classskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source.html#afbb273776ec8d9d84da325779a223c86">skyway::media::rtp::interface::RtpCapturerVideoSource</a>を実装しています。</p>

@@ -4,6 +4,7 @@
 
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_TRANSPORT_HPP_
 #define SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_TRANSPORT_HPP_
+#include <json.hpp>
 
 namespace skyway {
 namespace plugin {

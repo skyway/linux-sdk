@@ -5,7 +5,8 @@
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_CONNECTION_STATE_OBSERVER_HPP_
 #define SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_CONNECTION_STATE_OBSERVER_HPP_
 
-#include "skyway/analytics/interface/analytics_client.hpp"
+#include <thread>
+
 #include "skyway/core/connection_state.hpp"
 #include "skyway/plugin/sfu_bot_plugin/interface/connection_state_observer.hpp"
 #include "skyway/plugin/sfu_bot_plugin/interface/sfu_api_client.hpp"
@@ -20,7 +21,6 @@ class ConnectionStateObserver : public interface::ConnectionStateObserver {
 public:
     ConnectionStateObserver(
         interface::SfuApiClient* client,
-        analytics::interface::AnalyticsClient* analytics_client,
         const int max_restart_ice_count          = config::kDefaultMaxRestartIceCount,
         const int check_restart_ice_time_seconds = config::kDefaultRestartIceCheckingTimeSec);
     ~ConnectionStateObserver() override;
@@ -49,8 +49,6 @@ private:
     std::atomic<core::ConnectionState> connection_state_;
 
     interface::SfuApiClient* api_client_;
-
-    analytics::interface::AnalyticsClient* analytics_client_;
 
     std::mutex listeners_mtx_;
     std::vector<std::weak_ptr<core::ConnectionStateChangeNotifiable>> listeners_;

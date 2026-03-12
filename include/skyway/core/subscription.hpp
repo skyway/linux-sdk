@@ -18,7 +18,9 @@ namespace core {
 class Subscription : public interface::Subscription {
 public:
     /// @cond INTERNAL_SECTION
-    Subscription(std::shared_ptr<interface::Channel> channel, const model::Subscription& initial_dto, model::ContentType content_type);
+    Subscription(std::shared_ptr<interface::Channel> channel,
+                 const model::Subscription& initial_dto,
+                 model::ContentType content_type);
     /// @endcond
 
     void AddEventListener(interface::Subscription::EventListener* listener) override;

@@ -83,7 +83,6 @@ public:
     int32_t StereoRecording(bool* enabled) const override;
     int32_t PlayoutDelay(uint16_t* delayMS) const override;
 
-    // Android built-ins (not used; return defaults)
     bool BuiltInAECIsAvailable() const override { return false; }
     bool BuiltInAGCIsAvailable() const override { return false; }
     bool BuiltInNSIsAvailable() const override { return false; }

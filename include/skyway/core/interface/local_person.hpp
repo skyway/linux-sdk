@@ -27,9 +27,11 @@ public:
         virtual void OnStreamUnpublished(std::shared_ptr<interface::Publication> publication) {}
         /// @brief このLocalPersonがSubscribeした時に発火するイベント
         /// @param subscription 対象のSubscription。まだstreamがsetされていない可能性があります。
-        virtual void OnPublicationSubscribed(std::shared_ptr<interface::Subscription> subscription) {}
+        virtual void OnPublicationSubscribed(
+            std::shared_ptr<interface::Subscription> subscription) {}
         /// @brief このLocalPersonがUnsubscribeした時に発火するイベント
-        virtual void OnPublicationUnsubscribed(std::shared_ptr<interface::Subscription> subscription) {}
+        virtual void OnPublicationUnsubscribed(
+            std::shared_ptr<interface::Subscription> subscription) {}
     };
     /// @brief `Publish`でPublicationに対して指定するオプション
     struct PublicationOptions {
@@ -43,7 +45,8 @@ public:
         bool is_enabled;
         model::PublicationType type;
 
-        PublicationOptions(bool is_enabled = true, model::PublicationType type = model::PublicationType::kP2P)
+        PublicationOptions(bool is_enabled             = true,
+                           model::PublicationType type = model::PublicationType::kP2P)
             : is_enabled(is_enabled), type(type) {}
     };
     /// @brief `Subscribe`でSubscriptionに対して指定するオプション
@@ -58,21 +61,19 @@ public:
 
     /// @cond INTERNAL_SECTION
     virtual ChunkMessenger* Messenger() const = 0;
-
-    virtual analytics::interface::AnalyticsClient* AnalyticsClient() const = 0;
     /// @endcond
 
     /// @brief Streamを公開します。
     /// @param stream 公開するStream
     /// @param options Publicationに指定するオプション
     virtual std::shared_ptr<interface::Publication> Publish(std::shared_ptr<LocalStream> stream,
-                                 PublicationOptions options) = 0;
+                                                            PublicationOptions options) = 0;
 
     /// @brief 公開されているPublicationを購読します。
     /// @param publication_id 公開されているPublicationのId
     /// @param options Subscriptionに指定するオプション
-    virtual std::shared_ptr<interface::Subscription> Subscribe(const std::string& publication_id,
-                                    const SubscriptionOptions& options) = 0;
+    virtual std::shared_ptr<interface::Subscription> Subscribe(
+        const std::string& publication_id, const SubscriptionOptions& options) = 0;
 
     /// @brief 公開しているPublicationを非公開にします。
     /// @param publication_id 公開しているPublicationのId
@@ -85,16 +86,20 @@ public:
     /// @cond INTERNAL_SECTION
     // These event functions are invoked by local person's action after receiving success message
     // from RTC-API server
-    virtual void OnPublished(std::shared_ptr<interface::Publication> publication)                               = 0;
-    virtual void OnUnpublished(std::shared_ptr<interface::Publication> publication)                             = 0;
-    virtual void OnSubscribed(std::shared_ptr<interface::Subscription> subscription, std::shared_ptr<interface::RemoteMember> publisher)   = 0;
-    virtual void OnUnsubscribed(std::shared_ptr<interface::Subscription> subscription, std::shared_ptr<interface::RemoteMember> publisher) = 0;
+    virtual void OnPublished(std::shared_ptr<interface::Publication> publication)   = 0;
+    virtual void OnUnpublished(std::shared_ptr<interface::Publication> publication) = 0;
+    virtual void OnSubscribed(std::shared_ptr<interface::Subscription> subscription,
+                              std::shared_ptr<interface::RemoteMember> publisher)   = 0;
+    virtual void OnUnsubscribed(std::shared_ptr<interface::Subscription> subscription,
+                                std::shared_ptr<interface::RemoteMember> publisher) = 0;
 
     // These event functions are invoked by remote member
-    virtual void OnPublicationSubscribedByRemoteMember(std::shared_ptr<interface::Subscription> subscription,
-                                                       std::shared_ptr<interface::RemoteMember> subscriber)   = 0;
-    virtual void OnPublicationUnsubscribedByRemoteMember(std::shared_ptr<interface::Subscription> subscription,
-                                                         std::shared_ptr<interface::RemoteMember> subscriber) = 0;
+    virtual void OnPublicationSubscribedByRemoteMember(
+        std::shared_ptr<interface::Subscription> subscription,
+        std::shared_ptr<interface::RemoteMember> subscriber) = 0;
+    virtual void OnPublicationUnsubscribedByRemoteMember(
+        std::shared_ptr<interface::Subscription> subscription,
+        std::shared_ptr<interface::RemoteMember> subscriber) = 0;
 
     /// @brief LocalPersonインスタンスを無効にし、リソースを解放します。
     /// @details Dispose後のLocalPersonインスタンスは利用できません。

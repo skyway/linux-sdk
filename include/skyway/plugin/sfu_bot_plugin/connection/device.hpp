@@ -26,13 +26,11 @@ public:
 
     std::unique_ptr<interface::SendTransport> CreateSendTransport(
         interface::SfuApiClient* client,
-        analytics::interface::AnalyticsClient* analytics_client,
         const nlohmann::json& transport_options,
         const PeerConnectionOptions* pc_options) override;
 
     std::unique_ptr<interface::RecvTransport> CreateRecvTransport(
         interface::SfuApiClient* client,
-        analytics::interface::AnalyticsClient* analytics_client,
         const nlohmann::json& transport_options,
         const PeerConnectionOptions* pc_options) override;
 

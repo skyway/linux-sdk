@@ -13,6 +13,7 @@
 #include <boost/uuid/uuid_generators.hpp>
 #include <boost/uuid/uuid_io.hpp>
 #include <condition_variable>
+#include <functional>
 #include <json.hpp>
 #include <mutex>
 #include <sstream>
@@ -48,6 +49,19 @@ bool WaitUntilWithTimeoutMs(std::atomic<bool>& release_condition_boolean,
                             SleepIntervalMs interval,
                             int timeout_ms);
 /// @endcond
+
+class ScopeExit {
+public:
+    explicit ScopeExit(std::function<void()> on_exit) : on_exit_(on_exit) {}
+
+    ~ScopeExit() { on_exit_(); }
+
+    ScopeExit(const ScopeExit&) = delete;
+    ScopeExit& operator=(const ScopeExit&) = delete;
+
+private:
+    std::function<void()> on_exit_;
+};
 
 /// @brief タイムアウト付きスピンロックを実行します。
 /// @details 指定したタイムアウトミリ秒まで呼び出しスレッドをブロックします。
