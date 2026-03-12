@@ -38,7 +38,7 @@ var hierarchy =
         [ "skyway::core::Subscription", "classskyway_1_1core_1_1_subscription.html", null ]
       ] ]
     ] ],
-    [ "skyway::core::Context", "classskyway_1_1core_1_1_context.html", [
+    [ "core::Context", null, [
       [ "skyway::Context", "classskyway_1_1_context.html", null ]
     ] ],
     [ "skyway::core::ContextOptions", "structskyway_1_1core_1_1_context_options.html", [
@@ -75,7 +75,6 @@ var hierarchy =
     [ "rtc_api::ChannelState::EventListener", null, [
       [ "skyway::core::channel::Channel", "classskyway_1_1core_1_1channel_1_1_channel.html", null ]
     ] ],
-    [ "skyway::core::Context::EventListener", "classskyway_1_1core_1_1_context_1_1_event_listener.html", null ],
     [ "skyway::core::interface::Channel::EventListener", "classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html", [
       [ "skyway::room::abstract::Room", "classskyway_1_1room_1_1abstract_1_1_room.html", [
         [ "skyway::room::p2p::P2PRoom", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html", null ],

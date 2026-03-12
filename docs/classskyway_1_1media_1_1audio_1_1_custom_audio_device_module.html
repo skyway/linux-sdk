@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('classskyway_1_1media_1_1audio_1_1_custom_audio_device_module.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,9 +87,16 @@ $(document).ready(function(){initNavTree('classskyway_1_1media_1_1audio_1_1_cust
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -96,8 +104,7 @@ $(document).ready(function(){initNavTree('classskyway_1_1media_1_1audio_1_1_cust
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
 <a href="classskyway_1_1media_1_1audio_1_1_custom_audio_device_module-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">skyway::media::audio::CustomAudioDeviceModule クラス</div>  </div>
+  <div class="headertitle"><div class="title">skyway::media::audio::CustomAudioDeviceModule クラス</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -107,194 +114,194 @@ skyway::media::audio::CustomAudioDeviceModule の継承関係図</div>
   <img src="classskyway_1_1media_1_1audio_1_1_custom_audio_device_module.png" alt=""/>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:ad721457adfc85ee685f25a062051c0e7"><td class="memItemLeft" align="right" valign="top"><a id="ad721457adfc85ee685f25a062051c0e7"></a>
+<tr class="memitem:ad721457adfc85ee685f25a062051c0e7" id="r_ad721457adfc85ee685f25a062051c0e7"><td class="memItemLeft" align="right" valign="top"><a id="ad721457adfc85ee685f25a062051c0e7" name="ad721457adfc85ee685f25a062051c0e7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>CustomAudioDeviceModule</b> (rtc::scoped_refptr&lt; webrtc::AudioDeviceModule &gt; pulse_audio_adm)</td></tr>
 <tr class="separator:ad721457adfc85ee685f25a062051c0e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d5761929c1b4680b127411f519b0d1b"><td class="memItemLeft" align="right" valign="top"><a id="a9d5761929c1b4680b127411f519b0d1b"></a>
+<tr class="memitem:a9d5761929c1b4680b127411f519b0d1b" id="r_a9d5761929c1b4680b127411f519b0d1b"><td class="memItemLeft" align="right" valign="top"><a id="a9d5761929c1b4680b127411f519b0d1b" name="a9d5761929c1b4680b127411f519b0d1b"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>ActiveAudioLayer</b> (AudioLayer *audioLayer) const override</td></tr>
 <tr class="separator:a9d5761929c1b4680b127411f519b0d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0e39b26f0ada794bfb24b94668e719f"><td class="memItemLeft" align="right" valign="top"><a id="af0e39b26f0ada794bfb24b94668e719f"></a>
+<tr class="memitem:af0e39b26f0ada794bfb24b94668e719f" id="r_af0e39b26f0ada794bfb24b94668e719f"><td class="memItemLeft" align="right" valign="top"><a id="af0e39b26f0ada794bfb24b94668e719f" name="af0e39b26f0ada794bfb24b94668e719f"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterAudioCallback</b> (webrtc::AudioTransport *audioCallback) override</td></tr>
 <tr class="separator:af0e39b26f0ada794bfb24b94668e719f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e72ccb37f199653259f85fa3c973ead"><td class="memItemLeft" align="right" valign="top"><a id="a2e72ccb37f199653259f85fa3c973ead"></a>
+<tr class="memitem:a2e72ccb37f199653259f85fa3c973ead" id="r_a2e72ccb37f199653259f85fa3c973ead"><td class="memItemLeft" align="right" valign="top"><a id="a2e72ccb37f199653259f85fa3c973ead" name="a2e72ccb37f199653259f85fa3c973ead"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> () override</td></tr>
 <tr class="separator:a2e72ccb37f199653259f85fa3c973ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09efe2b77166ebfe237d95d143e97233"><td class="memItemLeft" align="right" valign="top"><a id="a09efe2b77166ebfe237d95d143e97233"></a>
+<tr class="memitem:a09efe2b77166ebfe237d95d143e97233" id="r_a09efe2b77166ebfe237d95d143e97233"><td class="memItemLeft" align="right" valign="top"><a id="a09efe2b77166ebfe237d95d143e97233" name="a09efe2b77166ebfe237d95d143e97233"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>Terminate</b> () override</td></tr>
 <tr class="separator:a09efe2b77166ebfe237d95d143e97233"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25b9c9840a026b223ea62a0513aa0d33"><td class="memItemLeft" align="right" valign="top"><a id="a25b9c9840a026b223ea62a0513aa0d33"></a>
+<tr class="memitem:a25b9c9840a026b223ea62a0513aa0d33" id="r_a25b9c9840a026b223ea62a0513aa0d33"><td class="memItemLeft" align="right" valign="top"><a id="a25b9c9840a026b223ea62a0513aa0d33" name="a25b9c9840a026b223ea62a0513aa0d33"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>Initialized</b> () const override</td></tr>
 <tr class="separator:a25b9c9840a026b223ea62a0513aa0d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa02eae9c8349d91344dc713f02ca8f72"><td class="memItemLeft" align="right" valign="top"><a id="aa02eae9c8349d91344dc713f02ca8f72"></a>
+<tr class="memitem:aa02eae9c8349d91344dc713f02ca8f72" id="r_aa02eae9c8349d91344dc713f02ca8f72"><td class="memItemLeft" align="right" valign="top"><a id="aa02eae9c8349d91344dc713f02ca8f72" name="aa02eae9c8349d91344dc713f02ca8f72"></a>
 int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>PlayoutDevices</b> () override</td></tr>
 <tr class="separator:aa02eae9c8349d91344dc713f02ca8f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4df19d76d50e17990d1e0fe11cd59493"><td class="memItemLeft" align="right" valign="top"><a id="a4df19d76d50e17990d1e0fe11cd59493"></a>
+<tr class="memitem:a4df19d76d50e17990d1e0fe11cd59493" id="r_a4df19d76d50e17990d1e0fe11cd59493"><td class="memItemLeft" align="right" valign="top"><a id="a4df19d76d50e17990d1e0fe11cd59493" name="a4df19d76d50e17990d1e0fe11cd59493"></a>
 int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>RecordingDevices</b> () override</td></tr>
 <tr class="separator:a4df19d76d50e17990d1e0fe11cd59493"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab39d421192b771f1a7c7e54acc134f91"><td class="memItemLeft" align="right" valign="top"><a id="ab39d421192b771f1a7c7e54acc134f91"></a>
+<tr class="memitem:ab39d421192b771f1a7c7e54acc134f91" id="r_ab39d421192b771f1a7c7e54acc134f91"><td class="memItemLeft" align="right" valign="top"><a id="ab39d421192b771f1a7c7e54acc134f91" name="ab39d421192b771f1a7c7e54acc134f91"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>PlayoutDeviceName</b> (uint16_t index, char name[webrtc::kAdmMaxDeviceNameSize], char guid[webrtc::kAdmMaxGuidSize]) override</td></tr>
 <tr class="separator:ab39d421192b771f1a7c7e54acc134f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae391e0dc716be65b1dc3d1892f764840"><td class="memItemLeft" align="right" valign="top"><a id="ae391e0dc716be65b1dc3d1892f764840"></a>
+<tr class="memitem:ae391e0dc716be65b1dc3d1892f764840" id="r_ae391e0dc716be65b1dc3d1892f764840"><td class="memItemLeft" align="right" valign="top"><a id="ae391e0dc716be65b1dc3d1892f764840" name="ae391e0dc716be65b1dc3d1892f764840"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>RecordingDeviceName</b> (uint16_t index, char name[webrtc::kAdmMaxDeviceNameSize], char guid[webrtc::kAdmMaxGuidSize]) override</td></tr>
 <tr class="separator:ae391e0dc716be65b1dc3d1892f764840"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f62871bb36416db446d8561861c0a1d"><td class="memItemLeft" align="right" valign="top"><a id="a1f62871bb36416db446d8561861c0a1d"></a>
+<tr class="memitem:a1f62871bb36416db446d8561861c0a1d" id="r_a1f62871bb36416db446d8561861c0a1d"><td class="memItemLeft" align="right" valign="top"><a id="a1f62871bb36416db446d8561861c0a1d" name="a1f62871bb36416db446d8561861c0a1d"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SetPlayoutDevice</b> (uint16_t index) override</td></tr>
 <tr class="separator:a1f62871bb36416db446d8561861c0a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addaad9992194ffdd42d5c002ccdf49f8"><td class="memItemLeft" align="right" valign="top"><a id="addaad9992194ffdd42d5c002ccdf49f8"></a>
+<tr class="memitem:addaad9992194ffdd42d5c002ccdf49f8" id="r_addaad9992194ffdd42d5c002ccdf49f8"><td class="memItemLeft" align="right" valign="top"><a id="addaad9992194ffdd42d5c002ccdf49f8" name="addaad9992194ffdd42d5c002ccdf49f8"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SetPlayoutDevice</b> (WindowsDeviceType) override</td></tr>
 <tr class="separator:addaad9992194ffdd42d5c002ccdf49f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad003db447967c2fe9887282039abe221"><td class="memItemLeft" align="right" valign="top"><a id="ad003db447967c2fe9887282039abe221"></a>
+<tr class="memitem:ad003db447967c2fe9887282039abe221" id="r_ad003db447967c2fe9887282039abe221"><td class="memItemLeft" align="right" valign="top"><a id="ad003db447967c2fe9887282039abe221" name="ad003db447967c2fe9887282039abe221"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SetRecordingDevice</b> (uint16_t index) override</td></tr>
 <tr class="separator:ad003db447967c2fe9887282039abe221"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a038729596c85ae2afae92ba6c2320c40"><td class="memItemLeft" align="right" valign="top"><a id="a038729596c85ae2afae92ba6c2320c40"></a>
+<tr class="memitem:a038729596c85ae2afae92ba6c2320c40" id="r_a038729596c85ae2afae92ba6c2320c40"><td class="memItemLeft" align="right" valign="top"><a id="a038729596c85ae2afae92ba6c2320c40" name="a038729596c85ae2afae92ba6c2320c40"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SetRecordingDevice</b> (WindowsDeviceType) override</td></tr>
 <tr class="separator:a038729596c85ae2afae92ba6c2320c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1743d3380d5dc7514ae8f3837fe5d568"><td class="memItemLeft" align="right" valign="top"><a id="a1743d3380d5dc7514ae8f3837fe5d568"></a>
+<tr class="memitem:a1743d3380d5dc7514ae8f3837fe5d568" id="r_a1743d3380d5dc7514ae8f3837fe5d568"><td class="memItemLeft" align="right" valign="top"><a id="a1743d3380d5dc7514ae8f3837fe5d568" name="a1743d3380d5dc7514ae8f3837fe5d568"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>PlayoutIsAvailable</b> (bool *available) override</td></tr>
 <tr class="separator:a1743d3380d5dc7514ae8f3837fe5d568"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0452e916828975e9e02cebcb200e36ae"><td class="memItemLeft" align="right" valign="top"><a id="a0452e916828975e9e02cebcb200e36ae"></a>
+<tr class="memitem:a0452e916828975e9e02cebcb200e36ae" id="r_a0452e916828975e9e02cebcb200e36ae"><td class="memItemLeft" align="right" valign="top"><a id="a0452e916828975e9e02cebcb200e36ae" name="a0452e916828975e9e02cebcb200e36ae"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>InitPlayout</b> () override</td></tr>
 <tr class="separator:a0452e916828975e9e02cebcb200e36ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae1198702a4d7a4bd4366e0a4f73d28f"><td class="memItemLeft" align="right" valign="top"><a id="aae1198702a4d7a4bd4366e0a4f73d28f"></a>
+<tr class="memitem:aae1198702a4d7a4bd4366e0a4f73d28f" id="r_aae1198702a4d7a4bd4366e0a4f73d28f"><td class="memItemLeft" align="right" valign="top"><a id="aae1198702a4d7a4bd4366e0a4f73d28f" name="aae1198702a4d7a4bd4366e0a4f73d28f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>PlayoutIsInitialized</b> () const override</td></tr>
 <tr class="separator:aae1198702a4d7a4bd4366e0a4f73d28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a046779a627d7461301b964681caa7a6f"><td class="memItemLeft" align="right" valign="top"><a id="a046779a627d7461301b964681caa7a6f"></a>
+<tr class="memitem:a046779a627d7461301b964681caa7a6f" id="r_a046779a627d7461301b964681caa7a6f"><td class="memItemLeft" align="right" valign="top"><a id="a046779a627d7461301b964681caa7a6f" name="a046779a627d7461301b964681caa7a6f"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>RecordingIsAvailable</b> (bool *available) override</td></tr>
 <tr class="separator:a046779a627d7461301b964681caa7a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf4a85a1b52f8f4e1f701f6d5a742761"><td class="memItemLeft" align="right" valign="top"><a id="abf4a85a1b52f8f4e1f701f6d5a742761"></a>
+<tr class="memitem:abf4a85a1b52f8f4e1f701f6d5a742761" id="r_abf4a85a1b52f8f4e1f701f6d5a742761"><td class="memItemLeft" align="right" valign="top"><a id="abf4a85a1b52f8f4e1f701f6d5a742761" name="abf4a85a1b52f8f4e1f701f6d5a742761"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>InitRecording</b> () override</td></tr>
 <tr class="separator:abf4a85a1b52f8f4e1f701f6d5a742761"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa73b63abf8ceb029476d86eebb1284c7"><td class="memItemLeft" align="right" valign="top"><a id="aa73b63abf8ceb029476d86eebb1284c7"></a>
+<tr class="memitem:aa73b63abf8ceb029476d86eebb1284c7" id="r_aa73b63abf8ceb029476d86eebb1284c7"><td class="memItemLeft" align="right" valign="top"><a id="aa73b63abf8ceb029476d86eebb1284c7" name="aa73b63abf8ceb029476d86eebb1284c7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>RecordingIsInitialized</b> () const override</td></tr>
 <tr class="separator:aa73b63abf8ceb029476d86eebb1284c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d150390fb2c07fef5c7d2448332cfa0"><td class="memItemLeft" align="right" valign="top"><a id="a6d150390fb2c07fef5c7d2448332cfa0"></a>
+<tr class="memitem:a6d150390fb2c07fef5c7d2448332cfa0" id="r_a6d150390fb2c07fef5c7d2448332cfa0"><td class="memItemLeft" align="right" valign="top"><a id="a6d150390fb2c07fef5c7d2448332cfa0" name="a6d150390fb2c07fef5c7d2448332cfa0"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>StartPlayout</b> () override</td></tr>
 <tr class="separator:a6d150390fb2c07fef5c7d2448332cfa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dc944d02e379a7a035552b20293df45"><td class="memItemLeft" align="right" valign="top"><a id="a2dc944d02e379a7a035552b20293df45"></a>
+<tr class="memitem:a2dc944d02e379a7a035552b20293df45" id="r_a2dc944d02e379a7a035552b20293df45"><td class="memItemLeft" align="right" valign="top"><a id="a2dc944d02e379a7a035552b20293df45" name="a2dc944d02e379a7a035552b20293df45"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>StopPlayout</b> () override</td></tr>
 <tr class="separator:a2dc944d02e379a7a035552b20293df45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5acb30b0eaca62cf1601a58447d672f6"><td class="memItemLeft" align="right" valign="top"><a id="a5acb30b0eaca62cf1601a58447d672f6"></a>
+<tr class="memitem:a5acb30b0eaca62cf1601a58447d672f6" id="r_a5acb30b0eaca62cf1601a58447d672f6"><td class="memItemLeft" align="right" valign="top"><a id="a5acb30b0eaca62cf1601a58447d672f6" name="a5acb30b0eaca62cf1601a58447d672f6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>Playing</b> () const override</td></tr>
 <tr class="separator:a5acb30b0eaca62cf1601a58447d672f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b7c6a749d688993697e2287128a1cc7"><td class="memItemLeft" align="right" valign="top"><a id="a6b7c6a749d688993697e2287128a1cc7"></a>
+<tr class="memitem:a6b7c6a749d688993697e2287128a1cc7" id="r_a6b7c6a749d688993697e2287128a1cc7"><td class="memItemLeft" align="right" valign="top"><a id="a6b7c6a749d688993697e2287128a1cc7" name="a6b7c6a749d688993697e2287128a1cc7"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>StartRecording</b> () override</td></tr>
 <tr class="separator:a6b7c6a749d688993697e2287128a1cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacaf6a33bfd8028be334366217540152"><td class="memItemLeft" align="right" valign="top"><a id="aacaf6a33bfd8028be334366217540152"></a>
+<tr class="memitem:aacaf6a33bfd8028be334366217540152" id="r_aacaf6a33bfd8028be334366217540152"><td class="memItemLeft" align="right" valign="top"><a id="aacaf6a33bfd8028be334366217540152" name="aacaf6a33bfd8028be334366217540152"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>StopRecording</b> () override</td></tr>
 <tr class="separator:aacaf6a33bfd8028be334366217540152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1462fc917da9d33f11b1dde5720780e2"><td class="memItemLeft" align="right" valign="top"><a id="a1462fc917da9d33f11b1dde5720780e2"></a>
+<tr class="memitem:a1462fc917da9d33f11b1dde5720780e2" id="r_a1462fc917da9d33f11b1dde5720780e2"><td class="memItemLeft" align="right" valign="top"><a id="a1462fc917da9d33f11b1dde5720780e2" name="a1462fc917da9d33f11b1dde5720780e2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>Recording</b> () const override</td></tr>
 <tr class="separator:a1462fc917da9d33f11b1dde5720780e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac22d325f6b0e1ae207b4ca7336fbc728"><td class="memItemLeft" align="right" valign="top"><a id="ac22d325f6b0e1ae207b4ca7336fbc728"></a>
+<tr class="memitem:ac22d325f6b0e1ae207b4ca7336fbc728" id="r_ac22d325f6b0e1ae207b4ca7336fbc728"><td class="memItemLeft" align="right" valign="top"><a id="ac22d325f6b0e1ae207b4ca7336fbc728" name="ac22d325f6b0e1ae207b4ca7336fbc728"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>InitSpeaker</b> () override</td></tr>
 <tr class="separator:ac22d325f6b0e1ae207b4ca7336fbc728"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86fc235e1aa4f382d6f5d6faf0ca4246"><td class="memItemLeft" align="right" valign="top"><a id="a86fc235e1aa4f382d6f5d6faf0ca4246"></a>
+<tr class="memitem:a86fc235e1aa4f382d6f5d6faf0ca4246" id="r_a86fc235e1aa4f382d6f5d6faf0ca4246"><td class="memItemLeft" align="right" valign="top"><a id="a86fc235e1aa4f382d6f5d6faf0ca4246" name="a86fc235e1aa4f382d6f5d6faf0ca4246"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>SpeakerIsInitialized</b> () const override</td></tr>
 <tr class="separator:a86fc235e1aa4f382d6f5d6faf0ca4246"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac15da738cf25f40279397e48a0ac05e1"><td class="memItemLeft" align="right" valign="top"><a id="ac15da738cf25f40279397e48a0ac05e1"></a>
+<tr class="memitem:ac15da738cf25f40279397e48a0ac05e1" id="r_ac15da738cf25f40279397e48a0ac05e1"><td class="memItemLeft" align="right" valign="top"><a id="ac15da738cf25f40279397e48a0ac05e1" name="ac15da738cf25f40279397e48a0ac05e1"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>InitMicrophone</b> () override</td></tr>
 <tr class="separator:ac15da738cf25f40279397e48a0ac05e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc3d8b8a590f0ad57cb1e0404d2a9a6a"><td class="memItemLeft" align="right" valign="top"><a id="acc3d8b8a590f0ad57cb1e0404d2a9a6a"></a>
+<tr class="memitem:acc3d8b8a590f0ad57cb1e0404d2a9a6a" id="r_acc3d8b8a590f0ad57cb1e0404d2a9a6a"><td class="memItemLeft" align="right" valign="top"><a id="acc3d8b8a590f0ad57cb1e0404d2a9a6a" name="acc3d8b8a590f0ad57cb1e0404d2a9a6a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>MicrophoneIsInitialized</b> () const override</td></tr>
 <tr class="separator:acc3d8b8a590f0ad57cb1e0404d2a9a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a861cfd757b00b6f3965f14799f64aed2"><td class="memItemLeft" align="right" valign="top"><a id="a861cfd757b00b6f3965f14799f64aed2"></a>
+<tr class="memitem:a861cfd757b00b6f3965f14799f64aed2" id="r_a861cfd757b00b6f3965f14799f64aed2"><td class="memItemLeft" align="right" valign="top"><a id="a861cfd757b00b6f3965f14799f64aed2" name="a861cfd757b00b6f3965f14799f64aed2"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SpeakerVolumeIsAvailable</b> (bool *available) override</td></tr>
 <tr class="separator:a861cfd757b00b6f3965f14799f64aed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5b1460fc915600dc5486e217d31f01f"><td class="memItemLeft" align="right" valign="top"><a id="ab5b1460fc915600dc5486e217d31f01f"></a>
+<tr class="memitem:ab5b1460fc915600dc5486e217d31f01f" id="r_ab5b1460fc915600dc5486e217d31f01f"><td class="memItemLeft" align="right" valign="top"><a id="ab5b1460fc915600dc5486e217d31f01f" name="ab5b1460fc915600dc5486e217d31f01f"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SetSpeakerVolume</b> (uint32_t volume) override</td></tr>
 <tr class="separator:ab5b1460fc915600dc5486e217d31f01f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1bc57d9f43a9b35f91baf2626939cd0"><td class="memItemLeft" align="right" valign="top"><a id="ad1bc57d9f43a9b35f91baf2626939cd0"></a>
+<tr class="memitem:ad1bc57d9f43a9b35f91baf2626939cd0" id="r_ad1bc57d9f43a9b35f91baf2626939cd0"><td class="memItemLeft" align="right" valign="top"><a id="ad1bc57d9f43a9b35f91baf2626939cd0" name="ad1bc57d9f43a9b35f91baf2626939cd0"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SpeakerVolume</b> (uint32_t *volume) const override</td></tr>
 <tr class="separator:ad1bc57d9f43a9b35f91baf2626939cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedd5bbdc93f767d6f3d22d0b2fcfd1af"><td class="memItemLeft" align="right" valign="top"><a id="aedd5bbdc93f767d6f3d22d0b2fcfd1af"></a>
+<tr class="memitem:aedd5bbdc93f767d6f3d22d0b2fcfd1af" id="r_aedd5bbdc93f767d6f3d22d0b2fcfd1af"><td class="memItemLeft" align="right" valign="top"><a id="aedd5bbdc93f767d6f3d22d0b2fcfd1af" name="aedd5bbdc93f767d6f3d22d0b2fcfd1af"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>MaxSpeakerVolume</b> (uint32_t *maxVolume) const override</td></tr>
 <tr class="separator:aedd5bbdc93f767d6f3d22d0b2fcfd1af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c7dbba59bc91863cff7b3c5c771eefa"><td class="memItemLeft" align="right" valign="top"><a id="a8c7dbba59bc91863cff7b3c5c771eefa"></a>
+<tr class="memitem:a8c7dbba59bc91863cff7b3c5c771eefa" id="r_a8c7dbba59bc91863cff7b3c5c771eefa"><td class="memItemLeft" align="right" valign="top"><a id="a8c7dbba59bc91863cff7b3c5c771eefa" name="a8c7dbba59bc91863cff7b3c5c771eefa"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>MinSpeakerVolume</b> (uint32_t *minVolume) const override</td></tr>
 <tr class="separator:a8c7dbba59bc91863cff7b3c5c771eefa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbc7889adefc687eecaa4d1c25207539"><td class="memItemLeft" align="right" valign="top"><a id="abbc7889adefc687eecaa4d1c25207539"></a>
+<tr class="memitem:abbc7889adefc687eecaa4d1c25207539" id="r_abbc7889adefc687eecaa4d1c25207539"><td class="memItemLeft" align="right" valign="top"><a id="abbc7889adefc687eecaa4d1c25207539" name="abbc7889adefc687eecaa4d1c25207539"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>MicrophoneVolumeIsAvailable</b> (bool *available) override</td></tr>
 <tr class="separator:abbc7889adefc687eecaa4d1c25207539"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a843263d00693a86761ce189c056460db"><td class="memItemLeft" align="right" valign="top"><a id="a843263d00693a86761ce189c056460db"></a>
+<tr class="memitem:a843263d00693a86761ce189c056460db" id="r_a843263d00693a86761ce189c056460db"><td class="memItemLeft" align="right" valign="top"><a id="a843263d00693a86761ce189c056460db" name="a843263d00693a86761ce189c056460db"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SetMicrophoneVolume</b> (uint32_t volume) override</td></tr>
 <tr class="separator:a843263d00693a86761ce189c056460db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae15cde68e3ea1029792b4eaeaf6d086f"><td class="memItemLeft" align="right" valign="top"><a id="ae15cde68e3ea1029792b4eaeaf6d086f"></a>
+<tr class="memitem:ae15cde68e3ea1029792b4eaeaf6d086f" id="r_ae15cde68e3ea1029792b4eaeaf6d086f"><td class="memItemLeft" align="right" valign="top"><a id="ae15cde68e3ea1029792b4eaeaf6d086f" name="ae15cde68e3ea1029792b4eaeaf6d086f"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>MicrophoneVolume</b> (uint32_t *volume) const override</td></tr>
 <tr class="separator:ae15cde68e3ea1029792b4eaeaf6d086f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affafea4f4ea11e300e400e4336cc1568"><td class="memItemLeft" align="right" valign="top"><a id="affafea4f4ea11e300e400e4336cc1568"></a>
+<tr class="memitem:affafea4f4ea11e300e400e4336cc1568" id="r_affafea4f4ea11e300e400e4336cc1568"><td class="memItemLeft" align="right" valign="top"><a id="affafea4f4ea11e300e400e4336cc1568" name="affafea4f4ea11e300e400e4336cc1568"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>MaxMicrophoneVolume</b> (uint32_t *maxVolume) const override</td></tr>
 <tr class="separator:affafea4f4ea11e300e400e4336cc1568"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c2e02c19b23ba0c8982b16a6a5be407"><td class="memItemLeft" align="right" valign="top"><a id="a3c2e02c19b23ba0c8982b16a6a5be407"></a>
+<tr class="memitem:a3c2e02c19b23ba0c8982b16a6a5be407" id="r_a3c2e02c19b23ba0c8982b16a6a5be407"><td class="memItemLeft" align="right" valign="top"><a id="a3c2e02c19b23ba0c8982b16a6a5be407" name="a3c2e02c19b23ba0c8982b16a6a5be407"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>MinMicrophoneVolume</b> (uint32_t *minVolume) const override</td></tr>
 <tr class="separator:a3c2e02c19b23ba0c8982b16a6a5be407"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9fc594c864458e847748f26cf94222f"><td class="memItemLeft" align="right" valign="top"><a id="ac9fc594c864458e847748f26cf94222f"></a>
+<tr class="memitem:ac9fc594c864458e847748f26cf94222f" id="r_ac9fc594c864458e847748f26cf94222f"><td class="memItemLeft" align="right" valign="top"><a id="ac9fc594c864458e847748f26cf94222f" name="ac9fc594c864458e847748f26cf94222f"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SpeakerMuteIsAvailable</b> (bool *available) override</td></tr>
 <tr class="separator:ac9fc594c864458e847748f26cf94222f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacac98855bad94e6647289493e3949e5"><td class="memItemLeft" align="right" valign="top"><a id="aacac98855bad94e6647289493e3949e5"></a>
+<tr class="memitem:aacac98855bad94e6647289493e3949e5" id="r_aacac98855bad94e6647289493e3949e5"><td class="memItemLeft" align="right" valign="top"><a id="aacac98855bad94e6647289493e3949e5" name="aacac98855bad94e6647289493e3949e5"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SetSpeakerMute</b> (bool enable) override</td></tr>
 <tr class="separator:aacac98855bad94e6647289493e3949e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f641fbb9da230d004e409df6f3a8fa0"><td class="memItemLeft" align="right" valign="top"><a id="a5f641fbb9da230d004e409df6f3a8fa0"></a>
+<tr class="memitem:a5f641fbb9da230d004e409df6f3a8fa0" id="r_a5f641fbb9da230d004e409df6f3a8fa0"><td class="memItemLeft" align="right" valign="top"><a id="a5f641fbb9da230d004e409df6f3a8fa0" name="a5f641fbb9da230d004e409df6f3a8fa0"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SpeakerMute</b> (bool *enabled) const override</td></tr>
 <tr class="separator:a5f641fbb9da230d004e409df6f3a8fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac65a5627ae1ad475f8601cad3d9c34e1"><td class="memItemLeft" align="right" valign="top"><a id="ac65a5627ae1ad475f8601cad3d9c34e1"></a>
+<tr class="memitem:ac65a5627ae1ad475f8601cad3d9c34e1" id="r_ac65a5627ae1ad475f8601cad3d9c34e1"><td class="memItemLeft" align="right" valign="top"><a id="ac65a5627ae1ad475f8601cad3d9c34e1" name="ac65a5627ae1ad475f8601cad3d9c34e1"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>MicrophoneMuteIsAvailable</b> (bool *available) override</td></tr>
 <tr class="separator:ac65a5627ae1ad475f8601cad3d9c34e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a342a6ae07d842474f4732db8e234b114"><td class="memItemLeft" align="right" valign="top"><a id="a342a6ae07d842474f4732db8e234b114"></a>
+<tr class="memitem:a342a6ae07d842474f4732db8e234b114" id="r_a342a6ae07d842474f4732db8e234b114"><td class="memItemLeft" align="right" valign="top"><a id="a342a6ae07d842474f4732db8e234b114" name="a342a6ae07d842474f4732db8e234b114"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SetMicrophoneMute</b> (bool enable) override</td></tr>
 <tr class="separator:a342a6ae07d842474f4732db8e234b114"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac11c8902406ee064103f1899a294f198"><td class="memItemLeft" align="right" valign="top"><a id="ac11c8902406ee064103f1899a294f198"></a>
+<tr class="memitem:ac11c8902406ee064103f1899a294f198" id="r_ac11c8902406ee064103f1899a294f198"><td class="memItemLeft" align="right" valign="top"><a id="ac11c8902406ee064103f1899a294f198" name="ac11c8902406ee064103f1899a294f198"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>MicrophoneMute</b> (bool *enabled) const override</td></tr>
 <tr class="separator:ac11c8902406ee064103f1899a294f198"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab81f5706d77826093bfd01b4d595d24d"><td class="memItemLeft" align="right" valign="top"><a id="ab81f5706d77826093bfd01b4d595d24d"></a>
+<tr class="memitem:ab81f5706d77826093bfd01b4d595d24d" id="r_ab81f5706d77826093bfd01b4d595d24d"><td class="memItemLeft" align="right" valign="top"><a id="ab81f5706d77826093bfd01b4d595d24d" name="ab81f5706d77826093bfd01b4d595d24d"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>StereoPlayoutIsAvailable</b> (bool *available) const override</td></tr>
 <tr class="separator:ab81f5706d77826093bfd01b4d595d24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09a7392c2c125741469338405f7b9c68"><td class="memItemLeft" align="right" valign="top"><a id="a09a7392c2c125741469338405f7b9c68"></a>
+<tr class="memitem:a09a7392c2c125741469338405f7b9c68" id="r_a09a7392c2c125741469338405f7b9c68"><td class="memItemLeft" align="right" valign="top"><a id="a09a7392c2c125741469338405f7b9c68" name="a09a7392c2c125741469338405f7b9c68"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SetStereoPlayout</b> (bool enable) override</td></tr>
 <tr class="separator:a09a7392c2c125741469338405f7b9c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d5e2bc07b91230b6df160b3b7023de2"><td class="memItemLeft" align="right" valign="top"><a id="a0d5e2bc07b91230b6df160b3b7023de2"></a>
+<tr class="memitem:a0d5e2bc07b91230b6df160b3b7023de2" id="r_a0d5e2bc07b91230b6df160b3b7023de2"><td class="memItemLeft" align="right" valign="top"><a id="a0d5e2bc07b91230b6df160b3b7023de2" name="a0d5e2bc07b91230b6df160b3b7023de2"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>StereoPlayout</b> (bool *enabled) const override</td></tr>
 <tr class="separator:a0d5e2bc07b91230b6df160b3b7023de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0a0ff82459cdec6e2fa5cdb5ba6cbef"><td class="memItemLeft" align="right" valign="top"><a id="ab0a0ff82459cdec6e2fa5cdb5ba6cbef"></a>
+<tr class="memitem:ab0a0ff82459cdec6e2fa5cdb5ba6cbef" id="r_ab0a0ff82459cdec6e2fa5cdb5ba6cbef"><td class="memItemLeft" align="right" valign="top"><a id="ab0a0ff82459cdec6e2fa5cdb5ba6cbef" name="ab0a0ff82459cdec6e2fa5cdb5ba6cbef"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>StereoRecordingIsAvailable</b> (bool *available) const override</td></tr>
 <tr class="separator:ab0a0ff82459cdec6e2fa5cdb5ba6cbef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7709c3210dfd2978748985e312f239d6"><td class="memItemLeft" align="right" valign="top"><a id="a7709c3210dfd2978748985e312f239d6"></a>
+<tr class="memitem:a7709c3210dfd2978748985e312f239d6" id="r_a7709c3210dfd2978748985e312f239d6"><td class="memItemLeft" align="right" valign="top"><a id="a7709c3210dfd2978748985e312f239d6" name="a7709c3210dfd2978748985e312f239d6"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SetStereoRecording</b> (bool enable) override</td></tr>
 <tr class="separator:a7709c3210dfd2978748985e312f239d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7160a3457ccf3309da12250839fb9564"><td class="memItemLeft" align="right" valign="top"><a id="a7160a3457ccf3309da12250839fb9564"></a>
+<tr class="memitem:a7160a3457ccf3309da12250839fb9564" id="r_a7160a3457ccf3309da12250839fb9564"><td class="memItemLeft" align="right" valign="top"><a id="a7160a3457ccf3309da12250839fb9564" name="a7160a3457ccf3309da12250839fb9564"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>StereoRecording</b> (bool *enabled) const override</td></tr>
 <tr class="separator:a7160a3457ccf3309da12250839fb9564"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d1d3dc07fb80beb6dbe8a4ed35ed9d5"><td class="memItemLeft" align="right" valign="top"><a id="a2d1d3dc07fb80beb6dbe8a4ed35ed9d5"></a>
+<tr class="memitem:a2d1d3dc07fb80beb6dbe8a4ed35ed9d5" id="r_a2d1d3dc07fb80beb6dbe8a4ed35ed9d5"><td class="memItemLeft" align="right" valign="top"><a id="a2d1d3dc07fb80beb6dbe8a4ed35ed9d5" name="a2d1d3dc07fb80beb6dbe8a4ed35ed9d5"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>PlayoutDelay</b> (uint16_t *delayMS) const override</td></tr>
 <tr class="separator:a2d1d3dc07fb80beb6dbe8a4ed35ed9d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a7e27f43fe14d63057888340c0941f7"><td class="memItemLeft" align="right" valign="top"><a id="a6a7e27f43fe14d63057888340c0941f7"></a>
+<tr class="memitem:a6a7e27f43fe14d63057888340c0941f7" id="r_a6a7e27f43fe14d63057888340c0941f7"><td class="memItemLeft" align="right" valign="top"><a id="a6a7e27f43fe14d63057888340c0941f7" name="a6a7e27f43fe14d63057888340c0941f7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>BuiltInAECIsAvailable</b> () const override</td></tr>
 <tr class="separator:a6a7e27f43fe14d63057888340c0941f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab493c9d01a37e08f91a7857a176afd84"><td class="memItemLeft" align="right" valign="top"><a id="ab493c9d01a37e08f91a7857a176afd84"></a>
+<tr class="memitem:ab493c9d01a37e08f91a7857a176afd84" id="r_ab493c9d01a37e08f91a7857a176afd84"><td class="memItemLeft" align="right" valign="top"><a id="ab493c9d01a37e08f91a7857a176afd84" name="ab493c9d01a37e08f91a7857a176afd84"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>BuiltInAGCIsAvailable</b> () const override</td></tr>
 <tr class="separator:ab493c9d01a37e08f91a7857a176afd84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dab94aebbf0e5449cad06b34cca8020"><td class="memItemLeft" align="right" valign="top"><a id="a2dab94aebbf0e5449cad06b34cca8020"></a>
+<tr class="memitem:a2dab94aebbf0e5449cad06b34cca8020" id="r_a2dab94aebbf0e5449cad06b34cca8020"><td class="memItemLeft" align="right" valign="top"><a id="a2dab94aebbf0e5449cad06b34cca8020" name="a2dab94aebbf0e5449cad06b34cca8020"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>BuiltInNSIsAvailable</b> () const override</td></tr>
 <tr class="separator:a2dab94aebbf0e5449cad06b34cca8020"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0af12d518c6041d0c16c539115bd3866"><td class="memItemLeft" align="right" valign="top"><a id="a0af12d518c6041d0c16c539115bd3866"></a>
+<tr class="memitem:a0af12d518c6041d0c16c539115bd3866" id="r_a0af12d518c6041d0c16c539115bd3866"><td class="memItemLeft" align="right" valign="top"><a id="a0af12d518c6041d0c16c539115bd3866" name="a0af12d518c6041d0c16c539115bd3866"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>EnableBuiltInAEC</b> (bool) override</td></tr>
 <tr class="separator:a0af12d518c6041d0c16c539115bd3866"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adeca77be647c4cbdb943005739707e70"><td class="memItemLeft" align="right" valign="top"><a id="adeca77be647c4cbdb943005739707e70"></a>
+<tr class="memitem:adeca77be647c4cbdb943005739707e70" id="r_adeca77be647c4cbdb943005739707e70"><td class="memItemLeft" align="right" valign="top"><a id="adeca77be647c4cbdb943005739707e70" name="adeca77be647c4cbdb943005739707e70"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>EnableBuiltInAGC</b> (bool) override</td></tr>
 <tr class="separator:adeca77be647c4cbdb943005739707e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3ab8a1b330c2b445164043a354844f3"><td class="memItemLeft" align="right" valign="top"><a id="af3ab8a1b330c2b445164043a354844f3"></a>
+<tr class="memitem:af3ab8a1b330c2b445164043a354844f3" id="r_af3ab8a1b330c2b445164043a354844f3"><td class="memItemLeft" align="right" valign="top"><a id="af3ab8a1b330c2b445164043a354844f3" name="af3ab8a1b330c2b445164043a354844f3"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>EnableBuiltInNS</b> (bool) override</td></tr>
 <tr class="separator:af3ab8a1b330c2b445164043a354844f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a439c3334e67c5bbbb2628c341bafb8c4"><td class="memItemLeft" align="right" valign="top"><a id="a439c3334e67c5bbbb2628c341bafb8c4"></a>
+<tr class="memitem:a439c3334e67c5bbbb2628c341bafb8c4" id="r_a439c3334e67c5bbbb2628c341bafb8c4"><td class="memItemLeft" align="right" valign="top"><a id="a439c3334e67c5bbbb2628c341bafb8c4" name="a439c3334e67c5bbbb2628c341bafb8c4"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>UsingDummySpeaker</b> () const</td></tr>
 <tr class="separator:a439c3334e67c5bbbb2628c341bafb8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
-<tr class="memitem:a51f1299eeb2d6fb168b938dc758fc2bb"><td class="memItemLeft" align="right" valign="top"><a id="a51f1299eeb2d6fb168b938dc758fc2bb"></a>
+<tr class="memitem:a587777d9755df50908decf5ff3a8045f" id="r_a587777d9755df50908decf5ff3a8045f"><td class="memItemLeft" align="right" valign="top"><a id="a587777d9755df50908decf5ff3a8045f" name="a587777d9755df50908decf5ff3a8045f"></a>
 static rtc::scoped_refptr&lt; <a class="el" href="classskyway_1_1media_1_1audio_1_1_custom_audio_device_module.html">CustomAudioDeviceModule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (rtc::scoped_refptr&lt; webrtc::AudioDeviceModule &gt; pulse_audio_adm)</td></tr>
-<tr class="separator:a51f1299eeb2d6fb168b938dc758fc2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a587777d9755df50908decf5ff3a8045f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>include/skyway/media/audio/<a class="el" href="custom__audio__device__module_8hpp_source.html">custom_audio_device_module.hpp</a></li>
@@ -305,7 +312,7 @@ static rtc::scoped_refptr&lt; <a class="el" href="classskyway_1_1media_1_1audio_
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>skyway</b></li><li class="navelem"><b>media</b></li><li class="navelem"><b>audio</b></li><li class="navelem"><a class="el" href="classskyway_1_1media_1_1audio_1_1_custom_audio_device_module.html">CustomAudioDeviceModule</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

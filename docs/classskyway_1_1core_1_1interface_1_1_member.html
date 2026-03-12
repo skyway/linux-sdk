@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('classskyway_1_1core_1_1interface_1_1_member.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,9 +87,16 @@ $(document).ready(function(){initNavTree('classskyway_1_1core_1_1interface_1_1_m
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -98,8 +106,7 @@ $(document).ready(function(){initNavTree('classskyway_1_1core_1_1interface_1_1_m
 <a href="#pro-methods">限定公開メンバ関数</a> &#124;
 <a href="#pro-attribs">限定公開変数類</a> &#124;
 <a href="classskyway_1_1core_1_1interface_1_1_member-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">skyway::core::interface::Member クラス</div>  </div>
+  <div class="headertitle"><div class="title">skyway::core::interface::Member クラス</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -121,100 +128,100 @@ skyway::core::interface::Member の継承関係図</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 クラス</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">EventListener</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントリスナ  <a href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:ac3138887980843c35d61aa9a7e08620f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#ac3138887980843c35d61aa9a7e08620f">AddEventListener</a> (<a class="el" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">EventListener</a> *listener)</td></tr>
-<tr class="memdesc:ac3138887980843c35d61aa9a7e08620f"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントを購読します。  <a href="classskyway_1_1core_1_1interface_1_1_member.html#ac3138887980843c35d61aa9a7e08620f">[詳解]</a><br /></td></tr>
+<tr class="memitem:ac3138887980843c35d61aa9a7e08620f" id="r_ac3138887980843c35d61aa9a7e08620f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#ac3138887980843c35d61aa9a7e08620f">AddEventListener</a> (<a class="el" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">EventListener</a> *listener)</td></tr>
+<tr class="memdesc:ac3138887980843c35d61aa9a7e08620f"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントを購読します。  <br /></td></tr>
 <tr class="separator:ac3138887980843c35d61aa9a7e08620f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc74c338c6b5e754cc726a784517330d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#adc74c338c6b5e754cc726a784517330d">RemoveEventListener</a> (<a class="el" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">EventListener</a> *listener)</td></tr>
-<tr class="memdesc:adc74c338c6b5e754cc726a784517330d"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントの購読を中止します。  <a href="classskyway_1_1core_1_1interface_1_1_member.html#adc74c338c6b5e754cc726a784517330d">[詳解]</a><br /></td></tr>
+<tr class="memitem:adc74c338c6b5e754cc726a784517330d" id="r_adc74c338c6b5e754cc726a784517330d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#adc74c338c6b5e754cc726a784517330d">RemoveEventListener</a> (<a class="el" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">EventListener</a> *listener)</td></tr>
+<tr class="memdesc:adc74c338c6b5e754cc726a784517330d"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントの購読を中止します。  <br /></td></tr>
 <tr class="separator:adc74c338c6b5e754cc726a784517330d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5152089a42f30c770769fce449b55e05"><td class="memItemLeft" align="right" valign="top"><a id="a5152089a42f30c770769fce449b55e05"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#a5152089a42f30c770769fce449b55e05">UpdateMetadata</a> (const std::string &amp;metadata)</td></tr>
+<tr class="memitem:a5152089a42f30c770769fce449b55e05" id="r_a5152089a42f30c770769fce449b55e05"><td class="memItemLeft" align="right" valign="top"><a id="a5152089a42f30c770769fce449b55e05" name="a5152089a42f30c770769fce449b55e05"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateMetadata</b> (const std::string &amp;metadata)</td></tr>
 <tr class="memdesc:a5152089a42f30c770769fce449b55e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadataを更新します <br /></td></tr>
 <tr class="separator:a5152089a42f30c770769fce449b55e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a68d5a302e8ec6ce98d92cf5ce27419"><td class="memItemLeft" align="right" valign="top"><a id="a5a68d5a302e8ec6ce98d92cf5ce27419"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#a5a68d5a302e8ec6ce98d92cf5ce27419">Leave</a> ()</td></tr>
+<tr class="memitem:a5a68d5a302e8ec6ce98d92cf5ce27419" id="r_a5a68d5a302e8ec6ce98d92cf5ce27419"><td class="memItemLeft" align="right" valign="top"><a id="a5a68d5a302e8ec6ce98d92cf5ce27419" name="a5a68d5a302e8ec6ce98d92cf5ce27419"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Leave</b> ()</td></tr>
 <tr class="memdesc:a5a68d5a302e8ec6ce98d92cf5ce27419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Channelから退室します。 <br /></td></tr>
 <tr class="separator:a5a68d5a302e8ec6ce98d92cf5ce27419"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af94e6847ee78edd16b75171e4bcee012"><td class="memItemLeft" align="right" valign="top"><a id="af94e6847ee78edd16b75171e4bcee012"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#af94e6847ee78edd16b75171e4bcee012">Id</a> () const</td></tr>
+<tr class="memitem:af94e6847ee78edd16b75171e4bcee012" id="r_af94e6847ee78edd16b75171e4bcee012"><td class="memItemLeft" align="right" valign="top"><a id="af94e6847ee78edd16b75171e4bcee012" name="af94e6847ee78edd16b75171e4bcee012"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Id</b> () const</td></tr>
 <tr class="memdesc:af94e6847ee78edd16b75171e4bcee012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Idを取得します。 <br /></td></tr>
 <tr class="separator:af94e6847ee78edd16b75171e4bcee012"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42210557981aef9a3e70e352b3ccf37d"><td class="memItemLeft" align="right" valign="top"><a id="a42210557981aef9a3e70e352b3ccf37d"></a>
-std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#a42210557981aef9a3e70e352b3ccf37d">Name</a> () const</td></tr>
-<tr class="memdesc:a42210557981aef9a3e70e352b3ccf37d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nameを取得します。 <br /></td></tr>
-<tr class="separator:a42210557981aef9a3e70e352b3ccf37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a997b1ecc7f7a16a0f23085f8e1847561"><td class="memItemLeft" align="right" valign="top"><a id="a997b1ecc7f7a16a0f23085f8e1847561"></a>
-std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#a997b1ecc7f7a16a0f23085f8e1847561">Metadata</a> () const</td></tr>
-<tr class="memdesc:a997b1ecc7f7a16a0f23085f8e1847561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadataを取得します。 <br /></td></tr>
-<tr class="separator:a997b1ecc7f7a16a0f23085f8e1847561"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d62aa76ee702ecbdba6e9d2aae86d8b"><td class="memItemLeft" align="right" valign="top"><a id="a8d62aa76ee702ecbdba6e9d2aae86d8b"></a>
-model::MemberType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#a8d62aa76ee702ecbdba6e9d2aae86d8b">Type</a> () const</td></tr>
+<tr class="memitem:a68197cabb7dd3c1cd6f5320187f0de40" id="r_a68197cabb7dd3c1cd6f5320187f0de40"><td class="memItemLeft" align="right" valign="top"><a id="a68197cabb7dd3c1cd6f5320187f0de40" name="a68197cabb7dd3c1cd6f5320187f0de40"></a>
+std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Name</b> () const</td></tr>
+<tr class="memdesc:a68197cabb7dd3c1cd6f5320187f0de40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nameを取得します。 <br /></td></tr>
+<tr class="separator:a68197cabb7dd3c1cd6f5320187f0de40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac93b350c922b6720385b813c3f9a0a7c" id="r_ac93b350c922b6720385b813c3f9a0a7c"><td class="memItemLeft" align="right" valign="top"><a id="ac93b350c922b6720385b813c3f9a0a7c" name="ac93b350c922b6720385b813c3f9a0a7c"></a>
+std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Metadata</b> () const</td></tr>
+<tr class="memdesc:ac93b350c922b6720385b813c3f9a0a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadataを取得します。 <br /></td></tr>
+<tr class="separator:ac93b350c922b6720385b813c3f9a0a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d62aa76ee702ecbdba6e9d2aae86d8b" id="r_a8d62aa76ee702ecbdba6e9d2aae86d8b"><td class="memItemLeft" align="right" valign="top"><a id="a8d62aa76ee702ecbdba6e9d2aae86d8b" name="a8d62aa76ee702ecbdba6e9d2aae86d8b"></a>
+model::MemberType&#160;</td><td class="memItemRight" valign="bottom"><b>Type</b> () const</td></tr>
 <tr class="memdesc:a8d62aa76ee702ecbdba6e9d2aae86d8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">MemberTypeを取得します。 <br /></td></tr>
 <tr class="separator:a8d62aa76ee702ecbdba6e9d2aae86d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a883b3657cdc617e99d65c1b64f234de5"><td class="memItemLeft" align="right" valign="top"><a id="a883b3657cdc617e99d65c1b64f234de5"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#a883b3657cdc617e99d65c1b64f234de5">Subtype</a> () const</td></tr>
+<tr class="memitem:a883b3657cdc617e99d65c1b64f234de5" id="r_a883b3657cdc617e99d65c1b64f234de5"><td class="memItemLeft" align="right" valign="top"><a id="a883b3657cdc617e99d65c1b64f234de5" name="a883b3657cdc617e99d65c1b64f234de5"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Subtype</b> () const</td></tr>
 <tr class="memdesc:a883b3657cdc617e99d65c1b64f234de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtypeを取得します。 <br /></td></tr>
 <tr class="separator:a883b3657cdc617e99d65c1b64f234de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae742f1b23db502e082861d67e9633827"><td class="memItemLeft" align="right" valign="top"><a id="ae742f1b23db502e082861d67e9633827"></a>
-model::Side&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#ae742f1b23db502e082861d67e9633827">Side</a> () const</td></tr>
+<tr class="memitem:ae742f1b23db502e082861d67e9633827" id="r_ae742f1b23db502e082861d67e9633827"><td class="memItemLeft" align="right" valign="top"><a id="ae742f1b23db502e082861d67e9633827" name="ae742f1b23db502e082861d67e9633827"></a>
+model::Side&#160;</td><td class="memItemRight" valign="bottom"><b>Side</b> () const</td></tr>
 <tr class="memdesc:ae742f1b23db502e082861d67e9633827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Side(LocalかRemoteか)を取得します。 <br /></td></tr>
 <tr class="separator:ae742f1b23db502e082861d67e9633827"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25c1aac6a1d06ec2b2361a0ed78ba639"><td class="memItemLeft" align="right" valign="top"><a id="a25c1aac6a1d06ec2b2361a0ed78ba639"></a>
-MemberState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#a25c1aac6a1d06ec2b2361a0ed78ba639">State</a> () const</td></tr>
+<tr class="memitem:a25c1aac6a1d06ec2b2361a0ed78ba639" id="r_a25c1aac6a1d06ec2b2361a0ed78ba639"><td class="memItemLeft" align="right" valign="top"><a id="a25c1aac6a1d06ec2b2361a0ed78ba639" name="a25c1aac6a1d06ec2b2361a0ed78ba639"></a>
+MemberState&#160;</td><td class="memItemRight" valign="bottom"><b>State</b> () const</td></tr>
 <tr class="memdesc:a25c1aac6a1d06ec2b2361a0ed78ba639"><td class="mdescLeft">&#160;</td><td class="mdescRight">State(Memberの入室状態)を取得します。 <br /></td></tr>
 <tr class="separator:a25c1aac6a1d06ec2b2361a0ed78ba639"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1bb80e087e264e2a80129907df1a875"><td class="memItemLeft" align="right" valign="top"><a id="ad1bb80e087e264e2a80129907df1a875"></a>
-std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">interface::Publication</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#ad1bb80e087e264e2a80129907df1a875">Publications</a> () const</td></tr>
-<tr class="memdesc:ad1bb80e087e264e2a80129907df1a875"><td class="mdescLeft">&#160;</td><td class="mdescRight">自身が持つ全てのPublicationを取得します。 <br /></td></tr>
-<tr class="separator:ad1bb80e087e264e2a80129907df1a875"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a874c364fe8d031cd1d4a3324c4c9fba0"><td class="memItemLeft" align="right" valign="top"><a id="a874c364fe8d031cd1d4a3324c4c9fba0"></a>
-std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">interface::Subscription</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html#a874c364fe8d031cd1d4a3324c4c9fba0">Subscriptions</a> () const</td></tr>
-<tr class="memdesc:a874c364fe8d031cd1d4a3324c4c9fba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">自身が持つ全てのSubscriptionを取得します。 <br /></td></tr>
-<tr class="separator:a874c364fe8d031cd1d4a3324c4c9fba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e6223e54e96a514e071c9e9255ad652" id="r_a1e6223e54e96a514e071c9e9255ad652"><td class="memItemLeft" align="right" valign="top"><a id="a1e6223e54e96a514e071c9e9255ad652" name="a1e6223e54e96a514e071c9e9255ad652"></a>
+std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_publication.html">interface::Publication</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Publications</b> () const</td></tr>
+<tr class="memdesc:a1e6223e54e96a514e071c9e9255ad652"><td class="mdescLeft">&#160;</td><td class="mdescRight">自身が持つ全てのPublicationを取得します。 <br /></td></tr>
+<tr class="separator:a1e6223e54e96a514e071c9e9255ad652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b84b79da075758df300e1172ce3926e" id="r_a5b84b79da075758df300e1172ce3926e"><td class="memItemLeft" align="right" valign="top"><a id="a5b84b79da075758df300e1172ce3926e" name="a5b84b79da075758df300e1172ce3926e"></a>
+std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_subscription.html">interface::Subscription</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Subscriptions</b> () const</td></tr>
+<tr class="memdesc:a5b84b79da075758df300e1172ce3926e"><td class="mdescLeft">&#160;</td><td class="mdescRight">自身が持つ全てのSubscriptionを取得します。 <br /></td></tr>
+<tr class="separator:a5b84b79da075758df300e1172ce3926e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 限定公開メンバ関数</h2></td></tr>
-<tr class="memitem:ae44e027dcf96ec5962b79a88f0c7ee72"><td class="memItemLeft" align="right" valign="top"><a id="ae44e027dcf96ec5962b79a88f0c7ee72"></a>
+<tr class="memitem:ae44e027dcf96ec5962b79a88f0c7ee72" id="r_ae44e027dcf96ec5962b79a88f0c7ee72"><td class="memItemLeft" align="right" valign="top"><a id="ae44e027dcf96ec5962b79a88f0c7ee72" name="ae44e027dcf96ec5962b79a88f0c7ee72"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Member</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">interface::Channel</a> &gt; channel, const <a class="el" href="structskyway_1_1model_1_1_member.html">model::Member</a> &amp;initial_dto, const model::Side &amp;side)</td></tr>
 <tr class="separator:ae44e027dcf96ec5962b79a88f0c7ee72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 限定公開変数類</h2></td></tr>
-<tr class="memitem:abc38e9abadcae145c25f5d3b03b6a92e"><td class="memItemLeft" align="right" valign="top"><a id="abc38e9abadcae145c25f5d3b03b6a92e"></a>
+<tr class="memitem:abc38e9abadcae145c25f5d3b03b6a92e" id="r_abc38e9abadcae145c25f5d3b03b6a92e"><td class="memItemLeft" align="right" valign="top"><a id="abc38e9abadcae145c25f5d3b03b6a92e" name="abc38e9abadcae145c25f5d3b03b6a92e"></a>
 std::weak_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">interface::Channel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>channel_</b></td></tr>
 <tr class="separator:abc38e9abadcae145c25f5d3b03b6a92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5e2518960814cd6af5bc6a8772d21d7"><td class="memItemLeft" align="right" valign="top"><a id="ad5e2518960814cd6af5bc6a8772d21d7"></a>
+<tr class="memitem:ad5e2518960814cd6af5bc6a8772d21d7" id="r_ad5e2518960814cd6af5bc6a8772d21d7"><td class="memItemLeft" align="right" valign="top"><a id="ad5e2518960814cd6af5bc6a8772d21d7" name="ad5e2518960814cd6af5bc6a8772d21d7"></a>
 <a class="el" href="structskyway_1_1model_1_1_member.html">model::Member</a>&#160;</td><td class="memItemRight" valign="bottom"><b>initial_dto_</b></td></tr>
 <tr class="separator:ad5e2518960814cd6af5bc6a8772d21d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a190063a9d29d2b59aa7d6f2ce0e37d2d"><td class="memItemLeft" align="right" valign="top"><a id="a190063a9d29d2b59aa7d6f2ce0e37d2d"></a>
+<tr class="memitem:a190063a9d29d2b59aa7d6f2ce0e37d2d" id="r_a190063a9d29d2b59aa7d6f2ce0e37d2d"><td class="memItemLeft" align="right" valign="top"><a id="a190063a9d29d2b59aa7d6f2ce0e37d2d" name="a190063a9d29d2b59aa7d6f2ce0e37d2d"></a>
 model::Side&#160;</td><td class="memItemRight" valign="bottom"><b>side_</b></td></tr>
 <tr class="separator:a190063a9d29d2b59aa7d6f2ce0e37d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa56461d8184ea4cf657f53d293150d70"><td class="memItemLeft" align="right" valign="top"><a id="aa56461d8184ea4cf657f53d293150d70"></a>
+<tr class="memitem:aa56461d8184ea4cf657f53d293150d70" id="r_aa56461d8184ea4cf657f53d293150d70"><td class="memItemLeft" align="right" valign="top"><a id="aa56461d8184ea4cf657f53d293150d70" name="aa56461d8184ea4cf657f53d293150d70"></a>
 MemberState&#160;</td><td class="memItemRight" valign="bottom"><b>state_</b></td></tr>
 <tr class="separator:aa56461d8184ea4cf657f53d293150d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac904ba2fa0acd38dcbaa60ba6b236dce"><td class="memItemLeft" align="right" valign="top"><a id="ac904ba2fa0acd38dcbaa60ba6b236dce"></a>
+<tr class="memitem:ac904ba2fa0acd38dcbaa60ba6b236dce" id="r_ac904ba2fa0acd38dcbaa60ba6b236dce"><td class="memItemLeft" align="right" valign="top"><a id="ac904ba2fa0acd38dcbaa60ba6b236dce" name="ac904ba2fa0acd38dcbaa60ba6b236dce"></a>
 std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>listeners_mtx_</b></td></tr>
 <tr class="separator:ac904ba2fa0acd38dcbaa60ba6b236dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c2e7e8cd2cdbd67faaa6494844eefec"><td class="memItemLeft" align="right" valign="top"><a id="a4c2e7e8cd2cdbd67faaa6494844eefec"></a>
+<tr class="memitem:a4c2e7e8cd2cdbd67faaa6494844eefec" id="r_a4c2e7e8cd2cdbd67faaa6494844eefec"><td class="memItemLeft" align="right" valign="top"><a id="a4c2e7e8cd2cdbd67faaa6494844eefec" name="a4c2e7e8cd2cdbd67faaa6494844eefec"></a>
 std::unordered_set&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html">EventListener</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>listeners_</b></td></tr>
 <tr class="separator:a4c2e7e8cd2cdbd67faaa6494844eefec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f47467c9d08e9f00b85c3c38bd99c21"><td class="memItemLeft" align="right" valign="top"><a id="a1f47467c9d08e9f00b85c3c38bd99c21"></a>
+<tr class="memitem:a1f47467c9d08e9f00b85c3c38bd99c21" id="r_a1f47467c9d08e9f00b85c3c38bd99c21"><td class="memItemLeft" align="right" valign="top"><a id="a1f47467c9d08e9f00b85c3c38bd99c21" name="a1f47467c9d08e9f00b85c3c38bd99c21"></a>
 std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>metadata_updated_</b></td></tr>
 <tr class="separator:a1f47467c9d08e9f00b85c3c38bd99c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>LocalPersonおよびRemoteMemberの基底クラス </p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="ac3138887980843c35d61aa9a7e08620f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3138887980843c35d61aa9a7e08620f">&#9670;&nbsp;</a></span>AddEventListener()</h2>
+<a id="ac3138887980843c35d61aa9a7e08620f" name="ac3138887980843c35d61aa9a7e08620f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3138887980843c35d61aa9a7e08620f">&#9670;&#160;</a></span>AddEventListener()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -239,8 +246,8 @@ std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>
 
 </div>
 </div>
-<a id="adc74c338c6b5e754cc726a784517330d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc74c338c6b5e754cc726a784517330d">&#9670;&nbsp;</a></span>RemoveEventListener()</h2>
+<a id="adc74c338c6b5e754cc726a784517330d" name="adc74c338c6b5e754cc726a784517330d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc74c338c6b5e754cc726a784517330d">&#9670;&#160;</a></span>RemoveEventListener()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,7 +281,7 @@ std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>skyway</b></li><li class="navelem"><b>core</b></li><li class="navelem"><b>interface</b></li><li class="navelem"><a class="el" href="classskyway_1_1core_1_1interface_1_1_member.html">Member</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
