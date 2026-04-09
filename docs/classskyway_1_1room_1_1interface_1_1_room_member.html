@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('classskyway_1_1room_1_1interface_1_1_room_member.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,9 +87,16 @@ $(document).ready(function(){initNavTree('classskyway_1_1room_1_1interface_1_1_r
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -96,8 +104,7 @@ $(document).ready(function(){initNavTree('classskyway_1_1room_1_1interface_1_1_r
 <a href="#nested-classes">クラス</a> &#124;
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="classskyway_1_1room_1_1interface_1_1_room_member-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">skyway::room::interface::RoomMember クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+  <div class="headertitle"><div class="title">skyway::room::interface::RoomMember クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -125,70 +132,436 @@ skyway::room::interface::RoomMember の継承関係図</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 クラス</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html">EventListener</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントリスナ  <a href="classskyway_1_1room_1_1interface_1_1_room_member_1_1_event_listener.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a8ac6be298f9f5d5e63a95173f903145c"><td class="memItemLeft" align="right" valign="top"><a id="a8ac6be298f9f5d5e63a95173f903145c"></a>
-virtual std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a8ac6be298f9f5d5e63a95173f903145c">RoomId</a> ()=0</td></tr>
-<tr class="memdesc:a8ac6be298f9f5d5e63a95173f903145c"><td class="mdescLeft">&#160;</td><td class="mdescRight">このMemberに紐づくRoomのIdを取得します。 <br /></td></tr>
-<tr class="separator:a8ac6be298f9f5d5e63a95173f903145c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4144a10f48ddcd689105d74dd9ac5fb"><td class="memItemLeft" align="right" valign="top"><a id="ab4144a10f48ddcd689105d74dd9ac5fb"></a>
-virtual std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#ab4144a10f48ddcd689105d74dd9ac5fb">RoomName</a> ()=0</td></tr>
-<tr class="memdesc:ab4144a10f48ddcd689105d74dd9ac5fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">このMemberに紐づくRoomのNameを取得します。 <br /></td></tr>
-<tr class="separator:ab4144a10f48ddcd689105d74dd9ac5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa452a349bd2f4a40541cc7820fa434bc"><td class="memItemLeft" align="right" valign="top"><a id="aa452a349bd2f4a40541cc7820fa434bc"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#aa452a349bd2f4a40541cc7820fa434bc">Id</a> ()=0</td></tr>
-<tr class="memdesc:aa452a349bd2f4a40541cc7820fa434bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Idを取得します。 <br /></td></tr>
+<tr class="memitem:a88662160a844bb9625d2f7257886275c" id="r_a88662160a844bb9625d2f7257886275c"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a88662160a844bb9625d2f7257886275c">RoomId</a> ()=0</td></tr>
+<tr class="memdesc:a88662160a844bb9625d2f7257886275c"><td class="mdescLeft">&#160;</td><td class="mdescRight">このMemberに紐づくRoomのIdを取得します。  <br /></td></tr>
+<tr class="separator:a88662160a844bb9625d2f7257886275c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92b71abeb39b4e7ed746d0fc5c56c284" id="r_a92b71abeb39b4e7ed746d0fc5c56c284"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a92b71abeb39b4e7ed746d0fc5c56c284">RoomName</a> ()=0</td></tr>
+<tr class="memdesc:a92b71abeb39b4e7ed746d0fc5c56c284"><td class="mdescLeft">&#160;</td><td class="mdescRight">このMemberに紐づくRoomのNameを取得します。  <br /></td></tr>
+<tr class="separator:a92b71abeb39b4e7ed746d0fc5c56c284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa452a349bd2f4a40541cc7820fa434bc" id="r_aa452a349bd2f4a40541cc7820fa434bc"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#aa452a349bd2f4a40541cc7820fa434bc">Id</a> ()=0</td></tr>
+<tr class="memdesc:aa452a349bd2f4a40541cc7820fa434bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Idを取得します。  <br /></td></tr>
 <tr class="separator:aa452a349bd2f4a40541cc7820fa434bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb38198118cea5dcfaebf38fc7d4a1d7"><td class="memItemLeft" align="right" valign="top"><a id="acb38198118cea5dcfaebf38fc7d4a1d7"></a>
-virtual std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#acb38198118cea5dcfaebf38fc7d4a1d7">Name</a> ()=0</td></tr>
-<tr class="memdesc:acb38198118cea5dcfaebf38fc7d4a1d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nameを取得します。 <br /></td></tr>
-<tr class="separator:acb38198118cea5dcfaebf38fc7d4a1d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad831a43dc2e12626fcc9e83634a6d669"><td class="memItemLeft" align="right" valign="top"><a id="ad831a43dc2e12626fcc9e83634a6d669"></a>
-virtual std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#ad831a43dc2e12626fcc9e83634a6d669">Metadata</a> ()=0</td></tr>
-<tr class="memdesc:ad831a43dc2e12626fcc9e83634a6d669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadataを取得します。 <br /></td></tr>
-<tr class="separator:ad831a43dc2e12626fcc9e83634a6d669"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65bc636ae7d481780a7c1bd30a699d91"><td class="memItemLeft" align="right" valign="top"><a id="a65bc636ae7d481780a7c1bd30a699d91"></a>
-virtual model::MemberType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a65bc636ae7d481780a7c1bd30a699d91">Type</a> ()=0</td></tr>
-<tr class="memdesc:a65bc636ae7d481780a7c1bd30a699d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Typeを取得します。 <br /></td></tr>
+<tr class="memitem:a8dd63fb4b1bdcf5a23f974dfc8e02a93" id="r_a8dd63fb4b1bdcf5a23f974dfc8e02a93"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a8dd63fb4b1bdcf5a23f974dfc8e02a93">Name</a> ()=0</td></tr>
+<tr class="memdesc:a8dd63fb4b1bdcf5a23f974dfc8e02a93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nameを取得します。  <br /></td></tr>
+<tr class="separator:a8dd63fb4b1bdcf5a23f974dfc8e02a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa96e2c7c3a4504cb0459f7aa5cc72df7" id="r_aa96e2c7c3a4504cb0459f7aa5cc72df7"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#aa96e2c7c3a4504cb0459f7aa5cc72df7">Metadata</a> ()=0</td></tr>
+<tr class="memdesc:aa96e2c7c3a4504cb0459f7aa5cc72df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadataを取得します。  <br /></td></tr>
+<tr class="separator:aa96e2c7c3a4504cb0459f7aa5cc72df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65bc636ae7d481780a7c1bd30a699d91" id="r_a65bc636ae7d481780a7c1bd30a699d91"><td class="memItemLeft" align="right" valign="top">virtual model::MemberType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a65bc636ae7d481780a7c1bd30a699d91">Type</a> ()=0</td></tr>
+<tr class="memdesc:a65bc636ae7d481780a7c1bd30a699d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Typeを取得します。  <br /></td></tr>
 <tr class="separator:a65bc636ae7d481780a7c1bd30a699d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a129d118d0c6e49b0ff15e42072a7f6f1"><td class="memItemLeft" align="right" valign="top"><a id="a129d118d0c6e49b0ff15e42072a7f6f1"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a129d118d0c6e49b0ff15e42072a7f6f1">Subtype</a> ()=0</td></tr>
-<tr class="memdesc:a129d118d0c6e49b0ff15e42072a7f6f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">SubTypeを取得します。 <br /></td></tr>
+<tr class="memitem:a129d118d0c6e49b0ff15e42072a7f6f1" id="r_a129d118d0c6e49b0ff15e42072a7f6f1"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a129d118d0c6e49b0ff15e42072a7f6f1">Subtype</a> ()=0</td></tr>
+<tr class="memdesc:a129d118d0c6e49b0ff15e42072a7f6f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">SubTypeを取得します。  <br /></td></tr>
 <tr class="separator:a129d118d0c6e49b0ff15e42072a7f6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06fc75d1e619bb3a55f32a6aa699d0ab"><td class="memItemLeft" align="right" valign="top"><a id="a06fc75d1e619bb3a55f32a6aa699d0ab"></a>
-virtual model::Side&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a06fc75d1e619bb3a55f32a6aa699d0ab">Side</a> ()=0</td></tr>
-<tr class="memdesc:a06fc75d1e619bb3a55f32a6aa699d0ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sideを取得します。 <br /></td></tr>
+<tr class="memitem:a06fc75d1e619bb3a55f32a6aa699d0ab" id="r_a06fc75d1e619bb3a55f32a6aa699d0ab"><td class="memItemLeft" align="right" valign="top">virtual model::Side&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a06fc75d1e619bb3a55f32a6aa699d0ab">Side</a> ()=0</td></tr>
+<tr class="memdesc:a06fc75d1e619bb3a55f32a6aa699d0ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sideを取得します。  <br /></td></tr>
 <tr class="separator:a06fc75d1e619bb3a55f32a6aa699d0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c525fb2f7ae3be6d754f3c97757bf25"><td class="memItemLeft" align="right" valign="top"><a id="a5c525fb2f7ae3be6d754f3c97757bf25"></a>
-virtual core::interface::MemberState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a5c525fb2f7ae3be6d754f3c97757bf25">State</a> ()=0</td></tr>
-<tr class="memdesc:a5c525fb2f7ae3be6d754f3c97757bf25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateを取得します。 <br /></td></tr>
+<tr class="memitem:a5c525fb2f7ae3be6d754f3c97757bf25" id="r_a5c525fb2f7ae3be6d754f3c97757bf25"><td class="memItemLeft" align="right" valign="top">virtual core::interface::MemberState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a5c525fb2f7ae3be6d754f3c97757bf25">State</a> ()=0</td></tr>
+<tr class="memdesc:a5c525fb2f7ae3be6d754f3c97757bf25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateを取得します。  <br /></td></tr>
 <tr class="separator:a5c525fb2f7ae3be6d754f3c97757bf25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7a100bd5ea767bd54240b5e6fb21133"><td class="memItemLeft" align="right" valign="top"><a id="aa7a100bd5ea767bd54240b5e6fb21133"></a>
-virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html">RoomPublication</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#aa7a100bd5ea767bd54240b5e6fb21133">Publications</a> ()=0</td></tr>
-<tr class="memdesc:aa7a100bd5ea767bd54240b5e6fb21133"><td class="mdescLeft">&#160;</td><td class="mdescRight">このMemberのPublication一覧を取得します。 <br /></td></tr>
-<tr class="separator:aa7a100bd5ea767bd54240b5e6fb21133"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45b54d174ae4d18f79fdf25d167e980b"><td class="memItemLeft" align="right" valign="top"><a id="a45b54d174ae4d18f79fdf25d167e980b"></a>
-virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html">RoomSubscription</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a45b54d174ae4d18f79fdf25d167e980b">Subscriptions</a> ()=0</td></tr>
-<tr class="memdesc:a45b54d174ae4d18f79fdf25d167e980b"><td class="mdescLeft">&#160;</td><td class="mdescRight">このMemberのSubscription一覧を取得します。 <br /></td></tr>
-<tr class="separator:a45b54d174ae4d18f79fdf25d167e980b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1494daffba2e9004f43421c9410d6a24"><td class="memItemLeft" align="right" valign="top"><a id="a1494daffba2e9004f43421c9410d6a24"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a1494daffba2e9004f43421c9410d6a24">UpdateMetadata</a> (const std::string &amp;metadata)=0</td></tr>
-<tr class="memdesc:a1494daffba2e9004f43421c9410d6a24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadataを更新します。 <br /></td></tr>
+<tr class="memitem:a663d730adbb8dfee025285193a1ecc8d" id="r_a663d730adbb8dfee025285193a1ecc8d"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html">RoomPublication</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a663d730adbb8dfee025285193a1ecc8d">Publications</a> ()=0</td></tr>
+<tr class="memdesc:a663d730adbb8dfee025285193a1ecc8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">このMemberのPublication一覧を取得します。  <br /></td></tr>
+<tr class="separator:a663d730adbb8dfee025285193a1ecc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e878b4e6002e6738c39a63d2ed17fc2" id="r_a5e878b4e6002e6738c39a63d2ed17fc2"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html">RoomSubscription</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a5e878b4e6002e6738c39a63d2ed17fc2">Subscriptions</a> ()=0</td></tr>
+<tr class="memdesc:a5e878b4e6002e6738c39a63d2ed17fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">このMemberのSubscription一覧を取得します。  <br /></td></tr>
+<tr class="separator:a5e878b4e6002e6738c39a63d2ed17fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1494daffba2e9004f43421c9410d6a24" id="r_a1494daffba2e9004f43421c9410d6a24"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a1494daffba2e9004f43421c9410d6a24">UpdateMetadata</a> (const std::string &amp;metadata)=0</td></tr>
+<tr class="memdesc:a1494daffba2e9004f43421c9410d6a24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadataを更新します。  <br /></td></tr>
 <tr class="separator:a1494daffba2e9004f43421c9410d6a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a618e746883f14b5bb700fff1394e3e58"><td class="memItemLeft" align="right" valign="top"><a id="a618e746883f14b5bb700fff1394e3e58"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a618e746883f14b5bb700fff1394e3e58">Leave</a> ()=0</td></tr>
-<tr class="memdesc:a618e746883f14b5bb700fff1394e3e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roomから退室します。 <br /></td></tr>
+<tr class="memitem:a618e746883f14b5bb700fff1394e3e58" id="r_a618e746883f14b5bb700fff1394e3e58"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html#a618e746883f14b5bb700fff1394e3e58">Leave</a> ()=0</td></tr>
+<tr class="memdesc:a618e746883f14b5bb700fff1394e3e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roomから退室します。  <br /></td></tr>
 <tr class="separator:a618e746883f14b5bb700fff1394e3e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>RoomMemberの操作を行うインターフェース </p>
-</div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="aa452a349bd2f4a40541cc7820fa434bc" name="aa452a349bd2f4a40541cc7820fa434bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa452a349bd2f4a40541cc7820fa434bc">&#9670;&#160;</a></span>Id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string skyway::room::interface::RoomMember::Id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Idを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room_member.html#a1e0dc83a945a47bb20100537af345284">skyway::room::abstract::RoomMember</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a618e746883f14b5bb700fff1394e3e58" name="a618e746883f14b5bb700fff1394e3e58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a618e746883f14b5bb700fff1394e3e58">&#9670;&#160;</a></span>Leave()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool skyway::room::interface::RoomMember::Leave </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Roomから退室します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room_member.html#a64b3f747f79d6f1f50b9901c5b69a650">skyway::room::abstract::RoomMember</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="aa96e2c7c3a4504cb0459f7aa5cc72df7" name="aa96e2c7c3a4504cb0459f7aa5cc72df7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa96e2c7c3a4504cb0459f7aa5cc72df7">&#9670;&#160;</a></span>Metadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::optional&lt; std::string &gt; skyway::room::interface::RoomMember::Metadata </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metadataを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room_member.html#a7173536f5cf98ca21cbedf62d811550d">skyway::room::abstract::RoomMember</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a8dd63fb4b1bdcf5a23f974dfc8e02a93" name="a8dd63fb4b1bdcf5a23f974dfc8e02a93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd63fb4b1bdcf5a23f974dfc8e02a93">&#9670;&#160;</a></span>Name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::optional&lt; std::string &gt; skyway::room::interface::RoomMember::Name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Nameを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room_member.html#a5bf197ea6ea9c441ad352cc58fa3635d">skyway::room::abstract::RoomMember</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a663d730adbb8dfee025285193a1ecc8d" name="a663d730adbb8dfee025285193a1ecc8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a663d730adbb8dfee025285193a1ecc8d">&#9670;&#160;</a></span>Publications()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_publication.html">RoomPublication</a> &gt; &gt; skyway::room::interface::RoomMember::Publications </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>このMemberのPublication一覧を取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1p2p_1_1_local_p2_p_room_member.html#a257d8870325405bf65a721db5e77d7f5">skyway::room::p2p::LocalP2PRoomMember</a>, <a class="el" href="classskyway_1_1room_1_1_remote_room_member.html#a286338387bccc233db777f1d460b0ff7">skyway::room::RemoteRoomMember</a>, <a class="el" href="classskyway_1_1room_1_1sfu_1_1_local_s_f_u_room_member.html#ac9098228e8b72476d12e67cf1b51b673">skyway::room::sfu::LocalSFURoomMember</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a88662160a844bb9625d2f7257886275c" name="a88662160a844bb9625d2f7257886275c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88662160a844bb9625d2f7257886275c">&#9670;&#160;</a></span>RoomId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::optional&lt; std::string &gt; skyway::room::interface::RoomMember::RoomId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>このMemberに紐づくRoomのIdを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room_member.html#a27ac878b8af96f1f8291a19a4760ffcc">skyway::room::abstract::RoomMember</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a92b71abeb39b4e7ed746d0fc5c56c284" name="a92b71abeb39b4e7ed746d0fc5c56c284"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92b71abeb39b4e7ed746d0fc5c56c284">&#9670;&#160;</a></span>RoomName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::optional&lt; std::string &gt; skyway::room::interface::RoomMember::RoomName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>このMemberに紐づくRoomのNameを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room_member.html#a6e81a30f98fff507a553384699f115ee">skyway::room::abstract::RoomMember</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a06fc75d1e619bb3a55f32a6aa699d0ab" name="a06fc75d1e619bb3a55f32a6aa699d0ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06fc75d1e619bb3a55f32a6aa699d0ab">&#9670;&#160;</a></span>Side()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual model::Side skyway::room::interface::RoomMember::Side </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sideを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room_member.html#afdaa9c28b506feeaa93f039388875cfa">skyway::room::abstract::RoomMember</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a5c525fb2f7ae3be6d754f3c97757bf25" name="a5c525fb2f7ae3be6d754f3c97757bf25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c525fb2f7ae3be6d754f3c97757bf25">&#9670;&#160;</a></span>State()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual core::interface::MemberState skyway::room::interface::RoomMember::State </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stateを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room_member.html#a55f1c80e1ff1f288cb8df9c50d7b51e8">skyway::room::abstract::RoomMember</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a5e878b4e6002e6738c39a63d2ed17fc2" name="a5e878b4e6002e6738c39a63d2ed17fc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e878b4e6002e6738c39a63d2ed17fc2">&#9670;&#160;</a></span>Subscriptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html">RoomSubscription</a> &gt; &gt; skyway::room::interface::RoomMember::Subscriptions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>このMemberのSubscription一覧を取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room_member.html#a0fa346cc38b5c97a3ecc4e521e451c90">skyway::room::abstract::RoomMember</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a129d118d0c6e49b0ff15e42072a7f6f1" name="a129d118d0c6e49b0ff15e42072a7f6f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a129d118d0c6e49b0ff15e42072a7f6f1">&#9670;&#160;</a></span>Subtype()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string skyway::room::interface::RoomMember::Subtype </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SubTypeを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room_member.html#a2e25c4e498657125dc0f5e837a38f5b9">skyway::room::abstract::RoomMember</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a65bc636ae7d481780a7c1bd30a699d91" name="a65bc636ae7d481780a7c1bd30a699d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65bc636ae7d481780a7c1bd30a699d91">&#9670;&#160;</a></span>Type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual model::MemberType skyway::room::interface::RoomMember::Type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Typeを取得します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room_member.html#a0ec254ca4c721189567e55d206e48e7c">skyway::room::abstract::RoomMember</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a1494daffba2e9004f43421c9410d6a24" name="a1494daffba2e9004f43421c9410d6a24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1494daffba2e9004f43421c9410d6a24">&#9670;&#160;</a></span>UpdateMetadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool skyway::room::interface::RoomMember::UpdateMetadata </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>metadata</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metadataを更新します。 </p>
+
+<p><a class="el" href="classskyway_1_1room_1_1abstract_1_1_room_member.html#ad6652b0acc6a5678d0f7b9c9f71e591b">skyway::room::abstract::RoomMember</a>で実装されています。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>include/skyway/room/interface/<a class="el" href="interface_2room__member_8hpp_source.html">room_member.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -197,7 +570,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>skyway</b></li><li class="navelem"><b>room</b></li><li class="navelem"><b>interface</b></li><li class="navelem"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_member.html">RoomMember</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

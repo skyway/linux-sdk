@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('structskyway_1_1model_1_1_publication.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,9 +87,16 @@ $(document).ready(function(){initNavTree('structskyway_1_1model_1_1_publication.
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -97,8 +105,7 @@ $(document).ready(function(){initNavTree('structskyway_1_1model_1_1_publication.
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="#pub-attribs">公開変数類</a> &#124;
 <a href="structskyway_1_1model_1_1_publication-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">skyway::model::Publication 構造体</div>  </div>
+  <div class="headertitle"><div class="title">skyway::model::Publication 構造体</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -107,52 +114,52 @@ $(document).ready(function(){initNavTree('structskyway_1_1model_1_1_publication.
 
 <p><code>#include &lt;<a class="el" href="domain_8hpp_source.html">domain.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 クラス</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1model_1_1_publication_1_1_init.html">Init</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a0e3c1f15610739f8c47ee6bfe6af27bb"><td class="memItemLeft" align="right" valign="top"><a id="a0e3c1f15610739f8c47ee6bfe6af27bb"></a>
+<tr class="memitem:a0e3c1f15610739f8c47ee6bfe6af27bb" id="r_a0e3c1f15610739f8c47ee6bfe6af27bb"><td class="memItemLeft" align="right" valign="top"><a id="a0e3c1f15610739f8c47ee6bfe6af27bb" name="a0e3c1f15610739f8c47ee6bfe6af27bb"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Publication</b> (const std::string &amp;<a class="el" href="structskyway_1_1model_1_1_publication.html#a7038caa6abacad3d44c491a31de4fcac">id</a>, const <a class="el" href="structskyway_1_1model_1_1_publication_1_1_init.html">Init</a> &amp;init)</td></tr>
 <tr class="separator:a0e3c1f15610739f8c47ee6bfe6af27bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 公開変数類</h2></td></tr>
-<tr class="memitem:a7038caa6abacad3d44c491a31de4fcac"><td class="memItemLeft" align="right" valign="top"><a id="a7038caa6abacad3d44c491a31de4fcac"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1model_1_1_publication.html#a7038caa6abacad3d44c491a31de4fcac">id</a></td></tr>
+<tr class="memitem:a7038caa6abacad3d44c491a31de4fcac" id="r_a7038caa6abacad3d44c491a31de4fcac"><td class="memItemLeft" align="right" valign="top"><a id="a7038caa6abacad3d44c491a31de4fcac" name="a7038caa6abacad3d44c491a31de4fcac"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
 <tr class="memdesc:a7038caa6abacad3d44c491a31de4fcac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id <br /></td></tr>
 <tr class="separator:a7038caa6abacad3d44c491a31de4fcac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a13a3e089e1f6b1290c64ccba346ed6"><td class="memItemLeft" align="right" valign="top"><a id="a2a13a3e089e1f6b1290c64ccba346ed6"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1model_1_1_publication.html#a2a13a3e089e1f6b1290c64ccba346ed6">publisher_id</a></td></tr>
+<tr class="memitem:a2a13a3e089e1f6b1290c64ccba346ed6" id="r_a2a13a3e089e1f6b1290c64ccba346ed6"><td class="memItemLeft" align="right" valign="top"><a id="a2a13a3e089e1f6b1290c64ccba346ed6" name="a2a13a3e089e1f6b1290c64ccba346ed6"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>publisher_id</b></td></tr>
 <tr class="memdesc:a2a13a3e089e1f6b1290c64ccba346ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">PublishしたメンバーのId <br /></td></tr>
 <tr class="separator:a2a13a3e089e1f6b1290c64ccba346ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97a8eb500b4b11e65c447fd56c0cba13"><td class="memItemLeft" align="right" valign="top"><a id="a97a8eb500b4b11e65c447fd56c0cba13"></a>
-std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1model_1_1_publication.html#a97a8eb500b4b11e65c447fd56c0cba13">origin</a></td></tr>
+<tr class="memitem:a97a8eb500b4b11e65c447fd56c0cba13" id="r_a97a8eb500b4b11e65c447fd56c0cba13"><td class="memItemLeft" align="right" valign="top"><a id="a97a8eb500b4b11e65c447fd56c0cba13" name="a97a8eb500b4b11e65c447fd56c0cba13"></a>
+std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>origin</b></td></tr>
 <tr class="memdesc:a97a8eb500b4b11e65c447fd56c0cba13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Origin <br /></td></tr>
 <tr class="separator:a97a8eb500b4b11e65c447fd56c0cba13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a056814d07d3f8a99bb91e0df737861"><td class="memItemLeft" align="right" valign="top"><a id="a2a056814d07d3f8a99bb91e0df737861"></a>
+<tr class="memitem:a2a056814d07d3f8a99bb91e0df737861" id="r_a2a056814d07d3f8a99bb91e0df737861"><td class="memItemLeft" align="right" valign="top"><a id="a2a056814d07d3f8a99bb91e0df737861" name="a2a056814d07d3f8a99bb91e0df737861"></a>
 PublicationType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
 <tr class="separator:a2a056814d07d3f8a99bb91e0df737861"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93356d6c6557edc1d9153c76add56b49"><td class="memItemLeft" align="right" valign="top"><a id="a93356d6c6557edc1d9153c76add56b49"></a>
-ContentType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1model_1_1_publication.html#a93356d6c6557edc1d9153c76add56b49">content_type</a></td></tr>
+<tr class="memitem:a93356d6c6557edc1d9153c76add56b49" id="r_a93356d6c6557edc1d9153c76add56b49"><td class="memItemLeft" align="right" valign="top"><a id="a93356d6c6557edc1d9153c76add56b49" name="a93356d6c6557edc1d9153c76add56b49"></a>
+ContentType&#160;</td><td class="memItemRight" valign="bottom"><b>content_type</b></td></tr>
 <tr class="memdesc:a93356d6c6557edc1d9153c76add56b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンテンツの種類 <br /></td></tr>
 <tr class="separator:a93356d6c6557edc1d9153c76add56b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac90a01e14982c9c6e8e4d029980cb6c8"><td class="memItemLeft" align="right" valign="top"><a id="ac90a01e14982c9c6e8e4d029980cb6c8"></a>
-std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1model_1_1_publication.html#ac90a01e14982c9c6e8e4d029980cb6c8">metadata</a></td></tr>
+<tr class="memitem:ac90a01e14982c9c6e8e4d029980cb6c8" id="r_ac90a01e14982c9c6e8e4d029980cb6c8"><td class="memItemLeft" align="right" valign="top"><a id="ac90a01e14982c9c6e8e4d029980cb6c8" name="ac90a01e14982c9c6e8e4d029980cb6c8"></a>
+std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>metadata</b></td></tr>
 <tr class="memdesc:ac90a01e14982c9c6e8e4d029980cb6c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadata <br /></td></tr>
 <tr class="separator:ac90a01e14982c9c6e8e4d029980cb6c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab264171331bf5a21b1f9ac68dc7bccfa"><td class="memItemLeft" align="right" valign="top"><a id="ab264171331bf5a21b1f9ac68dc7bccfa"></a>
-std::vector&lt; <a class="el" href="structskyway_1_1model_1_1_codec.html">Codec</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1model_1_1_publication.html#ab264171331bf5a21b1f9ac68dc7bccfa">codec_capabilities</a></td></tr>
+<tr class="memitem:ab264171331bf5a21b1f9ac68dc7bccfa" id="r_ab264171331bf5a21b1f9ac68dc7bccfa"><td class="memItemLeft" align="right" valign="top"><a id="ab264171331bf5a21b1f9ac68dc7bccfa" name="ab264171331bf5a21b1f9ac68dc7bccfa"></a>
+std::vector&lt; <a class="el" href="structskyway_1_1model_1_1_codec.html">Codec</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>codec_capabilities</b></td></tr>
 <tr class="memdesc:ab264171331bf5a21b1f9ac68dc7bccfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">コーデック一覧 <br /></td></tr>
 <tr class="separator:ab264171331bf5a21b1f9ac68dc7bccfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57180cb67316af0f5c6cab7e3f0c9e2d"><td class="memItemLeft" align="right" valign="top"><a id="a57180cb67316af0f5c6cab7e3f0c9e2d"></a>
-std::vector&lt; <a class="el" href="structskyway_1_1model_1_1_encoding.html">Encoding</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1model_1_1_publication.html#a57180cb67316af0f5c6cab7e3f0c9e2d">encodings</a></td></tr>
+<tr class="memitem:a57180cb67316af0f5c6cab7e3f0c9e2d" id="r_a57180cb67316af0f5c6cab7e3f0c9e2d"><td class="memItemLeft" align="right" valign="top"><a id="a57180cb67316af0f5c6cab7e3f0c9e2d" name="a57180cb67316af0f5c6cab7e3f0c9e2d"></a>
+std::vector&lt; <a class="el" href="structskyway_1_1model_1_1_encoding.html">Encoding</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>encodings</b></td></tr>
 <tr class="memdesc:a57180cb67316af0f5c6cab7e3f0c9e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">エンコーディング一覧 <br /></td></tr>
 <tr class="separator:a57180cb67316af0f5c6cab7e3f0c9e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbd7e945d3e58898aab0aed1ec4b5b3b"><td class="memItemLeft" align="right" valign="top"><a id="adbd7e945d3e58898aab0aed1ec4b5b3b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1model_1_1_publication.html#adbd7e945d3e58898aab0aed1ec4b5b3b">is_enabled</a></td></tr>
+<tr class="memitem:adbd7e945d3e58898aab0aed1ec4b5b3b" id="r_adbd7e945d3e58898aab0aed1ec4b5b3b"><td class="memItemLeft" align="right" valign="top"><a id="adbd7e945d3e58898aab0aed1ec4b5b3b" name="adbd7e945d3e58898aab0aed1ec4b5b3b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_enabled</b></td></tr>
 <tr class="memdesc:adbd7e945d3e58898aab0aed1ec4b5b3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効か無効か <br /></td></tr>
 <tr class="separator:adbd7e945d3e58898aab0aed1ec4b5b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -167,7 +174,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>skyway</b></li><li class="navelem"><b>model</b></li><li class="navelem"><a class="el" href="structskyway_1_1model_1_1_publication.html">Publication</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

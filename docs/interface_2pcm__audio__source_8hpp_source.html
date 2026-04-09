@@ -44,22 +44,28 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -72,7 +78,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('interface_2pcm__audio__source_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,65 +92,75 @@ $(document).ready(function(){initNavTree('interface_2pcm__audio__source_8hpp_sou
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">pcm_audio_source.hpp</div>  </div>
+  <div class="headertitle"><div class="title">pcm_audio_source.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef SKYWAY_MEDIA_AUDIO_INTERFACE_PCM_AUDIO_SOURCE_HPP_</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define SKYWAY_MEDIA_AUDIO_INTERFACE_PCM_AUDIO_SOURCE_HPP_</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;api/media_stream_interface.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>skyway {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>media {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>audio {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>interface {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html">PcmAudioSource</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html">PcmAudioSource</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html">   28</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html">Options</a> {</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html#a50ca3377db3166ecc941dc1079a09e6d">   36</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html#a50ca3377db3166ecc941dc1079a09e6d">sample_rate</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html#a72bfa78438f0f0ecd7ff1ddfa3d03b24">   44</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html#a72bfa78438f0f0ecd7ff1ddfa3d03b24">channels</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    };</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html#a4551fa472de14b3621f4b21a16c98bff">   54</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html#a4551fa472de14b3621f4b21a16c98bff">PushPcmData</a>(<span class="keyword">const</span> int16_t* buffer) = 0;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">virtual</span> rtc::scoped_refptr&lt;webrtc::AudioSourceInterface&gt; GetSource() = 0;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}  <span class="comment">// namespace interface</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}  <span class="comment">// namespace audio</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}  <span class="comment">// namespace media</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// SKYWAY_MEDIA_AUDIO_INTERFACE_PCM_AUDIO_SOURCE_HPP_</span></div>
-<div class="ttc" id="aclassskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_html"><div class="ttname"><a href="classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html">skyway::media::audio::interface::PcmAudioSource</a></div><div class="ttdoc">PCM音声ソース</div><div class="ttdef"><b>Definition:</b> pcm_audio_source.hpp:18</div></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// © NTT DOCOMO BUSINESS, Inc. All Rights Reserved.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef SKYWAY_MEDIA_AUDIO_INTERFACE_PCM_AUDIO_SOURCE_HPP_</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define SKYWAY_MEDIA_AUDIO_INTERFACE_PCM_AUDIO_SOURCE_HPP_</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;api/media_stream_interface.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span>skyway {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>media {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span>audio {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span>interface {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html">PcmAudioSource</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html">~PcmAudioSource</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html">   28</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html">Options</a> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html#a50ca3377db3166ecc941dc1079a09e6d">   36</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html#a50ca3377db3166ecc941dc1079a09e6d">sample_rate</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html#a72bfa78438f0f0ecd7ff1ddfa3d03b24">   44</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html#a72bfa78438f0f0ecd7ff1ddfa3d03b24">channels</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    };</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html#a4551fa472de14b3621f4b21a16c98bff">   54</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html#a4551fa472de14b3621f4b21a16c98bff">PushPcmData</a>(<span class="keyword">const</span> int16_t* buffer) = 0;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">virtual</span> rtc::scoped_refptr&lt;webrtc::AudioSourceInterface&gt; GetSource() = 0;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}  <span class="comment">// namespace interface</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}  <span class="comment">// namespace audio</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}  <span class="comment">// namespace media</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif  </span><span class="comment">// SKYWAY_MEDIA_AUDIO_INTERFACE_PCM_AUDIO_SOURCE_HPP_</span></div>
+<div class="ttc" id="aclassskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_html"><div class="ttname"><a href="classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html">skyway::media::audio::interface::PcmAudioSource</a></div><div class="ttdoc">PCM音声ソース</div><div class="ttdef"><b>Definition</b> pcm_audio_source.hpp:18</div></div>
 <div class="ttc" id="aclassskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_html_a4551fa472de14b3621f4b21a16c98bff"><div class="ttname"><a href="classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html#a4551fa472de14b3621f4b21a16c98bff">skyway::media::audio::interface::PcmAudioSource::PushPcmData</a></div><div class="ttdeci">virtual bool PushPcmData(const int16_t *buffer)=0</div><div class="ttdoc">PCM音声データを送信します。</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options_html"><div class="ttname"><a href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html">skyway::media::audio::interface::PcmAudioSource::Options</a></div><div class="ttdoc">PCM音声ソースのオプション</div><div class="ttdef"><b>Definition:</b> pcm_audio_source.hpp:28</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options_html_a50ca3377db3166ecc941dc1079a09e6d"><div class="ttname"><a href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html#a50ca3377db3166ecc941dc1079a09e6d">skyway::media::audio::interface::PcmAudioSource::Options::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdoc">サンプリングレート</div><div class="ttdef"><b>Definition:</b> pcm_audio_source.hpp:36</div></div>
-<div class="ttc" id="astructskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options_html_a72bfa78438f0f0ecd7ff1ddfa3d03b24"><div class="ttname"><a href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html#a72bfa78438f0f0ecd7ff1ddfa3d03b24">skyway::media::audio::interface::PcmAudioSource::Options::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">チャンネル数</div><div class="ttdef"><b>Definition:</b> pcm_audio_source.hpp:44</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options_html"><div class="ttname"><a href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html">skyway::media::audio::interface::PcmAudioSource::Options</a></div><div class="ttdoc">PCM音声ソースのオプション</div><div class="ttdef"><b>Definition</b> pcm_audio_source.hpp:28</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options_html_a50ca3377db3166ecc941dc1079a09e6d"><div class="ttname"><a href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html#a50ca3377db3166ecc941dc1079a09e6d">skyway::media::audio::interface::PcmAudioSource::Options::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdoc">サンプリングレート</div><div class="ttdef"><b>Definition</b> pcm_audio_source.hpp:36</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options_html_a72bfa78438f0f0ecd7ff1ddfa3d03b24"><div class="ttname"><a href="structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html#a72bfa78438f0f0ecd7ff1ddfa3d03b24">skyway::media::audio::interface::PcmAudioSource::Options::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">チャンネル数</div><div class="ttdef"><b>Definition</b> pcm_audio_source.hpp:44</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_77f3510bf786cf3c12f65f3b0b944be3.html">skyway</a></li><li class="navelem"><a class="el" href="dir_e0a5df88c41d0cefa5f5ef07a5fde6bd.html">media</a></li><li class="navelem"><a class="el" href="dir_2c06a80ffa1eaaa581aa76857c1ee591.html">audio</a></li><li class="navelem"><a class="el" href="dir_0ee0c880b671813635d994b80d17c8f1.html">interface</a></li><li class="navelem"><b>pcm_audio_source.hpp</b></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

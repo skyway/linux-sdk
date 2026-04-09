@@ -44,21 +44,22 @@
                 </tr>
             </tbody>
         </table>
-    </div><!-- 構築: Doxygen 1.9.1 -->
+    </div><!-- 構築: Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('classskyway_1_1core_1_1channel_1_1_channel.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -86,47 +87,53 @@ $(document).ready(function(){initNavTree('classskyway_1_1core_1_1channel_1_1_cha
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">skyway::core::channel::Channel メンバ一覧</div>  </div>
+  <div class="headertitle"><div class="title">skyway::core::channel::Channel メンバ一覧</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>継承メンバを含む <a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a> の全メンバ一覧です。</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a0527a874be1b7d370be02d811795012b">AddEventListener</a>(interface::Channel::EventListener *listener) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a9cc929068d7ee599b48c67e62ed1e544">Bots</a>(bool active_only=true) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#ae75b3420c281fda17fd7625ce64d8cbd">Bots</a>(bool active_only=true) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a62eedbaddc908e7f06398355305529ab">Close</a>() override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a8be3375d2ffd41fb50e756c107f5be95">Create</a>(const ChannelInit &amp;init)</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#ac184bc24605cf8992262ee2c1dcd08c7">Create</a>()</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a680758773f1364d7e46df38b8ea0a86c">Dispose</a>(bool remove_myself_if_needed=true) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a79fbb809f46fc2451ffc66e61940be5e">Find</a>(const ChannelQuery &amp;query)</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a2dcbda4a6c6238a9d5888f0a17b859c7">FindOrCreate</a>(const ChannelInit &amp;init)</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a6c23925f64bc82bcfb16191aff5eca5f">Create</a>(const ChannelInit &amp;init)</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a3f4be4cf1776b8ae80ae55c4b8a39137">Create</a>()</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a680758773f1364d7e46df38b8ea0a86c">Dispose</a>(bool remove_myself_if_needed=true) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a180441a60c5539afa7cf442248c9f221">Find</a>(const ChannelQuery &amp;query)</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#af9128f4e9e1c30287380645e958069db">FindOrCreate</a>(const ChannelInit &amp;init)</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#afcde6082b41f10e01af5ebc9cd5f6ea6">Id</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#ace050ea6cfb75f9f65000ee08f7d34d2">Join</a>(const model::Member::Init &amp;init) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#aa7bd3b48f6947df9297c38e027f7e528">Join</a>(const model::Member::Init &amp;init) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Leave</b>(std::shared_ptr&lt; interface::Member &gt; member) override (定義場所: <a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a>)</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#ac7508e2d8b311dfb1b6b7a0b25d2f325">skyway::core::interface::Channel::Leave</a>(std::shared_ptr&lt; interface::Member &gt; member)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#aa208551d09a28f9106b68cacef4738ab">LocalPerson</a>() override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#ac2e688f2da21b96f9f15136b2b81d080">Members</a>(bool active_only=true) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#ab798182b78ec889126a6de3a15a41381">Metadata</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a4b03f62575c6bff87e06e7fddd1398b9">Name</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#ab2f5cec4571572e0620aa79bee78f664">Publications</a>(bool active_only=true) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a8556f003a50df473c970d0d5d37a3f1b">RemoveEventListener</a>(interface::Channel::EventListener *listener) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html#ac7508e2d8b311dfb1b6b7a0b25d2f325">skyway::core::interface::Channel::Leave</a>(std::shared_ptr&lt; interface::Member &gt; member)=0</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a9378b9972f7912c5261fe6b7e01ffa8d">LocalPerson</a>() override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#aed35ba43c6782b91439a29a676ad0bbd">Members</a>(bool active_only=true) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a3b75b772bfa8bd57b1f2a882558c8acb">Metadata</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#af808dc6cd7f28113b26e96b9e6a65bd1">Name</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a0cd993b67b470410af45501bfabb9e8b">Publications</a>(bool active_only=true) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a8556f003a50df473c970d0d5d37a3f1b">RemoveEventListener</a>(interface::Channel::EventListener *listener) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#ae576a949bc0e87e540210f12d545772f">State</a>() const override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a132f2e10c83f5776579791f22b097d87">Subscriptions</a>(bool active_only=true) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a1b0aeb18e4f5089477a2bbc0433fb67b">Subscriptions</a>(bool active_only=true) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html#a9dd953c38f51c8dd0adce1ada8294b99">UpdateMetadata</a>(const std::string &amp;metadata) override</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1channel_1_1_channel.html">skyway::core::channel::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>~Channel</b>()=default (定義場所: <a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a>)</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>~Channel</b>()=default (定義場所: <a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a>)</td><td class="entry"><a class="el" href="classskyway_1_1core_1_1interface_1_1_channel.html">skyway::core::interface::Channel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

@@ -48,10 +48,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "abstract_2local__room__member_8hpp_source.html",
-"classskyway_1_1core_1_1interface_1_1_remote_media_stream.html#a5e85be046cd1150df947c2ef6a19b341",
-"classskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream.html",
-"classskyway_1_1room_1_1p2p_1_1_p2_p_room.html",
-"structskyway_1_1core_1_1_context_options.html#a079b4768a8a0aaca8213701d3fa68c17"
+"classskyway_1_1media_1_1_device_manager.html#a76b0eeddeda6457378987e54167ce305",
+"classskyway_1_1room_1_1p2p_1_1_local_p2_p_room_member.html#af6c3d6cb06fdf716547d5aa50f417805",
+"structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html"
 ];
 
 var SYNCONMSG = 'クリックで同期表示が無効になります';
