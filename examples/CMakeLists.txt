@@ -38,14 +38,12 @@ set( SKYWAY_LINUX_INCLUDES
         ${CMAKE_CURRENT_SOURCE_DIR}/../include/external/libmediasoupclient/include
         ${CMAKE_CURRENT_SOURCE_DIR}/../include/external/libsdptransform
         ${CMAKE_CURRENT_SOURCE_DIR}/../include/external/libwebrtc
-        ${CMAKE_CURRENT_SOURCE_DIR}/../include/external/libskyway/include
         ${CMAKE_CURRENT_SOURCE_DIR}/../include/external/libwebrtc/third_party/abseil-cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/../include/external/libwebrtc/third_party/boringssl/src/include
         ${CMAKE_CURRENT_SOURCE_DIR}/../include/external/boost
         ${CMAKE_CURRENT_SOURCE_DIR}/../include)
 
 add_subdirectory("quickstart")
-add_subdirectory("sfu")
 
 # Enable opencv examples
 if(ENABLE_OPENCV_EXAMPLE)

@@ -67,6 +67,7 @@ var hierarchy =
       [ "skyway::core::interface::Publication", "classskyway_1_1core_1_1interface_1_1_publication.html", null ],
       [ "skyway::core::interface::Subscription", "classskyway_1_1core_1_1interface_1_1_subscription.html", null ],
       [ "skyway::media::rtp::RtpCapturerVideoSource", "classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html", null ],
+      [ "skyway::room::Room", "classskyway_1_1room_1_1_room.html", null ],
       [ "skyway::room::p2p::P2PRoom", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html", null ],
       [ "skyway::room::sfu::SFURoom", "classskyway_1_1room_1_1sfu_1_1_s_f_u_room.html", null ]
     ] ],
@@ -77,6 +78,7 @@ var hierarchy =
     ] ],
     [ "skyway::core::interface::Channel::EventListener", "classskyway_1_1core_1_1interface_1_1_channel_1_1_event_listener.html", [
       [ "skyway::room::abstract::Room", "classskyway_1_1room_1_1abstract_1_1_room.html", [
+        [ "skyway::room::Room", "classskyway_1_1room_1_1_room.html", null ],
         [ "skyway::room::p2p::P2PRoom", "classskyway_1_1room_1_1p2p_1_1_p2_p_room.html", null ],
         [ "skyway::room::sfu::SFURoom", "classskyway_1_1room_1_1sfu_1_1_s_f_u_room.html", null ]
       ] ]
@@ -84,6 +86,7 @@ var hierarchy =
     [ "skyway::core::interface::Member::EventListener", "classskyway_1_1core_1_1interface_1_1_member_1_1_event_listener.html", [
       [ "skyway::core::interface::LocalPerson::EventListener", "classskyway_1_1core_1_1interface_1_1_local_person_1_1_event_listener.html", [
         [ "skyway::room::abstract::LocalRoomMember", "classskyway_1_1room_1_1abstract_1_1_local_room_member.html", [
+          [ "skyway::room::LocalRoomMember", "classskyway_1_1room_1_1_local_room_member.html", null ],
           [ "skyway::room::p2p::LocalP2PRoomMember", "classskyway_1_1room_1_1p2p_1_1_local_p2_p_room_member.html", null ],
           [ "skyway::room::sfu::LocalSFURoomMember", "classskyway_1_1room_1_1sfu_1_1_local_s_f_u_room_member.html", null ]
         ] ]
@@ -149,6 +152,7 @@ var hierarchy =
     ] ],
     [ "interface::RoomDomainFactory", null, [
       [ "skyway::room::abstract::RoomDomainFactory", "classskyway_1_1room_1_1abstract_1_1_room_domain_factory.html", [
+        [ "skyway::room::RoomDomainFactory", "classskyway_1_1room_1_1_room_domain_factory.html", null ],
         [ "skyway::room::sfu::RoomDomainFactory", "classskyway_1_1room_1_1sfu_1_1_room_domain_factory.html", null ]
       ] ]
     ] ],

@@ -162,7 +162,10 @@ var annotated_dup =
           [ "RoomDomainFactory", "classskyway_1_1room_1_1sfu_1_1_room_domain_factory.html", null ],
           [ "SFURoom", "classskyway_1_1room_1_1sfu_1_1_s_f_u_room.html", "classskyway_1_1room_1_1sfu_1_1_s_f_u_room" ]
         ] ],
+        [ "LocalRoomMember", "classskyway_1_1room_1_1_local_room_member.html", "classskyway_1_1room_1_1_local_room_member" ],
         [ "RemoteRoomMember", "classskyway_1_1room_1_1_remote_room_member.html", "classskyway_1_1room_1_1_remote_room_member" ],
+        [ "Room", "classskyway_1_1room_1_1_room.html", "classskyway_1_1room_1_1_room" ],
+        [ "RoomDomainFactory", "classskyway_1_1room_1_1_room_domain_factory.html", null ],
         [ "RoomPublication", "classskyway_1_1room_1_1_room_publication.html", "classskyway_1_1room_1_1_room_publication" ],
         [ "RoomSubscription", "classskyway_1_1room_1_1_room_subscription.html", "classskyway_1_1room_1_1_room_subscription" ]
       ] ],

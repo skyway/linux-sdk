@@ -5,6 +5,8 @@
 #ifndef SKYWAY_ROOM_ABSTRACT_ROOM_DOMAIN_FACTORY_HPP
 #define SKYWAY_ROOM_ABSTRACT_ROOM_DOMAIN_FACTORY_HPP
 
+#include <mutex>
+
 #include "skyway/room/interface/room_domain_factory.hpp"
 
 namespace skyway {

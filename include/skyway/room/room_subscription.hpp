@@ -5,6 +5,8 @@
 #ifndef SKYWAY_ROOM_ROOM_SUBSCRIPTION_HPP
 #define SKYWAY_ROOM_ROOM_SUBSCRIPTION_HPP
 
+#include <mutex>
+
 #include <skyway/core/interface/subscription.hpp>
 
 #include "skyway/room/interface/room_domain_factory.hpp"

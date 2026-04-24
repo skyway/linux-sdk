@@ -7,7 +7,7 @@
 #include <iostream>
 
 ExampleRoom::ExampleRoom(const std::string& renderer_device_name)
-    : p2proom_(nullptr),
+    : room_(nullptr),
       room_member_(nullptr),
       renderer_(nullptr),
       data_stream_(nullptr),
@@ -31,37 +31,37 @@ bool ExampleRoom::Setup(const std::string& app_id, const std::string& secret_key
     return true;
 }
 
-// P2PRoomを検索/作成し、入室します。
+// Roomを検索/作成し、入室します。
 bool ExampleRoom::JoinRoom(const std::string& room_name) {
-    // P2PRoomを検索/作成します。
+    // Roomを検索/作成します。
     skyway::room::interface::RoomInitOptions room_init;
     room_init.name = room_name;
-    p2proom_       = skyway::room::p2p::P2PRoom::FindOrCreate(room_init);
-    if (!p2proom_) {
+    room_          = skyway::room::Room::FindOrCreate(room_init);
+    if (!room_) {
         std::cerr << "- [Error] room failed." << std::endl;
         return false;
     }
-    // P2PRoomにイベントリスナ(skyway::room::interface::Room::EventListenerの実装)を登録します。
-    p2proom_->AddEventListener(this);
+    // Roomにイベントリスナ(skyway::room::interface::Room::EventListenerの実装)を登録します。
+    room_->AddEventListener(this);
 
-    // P2PRoomの情報を出力します。
+    // Roomの情報を出力します。
     std::cout << "# Room" << std::endl;
-    if (p2proom_->Name()) {
-        std::cout << "- Name: " << p2proom_->Name().value() << std::endl;
+    if (room_->Name()) {
+        std::cout << "- Name: " << room_->Name().value() << std::endl;
     }
-    std::cout << "- Id: " << p2proom_->Id() << std::endl;
+    std::cout << "- Id: " << room_->Id() << std::endl;
 
-    // P2PRoomに既にいるメンバーの一覧を表示します。
+    // Roomに既にいるメンバーの一覧を表示します。
     std::cout << "- Room Members" << std::endl;
-    for (auto& members : p2proom_->Members()) {
+    for (auto& members : room_->Members()) {
         std::cout << "  - Id: " << members->Id() << std::endl;
     }
 
-    // P2PRoomにメンバーを入室させます。
+    // Roomにメンバーを入室させます。
     skyway::room::interface::RoomMemberInitOptions room_options;
-    room_member_ = p2proom_->Join(room_options);
+    room_member_ = room_->Join(room_options);
     if (!room_member_) {
-        std::cerr << "- [Error] p2proom join failed." << std::endl;
+        std::cerr << "- [Error] room join failed." << std::endl;
         return false;
     }
     std::cout << "- LocalRoomMember Joined" << std::endl;
@@ -88,7 +88,8 @@ void ExampleRoom::Publish() {
             auto video_stream =
                 skyway::media::StreamFactory::CreateVideoStream(video_devices[device_index]);
             skyway::room::interface::LocalRoomMember::PublicationOptions publication_options {};
-            auto publication = room_member_->Publish(video_stream, publication_options);
+            publication_options.type = skyway::model::PublicationType::kP2P;
+            auto publication         = room_member_->Publish(video_stream, publication_options);
             if (publication) {
                 std::cout << "  - VideoStream Published" << std::endl;
                 std::cout << "    - Publication Id: " << publication->Id() << std::endl;
@@ -105,7 +106,8 @@ void ExampleRoom::Publish() {
         skyway::media::DeviceManager::SetRecordingDevice(device);
         auto audio_stream = skyway::media::StreamFactory::CreateAudioStream();
         skyway::room::interface::LocalRoomMember::PublicationOptions publication_options {};
-        auto publication = room_member_->Publish(audio_stream, publication_options);
+        publication_options.type = skyway::model::PublicationType::kP2P;
+        auto publication         = room_member_->Publish(audio_stream, publication_options);
         if (publication) {
             std::cout << "- AudioStream Published" << std::endl;
             std::cout << "  - Device Index: " << device.index << std::endl;
@@ -131,7 +133,8 @@ void ExampleRoom::Publish() {
     threads_.emplace_back(std::move(data_thread));
 
     skyway::room::interface::LocalRoomMember::PublicationOptions publication_options {};
-    auto publication = room_member_->Publish(data_stream_, publication_options);
+    publication_options.type = skyway::model::PublicationType::kP2P;
+    auto publication         = room_member_->Publish(data_stream_, publication_options);
     if (publication) {
         std::cout << "- DataStream Published" << std::endl;
         std::cout << "  - Publication Id: " << publication->Id() << std::endl;
@@ -208,7 +211,7 @@ bool ExampleRoom::Subscribe(std::shared_ptr<skyway::room::interface::RoomPublica
         auto data_stream =
             std::dynamic_pointer_cast<skyway::core::stream::remote::RemoteDataStream>(
                 subscription->Stream());
-        // P2PRoomにイベントリスナ(skyway::core::stream::remote::RemoteDataStream::Listenerの実装)を登録します。
+        // DataStreamにイベントリスナ(skyway::core::stream::remote::RemoteDataStream::Listenerの実装)を登録します。
         data_stream->AddListener(this);
         std::cout << "- DataStream Subscribed" << std::endl;
         std::cout << "  - Publication Id: " << publication->Id() << std::endl;
@@ -217,22 +220,22 @@ bool ExampleRoom::Subscribe(std::shared_ptr<skyway::room::interface::RoomPublica
     return true;
 }
 
-// P2PRoomに存在するPublication全てに対してSubscribeを試みます。
+// Roomに存在するPublication全てに対してSubscribeを試みます。
 void ExampleRoom::SubscribeAll() {
-    for (auto& publication : p2proom_->Publications()) {
+    for (auto& publication : room_->Publications()) {
         this->Subscribe(publication);
     }
 }
 
-// P2PRoomから退出します。
+// Roomから退出します。
 bool ExampleRoom::LeaveRoom() {
     if (!room_member_) {
         return false;
     }
     is_leaving_ = true;
-    // P2PRoomに紐づくイベントリスナの登録を解除します。
-    if (p2proom_) {
-        p2proom_->RemoveEventListener(this);
+    // Roomに紐づくイベントリスナの登録を解除します。
+    if (room_) {
+        room_->RemoveEventListener(this);
     }
     // 各threadの終了を待ちます。
     for (auto& th : threads_) {

@@ -31,9 +31,9 @@ using SignalingClientDelegator = signaling::interface::SignalingClient::Delegato
 class Channel : public interface::Channel, public rtc_api::ChannelState::EventListener {
 public:
     /// @cond INTERNAL_SECTION
-    Channel(std::unique_ptr<rtc_api::interface::ChannelState> rtc_api_channel_state,
+    Channel(std::shared_ptr<rtc_api::interface::ChannelState> rtc_api_channel_state,
             std::unique_ptr<interface::ChunkMessengerFactory> chunk_messenger_factory);
-    Channel(std::unique_ptr<rtc_api::interface::ChannelState> rtc_api_channel_state);
+    Channel(std::shared_ptr<rtc_api::interface::ChannelState> rtc_api_channel_state);
     ~Channel();
     void SetupDomains();
     /// @endcond
@@ -120,7 +120,7 @@ private:
     std::shared_ptr<member::LocalPerson> CreateLocalPerson(const model::Member& member);
     std::shared_ptr<interface::RemoteMember> CreateRemoteMember(const model::Member& member);
 
-    std::unique_ptr<rtc_api::interface::ChannelState> rtc_api_channel_state_;
+    std::shared_ptr<rtc_api::interface::ChannelState> rtc_api_channel_state_;
     ChannelState state_;
     std::atomic<bool> is_disposed_;
 

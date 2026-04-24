@@ -133,6 +133,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_enabled</b> = true
 <tr class="memitem:a07102ac127cd130145246cffa52d9e21" id="r_a07102ac127cd130145246cffa52d9e21"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_publication_options.html#a07102ac127cd130145246cffa52d9e21">max_subscribers</a> = 10</td></tr>
 <tr class="memdesc:a07102ac127cd130145246cffa52d9e21"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>Subscriber</code>の最大人数  <br /></td></tr>
 <tr class="separator:a07102ac127cd130145246cffa52d9e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a696bc4a1bd4528cf2b4d8ccb99870187" id="r_a696bc4a1bd4528cf2b4d8ccb99870187"><td class="memItemLeft" align="right" valign="top">model::PublicationType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_publication_options.html#a696bc4a1bd4528cf2b4d8ccb99870187">type</a> = model::PublicationType::kP2P</td></tr>
+<tr class="memdesc:a696bc4a1bd4528cf2b4d8ccb99870187"><td class="mdescLeft">&#160;</td><td class="mdescRight">PublicationのType  <br /></td></tr>
+<tr class="separator:a696bc4a1bd4528cf2b4d8ccb99870187"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p><code>Publish</code>時の設定 </p>
@@ -150,7 +153,24 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_enabled</b> = true
 </div><div class="memdoc">
 
 <p><code>Subscriber</code>の最大人数 </p>
-<p>この設定はSFU Roomでのみ有効です。 最大値は99です。 </p>
+<p>この設定はtypeがkSFUのPublicationもしくはSFURoomでのみ有効です。 最大値は99です。 </p>
+
+</div>
+</div>
+<a id="a696bc4a1bd4528cf2b4d8ccb99870187" name="a696bc4a1bd4528cf2b4d8ccb99870187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a696bc4a1bd4528cf2b4d8ccb99870187">&#9670;&#160;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">model::PublicationType skyway::room::interface::LocalRoomMember::PublicationOptions::type = model::PublicationType::kP2P</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PublicationのType </p>
+<p>通信タイプ。この設定はRoomでのみ有効であり、P2PRoom/SFURoomでは無視されます。 </p>
 
 </div>
 </div>

@@ -14,6 +14,14 @@
 #include "skyway/token/interface/auth_token_manager.hpp"
 
 namespace skyway {
+namespace core {
+namespace channel {
+class ChannelIntegrationTest;
+}  // namespace channel
+}  // namespace core
+}  // namespace skyway
+
+namespace skyway {
 namespace token {
 
 class AuthTokenManager : public interface::AuthTokenManager {
@@ -46,6 +54,9 @@ private:
     std::mutex timer_mtx_;
     std::unique_ptr<std::thread> remind_timer_thread_;
     std::unique_ptr<std::thread> expire_timer_thread_;
+
+public:
+    friend class core::channel::ChannelIntegrationTest;
 };
 
 }  // namespace token

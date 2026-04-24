@@ -4,5 +4,6 @@ var structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_publication_opti
     [ "encodings", "structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_publication_options.html#a06492c21b2cdfa66f4371bbd7dab003c", null ],
     [ "is_enabled", "structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_publication_options.html#aa24a5a1961e3cdab36cd705474a568a1", null ],
     [ "max_subscribers", "structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_publication_options.html#a07102ac127cd130145246cffa52d9e21", null ],
-    [ "metadata", "structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_publication_options.html#a693c12484db476c590787676af071f85", null ]
+    [ "metadata", "structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_publication_options.html#a693c12484db476c590787676af071f85", null ],
+    [ "type", "structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_publication_options.html#a696bc4a1bd4528cf2b4d8ccb99870187", null ]
 ];

@@ -16,6 +16,7 @@ var classskyway_1_1room_1_1_room_publication =
     [ "State", "classskyway_1_1room_1_1_room_publication.html#acfafe7cf447b5ee92d9a72f2d20a3317", null ],
     [ "Stream", "classskyway_1_1room_1_1_room_publication.html#a2d6a9201ce00b080bb013fa2ab73a40f", null ],
     [ "Subscriptions", "classskyway_1_1room_1_1_room_publication.html#ae23765c9081c471f13a018fb9af6c274", null ],
+    [ "Type", "classskyway_1_1room_1_1_room_publication.html#ae6c21a396bae38d542cc095d8c8a2f0c", null ],
     [ "UpdateEncodings", "classskyway_1_1room_1_1_room_publication.html#a805f5c6d92e21b2496dafde98d24d8cb", null ],
     [ "UpdateMetadata", "classskyway_1_1room_1_1_room_publication.html#a4830cf61c71ba76fe4f3004e4663418e", null ]
 ];

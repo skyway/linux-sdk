@@ -23,11 +23,11 @@ public:
     Client(const rpc::RapiOptions& options);
 
     bool Connect() override;
-    std::unique_ptr<interface::ChannelState> CreateChannel(
+    std::shared_ptr<interface::ChannelState> CreateChannel(
         const model::Channel::Init& init) override;
-    std::unique_ptr<interface::ChannelState> FindOrCreateChannel(
+    std::shared_ptr<interface::ChannelState> FindOrCreateChannel(
         const model::Channel::Init& init) override;
-    std::unique_ptr<interface::ChannelState> FindChannel(
+    std::shared_ptr<interface::ChannelState> FindChannel(
         const model::Channel::Query& query) override;
     bool DeleteChannel(const std::string& channel_id) override;
     bool LeaveChannel(const std::string& channel_id, const std::string& member_id) override;
@@ -57,7 +57,7 @@ public:
     bool Unsubscribe(const std::string& channel_id, const std::string& subscription_id) override;
 
 private:
-    std::unique_ptr<interface::EventListenerRepository> event_listener_repository_;
+    std::shared_ptr<interface::EventListenerRepository> event_listener_repository_;
     std::unique_ptr<interface::ApiClient> api_;
 
 public:

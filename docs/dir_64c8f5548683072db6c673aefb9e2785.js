@@ -5,8 +5,11 @@ var dir_64c8f5548683072db6c673aefb9e2785 =
     [ "p2p", "dir_4bd9ffd015eff6bb11f17d4afcd8eb1d.html", "dir_4bd9ffd015eff6bb11f17d4afcd8eb1d" ],
     [ "sfu", "dir_08ea134f4cb4830f8d119b41e9b976c5.html", "dir_08ea134f4cb4830f8d119b41e9b976c5" ],
     [ "config.hpp", "room_2config_8hpp_source.html", null ],
+    [ "local_room_member.hpp", "local__room__member_8hpp_source.html", null ],
     [ "remote_room_member.hpp", "remote__room__member_8hpp_source.html", null ],
+    [ "room.hpp", "room_8hpp_source.html", null ],
     [ "room_domain_cache_manager.hpp", "room__domain__cache__manager_8hpp_source.html", null ],
+    [ "room_domain_factory.hpp", "room__domain__factory_8hpp_source.html", null ],
     [ "room_publication.hpp", "room__publication_8hpp_source.html", null ],
     [ "room_subscription.hpp", "room__subscription_8hpp_source.html", null ]
 ];

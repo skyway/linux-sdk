@@ -5,6 +5,8 @@
 #ifndef SKYWAY_ROOM_ABSTRACT_LOCAL_ROOM_MEMBER_HPP
 #define SKYWAY_ROOM_ABSTRACT_LOCAL_ROOM_MEMBER_HPP
 
+#include <mutex>
+
 #include <skyway/core/interface/local_person.hpp>
 
 #include "skyway/room/abstract/room_member.hpp"

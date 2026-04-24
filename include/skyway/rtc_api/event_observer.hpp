@@ -9,6 +9,7 @@
 #include <mutex>
 #include <set>
 #include <thread>
+#include <atomic>
 
 #include "skyway/rtc_api/interface/api_client.hpp"
 #include "skyway/rtc_api/interface/event_listener_repository.hpp"
@@ -32,11 +33,11 @@ public:
     ///   - api: RAPIクライアント
     EventObserver(const std::optional<uint64_t> version,
                   const std::string& channel_id,
-                  interface::EventListenerRepository* event_listener_repository,
+                  std::weak_ptr<interface::EventListenerRepository> event_listener_repository,
                   interface::ApiClient* api);
     ~EventObserver();
 
-    void RegisterEventListener(Listener* listener);
+    void RegisterEventListener(std::weak_ptr<Listener> listener);
     void Dispose();
 
     // interface::EventListenerRepository::Listener
@@ -53,14 +54,15 @@ private:
 
     std::optional<uint64_t> version_;
     std::string channel_id_;
-    interface::EventListenerRepository* event_listener_repository_;
+    std::weak_ptr<interface::EventListenerRepository> event_listener_repository_;
     interface::ApiClient* api_;
-    Listener* listener_;
+    std::weak_ptr<Listener> listener_;
     std::mutex event_mtx_;
+    std::mutex listener_mtx_;
     std::set<nlohmann::json> queued_events_;
     std::unique_ptr<std::thread> packet_loss_checker_thread_;
-    bool packet_loss_checker_canceled_;
-    bool disposed_;
+    std::atomic<bool> packet_loss_checker_canceled_;
+    std::atomic<bool> disposed_;
 
 public:
     friend class RtcApiEventObserverTest;
