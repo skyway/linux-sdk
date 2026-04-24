@@ -20,9 +20,9 @@ public:
     /// RTC APIサーバへの操作は最初にこのメソッドを呼ぶ必要があります。
     virtual bool Connect() = 0;
     /// @brief Channelを作成します。
-    virtual std::unique_ptr<ChannelState> CreateChannel(const model::Channel::Init& init)       = 0;
-    virtual std::unique_ptr<ChannelState> FindChannel(const model::Channel::Query& query)       = 0;
-    virtual std::unique_ptr<ChannelState> FindOrCreateChannel(const model::Channel::Init& init) = 0;
+    virtual std::shared_ptr<ChannelState> CreateChannel(const model::Channel::Init& init)       = 0;
+    virtual std::shared_ptr<ChannelState> FindChannel(const model::Channel::Query& query)       = 0;
+    virtual std::shared_ptr<ChannelState> FindOrCreateChannel(const model::Channel::Init& init) = 0;
     virtual bool DeleteChannel(const std::string& channel_id)                                   = 0;
     virtual bool LeaveChannel(const std::string& channel_id, const std::string& member_id)      = 0;
     virtual bool UpdateChannelMetadata(const std::string& channel_id,

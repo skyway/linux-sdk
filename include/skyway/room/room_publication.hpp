@@ -5,6 +5,8 @@
 #ifndef SKYWAY_ROOM_ROOM_PUBLICATION_HPP
 #define SKYWAY_ROOM_ROOM_PUBLICATION_HPP
 
+#include <mutex>
+
 #include <skyway/core/interface/publication.hpp>
 
 #include "skyway/room/interface/room_domain_factory.hpp"
@@ -21,6 +23,7 @@ public:
                     interface::RoomDomainFactory* factory);
     ~RoomPublication();
     std::string Id() override;
+    model::PublicationType Type() override;
     std::shared_ptr<interface::RoomMember> Publisher() override;
     std::vector<std::shared_ptr<interface::RoomSubscription>> Subscriptions() override;
     model::ContentType ContentType() override;

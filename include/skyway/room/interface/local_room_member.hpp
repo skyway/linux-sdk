@@ -6,6 +6,7 @@
 #define SKYWAY_ROOM_INTERFACE_LOCAL_ROOM_MEMBER_HPP
 
 #include <skyway/core/interface/local_person.hpp>
+#include <skyway/model/domain.hpp>
 
 #include "skyway/room/interface/room_member.hpp"
 
@@ -48,9 +49,12 @@ public:
         /// @brief `Publish`時の公開状態
         bool is_enabled = true;
         /// @brief `Subscriber`の最大人数
-        /// @details この設定はSFU Roomでのみ有効です。
+        /// @details この設定はtypeがkSFUのPublicationもしくはSFURoomでのみ有効です。
         /// 最大値は99です。
         int max_subscribers = 10;
+        /// @brief PublicationのType
+        /// @details 通信タイプ。この設定はRoomでのみ有効であり、P2PRoom/SFURoomでは無視されます。
+        model::PublicationType type = model::PublicationType::kP2P;
         /// @cond INTERNAL_SECTION
         core::interface::LocalPerson::PublicationOptions ToCore() {
             core::interface::LocalPerson::PublicationOptions core_opt;
@@ -58,6 +62,7 @@ public:
             core_opt.codec_capabilities = codec_capabilities;
             core_opt.encodings          = encodings;
             core_opt.is_enabled         = is_enabled;
+            core_opt.type               = type;
             return core_opt;
         }
         /// @endcond

@@ -5,6 +5,8 @@
 #ifndef SKYWAY_MEDIA_V4L2_VIDEO_RENDERER_HPP_
 #define SKYWAY_MEDIA_V4L2_VIDEO_RENDERER_HPP_
 
+#include <string>
+
 #include "skyway/media/i420_video_renderer.hpp"
 
 namespace skyway {
@@ -31,8 +33,12 @@ public:
     void OnFrame(const webrtc::VideoFrame& frame) override;
 
 private:
+    void ResetOutputState();
+
     const std::string video_out_path_;
-    int v4l2_file_descriptor_ = -1;
+    int v4l2_file_descriptor_    = -1;
+    int configured_frame_width_  = 0;
+    int configured_frame_height_ = 0;
 };
 
 }  // namespace media

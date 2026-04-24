@@ -6,6 +6,8 @@
 #define SKYWAY_ROOM_ABSTRACT_ROOM_HPP
 
 #include <memory>
+#include <mutex>
+
 #include "skyway/room/interface/room.hpp"
 #include "skyway/room/interface/room_domain_cache_manager.hpp"
 #include "skyway/room/interface/room_domain_factory.hpp"
@@ -72,6 +74,8 @@ private:
     const std::shared_ptr<interface::RoomDomainCacheManager<interface::RemoteRoomMember>>
         remote_room_member_cache_manager_;
 };
+
+bool EnsureSfuBotExists(std::shared_ptr<core::interface::Channel> channel);
 
 }  // namespace abstract
 }  // namespace room

@@ -14,7 +14,7 @@ namespace skyway {
 namespace room {
 namespace interface {
 
-enum class RoomType { kP2P, kSFU };
+enum class RoomType { kDefault, kP2P, kSFU };
 
 /// @brief Roomの`Create`/`FindOrCreate`で扱うオプション
 struct RoomInitOptions {

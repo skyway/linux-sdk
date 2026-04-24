@@ -62,6 +62,7 @@ private:
     void Reconnect();
 
     std::weak_ptr<token::interface::AuthTokenManager> auth_;
+    std::mutex listener_mtx_;
     RpcInterface::Listener* listener_;
     std::atomic<State> state_;
     std::shared_ptr<WebSocketClientInterface> ws_;

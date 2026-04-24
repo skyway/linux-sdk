@@ -10,7 +10,7 @@
 #include <skyway/media/device_manager.hpp>
 #include <skyway/media/stream_factory.hpp>
 #include <skyway/media/v4l2_video_renderer.hpp>
-#include <skyway/room/p2p/p2p_room.hpp>
+#include <skyway/room/room.hpp>
 
 // Roomの操作を行うクラスです。
 class ExampleRoom : public skyway::room::interface::Room::EventListener,
@@ -21,7 +21,7 @@ public:
     // SkyWayの利用を開始します。
     bool Setup(const std::string& app_id, const std::string& secret_key);
 
-    // P2PRoomを検索/作成し、入室します。
+    // Roomを検索/作成し、入室します。
     bool JoinRoom(const std::string& room_name);
 
     // Video/Audio/DataをPublishします。
@@ -30,10 +30,10 @@ public:
     // 指定のPublicationをSubscribeします。
     bool Subscribe(std::shared_ptr<skyway::room::interface::RoomPublication> publication);
 
-    // P2PRoomに存在するPublication全てに対してSubscribeを試みます。
+    // Roomに存在するPublication全てに対してSubscribeを試みます。
     void SubscribeAll();
 
-    // P2PRoomから退出します。
+    // Roomから退出します。
     bool LeaveRoom();
 
     // SkyWayの利用を終了します。
@@ -51,8 +51,8 @@ private:
     // 指定のPublicationをSubscribeしているかチェックします。
     bool IsSubscribed(std::shared_ptr<skyway::room::interface::RoomPublication> publication);
 
-    std::shared_ptr<skyway::room::p2p::P2PRoom> p2proom_;
-    std::shared_ptr<skyway::room::p2p::LocalP2PRoomMember> room_member_;
+    std::shared_ptr<skyway::room::Room> room_;
+    std::shared_ptr<skyway::room::LocalRoomMember> room_member_;
     std::unique_ptr<skyway::media::V4l2VideoRenderer> renderer_;
     std::shared_ptr<skyway::core::stream::local::LocalDataStream> data_stream_;
     std::string renderer_device_name_;

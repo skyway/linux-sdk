@@ -16,10 +16,13 @@
 namespace skyway {
 namespace rtc_api {
 
-class ChannelState : public interface::ChannelState, public EventObserver::Listener {
+class ChannelState : public interface::ChannelState, public EventObserver::Listener, public std::enable_shared_from_this<ChannelState> {
 public:
-    ChannelState(const model::Channel& channel, const std::unique_ptr<EventObserver> observer);
     ~ChannelState();
+    ChannelState(const model::Channel& channel, std::shared_ptr<EventObserver> observer);
+
+    static std::shared_ptr<ChannelState> Create(const model::Channel& channel,
+                                                std::shared_ptr<EventObserver> observer);
 
     std::string Id() override;
     std::optional<std::string> Name() override;
@@ -28,16 +31,17 @@ public:
     std::vector<model::Publication> Publications() override;
     std::vector<model::Subscription> Subscriptions() override;
     uint64_t Version() override;
-    void RegisterEventListener(EventListener* listener) override;
+    void RegisterEventListener(std::weak_ptr<EventListener> listener) override;
     void UnregisterEventListener() override;
     void Dispose() override;
 
 private:
+
     model::Channel channel_;
     std::mutex channel_mtx_;
     std::mutex event_mtx_;
-    std::unique_ptr<EventObserver> observer_;
-    EventListener* listener_ = nullptr;
+    std::shared_ptr<EventObserver> observer_;
+    std::weak_ptr<EventListener> listener_;
     std::mutex listener_mtx_;
 
     // Events

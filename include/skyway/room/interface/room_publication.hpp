@@ -6,6 +6,7 @@
 #define SKYWAY_ROOM_INTERFACE_ROOM_PUBLICATION_HPP
 
 #include <skyway/core/interface/publication.hpp>
+#include <skyway/model/domain.hpp>
 
 #include "skyway/room/interface/room_member.hpp"
 #include "skyway/room/interface/room_subscription.hpp"
@@ -56,6 +57,8 @@ public:
     virtual ~RoomPublication() = default;
     /// @brief Idを取得します。
     virtual std::string Id() = 0;
+    /// @brief PublicationのTypeを取得します。
+    virtual model::PublicationType Type() = 0;
     /// @brief このPublicationを公開しているMemberを取得します。
     virtual std::shared_ptr<RoomMember> Publisher() = 0;
     /// @brief このPublicationを購読しているSubsciptionの一覧を取得します。

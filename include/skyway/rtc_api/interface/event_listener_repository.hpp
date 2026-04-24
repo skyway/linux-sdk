@@ -5,6 +5,8 @@
 #ifndef SKYWAY_RTC_API_INTERFACE_EVENT_LISTENER_REPOSITORY_HPP_
 #define SKYWAY_RTC_API_INTERFACE_EVENT_LISTENER_REPOSITORY_HPP_
 
+#include <memory>
+
 #include "skyway/rtc_api/interface/api_client.hpp"
 #include "skyway/rtc_api/interface/rpc.hpp"
 
@@ -22,10 +24,11 @@ public:
     };
     virtual ~EventListenerRepository() = default;
 
-    virtual void AddListener(const std::string& channel_id, Listener* listener) = 0;
-    virtual void RemoveListener(Listener* listener)                             = 0;
-    virtual void StartQueuingEvents()                                           = 0;
-    virtual void ResolveQueuingEvents()                                         = 0;
+    virtual void AddListener(const std::string& channel_id,
+                             std::weak_ptr<Listener> listener) = 0;
+    virtual void RemoveListener(const std::string& channel_id) = 0;
+    virtual void StartQueuingEvents()                          = 0;
+    virtual void ResolveQueuingEvents()                        = 0;
 };
 
 }  // namespace interface

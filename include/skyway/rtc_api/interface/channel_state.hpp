@@ -39,7 +39,7 @@ public:
     /// @brief イベントリスナを登録します。
     /// @details 登録できるリスナは1つであることに注意してください。
     /// @param listener イベントリスナ
-    virtual void RegisterEventListener(EventListener* listener) = 0;
+    virtual void RegisterEventListener(std::weak_ptr<EventListener> listener) = 0;
     virtual void UnregisterEventListener()                      = 0;
 
     virtual void Dispose() = 0;
