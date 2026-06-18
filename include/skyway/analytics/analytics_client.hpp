@@ -5,6 +5,17 @@
 #ifndef SKYWAY_ANALYTICS_ANALYTICS_CLIENT_HPP_
 #define SKYWAY_ANALYTICS_ANALYTICS_CLIENT_HPP_
 
+#include <atomic>
+#include <chrono>
+#include <condition_variable>
+#include <future>
+#include <memory>
+#include <mutex>
+#include <string>
+#include <thread>
+#include <unordered_map>
+#include <vector>
+
 #include "skyway/analytics/interface/analytics_client.hpp"
 #include "skyway/analytics/interface/socket.hpp"
 #include "skyway/global/worker.hpp"
@@ -61,6 +72,7 @@ private:
     // interface::AnalyticsClient
     std::future<bool> SendClientEventAsync(const ClientEvent& event) override;
 
+    void StartSubscriptionStatsReportThread();
     void StopSubscriptionStatsReportThread();
     static unsigned int RetrieveVersion(std::unordered_map<VersionKey, unsigned int>& versions,
                                         std::mutex& mutex,
@@ -72,16 +84,23 @@ private:
     std::weak_ptr<token::interface::AuthTokenManager> auth_;
 
     std::weak_ptr<Delegator> delegator_;
+    std::mutex delegator_mutex_;
+
     bool disposed_;
     std::mutex disposed_mutex_;
 
     std::thread connection_failed_thread_;
+    std::mutex connection_failed_thread_mutex_;
 
     std::thread subscription_stats_report_thread_;
     std::mutex subscription_stats_report_thread_mutex_;
     std::atomic<bool> should_stop_subscription_stats_report_;
     std::condition_variable subscription_stats_report_cv_;
+
+    bool has_subscription_stats_report_config_                   = false;
+    std::chrono::seconds subscription_stats_report_interval_sec_ = std::chrono::seconds(0);
     std::vector<OpenPayload::StatsRequest::Type> subscription_stats_request_types_;
+
     std::unordered_map<SubscriptionId, SubscriptionStats> previous_subscription_stats_;
 
     std::unordered_map<PublicationId, unsigned int> encodings_versions_;
