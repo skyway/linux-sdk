@@ -16,20 +16,16 @@ namespace local {
 
 using LocalMediaStream = interface::LocalMediaStream;
 
-/// @brief LocalPersonで扱うVideoStream
 class LocalVideoStream : public LocalMediaStream {
 public:
     LocalVideoStream(rtc::scoped_refptr<webrtc::VideoTrackInterface> track);
     rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> Track() const override;
 
-    /// @cond INTERNAL_SECTION
-    /// @brief Videoの再生を開始します。
     bool Enable() override;
-    /// @brief Videoの再生を停止します。
+
     bool Disable() override;
-    /// @brief ContentHintを設定します。
+
     void SetContentHint(webrtc::VideoTrackInterface::ContentHint content_hint);
-    /// @endcond
 
 private:
     rtc::scoped_refptr<webrtc::VideoTrackInterface> track_;
@@ -40,4 +36,4 @@ private:
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_STREAM_LOCAL_VIDEO_STREAM_HPP_ */
+#endif

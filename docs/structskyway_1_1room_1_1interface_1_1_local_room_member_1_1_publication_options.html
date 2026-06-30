@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('structskyway_1_1room_1_1interface_1_1_
 <p><code>Publish</code>時の設定  
  <a href="structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_publication_options.html#details">[詳解]</a></p>
 
-<p><code>#include &lt;<a class="el" href="interface_2local__room__member_8hpp_source.html">local_room_member.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="interface_2local__room__member_8hpp_source.html">skyway/room/interface/local_room_member.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 公開変数類</h2></td></tr>
@@ -118,14 +118,14 @@ $(document).ready(function(){initNavTree('structskyway_1_1room_1_1interface_1_1_
 std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>metadata</b></td></tr>
 <tr class="memdesc:a693c12484db476c590787676af071f85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadata <br /></td></tr>
 <tr class="separator:a693c12484db476c590787676af071f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eb428227fa0cbaf875342f18410c8d9" id="r_a0eb428227fa0cbaf875342f18410c8d9"><td class="memItemLeft" align="right" valign="top"><a id="a0eb428227fa0cbaf875342f18410c8d9" name="a0eb428227fa0cbaf875342f18410c8d9"></a>
-std::vector&lt; <a class="el" href="structskyway_1_1model_1_1_codec.html">model::Codec</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>codec_capabilities</b></td></tr>
-<tr class="memdesc:a0eb428227fa0cbaf875342f18410c8d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">コーデック一覧 <br /></td></tr>
-<tr class="separator:a0eb428227fa0cbaf875342f18410c8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06492c21b2cdfa66f4371bbd7dab003c" id="r_a06492c21b2cdfa66f4371bbd7dab003c"><td class="memItemLeft" align="right" valign="top"><a id="a06492c21b2cdfa66f4371bbd7dab003c" name="a06492c21b2cdfa66f4371bbd7dab003c"></a>
-std::vector&lt; <a class="el" href="structskyway_1_1model_1_1_encoding.html">model::Encoding</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>encodings</b></td></tr>
-<tr class="memdesc:a06492c21b2cdfa66f4371bbd7dab003c"><td class="mdescLeft">&#160;</td><td class="mdescRight">エンコーディング一覧 <br /></td></tr>
-<tr class="separator:a06492c21b2cdfa66f4371bbd7dab003c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d593c5bee4f7fed1299fe80ff01ca5" id="r_ab2d593c5bee4f7fed1299fe80ff01ca5"><td class="memItemLeft" align="right" valign="top"><a id="ab2d593c5bee4f7fed1299fe80ff01ca5" name="ab2d593c5bee4f7fed1299fe80ff01ca5"></a>
+std::vector&lt; <a class="el" href="structskyway_1_1room_1_1_codec.html">Codec</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>codec_capabilities</b></td></tr>
+<tr class="memdesc:ab2d593c5bee4f7fed1299fe80ff01ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">コーデック一覧 <br /></td></tr>
+<tr class="separator:ab2d593c5bee4f7fed1299fe80ff01ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26d3009cf48a850fea1da97b3782337d" id="r_a26d3009cf48a850fea1da97b3782337d"><td class="memItemLeft" align="right" valign="top"><a id="a26d3009cf48a850fea1da97b3782337d" name="a26d3009cf48a850fea1da97b3782337d"></a>
+std::vector&lt; <a class="el" href="structskyway_1_1room_1_1_encoding.html">Encoding</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>encodings</b></td></tr>
+<tr class="memdesc:a26d3009cf48a850fea1da97b3782337d"><td class="mdescLeft">&#160;</td><td class="mdescRight">エンコーディング一覧 <br /></td></tr>
+<tr class="separator:a26d3009cf48a850fea1da97b3782337d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa24a5a1961e3cdab36cd705474a568a1" id="r_aa24a5a1961e3cdab36cd705474a568a1"><td class="memItemLeft" align="right" valign="top"><a id="aa24a5a1961e3cdab36cd705474a568a1" name="aa24a5a1961e3cdab36cd705474a568a1"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_enabled</b> = true</td></tr>
 <tr class="memdesc:aa24a5a1961e3cdab36cd705474a568a1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>Publish</code>時の公開状態 <br /></td></tr>
@@ -133,9 +133,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_enabled</b> = true
 <tr class="memitem:a07102ac127cd130145246cffa52d9e21" id="r_a07102ac127cd130145246cffa52d9e21"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_publication_options.html#a07102ac127cd130145246cffa52d9e21">max_subscribers</a> = 10</td></tr>
 <tr class="memdesc:a07102ac127cd130145246cffa52d9e21"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>Subscriber</code>の最大人数  <br /></td></tr>
 <tr class="separator:a07102ac127cd130145246cffa52d9e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a696bc4a1bd4528cf2b4d8ccb99870187" id="r_a696bc4a1bd4528cf2b4d8ccb99870187"><td class="memItemLeft" align="right" valign="top">model::PublicationType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_publication_options.html#a696bc4a1bd4528cf2b4d8ccb99870187">type</a> = model::PublicationType::kP2P</td></tr>
-<tr class="memdesc:a696bc4a1bd4528cf2b4d8ccb99870187"><td class="mdescLeft">&#160;</td><td class="mdescRight">PublicationのType  <br /></td></tr>
-<tr class="separator:a696bc4a1bd4528cf2b4d8ccb99870187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7db76494cb3ffd4e01948c721e1410e" id="r_ae7db76494cb3ffd4e01948c721e1410e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="domain_8hpp.html#a2dc8b11ad3097551aa19a10226e1a530">domain::PublicationType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_publication_options.html#ae7db76494cb3ffd4e01948c721e1410e">type</a> = domain::PublicationType::kP2P</td></tr>
+<tr class="memdesc:ae7db76494cb3ffd4e01948c721e1410e"><td class="mdescLeft">&#160;</td><td class="mdescRight">PublicationのType  <br /></td></tr>
+<tr class="separator:ae7db76494cb3ffd4e01948c721e1410e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p><code>Publish</code>時の設定 </p>
@@ -157,14 +157,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_enabled</b> = true
 
 </div>
 </div>
-<a id="a696bc4a1bd4528cf2b4d8ccb99870187" name="a696bc4a1bd4528cf2b4d8ccb99870187"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a696bc4a1bd4528cf2b4d8ccb99870187">&#9670;&#160;</a></span>type</h2>
+<a id="ae7db76494cb3ffd4e01948c721e1410e" name="ae7db76494cb3ffd4e01948c721e1410e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7db76494cb3ffd4e01948c721e1410e">&#9670;&#160;</a></span>type</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">model::PublicationType skyway::room::interface::LocalRoomMember::PublicationOptions::type = model::PublicationType::kP2P</td>
+          <td class="memname"><a class="el" href="domain_8hpp.html#a2dc8b11ad3097551aa19a10226e1a530">domain::PublicationType</a> skyway::room::interface::LocalRoomMember::PublicationOptions::type = domain::PublicationType::kP2P</td>
         </tr>
       </table>
 </div><div class="memdoc">

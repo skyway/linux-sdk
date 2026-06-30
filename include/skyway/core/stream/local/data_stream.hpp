@@ -6,7 +6,10 @@
 #define SKYWAY_CORE_STREAM_LOCAL_DATA_STREAM_HPP_
 
 #include <atomic>
+#include <memory>
 #include <mutex>
+#include <optional>
+#include <string>
 
 #include "skyway/core/interface/local_stream.hpp"
 
@@ -17,11 +20,21 @@ namespace local {
 
 using LocalStream = interface::LocalStream;
 
-/// @brief LocalPersonで扱うDataStream
+struct DataStreamSubscriber {
+    std::string id;
+    std::optional<std::string> name;
+};
+
 class LocalDataStream : public LocalStream {
 public:
     using PublicationId = std::string;
-    /// @cond INTERNAL_SECTION
+    class Listener {
+    public:
+        virtual ~Listener() = default;
+        virtual void OnWritable(const DataStreamSubscriber& subscriber) {}
+        virtual void OnUnwritable(const DataStreamSubscriber& subscriber) {}
+    };
+
     struct SendingData {
         bool is_binary;
         std::vector<uint8_t> data;
@@ -31,32 +44,38 @@ public:
         virtual bool OnWriteData(const SendingData& buffer,
                                  const PublicationId& publication_id) = 0;
     };
-    /// @endcond
+
     LocalDataStream();
-    /// @cond INTERNAL_SECTION
+    ~LocalDataStream();
+    void AddListener(std::shared_ptr<Listener> listener);
+    void RemoveListener();
+
+    void SetIsWritable(bool is_writable,
+                       const DataStreamSubscriber& subscriber,
+                       const std::string& publication_id);
     void AddInternalListener(const std::string& remote_member_id,
                              const PublicationId& publication_id,
                              InternalListener* listener);
     void RemoveInternalListener(const std::string& remote_member_id,
                                 const PublicationId& publication_id);
-    /// @endcond
-    /// @brief 文字列を送信します。
+
     bool Write(const std::string& data) const;
-    /// @brief バイト列を送信します。
+
     bool Write(const uint8_t* data, size_t length) const;
 
-    /// @cond INTERNAL_SECTION
-    /// @brief Dataの送信を開始します。
     bool Enable() override;
-    /// @brief Dataの送信を停止します。
+
     bool Disable() override;
-    /// @endcond
 
 private:
     std::unordered_map<std::string, std::unordered_map<PublicationId, InternalListener*>>
-        listeners_;
+        internal_listeners_;
+    mutable std::mutex internal_listeners_mtx_;
+    std::atomic<bool> is_enabled_ = true;
+    std::shared_ptr<Listener> listener_;
     mutable std::mutex listener_mtx_;
-    std::atomic<bool> is_enabled_;
+    std::unordered_map<std::string, bool> is_writable_states_;
+    mutable std::mutex is_writable_states_mtx_;
 };
 
 }  // namespace local
@@ -64,4 +83,4 @@ private:
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_STREAM_LOCAL_DATA_STREAM_HPP_ */
+#endif

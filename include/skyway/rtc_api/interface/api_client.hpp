@@ -13,7 +13,6 @@ namespace skyway {
 namespace rtc_api {
 namespace interface {
 
-/// JSON-RPCモジュール
 class ApiClient {
 public:
     virtual ~ApiClient()   = default;
@@ -64,4 +63,4 @@ public:
 }  // namespace rtc_api
 }  // namespace skyway
 
-#endif /* SKYWAY_RTC_API_INTERFACE_API_CLIENT_HPP_ */
+#endif

@@ -5,10 +5,16 @@
 #ifndef SKYWAY_GLOBAL_REMOTE_LOGGER_HPP
 #define SKYWAY_GLOBAL_REMOTE_LOGGER_HPP
 
+#include <atomic>
+#include <condition_variable>
+#include <cstddef>
 #include <future>
+#include <mutex>
+#include <string>
+#include <thread>
+#include <vector>
 
 #include "skyway/analytics/client_event.hpp"
-#include "skyway/global/interface/logger.hpp"
 #include "skyway/global/interface/logger_observer.hpp"
 
 namespace skyway {
@@ -54,4 +60,4 @@ private:
 }  // namespace global
 }  // namespace skyway
 
-#endif  // SKYWAY_GLOBAL_REMOTE_LOGGER_HPP
+#endif

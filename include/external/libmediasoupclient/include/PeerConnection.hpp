@@ -6,6 +6,11 @@
 #include <future>                          // std::promise, std::future
 #include <memory>                          // std::unique_ptr
 
+namespace rtc
+{
+	class Thread;
+}
+
 namespace mediasoupclient
 {
 	class PeerConnection
@@ -146,6 +151,7 @@ namespace mediasoupclient
 		~PeerConnection() = default;
 
 		void Close();
+		rtc::Thread* GetSignalingThread() const;
 		webrtc::PeerConnectionInterface::RTCConfiguration GetConfiguration() const;
 		bool SetConfiguration(const webrtc::PeerConnectionInterface::RTCConfiguration& config);
 		std::string CreateOffer(const webrtc::PeerConnectionInterface::RTCOfferAnswerOptions& options);

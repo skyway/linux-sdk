@@ -6,15 +6,14 @@
 #define SKYWAY_RTC_API_INTERFACE_EVENT_LISTENER_REPOSITORY_HPP_
 
 #include <memory>
+#include <string>
 
-#include "skyway/rtc_api/interface/api_client.hpp"
 #include "skyway/rtc_api/interface/rpc.hpp"
 
 namespace skyway {
 namespace rtc_api {
 namespace interface {
 
-/// イベントリスナーを管理するリポジトリ
 class EventListenerRepository : public Rpc::Listener {
 public:
     class Listener {
@@ -24,15 +23,14 @@ public:
     };
     virtual ~EventListenerRepository() = default;
 
-    virtual void AddListener(const std::string& channel_id,
-                             std::weak_ptr<Listener> listener) = 0;
-    virtual void RemoveListener(const std::string& channel_id) = 0;
-    virtual void StartQueuingEvents()                          = 0;
-    virtual void ResolveQueuingEvents()                        = 0;
+    virtual void AddListener(const std::string& channel_id, std::weak_ptr<Listener> listener) = 0;
+    virtual void RemoveListener(const std::string& channel_id)                                = 0;
+    virtual void StartQueuingEvents()                                                         = 0;
+    virtual void ResolveQueuingEvents()                                                       = 0;
 };
 
 }  // namespace interface
 }  // namespace rtc_api
 }  // namespace skyway
 
-#endif /* SKYWAY_RTC_API_INTERFACE_EVENT_LISTENER_REPOSITORY_HPP_ */
+#endif

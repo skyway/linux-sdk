@@ -36,11 +36,8 @@ public:
     virtual std::vector<model::Subscription> Subscriptions() = 0;
     virtual uint64_t Version()                               = 0;
 
-    /// @brief イベントリスナを登録します。
-    /// @details 登録できるリスナは1つであることに注意してください。
-    /// @param listener イベントリスナ
     virtual void RegisterEventListener(std::weak_ptr<EventListener> listener) = 0;
-    virtual void UnregisterEventListener()                      = 0;
+    virtual void UnregisterEventListener()                                    = 0;
 
     virtual void Dispose() = 0;
 };
@@ -49,4 +46,4 @@ public:
 }  // namespace rtc_api
 }  // namespace skyway
 
-#endif /* SKYWAY_RTC_API_INTERFACE_CHANNEL_STATE_HPP_ */
+#endif

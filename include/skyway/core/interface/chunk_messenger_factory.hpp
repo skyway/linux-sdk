@@ -24,4 +24,4 @@ public:
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_INTERFACE_CHUNK_MESSENGER_FACTORY_HPP_ */
+#endif

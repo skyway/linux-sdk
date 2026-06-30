@@ -29,7 +29,6 @@ public:
 
     bool Connect(const std::string& transport_id, const nlohmann::json& dtls_parameters) override;
 
-    // For Sender
     std::optional<dto::StartForwardingResponse> StartForwarding(
         const std::string& bot_id,
         const std::shared_ptr<core::interface::Publication> publication,
@@ -45,7 +44,6 @@ public:
         const std::string& transport_id,
         const nlohmann::json& producer_options) override;
 
-    // For Receiver
     std::optional<dto::GetCapabilitiesResponse> GetCapabilities(
         const std::string& bot_id,
         const std::string& publication_id,
@@ -83,4 +81,4 @@ private:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif /* SKYWAY_PLUGIN_SFU_BOT_PLUGIN_SFU_API_CLIENT_HPP_ */
+#endif

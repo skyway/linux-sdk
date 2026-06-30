@@ -5,16 +5,21 @@
 #ifndef SKYWAY_ROOM_INTERFACE_ROOM_HPP
 #define SKYWAY_ROOM_INTERFACE_ROOM_HPP
 
+#include <functional>
+
 #include <skyway/core/interface/channel.hpp>
 
+#include "skyway/room/interface/local_room_member.hpp"
+#include "skyway/room/interface/remote_room_member.hpp"
 #include "skyway/room/interface/room_domain_cache_manager.hpp"
 #include "skyway/room/interface/room_domain_factory.hpp"
+#include "skyway/room/interface/room_publication.hpp"
+#include "skyway/room/interface/room_subscription.hpp"
+#include "skyway/room/types.hpp"
 
 namespace skyway {
 namespace room {
 namespace interface {
-
-enum class RoomType { kDefault, kP2P, kSFU };
 
 /// @brief Roomの`Create`/`FindOrCreate`で扱うオプション
 struct RoomInitOptions {
@@ -56,7 +61,7 @@ struct RoomMemberInitOptions {
     std::optional<std::string> metadata;
     /// @brief 生存確認の間隔
     std::optional<int> keepalive_interval_sec;
-    /// @brief 生存確認の間隔を超えてChannelからMemberが削除されるまでの時間
+    /// @brief 生存確認の間隔を超えてRoomからMemberが削除されるまでの時間
     std::optional<int> keepalive_interval_gap_sec;
     /// @cond INTERNAL_SECTION
     model::Member::Init ToCore() {
@@ -139,11 +144,15 @@ public:
         /// @param subscription 対象のRoomSubscription
         virtual void OnPublicationUnsubscribed(std::shared_ptr<RoomSubscription> subscription) {}
 
-        /// @brief RoomSubscriptionがEnableになった後に発生するイベント
+        /// @brief RoomSubscriptionがEnableになった後に発生するイベント (現在は発火しません)
+        /// @details
+        /// RoomSubscriptionのEnable/Disable状態への遷移は現在サポートしていないため、このイベントは発火しません。
         /// @param subscription 対象のRoomSubscription
         virtual void OnSubscriptionEnabled(std::shared_ptr<RoomSubscription> subscription) {}
 
-        /// @brief RoomSubscriptionがDisableになった後に発生するイベント
+        /// @brief RoomSubscriptionがDisableになった後に発生するイベント (現在は発火しません)
+        /// @details
+        /// RoomSubscriptionのEnable/Disable状態への遷移は現在サポートしていないため、このイベントは発火しません。
         /// @param subscription 対象のRoomSubscription
         virtual void OnSubscriptionDisabled(std::shared_ptr<RoomSubscription> subscription) {}
     };
@@ -157,7 +166,7 @@ public:
     /// @brief Metadataを取得します。
     virtual std::optional<std::string> Metadata() = 0;
     /// @brief Stateを取得します。
-    virtual core::interface::ChannelState State() = 0;
+    virtual RoomState State() = 0;
     /// @brief Roomインスタンスに紐づくPublicationの一覧を取得します。
     virtual std::vector<std::shared_ptr<RoomPublication>> Publications() = 0;
     /// @brief Roomインスタンスに紐づくSubscriptionの一覧を取得します。
@@ -186,7 +195,8 @@ public:
     virtual std::shared_ptr<interface::RoomDomainCacheManager<interface::LocalRoomMember>>
     GetLocalRoomMemberCacheManager() = 0;
     virtual std::shared_ptr<interface::RoomDomainCacheManager<interface::RemoteRoomMember>>
-    GetRemoteRoomMemberCacheManager() = 0;
+    GetRemoteRoomMemberCacheManager()                                         = 0;
+    virtual void RunWithRoomEventListenerLock(std::function<void()> function) = 0;
     /// @endcond
 };
 

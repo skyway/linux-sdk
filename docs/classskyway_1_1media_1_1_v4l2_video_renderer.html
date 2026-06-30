@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('classskyway_1_1media_1_1_v4l2_video_re
 <p>映像の描画を行うクラス  
  <a href="classskyway_1_1media_1_1_v4l2_video_renderer.html#details">[詳解]</a></p>
 
-<p><code>#include &lt;<a class="el" href="v4l2__video__renderer_8hpp_source.html">v4l2_video_renderer.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="v4l2__video__renderer_8hpp_source.html">skyway/media/v4l2_video_renderer.hpp</a>&gt;</code></p>
 <div class="dynheader">
 skyway::media::V4l2VideoRenderer の継承関係図</div>
 <div class="dyncontent">
@@ -140,9 +140,9 @@ skyway::media::V4l2VideoRenderer の継承関係図</div>
 <tr class="memitem:aa94fe7ad8219a787c13a5f9e5e5c0857 inherit pub_methods_classskyway_1_1media_1_1_i420_video_renderer" id="r_aa94fe7ad8219a787c13a5f9e5e5c0857"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1media_1_1_i420_video_renderer.html#aa94fe7ad8219a787c13a5f9e5e5c0857">UnregisterListener</a> (<a class="el" href="classskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener.html">interface::I420VideoRenderer::Listener</a> *listener) override</td></tr>
 <tr class="memdesc:aa94fe7ad8219a787c13a5f9e5e5c0857 inherit pub_methods_classskyway_1_1media_1_1_i420_video_renderer"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントリスナーの登録を解除します。  <br /></td></tr>
 <tr class="separator:aa94fe7ad8219a787c13a5f9e5e5c0857 inherit pub_methods_classskyway_1_1media_1_1_i420_video_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8ae4061596602a0bc1dd116f8389649 inherit pub_methods_classskyway_1_1media_1_1_i420_video_renderer" id="r_aa8ae4061596602a0bc1dd116f8389649"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1media_1_1_i420_video_renderer.html#aa8ae4061596602a0bc1dd116f8389649">Render</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1stream_1_1remote_1_1_remote_video_stream.html">core::stream::remote::RemoteVideoStream</a> &gt; stream) override</td></tr>
-<tr class="memdesc:aa8ae4061596602a0bc1dd116f8389649 inherit pub_methods_classskyway_1_1media_1_1_i420_video_renderer"><td class="mdescLeft">&#160;</td><td class="mdescRight">RemoteVideoStreamをRendererに登録します。  <br /></td></tr>
-<tr class="separator:aa8ae4061596602a0bc1dd116f8389649 inherit pub_methods_classskyway_1_1media_1_1_i420_video_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae65660807a6e69393df862e88e0074ad inherit pub_methods_classskyway_1_1media_1_1_i420_video_renderer" id="r_ae65660807a6e69393df862e88e0074ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1media_1_1_i420_video_renderer.html#ae65660807a6e69393df862e88e0074ad">Render</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1stream_1_1interface_1_1remote_1_1_remote_video_stream.html">stream::interface::remote::RemoteVideoStream</a> &gt; stream) override</td></tr>
+<tr class="memdesc:ae65660807a6e69393df862e88e0074ad inherit pub_methods_classskyway_1_1media_1_1_i420_video_renderer"><td class="mdescLeft">&#160;</td><td class="mdescRight">RemoteVideoStreamをRendererに登録します。  <br /></td></tr>
+<tr class="separator:ae65660807a6e69393df862e88e0074ad inherit pub_methods_classskyway_1_1media_1_1_i420_video_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 その他の継承メンバ</h2></td></tr>
@@ -150,6 +150,9 @@ skyway::media::V4l2VideoRenderer の継承関係図</div>
 <tr class="memitem:ac6b4a23cc1e67fce1d1481ecfe2a0d40 inherit pro_methods_classskyway_1_1media_1_1_i420_video_renderer" id="r_ac6b4a23cc1e67fce1d1481ecfe2a0d40"><td class="memItemLeft" align="right" valign="top">
 std::optional&lt; <a class="el" href="structskyway_1_1media_1_1interface_1_1_i420_frame.html">interface::I420Frame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ConvertI420Frame</b> (const webrtc::VideoFrame &amp;frame)</td></tr>
 <tr class="separator:ac6b4a23cc1e67fce1d1481ecfe2a0d40 inherit pro_methods_classskyway_1_1media_1_1_i420_video_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad658a05599a624cc9e3214cddfed63ec inherit pro_methods_classskyway_1_1media_1_1_i420_video_renderer" id="r_ad658a05599a624cc9e3214cddfed63ec"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DetachSink</b> ()</td></tr>
+<tr class="separator:ad658a05599a624cc9e3214cddfed63ec inherit pro_methods_classskyway_1_1media_1_1_i420_video_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>映像の描画を行うクラス </p>

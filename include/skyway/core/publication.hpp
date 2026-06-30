@@ -5,27 +5,26 @@
 #ifndef SKYWAY_CORE_PUBLICATION_HPP_
 #define SKYWAY_CORE_PUBLICATION_HPP_
 
+#include <functional>
+#include <vector>
+
 #include "skyway/core/interface/channel.hpp"
 #include "skyway/core/interface/local_stream.hpp"
 
 namespace skyway {
 namespace core {
 
-/// @brief Publicationの実装クラス
 class Publication : public interface::Publication {
 public:
-    /// @cond INTERNAL_SECTION
     Publication(std::shared_ptr<interface::Channel> channel, const model::Publication& initial_dto);
-    /// @endcond
+
     ~Publication();
 
     void AddEventListener(interface::Publication::EventListener* listener) override;
     void RemoveEventListener(interface::Publication::EventListener* listener) override;
 
-    /// @cond INTERNAL_SECTION
     void AddInternalListener(InternalListener* listener) override;
     void RemoveInternalListener(InternalListener* listener) override;
-    /// @endcond
 
     std::string Id() const override;
     std::shared_ptr<interface::Member> Publisher() const override;
@@ -43,13 +42,13 @@ public:
     bool UpdateMetadata(const std::string& metadata) override;
     bool UpdateEncodings(std::vector<model::Encoding> encodings) override;
     bool ReplaceStream(std::shared_ptr<interface::LocalStream> stream) override;
-    bool Cancel() const override;
     bool Enable() override;
     bool Disable() const override;
 
     std::optional<model::WebRTCStats> GetStats(const std::string& selector) override;
-    /// @cond INTERNAL_SECTION
-    void AddGetStatsCallback(const std::string& remote_member_id, Callback* callback) override;
+
+    void AddGetStatsCallback(const std::string& remote_member_id,
+                             std::weak_ptr<Callback> callback) override;
     void RemoveGetStatsCallback(const std::string& remote_member_id) override;
 
     void SetCodecCapabilities(std::vector<model::Codec> codec_capabilities) override;
@@ -65,9 +64,11 @@ public:
     void OnEnabled() override;
     void OnDisabled() override;
     void OnConnectionStateChanged(const ConnectionState new_state) override;
-    /// @endcond
 
 private:
+    void DispatchPublicationListeners(
+        std::function<void(interface::Publication::EventListener*)> fn);
+
     std::weak_ptr<interface::Channel> channel_;
     model::Publication initial_dto_;
     std::atomic<interface::PublicationState> state_;
@@ -81,13 +82,13 @@ private:
     std::mutex internal_listeners_mtx_;
     std::unordered_set<interface::Publication::EventListener*> listeners_;
     std::unordered_set<interface::Publication::InternalListener*> internal_listeners_;
-    std::atomic<bool> metadata_updated_;
-    bool is_enabling_;
+    std::atomic<bool> metadata_updated_ = false;
+    bool is_enabling_                   = false;
     std::mutex get_stats_callback_mutex_;
-    std::unordered_map<std::string, Callback*> get_stats_callbacks_;
+    std::unordered_map<std::string, std::weak_ptr<Callback>> get_stats_callbacks_;
 };
 
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_PUBLICATION_HPP_ */
+#endif

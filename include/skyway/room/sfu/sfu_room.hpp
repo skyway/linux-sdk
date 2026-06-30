@@ -33,14 +33,20 @@ public:
 /// @brief SFURoomの操作を行うクラス
 class SFURoom : public abstract::Room, public std::enable_shared_from_this<SFURoom> {
 public:
+    /// @cond INTERNAL_SECTION
     SFURoom(std::shared_ptr<core::interface::Channel> channel,
             std::unique_ptr<interface::RoomDomainFactory> factory);
-    interface::RoomType Type() override;
+    /// @endcond
+
+    ~SFURoom() override;
+    RoomType Type() override;
 
     /// @brief SFURoomに存在するPublicationを取得します。
     std::vector<std::shared_ptr<interface::RoomPublication>> Publications() override;
+
     /// @brief SFURoomに存在するSubscriptionを取得します。
     std::vector<std::shared_ptr<interface::RoomSubscription>> Subscriptions() override;
+
     /// @brief SFURoomに存在するMemberを取得します
     std::vector<std::shared_ptr<interface::RoomMember>> Members() override;
 
@@ -50,20 +56,24 @@ public:
         std::unique_ptr<interface::RoomFactory> room_factory = std::make_unique<SFURoomFactory>(),
         std::unique_ptr<interface::RoomDomainFactory> domain_factory =
             std::make_unique<RoomDomainFactory>());
+
     /// @brief SFURoomを作成します。
     static std::shared_ptr<SFURoom> Create();
+
     /// @brief SFURoomの検索をします。
     static std::shared_ptr<SFURoom> Find(
         interface::RoomQuery query,
         std::unique_ptr<interface::RoomFactory> room_factory = std::make_unique<SFURoomFactory>(),
         std::unique_ptr<interface::RoomDomainFactory> domain_factory =
             std::make_unique<RoomDomainFactory>());
+
     /// @brief SFURoomの検索をし、存在しなければ作成します。
     static std::shared_ptr<SFURoom> FindOrCreate(
         interface::RoomInitOptions options,
         std::unique_ptr<interface::RoomFactory> room_factory = std::make_unique<SFURoomFactory>(),
         std::unique_ptr<interface::RoomDomainFactory> domain_factory =
             std::make_unique<RoomDomainFactory>());
+
     /// @brief SFURoomへ参加します。
     std::shared_ptr<LocalSFURoomMember> Join(interface::RoomMemberInitOptions options);
 
@@ -72,6 +82,7 @@ public:
     /// @endcond
 
 protected:
+    /// @cond INTERNAL_SECTION
     // core::interface::Channel::EventListener
     void OnMemberListChanged() override;
     void OnMemberJoined(std::shared_ptr<core::interface::Member> member) override;
@@ -90,6 +101,7 @@ protected:
         std::shared_ptr<core::interface::Subscription> subscription) override;
     void OnPublicationUnsubscribed(
         std::shared_ptr<core::interface::Subscription> subscription) override;
+    /// @endcond
 
 private:
     static std::shared_ptr<SFURoom> CreateShared(

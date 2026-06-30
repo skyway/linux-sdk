@@ -11,7 +11,6 @@ namespace skyway {
 namespace core {
 namespace interface {
 
-/// @brief RemoteMemberで扱うStream
 class RemoteStream : public Stream {
 protected:
     RemoteStream(const std::string& id, model::ContentType content_type);
@@ -21,4 +20,4 @@ protected:
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_INTERFACE_REMOTE_STREAM_HPP_ */
+#endif

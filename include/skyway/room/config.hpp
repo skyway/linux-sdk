@@ -9,7 +9,9 @@ namespace skyway {
 namespace room {
 namespace config {
 
+/// @cond INTERNAL_SECTION
 extern const int kCachedDomainInstanceCleanupThresholdSec;
+/// @endcond
 
 }  // namespace config
 }  // namespace room

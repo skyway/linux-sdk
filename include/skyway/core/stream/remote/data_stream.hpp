@@ -7,6 +7,7 @@
 
 #include <api/data_channel_interface.h>
 
+#include <deque>
 #include <mutex>
 
 #include "skyway/core/interface/remote_stream.hpp"
@@ -18,37 +19,48 @@ namespace remote {
 
 using RemoteStream = interface::RemoteStream;
 
-/// @brief RemoteMemberで扱うDataStream
 class RemoteDataStream : public RemoteStream {
 public:
     using PublicationId = std::string;
-    /// @brief データ受信イベントリスナ
+
     class Listener {
     public:
         virtual void OnData(const std::string& data)                  = 0;
         virtual void OnDataBuffer(const uint8_t* data, size_t length) = 0;
     };
     RemoteDataStream(const std::string& id);
-    /// @brief データ受信イベントリスナを購読します。
-    /// @param listener データ受信イベントリスナ
+    ~RemoteDataStream();
+
     virtual void AddListener(Listener* listener);
 
-    /// @brief データ受信イベントリスナの購読を中止します。
-    /// @param listener データ受信イベントリスナ
     virtual void RemoveListener(Listener* listener);
 
-    /// @cond INTERNAL_SECTION
     void OnDataBuffer(const webrtc::DataBuffer& buffer);
-    /// @brief Dataの受信を開始します。
+
     bool Enable() override;
-    /// @brief Dataの受信を停止します。
+
     bool Disable() override;
-    /// @endcond
 
 private:
+    struct BufferedData {
+        enum class Type { kString, kBuffer };
+        Type type;
+        std::string data;
+        std::vector<uint8_t> buffer;
+
+        BufferedData(const std::string& str);
+        BufferedData(const uint8_t* buf, size_t length);
+    };
+
+    void BufferData(BufferedData&& data);
+
     std::mutex listeners_mutex_;
     std::vector<Listener*> listeners_;
-    std::atomic<bool> is_enabled_;
+    std::atomic<bool> is_enabled_ = true;
+
+    std::mutex buffer_mutex_;
+    std::deque<BufferedData> buffer_;
+    size_t buffer_size_ = 0;
 };
 
 }  // namespace remote
@@ -56,4 +68,4 @@ private:
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_STREAM_REMOTE_DATA_STREAM_HPP_ */
+#endif

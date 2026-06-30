@@ -13,6 +13,7 @@ namespace skyway {
 namespace room {
 namespace sfu {
 
+/// @cond INTERNAL_SECTION
 class RoomDomainFactory : public abstract::RoomDomainFactory {
 public:
     std::shared_ptr<interface::LocalRoomMember> GetOrCreateLocalRoomMember(
@@ -21,6 +22,7 @@ public:
 private:
     std::mutex local_room_member_mtx_;
 };
+/// @endcond
 
 }  // namespace sfu
 }  // namespace room

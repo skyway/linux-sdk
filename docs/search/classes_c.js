@@ -1,13 +1,10 @@
 var searchData=
 [
-  ['scopeexit_0',['ScopeExit',['../classskyway_1_1global_1_1util_1_1_scope_exit.html',1,'skyway::global::util']]],
-  ['sdklog_1',['SdkLog',['../structskyway_1_1global_1_1interface_1_1_logger_observer_1_1_sdk_log.html',1,'skyway::global::interface::LoggerObserver']]],
-  ['sfu_2',['SFU',['../structskyway_1_1_context_1_1_sky_way_options_1_1_s_f_u.html',1,'skyway::Context::SkyWayOptions']]],
-  ['sfuroom_3',['SFURoom',['../classskyway_1_1room_1_1sfu_1_1_s_f_u_room.html',1,'skyway::room::sfu']]],
-  ['signaling_4',['Signaling',['../structskyway_1_1core_1_1_context_options_1_1_signaling.html',1,'skyway::core::ContextOptions']]],
-  ['skywayoptions_5',['SkyWayOptions',['../structskyway_1_1_context_1_1_sky_way_options.html',1,'skyway::Context']]],
-  ['stream_6',['Stream',['../classskyway_1_1core_1_1interface_1_1_stream.html',1,'skyway::core::interface']]],
-  ['streamfactory_7',['StreamFactory',['../classskyway_1_1media_1_1_stream_factory.html',1,'skyway::media']]],
-  ['subscription_8',['subscription',['../classskyway_1_1core_1_1interface_1_1_subscription.html',1,'skyway::core::interface::Subscription'],['../classskyway_1_1core_1_1_subscription.html',1,'skyway::core::Subscription'],['../structskyway_1_1model_1_1_subscription.html',1,'skyway::model::Subscription']]],
-  ['subscriptionoptions_9',['subscriptionoptions',['../structskyway_1_1core_1_1interface_1_1_local_person_1_1_subscription_options.html',1,'skyway::core::interface::LocalPerson::SubscriptionOptions'],['../structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_subscription_options.html',1,'skyway::room::interface::LocalRoomMember::SubscriptionOptions']]]
+  ['v4l2videorenderer_0',['V4l2VideoRenderer',['../classskyway_1_1media_1_1_v4l2_video_renderer.html',1,'skyway::media']]],
+  ['v4l2videorendereroptions_1',['V4l2VideoRendererOptions',['../structskyway_1_1media_1_1_v4l2_video_renderer_options.html',1,'skyway::media']]],
+  ['video_2',['Video',['../structskyway_1_1_context_1_1_sky_way_options_1_1_rtp_1_1_input_1_1_video.html',1,'skyway::Context::SkyWayOptions::Rtp::Input']]],
+  ['videocodec_3',['VideoCodec',['../structskyway_1_1media_1_1codec_1_1_video_codec.html',1,'skyway::media::codec']]],
+  ['videodevice_4',['VideoDevice',['../structskyway_1_1media_1_1_device_manager_1_1_video_device.html',1,'skyway::media::DeviceManager']]],
+  ['videorenderer_5',['VideoRenderer',['../classskyway_1_1media_1_1interface_1_1_video_renderer.html',1,'skyway::media::interface']]],
+  ['vp8_6',['VP8',['../structskyway_1_1media_1_1codec_1_1_v_p8.html',1,'skyway::media::codec']]]
 ];

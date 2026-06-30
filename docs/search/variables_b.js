@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['parameters_0',['parameters',['../structskyway_1_1model_1_1_codec.html#aa14ab85e4a597fe6f9b63e38d0a9c725',1,'skyway::model::Codec']]],
-  ['params_1',['params',['../structskyway_1_1model_1_1_web_r_t_c_stats_report.html#ab85cfbc3258435615f971f4546a48819',1,'skyway::model::WebRTCStatsReport']]],
-  ['policy_2',['policy',['../structskyway_1_1core_1_1_context_options_1_1_rtc_config.html#a10b1441a1ad38039ff94b834e1cf7d67',1,'skyway::core::ContextOptions::RtcConfig']]],
-  ['preferred_5fencoding_5fid_3',['preferred_encoding_id',['../structskyway_1_1core_1_1interface_1_1_local_person_1_1_subscription_options.html#af8faf9d0e8cf1eae7c4dab4bedd31501',1,'skyway::core::interface::LocalPerson::SubscriptionOptions::preferred_encoding_id'],['../structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_subscription_options.html#acd99f4aa014c14b7bfef373755a01374',1,'skyway::room::interface::LocalRoomMember::SubscriptionOptions::preferred_encoding_id']]],
-  ['publication_5fid_4',['publication_id',['../structskyway_1_1model_1_1_subscription.html#ab7e69ac0cc4ffc9ffecb81eaf05902cf',1,'skyway::model::Subscription']]],
-  ['publications_5',['publications',['../structskyway_1_1model_1_1_channel.html#abc65fdfba871f4ca8c23dda3522e79bf',1,'skyway::model::Channel']]],
-  ['publisher_5fid_6',['publisher_id',['../structskyway_1_1model_1_1_publication.html#a2a13a3e089e1f6b1290c64ccba346ed6',1,'skyway::model::Publication']]]
+  ['recv_5frtp_5fipv4_0',['recv_rtp_ipv4',['../structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a4a455351fb34bc9dcdc0700a23e877c4',1,'skyway::media::rtp::interface::RtpCapturerVideoSourceOptions']]],
+  ['recv_5frtp_5fport_1',['recv_rtp_port',['../structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a51fe02658fd9b3c85810f6b588cd6b70',1,'skyway::media::rtp::interface::RtpCapturerVideoSourceOptions']]],
+  ['reports_2',['reports',['../structskyway_1_1room_1_1_web_r_t_c_stats.html#a58c6c5b4ce1a04412d9e0481f1a6035e',1,'skyway::room::WebRTCStats']]],
+  ['rtp_3',['rtp',['../structskyway_1_1_context_1_1_sky_way_options.html#ace37c5935f4c6d4a63f7c0920ef05cfa',1,'skyway::Context::SkyWayOptions']]]
 ];

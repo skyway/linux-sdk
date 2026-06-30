@@ -13,12 +13,10 @@ namespace skyway {
 namespace core {
 namespace interface {
 
-/// @brief LocalPersonで扱うMediaStream
 class LocalMediaStream : public LocalStream {
 public:
     virtual ~LocalMediaStream() = default;
 
-    /// @brief Trackを取得します。
     virtual rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> Track() const = 0;
 
 protected:
@@ -29,4 +27,4 @@ protected:
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_INTERFACE_LOCAL_MEDIA_STREAM_HPP_ */
+#endif

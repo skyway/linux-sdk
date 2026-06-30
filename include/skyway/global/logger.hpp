@@ -11,6 +11,8 @@
 
 #include <skyway/global/interface/logger.hpp>
 
+#include "skyway/domain/domain.hpp"
+
 namespace skyway {
 namespace global {
 
@@ -28,12 +30,15 @@ public:
         /// @details ログに関する処理はこのメソッドをオーバーライドして実装してください。
         /// @param level ログレベルを表すenum
         /// @param text ログの内容
-        virtual void OnLog(Level level, const std::string& text) = 0;
+        virtual void OnLog(domain::LogLevel level, const std::string& text) = 0;
     };
+
+    /// @cond INTERNAL_SECTION
 
     /// @brief 内部向けコンストラクタ
     /// @details 通常、このコンストラクタを呼び出す必要はありません。
-    Logger(Level level = kInfo, bool enable_webrtc_log = false);
+    Logger(domain::LogLevel level = domain::LogLevel::kInfo, bool enable_webrtc_log = false);
+    Logger(Level level, bool enable_webrtc_log = false);
     ~Logger();
 
     /// @brief ログを出力します。
@@ -83,6 +88,8 @@ public:
     /// @details 通常、このメソッドを直接呼び出す必要はありません。
     void OnLogMessage(const std::string& message, rtc::LoggingSeverity severity) override;
 
+    /// @endcond
+
     /// @brief ロガーのリスナーを登録します。
     /// @details SkyWayのログを出力するときに登録されたリスナーのイベントが発火します。
     /// @param listener Listenerクラスのポインタ
@@ -94,6 +101,8 @@ public:
 private:
     void SetLogLevel(Level level);
     Level WebRTCSeverityToLogLevel(rtc::LoggingSeverity severity);
+    static Level ToCoreLevel(domain::LogLevel level);
+    static domain::LogLevel ToLogLevel(Level level);
     bool enable_webrtc_log_ = false;
     Level level_            = kInfo;
     inline static std::mutex listener_mtx_;

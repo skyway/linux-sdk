@@ -13,11 +13,10 @@ namespace skyway {
 namespace rtc_api {
 namespace interface {
 
-/// JSON-RPCモジュール
 class Rpc {
 public:
     using MessageId = std::string;
-    /// イベントリスナ
+
     class Listener {
     public:
         virtual void OnNotified(const rpc::dto::RequestMessage& message) = 0;
@@ -30,8 +29,7 @@ public:
                                                   const nlohmann::json& params,
                                                   const std::string& message_id) = 0;
     virtual void Close()                                                         = 0;
-    // notify and batch are functions of standard JSON-RPC specification but we do not use them now.
-    //    bool notify(const std::string& method, const nlohmann::json& params) const;
+
     virtual bool IsConnected() const                              = 0;
     virtual void AddPendingRequest(const std::string& method,
                                    const nlohmann::json& params,
@@ -42,4 +40,4 @@ public:
 }  // namespace rtc_api
 }  // namespace skyway
 
-#endif /* SKYWAY_RTC_API_INTERFACE_RPC_HPP_ */
+#endif

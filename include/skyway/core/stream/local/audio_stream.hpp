@@ -14,7 +14,6 @@ namespace local {
 
 using LocalMediaStream = interface::LocalMediaStream;
 
-/// @brief LocalPersonで扱うAudioStream
 class LocalAudioStream : public LocalMediaStream {
 public:
     LocalAudioStream(rtc::scoped_refptr<webrtc::AudioTrackInterface> track);
@@ -22,12 +21,9 @@ public:
 
     ~LocalAudioStream() override;
 
-    /// @cond INTERNAL_SECTION
-    /// @brief Audioの再生を開始します。
     bool Enable() override;
-    /// @brief Audioの再生を停止します。
+
     bool Disable() override;
-    /// @endcond
 
 private:
     void Dispose();
@@ -41,4 +37,4 @@ private:
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_STREAM_LOCAL_AUDIO_STREAM_HPP_ */
+#endif

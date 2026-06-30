@@ -13,6 +13,7 @@ namespace skyway {
 namespace room {
 namespace abstract {
 
+/// @cond INTERNAL_SECTION
 class RoomDomainFactory : public interface::RoomDomainFactory {
 public:
     void SetWeakRoom(std::weak_ptr<interface::Room> room) override;
@@ -24,7 +25,8 @@ public:
         std::shared_ptr<plugin::remote_person::RemotePerson> person) override;
 
     std::shared_ptr<interface::RoomPublication> GetOrCreateRoomPublication(
-        std::shared_ptr<core::interface::Publication> core) override;
+        std::shared_ptr<core::interface::Publication> core,
+        std::shared_ptr<media::stream::interface::local::LocalStream> stream = nullptr) override;
 
     std::shared_ptr<interface::RoomSubscription> GetOrCreateRoomSubscription(
         std::shared_ptr<core::interface::Subscription> core) override;
@@ -38,6 +40,7 @@ private:
     std::mutex room_publication_mtx_;
     std::mutex room_subscription_mtx_;
 };
+/// @endcond
 
 }  // namespace abstract
 }  // namespace room

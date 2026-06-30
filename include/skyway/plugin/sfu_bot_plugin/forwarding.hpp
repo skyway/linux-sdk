@@ -12,22 +12,16 @@ namespace skyway {
 namespace plugin {
 namespace sfu_bot {
 
-// Defined as an outer class to avoid name collisions with member variables.
-/// @brief Fowardingの設定
 struct ForwardingConfigure {
-    /// @brief FowardingをSubscribe出来る最大人数
     int max_subscribers = config::kDefaultMaxSubscribers;
 };
 
 enum class ForwardingState { kStarted, kStopped };
 
-/// @brief SFUBotが扱うForwarding
 class Forwarding : public core::interface::Publication::EventListener {
 public:
-    /// @brief イベントリスナ
     class EventListener {
     public:
-        /// @brief Forwardingが停止されたときに発生するイベント
         virtual void OnStopped() {}
     };
 
@@ -36,26 +30,23 @@ public:
                std::shared_ptr<core::interface::Publication> relaying_publication,
                const std::string& identifier_key);
     ~Forwarding();
-    /// @brief イベントを購読します。
-    void AddEventListener(EventListener* listener);
-    /// @brief イベントの購読を中止します。
-    void RemoveEventListener(EventListener* listener);
-    // Do not wrap Stop() in bridge.
-    /// @cond INTERNAL_SECTION
-    void Stop();
-    /// @endcond
 
-    /// @brief 状態を取得します。
+    void AddEventListener(EventListener* listener);
+
+    void RemoveEventListener(EventListener* listener);
+
+    void Stop();
+
     ForwardingState State();
-    /// @brief IDを取得します。
+
     std::string Id();
-    /// @brief ForwardingConfigureを取得します。
+
     ForwardingConfigure Configure() const;
-    /// @brief OriginPublicationを取得します。
+
     std::shared_ptr<core::interface::Publication> OriginPublication() const;
-    /// @brief RelayingPublicationを取得します。
+
     std::shared_ptr<core::interface::Publication> RelayingPublication();
-    /// @brief IdentifierKeyを取得します。
+
     std::string IdentifierKey();
 
 private:
@@ -73,4 +64,4 @@ private:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif /* SKYWAY_PLUGIN_SFU_BOT_PLUGIN_FORWARDING_HPP_ */
+#endif

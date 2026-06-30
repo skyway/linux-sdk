@@ -6,13 +6,17 @@
 #define SKYWAY_ROOM_INTERFACE_LOCAL_ROOM_MEMBER_HPP
 
 #include <skyway/core/interface/local_person.hpp>
-#include <skyway/model/domain.hpp>
+
+#include "skyway/media/stream/interface/local/local_stream.hpp"
 
 #include "skyway/room/interface/room_member.hpp"
 
 namespace skyway {
 namespace room {
 namespace interface {
+
+class RoomPublication;
+class RoomSubscription;
 
 /// @brief LocalRoomMemberの操作を行うインターフェース
 class LocalRoomMember : public virtual RoomMember {
@@ -43,9 +47,9 @@ public:
         /// @brief Metadata
         std::optional<std::string> metadata;
         /// @brief コーデック一覧
-        std::vector<model::Codec> codec_capabilities;
+        std::vector<Codec> codec_capabilities;
         /// @brief エンコーディング一覧
-        std::vector<model::Encoding> encodings;
+        std::vector<Encoding> encodings;
         /// @brief `Publish`時の公開状態
         bool is_enabled = true;
         /// @brief `Subscriber`の最大人数
@@ -54,18 +58,7 @@ public:
         int max_subscribers = 10;
         /// @brief PublicationのType
         /// @details 通信タイプ。この設定はRoomでのみ有効であり、P2PRoom/SFURoomでは無視されます。
-        model::PublicationType type = model::PublicationType::kP2P;
-        /// @cond INTERNAL_SECTION
-        core::interface::LocalPerson::PublicationOptions ToCore() {
-            core::interface::LocalPerson::PublicationOptions core_opt;
-            core_opt.metadata           = metadata;
-            core_opt.codec_capabilities = codec_capabilities;
-            core_opt.encodings          = encodings;
-            core_opt.is_enabled         = is_enabled;
-            core_opt.type               = type;
-            return core_opt;
-        }
-        /// @endcond
+        domain::PublicationType type = domain::PublicationType::kP2P;
     };
 
     /// @brief `Subscribe`時の設定
@@ -73,13 +66,6 @@ public:
         /// @brief `Subscribe`時に選択するエンコーディング設定。
         /// @details `RoomPublication.Options.encodings`から選択する項目のIdを設定してください。
         std::optional<std::string> preferred_encoding_id;
-        /// @cond INTERNAL_SECTION
-        core::interface::LocalPerson::SubscriptionOptions ToCore() {
-            core::interface::LocalPerson::SubscriptionOptions core_opt;
-            core_opt.preferred_encoding_id = preferred_encoding_id;
-            return core_opt;
-        }
-        /// @endcond
     };
 
     virtual ~LocalRoomMember() = default;
@@ -88,8 +74,9 @@ public:
     /// @brief イベントの購読を中止します。
     virtual void RemoveEventListener(EventListener* listener) = 0;
     /// @brief LocalStreamを公開します。
-    virtual std::shared_ptr<RoomPublication> Publish(std::shared_ptr<core::interface::LocalStream>,
-                                                     PublicationOptions options) = 0;
+    virtual std::shared_ptr<RoomPublication> Publish(
+        std::shared_ptr<media::stream::interface::local::LocalStream> stream,
+        PublicationOptions options) = 0;
     /// @brief 公開されているPublicationを購読します。
     virtual std::shared_ptr<RoomSubscription> Subscribe(const std::string& publication_id,
                                                         SubscriptionOptions options) = 0;

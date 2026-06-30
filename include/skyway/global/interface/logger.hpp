@@ -13,124 +13,97 @@
 
 #define __SKW_FILE__ skyway::global::interface::Logger::GetFileName(__FILE__)
 
-#define SKW_TRACE(msg, ...)                                                          \
-    if (skyway::global::interface::Logger::Shared()) {                               \
-        std::string formatted =                                                      \
-            skyway::global::interface::Logger::Shared()->Format(msg, ##__VA_ARGS__); \
-        skyway::global::interface::Logger::Shared()->Notify(                         \
-            skyway::global::interface::Logger::Level::kTrace,                        \
-            formatted,                                                               \
-            __SKW_FILE__,                                                            \
-            __FUNCTION__,                                                            \
-            __LINE__);                                                               \
-        skyway::global::interface::Logger::Shared()->Trace(                          \
-            formatted, __SKW_FILE__, __FUNCTION__, __LINE__);                        \
+#define SKW_TRACE(msg, ...)                                              \
+    if (auto logger = skyway::global::interface::Logger::Shared()) {     \
+        std::string formatted = logger->Format(msg, ##__VA_ARGS__);      \
+        logger->Notify(skyway::global::interface::Logger::Level::kTrace, \
+                       formatted,                                        \
+                       __SKW_FILE__,                                     \
+                       __FUNCTION__,                                     \
+                       __LINE__);                                        \
+        logger->Trace(formatted, __SKW_FILE__, __FUNCTION__, __LINE__);  \
     }
 
-#define SKW_DEBUG(msg, ...)                                                          \
-    if (skyway::global::interface::Logger::Shared()) {                               \
-        std::string formatted =                                                      \
-            skyway::global::interface::Logger::Shared()->Format(msg, ##__VA_ARGS__); \
-        skyway::global::interface::Logger::Shared()->Notify(                         \
-            skyway::global::interface::Logger::Level::kDebug,                        \
-            formatted,                                                               \
-            __SKW_FILE__,                                                            \
-            __FUNCTION__,                                                            \
-            __LINE__);                                                               \
-        skyway::global::interface::Logger::Shared()->Debug(                          \
-            formatted, __SKW_FILE__, __FUNCTION__, __LINE__);                        \
+#define SKW_DEBUG(msg, ...)                                              \
+    if (auto logger = skyway::global::interface::Logger::Shared()) {     \
+        std::string formatted = logger->Format(msg, ##__VA_ARGS__);      \
+        logger->Notify(skyway::global::interface::Logger::Level::kDebug, \
+                       formatted,                                        \
+                       __SKW_FILE__,                                     \
+                       __FUNCTION__,                                     \
+                       __LINE__);                                        \
+        logger->Debug(formatted, __SKW_FILE__, __FUNCTION__, __LINE__);  \
     }
 
-#define SKW_INFO(msg, ...)                                                           \
-    if (skyway::global::interface::Logger::Shared()) {                               \
-        std::string formatted =                                                      \
-            skyway::global::interface::Logger::Shared()->Format(msg, ##__VA_ARGS__); \
-        skyway::global::interface::Logger::Shared()->Notify(                         \
-            skyway::global::interface::Logger::Level::kInfo,                         \
-            formatted,                                                               \
-            __SKW_FILE__,                                                            \
-            __FUNCTION__,                                                            \
-            __LINE__);                                                               \
-        skyway::global::interface::Logger::Shared()->Info(                           \
-            formatted, __SKW_FILE__, __FUNCTION__, __LINE__);                        \
+#define SKW_INFO(msg, ...)                                              \
+    if (auto logger = skyway::global::interface::Logger::Shared()) {    \
+        std::string formatted = logger->Format(msg, ##__VA_ARGS__);     \
+        logger->Notify(skyway::global::interface::Logger::Level::kInfo, \
+                       formatted,                                       \
+                       __SKW_FILE__,                                    \
+                       __FUNCTION__,                                    \
+                       __LINE__);                                       \
+        logger->Info(formatted, __SKW_FILE__, __FUNCTION__, __LINE__);  \
     }
 
-#define SKW_WARN(msg, ...)                                                           \
-    if (skyway::global::interface::Logger::Shared()) {                               \
-        std::string formatted =                                                      \
-            skyway::global::interface::Logger::Shared()->Format(msg, ##__VA_ARGS__); \
-        skyway::global::interface::Logger::Shared()->Notify(                         \
-            skyway::global::interface::Logger::Level::kWarn,                         \
-            formatted,                                                               \
-            __SKW_FILE__,                                                            \
-            __FUNCTION__,                                                            \
-            __LINE__);                                                               \
-        skyway::global::interface::Logger::Shared()->Warn(                           \
-            formatted, __SKW_FILE__, __FUNCTION__, __LINE__);                        \
+#define SKW_WARN(msg, ...)                                              \
+    if (auto logger = skyway::global::interface::Logger::Shared()) {    \
+        std::string formatted = logger->Format(msg, ##__VA_ARGS__);     \
+        logger->Notify(skyway::global::interface::Logger::Level::kWarn, \
+                       formatted,                                       \
+                       __SKW_FILE__,                                    \
+                       __FUNCTION__,                                    \
+                       __LINE__);                                       \
+        logger->Warn(formatted, __SKW_FILE__, __FUNCTION__, __LINE__);  \
     }
 
-#define SKW_ERROR(msg, ...)                                                          \
-    if (skyway::global::interface::Logger::Shared()) {                               \
-        std::string formatted =                                                      \
-            skyway::global::interface::Logger::Shared()->Format(msg, ##__VA_ARGS__); \
-        skyway::global::interface::Logger::Shared()->Notify(                         \
-            skyway::global::interface::Logger::Level::kError,                        \
-            formatted,                                                               \
-            __SKW_FILE__,                                                            \
-            __FUNCTION__,                                                            \
-            __LINE__);                                                               \
-        skyway::global::interface::Logger::Shared()->Error(                          \
-            formatted, __SKW_FILE__, __FUNCTION__, __LINE__);                        \
+#define SKW_ERROR(msg, ...)                                              \
+    if (auto logger = skyway::global::interface::Logger::Shared()) {     \
+        std::string formatted = logger->Format(msg, ##__VA_ARGS__);      \
+        logger->Notify(skyway::global::interface::Logger::Level::kError, \
+                       formatted,                                        \
+                       __SKW_FILE__,                                     \
+                       __FUNCTION__,                                     \
+                       __LINE__);                                        \
+        logger->Error(formatted, __SKW_FILE__, __FUNCTION__, __LINE__);  \
     }
 
-#define SKW_TRACE_LOCAL(msg, ...)                                                    \
-    if (skyway::global::interface::Logger::Shared()) {                               \
-        std::string formatted =                                                      \
-            skyway::global::interface::Logger::Shared()->Format(msg, ##__VA_ARGS__); \
-        skyway::global::interface::Logger::Shared()->Trace(                          \
-            formatted, __SKW_FILE__, __FUNCTION__, __LINE__);                        \
+#define SKW_TRACE_LOCAL(msg, ...)                                       \
+    if (auto logger = skyway::global::interface::Logger::Shared()) {    \
+        std::string formatted = logger->Format(msg, ##__VA_ARGS__);     \
+        logger->Trace(formatted, __SKW_FILE__, __FUNCTION__, __LINE__); \
     }
 
-#define SKW_DEBUG_LOCAL(msg, ...)                                                    \
-    if (skyway::global::interface::Logger::Shared()) {                               \
-        std::string formatted =                                                      \
-            skyway::global::interface::Logger::Shared()->Format(msg, ##__VA_ARGS__); \
-        skyway::global::interface::Logger::Shared()->Debug(                          \
-            formatted, __SKW_FILE__, __FUNCTION__, __LINE__);                        \
+#define SKW_DEBUG_LOCAL(msg, ...)                                       \
+    if (auto logger = skyway::global::interface::Logger::Shared()) {    \
+        std::string formatted = logger->Format(msg, ##__VA_ARGS__);     \
+        logger->Debug(formatted, __SKW_FILE__, __FUNCTION__, __LINE__); \
     }
 
-#define SKW_INFO_LOCAL(msg, ...)                                                     \
-    if (skyway::global::interface::Logger::Shared()) {                               \
-        std::string formatted =                                                      \
-            skyway::global::interface::Logger::Shared()->Format(msg, ##__VA_ARGS__); \
-        skyway::global::interface::Logger::Shared()->Info(                           \
-            formatted, __SKW_FILE__, __FUNCTION__, __LINE__);                        \
+#define SKW_INFO_LOCAL(msg, ...)                                       \
+    if (auto logger = skyway::global::interface::Logger::Shared()) {   \
+        std::string formatted = logger->Format(msg, ##__VA_ARGS__);    \
+        logger->Info(formatted, __SKW_FILE__, __FUNCTION__, __LINE__); \
     }
 
-#define SKW_WARN_LOCAL(msg, ...)                                                     \
-    if (skyway::global::interface::Logger::Shared()) {                               \
-        std::string formatted =                                                      \
-            skyway::global::interface::Logger::Shared()->Format(msg, ##__VA_ARGS__); \
-        skyway::global::interface::Logger::Shared()->Warn(                           \
-            formatted, __SKW_FILE__, __FUNCTION__, __LINE__);                        \
+#define SKW_WARN_LOCAL(msg, ...)                                       \
+    if (auto logger = skyway::global::interface::Logger::Shared()) {   \
+        std::string formatted = logger->Format(msg, ##__VA_ARGS__);    \
+        logger->Warn(formatted, __SKW_FILE__, __FUNCTION__, __LINE__); \
     }
 
-#define SKW_ERROR_LOCAL(msg, ...)                                                    \
-    if (skyway::global::interface::Logger::Shared()) {                               \
-        std::string formatted =                                                      \
-            skyway::global::interface::Logger::Shared()->Format(msg, ##__VA_ARGS__); \
-        skyway::global::interface::Logger::Shared()->Error(                          \
-            formatted, __SKW_FILE__, __FUNCTION__, __LINE__);                        \
+#define SKW_ERROR_LOCAL(msg, ...)                                       \
+    if (auto logger = skyway::global::interface::Logger::Shared()) {    \
+        std::string formatted = logger->Format(msg, ##__VA_ARGS__);     \
+        logger->Error(formatted, __SKW_FILE__, __FUNCTION__, __LINE__); \
     }
 
 namespace skyway {
 namespace global {
 namespace interface {
 
-/// @brief SkyWayのログを処理するクラス
 class Logger {
 public:
-    /// @brief ログレベル
     enum Level { kOff, kTrace, kDebug, kInfo, kWarn, kError };
 
     static constexpr const char* kLogLevelTraceStr = "trace";
@@ -139,7 +112,6 @@ public:
     static constexpr const char* kLogLevelWarnStr  = "warn";
     static constexpr const char* kLogLevelErrorStr = "error";
 
-    /// @cond INTERNAL_SECTION
     virtual ~Logger()            = default;
     virtual void Trace(const std::string& msg,
                        const std::string& filename,
@@ -180,10 +152,12 @@ public:
 
     template <class FormatString, class... Args>
     std::string Format(FormatString fmt_str, Args&&... args) {
-        std::lock_guard<std::mutex> lg(fmt_mtx_);
-        fmt_ = boost::format(fmt_str);
-        this->BuildFormat(args...);
-        return fmt_.str();
+        {
+            std::lock_guard<std::mutex> lg(fmt_mtx_);
+            fmt_ = boost::format(fmt_str);
+            this->BuildFormat(args...);
+            return fmt_.str();
+        }
     }
 
     static inline std::string GetFileName(const std::string& path) {
@@ -202,13 +176,11 @@ public:
         return path;
     }
 
-    // Set value when Context::Setup()
     static void SetSharedInstance(std::unique_ptr<Logger> logger);
-    static Logger* Shared();
-    /// @endcond
+    static std::shared_ptr<Logger> Shared();
 
 private:
-    static std::unique_ptr<Logger> shared_;
+    static std::shared_ptr<Logger> shared_;
     std::weak_ptr<LoggerObserver> observer_;
 
     std::vector<LoggerObserver::SdkLog> sdk_log_buffer_;
@@ -222,4 +194,4 @@ private:
 }  // namespace global
 }  // namespace skyway
 
-#endif /* SKYWAY_GLOBAL_INTERFACE_LOGGER_HPP_ */
+#endif

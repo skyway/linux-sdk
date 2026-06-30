@@ -5,11 +5,16 @@
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_SFU_API_CLIENT_HPP_
 #define SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_SFU_API_CLIENT_HPP_
 
+#include <memory>
+#include <optional>
+#include <string>
+
 #include "skyway/core/interface/publication.hpp"
 #include "skyway/plugin/sfu_bot_plugin/dto/response.hpp"
 #include "skyway/plugin/sfu_bot_plugin/forwarding.hpp"
 
 namespace skyway {
+
 namespace plugin {
 namespace sfu_bot {
 namespace interface {
@@ -17,7 +22,7 @@ namespace interface {
 class SfuApiClient {
 public:
     virtual ~SfuApiClient() = default;
-    // For Plugin
+
     virtual std::optional<dto::CreateBotResponse> CreateBot(const std::string& app_id,
                                                             const std::string& channel_id) = 0;
     virtual bool DeleteBot(const std::string& bot_id)                                      = 0;
@@ -25,7 +30,6 @@ public:
     virtual bool Connect(const std::string& transport_id,
                          const nlohmann::json& dtls_parameters) = 0;
 
-    // For Sender
     virtual std::optional<dto::StartForwardingResponse> StartForwarding(
         const std::string& bot_id,
         const std::shared_ptr<core::interface::Publication> publication,
@@ -41,7 +45,6 @@ public:
         const std::string& transport_id,
         const nlohmann::json& producer_options) = 0;
 
-    // For Receiver
     virtual std::optional<dto::GetCapabilitiesResponse> GetCapabilities(
         const std::string& bot_id,
         const std::string& publication_id,
@@ -67,4 +70,4 @@ public:
 }  // namespace sfu_bot
 }  // namespace plugin
 }  // namespace skyway
-#endif /* SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_SFU_API_CLIENT_HPP_ */
+#endif

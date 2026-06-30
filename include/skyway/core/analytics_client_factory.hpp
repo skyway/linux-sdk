@@ -5,11 +5,13 @@
 #ifndef SKYWAY_CORE_ANALYTICS_CLIENT_FACTORY_HPP_
 #define SKYWAY_CORE_ANALYTICS_CLIENT_FACTORY_HPP_
 
+#include <memory>
+#include <string>
+
 #include "skyway/analytics/interface/analytics_client.hpp"
-#include "skyway/core/interface/channel.hpp"
-#include "skyway/model/domain.hpp"
 
 namespace skyway {
+
 namespace core {
 
 class AnalyticsClientFactory {
@@ -21,4 +23,4 @@ public:
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_ANALYTICS_CLIENT_FACTORY_HPP_ */
+#endif

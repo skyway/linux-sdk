@@ -18,37 +18,59 @@ namespace room {
 namespace abstract {
 
 /// @brief LocalRoomMemberの操作を行う抽象クラス
-class LocalRoomMember : public abstract::RoomMember,
-                        public interface::LocalRoomMember,
-                        public core::interface::LocalPerson::EventListener {
+class LocalRoomMember : public abstract::RoomMember, public interface::LocalRoomMember {
 public:
     virtual ~LocalRoomMember();
 
     /// @brief イベントの購読します。
     void AddEventListener(interface::LocalRoomMember::EventListener* listener) override;
+
     /// @brief イベントの購読を中止します。
     void RemoveEventListener(interface::LocalRoomMember::EventListener* listener) override;
 
 protected:
+    /// @cond INTERNAL_SECTION
+    class CoreEventListenerAdapter : public core::interface::LocalPerson::EventListener {
+    public:
+        CoreEventListenerAdapter(LocalRoomMember* outer);
+        void OnStreamPublished(std::shared_ptr<core::interface::Publication> publication) override;
+        void OnStreamUnpublished(
+            std::shared_ptr<core::interface::Publication> publication) override;
+        void OnPublicationSubscribed(
+            std::shared_ptr<core::interface::Subscription> subscription) override;
+        void OnPublicationUnsubscribed(
+            std::shared_ptr<core::interface::Subscription> subscription) override;
+        void OnLeft() override;
+        void OnMetadataUpdated(const std::string& metadata) override;
+        void OnPublicationListChanged() override;
+        void OnSubscriptionListChanged() override;
+
+    private:
+        LocalRoomMember* outer_;
+    };
+
     LocalRoomMember(std::shared_ptr<core::interface::LocalPerson> core,
                     std::shared_ptr<interface::Room> room,
                     interface::RoomDomainFactory* factory);
 
+    core::interface::LocalPerson::PublicationOptions ConvertToCorePublicationOptions(
+        const interface::LocalRoomMember::PublicationOptions& options);
+    core::interface::LocalPerson::SubscriptionOptions ConvertToCoreSubscriptionOptions(
+        const interface::LocalRoomMember::SubscriptionOptions& options);
+    model::PublicationType ConvertToCorePublicationType(domain::PublicationType type);
+    /// @endcond
+
 private:
-    // core::interface::LocalPerson::EventListener
-    void OnStreamPublished(std::shared_ptr<core::interface::Publication> publication) override;
-    void OnStreamUnpublished(std::shared_ptr<core::interface::Publication> publication) override;
-    void OnPublicationSubscribed(
-        std::shared_ptr<core::interface::Subscription> subscription) override;
-    void OnPublicationUnsubscribed(
-        std::shared_ptr<core::interface::Subscription> subscription) override;
+    void OnStreamPublished(std::shared_ptr<core::interface::Publication> publication);
+    void OnStreamUnpublished(std::shared_ptr<core::interface::Publication> publication);
+    void OnPublicationSubscribed(std::shared_ptr<core::interface::Subscription> subscription);
+    void OnPublicationUnsubscribed(std::shared_ptr<core::interface::Subscription> subscription);
+    void OnLeft();
+    void OnMetadataUpdated(const std::string& metadata);
+    void OnPublicationListChanged();
+    void OnSubscriptionListChanged();
 
-    // core::interface::Member::EventListener
-    void OnLeft() override;
-    void OnMetadataUpdated(const std::string& metadata) override;
-    void OnPublicationListChanged() override;
-    void OnSubscriptionListChanged() override;
-
+    std::unique_ptr<CoreEventListenerAdapter> core_event_listener_adapter_;
     std::mutex listener_mtx_;
     interface::LocalRoomMember::EventListener* listener_;
 };

@@ -8,8 +8,8 @@
 #include <mutex>
 #include <unordered_set>
 
-#include "skyway/core/stream/remote/video_stream.hpp"
 #include "skyway/media/interface/video_renderer.hpp"
+#include "skyway/media/stream/interface/remote/remote_video_stream.hpp"
 
 namespace skyway {
 namespace media {
@@ -66,7 +66,7 @@ public:
 
     /// @brief RemoteVideoStreamをRendererに登録します。
     /// @param stream SubscribeしたRemoteVideoStream
-    virtual void Render(std::shared_ptr<core::stream::remote::RemoteVideoStream> stream) = 0;
+    virtual void Render(std::shared_ptr<stream::interface::remote::RemoteVideoStream> stream) = 0;
 
     // rtc::VideoSinkInterface<webrtc::VideoFrame>
     virtual void OnFrame(const webrtc::VideoFrame& frame) = 0;

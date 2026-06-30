@@ -110,53 +110,22 @@ $(document).ready(function(){initNavTree('classskyway_1_1room_1_1interface_1_1_r
 <p>イベントリスナ  
  <a href="classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html#details">[詳解]</a></p>
 
-<p><code>#include &lt;<a class="el" href="interface_2room__subscription_8hpp_source.html">room_subscription.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="interface_2room__subscription_8hpp_source.html">skyway/room/interface/room_subscription.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:ac6b02199c161aa684000b3871ee971c7" id="r_ac6b02199c161aa684000b3871ee971c7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html#ac6b02199c161aa684000b3871ee971c7">OnCanceled</a> ()</td></tr>
-<tr class="memdesc:ac6b02199c161aa684000b3871ee971c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribeが中止(unsubscribe)された後に発生するイベント  <br /></td></tr>
-<tr class="separator:ac6b02199c161aa684000b3871ee971c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32740066e022c859b241b2d71aadfb28" id="r_a32740066e022c859b241b2d71aadfb28"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html#a32740066e022c859b241b2d71aadfb28">OnConnectionStateChanged</a> (const core::ConnectionState state)</td></tr>
-<tr class="memdesc:a32740066e022c859b241b2d71aadfb28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe中のStream接続状態が変更された後に発生するイベント  <br /></td></tr>
-<tr class="separator:a32740066e022c859b241b2d71aadfb28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d0afceba7646734479b930e3469b6d2" id="r_a0d0afceba7646734479b930e3469b6d2"><td class="memItemLeft" align="right" valign="top"><a id="a0d0afceba7646734479b930e3469b6d2" name="a0d0afceba7646734479b930e3469b6d2"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStreamAttached</b> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1interface_1_1_remote_stream.html">core::interface::RemoteStream</a> &gt; stream)</td></tr>
-<tr class="separator:a0d0afceba7646734479b930e3469b6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56b564dba16ab5265e4e26ea0863daba" id="r_a56b564dba16ab5265e4e26ea0863daba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html#a56b564dba16ab5265e4e26ea0863daba">OnConnectionStateChanged</a> (const <a class="el" href="room_2types_8hpp.html#a1599a7cab2a35d64a1d56f76b82a4139">ConnectionState</a> state)</td></tr>
+<tr class="memdesc:a56b564dba16ab5265e4e26ea0863daba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe中のStream接続状態が変更された後に発生するイベント  <br /></td></tr>
+<tr class="separator:a56b564dba16ab5265e4e26ea0863daba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d8afce9bd1037a9949d6feb8eb3ae3" id="r_a06d8afce9bd1037a9949d6feb8eb3ae3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription_1_1_event_listener.html#a06d8afce9bd1037a9949d6feb8eb3ae3">OnStreamAttached</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1stream_1_1interface_1_1remote_1_1_remote_stream.html">media::stream::interface::remote::RemoteStream</a> &gt; stream)</td></tr>
+<tr class="memdesc:a06d8afce9bd1037a9949d6feb8eb3ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">SubscriptionのRemoteStreamが利用可能になった後に発生するイベント  <br /></td></tr>
+<tr class="separator:a06d8afce9bd1037a9949d6feb8eb3ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>イベントリスナ </p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="ac6b02199c161aa684000b3871ee971c7" name="ac6b02199c161aa684000b3871ee971c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6b02199c161aa684000b3871ee971c7">&#9670;&#160;</a></span>OnCanceled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void skyway::room::interface::RoomSubscription::EventListener::OnCanceled </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Subscribeが中止(unsubscribe)された後に発生するイベント </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">非推奨:</a></b></dt><dd>本機能は非推奨です。 </dd></dl>
-
-</div>
-</div>
-<a id="a32740066e022c859b241b2d71aadfb28" name="a32740066e022c859b241b2d71aadfb28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32740066e022c859b241b2d71aadfb28">&#9670;&#160;</a></span>OnConnectionStateChanged()</h2>
+<a id="a56b564dba16ab5265e4e26ea0863daba" name="a56b564dba16ab5265e4e26ea0863daba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56b564dba16ab5265e4e26ea0863daba">&#9670;&#160;</a></span>OnConnectionStateChanged()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,7 +136,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStreamAttac
         <tr>
           <td class="memname">virtual void skyway::room::interface::RoomSubscription::EventListener::OnConnectionStateChanged </td>
           <td>(</td>
-          <td class="paramtype">const core::ConnectionState&#160;</td>
+          <td class="paramtype">const <a class="el" href="room_2types_8hpp.html#a1599a7cab2a35d64a1d56f76b82a4139">ConnectionState</a>&#160;</td>
           <td class="paramname"><em>state</em></td><td>)</td>
           <td></td>
         </tr>
@@ -183,6 +152,40 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStreamAttac
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">state</td><td>接続状態 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a06d8afce9bd1037a9949d6feb8eb3ae3" name="a06d8afce9bd1037a9949d6feb8eb3ae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06d8afce9bd1037a9949d6feb8eb3ae3">&#9670;&#160;</a></span>OnStreamAttached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void skyway::room::interface::RoomSubscription::EventListener::OnStreamAttached </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1stream_1_1interface_1_1remote_1_1_remote_stream.html">media::stream::interface::remote::RemoteStream</a> &gt;&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SubscriptionのRemoteStreamが利用可能になった後に発生するイベント </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>RemoteStream </td></tr>
   </table>
   </dd>
 </dl>

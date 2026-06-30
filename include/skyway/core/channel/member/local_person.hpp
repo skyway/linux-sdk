@@ -7,12 +7,16 @@
 
 #include <api/peer_connection_interface.h>
 
+#include <atomic>
+#include <condition_variable>
+#include <memory>
+#include <mutex>
 #include <string>
+#include <thread>
 #include <unordered_map>
 
 #include "skyway/analytics/interface/analytics_client.hpp"
 #include "skyway/core/interface/local_person.hpp"
-#include "skyway/signaling/interface/signaling_client.hpp"
 
 namespace skyway {
 namespace core {
@@ -23,10 +27,8 @@ using LocalStream              = interface::LocalStream;
 using ChunkMessengerInterface  = interface::ChunkMessenger;
 using AnalyticsClientInterface = analytics::interface::AnalyticsClient;
 
-/// @brief LocalPersonの実装クラス
 class LocalPerson : public interface::LocalPerson, public AnalyticsClientInterface::Delegator {
 public:
-    /// @cond INTERNAL_SECTION
     LocalPerson(std::shared_ptr<interface::Channel> channel,
                 const model::Member& dto,
                 std::unique_ptr<ChunkMessengerInterface> messenger,
@@ -35,7 +37,7 @@ public:
     ~LocalPerson();
 
     ChunkMessengerInterface* Messenger() const override;
-    /// @endcond
+
     std::shared_ptr<interface::Publication> Publish(
         std::shared_ptr<LocalStream> stream,
         interface::LocalPerson::PublicationOptions options) override;
@@ -44,7 +46,7 @@ public:
         const interface::LocalPerson::SubscriptionOptions& options) override;
     bool Unpublish(const std::string& publication_id) const override;
     bool Unsubscribe(const std::string& subscription_id) const override;
-    /// @cond INTERNAL_SECTION
+
     void OnPublished(std::shared_ptr<interface::Publication> publication) override;
     void OnUnpublished(std::shared_ptr<interface::Publication> publication) override;
     void OnSubscribed(std::shared_ptr<interface::Subscription> subscription,
@@ -58,9 +60,7 @@ public:
         std::shared_ptr<interface::Subscription> subscription,
         std::shared_ptr<interface::RemoteMember> subscriber) override;
     void Dispose() override;
-    /// @endcond
 
-    // AnalyticsClientInterface::Delegator
     std::vector<analytics::interface::AnalyticsClient::SubscriptionStats>
     GetSubscriptionStatsForAnalytics() const override;
 
@@ -79,9 +79,9 @@ private:
 
     std::mutex stream_mtx_;
 
-    std::mutex is_disposed_mtx_;
-    std::condition_variable is_disposed_cv_;
-    bool is_disposed_;
+    std::mutex ttl_timer_wait_mtx_;
+    std::condition_variable ttl_timer_wait_cv_;
+    std::atomic<bool> is_disposed_ = false;
     std::unique_ptr<std::thread> ttl_timer_thread_;
 };
 
@@ -90,4 +90,4 @@ private:
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_CHANNEL_MEMBER_LOCAL_PERSON_HPP_ */
+#endif

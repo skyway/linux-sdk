@@ -5,8 +5,8 @@
 #ifndef SKYWAY_CONTENT_AUDIO_DATA_LISTENER_HPP
 #define SKYWAY_CONTENT_AUDIO_DATA_LISTENER_HPP
 
-#include <stdint.h>
 #include <stddef.h>
+#include <stdint.h>
 
 #include <vector>
 
@@ -32,4 +32,4 @@ protected:
 }  // namespace content
 }  // namespace skyway
 
-#endif  // SKYWAY_CONTENT_AUDIO_DATA_LISTENER_HPP
+#endif

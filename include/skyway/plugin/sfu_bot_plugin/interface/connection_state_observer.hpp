@@ -30,4 +30,4 @@ public:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif  // SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_CONNECTION_STATE_OBSERVER_HPP_
+#endif

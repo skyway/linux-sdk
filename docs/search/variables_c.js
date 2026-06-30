@@ -1,8 +1,13 @@
 var searchData=
 [
-  ['recv_5frtp_5fipv4_0',['recv_rtp_ipv4',['../structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a4a455351fb34bc9dcdc0700a23e877c4',1,'skyway::media::rtp::interface::RtpCapturerVideoSourceOptions']]],
-  ['recv_5frtp_5fport_1',['recv_rtp_port',['../structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a51fe02658fd9b3c85810f6b588cd6b70',1,'skyway::media::rtp::interface::RtpCapturerVideoSourceOptions']]],
-  ['remind_5ftime_5fsec_2',['remind_time_sec',['../structskyway_1_1core_1_1_context_options_1_1_token.html#af019a7cff4710a053c4d63ba6743f27b',1,'skyway::core::ContextOptions::Token']]],
-  ['reports_3',['reports',['../structskyway_1_1model_1_1_web_r_t_c_stats.html#a9d30d7ca0821dd7d86d81f5ecf5861cb',1,'skyway::model::WebRTCStats']]],
-  ['rtp_4',['rtp',['../structskyway_1_1_context_1_1_sky_way_options.html#ace37c5935f4c6d4a63f7c0920ef05cfa',1,'skyway::Context::SkyWayOptions']]]
+  ['sample_5frate_0',['sample_rate',['../structskyway_1_1media_1_1audio_1_1interface_1_1_audio_frame.html#a4c1333a189b01f052fc5597f32faa81f',1,'skyway::media::audio::interface::AudioFrame::sample_rate'],['../structskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source_1_1_options.html#a50ca3377db3166ecc941dc1079a09e6d',1,'skyway::media::audio::interface::PcmAudioSource::Options::sample_rate']]],
+  ['samples_5fper_5fchannel_1',['samples_per_channel',['../structskyway_1_1media_1_1audio_1_1interface_1_1_audio_frame.html#a1d9bfee4905133beced6e8820491ab58',1,'skyway::media::audio::interface::AudioFrame']]],
+  ['scale_5fresolution_5fdown_5fby_2',['scale_resolution_down_by',['../structskyway_1_1room_1_1_encoding.html#afd6f4db53631a84627bea8a8bd87c64d',1,'skyway::room::Encoding']]],
+  ['scaled_5fheight_3',['scaled_height',['../structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#ab99005e6a592c647a9f8fde38782f23b',1,'skyway::media::interface::I420VideoRendererOptions::scaled_height'],['../structskyway_1_1media_1_1_v4l2_video_renderer_options.html#a67e52409fdbc6a3ce299c1c8354fe974',1,'skyway::media::V4l2VideoRendererOptions::scaled_height']]],
+  ['scaled_5fwidth_4',['scaled_width',['../structskyway_1_1media_1_1interface_1_1_i420_video_renderer_options.html#aa666c749aead62702386e3057dc507d5',1,'skyway::media::interface::I420VideoRendererOptions::scaled_width'],['../structskyway_1_1media_1_1_v4l2_video_renderer_options.html#a814fc79a259fa18529f781a9317fb176',1,'skyway::media::V4l2VideoRendererOptions::scaled_width']]],
+  ['send_5frtcp_5fipv4_5',['send_rtcp_ipv4',['../structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a18e1f4a277dd2f9b5e86431950ce0104',1,'skyway::media::rtp::interface::RtpCapturerVideoSourceOptions']]],
+  ['send_5frtcp_5fport_6',['send_rtcp_port',['../structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a3fc31290117b1bb496e78398b622058c',1,'skyway::media::rtp::interface::RtpCapturerVideoSourceOptions']]],
+  ['stride_5fu_7',['stride_u',['../structskyway_1_1media_1_1interface_1_1_i420_frame.html#a1691036c8c16d2dd8c384cd496215aa7',1,'skyway::media::interface::I420Frame']]],
+  ['stride_5fv_8',['stride_v',['../structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae2896ec958fe67f7df873a59ca17fff8',1,'skyway::media::interface::I420Frame']]],
+  ['stride_5fy_9',['stride_y',['../structskyway_1_1media_1_1interface_1_1_i420_frame.html#afaa26a8bc0768ce89a64cc0594673106',1,'skyway::media::interface::I420Frame']]]
 ];

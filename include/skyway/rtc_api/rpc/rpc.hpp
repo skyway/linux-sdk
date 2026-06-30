@@ -22,10 +22,8 @@ using WebSocketClientInterface = network::interface::WebSocketClient;
 
 const std::string kRapiReconnectThreadName = "rapi_reconnect";
 
-/// JSON-RPCモジュール
 class Rpc : public RpcInterface, public WebSocketClientInterface::Listener {
 public:
-    /// コンストラクタ
     Rpc(std::weak_ptr<token::interface::AuthTokenManager> auth,
         RpcInterface::Listener* listener,
         int timeout_for_send_ms = config::kDefaultTimeoutForSend);
@@ -40,7 +38,6 @@ public:
                            const nlohmann::json& params,
                            const std::string& message_id) override;
 
-    // WebSocketClientInterface::Listener
     void OnMessage(const std::string& message) override;
     void OnClose(const int code, const std::string& reason) override;
     void OnError(const int code) override;
@@ -63,14 +60,14 @@ private:
 
     std::weak_ptr<token::interface::AuthTokenManager> auth_;
     std::mutex listener_mtx_;
-    RpcInterface::Listener* listener_;
-    std::atomic<State> state_;
+    RpcInterface::Listener* listener_ = nullptr;
+    std::atomic<State> state_         = State::kReady;
     std::shared_ptr<WebSocketClientInterface> ws_;
     std::string ws_domain_;
     bool is_secure_;
     std::mutex request_results_mtx_;
     using MessageId = std::string;
-    // The type of value must be `dto::ResponseMessage` or `dto::ResponseErrorMessage`
+
     std::unordered_map<MessageId, std::optional<nlohmann::json>> request_results_;
     std::mutex request_mtx_;
     int timeout_for_send_ms_;
@@ -78,8 +75,8 @@ private:
     std::mutex pending_requests_mtx_;
     std::unordered_set<dto::RequestMessage, dto::RequestMessage::Hash> pending_requests_;
 
-    std::atomic<bool> disconnected_while_requesting_;
-    std::atomic<bool> is_closed_;
+    std::atomic<bool> disconnected_while_requesting_ = false;
+    std::atomic<bool> is_closed_                     = false;
 
     std::unique_ptr<global::interface::Worker> reconnect_worker_ =
         std::make_unique<global::Worker>(kRapiReconnectThreadName);
@@ -92,4 +89,4 @@ public:
 }  // namespace rtc_api
 }  // namespace skyway
 
-#endif /* SKYWAY_RTC_API_RPC_RPC_HPP_ */
+#endif

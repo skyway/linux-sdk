@@ -84,4 +84,4 @@ void from_json(const nlohmann::json& j, StreamUnsubscribedEventData& data);
 }  // namespace rtc_api
 }  // namespace skyway
 
-#endif /* SKYWAY_RTC_API_DTO_EVENT_HPP_ */
+#endif

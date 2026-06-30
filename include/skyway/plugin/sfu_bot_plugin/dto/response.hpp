@@ -72,4 +72,4 @@ void from_json(const nlohmann::json& j, IceRestartResponse& response);
 }  // namespace plugin
 }  // namespace skyway
 
-#endif /* SKYWAY_PLUGIN_SFU_BOT_PLUGIN_DTO_RESPONSE_HPP_ */
+#endif

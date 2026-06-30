@@ -70,4 +70,4 @@ void to_json(nlohmann::json& j, const Response& payload);
 }  // namespace signaling
 }  // namespace skyway
 
-#endif /* SKYWAY_SIGNALING_DTO_PAYLOAD_HPP_ */
+#endif

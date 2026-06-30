@@ -15,17 +15,10 @@
 #include <pc/local_audio_source.h>
 
 #include "skyway/global/logger.hpp"
+#include "skyway/media/types.hpp"
 
 namespace skyway {
 namespace media {
-
-/// @brief  オーディオバックエンドの種類
-enum class AudioBackendType {
-    /// @brief PulseAudioを使用します
-    kPulseAudio,
-    /// @brief オーディオバックエンドを使用しません
-    kNone,
-};
 
 /// @brief デバイスの情報を取得するクラス
 class DeviceManager {
@@ -40,7 +33,15 @@ public:
         int index;
         std::string name;
         std::string unique_id;
-        webrtc::VideoCaptureCapability capability;
+        /**
+         * @brief 映像入力デバイスの列挙時に取得した先頭の設定候補です。
+         * @deprecated この値は実際のキャプチャには利用されません。
+         * キャプチャ設定を指定する場合は`StreamFactory::CaptureOptions`を利用してください。
+         */
+        [[deprecated(
+            "This field is not used for actual capture. "
+            "Use StreamFactory::CaptureOptions when specifying capture settings.")]] webrtc::
+            VideoCaptureCapability capability;
     };
     /// @brief 利用する音声入力デバイスの一覧を取得します。
     static std::vector<AudioDevice> GetRecordDevices();

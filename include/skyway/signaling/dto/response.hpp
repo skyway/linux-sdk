@@ -27,4 +27,4 @@ struct SendResult {
 }  // namespace signaling
 }  // namespace skyway
 
-#endif /* SKYWAY_SIGNALING_DTO_RESPONSE_HPP_ */
+#endif

@@ -6,7 +6,6 @@
 #define SKYWAY_CORE_CHUNK_MESSENGER_CHUNK_MESSENGER_FACTORY_HPP_
 
 #include "skyway/core/interface/chunk_messenger_factory.hpp"
-#include "skyway/model/domain.hpp"
 
 namespace skyway {
 namespace core {
@@ -22,4 +21,4 @@ public:
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_CHUNK_MESSENGER_CHUNK_MESSENGER_FACTORY_HPP_ */
+#endif

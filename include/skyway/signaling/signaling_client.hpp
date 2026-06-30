@@ -5,18 +5,22 @@
 #ifndef SKYWAY_SIGNALING_SIGNALING_CLIENT_HPP_
 #define SKYWAY_SIGNALING_SIGNALING_CLIENT_HPP_
 
+#include <atomic>
+#include <condition_variable>
 #include <json.hpp>
+#include <memory>
+#include <mutex>
 #include <string>
+#include <thread>
 #include <unordered_map>
 #include <unordered_set>
 
 #include "skyway/global/worker.hpp"
 #include "skyway/signaling/client_event.hpp"
-#include "skyway/signaling/config.hpp"
 #include "skyway/signaling/dto/payload.hpp"
 #include "skyway/signaling/dto/response.hpp"
 #include "skyway/signaling/interface/signaling_client.hpp"
-#include "skyway/signaling/socket.hpp"
+#include "skyway/signaling/interface/socket.hpp"
 #include "skyway/token/interface/auth_token_manager.hpp"
 
 namespace skyway {
@@ -24,6 +28,7 @@ namespace signaling {
 
 using SignalingClientInterface         = interface::SignalingClient;
 using Member                           = interface::Member;
+using SocketInterface                  = interface::Socket;
 using SocketListener                   = SocketInterface::Listener;
 using AuthTokenManagerInternalListener = token::interface::AuthTokenManager::InternalListener;
 
@@ -38,10 +43,6 @@ public:
 
     ~SignalingClient();
 
-    /**
-     * DNATIVE-2856
-     * For disturbing Request's WaitUntilWithTimeoutMs when P2PConnection close
-     */
     void InterruptBlocking(const std::string& member_id) override;
     void ResetBlocking(const std::string& member_id) override;
 
@@ -58,7 +59,7 @@ public:
     dto::RequestResult Request(const Member& target,
                                const nlohmann::json& data,
                                const bool skip_response_wait = false) override;
-    // SocketListener
+
     void OnConnectionFailed() override;
     void OnDataReceived(const nlohmann::json& data) override;
 
@@ -82,14 +83,13 @@ private:
     void OnRequestReceived(const dto::incoming::Request& payload);
     void OnResponseReceived(const dto::incoming::Response& payload);
 
-    // AuthTokenManager::InternalListener
     void OnTokenUpdated(const token::AuthToken* token) override;
 
     std::weak_ptr<token::interface::AuthTokenManager> auth_;
 
     std::unique_ptr<SocketInterface> socket_;
 
-    std::atomic<bool> is_sending_connectivity_check_;
+    std::atomic<bool> is_sending_connectivity_check_ = false;
     std::unique_ptr<std::thread> connectivity_check_thread_;
 
     std::unordered_set<SignalingClientInterface::Listener*> listeners_;
@@ -105,7 +105,7 @@ private:
     std::mutex request_results_mtx_;
     std::unordered_map<EventId, nlohmann::json> request_results_;
 
-    SignalingClientInterface::Delegator* delegator_;
+    SignalingClientInterface::Delegator* delegator_ = nullptr;
 
     std::unique_ptr<global::interface::Worker> worker_ =
         std::make_unique<skyway::global::Worker>(kSignalingWebSocketThreadName);
@@ -116,7 +116,7 @@ private:
     std::unordered_map<std::string, bool> interrupt_blocking_map_;
 
     std::mutex lifecycle_mtx_;
-    bool is_disposing_ = false;
+    bool is_disposing_           = false;
     int active_send_event_count_ = 0;
 
 public:
@@ -126,4 +126,4 @@ public:
 }  // namespace signaling
 }  // namespace skyway
 
-#endif /* SKYWAY_SIGNALING_SIGNALING_CLIENT_HPP_ */
+#endif

@@ -17,6 +17,11 @@
 #include <memory> // unique_ptr
 #include <string>
 
+namespace rtc
+{
+	class Thread;
+}
+
 namespace mediasoupclient
 {
 	// Fast forward declarations.
@@ -47,6 +52,7 @@ namespace mediasoupclient
 		const std::string& GetId() const;
 		bool IsClosed() const;
 		const std::string& GetConnectionState() const;
+		rtc::Thread* GetSignalingThread() const;
 		nlohmann::json& GetAppData();
 		virtual void Close();
 		nlohmann::json GetStats() const;

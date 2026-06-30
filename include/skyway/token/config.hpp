@@ -13,8 +13,8 @@ namespace config {
 
 extern const int kDefaultTokenExpirationReminderTimeSec;
 
-}  // namespace config
+}
 }  // namespace token
 }  // namespace skyway
 
-#endif /* SKYWAY_TOKEN_CONFIG_HPP_ */
+#endif

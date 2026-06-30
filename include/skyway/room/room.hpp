@@ -32,14 +32,20 @@ public:
 /// @brief DefaultRoomの操作を行うクラス
 class Room : public abstract::Room, public std::enable_shared_from_this<Room> {
 public:
+    /// @cond INTERNAL_SECTION
     Room(std::shared_ptr<core::interface::Channel> channel,
          std::unique_ptr<interface::RoomDomainFactory> factory);
-    interface::RoomType Type() override;
+    /// @endcond
+
+    ~Room() override;
+    RoomType Type() override;
 
     /// @brief Roomに存在するPublicationを取得します。
     std::vector<std::shared_ptr<interface::RoomPublication>> Publications() override;
+
     /// @brief Roomに存在するSubscriptionを取得します。
     std::vector<std::shared_ptr<interface::RoomSubscription>> Subscriptions() override;
+
     /// @brief Roomに存在するMemberを取得します。
     std::vector<std::shared_ptr<interface::RoomMember>> Members() override;
 
@@ -49,20 +55,24 @@ public:
         std::unique_ptr<interface::RoomFactory> room_factory = std::make_unique<RoomFactory>(),
         std::unique_ptr<interface::RoomDomainFactory> domain_factory =
             std::make_unique<RoomDomainFactory>());
+
     /// @brief Roomを作成します。
     static std::shared_ptr<Room> Create();
+
     /// @brief Roomの検索をします。
     static std::shared_ptr<Room> Find(
         interface::RoomQuery query,
         std::unique_ptr<interface::RoomFactory> room_factory = std::make_unique<RoomFactory>(),
         std::unique_ptr<interface::RoomDomainFactory> domain_factory =
             std::make_unique<RoomDomainFactory>());
+
     /// @brief Roomの検索をし、存在しなければ作成します。
     static std::shared_ptr<Room> FindOrCreate(
         interface::RoomInitOptions options,
         std::unique_ptr<interface::RoomFactory> room_factory = std::make_unique<RoomFactory>(),
         std::unique_ptr<interface::RoomDomainFactory> domain_factory =
             std::make_unique<RoomDomainFactory>());
+
     /// @brief Roomへ参加します。
     std::shared_ptr<LocalRoomMember> Join(interface::RoomMemberInitOptions options);
 
@@ -71,6 +81,7 @@ public:
     /// @endcond
 
 protected:
+    /// @cond INTERNAL_SECTION
     // core::interface::Channel::EventListener
     void OnMemberListChanged() override;
     void OnMemberJoined(std::shared_ptr<core::interface::Member> member) override;
@@ -89,6 +100,7 @@ protected:
         std::shared_ptr<core::interface::Subscription> subscription) override;
     void OnPublicationUnsubscribed(
         std::shared_ptr<core::interface::Subscription> subscription) override;
+    /// @endcond
 
 private:
     static std::shared_ptr<Room> CreateShared(

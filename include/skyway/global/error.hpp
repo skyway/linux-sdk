@@ -10,13 +10,11 @@
 namespace skyway {
 namespace global {
 
-/// @brief SkyWayで発生したエラーを示す構造体
 struct Error {
-    // TODO: Impl code or type?
     std::string message;
 };
 
 }  // namespace global
 }  // namespace skyway
 
-#endif /* SKYWAY_GLOBAL_ERROR_HPP_ */
+#endif

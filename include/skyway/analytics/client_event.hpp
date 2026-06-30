@@ -9,7 +9,9 @@
 
 #include <chrono>
 #include <json.hpp>
+#include <optional>
 #include <string>
+#include <vector>
 
 #include "skyway/model/domain.hpp"
 
@@ -53,7 +55,7 @@ struct [[deprecated]] SubscriptionStatsReportPayload {
     std::string subscription_id;
     std::string role;
     nlohmann::json stats;
-    std::chrono::milliseconds created_at;  // Unix Timestamp
+    std::chrono::milliseconds created_at;
 
     SubscriptionStatsReportPayload() = default;
     SubscriptionStatsReportPayload(const std::string& subscription_id, const std::string& role);
@@ -102,7 +104,7 @@ struct RtcPeerConnectionEventReportPayload {
     std::string rtc_peer_connection_id;
     Type type;
     std::optional<Data> data;
-    std::chrono::milliseconds created_at;  // Unix Timestamp
+    std::chrono::milliseconds created_at;
 
     RtcPeerConnectionEventReportPayload(const std::string& rtc_peer_connection_id,
                                         Type type,
@@ -127,7 +129,7 @@ struct PublicationUpdateEncodingsReportPayload {
     std::string publication_id;
     std::vector<model::Encoding> encodings;
     unsigned int encodings_version = 0;
-    std::chrono::milliseconds updated_at;  // Unix Timestamp
+    std::chrono::milliseconds updated_at;
 
     PublicationUpdateEncodingsReportPayload(const std::string& publication_id,
                                             const std::vector<model::Encoding>& encodings);
@@ -137,7 +139,7 @@ struct SubscriptionUpdatePreferredEncodingReportPayload {
     std::string subscription_id;
     unsigned int preferred_encoding_index   = 0;
     unsigned int preferred_encoding_version = 0;
-    std::chrono::milliseconds updated_at;  // Unix Timestamp
+    std::chrono::milliseconds updated_at;
 
     SubscriptionUpdatePreferredEncodingReportPayload(const std::string& subscription_id,
                                                      unsigned int preferred_encoding_index);
@@ -163,7 +165,7 @@ struct SDKLogsPayload {
 
 void to_json(nlohmann::json& j, const ClientEvent& event);
 void to_json(nlohmann::json& j, const BindingRtcPeerConnectionToSubscriptionPayload& payload);
-/// @deprecated 本機能は非推奨な機能であるSubscriptionStatsReportPayloadを利用しています。
+
 [[deprecated]] void to_json(nlohmann::json& j, const SubscriptionStatsReportPayload& payload);
 void to_json(nlohmann::json& j, const RtcPeerConnectionEventReportPayload& payload);
 void to_json(nlohmann::json& j, const RtcPeerConnectionEventReportPayload::Data& data);
@@ -178,4 +180,4 @@ void to_json(nlohmann::json& j, const SDKLogsPayload& payload);
 }  // namespace analytics
 }  // namespace skyway
 
-#endif /* SKYWAY_ANALYTICS_CLIENT_EVENT_HPP_ */
+#endif

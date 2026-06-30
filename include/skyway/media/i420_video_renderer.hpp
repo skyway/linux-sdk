@@ -29,16 +29,18 @@ public:
 
     /// @brief RemoteVideoStreamをRendererに登録します。
     /// @param stream SubscribeしたRemoteVideoStream
-    void Render(std::shared_ptr<core::stream::remote::RemoteVideoStream> stream) override;
+    void Render(std::shared_ptr<stream::interface::remote::RemoteVideoStream> stream) override;
 
     // rtc::VideoSinkInterface<webrtc::VideoFrame>
     void OnFrame(const webrtc::VideoFrame& frame) override;
 
 protected:
     std::optional<interface::I420Frame> ConvertI420Frame(const webrtc::VideoFrame& frame);
+    void DetachSink();
 
 private:
     rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track_;
+    std::mutex track_mtx_;
     std::mutex rendering_mtx_;
     const interface::I420VideoRendererOptions options_;
     std::unordered_set<Listener*> listeners_;

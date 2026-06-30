@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('structskyway_1_1media_1_1_device_manag
 <p>映像デバイス  
  <a href="structskyway_1_1media_1_1_device_manager_1_1_video_device.html#details">[詳解]</a></p>
 
-<p><code>#include &lt;<a class="el" href="device__manager_8hpp_source.html">device_manager.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="device__manager_8hpp_source.html">skyway/media/device_manager.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 公開変数類</h2></td></tr>
@@ -123,13 +123,31 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 <tr class="memitem:af1dfdc29387abc83e5058271e36e5762" id="r_af1dfdc29387abc83e5058271e36e5762"><td class="memItemLeft" align="right" valign="top"><a id="af1dfdc29387abc83e5058271e36e5762" name="af1dfdc29387abc83e5058271e36e5762"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>unique_id</b></td></tr>
 <tr class="separator:af1dfdc29387abc83e5058271e36e5762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4aa054f0c290a712f00e9c60ef4de2c5" id="r_a4aa054f0c290a712f00e9c60ef4de2c5"><td class="memItemLeft" align="right" valign="top"><a id="a4aa054f0c290a712f00e9c60ef4de2c5" name="a4aa054f0c290a712f00e9c60ef4de2c5"></a>
-webrtc::VideoCaptureCapability&#160;</td><td class="memItemRight" valign="bottom"><b>capability</b></td></tr>
+<tr class="memitem:a4aa054f0c290a712f00e9c60ef4de2c5" id="r_a4aa054f0c290a712f00e9c60ef4de2c5"><td class="memItemLeft" align="right" valign="top">webrtc::VideoCaptureCapability&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1media_1_1_device_manager_1_1_video_device.html#a4aa054f0c290a712f00e9c60ef4de2c5">capability</a></td></tr>
+<tr class="memdesc:a4aa054f0c290a712f00e9c60ef4de2c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">映像入力デバイスの列挙時に取得した先頭の設定候補です。  <br /></td></tr>
 <tr class="separator:a4aa054f0c290a712f00e9c60ef4de2c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>映像デバイス </p>
-</div><hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+</div><h2 class="groupheader">メンバ詳解</h2>
+<a id="a4aa054f0c290a712f00e9c60ef4de2c5" name="a4aa054f0c290a712f00e9c60ef4de2c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aa054f0c290a712f00e9c60ef4de2c5">&#9670;&#160;</a></span>capability</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">webrtc::VideoCaptureCapability skyway::media::DeviceManager::VideoDevice::capability</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>映像入力デバイスの列挙時に取得した先頭の設定候補です。 </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">非推奨:</a></b></dt><dd>この値は実際のキャプチャには利用されません。 キャプチャ設定を指定する場合は<code><a class="el" href="structskyway_1_1media_1_1_stream_factory_1_1_capture_options.html" title="映像入力デバイスからStreamを生成する際の希望設定">StreamFactory::CaptureOptions</a></code>を利用してください。 </dd></dl>
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
 <li>include/skyway/media/<a class="el" href="device__manager_8hpp_source.html">device_manager.hpp</a></li>
 </ul>
 </div><!-- contents -->

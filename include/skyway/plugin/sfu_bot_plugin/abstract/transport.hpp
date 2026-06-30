@@ -36,8 +36,9 @@ public:
 protected:
     Transport(interface::SfuApiClient* client,
               std::unique_ptr<interface::ConnectionStateObserver> observer);
+    void Dispose();
 
-    mediasoupclient::Transport* transport_;
+    mediasoupclient::Transport* transport_ = nullptr;
 
     std::mutex negotiation_mtx_;
 
@@ -45,8 +46,7 @@ private:
     interface::SfuApiClient* client_;
     std::unique_ptr<interface::ConnectionStateObserver> observer_;
 
-    bool is_disposed_ = false;
-    std::mutex dispose_mtx_;
+    std::atomic<bool> is_disposed_ = false;
 };
 
 }  // namespace abstract
@@ -54,4 +54,4 @@ private:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif  // SKYWAY_PLUGIN_SFU_BOT_PLUGIN_ABSTRACT_TRANSPORT_HPP_
+#endif

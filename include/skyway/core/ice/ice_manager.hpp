@@ -33,4 +33,4 @@ private:
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_ICE_ICE_MANAGER_HPP_ */
+#endif

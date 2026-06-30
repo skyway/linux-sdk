@@ -19,4 +19,4 @@ public:
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_INTERFACE_ICE_MANAGER_HPP_ */
+#endif

@@ -25,31 +25,21 @@ namespace plugin {
 namespace remote_person {
 namespace connection {
 
-/// @brief P2PにおいてStreamを受信するピア
 class Receiver : public Peer,
                  public Peer::Listener,
-                 public core::interface::Subscription::Callback {
+                 public core::interface::Subscription::Callback,
+                 public std::enable_shared_from_this<Receiver> {
 public:
-    /// コンストラクタ
-    /// @param remote_member Messageパッケージ型のMember
-    /// @param ice_manager IceManager
-    /// @param messenger シグナラ
-    /// @param peer_connection_factory PeerConnectionFactory
-    /// @param analytics_client analyticsクライアント
     Receiver(const MessageMember& remote_member,
              core::interface::IceManager* ice_manager,
              core::interface::ChunkMessenger* messenger,
              rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory);
     ~Receiver();
 
-    /// @brief ネゴシエーションを開始してStreamを受信します。
-    /// @param subscription Subscription
     bool Subscribe(std::shared_ptr<core::interface::Subscription> subscription);
 
     bool Unsubscribe(const std::string& subscription_id);
 
-    /// オファーペイロードを処理します。
-    /// @param payload オファーペイロード
     bool HandleProducePayloadPayload(const dto::ProducePayloadPayload& payload);
 
     bool HandleUnproducePayloadPayload(const dto::UnproducePayloadPayload& payload);
@@ -58,28 +48,24 @@ public:
 
     bool ShouldClose();
 
-    // Impl Peer Listener
     void OnConnect(rtc::scoped_refptr<webrtc::DataChannelInterface> data_channel,
                    const DataChannelLabel& label) override;
     void OnMessage(const webrtc::DataBuffer& buffer, const DataChannelLabel& label) override;
 
-    // Impl core::interface::Subscription::Callback
     const std::optional<nlohmann::json> GetStatsReport(
         std::shared_ptr<core::interface::Subscription> subscription) override;
 
 protected:
-    // Impl `webrtc::PeerConnectionObserver`
     void OnConnectionChange(
         webrtc::PeerConnectionInterface::PeerConnectionState new_state) override;
 
-    // webrtc::PeerConnectionObserver
-    // It is called during `SetRemoteDescription()`
     void OnTrack(rtc::scoped_refptr<webrtc::RtpTransceiverInterface> transceiver) override;
 
 private:
     bool Answer(const std::string& remote_sdp);
     void SetupTransportAccessForStream();
     bool IsInvalidSignalingState();
+    void AddConnectionStateChangedTask(const core::ConnectionState new_state);
     void NotifyConnectionStateChanged(const core::ConnectionState new_state);
     std::optional<std::weak_ptr<core::interface::Subscription>> FindSubscription(
         const std::string& stream_id);
@@ -89,7 +75,7 @@ private:
     std::vector<std::weak_ptr<core::interface::Subscription>> subscriptions_;
     std::mutex publication_info_mutex_;
     std::vector<dto::ProducePayloadPayloadInfo> publication_info_;
-    std::atomic<core::ConnectionState> connection_state_;
+    std::atomic<core::ConnectionState> connection_state_ = core::ConnectionState::kNew;
 
 public:
     friend class RemotePersonPluginReceiverTest;
@@ -100,4 +86,4 @@ public:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif /* SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_CONNECTION_RECEIVER_HPP_ */
+#endif

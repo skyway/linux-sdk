@@ -13,12 +13,10 @@ namespace skyway {
 namespace core {
 namespace interface {
 
-/// @brief RemoteMemberで扱うMediaStream
 class RemoteMediaStream : public RemoteStream {
 public:
     virtual ~RemoteMediaStream() = default;
 
-    /// @brief Trackを取得します。
     virtual rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> GetTrack() const = 0;
 
 protected:
@@ -29,4 +27,4 @@ protected:
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_INTERFACE_REMOTE_MEDIA_STREAM_HPP_ */
+#endif

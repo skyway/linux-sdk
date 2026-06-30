@@ -8,7 +8,6 @@
 #include <modules/audio_processing/include/audio_processing.h>
 
 #include "audio_data_forwarder.hpp"
-#include "skyway/global/interface/logger.hpp"
 
 namespace skyway {
 namespace content {
@@ -45,4 +44,4 @@ private:
 }  // namespace content
 }  // namespace skyway
 
-#endif  // SKYWAY_CONTENT_AUDIO_PROCESSING_MANAGER_HPP
+#endif

@@ -26,4 +26,4 @@ void to_json(nlohmann::json& j, const Member& member);
 }  // namespace interface
 }  // namespace signaling
 }  // namespace skyway
-#endif /* SKYWAY_SIGNALING_INTERFACE_MEMBER_HPP_ */
+#endif

@@ -17,7 +17,6 @@
 namespace skyway {
 namespace rtc_api {
 
-/// @brief RTC-APIサーバと通信を行うクライアント
 class Client : public interface::Client {
 public:
     Client(const rpc::RapiOptions& options);
@@ -67,4 +66,4 @@ public:
 }  // namespace rtc_api
 }  // namespace skyway
 
-#endif /* SKYWAY_RTC_API_CLIENT_HPP_ */
+#endif

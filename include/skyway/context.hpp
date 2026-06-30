@@ -5,6 +5,8 @@
 #ifndef SKYWAY_CONTEXT_HPP_
 #define SKYWAY_CONTEXT_HPP_
 
+#include <mutex>
+
 #include <skyway/core/context.hpp>
 #include <skyway/core/interface/remote_member_plugin.hpp>
 #include <skyway/global/error.hpp>
@@ -24,15 +26,86 @@ class PassthroughVideoEncoderFactoryTest;
 }  // namespace media
 
 /// @brief アプリケーションでSkyWay全体の設定、取得を行うStaticなコンテキスト
-/// @details 特別な理由がない場合はcore::Contextでなく、こちらを利用してください。
-class Context : public core::Context {
+class Context {
 public:
-    static const unsigned int kVersionMajor = 3;
-    static const unsigned int kVersionMinor = 4;
-    static const unsigned int kVersionPatch = 1;
+    static const unsigned int kVersionMajor = 4;
+    static const unsigned int kVersionMinor = 0;
+    static const unsigned int kVersionPatch = 0;
+
+    /// @brief Contextのイベントリスナ
+    class EventListener {
+    public:
+        virtual ~EventListener() = default;
+
+        /// @brief 再接続処理が開始した時にコールされます。
+        virtual void OnReconnectStart() = 0;
+
+        /// @brief 再接続が成功した時にコールされます。
+        virtual void OnReconnectSuccess() = 0;
+
+        /// @brief 回復不能なエラーが発生した時にコールされます。
+        /// @details インターネット接続状況を確認した上で再度Context::Setupをコールしてください。
+        /// @param error エラー
+        virtual void OnFatalError(const global::Error& error) = 0;
+    };
+
+    /// @brief AuthTokenのイベントリスナ
+    class AuthTokenListener {
+    public:
+        virtual ~AuthTokenListener() = default;
+
+        /// @brief 設定したリマインド時間に応じてコールされるリマインダコールバック関数
+        virtual void OnTokenRefreshingNeeded() {}
+
+        /// @brief トークンが失効した時にコールされるコールバック関数
+        virtual void OnTokenExpired() {}
+    };
 
     /// @brief SkyWayの利用に関する設定
-    struct SkyWayOptions : core::ContextOptions {
+    struct SkyWayOptions {
+        /// @cond INTERNAL_SECTION
+
+        /// @brief RTCAPIサーバーへの接続に関する設定
+        struct RtcApi {
+            std::optional<std::string> domain;
+            std::optional<bool> secure;
+        };
+
+        /// @brief ICEサーバーへの接続に関する設定
+        struct IceParams {
+            std::optional<std::string> domain;
+            std::optional<int> version;
+            std::optional<bool> secure;
+            webrtc::PeerConnectionInterface::IceServers custom_ice_servers;
+        };
+
+        /// @brief Signalingサーバーへの接続に関する設定
+        struct Signaling {
+            std::optional<std::string> domain;
+            std::optional<bool> secure;
+        };
+
+        /// @brief Analyticsサーバーへの接続に関する設定
+        struct Analytics {
+            std::optional<std::string> domain;
+            std::optional<bool> secure;
+        };
+
+        /// @brief RTCサーバーへの接続に関する設定
+        struct RtcConfig {
+            std::optional<int> timeout;
+            std::optional<domain::TurnPolicy> policy;
+        };
+
+        /// @endcond
+
+        /// @brief トークンに関する設定
+        struct Token {
+            [[deprecated]] std::optional<int> remind_time_sec;
+            std::optional<int> update_remind_sec;
+            AuthTokenListener* listener = nullptr;
+        };
+
         /**
          * @brief SkyWayのRTPに関する設定
          */
@@ -69,7 +142,16 @@ public:
             Input input;
         };
         /// @brief ログレベル
-        global::interface::Logger::Level log_level = global::interface::Logger::kInfo;
+        domain::LogLevel log_level = domain::LogLevel::kInfo;
+
+        /// @cond INTERNAL_SECTION
+        RtcApi rtc_api;
+        IceParams ice_params;
+        Signaling signaling;
+        Analytics analytics;
+        RtcConfig rtc_config;
+        Token token;
+        /// @endcond
 
         /// @brief WebRTCのログを有効にします
         bool enable_webrtc_log = false;
@@ -81,6 +163,7 @@ public:
         /// @brief RTPに関する設定
         Rtp rtp;
 
+        /// @cond INTERNAL_SECTION
         /// @brief SFUサーバーの接続に関する設定
         struct SFU {
             std::optional<std::string> domain;
@@ -88,6 +171,7 @@ public:
             std::optional<bool> secure;
         };
         SFU sfu;
+        /// @endcond
     };
 
     /// @brief Contextを初期化します。
@@ -96,7 +180,7 @@ public:
     /// @param listener イベントリスナ
     /// @param options オプション
     static bool Setup(const std::string& token,
-                      core::Context::EventListener* listener,
+                      EventListener* listener,
                       const SkyWayOptions& options);
 
     /// @brief Contextを初期化します。このメソッドは動作確認用です。
@@ -107,7 +191,7 @@ public:
     /// @param options オプション
     static bool SetupForDev(const std::string& app_id,
                             const std::string& secret_key,
-                            core::Context::EventListener* listener,
+                            EventListener* listener,
                             const SkyWayOptions& options);
 
     /// @brief SkyWayを終了し、Contextを破棄します。
@@ -117,6 +201,9 @@ public:
     /// Dispose完了後にSDKで生成されたリソースにアクセスしないでください。
     /// skyway::Context::Setup()を再度コールすることで利用可能になります。
     static void Dispose();
+
+    /// @brief AuthTokenを更新します。
+    static bool UpdateAuthToken(const std::string& token);
 
     /// @brief SkyWay Linux SDKのバージョンを取得します。
     static std::string GetVersionString();
@@ -128,7 +215,37 @@ public:
     /// @endcond
 
 private:
+    class CoreEventListenerAdapter : public core::Context::EventListener {
+    public:
+        CoreEventListenerAdapter();
+        void SetListener(Context::EventListener* listener);
+        void OnReconnectStart() override;
+        void OnReconnectSuccess() override;
+        void OnFatalError(const global::Error& error) override;
+
+    private:
+        Context::EventListener* listener_;
+    };
+
+    class CoreAuthTokenListenerAdapter : public token::interface::AuthTokenManager::Listener {
+    public:
+        CoreAuthTokenListenerAdapter();
+        void SetListener(Context::AuthTokenListener* listener);
+        void OnTokenRefreshingNeeded() override;
+        void OnTokenExpired() override;
+
+    private:
+        Context::AuthTokenListener* listener_;
+    };
+
+    static core::TurnPolicy ConvertToCoreTurnPolicy(domain::TurnPolicy policy);
+    static core::ContextOptions ConvertToCoreContextOptions(const SkyWayOptions& options);
+
     inline static SkyWayOptions::Rtp rtp_;
+    static std::mutex core_event_listener_mutex_;
+    static CoreEventListenerAdapter core_event_listener_adapter_;
+    static std::mutex core_auth_token_listener_mutex_;
+    static CoreAuthTokenListenerAdapter core_auth_token_listener_adapter_;
 
 public:
     /// @cond INTERNAL_SECTION

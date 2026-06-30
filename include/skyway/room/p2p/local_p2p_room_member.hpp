@@ -14,12 +14,15 @@ namespace p2p {
 /// @brief LocalRoomMemberの操作を行うクラス
 class LocalP2PRoomMember : public abstract::LocalRoomMember {
 public:
+    /// @cond INTERNAL_SECTION
     LocalP2PRoomMember(std::shared_ptr<core::interface::LocalPerson> core,
                        std::shared_ptr<interface::Room> room,
                        interface::RoomDomainFactory* factory);
+    /// @endcond
+
     ~LocalP2PRoomMember();
     std::shared_ptr<interface::RoomPublication> Publish(
-        std::shared_ptr<core::interface::LocalStream> stream,
+        std::shared_ptr<media::stream::interface::local::LocalStream> stream,
         interface::LocalRoomMember::PublicationOptions options) override;
     std::shared_ptr<interface::RoomSubscription> Subscribe(
         const std::string& publication_id,

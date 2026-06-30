@@ -40,4 +40,4 @@ void from_json(const nlohmann::json& j, IceParamsResponse& response);
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_ICE_DTO_RESPONSE_HPP_ */
+#endif

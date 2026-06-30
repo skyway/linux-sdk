@@ -5,6 +5,8 @@
 #ifndef SKYWAY_MEDIA_RTP_RTP_CAPTURER_VIDEO_SOURCE_HPP_
 #define SKYWAY_MEDIA_RTP_RTP_CAPTURER_VIDEO_SOURCE_HPP_
 
+#include <cstdint>
+
 #include <api/field_trials.h>
 #include <video/rtp_video_stream_receiver2.h>
 
@@ -84,6 +86,7 @@ private:
     webrtc::VideoReceiveStreamInterface::Config config_;
     std::unique_ptr<webrtc::TaskQueueBase, webrtc::TaskQueueDeleter> encoded_image_queue_ = nullptr;
     std::unique_ptr<webrtc::RtpVideoStreamReceiver2> receiver_                            = nullptr;
+    uint64_t receiver_generation_                                                         = 0;
     std::atomic<bool> frame_loop_stopped_                                                 = true;
     std::unique_ptr<global::interface::Worker> dummy_frame_worker_;
     std::atomic<std::optional<uint16_t>> frame_id_;

@@ -5,6 +5,10 @@
 #ifndef SKYWAY_SIGNALING_SOCKET_FACTORY_HPP_
 #define SKYWAY_SIGNALING_SOCKET_FACTORY_HPP_
 
+#include <memory>
+#include <optional>
+#include <string>
+
 #include "skyway/network/interface/websocket_client.hpp"
 #include "skyway/platform/interface/platform_info_delegator.hpp"
 #include "skyway/signaling/interface/signaling_client.hpp"
@@ -12,6 +16,7 @@
 #include "skyway/token/interface/auth_token_manager.hpp"
 
 namespace skyway {
+
 namespace signaling {
 
 class SocketFactory {
@@ -37,4 +42,4 @@ private:
 }  // namespace signaling
 }  // namespace skyway
 
-#endif /* SKYWAY_SIGNALING_SOCKET_FACTORY_HPP_ */
+#endif

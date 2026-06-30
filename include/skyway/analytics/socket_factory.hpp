@@ -5,6 +5,9 @@
 #ifndef SKYWAY_ANALYTICS_SOCKET_FACTORY_HPP_
 #define SKYWAY_ANALYTICS_SOCKET_FACTORY_HPP_
 
+#include <memory>
+#include <string>
+
 #include "skyway/analytics/interface/analytics_client.hpp"
 #include "skyway/analytics/interface/socket.hpp"
 #include "skyway/network/interface/websocket_client.hpp"
@@ -12,6 +15,7 @@
 #include "skyway/token/interface/auth_token_manager.hpp"
 
 namespace skyway {
+
 namespace analytics {
 
 class SocketFactory {
@@ -31,4 +35,4 @@ private:
 }  // namespace analytics
 }  // namespace skyway
 
-#endif /* SKYWAY_ANALYTICS_SOCKET_FACTORY_HPP_ */
+#endif

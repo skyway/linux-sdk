@@ -29,4 +29,4 @@ public:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif /* SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_SFU_CONNECTION_FACTORY_HPP_ */
+#endif

@@ -7,9 +7,7 @@ var classskyway_1_1room_1_1abstract_1_1_room =
     [ "Leave", "classskyway_1_1room_1_1abstract_1_1_room.html#a7ee752198a87004020d592cf8040b983", null ],
     [ "Metadata", "classskyway_1_1room_1_1abstract_1_1_room.html#a2f1d2b6b79bc47d91405cda926ff7d21", null ],
     [ "Name", "classskyway_1_1room_1_1abstract_1_1_room.html#ac76ef42a87690fcfdd73425c9b1b87ef", null ],
-    [ "OnClosed", "classskyway_1_1room_1_1abstract_1_1_room.html#a523cb4006f062249ed82141a0de255aa", null ],
-    [ "OnMetadataUpdated", "classskyway_1_1room_1_1abstract_1_1_room.html#a80ef50c6e9789a02e5701fcb2ca4fc34", null ],
     [ "RemoveEventListener", "classskyway_1_1room_1_1abstract_1_1_room.html#a7e4e507a38a89abe375dd565461e96bd", null ],
-    [ "State", "classskyway_1_1room_1_1abstract_1_1_room.html#acc1e79c0fd1270e53fd4f047b1da1649", null ],
+    [ "State", "classskyway_1_1room_1_1abstract_1_1_room.html#a6c42b5c6d36ee6bf319df7981bff0054", null ],
     [ "UpdateMetadata", "classskyway_1_1room_1_1abstract_1_1_room.html#ad5b08ea123c4ffd28d65736460a55206", null ]
 ];

@@ -18,40 +18,36 @@ enum class TurnPolicy {
     kTurnOnly,
 };
 
-/// @brief Contextの`Setup`時に使用するオプション
 struct ContextOptions {
-    /// @brief RTCAPIサーバーへの接続に関する設定
     struct RtcApi {
         std::optional<std::string> domain;
         std::optional<bool> secure;
     };
-    /// @brief ICEサーバーへの接続に関する設定
+
     struct IceParams {
         std::optional<std::string> domain;
         std::optional<int> version;
         std::optional<bool> secure;
         webrtc::PeerConnectionInterface::IceServers custom_ice_servers;
     };
-    /// @brief Signalingサーバーへの接続に関する設定
+
     struct Signaling {
         std::optional<std::string> domain;
         std::optional<bool> secure;
     };
 
-    /// @brief Analyticsサーバーへの接続に関する設定
     struct Analytics {
         std::optional<std::string> domain;
         std::optional<bool> secure;
     };
-    /// @brief RTCサーバーへの接続に関する設定
+
     struct RtcConfig {
         std::optional<int> timeout;
-        /// @brief TURN接続に関するポリシーを選択します。
+
         std::optional<TurnPolicy> policy;
     };
-    /// @brief トークンに関する設定
+
     struct Token {
-        /// @deprecated 非推奨です。update_remind_sec を使用してください。
         [[deprecated]] std::optional<int> remind_time_sec;
         std::optional<int> update_remind_sec;
         token::interface::AuthTokenManager::Listener* listener = nullptr;
@@ -62,9 +58,11 @@ struct ContextOptions {
     Analytics analytics;
     RtcConfig rtc_config;
     Token token;
+
+    bool dispose_channel_when_close = false;
 };
 
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_CONTEXT_OPTIONS_HPP_ */
+#endif

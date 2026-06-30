@@ -5,6 +5,7 @@
 #ifndef SKYWAY_CORE_CONFIG_HPP_
 #define SKYWAY_CORE_CONFIG_HPP_
 
+#include <cstddef>
 #include <string>
 
 namespace skyway {
@@ -24,18 +25,23 @@ extern const int kLocalPersonCreationTimeoutSec;
 }
 
 namespace member {
-/// The extra sec for `UpdateMemberTtl`
+
 extern const int kDefaultKeepAliveIntervalGapSec;
 extern const int kDefaultKeepAliveIntervalSec;
 extern const int kInfiniteKeepAliveInterval;
 }  // namespace member
 
+namespace data_stream {
+
+extern const size_t kRemoteDataStreamMaxBufferSize;
+}
+
 extern const std::string kLocalDataStreamLabel;
-/// JS-SDKにおいてobject型を送信される時に付与されるフラグ文字列
+
 extern const std::string kRemoteDataStreamJsObjectFlag;
 
 }  // namespace config
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_CONFIG_HPP_ */
+#endif

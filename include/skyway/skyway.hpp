@@ -9,19 +9,15 @@
 
 namespace skyway {
 
-// General
-static const unsigned kVersionMajor = 10;
+static const unsigned kVersionMajor = 11;
 static const unsigned kVersionMinor = 0;
 static const unsigned kVersionPatch = 1;
 
 inline std::string GetVersionString() {
-    // clang-format off
-    return std::to_string(kVersionMajor)
-        + "." + std::to_string(kVersionMinor)
-        + "." + std::to_string(kVersionPatch);
-    // clang-format on
+    return std::to_string(kVersionMajor) + "." + std::to_string(kVersionMinor) + "." +
+           std::to_string(kVersionPatch);
 }
 
 }  // namespace skyway
 
-#endif /* SKYWAY_SKYWAY_HPP_ */
+#endif

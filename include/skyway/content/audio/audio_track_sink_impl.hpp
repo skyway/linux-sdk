@@ -27,4 +27,4 @@ public:
 }  // namespace content
 }  // namespace skyway
 
-#endif  // SKYWAY_AUDIO_TRACK_SINK_IMPL_HPP
+#endif

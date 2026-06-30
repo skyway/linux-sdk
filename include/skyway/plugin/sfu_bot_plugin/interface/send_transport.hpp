@@ -29,13 +29,8 @@ public:
 
     virtual ~SendTransport() = default;
 
-    /// @brief リスナーを追加します。
-    /// @param transaction_id トランザクションID
-    /// @param listener リスナー
     virtual void AddListener(const TransactionId& transaction_id, Listener* listener) = 0;
 
-    /// @brief リスナーを削除します。
-    /// @param transaction_id リスナーに紐づくトランザクションID
     virtual void RemoveListener(const TransactionId& transaction_id) = 0;
     virtual ProducerId Produce(mediasoupclient::Producer::Listener* producer_listener,
                                rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track,
@@ -63,4 +58,4 @@ protected:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif  // SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_SEND_TRANSPORT_HPP_
+#endif

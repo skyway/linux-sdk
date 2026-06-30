@@ -23,20 +23,12 @@ enum class Status {
     kInternalServerError  = 500
 };
 
-/// IceParamsサーバのステートレスなクライアント
 class IceParamsClient : public interface::IceParamsClient {
 public:
     using HttpClientInterface = network::interface::HttpClient;
-    /// コンストラクタ
-    /// @param http HTTPクライアント
+
     IceParamsClient(HttpClientInterface* http, const ContextOptions::IceParams& options);
 
-    /// @brief 利用可能なIceServer情報をサーバに問い合わせます。
-    /// @details 認証トークンで許可されたMemberに対して情報を発行します。
-    /// @param token 認証トークン
-    /// @param member_id MemberID
-    /// @param ttl 認証情報の有効期限(秒)
-    /// @return Iceサーバの配列を返します。情報取得に失敗した場合は空配列を返します。
     webrtc::PeerConnectionInterface::IceServers FetchIceServers(
         const std::string& token,
         const std::string& channel_id,
@@ -55,4 +47,4 @@ private:
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_ICE_ICE_PARAMS_CLIENT_HPP_ */
+#endif

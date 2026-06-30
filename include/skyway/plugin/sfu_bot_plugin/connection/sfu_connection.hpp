@@ -9,8 +9,7 @@
 
 #include <unordered_map>
 
-#include "skyway/analytics/interface/analytics_client.hpp"
-#include "skyway/core/context.hpp"
+#include "skyway/core/context_options.hpp"
 #include "skyway/core/interface/publication.hpp"
 #include "skyway/core/interface/stream.hpp"
 #include "skyway/core/interface/subscription.hpp"
@@ -49,11 +48,12 @@ public:
     void Dispose() override;
 
 private:
-    Sender* CreateSender(std::shared_ptr<core::interface::Publication> publication,
-                         ForwardingConfigure configure);
-    Sender* GetSender(const std::string& publication_id);
-    Receiver* CreateReceiver(std::shared_ptr<core::interface::Subscription> subscription);
-    Receiver* GetReceiver(const std::string& subscription_id);
+    std::shared_ptr<Sender> CreateSender(std::shared_ptr<core::interface::Publication> publication,
+                                         ForwardingConfigure configure);
+    std::shared_ptr<Sender> GetSender(const std::string& publication_id);
+    std::shared_ptr<Receiver> CreateReceiver(
+        std::shared_ptr<core::interface::Subscription> subscription);
+    std::shared_ptr<Receiver> GetReceiver(const std::string& subscription_id);
 
     std::string local_person_id_;
     std::string bot_id_;
@@ -63,15 +63,23 @@ private:
 
     using OriginPublicationId = std::string;
     using SubscriptionId      = std::string;
-    std::mutex start_forwarding_mtx_;
-    std::mutex senders_mtx_;
-    std::mutex receivers_mtx_;
-    std::unordered_map<OriginPublicationId, std::unique_ptr<Sender>> senders_;
-    std::unordered_map<SubscriptionId, std::unique_ptr<Receiver>> receivers_;
 
-    interface::Device::PeerConnectionOptions peer_connection_options_;
+    std::mutex start_forwarding_mtx_;
+    std::shared_ptr<Sender> start_forwarding_sender_;
+
+    std::mutex stop_forwarding_mtx_;
+    std::mutex senders_mtx_;
+    std::unordered_map<OriginPublicationId, std::shared_ptr<Sender>> senders_;
+
+    std::mutex receiving_mtx_;
+    std::shared_ptr<Receiver> start_receiving_receiver_;
+    std::mutex receivers_mtx_;
+    std::unordered_map<SubscriptionId, std::shared_ptr<Receiver>> receivers_;
+
     std::mutex dispose_mtx_;
     std::atomic<bool> is_disposed_ = false;
+
+    interface::Device::PeerConnectionOptions peer_connection_options_;
 };
 
 }  // namespace connection
@@ -79,4 +87,4 @@ private:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif /* SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_SFU_CONNECTION_HPP_ */
+#endif

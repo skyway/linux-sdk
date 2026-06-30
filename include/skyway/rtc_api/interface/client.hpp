@@ -11,15 +11,12 @@ namespace skyway {
 namespace rtc_api {
 namespace interface {
 
-/// @brief RTC-APIサーバと通信を行うクライアント
 class Client {
 public:
     virtual ~Client() = default;
-    /// @brief RTC-APIサーバに接続します。
-    ///
-    /// RTC APIサーバへの操作は最初にこのメソッドを呼ぶ必要があります。
+
     virtual bool Connect() = 0;
-    /// @brief Channelを作成します。
+
     virtual std::shared_ptr<ChannelState> CreateChannel(const model::Channel::Init& init)       = 0;
     virtual std::shared_ptr<ChannelState> FindChannel(const model::Channel::Query& query)       = 0;
     virtual std::shared_ptr<ChannelState> FindOrCreateChannel(const model::Channel::Init& init) = 0;
@@ -56,4 +53,4 @@ public:
 }  // namespace rtc_api
 }  // namespace skyway
 
-#endif /* SKYWAY_RTC_API_INTERFACE_CLIENT_HPP_ */
+#endif

@@ -20,7 +20,7 @@ bool ExampleRoom::Setup(const std::string& app_id, const std::string& secret_key
     skyway::Context::SkyWayOptions context_options{};
 
     // SkyWayのログレベルの設定が行えます。
-    context_options.log_level = skyway::global::interface::Logger::kWarn;
+    context_options.log_level = skyway::domain::LogLevel::kWarn;
 
     // SkyWayのAppIdとSecretKeyを使用して、SkyWayContextをセットアップします。
     // 本番環境ではContext::Setupを使用してください。
@@ -76,7 +76,7 @@ void ExampleRoom::Publish() {
     auto video_devices = skyway::media::DeviceManager::GetVideoDevices();
     if (video_devices.size() > 0) {
         std::cout << "- VideoDevices" << std::endl;
-        for (auto device : video_devices) {
+        for (const auto& device : video_devices) {
             std::cout << "  - Index: " << device.index << " Name: " << device.name << std::endl;
         }
 
@@ -85,13 +85,22 @@ void ExampleRoom::Publish() {
         std::cout << "- Enter the index of the video device to be published: ";
         std::cin >> device_index;
         if (device_index >= 0 && device_index < video_devices.size()) {
-            auto video_stream =
-                skyway::media::StreamFactory::CreateVideoStream(video_devices[device_index]);
+            // 1280x720 / 30fps
+            // を希望値として指定します。必ずしも指定した値が使われるとは限りません。
+            skyway::media::StreamFactory::CaptureOptions capture_options;
+            capture_options.preferred_width     = 1280;
+            capture_options.preferred_height    = 720;
+            capture_options.preferred_framerate = 30;
+            auto video_stream                   = skyway::media::StreamFactory::CreateVideoStream(
+                video_devices[device_index], capture_options);
             skyway::room::interface::LocalRoomMember::PublicationOptions publication_options {};
-            publication_options.type = skyway::model::PublicationType::kP2P;
+            publication_options.type = skyway::domain::PublicationType::kP2P;
             auto publication         = room_member_->Publish(video_stream, publication_options);
             if (publication) {
                 std::cout << "  - VideoStream Published" << std::endl;
+                std::cout << "    - Preferred Capture: " << capture_options.preferred_width << "x"
+                          << capture_options.preferred_height << " / "
+                          << capture_options.preferred_framerate << "fps" << std::endl;
                 std::cout << "    - Publication Id: " << publication->Id() << std::endl;
             }
         } else {
@@ -106,7 +115,7 @@ void ExampleRoom::Publish() {
         skyway::media::DeviceManager::SetRecordingDevice(device);
         auto audio_stream = skyway::media::StreamFactory::CreateAudioStream();
         skyway::room::interface::LocalRoomMember::PublicationOptions publication_options {};
-        publication_options.type = skyway::model::PublicationType::kP2P;
+        publication_options.type = skyway::domain::PublicationType::kP2P;
         auto publication         = room_member_->Publish(audio_stream, publication_options);
         if (publication) {
             std::cout << "- AudioStream Published" << std::endl;
@@ -133,7 +142,7 @@ void ExampleRoom::Publish() {
     threads_.emplace_back(std::move(data_thread));
 
     skyway::room::interface::LocalRoomMember::PublicationOptions publication_options {};
-    publication_options.type = skyway::model::PublicationType::kP2P;
+    publication_options.type = skyway::domain::PublicationType::kP2P;
     auto publication         = room_member_->Publish(data_stream_, publication_options);
     if (publication) {
         std::cout << "- DataStream Published" << std::endl;
@@ -154,7 +163,7 @@ bool ExampleRoom::Subscribe(std::shared_ptr<skyway::room::interface::RoomPublica
 
     // PublicationのContentTypeに応じてメディアを出力します。
     skyway::room::interface::LocalRoomMember::SubscriptionOptions subscription_options {};
-    if (publication->ContentType() == skyway::model::ContentType::kVideo) {
+    if (publication->ContentType() == skyway::domain::ContentType::kVideo) {
         if (renderer_device_name_ == "") {
             // 出力先を指定していない場合はSubscribeしません。
             std::cout << "- VideoStream Subscribe Canceled" << std::endl;
@@ -171,8 +180,9 @@ bool ExampleRoom::Subscribe(std::shared_ptr<skyway::room::interface::RoomPublica
         if (!subscription) {
             return false;
         }
-        auto stream = std::dynamic_pointer_cast<skyway::core::stream::remote::RemoteVideoStream>(
-            subscription->Stream());
+        auto stream =
+            std::dynamic_pointer_cast<skyway::media::stream::interface::remote::RemoteVideoStream>(
+                subscription->Stream());
 
         // 映像を出力デバイスに書き込みます。
         skyway::media::V4l2VideoRendererOptions monitor_opt;
@@ -188,7 +198,7 @@ bool ExampleRoom::Subscribe(std::shared_ptr<skyway::room::interface::RoomPublica
         std::cout << "  - Specified Height: " << monitor_opt.scaled_height << std::endl;
         std::cout << "  - Publication Id: " << publication->Id() << std::endl;
         std::cout << "  - Subscription Id: " << subscription->Id() << std::endl;
-    } else if (publication->ContentType() == skyway::model::ContentType::kAudio) {
+    } else if (publication->ContentType() == skyway::domain::ContentType::kAudio) {
         auto devices = skyway::media::DeviceManager::GetPlayoutDevices();
         if (devices.size() > 0) {
             auto device = devices[0];
@@ -203,15 +213,15 @@ bool ExampleRoom::Subscribe(std::shared_ptr<skyway::room::interface::RoomPublica
             std::cout << "  - Publication Id: " << publication->Id() << std::endl;
             std::cout << "  - Subscription Id: " << subscription->Id() << std::endl;
         }
-    } else if (publication->ContentType() == skyway::model::ContentType::kData) {
+    } else if (publication->ContentType() == skyway::domain::ContentType::kData) {
         auto subscription = room_member_->Subscribe(publication->Id(), subscription_options);
         if (!subscription) {
             return false;
         }
         auto data_stream =
-            std::dynamic_pointer_cast<skyway::core::stream::remote::RemoteDataStream>(
+            std::dynamic_pointer_cast<skyway::media::stream::interface::remote::RemoteDataStream>(
                 subscription->Stream());
-        // DataStreamにイベントリスナ(skyway::core::stream::remote::RemoteDataStream::Listenerの実装)を登録します。
+        // DataStreamにイベントリスナ(skyway::media::stream::interface::remote::RemoteDataStream::Listenerの実装)を登録します。
         data_stream->AddListener(this);
         std::cout << "- DataStream Subscribed" << std::endl;
         std::cout << "  - Publication Id: " << publication->Id() << std::endl;
@@ -263,7 +273,7 @@ void ExampleRoom::OnStreamPublished(
     threads_.emplace_back(std::move(subscribe_thread));
 }
 
-// Impl skyway::core::stream::remote::RemoteDataStream::Listener
+// Impl skyway::media::stream::interface::remote::RemoteDataStream::Listener
 void ExampleRoom::OnData(const std::string& data) {
     std::cout << "- [Event] DataStream Message Received: " << data << std::endl;
 }
