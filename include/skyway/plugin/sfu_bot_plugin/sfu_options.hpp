@@ -9,13 +9,11 @@ namespace skyway {
 namespace plugin {
 namespace sfu_options {
 
-/// @brief SfuBotのオプション
 struct SfuOptionsParams {
-    /// @brief Sfuサーバーの接続先
     std::optional<std::string> domain;
-    /// @brief Sfuサーバーのバージョン
+
     std::optional<int> version;
-    /// @brief Sfuサーバーのセキュリティフラグ
+
     std::optional<bool> secure;
 };
 
@@ -23,4 +21,4 @@ struct SfuOptionsParams {
 }  // namespace plugin
 }  // namespace skyway
 
-#endif /* SKYWAY_PLUGIN_SFU_BOT_PLUGIN_SFU_OPTIONS_HPP_ */
+#endif

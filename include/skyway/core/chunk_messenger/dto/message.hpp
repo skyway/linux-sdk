@@ -35,4 +35,4 @@ void to_json(nlohmann::json& j, const ChunkedMessage& message);
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_CHUNK_MESSENGER_DTO_MESSAGE_HPP_ */
+#endif

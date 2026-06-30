@@ -6,10 +6,10 @@
 #define SKYWAY_EXAMPLES_OPENCV_EXAMPLE_ROOM_HPP_
 
 #include <skyway/context.hpp>
-#include <skyway/core/stream/remote/data_stream.hpp>
 #include <skyway/media/device_manager.hpp>
 #include <skyway/media/opencv/opencv_capturer_video_source.hpp>
 #include <skyway/media/opencv/opencv_video_renderer.hpp>
+#include <skyway/media/stream/interface/remote/remote_video_stream.hpp>
 #include <skyway/media/stream_factory.hpp>
 #include <skyway/room/room.hpp>
 

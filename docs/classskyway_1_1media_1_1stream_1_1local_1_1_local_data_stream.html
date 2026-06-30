@@ -101,6 +101,7 @@ $(document).ready(function(){initNavTree('classskyway_1_1media_1_1stream_1_1loca
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="classskyway_1_1media_1_1stream_1_1local_1_1_local_data_stream-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle"><div class="title">skyway::media::stream::local::LocalDataStream クラス</div></div>
 </div><!--header-->
@@ -111,50 +112,105 @@ skyway::media::stream::local::LocalDataStream の継承関係図</div>
  <div class="center">
   <img src="classskyway_1_1media_1_1stream_1_1local_1_1_local_data_stream.png" usemap="#skyway::media::stream::local::LocalDataStream_map" alt=""/>
   <map id="skyway::media::stream::local::LocalDataStream_map" name="skyway::media::stream::local::LocalDataStream_map">
-<area href="classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream.html" title="LocalPersonで扱うDataStream" alt="skyway::core::stream::local::LocalDataStream" shape="rect" coords="0,112,271,136"/>
-<area href="classskyway_1_1core_1_1interface_1_1_local_stream.html" title="LocalPersonで扱うStream" alt="skyway::core::interface::LocalStream" shape="rect" coords="0,56,271,80"/>
-<area href="classskyway_1_1core_1_1interface_1_1_stream.html" title="MediaStreamやDataStreamの基底クラス" alt="skyway::core::interface::Stream" shape="rect" coords="0,0,271,24"/>
+<area href="classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base.html" alt="skyway::media::stream::abstract::StreamBase&lt; interface::local::LocalDataStream, skyway::core::interface::LocalStream, skyway::core::stream::local::LocalDataStream &gt;" shape="rect" coords="0,168,945,192"/>
+<area href="classskyway_1_1media_1_1stream_1_1interface_1_1local_1_1_local_data_stream.html" alt="skyway::media::stream::interface::local::LocalDataStream" shape="rect" coords="0,112,945,136"/>
+<area href="classskyway_1_1media_1_1stream_1_1interface_1_1local_1_1_local_stream.html" alt="skyway::media::stream::interface::local::LocalStream" shape="rect" coords="0,56,945,80"/>
+<area href="classskyway_1_1media_1_1stream_1_1interface_1_1_stream.html" alt="skyway::media::stream::interface::Stream" shape="rect" coords="0,0,945,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-その他の継承メンバ</h2></td></tr>
-<tr class="inherit_header pub_types_classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream.html">skyway::core::stream::local::LocalDataStream</a> に属する継承公開型</td></tr>
-<tr class="memitem:a17787eee88efede29825d3143b24d9ae inherit pub_types_classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream" id="r_a17787eee88efede29825d3143b24d9ae"><td class="memItemLeft" align="right" valign="top">
-using&#160;</td><td class="memItemRight" valign="bottom"><b>PublicationId</b> = std::string</td></tr>
-<tr class="separator:a17787eee88efede29825d3143b24d9ae inherit pub_types_classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream.html">skyway::core::stream::local::LocalDataStream</a> に属する継承公開メンバ関数</td></tr>
-<tr class="memitem:a4429f4d9e1bed97c4a43ad94c885a687 inherit pub_methods_classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream" id="r_a4429f4d9e1bed97c4a43ad94c885a687"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (const std::string &amp;data) const</td></tr>
-<tr class="memdesc:a4429f4d9e1bed97c4a43ad94c885a687 inherit pub_methods_classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を送信します。 <br /></td></tr>
-<tr class="separator:a4429f4d9e1bed97c4a43ad94c885a687 inherit pub_methods_classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4643d33ab80d292671132d9f496dce3e inherit pub_methods_classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream" id="r_a4643d33ab80d292671132d9f496dce3e"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (const uint8_t *data, size_t length) const</td></tr>
-<tr class="memdesc:a4643d33ab80d292671132d9f496dce3e inherit pub_methods_classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">バイト列を送信します。 <br /></td></tr>
-<tr class="separator:a4643d33ab80d292671132d9f496dce3e inherit pub_methods_classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classskyway_1_1core_1_1interface_1_1_stream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classskyway_1_1core_1_1interface_1_1_stream')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classskyway_1_1core_1_1interface_1_1_stream.html">skyway::core::interface::Stream</a> に属する継承公開メンバ関数</td></tr>
-<tr class="memitem:acdc167a4259eb8f7dd535e3f5ac11adf inherit pub_methods_classskyway_1_1core_1_1interface_1_1_stream" id="r_acdc167a4259eb8f7dd535e3f5ac11adf"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>Stream</b> (const std::string &amp;id, model::Side side, model::ContentType content_type)</td></tr>
-<tr class="separator:acdc167a4259eb8f7dd535e3f5ac11adf inherit pub_methods_classskyway_1_1core_1_1interface_1_1_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad066cf03683176a060a1e8b2dfb3820b inherit pub_methods_classskyway_1_1core_1_1interface_1_1_stream" id="r_ad066cf03683176a060a1e8b2dfb3820b"><td class="memItemLeft" align="right" valign="top">
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Id</b> () const</td></tr>
-<tr class="memdesc:ad066cf03683176a060a1e8b2dfb3820b inherit pub_methods_classskyway_1_1core_1_1interface_1_1_stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">Idを取得します <br /></td></tr>
-<tr class="separator:ad066cf03683176a060a1e8b2dfb3820b inherit pub_methods_classskyway_1_1core_1_1interface_1_1_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a295d334d074f50e31da3b80b32748418 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_stream" id="r_a295d334d074f50e31da3b80b32748418"><td class="memItemLeft" align="right" valign="top">
-model::Side&#160;</td><td class="memItemRight" valign="bottom"><b>Side</b> () const</td></tr>
-<tr class="memdesc:a295d334d074f50e31da3b80b32748418 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">Side(LocalかRemoteか)を取得します。 <br /></td></tr>
-<tr class="separator:a295d334d074f50e31da3b80b32748418 inherit pub_methods_classskyway_1_1core_1_1interface_1_1_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5e136124332272c163aa046689bfaba inherit pub_methods_classskyway_1_1core_1_1interface_1_1_stream" id="r_ad5e136124332272c163aa046689bfaba"><td class="memItemLeft" align="right" valign="top">
-model::ContentType&#160;</td><td class="memItemRight" valign="bottom"><b>ContentType</b> () const</td></tr>
-<tr class="memdesc:ad5e136124332272c163aa046689bfaba inherit pub_methods_classskyway_1_1core_1_1interface_1_1_stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">ContentType(VideoかAudioかDataか)を取得します。 <br /></td></tr>
-<tr class="separator:ad5e136124332272c163aa046689bfaba inherit pub_methods_classskyway_1_1core_1_1interface_1_1_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classskyway_1_1core_1_1interface_1_1_local_stream"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classskyway_1_1core_1_1interface_1_1_local_stream')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classskyway_1_1core_1_1interface_1_1_local_stream.html">skyway::core::interface::LocalStream</a> に属する継承限定公開メンバ関数</td></tr>
-<tr class="memitem:a61618ad49f4f88fccd5f225018a36236 inherit pro_methods_classskyway_1_1core_1_1interface_1_1_local_stream" id="r_a61618ad49f4f88fccd5f225018a36236"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>LocalStream</b> (model::ContentType content_type)</td></tr>
-<tr class="separator:a61618ad49f4f88fccd5f225018a36236 inherit pro_methods_classskyway_1_1core_1_1interface_1_1_local_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a5a69f4fde35a205f7af60cf7622b9c0c" id="r_a5a69f4fde35a205f7af60cf7622b9c0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1media_1_1stream_1_1local_1_1_local_data_stream.html#a5a69f4fde35a205f7af60cf7622b9c0c">Write</a> (const std::string &amp;data) const override</td></tr>
+<tr class="memdesc:a5a69f4fde35a205f7af60cf7622b9c0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を送信します。  <br /></td></tr>
+<tr class="separator:a5a69f4fde35a205f7af60cf7622b9c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae11b001fe6c1a49286e814ab05030dd1" id="r_ae11b001fe6c1a49286e814ab05030dd1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1media_1_1stream_1_1local_1_1_local_data_stream.html#ae11b001fe6c1a49286e814ab05030dd1">Write</a> (const uint8_t *data, size_t length) const override</td></tr>
+<tr class="memdesc:ae11b001fe6c1a49286e814ab05030dd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">バイト列を送信します。  <br /></td></tr>
+<tr class="separator:ae11b001fe6c1a49286e814ab05030dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base.html">skyway::media::stream::abstract::StreamBase&lt; interface::local::LocalDataStream, skyway::core::interface::LocalStream, skyway::core::stream::local::LocalDataStream &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a6cea0a868a24e2b00a0ba5318f7cdc5a inherit pub_methods_classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base" id="r_a6cea0a868a24e2b00a0ba5318f7cdc5a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base.html#a6cea0a868a24e2b00a0ba5318f7cdc5a">Id</a> () override</td></tr>
+<tr class="memdesc:a6cea0a868a24e2b00a0ba5318f7cdc5a inherit pub_methods_classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Idを取得します。    <br /></td></tr>
+<tr class="separator:a6cea0a868a24e2b00a0ba5318f7cdc5a inherit pub_methods_classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e5b56deff1e317a7ece27334d1935b inherit pub_methods_classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base" id="r_a39e5b56deff1e317a7ece27334d1935b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="domain_8hpp.html#ad5fe49feb413f1ea7b00fe3cc2163afc">domain::Side</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base.html#a39e5b56deff1e317a7ece27334d1935b">Side</a> () override</td></tr>
+<tr class="memdesc:a39e5b56deff1e317a7ece27334d1935b inherit pub_methods_classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Side(LocalかRemoteか)を取得します。    <br /></td></tr>
+<tr class="separator:a39e5b56deff1e317a7ece27334d1935b inherit pub_methods_classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a279ee69cb9496e8b40a907974e475 inherit pub_methods_classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base" id="r_aa3a279ee69cb9496e8b40a907974e475"><td class="memItemLeft" align="right" valign="top"><a class="el" href="domain_8hpp.html#ab6fa94d075ed07dbe5248e3552f4801f">domain::ContentType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base.html#aa3a279ee69cb9496e8b40a907974e475">ContentType</a> () override</td></tr>
+<tr class="memdesc:aa3a279ee69cb9496e8b40a907974e475 inherit pub_methods_classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ContentType(VideoかAudioかDataか)を取得します。    <br /></td></tr>
+<tr class="separator:aa3a279ee69cb9496e8b40a907974e475 inherit pub_methods_classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a5a69f4fde35a205f7af60cf7622b9c0c" name="a5a69f4fde35a205f7af60cf7622b9c0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a69f4fde35a205f7af60cf7622b9c0c">&#9670;&#160;</a></span>Write() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool skyway::media::stream::local::LocalDataStream::Write </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列を送信します。 </p>
+
+<p><a class="el" href="classskyway_1_1media_1_1stream_1_1interface_1_1local_1_1_local_data_stream.html#a5bd6cbb331a1bf0c23d77646a03fe9b8">skyway::media::stream::interface::local::LocalDataStream</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="ae11b001fe6c1a49286e814ab05030dd1" name="ae11b001fe6c1a49286e814ab05030dd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae11b001fe6c1a49286e814ab05030dd1">&#9670;&#160;</a></span>Write() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool skyway::media::stream::local::LocalDataStream::Write </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>バイト列を送信します。 </p>
+
+<p><a class="el" href="classskyway_1_1media_1_1stream_1_1interface_1_1local_1_1_local_data_stream.html#a52e31d428c29e81d605cbed6406602f1">skyway::media::stream::interface::local::LocalDataStream</a>を実装しています。</p>
+
+</div>
+</div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>include/skyway/media/stream/local/<a class="el" href="local__data__stream_8hpp_source.html">local_data_stream.hpp</a></li>
+<li>include/skyway/media/stream/local/<a class="el" href="local_2local__data__stream_8hpp_source.html">local_data_stream.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

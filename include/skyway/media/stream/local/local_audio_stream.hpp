@@ -7,14 +7,25 @@
 
 #include <skyway/core/stream/local/audio_stream.hpp>
 
+#include "skyway/media/stream/abstract/stream_base.hpp"
+#include "skyway/media/stream/interface/local/local_audio_stream.hpp"
+
 namespace skyway {
 namespace media {
 namespace stream {
 namespace local {
 
-class LocalAudioStream : public skyway::core::stream::local::LocalAudioStream {
+class LocalAudioStream
+    : public abstract::StreamBase<interface::local::LocalAudioStream,
+                                  skyway::core::interface::LocalStream,
+                                  skyway::core::stream::local::LocalAudioStream> {
 public:
+    /// @cond INTERNAL_SECTION
     LocalAudioStream(rtc::scoped_refptr<webrtc::AudioTrackInterface> track);
+    LocalAudioStream(std::shared_ptr<skyway::core::stream::local::LocalAudioStream> core);
+    /// @endcond
+
+    rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> Track() const override;
 };
 
 }  // namespace local

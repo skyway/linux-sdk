@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['token_0',['Token',['../structskyway_1_1core_1_1_context_options_1_1_token.html',1,'skyway::core::ContextOptions']]]
+  ['webrtcstats_0',['WebRTCStats',['../structskyway_1_1room_1_1_web_r_t_c_stats.html',1,'skyway::room']]],
+  ['webrtcstatsreport_1',['WebRTCStatsReport',['../structskyway_1_1room_1_1_web_r_t_c_stats_report.html',1,'skyway::room']]]
 ];

@@ -7,7 +7,7 @@
 
 #include <Consumer.hpp>
 #include <atomic>
-#include <unordered_map>
+#include <optional>
 
 #include "skyway/analytics/interface/analytics_client.hpp"
 #include "skyway/core/interface/remote_stream.hpp"
@@ -24,7 +24,8 @@ using RemoteStreamInterface = core::interface::RemoteStream;
 
 class Receiver : public mediasoupclient::Consumer::Listener,
                  public core::interface::Subscription::InternalListener,
-                 public core::interface::Subscription::Callback {
+                 public core::interface::Subscription::Callback,
+                 public std::enable_shared_from_this<Receiver> {
 public:
     Receiver(const std::string& local_person_id,
              const std::string& bot_id,
@@ -33,17 +34,15 @@ public:
              std::shared_ptr<core::interface::Subscription> subscription);
 
     ~Receiver();
-    void StartReceiving(const interface::Device::PeerConnectionOptions* pc_options);
+    bool StartReceiving(const interface::Device::PeerConnectionOptions* pc_options);
     bool StopReceiving();
+    void Dispose();
 
-    // mediasoupclient::Consumer::Listener
     void OnTransportClose(mediasoupclient::Consumer* consumer) override;
 
-    // core::interface::Subscription::InternalListener
     void OnChangePreferredEncoding(
         std::shared_ptr<core::interface::Subscription> subscription) override;
 
-    // core::interface::Subscription::Callback
     const std::optional<nlohmann::json> GetStatsReport(
         std::shared_ptr<core::interface::Subscription> subscription) override;
 
@@ -57,11 +56,11 @@ private:
                                                    nlohmann::json consumer_options);
     int GetLayerIndex(const std::string& preferred_encoding_id,
                       std::vector<model::Encoding> encodings);
-    skyway::plugin::sfu_bot::interface::RecvTransport* GetOrCreateRecvTransport(
+    std::shared_ptr<interface::RecvTransport> AcquireRecvTransport(
         const std::string& transport_id,
-        std::optional<nlohmann::json>,
+        std::optional<nlohmann::json> transport_options,
         const interface::Device::PeerConnectionOptions* pc_options);
-
+    std::shared_ptr<interface::RecvTransport> GetRecvTransport();
     void SetupTransportAccessForStream();
     void CreateConsumeThread(const std::string& publication_id,
                              const std::string& origin_publication_id,
@@ -74,8 +73,9 @@ private:
 
     std::weak_ptr<core::interface::Subscription> subscription_;
 
-    interface::RecvTransport* transport_ = nullptr;
+    std::optional<std::string> transport_id_;
     ConsumerId consumer_id_;
+    std::atomic<bool> is_disposed_ = false;
 
     std::mutex receive_threads_mtx_;
     std::vector<std::unique_ptr<std::thread>> receive_threads_;
@@ -89,4 +89,4 @@ public:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif /* SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_RECEIVER_HPP_ */
+#endif

@@ -6,6 +6,7 @@
 #define SKYWAY_TOKEN_AUTH_TOKEN_MANAGER_HPP_
 
 #include <condition_variable>
+#include <memory>
 #include <mutex>
 #include <unordered_set>
 
@@ -17,7 +18,7 @@ namespace skyway {
 namespace core {
 namespace channel {
 class ChannelIntegrationTest;
-}  // namespace channel
+}
 }  // namespace core
 }  // namespace skyway
 
@@ -26,8 +27,6 @@ namespace token {
 
 class AuthTokenManager : public interface::AuthTokenManager {
 public:
-    /// コンストラクタ
-    /// @param options オプション
     AuthTokenManager(const core::ContextOptions::Token& options);
     ~AuthTokenManager();
 
@@ -42,14 +41,15 @@ public:
 
 private:
     void JoinTimerThreadsIfNeeded();
-    bool SetupTimers();
+    bool SetupTimers(time_t exp);
     std::mutex update_token_mtx_;
     std::mutex internal_listeners_mtx_;
-    Listener* listener_;
+    Listener* listener_ = nullptr;
     std::unordered_set<interface::AuthTokenManager::InternalListener*> internal_listeners_;
     std::optional<int> update_remind_sec_;
+    mutable std::mutex auth_token_mtx_;
     std::unique_ptr<AuthToken> auth_token_;
-    bool timer_canceled_;
+    bool timer_canceled_ = false;
     std::condition_variable timer_cv_;
     std::mutex timer_mtx_;
     std::unique_ptr<std::thread> remind_timer_thread_;
@@ -62,4 +62,4 @@ public:
 }  // namespace token
 }  // namespace skyway
 
-#endif /* SKYWAY_TOKEN_AUTH_TOKEN_MANAGER_HPP_ */
+#endif

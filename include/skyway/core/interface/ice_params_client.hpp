@@ -23,4 +23,4 @@ public:
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_INTERFACE_ICE_PARAMS_CLIENT_HPP_ */
+#endif

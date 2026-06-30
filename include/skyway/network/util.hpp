@@ -28,13 +28,6 @@ inline int CulculateRetryTimeoutMs(int current_retry) {
     return timeout;
 }
 
-/// 指定したリトライ回数目(1,2,3...)に応じて、Exponential backoff And
-/// Jitterにてスレッドをブロックします。
-/// ブロックの解放条件を指定することができ、条件を満たした場合はtrueを返し、指定時間経過した場合はfalseを返します。
-/// @param current_retry 指定するリトライ回数目
-/// @param release_condition ブロックを抜けるための解放条件
-/// @param release_condition_check_interval_ms 解放条件をチェックする間隔（ミリ秒）
-/// @return ブロックが解放条件を満たして抜けた場合はtrue、タイムアウトした場合はfalseを返します。
 inline bool ExponentialBackoffWaitWithReleaseCondition(
     int current_retry,
     std::function<bool()> release_condition,
@@ -50,11 +43,7 @@ inline void ExponentialBackoffWait(int current_retry) {
 }
 
 inline nlohmann::json CreateBearerAuthHeader(const std::string& token) {
-    // clang-format off
-    return nlohmann::json{
-        { "Authorization", "Bearer " + token }
-    };
-    // clang-format on
+    return nlohmann::json{{"Authorization", "Bearer " + token}};
 }
 
 std::string FormatCloseLog(int code, const std::string& reason);
@@ -63,4 +52,4 @@ std::string FormatCloseLog(int code, const std::string& reason);
 }  // namespace network
 }  // namespace skyway
 
-#endif /* SKYWAY_NETWORK_UTIL_HPP_ */
+#endif

@@ -149,4 +149,4 @@ void to_json(nlohmann::json& j, const IceCandidateMessage& message);
 }  // namespace plugin
 }  // namespace skyway
 
-#endif /* SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_CONNECTION_DTO_MESSAGE_HPP_ */
+#endif

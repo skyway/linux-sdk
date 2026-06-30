@@ -45,7 +45,6 @@ public:
     void ReplaceTrack(const ProducerId& producer_id,
                       rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track) override;
 
-    // mediasoupclient::SendTransport::Listener
     std::future<std::string> OnProduce(mediasoupclient::SendTransport* transport,
                                        const std::string& kind,
                                        nlohmann::json rtp_parameters,
@@ -82,4 +81,4 @@ public:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif  // SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_SEND_TRANSPORT_HPP_
+#endif

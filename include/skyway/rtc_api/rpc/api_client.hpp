@@ -69,14 +69,14 @@ public:
 
 private:
     template <class Result>
-    // If error occured, `error` will be set and return std::nullopt
+
     std::optional<Result> Request(const std::string& method,
                                   nlohmann::json& params,
                                   dto::ResponseErrorMessage* error);
     RapiOptions options_;
     std::weak_ptr<token::interface::AuthTokenManager> auth_;
     std::unique_ptr<interface::Rpc> rpc_;
-    std::atomic<bool> is_disposed_;
+    std::atomic<bool> is_disposed_ = false;
 
 public:
     friend class RtcApiRpcApiClientTest;
@@ -86,4 +86,4 @@ public:
 }  // namespace rtc_api
 }  // namespace skyway
 
-#endif /* SKYWAY_RTC_API_RPC_API_CLIENT_HPP_ */
+#endif

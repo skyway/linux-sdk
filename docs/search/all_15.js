@@ -1,12 +1,7 @@
 var searchData=
 [
-  ['v_0',['v',['../structskyway_1_1media_1_1interface_1_1_i420_frame.html#a151e0671987dc00127702badbd714438',1,'skyway::media::interface::I420Frame']]],
-  ['v4l2videorenderer_1',['v4l2videorenderer',['../classskyway_1_1media_1_1_v4l2_video_renderer.html',1,'skyway::media::V4l2VideoRenderer'],['../classskyway_1_1media_1_1_v4l2_video_renderer.html#a0db3a0d25cb1d8668ec5ff1326116dda',1,'skyway::media::V4l2VideoRenderer::V4l2VideoRenderer()']]],
-  ['v4l2videorendereroptions_2',['V4l2VideoRendererOptions',['../structskyway_1_1media_1_1_v4l2_video_renderer_options.html',1,'skyway::media']]],
-  ['version_3',['version',['../structskyway_1_1model_1_1_channel.html#acb5aa350d836f167846fc5141628317c',1,'skyway::model::Channel']]],
-  ['video_4',['video',['../structskyway_1_1_context_1_1_sky_way_options_1_1_rtp_1_1_input_1_1_video.html',1,'skyway::Context::SkyWayOptions::Rtp::Input::Video'],['../structskyway_1_1_context_1_1_sky_way_options_1_1_rtp_1_1_input.html#a14ee89f32500d43204bd7a2e36e169c7',1,'skyway::Context::SkyWayOptions::Rtp::Input::video']]],
-  ['videocodec_5',['VideoCodec',['../structskyway_1_1media_1_1codec_1_1_video_codec.html',1,'skyway::media::codec']]],
-  ['videodevice_6',['VideoDevice',['../structskyway_1_1media_1_1_device_manager_1_1_video_device.html',1,'skyway::media::DeviceManager']]],
-  ['videorenderer_7',['VideoRenderer',['../classskyway_1_1media_1_1interface_1_1_video_renderer.html',1,'skyway::media::interface']]],
-  ['vp8_8',['VP8',['../structskyway_1_1media_1_1codec_1_1_v_p8.html',1,'skyway::media::codec']]]
+  ['webrtcstats_0',['WebRTCStats',['../structskyway_1_1room_1_1_web_r_t_c_stats.html',1,'skyway::room']]],
+  ['webrtcstatsreport_1',['WebRTCStatsReport',['../structskyway_1_1room_1_1_web_r_t_c_stats_report.html',1,'skyway::room']]],
+  ['width_2',['width',['../structskyway_1_1media_1_1interface_1_1_i420_frame.html#ae0639e3b9c765b0f6fc054d4031b52a6',1,'skyway::media::interface::I420Frame']]],
+  ['write_3',['write',['../classskyway_1_1media_1_1stream_1_1interface_1_1local_1_1_local_data_stream.html#a5bd6cbb331a1bf0c23d77646a03fe9b8',1,'skyway::media::stream::interface::local::LocalDataStream::Write(const std::string &amp;data) const =0'],['../classskyway_1_1media_1_1stream_1_1interface_1_1local_1_1_local_data_stream.html#a52e31d428c29e81d605cbed6406602f1',1,'skyway::media::stream::interface::local::LocalDataStream::Write(const uint8_t *data, size_t length) const =0'],['../classskyway_1_1media_1_1stream_1_1local_1_1_local_data_stream.html#a5a69f4fde35a205f7af60cf7622b9c0c',1,'skyway::media::stream::local::LocalDataStream::Write(const std::string &amp;data) const override'],['../classskyway_1_1media_1_1stream_1_1local_1_1_local_data_stream.html#ae11b001fe6c1a49286e814ab05030dd1',1,'skyway::media::stream::local::LocalDataStream::Write(const uint8_t *data, size_t length) const override']]]
 ];

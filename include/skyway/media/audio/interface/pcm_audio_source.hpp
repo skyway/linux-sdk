@@ -57,7 +57,6 @@ public:
     virtual rtc::scoped_refptr<webrtc::AudioSourceInterface> GetSource() = 0;
     /// @endcond
 };
-/// @endcond
 
 }  // namespace interface
 }  // namespace audio

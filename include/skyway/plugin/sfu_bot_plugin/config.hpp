@@ -25,4 +25,4 @@ extern const int kDefaultRestartIceCheckingTimeSec;
 }  // namespace plugin
 }  // namespace skyway
 
-#endif /* SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONFIG_HPP_ */
+#endif

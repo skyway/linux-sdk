@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('classskyway_1_1room_1_1interface_1_1_r
 <p>イベントリスナ  
  <a href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#details">[詳解]</a></p>
 
-<p><code>#include &lt;<a class="el" href="interface_2room_8hpp_source.html">room.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="interface_2room_8hpp_source.html">skyway/room/interface/room.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
@@ -162,10 +162,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnSubscriptio
 <tr class="memdesc:a95d3c91fedb48d007fedca53f616e1b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">RoomPublicationがUnsubscribeされた後に発生するイベント  <br /></td></tr>
 <tr class="separator:a95d3c91fedb48d007fedca53f616e1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0e677e82e3f11b2e63fe2445ad113eb" id="r_af0e677e82e3f11b2e63fe2445ad113eb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#af0e677e82e3f11b2e63fe2445ad113eb">OnSubscriptionEnabled</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html">RoomSubscription</a> &gt; subscription)</td></tr>
-<tr class="memdesc:af0e677e82e3f11b2e63fe2445ad113eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">RoomSubscriptionがEnableになった後に発生するイベント  <br /></td></tr>
+<tr class="memdesc:af0e677e82e3f11b2e63fe2445ad113eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">RoomSubscriptionがEnableになった後に発生するイベント (現在は発火しません)  <br /></td></tr>
 <tr class="separator:af0e677e82e3f11b2e63fe2445ad113eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc58120c851db326dcc77d7d71684087" id="r_acc58120c851db326dcc77d7d71684087"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1room_1_1interface_1_1_room_1_1_event_listener.html#acc58120c851db326dcc77d7d71684087">OnSubscriptionDisabled</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1room_1_1interface_1_1_room_subscription.html">RoomSubscription</a> &gt; subscription)</td></tr>
-<tr class="memdesc:acc58120c851db326dcc77d7d71684087"><td class="mdescLeft">&#160;</td><td class="mdescRight">RoomSubscriptionがDisableになった後に発生するイベント  <br /></td></tr>
+<tr class="memdesc:acc58120c851db326dcc77d7d71684087"><td class="mdescLeft">&#160;</td><td class="mdescRight">RoomSubscriptionがDisableになった後に発生するイベント (現在は発火しません)  <br /></td></tr>
 <tr class="separator:acc58120c851db326dcc77d7d71684087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
@@ -647,8 +647,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnSubscriptio
 </table>
 </div><div class="memdoc">
 
-<p>RoomSubscriptionがDisableになった後に発生するイベント </p>
-<dl class="params"><dt>引数</dt><dd>
+<p>RoomSubscriptionがDisableになった後に発生するイベント (現在は発火しません) </p>
+<p>RoomSubscriptionのEnable/Disable状態への遷移は現在サポートしていないため、このイベントは発火しません。 </p><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">subscription</td><td>対象のRoomSubscription </td></tr>
   </table>
@@ -681,8 +681,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnSubscriptio
 </table>
 </div><div class="memdoc">
 
-<p>RoomSubscriptionがEnableになった後に発生するイベント </p>
-<dl class="params"><dt>引数</dt><dd>
+<p>RoomSubscriptionがEnableになった後に発生するイベント (現在は発火しません) </p>
+<p>RoomSubscriptionのEnable/Disable状態への遷移は現在サポートしていないため、このイベントは発火しません。 </p><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">subscription</td><td>対象のRoomSubscription </td></tr>
   </table>

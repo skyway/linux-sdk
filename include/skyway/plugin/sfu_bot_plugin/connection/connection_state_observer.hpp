@@ -46,13 +46,13 @@ private:
     const int max_restart_ice_count_;
     const int check_restart_ice_time_seconds_;
 
-    std::atomic<core::ConnectionState> connection_state_;
+    std::atomic<core::ConnectionState> connection_state_ = core::ConnectionState::kNew;
 
     interface::SfuApiClient* api_client_;
 
     std::mutex listeners_mtx_;
     std::vector<std::weak_ptr<core::ConnectionStateChangeNotifiable>> listeners_;
-    std::atomic<bool> is_reconnecting_;
+    std::atomic<bool> is_reconnecting_ = false;
 
     std::atomic<bool> is_disposed_ = false;
 
@@ -68,4 +68,4 @@ public:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif  // SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_CONNECTION_STATE_OBSERVER_HPP_
+#endif

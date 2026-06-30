@@ -5,7 +5,15 @@
 #ifndef SKYWAY_ROOM_INTERFACE_ROOM_MEMBER_HPP
 #define SKYWAY_ROOM_INTERFACE_ROOM_MEMBER_HPP
 
-#include <skyway/core/interface/member.hpp>
+#include <memory>
+#include <optional>
+#include <string>
+#include <vector>
+
+#include <skyway/model/domain.hpp>
+
+#include "skyway/domain/domain.hpp"
+#include "skyway/room/types.hpp"
 
 namespace skyway {
 namespace room {
@@ -47,13 +55,13 @@ public:
     /// @brief Metadataを取得します。
     virtual std::optional<std::string> Metadata() = 0;
     /// @brief Typeを取得します。
-    virtual model::MemberType Type() = 0;
+    virtual domain::MemberType Type() = 0;
     /// @brief SubTypeを取得します。
     virtual std::string Subtype() = 0;
     /// @brief Sideを取得します。
-    virtual model::Side Side() = 0;
+    virtual domain::Side Side() = 0;
     /// @brief Stateを取得します。
-    virtual core::interface::MemberState State() = 0;
+    virtual MemberState State() = 0;
 
     /// @brief このMemberのPublication一覧を取得します。
     virtual std::vector<std::shared_ptr<RoomPublication>> Publications() = 0;

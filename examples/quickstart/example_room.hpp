@@ -6,15 +6,17 @@
 #define SKYWAY_EXAMPLES_QUICKSTART_EXAMPLE_ROOM_HPP_
 
 #include <skyway/context.hpp>
-#include <skyway/core/stream/remote/data_stream.hpp>
 #include <skyway/media/device_manager.hpp>
+#include <skyway/media/stream/interface/local/local_data_stream.hpp>
+#include <skyway/media/stream/interface/remote/remote_data_stream.hpp>
+#include <skyway/media/stream/interface/remote/remote_video_stream.hpp>
 #include <skyway/media/stream_factory.hpp>
 #include <skyway/media/v4l2_video_renderer.hpp>
 #include <skyway/room/room.hpp>
 
 // Roomの操作を行うクラスです。
 class ExampleRoom : public skyway::room::interface::Room::EventListener,
-                    public skyway::core::stream::remote::RemoteDataStream::Listener {
+                    public skyway::media::stream::interface::remote::RemoteDataStream::Listener {
 public:
     ExampleRoom(const std::string& renderer_device_name);
 
@@ -43,7 +45,7 @@ public:
     void OnStreamPublished(
         std::shared_ptr<skyway::room::interface::RoomPublication> publication) override;
 
-    // Impl skyway::core::stream::remote::RemoteDataStream::Listener
+    // Impl skyway::media::stream::interface::remote::RemoteDataStream::Listener
     void OnData(const std::string& data) override;
     void OnDataBuffer(const uint8_t* data, size_t length) override;
 
@@ -54,7 +56,7 @@ private:
     std::shared_ptr<skyway::room::Room> room_;
     std::shared_ptr<skyway::room::LocalRoomMember> room_member_;
     std::unique_ptr<skyway::media::V4l2VideoRenderer> renderer_;
-    std::shared_ptr<skyway::core::stream::local::LocalDataStream> data_stream_;
+    std::shared_ptr<skyway::media::stream::interface::local::LocalDataStream> data_stream_;
     std::string renderer_device_name_;
     std::vector<std::unique_ptr<std::thread>> threads_;
     std::atomic<bool> is_leaving_;

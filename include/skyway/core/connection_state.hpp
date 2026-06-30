@@ -21,12 +21,10 @@ std::optional<std::string> StringFromConnectionState(ConnectionState state);
 
 class ConnectionStateChangeNotifiable {
 public:
-    /// @cond INTERNAL_SECTION
     virtual void OnConnectionStateChanged(const ConnectionState new_state) = 0;
-    /// @endcond
 };
 
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_CONNECTION_STATE_HPP */
+#endif

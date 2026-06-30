@@ -5,11 +5,13 @@
 #ifndef SKYWAY_RTC_API_EVENT_OBSERVER_HPP_
 #define SKYWAY_RTC_API_EVENT_OBSERVER_HPP_
 
+#include <atomic>
+#include <condition_variable>
+#include <cstddef>
 #include <json.hpp>
 #include <mutex>
 #include <set>
 #include <thread>
-#include <atomic>
 
 #include "skyway/rtc_api/interface/api_client.hpp"
 #include "skyway/rtc_api/interface/event_listener_repository.hpp"
@@ -24,13 +26,6 @@ public:
         virtual void OnEvent(const nlohmann::json& event, uint64_t version) = 0;
     };
 
-    /// コンストラクタ
-    /// - Parameters:
-    ///   - version: 初期バージョン
-    ///   ChannelCreatedイベントが0なので、新しくChannelを作った場合はstd::nulloptを入力してください
-    ///   - channel_id: チャンネルID
-    ///   - event_listener_repository: イベントリスナーリポジトリ
-    ///   - api: RAPIクライアント
     EventObserver(const std::optional<uint64_t> version,
                   const std::string& channel_id,
                   std::weak_ptr<interface::EventListenerRepository> event_listener_repository,
@@ -40,7 +35,6 @@ public:
     void RegisterEventListener(std::weak_ptr<Listener> listener);
     void Dispose();
 
-    // interface::EventListenerRepository::Listener
     void OnEvent(const nlohmann::json& event) override;
     void OnReconnected() override;
 
@@ -52,6 +46,7 @@ private:
     void JoinPacketLossCheckerThread();
     bool ResubscribingChannelEvents();
 
+    std::mutex version_mtx_;
     std::optional<uint64_t> version_;
     std::string channel_id_;
     std::weak_ptr<interface::EventListenerRepository> event_listener_repository_;
@@ -61,8 +56,11 @@ private:
     std::mutex listener_mtx_;
     std::set<nlohmann::json> queued_events_;
     std::unique_ptr<std::thread> packet_loss_checker_thread_;
-    std::atomic<bool> packet_loss_checker_canceled_;
-    std::atomic<bool> disposed_;
+    std::atomic<bool> packet_loss_checker_canceled_ = false;
+    std::atomic<bool> disposed_                     = false;
+    std::mutex processing_event_mtx_;
+    std::condition_variable processing_event_cv_;
+    std::size_t processing_event_count_ = 0;
 
 public:
     friend class RtcApiEventObserverTest;
@@ -71,4 +69,4 @@ public:
 }  // namespace rtc_api
 }  // namespace skyway
 
-#endif /* SKYWAY_RTC_API_EVENT_OBSERVER_HPP_ */
+#endif

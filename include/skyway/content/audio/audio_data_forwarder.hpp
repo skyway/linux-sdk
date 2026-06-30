@@ -7,7 +7,6 @@
 
 #include <memory>
 #include <mutex>
-#include <set>
 
 #include "audio_data_listener.hpp"
 
@@ -35,4 +34,4 @@ private:
 }  // namespace content
 }  // namespace skyway
 
-#endif  // SKYWAY_CONTENT_AUDIO_DATA_FORWARDER_HPP
+#endif

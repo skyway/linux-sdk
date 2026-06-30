@@ -7,18 +7,20 @@
 
 #include <atomic>
 #include <future>
+#include <memory>
+#include <mutex>
+#include <optional>
+#include <string>
 
 #include "skyway/global/worker.hpp"
 #include "skyway/network/interface/websocket_client.hpp"
 #include "skyway/platform/interface/platform_info_delegator.hpp"
-#include "skyway/signaling/config.hpp"
-#include "skyway/signaling/dto/payload.hpp"
 #include "skyway/signaling/interface/socket.hpp"
 #include "skyway/token/interface/auth_token_manager.hpp"
 
 namespace skyway {
 
-class WebSocketIntegrationTest;  // Forward declaration for testing.
+class WebSocketIntegrationTest;
 
 namespace signaling {
 
@@ -48,7 +50,6 @@ public:
     bool IsOpen() override;
     void Dispose() override;
 
-    // WebSocketClientInterface::Listener
     void OnMessage(const std::string& message) override;
     void OnClose(const int code, const std::string& reason) override;
     void OnError(const int code) override;
@@ -69,12 +70,14 @@ private:
     std::string GetRelayingServerSocketSubProtocol() const;
     void Reconnect();
 
+    std::string tag_ = "sign";
     const std::string url_;
     std::weak_ptr<token::interface::AuthTokenManager> auth_;
-    SocketInterface::Listener* listener_;
-    std::atomic<State> state_;
-    std::atomic<bool> is_open_;
-    std::atomic<bool> is_disposed_;
+    SocketInterface::Listener* listener_ = nullptr;
+    std::mutex listener_mtx_;
+
+    std::atomic<State> state_      = State::kReady;
+    std::atomic<bool> is_disposed_ = false;
     std::shared_ptr<WebSocketClientInterface> ws_;
     std::unique_ptr<global::interface::Worker> reconnect_worker_ =
         std::make_unique<global::Worker>(kSignalingWebSocketReconnectThreadName);
@@ -87,4 +90,4 @@ public:
 }  // namespace signaling
 }  // namespace skyway
 
-#endif /* SKYWAY_SIGNALING_SOCKET_HPP_ */
+#endif

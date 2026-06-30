@@ -20,4 +20,4 @@ constexpr int kNetworkSleepIntervalMs = 10;
 }  // namespace global
 }  // namespace skyway
 
-#endif /* SKYWAY_GLOBAL_CONFIG_HPP_ */
+#endif

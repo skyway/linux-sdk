@@ -16,9 +16,6 @@ public:
     std::string GetOsInfo() const override;
     std::string GetModelName() const override;
     std::string GetSdkVersion() const override;
-
-private:
-    std::string RemoveString(std::string origin_str, std::string remove_str) const;
 };
 
 }  // namespace platform

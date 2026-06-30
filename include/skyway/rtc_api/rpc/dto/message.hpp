@@ -56,4 +56,4 @@ void to_json(nlohmann::json& j, const ResponseErrorMessage& message);
 }  // namespace rtc_api
 }  // namespace skyway
 
-#endif /* SKYWAY_RTC_API_RPC_DTO_MESSAGE_HPP_ */
+#endif

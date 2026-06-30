@@ -7,7 +7,6 @@
 
 #include <json.hpp>
 #include <unordered_map>
-#include <unordered_set>
 
 #include "skyway/core/interface/chunk_messenger.hpp"
 #include "skyway/signaling/interface/signaling_client.hpp"
@@ -27,8 +26,7 @@ public:
     using SignalingClientInterface = signaling::interface::SignalingClient;
     using RequestId                = std::string;
     using ChunkedMessage           = std::string;
-    /// @brief コンストラクタ
-    /// @param client ChunkMessengerインターフェース
+
     ChunkMessenger(std::unique_ptr<SignalingClientInterface> client);
     ~ChunkMessenger();
 
@@ -54,8 +52,8 @@ public:
 private:
     using MemberId                  = std::string;
     using ListenerValueTuple        = std::tuple<signaling::interface::Member,
-                                                 ChunkMessengerInterface::Listener*,
-                                                 std::vector<std::unique_ptr<std::thread>>>;
+                                          ChunkMessengerInterface::Listener*,
+                                          std::vector<std::unique_ptr<std::thread>>>;
     using BufferedMessagesValuePair = std::pair<signaling::interface::Member, nlohmann::json>;
 
     void EmitEvent(const nlohmann::json& message,
@@ -77,4 +75,4 @@ private:
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_CHUNK_MESSENGER_CHUNK_MESSENGER_HPP_ */
+#endif

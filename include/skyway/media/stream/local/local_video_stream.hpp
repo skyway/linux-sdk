@@ -7,14 +7,25 @@
 
 #include <skyway/core/stream/local/video_stream.hpp>
 
+#include "skyway/media/stream/abstract/stream_base.hpp"
+#include "skyway/media/stream/interface/local/local_video_stream.hpp"
+
 namespace skyway {
 namespace media {
 namespace stream {
 namespace local {
 
-class LocalVideoStream : public skyway::core::stream::local::LocalVideoStream {
+class LocalVideoStream
+    : public abstract::StreamBase<interface::local::LocalVideoStream,
+                                  skyway::core::interface::LocalStream,
+                                  skyway::core::stream::local::LocalVideoStream> {
 public:
+    /// @cond INTERNAL_SECTION
     LocalVideoStream(rtc::scoped_refptr<webrtc::VideoTrackInterface> track);
+    LocalVideoStream(std::shared_ptr<skyway::core::stream::local::LocalVideoStream> core);
+    /// @endcond
+
+    rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> Track() const override;
 };
 
 }  // namespace local

@@ -33,4 +33,4 @@ public:
 }  // namespace global
 }  // namespace skyway
 
-#endif  // SKYWAY_GLOBAL_INTERFACE_LOGGER_OBSERVER_HPP
+#endif

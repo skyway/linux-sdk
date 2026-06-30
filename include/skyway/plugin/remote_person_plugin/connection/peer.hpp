@@ -9,6 +9,8 @@
 #include <api/media_stream_interface.h>
 #include <api/peer_connection_interface.h>
 
+#include <cstddef>
+#include <optional>
 #include <queue>
 #include <unordered_map>
 
@@ -30,7 +32,6 @@ using ChunkMessengerInterface = core::interface::ChunkMessenger;
 
 const std::string kRemotePersonConnectionStateThreadName = "remo_psn_conn";
 
-/// P2Pを行う抽象的なピア
 class Peer : public webrtc::PeerConnectionObserver {
 public:
     enum Role { kSender, kReceiver };
@@ -40,15 +41,17 @@ public:
         virtual ~Listener() = default;
         virtual void OnConnect(rtc::scoped_refptr<webrtc::DataChannelInterface> data_channel,
                                const DataChannelLabel& label) {}
+        virtual void OnDisconnect(const DataChannelLabel& label) {}
         virtual void OnMessage(const webrtc::DataBuffer& buffer, const DataChannelLabel& label) {}
+        virtual void OnBufferedAmountChange(uint64_t sent_data_size,
+                                            const DataChannelLabel& label) {}
     };
 
-    // Observers related with PeerConnection
     class CreateSdpObserver : public webrtc::CreateSessionDescriptionObserver {
     public:
         CreateSdpObserver();
         webrtc::SessionDescriptionInterface* WaitForResult();
-        // webrtc::CreateSessionDescriptionObserver
+
         void OnSuccess(webrtc::SessionDescriptionInterface* desc) override;
         void OnFailure(webrtc::RTCError error) override;
 
@@ -63,7 +66,7 @@ public:
     public:
         SetSdpObserver();
         bool WaitForResult();
-        // webrtc::SetSessionDescriptionObserver
+
         void OnSuccess() override;
         void OnFailure(webrtc::RTCError error) override;
 
@@ -80,16 +83,18 @@ public:
                             Listener* listener,
                             Role role);
         ~DataChannelObserver();
-        // webrtc::DataChannelObserver
+
         void OnStateChange() override;
         void OnMessage(const webrtc::DataBuffer& buffer) override;
+        void OnBufferedAmountChange(uint64_t sent_data_size) override;
         rtc::scoped_refptr<webrtc::DataChannelInterface> GetDataChannel();
         std::optional<DataChannelLabel> GetParsedLabel();
 
     private:
-        Listener* listener_;
+        Listener* listener_ = nullptr;
         Role role_;
         rtc::scoped_refptr<webrtc::DataChannelInterface> data_channel_;
+        std::optional<DataChannelLabel> parsed_label_;
     };
 
     class StatsObserver : public webrtc::RTCStatsCollectorCallback {
@@ -111,16 +116,9 @@ public:
          Listener* listener,
          rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory);
     virtual ~Peer();
-    /// データチャネルが送信可能なオープン状態かどうか返します。
-    /// @param publication_id Publication ID
+
     bool IsDataChannelOpen(const std::string& publication_id);
 
-    /// データチャネルを利用してメッセージを送信します。
-    /// @param data データ
-    /// @param size データサイズ
-    /// @param is_binary バイナリかどうか
-    /// @param publication_id Publication ID
-    /// @return 処理成功かどうか
     bool SendMessage(const uint8_t* data,
                      std::size_t size,
                      bool is_binary,
@@ -146,7 +144,8 @@ protected:
 
     bool WaitForSignalingState(webrtc::PeerConnectionInterface::SignalingState state);
 
-    // webrtc::PeerConnectionObserver
+    std::optional<std::string> GetLocalDescriptionSdp();
+
     void OnSignalingChange(webrtc::PeerConnectionInterface::SignalingState new_state) override;
 
     void OnDataChannel(rtc::scoped_refptr<webrtc::DataChannelInterface> data_channel) override;
@@ -198,13 +197,13 @@ private:
 
     Role role_;
 
-    Listener* listener_;
+    Listener* listener_ = nullptr;
     std::mutex data_channel_observers_mtx_;
     std::vector<std::unique_ptr<DataChannelObserver>> data_channel_observers_;
 
     std::mutex pending_remote_candidates_mtx_;
     std::vector<dto::IceCandidate> pending_remote_candidates_;
-    // for unit test
+
     std::vector<dto::CandidatePayloadPayload> candidates_;
 
 public:
@@ -216,4 +215,4 @@ public:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif /* SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_CONNECTION_PEER_HPP_ */
+#endif

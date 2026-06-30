@@ -7,6 +7,10 @@
 
 #include "skyway/plugin/sfu_bot_plugin/abstract/transport.hpp"
 
+namespace rtc {
+class Thread;
+}
+
 namespace skyway {
 namespace plugin {
 namespace sfu_bot {
@@ -28,6 +32,7 @@ public:
     virtual bool IsClosed(const ConsumerId& consumer_id) const = 0;
     virtual rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> GetTrack(
         const ConsumerId& consumer_id) const                             = 0;
+    virtual rtc::Thread* GetSignalingThread() const                      = 0;
     virtual void Close(const ConsumerId& consumer_id)                    = 0;
     virtual nlohmann::json GetStats(const ConsumerId& consumer_id) const = 0;
 
@@ -39,4 +44,4 @@ public:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif  // SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_RECV_TRANSPORT_HPP_
+#endif

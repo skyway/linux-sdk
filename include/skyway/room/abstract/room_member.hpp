@@ -23,10 +23,10 @@ public:
     std::string Id() override;
     std::optional<std::string> Name() override;
     std::optional<std::string> Metadata() override;
-    model::MemberType Type() override;
+    domain::MemberType Type() override;
     std::string Subtype() override;
-    model::Side Side() override;
-    core::interface::MemberState State() override;
+    domain::Side Side() override;
+    MemberState State() override;
 
     std::vector<std::shared_ptr<interface::RoomSubscription>> Subscriptions() override;
 
@@ -34,13 +34,18 @@ public:
     bool Leave() override;
 
 protected:
+    /// @cond INTERNAL_SECTION
     RoomMember(std::shared_ptr<core::interface::Member> core,
                std::shared_ptr<interface::Room> room,
                interface::RoomDomainFactory* factory);
-
     std::shared_ptr<core::interface::Member> core_;
     std::weak_ptr<interface::Room> room_;
     interface::RoomDomainFactory* factory_;
+    /// @endcond
+
+private:
+    domain::MemberType ConvertToPlatformMemberType(model::MemberType type);
+    MemberState ConvertToPlatformMemberState(core::interface::MemberState state);
 };
 
 }  // namespace abstract

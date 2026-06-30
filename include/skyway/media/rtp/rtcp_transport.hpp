@@ -33,7 +33,7 @@ public:
 private:
     std::unique_ptr<network::interface::UdpClient> udp_client_ = nullptr;
 };
-// @endcond
+/// @endcond
 
 }  // namespace rtp
 }  // namespace media

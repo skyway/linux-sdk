@@ -110,20 +110,20 @@ $(document).ready(function(){initNavTree('classskyway_1_1global_1_1_logger_1_1_l
 <p><a class="el" href="classskyway_1_1global_1_1_logger.html" title="SkyWayのログを出力するクラス">Logger</a> のリスナー  
  <a href="classskyway_1_1global_1_1_logger_1_1_listener.html#details">[詳解]</a></p>
 
-<p><code>#include &lt;<a class="el" href="logger_8hpp_source.html">logger.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="logger_8hpp_source.html">skyway/global/logger.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a96b8470ab320fc4913127f876d04274c" id="r_a96b8470ab320fc4913127f876d04274c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1global_1_1_logger_1_1_listener.html#a96b8470ab320fc4913127f876d04274c">OnLog</a> (<a class="el" href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">Level</a> level, const std::string &amp;text)=0</td></tr>
-<tr class="memdesc:a96b8470ab320fc4913127f876d04274c"><td class="mdescLeft">&#160;</td><td class="mdescRight">SkyWayのログが出力されたときのイベント  <br /></td></tr>
-<tr class="separator:a96b8470ab320fc4913127f876d04274c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13f0933327f48340401b4e1e3a9b14a0" id="r_a13f0933327f48340401b4e1e3a9b14a0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1global_1_1_logger_1_1_listener.html#a13f0933327f48340401b4e1e3a9b14a0">OnLog</a> (<a class="el" href="domain_8hpp.html#a46d9dddc0c73d7c634c9848ba2ff648e">domain::LogLevel</a> level, const std::string &amp;text)=0</td></tr>
+<tr class="memdesc:a13f0933327f48340401b4e1e3a9b14a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">SkyWayのログが出力されたときのイベント  <br /></td></tr>
+<tr class="separator:a13f0933327f48340401b4e1e3a9b14a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p><a class="el" href="classskyway_1_1global_1_1_logger.html" title="SkyWayのログを出力するクラス">Logger</a> のリスナー </p>
 <p>ログに関する処理を実装する場合はこのクラスを継承してください。 </p><dl class="section attention"><dt>注意</dt><dd>ListenerでファイルI/Oなどの重い処理を実装する場合は別スレッドで実行するようにしてください。 </dd></dl>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="a96b8470ab320fc4913127f876d04274c" name="a96b8470ab320fc4913127f876d04274c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96b8470ab320fc4913127f876d04274c">&#9670;&#160;</a></span>OnLog()</h2>
+<a id="a13f0933327f48340401b4e1e3a9b14a0" name="a13f0933327f48340401b4e1e3a9b14a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13f0933327f48340401b4e1e3a9b14a0">&#9670;&#160;</a></span>OnLog()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -134,7 +134,7 @@ $(document).ready(function(){initNavTree('classskyway_1_1global_1_1_logger_1_1_l
         <tr>
           <td class="memname">virtual void skyway::global::Logger::Listener::OnLog </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classskyway_1_1global_1_1interface_1_1_logger.html#ad1ac1d2acceda3d35def685cd25622fa">Level</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="domain_8hpp.html#a46d9dddc0c73d7c634c9848ba2ff648e">domain::LogLevel</a>&#160;</td>
           <td class="paramname"><em>level</em>, </td>
         </tr>
         <tr>

@@ -19,7 +19,7 @@ bool ExampleRoom::Setup(const std::string& app_id, const std::string& secret_key
     skyway::Context::SkyWayOptions context_options{};
 
     // SkyWayのログレベルの設定が行えます。
-    context_options.log_level = skyway::global::interface::Logger::kWarn;
+    context_options.log_level = skyway::domain::LogLevel::kWarn;
 
     // SkyWayのAppIdとSecretKeyを使用して、SkyWayContextをセットアップします。
     // 本番環境ではContext::Setupを使用してください。
@@ -96,7 +96,7 @@ void ExampleRoom::Publish() {
     threads_.emplace_back(std::move(video_thread));
 
     skyway::room::interface::LocalRoomMember::PublicationOptions publication_options {};
-    publication_options.type = skyway::model::PublicationType::kP2P;
+    publication_options.type = skyway::domain::PublicationType::kP2P;
     auto publication         = room_member_->Publish(video_stream, publication_options);
     if (publication) {
         std::cout << "- VideoStream Published" << std::endl;
@@ -106,7 +106,7 @@ void ExampleRoom::Publish() {
 
 // 指定のPublicationをSubscribeします。
 bool ExampleRoom::Subscribe(std::shared_ptr<skyway::room::interface::RoomPublication> publication) {
-    if (publication->ContentType() == skyway::model::ContentType::kVideo) {
+    if (publication->ContentType() == skyway::domain::ContentType::kVideo) {
         if (room_member_->Id() == publication->Publisher()->Id()) {
             // 自身がPublishしたPublicationはSubscribeできないので無視します。
             return false;
@@ -128,8 +128,9 @@ bool ExampleRoom::Subscribe(std::shared_ptr<skyway::room::interface::RoomPublica
         if (!subscription) {
             return false;
         }
-        auto stream = std::dynamic_pointer_cast<skyway::core::stream::remote::RemoteVideoStream>(
-            subscription->Stream());
+        auto stream =
+            std::dynamic_pointer_cast<skyway::media::stream::interface::remote::RemoteVideoStream>(
+                subscription->Stream());
         // OpenCVを利用して映像を表示するようにします。
         auto renderer = std::make_unique<skyway::media::opencv::OpenCVVideoRenderer>();
         renderer->RegisterListener(this);

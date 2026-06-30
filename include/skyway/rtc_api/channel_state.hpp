@@ -16,7 +16,9 @@
 namespace skyway {
 namespace rtc_api {
 
-class ChannelState : public interface::ChannelState, public EventObserver::Listener, public std::enable_shared_from_this<ChannelState> {
+class ChannelState : public interface::ChannelState,
+                     public EventObserver::Listener,
+                     public std::enable_shared_from_this<ChannelState> {
 public:
     ~ChannelState();
     ChannelState(const model::Channel& channel, std::shared_ptr<EventObserver> observer);
@@ -36,7 +38,6 @@ public:
     void Dispose() override;
 
 private:
-
     model::Channel channel_;
     std::mutex channel_mtx_;
     std::mutex event_mtx_;
@@ -44,7 +45,6 @@ private:
     std::weak_ptr<EventListener> listener_;
     std::mutex listener_mtx_;
 
-    // Events
     void OnEvent(const nlohmann::json& event, uint64_t version) override;
 
     void OnChannelDeleted();
@@ -67,4 +67,4 @@ public:
 }  // namespace rtc_api
 }  // namespace skyway
 
-#endif /* SKYWAY_RTC_API_CHANNEL_STATE_HPP_ */
+#endif

@@ -50,6 +50,7 @@ namespace mediasoupclient
 
 	public:
 		void Close();
+		rtc::Thread* GetSignalingThread() const;
 		nlohmann::json GetTransportStats();
 		void UpdateIceServers(const nlohmann::json& iceServerUris);
 		virtual void RestartIce(const nlohmann::json& iceParameters) = 0;

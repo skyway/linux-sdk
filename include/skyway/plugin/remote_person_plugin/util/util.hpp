@@ -18,10 +18,10 @@ namespace util {
 const std::optional<nlohmann::json> StatsToJson(
     const rtc::scoped_refptr<const webrtc::RTCStatsReport>& report);
 
-}  // namespace util
+}
 }  // namespace connection
 }  // namespace remote_person
 }  // namespace plugin
 }  // namespace skyway
 
-#endif /* SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_UTIL_CONFIG_HPP_ */
+#endif

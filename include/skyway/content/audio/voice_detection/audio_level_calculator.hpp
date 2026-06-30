@@ -47,4 +47,4 @@ private:
 }  // namespace content
 }  // namespace skyway
 
-#endif  // SKYWAY_AUDIO_LEVEL_CALCULATOR_HPP
+#endif

@@ -27,7 +27,6 @@ namespace skyway {
 namespace global {
 namespace util {
 
-/// @cond INTERNAL_SECTION
 enum class SleepIntervalMs : int {
     kLocal   = config::kLocalSleepIntervalMs,
     kNetwork = config::kNetworkSleepIntervalMs,
@@ -48,7 +47,6 @@ bool WaitUntilWithTimeoutMs(std::atomic<bool>& release_condition_boolean,
 bool WaitUntilWithTimeoutMs(std::atomic<bool>& release_condition_boolean,
                             SleepIntervalMs interval,
                             int timeout_ms);
-/// @endcond
 
 class ScopeExit {
 public:
@@ -56,18 +54,13 @@ public:
 
     ~ScopeExit() { on_exit_(); }
 
-    ScopeExit(const ScopeExit&) = delete;
+    ScopeExit(const ScopeExit&)            = delete;
     ScopeExit& operator=(const ScopeExit&) = delete;
 
 private:
     std::function<void()> on_exit_;
 };
 
-/// @brief タイムアウト付きスピンロックを実行します。
-/// @details 指定したタイムアウトミリ秒まで呼び出しスレッドをブロックします。
-/// 解放条件を満たしたときtrueを返し、タイムアウトした場合はfalseを返します。
-/// @param release_condition ブロックを抜けるための解放条件
-/// @param timeout_ms タイムアウトミリ秒
 inline bool SpinLockWithTimeoutMs(std::function<bool()> release_condition, int timeout_ms) {
     std::condition_variable cv;
     std::mutex mtx;
@@ -75,19 +68,20 @@ inline bool SpinLockWithTimeoutMs(std::function<bool()> release_condition, int t
     bool is_succeeded                            = false;
     {
         std::unique_lock<std::mutex> lock(mtx);
-        // The flag used for Spurious Wakeup
+
         auto is_notified     = std::make_shared<bool>(false);
         auto result_returned = std::make_shared<std::atomic<bool>>(false);
         observer_thread      = std::make_unique<std::thread>([&, result_returned, is_notified] {
             while (!release_condition()) {
-                // Block this thread until release_condition will be true
                 if (result_returned->load()) {
                     return;
                 }
             }
-            std::lock_guard<std::mutex> lk(mtx);
-            *is_notified = true;
-            cv.notify_one();
+            {
+                std::lock_guard<std::mutex> lg(mtx);
+                *is_notified = true;
+                cv.notify_one();
+            }
         });
         is_succeeded =
             cv.wait_for(lock, std::chrono::milliseconds(timeout_ms), [&] { return *is_notified; });
@@ -103,11 +97,6 @@ inline bool SpinLockWithTimeoutMs(std::atomic<bool>& release_condition, int time
     return SpinLockWithTimeoutMs(f, timeout_ms);
 }
 
-/// @brief タイムアウト付きスピンロックを実行します。
-/// @details 指定したタイムアウト秒まで呼び出しスレッドをブロックします。
-/// 解放条件を満たしたときtrueを返し、タイムアウトした場合はfalseを返します。
-/// @param release_condition ブロックを抜けるための解放条件
-/// @param timeout_sec タイムアウト秒
 inline bool SpinLockWithTimeout(std::function<bool()> release_condition,
                                 int timeout_sec = config::kDefaultTimeoutSec) {
     return SpinLockWithTimeoutMs(release_condition, timeout_sec * 1000);
@@ -124,14 +113,6 @@ inline std::string Uuid() {
     return result;
 }
 
-// REF:
-// https://stackoverflow.com/questions/14265581/parse-split-a-string-in-c-using-string-delimiter-standard-c
-
-/// デリミタごとに文字列を分割し、ベクトルを生成します。
-///
-/// デリミタが存在しない場合、入力された文字のベクトル(要素1)を返します。
-/// @param s 入力文字
-/// @param delimiter 区切りデリミタ
 inline std::vector<std::string> Split(const std::string& s, const std::string& delimiter) {
     size_t pos_start = 0, pos_end, delim_len = delimiter.length();
     std::string token;
@@ -212,4 +193,4 @@ inline const std::chrono::milliseconds CurrentUnixTimestampMs() {
 }  // namespace global
 }  // namespace skyway
 
-#endif /* SKYWAY_GLOBAL_UTIL_HPP_ */
+#endif

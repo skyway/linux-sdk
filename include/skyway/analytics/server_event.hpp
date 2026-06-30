@@ -9,6 +9,8 @@
 #include <json.hpp>
 #include <optional>
 #include <string>
+#include <unordered_map>
+#include <vector>
 
 #include "skyway/model/domain.hpp"
 
@@ -66,8 +68,7 @@ struct AcknowledgePayload {
     bool IsInvalidPayload() const;
     bool IsUnexpected() const;
 
-    std::string
-        event_id;  // Defined as Optional, but has actual value when the client set events' id.
+    std::string event_id;
     bool ok;
     std::optional<std::string> reason;
 
@@ -100,4 +101,4 @@ struct adl_serializer<skyway::analytics::ServerEvent> {
 
 }  // namespace nlohmann
 
-#endif /* SKYWAY_ANALYTICS_SERVER_EVENT_HPP_ */
+#endif

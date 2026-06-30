@@ -47,8 +47,8 @@ cd build
 make -j
 ```
 
-- 環境変数の`SKYWAY_AUTH_TOKEN`に生成したトークンを設定します。
-    - トークンの設定方法などは[QuickStart](https://skyway.ntt.com/ja/docs/user-guide/linux-sdk/quickstart/)の「トークンの準備」をご覧ください。
+- 環境変数の`SKYWAY_APP_ID`と`SKYWAY_SECRET_KEY`を設定します。
+    - 設定方法は[QuickStart](https://skyway.ntt.com/ja/docs/user-guide/linux-sdk/quickstart/)をご覧ください。
 
 - 引数に入室したいルーム名を指定して実行します。
 ```

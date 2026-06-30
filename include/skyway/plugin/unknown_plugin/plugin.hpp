@@ -11,18 +11,16 @@ namespace skyway {
 namespace plugin {
 namespace unknown_plugin {
 
-/// @brief 機能として対応していないPlugin
 class Plugin : public core::interface::RemoteMemberPlugin {
 public:
     std::string GetSubtype() const override;
-    /// @cond INTERNAL_SECTION
+
     std::shared_ptr<core::interface::RemoteMember> Create(
         std::shared_ptr<core::interface::Channel> channel, const model::Member& dto) const override;
-    /// @endcond
 };
 
 }  // namespace unknown_plugin
 }  // namespace plugin
 }  // namespace skyway
 
-#endif /* SKYWAY_PLUGIN_UNKNOWN_PLUGIN_PLUGIN_HPP_ */
+#endif

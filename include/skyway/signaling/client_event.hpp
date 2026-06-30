@@ -16,10 +16,6 @@ struct ClientEvent {
     ClientEvent(const std::string& name, const nlohmann::json& payload);
     ClientEvent(const std::string& name);
 
-    /// @brief
-    /// オーダーオブジェクトをJSONに変換したときのサイズが規定サイズ以下の場合にtrueを返します。
-    /// @details
-    /// JS-Clientではコンストラクタでsizeバリデーションをしていますが、C++ではコンストラクタで例外を返すことはアンチパターンなので、バリデーションメソッドを実装しています。
     bool ValidateJsonSize() const;
 
     std::string name;
@@ -32,4 +28,4 @@ void to_json(nlohmann::json& j, const ClientEvent& event);
 }  // namespace signaling
 }  // namespace skyway
 
-#endif /* SKYWAY_SIGNALING_CLIENT_EVENT_HPP_ */
+#endif

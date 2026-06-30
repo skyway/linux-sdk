@@ -2,18 +2,11 @@ cmake_minimum_required(VERSION 3.10.2)
 
 project("examples")
 
-# External libraries
-add_library( skyway-linux-core STATIC IMPORTED )
-set_target_properties( skyway-linux-core
+add_library( skyway-linux STATIC IMPORTED )
+set_target_properties( skyway-linux
         PROPERTIES
         IMPORTED_LOCATION
-        ${CMAKE_CURRENT_SOURCE_DIR}/libs/libskyway-linux-core.a)
-
-add_library( skyway-linux-room STATIC IMPORTED )
-set_target_properties( skyway-linux-room
-        PROPERTIES
-        IMPORTED_LOCATION
-        ${CMAKE_CURRENT_SOURCE_DIR}/libs/libskyway-linux-room.a)
+        ${CMAKE_CURRENT_SOURCE_DIR}/libs/libskyway-linux.a)
 
 # List of definitions
 set( SKYWAY_LINUX_DEFINITIONS
@@ -22,8 +15,7 @@ set( SKYWAY_LINUX_DEFINITIONS
 
 # List of libs
 set( SKYWAY_LINUX_LIBS
-        skyway-linux-room
-        skyway-linux-core
+        skyway-linux
         pthread
         atomic 
         avcodec 

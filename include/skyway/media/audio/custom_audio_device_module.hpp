@@ -16,6 +16,7 @@ namespace skyway {
 namespace media {
 namespace audio {
 
+/// @cond INTERNAL_SECTION
 class CustomAudioDeviceModule : public webrtc::AudioDeviceModule {
 public:
     static rtc::scoped_refptr<CustomAudioDeviceModule> Create(
@@ -108,6 +109,7 @@ private:
     std::atomic<bool> stereo_playout_      = true;
     std::atomic<bool> stereo_recording_    = true;
 };
+/// @endcond
 
 }  // namespace audio
 }  // namespace media

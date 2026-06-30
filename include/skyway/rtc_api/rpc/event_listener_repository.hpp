@@ -7,10 +7,11 @@
 
 #include <atomic>
 #include <memory>
+#include <mutex>
+#include <string>
 #include <vector>
 
 #include "skyway/global/worker.hpp"
-#include "skyway/rtc_api/interface/api_client.hpp"
 #include "skyway/rtc_api/interface/event_listener_repository.hpp"
 
 namespace skyway {
@@ -32,23 +33,25 @@ struct EventListener {
 
 class EventListenerRepository : public interface::EventListenerRepository {
 public:
+    EventListenerRepository();
     void AddListener(const std::string& channel_id,
                      std::weak_ptr<interface::EventListenerRepository::Listener> listener) override;
     void RemoveListener(const std::string& channel_id) override;
     void StartQueuingEvents() override;
     void ResolveQueuingEvents() override;
 
-    // Impl RpcInterface::Listener
     void OnNotified(const dto::RequestMessage& message) override;
     void OnReconnected() override;
 
 private:
     void Notify(const Event& event);
     void QueueTheEvent(const Event& event);
+    void DisposeWorkers(std::vector<std::unique_ptr<global::interface::Worker>>&& workers);
 
     std::mutex event_listeners_mtx_;
     std::vector<EventListener> event_listeners_;
-    std::atomic<bool> is_queuing_                                           = false;
+    std::unique_ptr<global::interface::Worker> worker_disposal_worker_;
+    std::atomic<bool> is_queuing_ = false;
     std::mutex pending_events_mtx_;
     std::vector<Event> pending_events_ = {};
 
@@ -60,4 +63,4 @@ public:
 }  // namespace rtc_api
 }  // namespace skyway
 
-#endif /* SKYWAY_RTC_API_RPC_EVENT_LISTENER_REPOSITORY_HPP_ */
+#endif

@@ -83,7 +83,6 @@ struct AuthTokenV2 : AuthToken {
     AuthTokenScopeV2 scope;
 };
 
-// for SAT v3
 struct TurnScope {
     std::optional<bool> enabled;
 };
@@ -136,7 +135,6 @@ void from_json(const nlohmann::json& j, AppScope& scope);
 void from_json(const nlohmann::json& j, AuthTokenScopeV2& scope);
 void from_json(const nlohmann::json& j, AuthToken& message);
 
-// for SAT v3
 void from_json(const nlohmann::json& j, TurnScope& scope);
 void from_json(const nlohmann::json& j, AnalyticsScope& scope);
 void from_json(const nlohmann::json& j, SfuScope& scope);
@@ -148,4 +146,4 @@ void from_json(const nlohmann::json& j, AuthTokenV3& message);
 }  // namespace token
 }  // namespace skyway
 
-#endif /* SKYWAY_TOKEN_AUTH_TOKEN_HPP_ */
+#endif

@@ -5,6 +5,8 @@
 #ifndef SKYWAY_CORE_SUBSCRIPTION_HPP_
 #define SKYWAY_CORE_SUBSCRIPTION_HPP_
 
+#include <functional>
+
 #include "skyway/core/interface/channel.hpp"
 #include "skyway/core/interface/member.hpp"
 #include "skyway/core/interface/publication.hpp"
@@ -14,21 +16,17 @@
 namespace skyway {
 namespace core {
 
-/// @brief Subscriptionの実装クラス
 class Subscription : public interface::Subscription {
 public:
-    /// @cond INTERNAL_SECTION
     Subscription(std::shared_ptr<interface::Channel> channel,
                  const model::Subscription& initial_dto,
                  model::ContentType content_type);
-    /// @endcond
 
     void AddEventListener(interface::Subscription::EventListener* listener) override;
     void RemoveEventListener(interface::Subscription::EventListener* listener) override;
-    /// @cond INTERNAL_SECTION
+
     void AddInternalListener(interface::Subscription::InternalListener* listener) override;
     void RemoveInternalListener(interface::Subscription::InternalListener* listener) override;
-    /// @endcond
 
     std::string Id() const override;
     model::ContentType ContentType() const override;
@@ -40,10 +38,9 @@ public:
     std::optional<std::string> PreferredEncodingId() const override;
 
     bool ChangePreferredEncoding(const std::string& id) override;
-    bool Cancel() const override;
     std::optional<model::WebRTCStats> GetStats() override;
-    /// @cond INTERNAL_SECTION
-    void AddGetStatsCallback(Callback* callback) override;
+
+    void AddGetStatsCallback(std::weak_ptr<Callback> callback) override;
     void RemoveGetStatsCallback() override;
 
     void SetStream(std::shared_ptr<interface::RemoteStream> stream) override;
@@ -51,8 +48,11 @@ public:
 
     void OnCanceled() override;
     void OnConnectionStateChanged(const core::ConnectionState new_state) override;
-    /// @endcond
+
 private:
+    void DispatchSubscriptionListeners(
+        std::function<void(interface::Subscription::EventListener*)> fn);
+
     std::weak_ptr<interface::Channel> channel_;
     model::Subscription initial_dto_;
     model::ContentType content_type_;
@@ -67,15 +67,13 @@ private:
     std::mutex internal_listeners_mtx_;
     std::unordered_set<interface::Subscription::InternalListener*> internal_listeners_;
     std::mutex get_stats_callback_mutex_;
-    Callback* get_stats_callback_;
+    std::weak_ptr<Callback> get_stats_callback_;
 
 public:
-    /// @cond INTERNAL_SECTION
     friend class CoreSubscriptionTest;
-    /// @endcond
 };
 
 }  // namespace core
 }  // namespace skyway
 
-#endif /* SKYWAY_CORE_SUBSCRIPTION_HPP_ */
+#endif

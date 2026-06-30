@@ -5,7 +5,10 @@
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_SFU_CONNECTION_FACTORY_HPP_
 #define SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_SFU_CONNECTION_FACTORY_HPP_
 
-#include "skyway/core/context.hpp"
+#include <memory>
+#include <string>
+
+#include "skyway/core/context_options.hpp"
 #include "skyway/plugin/sfu_bot_plugin/interface/sfu_api_client.hpp"
 #include "skyway/plugin/sfu_bot_plugin/interface/sfu_connection.hpp"
 #include "skyway/plugin/sfu_bot_plugin/interface/transport_repository.hpp"
@@ -33,4 +36,4 @@ public:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif /* SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_SFU_CONNECTION_FACTORY_HPP_ */
+#endif

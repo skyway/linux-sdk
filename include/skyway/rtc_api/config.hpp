@@ -24,4 +24,4 @@ extern const int kDefaultTimeoutForSend;
 }  // namespace rtc_api
 }  // namespace skyway
 
-#endif /* SKYWAY_RTC_API_CONFIG_HPP_ */
+#endif

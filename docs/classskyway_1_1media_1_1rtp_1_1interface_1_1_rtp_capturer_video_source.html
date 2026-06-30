@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('classskyway_1_1media_1_1rtp_1_1interfa
 <p>RTPキャプチャビデオソース  
  <a href="classskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source.html#details">[詳解]</a></p>
 
-<p><code>#include &lt;<a class="el" href="interface_2rtp__capturer__video__source_8hpp_source.html">rtp_capturer_video_source.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="interface_2rtp__capturer__video__source_8hpp_source.html">skyway/media/rtp/interface/rtp_capturer_video_source.hpp</a>&gt;</code></p>
 <div class="dynheader">
 skyway::media::rtp::interface::RtpCapturerVideoSource の継承関係図</div>
 <div class="dyncontent">
@@ -140,7 +140,7 @@ virtual rtc::scoped_refptr&lt; <a class="el" href="classskyway_1_1media_1_1inter
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>RTPキャプチャビデオソース </p>
-<p>この機能を利用するためには<code><a class="el" href="classskyway_1_1_context.html#aef39b53a0f1ade4a21f7fc698b1aae3e" title="Contextを初期化します。">Context::Setup</a></code>におけるSkyWayOptionsのRtp::Input::Videoにおいて、<code>enabled</code>を<code>true</code>に設定し、<code>codec</code>に適切なコーデックを設定する必要があります。</p>
+<p>この機能を利用するためには<code><a class="el" href="classskyway_1_1_context.html#ad5f6e0d1a031cb4b4ad80e2bd4722f40" title="Contextを初期化します。">Context::Setup</a></code>におけるSkyWayOptionsのRtp::Input::Videoにおいて、<code>enabled</code>を<code>true</code>に設定し、<code>codec</code>に適切なコーデックを設定する必要があります。</p>
 <p>また、RTP映像入力モードが有効な場合は、他のVideoSourceは利用できません。 </p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="ab71ebc31afc16c8f0f9873b4c736a3a2" name="ab71ebc31afc16c8f0f9873b4c736a3a2"></a>
@@ -198,7 +198,7 @@ virtual rtc::scoped_refptr&lt; <a class="el" href="classskyway_1_1media_1_1inter
 <p>UDPサーバを起動し、RTPパケットの受信を開始します。 </p>
 <p>このメソッドを呼び出すことで、SkyWay内部でUDPサーバが起動し、指定されたIPv4アドレスとPort番号でRTPパケットの受信を開始します。</p>
 <p>Publish前・後どちらでも呼び出すことができます。</p>
-<p><code><a class="el" href="classskyway_1_1_context.html#aef39b53a0f1ade4a21f7fc698b1aae3e" title="Contextを初期化します。">Context::Setup()</a></code>から<code><a class="el" href="classskyway_1_1_context.html#ac538fa00dde85d18bd6cf194d608290b" title="SkyWayを終了し、Contextを破棄します。">Context::Dispose()</a></code>までの間で最大65535回まで呼び出すことができます。 上限に達した場合はfalseを返します。<code><a class="el" href="classskyway_1_1_context.html#ac538fa00dde85d18bd6cf194d608290b" title="SkyWayを終了し、Contextを破棄します。">Context::Dispose()</a></code>を実行し、再度<code><a class="el" href="classskyway_1_1_context.html#aef39b53a0f1ade4a21f7fc698b1aae3e" title="Contextを初期化します。">Context::Setup()</a></code>をコールすることでリセットされます。</p>
+<p><code><a class="el" href="classskyway_1_1_context.html#ad5f6e0d1a031cb4b4ad80e2bd4722f40" title="Contextを初期化します。">Context::Setup()</a></code>から<code><a class="el" href="classskyway_1_1_context.html#ac538fa00dde85d18bd6cf194d608290b" title="SkyWayを終了し、Contextを破棄します。">Context::Dispose()</a></code>までの間で最大65535回まで呼び出すことができます。 上限に達した場合はfalseを返します。<code><a class="el" href="classskyway_1_1_context.html#ac538fa00dde85d18bd6cf194d608290b" title="SkyWayを終了し、Contextを破棄します。">Context::Dispose()</a></code>を実行し、再度<code><a class="el" href="classskyway_1_1_context.html#ad5f6e0d1a031cb4b4ad80e2bd4722f40" title="Contextを初期化します。">Context::Setup()</a></code>をコールすることでリセットされます。</p>
 <dl class="section return"><dt>戻り値</dt><dd>成功可否 </dd></dl>
 
 <p><a class="el" href="classskyway_1_1media_1_1rtp_1_1_rtp_capturer_video_source.html#a81c3620af08d7a783aa84e7260eb8da6">skyway::media::rtp::RtpCapturerVideoSource</a>で実装されています。</p>

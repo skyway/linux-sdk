@@ -6,8 +6,16 @@
 #define SKYWAY_ANALYTICS_SOCKET_HPP_
 
 #include <atomic>
+#include <chrono>
+#include <condition_variable>
 #include <future>
+#include <memory>
+#include <mutex>
+#include <string>
+#include <thread>
+#include <unordered_map>
 #include <unordered_set>
+#include <vector>
 
 #include "skyway/analytics/config.hpp"
 #include "skyway/analytics/interface/socket.hpp"
@@ -18,7 +26,7 @@
 
 namespace skyway {
 
-class WebSocketIntegrationTest;  // Forward declaration for testing.
+class WebSocketIntegrationTest;
 
 namespace analytics {
 
@@ -43,7 +51,6 @@ public:
     bool IsOpen() const override;
     void Dispose() override;
 
-    // network::interface::WebSocketClient::Listener
     void OnMessage(const std::string& message) override;
     void OnClose(int code, const std::string& reason) override;
     void OnError(int code) override;
@@ -71,23 +78,25 @@ private:
     void StartSendPendingEventsThread();
     void StopSendPendingEventsThread();
 
+    std::string tag_ = "analytics";
     const std::string url_;
     const std::unordered_map<std::string, std::string> headers_;
     const std::weak_ptr<token::interface::AuthTokenManager> auth_;
-    interface::Socket::Listener* listener_;
+    interface::Socket::Listener* listener_ = nullptr;
+    std::mutex listener_mtx_;
     const int max_socket_reconnect_count_;
     const int socket_open_timeout_millisec_;
     const int socket_resend_interval_millisec_;
 
-    std::atomic<State> state_;
-    std::atomic<bool> is_disposed_;
+    std::atomic<State> state_      = State::kReady;
+    std::atomic<bool> is_disposed_ = false;
     std::shared_ptr<network::interface::WebSocketClient> ws_;
 
     std::unordered_map<std::string, PendingClientEvent> pending_events_;
     std::mutex pending_events_mutex_;
 
     std::unique_ptr<std::thread> send_pending_events_thread_;
-    std::atomic<bool> should_stop_sending_;
+    std::atomic<bool> should_stop_sending_ = false;
     std::mutex send_pending_events_thread_mutex_;
     std::condition_variable send_pending_events_cv_;
 
@@ -103,4 +112,4 @@ public:
 }  // namespace analytics
 }  // namespace skyway
 
-#endif /* SKYWAY_ANALYTICS_SOCKET_HPP_ */
+#endif

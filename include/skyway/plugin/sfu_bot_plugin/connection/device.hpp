@@ -43,4 +43,4 @@ private:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif  // SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_DEVICE_HPP_
+#endif

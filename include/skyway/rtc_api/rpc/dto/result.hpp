@@ -57,17 +57,13 @@ struct UpdateMemberMetadataResult {
     uint64_t version;
 };
 
-struct UpdateMemberTtlResult {
-    // Empty
-};
+struct UpdateMemberTtlResult {};
 
 struct GetServerUnixTimeResult {
     time_t unix_time = 0;
 };
 
-struct UpdateAuthTokenResult {
-    // Empty
-};
+struct UpdateAuthTokenResult {};
 
 struct PublishStreamResult {
     std::string id;
@@ -130,4 +126,4 @@ void from_json(const nlohmann::json& j, ListChannelEventResult& result);
 }  // namespace rtc_api
 }  // namespace skyway
 
-#endif /* SKYWAY_RTC_API_RPC_DTO_RESULT_HPP_ */
+#endif

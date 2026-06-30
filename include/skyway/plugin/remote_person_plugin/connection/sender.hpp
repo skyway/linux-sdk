@@ -10,7 +10,7 @@
 #include <api/rtp_transceiver_interface.h>
 
 #include <atomic>
-#include <queue>
+#include <condition_variable>
 #include <unordered_map>
 
 #include "skyway/analytics/interface/analytics_client.hpp"
@@ -28,52 +28,46 @@ namespace plugin {
 namespace remote_person {
 namespace connection {
 
-/// @brief P2PにおいてStreamを送信するピア
 class Sender : public Peer,
+               public Peer::Listener,
                public core::stream::local::LocalDataStream::InternalListener,
                public core::interface::Publication::InternalListener,
-               public core::interface::Publication::Callback {
+               public core::interface::Publication::Callback,
+               public std::enable_shared_from_this<Sender> {
 public:
     using SubscriptionId = std::string;
 
-    /// コンストラクタ
-    /// @param remote_member Messageパッケージ型のMember
-    /// @param ice_manager IceManager
-    /// @param messenger メッセンジャー
-    /// @param peer_connection_factory PeerConnectionFactory
-    /// @param analytics_client analyticsクライアント
     Sender(const MessageMember& remote_member,
            core::interface::IceManager* ice_manager,
            core::interface::ChunkMessenger* messenger,
            rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory);
     ~Sender();
 
-    /// @brief ネゴシエーションを開始してStreamを送信します。
-    /// @param publication Publication
-    /// @param subscription_id SubscriptionのID
+    void Dispose();
+
     bool Publish(std::shared_ptr<core::interface::Publication> publication,
                  const SubscriptionId& subscription_id);
 
     bool Unpublish(std::shared_ptr<core::interface::Publication> publication,
                    const bool skip_response_wait = false);
 
-    /// アンサーペイロードを処理します。
-    /// @param payload アンサーペイロード
     bool HandleAnswerPayloadPayload(const dto::AnswerPayloadPayload& payload);
 
     bool ShouldClose();
 
-    // core::stream::local::LocalDataStream::InternalListener
     bool OnWriteData(const core::stream::local::LocalDataStream::SendingData& buffer,
                      const std::string& publication_id) override;
 
-    // core::interface::Publication::Listener
+    void OnConnect(rtc::scoped_refptr<webrtc::DataChannelInterface> data_channel,
+                   const DataChannelLabel& label) override;
+    void OnDisconnect(const DataChannelLabel& label) override;
+    void OnBufferedAmountChange(uint64_t sent_data_size, const DataChannelLabel& label) override;
+
     void OnEncodingsUpdated(std::shared_ptr<core::interface::Publication> publication,
                             std::vector<model::Encoding> encodings) override;
     void OnStreamReplaced(std::shared_ptr<core::interface::Publication>,
                           std::shared_ptr<core::interface::LocalMediaStream> stream) override;
 
-    // core::interface::Publication::Callback
     const std::optional<nlohmann::json> GetStatsReport(
         std::shared_ptr<core::interface::Publication> publication) override;
 
@@ -100,13 +94,16 @@ private:
     bool SetTransceiver(rtc::scoped_refptr<webrtc::RtpTransceiverInterface> transceiver,
                         const std::string& publication_id);
     bool RestartIce();
+    bool WaitForBufferedAmountLow(const std::string& publication_id);
 
+    void AddConnectionStateChangedTask(const core::ConnectionState new_state);
     void NotifyConnectionStateChanged(const core::ConnectionState new_state);
     void UpdateIceServers();
     void AddPublication(std::shared_ptr<core::interface::Publication> publication);
     void RemovePublication(std::shared_ptr<core::interface::Publication> publication);
     void RemoveFromPublication(std::shared_ptr<core::interface::Publication> publication);
     void Reconnect(int max_ice_restart_count);
+    void NotifyDataStreamWritable(const DataChannelLabel& label, bool is_writable);
 
     using PublicationId = std::string;
     std::mutex transceivers_mutex_;
@@ -116,9 +113,12 @@ private:
     std::vector<std::weak_ptr<core::interface::Publication>> publications_;
     std::mutex restart_ice_threads_mtx;
     std::vector<std::unique_ptr<std::thread>> restart_ice_threads_;
+    std::mutex send_data_mtx_;
+    std::mutex buffered_amount_mtx_;
+    std::condition_variable buffered_amount_cv_;
 
     core::interface::IceManager* ice_manager_;
-    std::atomic<core::ConnectionState> connection_state_;
+    std::atomic<core::ConnectionState> connection_state_ = core::ConnectionState::kNew;
 
 public:
     friend class P2PConnectionTest;
@@ -130,4 +130,4 @@ public:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif /* SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_CONNECTION_SENDER_HPP_ */
+#endif

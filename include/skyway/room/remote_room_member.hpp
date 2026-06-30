@@ -16,9 +16,12 @@ namespace room {
 /// @brief RemoteRoomMemberの操作を行うクラス
 class RemoteRoomMember : public abstract::RoomMember, public interface::RemoteRoomMember {
 public:
+    /// @cond INTERNAL_SECTION
     RemoteRoomMember(std::shared_ptr<plugin::remote_person::RemotePerson> person,
                      std::shared_ptr<interface::Room> room,
                      interface::RoomDomainFactory* factory);
+    /// @endcond
+
     std::shared_ptr<interface::RoomSubscription> Subscribe(
         const std::string& publication_id) override;
     bool Unsubscribe(const std::string& subscription_id) override;

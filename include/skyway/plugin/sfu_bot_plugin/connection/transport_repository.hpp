@@ -23,10 +23,8 @@ using ConnectionState = std::string;
 
 class TransportRepository : public interface::TransportRepository {
 public:
-    /// コンストラクタ
     TransportRepository(interface::SfuApiClient* client);
 
-    /// デストラクタ
     ~TransportRepository();
 
     bool IsDeviceLoaded() override;
@@ -36,21 +34,21 @@ public:
 
     nlohmann::json GetRtpCapabilities() override;
 
-    interface::SendTransport* CreateSendTransport(
+    std::shared_ptr<interface::SendTransport> CreateSendTransport(
         const nlohmann::json& transport_options,
         const interface::Device::PeerConnectionOptions* pc_options,
         const LocalPersonId& local_person_id) override;
 
-    interface::RecvTransport* CreateRecvTransport(
+    std::shared_ptr<interface::RecvTransport> CreateRecvTransport(
         const nlohmann::json& transport_options,
         const interface::Device::PeerConnectionOptions* pc_options,
         const LocalPersonId& local_person_id) override;
 
-    interface::SendTransport* GetSendTransport(const LocalPersonId& local_person_id,
-                                               const std::string& transport_id) override;
+    std::shared_ptr<interface::SendTransport> GetSendTransport(
+        const LocalPersonId& local_person_id, const std::string& transport_id) override;
 
-    interface::RecvTransport* GetRecvTransport(const LocalPersonId& local_person_id,
-                                               const std::string& transport_id) override;
+    std::shared_ptr<interface::RecvTransport> GetRecvTransport(
+        const LocalPersonId& local_person_id, const std::string& transport_id) override;
 
     void RemoveResources(const LocalPersonId& local_person_id) override;
 
@@ -63,12 +61,11 @@ private:
     std::mutex device_mtx_;
     std::unique_ptr<interface::Device> device_;
 
-    // Transports are managed with multi composite primary key(LocalPersonID and TransportID)
     std::mutex send_transports_mtx_;
-    std::unordered_multimap<LocalPersonId, std::unique_ptr<interface::SendTransport>>
+    std::unordered_multimap<LocalPersonId, std::shared_ptr<interface::SendTransport>>
         send_transports_;
     std::mutex recv_transports_mtx_;
-    std::unordered_multimap<LocalPersonId, std::unique_ptr<interface::RecvTransport>>
+    std::unordered_multimap<LocalPersonId, std::shared_ptr<interface::RecvTransport>>
         recv_transports_;
 
 public:
@@ -82,4 +79,4 @@ public:
 }  // namespace plugin
 }  // namespace skyway
 
-#endif /* SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_TRANSPORT_REPOSITORY_HPP_ */
+#endif

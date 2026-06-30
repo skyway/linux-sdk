@@ -101,6 +101,7 @@ $(document).ready(function(){initNavTree('classskyway_1_1media_1_1_stream_factor
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
 <a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
 <a href="classskyway_1_1media_1_1_stream_factory-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle"><div class="title">skyway::media::StreamFactory クラス</div></div>
@@ -110,33 +111,42 @@ $(document).ready(function(){initNavTree('classskyway_1_1media_1_1_stream_factor
 <p>Streamの作成を行うクラス  
  <a href="classskyway_1_1media_1_1_stream_factory.html#details">[詳解]</a></p>
 
-<p><code>#include &lt;<a class="el" href="stream__factory_8hpp_source.html">stream_factory.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="stream__factory_8hpp_source.html">skyway/media/stream_factory.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structskyway_1_1media_1_1_stream_factory_1_1_capture_options.html">CaptureOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">映像入力デバイスからStreamを生成する際の希望設定  <a href="structskyway_1_1media_1_1_stream_factory_1_1_capture_options.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
-<tr class="memitem:a7200a8105e0d6ee14a9230df73087c2b" id="r_a7200a8105e0d6ee14a9230df73087c2b"><td class="memItemLeft" align="right" valign="top"><a id="a7200a8105e0d6ee14a9230df73087c2b" name="a7200a8105e0d6ee14a9230df73087c2b"></a>
-static std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1stream_1_1local_1_1_local_data_stream.html">core::stream::local::LocalDataStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CreateDataStream</b> ()</td></tr>
-<tr class="memdesc:a7200a8105e0d6ee14a9230df73087c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">LocalDataStreamを生成します。 <br /></td></tr>
-<tr class="separator:a7200a8105e0d6ee14a9230df73087c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6f1267c07231eb6feb972d657343433" id="r_ae6f1267c07231eb6feb972d657343433"><td class="memItemLeft" align="right" valign="top"><a id="ae6f1267c07231eb6feb972d657343433" name="ae6f1267c07231eb6feb972d657343433"></a>
-static std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1stream_1_1local_1_1_local_audio_stream.html">core::stream::local::LocalAudioStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CreateAudioStream</b> ()</td></tr>
-<tr class="memdesc:ae6f1267c07231eb6feb972d657343433"><td class="mdescLeft">&#160;</td><td class="mdescRight">LocalAudioStreamを生成します。 <br /></td></tr>
-<tr class="separator:ae6f1267c07231eb6feb972d657343433"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5fe4d8ee84dc465c44546a3e0493204" id="r_af5fe4d8ee84dc465c44546a3e0493204"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1stream_1_1local_1_1_local_audio_stream.html">core::stream::local::LocalAudioStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html#af5fe4d8ee84dc465c44546a3e0493204">CreateAudioStream</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html">audio::interface::PcmAudioSource</a> &gt; source)</td></tr>
-<tr class="memdesc:af5fe4d8ee84dc465c44546a3e0493204"><td class="mdescLeft">&#160;</td><td class="mdescRight">LocalAudioStreamを生成します。  <br /></td></tr>
-<tr class="separator:af5fe4d8ee84dc465c44546a3e0493204"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad25a3f1dd6a1dd9f31f72b77d635b07d" id="r_ad25a3f1dd6a1dd9f31f72b77d635b07d"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1stream_1_1local_1_1_local_video_stream.html">core::stream::local::LocalVideoStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html#ad25a3f1dd6a1dd9f31f72b77d635b07d">CreateVideoStream</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1interface_1_1_capturer_video_source.html">interface::CapturerVideoSource</a> &gt; capturer)</td></tr>
-<tr class="memdesc:ad25a3f1dd6a1dd9f31f72b77d635b07d"><td class="mdescLeft">&#160;</td><td class="mdescRight">LocalVideoStreamを生成します。  <br /></td></tr>
-<tr class="separator:ad25a3f1dd6a1dd9f31f72b77d635b07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd9706d0e4a2edfb9a7d2de02407f9b2" id="r_afd9706d0e4a2edfb9a7d2de02407f9b2"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1stream_1_1local_1_1_local_video_stream.html">core::stream::local::LocalVideoStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html#afd9706d0e4a2edfb9a7d2de02407f9b2">CreateVideoStream</a> (const <a class="el" href="structskyway_1_1media_1_1_device_manager_1_1_video_device.html">DeviceManager::VideoDevice</a> &amp;device)</td></tr>
-<tr class="memdesc:afd9706d0e4a2edfb9a7d2de02407f9b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">LocalVideoStreamを生成します。  <br /></td></tr>
-<tr class="separator:afd9706d0e4a2edfb9a7d2de02407f9b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15bc507191bfc130c38f1c2fd84b20e3" id="r_a15bc507191bfc130c38f1c2fd84b20e3"><td class="memItemLeft" align="right" valign="top"><a id="a15bc507191bfc130c38f1c2fd84b20e3" name="a15bc507191bfc130c38f1c2fd84b20e3"></a>
+static std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1stream_1_1local_1_1_local_data_stream.html">stream::local::LocalDataStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CreateDataStream</b> ()</td></tr>
+<tr class="memdesc:a15bc507191bfc130c38f1c2fd84b20e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">LocalDataStreamを生成します。 <br /></td></tr>
+<tr class="separator:a15bc507191bfc130c38f1c2fd84b20e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb1780db84b47c2a97e7cae5178d4a6f" id="r_acb1780db84b47c2a97e7cae5178d4a6f"><td class="memItemLeft" align="right" valign="top"><a id="acb1780db84b47c2a97e7cae5178d4a6f" name="acb1780db84b47c2a97e7cae5178d4a6f"></a>
+static std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1stream_1_1local_1_1_local_audio_stream.html">stream::local::LocalAudioStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CreateAudioStream</b> ()</td></tr>
+<tr class="memdesc:acb1780db84b47c2a97e7cae5178d4a6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">LocalAudioStreamを生成します。 <br /></td></tr>
+<tr class="separator:acb1780db84b47c2a97e7cae5178d4a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f43fcc4815207803708ec26c091f88" id="r_ae6f43fcc4815207803708ec26c091f88"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1stream_1_1local_1_1_local_audio_stream.html">stream::local::LocalAudioStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html#ae6f43fcc4815207803708ec26c091f88">CreateAudioStream</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html">audio::interface::PcmAudioSource</a> &gt; source)</td></tr>
+<tr class="memdesc:ae6f43fcc4815207803708ec26c091f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">LocalAudioStreamを生成します。  <br /></td></tr>
+<tr class="separator:ae6f43fcc4815207803708ec26c091f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a629ea607c132cb67a4bc1e905cd4909e" id="r_a629ea607c132cb67a4bc1e905cd4909e"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1stream_1_1local_1_1_local_video_stream.html">stream::local::LocalVideoStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html#a629ea607c132cb67a4bc1e905cd4909e">CreateVideoStream</a> (std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1interface_1_1_capturer_video_source.html">interface::CapturerVideoSource</a> &gt; capturer)</td></tr>
+<tr class="memdesc:a629ea607c132cb67a4bc1e905cd4909e"><td class="mdescLeft">&#160;</td><td class="mdescRight">LocalVideoStreamを生成します。  <br /></td></tr>
+<tr class="separator:a629ea607c132cb67a4bc1e905cd4909e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f09aa06b9311278a57ea591ac5eab1" id="r_a31f09aa06b9311278a57ea591ac5eab1"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1stream_1_1local_1_1_local_video_stream.html">stream::local::LocalVideoStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html#a31f09aa06b9311278a57ea591ac5eab1">CreateVideoStream</a> (const <a class="el" href="structskyway_1_1media_1_1_device_manager_1_1_video_device.html">DeviceManager::VideoDevice</a> &amp;device)</td></tr>
+<tr class="memdesc:a31f09aa06b9311278a57ea591ac5eab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">LocalVideoStreamを生成します。  <br /></td></tr>
+<tr class="separator:a31f09aa06b9311278a57ea591ac5eab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b9320deed743bec20dff1324fcb1c5d" id="r_a7b9320deed743bec20dff1324fcb1c5d"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1stream_1_1local_1_1_local_video_stream.html">stream::local::LocalVideoStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classskyway_1_1media_1_1_stream_factory.html#a7b9320deed743bec20dff1324fcb1c5d">CreateVideoStream</a> (const <a class="el" href="structskyway_1_1media_1_1_device_manager_1_1_video_device.html">DeviceManager::VideoDevice</a> &amp;device, const <a class="el" href="structskyway_1_1media_1_1_stream_factory_1_1_capture_options.html">CaptureOptions</a> &amp;options)</td></tr>
+<tr class="memdesc:a7b9320deed743bec20dff1324fcb1c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">LocalVideoStreamを生成します。  <br /></td></tr>
+<tr class="separator:a7b9320deed743bec20dff1324fcb1c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>Streamの作成を行うクラス </p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="af5fe4d8ee84dc465c44546a3e0493204" name="af5fe4d8ee84dc465c44546a3e0493204"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5fe4d8ee84dc465c44546a3e0493204">&#9670;&#160;</a></span>CreateAudioStream()</h2>
+<a id="ae6f43fcc4815207803708ec26c091f88" name="ae6f43fcc4815207803708ec26c091f88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6f43fcc4815207803708ec26c091f88">&#9670;&#160;</a></span>CreateAudioStream()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,7 +155,7 @@ static std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1stream_1_1
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1stream_1_1local_1_1_local_audio_stream.html">core::stream::local::LocalAudioStream</a> &gt; skyway::media::StreamFactory::CreateAudioStream </td>
+          <td class="memname">static std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1stream_1_1local_1_1_local_audio_stream.html">stream::local::LocalAudioStream</a> &gt; skyway::media::StreamFactory::CreateAudioStream </td>
           <td>(</td>
           <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1audio_1_1interface_1_1_pcm_audio_source.html">audio::interface::PcmAudioSource</a> &gt;&#160;</td>
           <td class="paramname"><em>source</em></td><td>)</td>
@@ -169,8 +179,8 @@ static std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1stream_1_1
 
 </div>
 </div>
-<a id="afd9706d0e4a2edfb9a7d2de02407f9b2" name="afd9706d0e4a2edfb9a7d2de02407f9b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd9706d0e4a2edfb9a7d2de02407f9b2">&#9670;&#160;</a></span>CreateVideoStream() <span class="overload">[1/2]</span></h2>
+<a id="a31f09aa06b9311278a57ea591ac5eab1" name="a31f09aa06b9311278a57ea591ac5eab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31f09aa06b9311278a57ea591ac5eab1">&#9670;&#160;</a></span>CreateVideoStream() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,7 +189,7 @@ static std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1stream_1_1
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1stream_1_1local_1_1_local_video_stream.html">core::stream::local::LocalVideoStream</a> &gt; skyway::media::StreamFactory::CreateVideoStream </td>
+          <td class="memname">static std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1stream_1_1local_1_1_local_video_stream.html">stream::local::LocalVideoStream</a> &gt; skyway::media::StreamFactory::CreateVideoStream </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structskyway_1_1media_1_1_device_manager_1_1_video_device.html">DeviceManager::VideoDevice</a> &amp;&#160;</td>
           <td class="paramname"><em>device</em></td><td>)</td>
@@ -194,7 +204,7 @@ static std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1stream_1_1
 </div><div class="memdoc">
 
 <p>LocalVideoStreamを生成します。 </p>
-<dl class="params"><dt>引数</dt><dd>
+<p>640x480 / 30fps を希望値として映像入力デバイスから生成します。 640x480 / 30fps が必ず使われるとは限りません。 </p><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">device</td><td>StreamのソースになるVideoDevice </td></tr>
   </table>
@@ -203,8 +213,8 @@ static std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1stream_1_1
 
 </div>
 </div>
-<a id="ad25a3f1dd6a1dd9f31f72b77d635b07d" name="ad25a3f1dd6a1dd9f31f72b77d635b07d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad25a3f1dd6a1dd9f31f72b77d635b07d">&#9670;&#160;</a></span>CreateVideoStream() <span class="overload">[2/2]</span></h2>
+<a id="a7b9320deed743bec20dff1324fcb1c5d" name="a7b9320deed743bec20dff1324fcb1c5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b9320deed743bec20dff1324fcb1c5d">&#9670;&#160;</a></span>CreateVideoStream() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +223,52 @@ static std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1stream_1_1
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::shared_ptr&lt; <a class="el" href="classskyway_1_1core_1_1stream_1_1local_1_1_local_video_stream.html">core::stream::local::LocalVideoStream</a> &gt; skyway::media::StreamFactory::CreateVideoStream </td>
+          <td class="memname">static std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1stream_1_1local_1_1_local_video_stream.html">stream::local::LocalVideoStream</a> &gt; skyway::media::StreamFactory::CreateVideoStream </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structskyway_1_1media_1_1_device_manager_1_1_video_device.html">DeviceManager::VideoDevice</a> &amp;&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structskyway_1_1media_1_1_stream_factory_1_1_capture_options.html">CaptureOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>LocalVideoStreamを生成します。 </p>
+<p>映像入力デバイスに希望するキャプチャ設定を指定して生成します。 指定した値が必ず使われるとは限りません。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device</td><td>StreamのソースになるVideoDevice </td></tr>
+    <tr><td class="paramname">options</td><td>希望するキャプチャ設定 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a629ea607c132cb67a4bc1e905cd4909e" name="a629ea607c132cb67a4bc1e905cd4909e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a629ea607c132cb67a4bc1e905cd4909e">&#9670;&#160;</a></span>CreateVideoStream() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1stream_1_1local_1_1_local_video_stream.html">stream::local::LocalVideoStream</a> &gt; skyway::media::StreamFactory::CreateVideoStream </td>
           <td>(</td>
           <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classskyway_1_1media_1_1interface_1_1_capturer_video_source.html">interface::CapturerVideoSource</a> &gt;&#160;</td>
           <td class="paramname"><em>capturer</em></td><td>)</td>

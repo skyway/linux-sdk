@@ -35,8 +35,7 @@ var NAVTREE =
       [ "クラスメンバ", "functions.html", [
         [ "全て", "functions.html", "functions_dup" ],
         [ "関数", "functions_func.html", "functions_func" ],
-        [ "変数", "functions_vars.html", null ],
-        [ "列挙型", "functions_enum.html", null ]
+        [ "変数", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "ファイル", "files.html", [
@@ -48,9 +47,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "abstract_2local__room__member_8hpp_source.html",
-"classskyway_1_1media_1_1_device_manager.html#a76b0eeddeda6457378987e54167ce305",
-"classskyway_1_1room_1_1interface_1_1_room_publication_1_1_event_listener.html#afeb0aa871a21339a2ce27a3352031e66",
-"structskyway_1_1core_1_1_context_options_1_1_rtc_config.html#a10b1441a1ad38039ff94b834e1cf7d67"
+"classskyway_1_1room_1_1interface_1_1_room_member.html#a88662160a844bb9625d2f7257886275c",
+"room_2types_8hpp.html#a1599a7cab2a35d64a1d56f76b82a4139ab714c11518d545c225d456731dab0dd0"
 ];
 
 var SYNCONMSG = 'クリックで同期表示が無効になります';

@@ -10,6 +10,7 @@ var dir_e0a5df88c41d0cefa5f5ef07a5fde6bd =
     [ "i420_capturer_video_source.hpp", "i420__capturer__video__source_8hpp_source.html", null ],
     [ "i420_video_renderer.hpp", "i420__video__renderer_8hpp_source.html", null ],
     [ "stream_factory.hpp", "stream__factory_8hpp_source.html", null ],
+    [ "types.hpp", "media_2types_8hpp.html", "media_2types_8hpp" ],
     [ "v4l2_capturer_video_source.hpp", "v4l2__capturer__video__source_8hpp_source.html", null ],
     [ "v4l2_video_renderer.hpp", "v4l2__video__renderer_8hpp_source.html", null ]
 ];

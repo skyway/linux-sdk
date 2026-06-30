@@ -18,7 +18,6 @@
 
 #include "skyway/analytics/interface/analytics_client.hpp"
 #include "skyway/analytics/interface/socket.hpp"
-#include "skyway/global/worker.hpp"
 #include "skyway/token/interface/auth_token_manager.hpp"
 
 namespace skyway {
@@ -31,7 +30,6 @@ public:
     AnalyticsClient(std::weak_ptr<token::interface::AuthTokenManager> auth,
                     std::unique_ptr<interface::Socket> socket);
 
-    // interface::AnalyticsClient
     ~AnalyticsClient() override;
 
     void SetDelegator(std::weak_ptr<Delegator> delegator) override;
@@ -52,11 +50,9 @@ public:
     std::future<bool> SendJoinChannelClientEventAsync(
         const JoinChannelEventPayload& payload) override;
 
-    // interface::Socket::Listener
     void OnConnectionFailed() override;
     void OnOpen(const OpenPayload& payload) override;
 
-    // token::interface::AuthTokenManager::InternalListener
     void OnTokenUpdated(const token::AuthToken* token) override;
 
     bool IsSocketOpen() const;
@@ -69,7 +65,6 @@ private:
 
     std::future<bool> ConnectAsyncCore();
 
-    // interface::AnalyticsClient
     std::future<bool> SendClientEventAsync(const ClientEvent& event) override;
 
     void StartSubscriptionStatsReportThread();
@@ -86,7 +81,7 @@ private:
     std::weak_ptr<Delegator> delegator_;
     std::mutex delegator_mutex_;
 
-    bool disposed_;
+    bool disposed_ = false;
     std::mutex disposed_mutex_;
 
     std::thread connection_failed_thread_;
@@ -94,8 +89,9 @@ private:
 
     std::thread subscription_stats_report_thread_;
     std::mutex subscription_stats_report_thread_mutex_;
-    std::atomic<bool> should_stop_subscription_stats_report_;
+    std::atomic<bool> should_stop_subscription_stats_report_ = false;
     std::condition_variable subscription_stats_report_cv_;
+    std::mutex subscription_stats_report_wait_mutex_;
 
     bool has_subscription_stats_report_config_                   = false;
     std::chrono::seconds subscription_stats_report_interval_sec_ = std::chrono::seconds(0);
@@ -122,4 +118,4 @@ const nlohmann::json::object_t MakeSubscriptionStats(
 }  // namespace analytics
 }  // namespace skyway
 
-#endif /* SKYWAY_ANALYTICS_ANALYTICS_CLIENT_HPP_ */
+#endif
