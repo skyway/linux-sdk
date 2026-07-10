@@ -59,7 +59,9 @@ public:
     static bool SetPlayoutDevice(AudioDevice device);
 
     /// @cond INTERNAL_SECTION
-    static void Init(AudioBackendType audio_backend, skyway::global::Logger *logger);
+    static void Init(AudioBackendType audio_backend,
+                     const AudioProcessingOptions &audio_processing_options,
+                     skyway::global::Logger *logger);
     static rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> GetPeerConnectionFactory();
     static void Dispose();
     static rtc::scoped_refptr<webrtc::AudioTrackInterface> CreateAudioTrack();

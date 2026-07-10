@@ -19,6 +19,18 @@ enum class AudioBackendType {
     kNone,
 };
 
+/// @brief 音声処理に関する設定
+struct AudioProcessingOptions {
+    /// @brief エコーキャンセラーを有効にします
+    bool echo_cancellation = true;
+    /// @brief 自動音量調整を有効にします
+    bool auto_gain_control = true;
+    /// @brief ノイズサプレッションを有効にします
+    bool noise_suppression = true;
+    /// @brief ハイパスフィルターを有効にします
+    bool highpass_filter = true;
+};
+
 }  // namespace media
 }  // namespace skyway
 

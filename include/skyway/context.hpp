@@ -29,7 +29,7 @@ class PassthroughVideoEncoderFactoryTest;
 class Context {
 public:
     static const unsigned int kVersionMajor = 4;
-    static const unsigned int kVersionMinor = 0;
+    static const unsigned int kVersionMinor = 1;
     static const unsigned int kVersionPatch = 0;
 
     /// @brief Contextのイベントリスナ
@@ -159,6 +159,12 @@ public:
         /// @brief オーディオバックエンドを指定します
         skyway::media::AudioBackendType audio_backend =
             skyway::media::AudioBackendType::kPulseAudio;
+
+        /// @brief 音声処理に関する設定
+        /// @details
+        /// エコーキャンセラー等の音声処理は、Context全体で共有される1つの音声処理エンジンに対して
+        /// 適用されるため、Context単位の設定となります。
+        skyway::media::AudioProcessingOptions audio_processing;
 
         /// @brief RTPに関する設定
         Rtp rtp;

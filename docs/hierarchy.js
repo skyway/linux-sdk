@@ -7,6 +7,7 @@ var hierarchy =
     ] ],
     [ "skyway::media::DeviceManager::AudioDevice", "structskyway_1_1media_1_1_device_manager_1_1_audio_device.html", null ],
     [ "skyway::media::audio::interface::AudioFrame", "structskyway_1_1media_1_1audio_1_1interface_1_1_audio_frame.html", null ],
+    [ "skyway::media::AudioProcessingOptions", "structskyway_1_1media_1_1_audio_processing_options.html", null ],
     [ "skyway::Context::AuthTokenListener", "classskyway_1_1_context_1_1_auth_token_listener.html", null ],
     [ "skyway::media::StreamFactory::CaptureOptions", "structskyway_1_1media_1_1_stream_factory_1_1_capture_options.html", null ],
     [ "skyway::media::interface::CapturerVideoSource", "classskyway_1_1media_1_1interface_1_1_capturer_video_source.html", [
