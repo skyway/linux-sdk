@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('context_8hpp_source.html',''); initRes
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classskyway_1_1_context.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="classskyway_1_1_context.html">Context</a> {</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> kVersionMajor = 4;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> kVersionMinor = 0;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> kVersionMinor = 1;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> kVersionPatch = 0;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
@@ -232,74 +232,76 @@ $(document).ready(function(){initNavTree('context_8hpp_source.html',''); initRes
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="structskyway_1_1_context_1_1_sky_way_options.html#ad5e799d767c4ceab824577ecdc9673ca">  156</a></span>        <a class="code hl_enumeration" href="media_2types_8hpp.html#a7358b059e38f3d54e03c0548421eebdc">skyway::media::AudioBackendType</a> <a class="code hl_variable" href="structskyway_1_1_context_1_1_sky_way_options.html#ad5e799d767c4ceab824577ecdc9673ca">audio_backend</a> =</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            skyway::media::AudioBackendType::kPulseAudio;</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="structskyway_1_1_context_1_1_sky_way_options.html#ace37c5935f4c6d4a63f7c0920ef05cfa">  160</a></span>        <a class="code hl_struct" href="structskyway_1_1_context_1_1_sky_way_options_1_1_rtp.html">Rtp</a> <a class="code hl_variable" href="structskyway_1_1_context_1_1_sky_way_options.html#ace37c5935f4c6d4a63f7c0920ef05cfa">rtp</a>;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="keyword">struct </span>SFU {</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            std::optional&lt;std::string&gt; domain;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            std::optional&lt;int&gt; version;</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            std::optional&lt;bool&gt; secure;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        };</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        SFU sfu;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    };</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="structskyway_1_1_context_1_1_sky_way_options.html#a38402c30242a9052fa7bab0bfacaae29">  163</a></span>        <a class="code hl_struct" href="structskyway_1_1media_1_1_audio_processing_options.html">skyway::media::AudioProcessingOptions</a> <a class="code hl_variable" href="structskyway_1_1_context_1_1_sky_way_options.html#a38402c30242a9052fa7bab0bfacaae29">audio_processing</a>;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="structskyway_1_1_context_1_1_sky_way_options.html#ace37c5935f4c6d4a63f7c0920ef05cfa">  166</a></span>        <a class="code hl_struct" href="structskyway_1_1_context_1_1_sky_way_options_1_1_rtp.html">Rtp</a> <a class="code hl_variable" href="structskyway_1_1_context_1_1_sky_way_options.html#ace37c5935f4c6d4a63f7c0920ef05cfa">rtp</a>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keyword">struct </span>SFU {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            std::optional&lt;std::string&gt; domain;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            std::optional&lt;int&gt; version;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            std::optional&lt;bool&gt; secure;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        };</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        SFU sfu;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    };</div>
 </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="classskyway_1_1_context.html#ad5f6e0d1a031cb4b4ad80e2bd4722f40">  178</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1_context.html#ad5f6e0d1a031cb4b4ad80e2bd4722f40">Setup</a>(<span class="keyword">const</span> std::string&amp; token,</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                      <a class="code hl_class" href="classskyway_1_1_context_1_1_event_listener.html">EventListener</a>* listener,</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                      <span class="keyword">const</span> <a class="code hl_struct" href="structskyway_1_1_context_1_1_sky_way_options.html">SkyWayOptions</a>&amp; options);</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classskyway_1_1_context.html#a4980ad490425ced8452467d75453fa4e">  188</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1_context.html#a4980ad490425ced8452467d75453fa4e">SetupForDev</a>(<span class="keyword">const</span> std::string&amp; app_id,</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                            <span class="keyword">const</span> std::string&amp; secret_key,</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                            <a class="code hl_class" href="classskyway_1_1_context_1_1_event_listener.html">EventListener</a>* listener,</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                            <span class="keyword">const</span> <a class="code hl_struct" href="structskyway_1_1_context_1_1_sky_way_options.html">SkyWayOptions</a>&amp; options);</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="classskyway_1_1_context.html#ac538fa00dde85d18bd6cf194d608290b">  199</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1_context.html#ac538fa00dde85d18bd6cf194d608290b">Dispose</a>();</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="classskyway_1_1_context.html#a391eea271143b269a5da778d1969b0ed">  202</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1_context.html#a391eea271143b269a5da778d1969b0ed">UpdateAuthToken</a>(<span class="keyword">const</span> std::string&amp; token);</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="classskyway_1_1_context.html#a043c8eaf8fdbe6cfd97e68e59b6d007b">  205</a></span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classskyway_1_1_context.html#a043c8eaf8fdbe6cfd97e68e59b6d007b">GetVersionString</a>();</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="classskyway_1_1_context.html#ad5f6e0d1a031cb4b4ad80e2bd4722f40">  184</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1_context.html#ad5f6e0d1a031cb4b4ad80e2bd4722f40">Setup</a>(<span class="keyword">const</span> std::string&amp; token,</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                      <a class="code hl_class" href="classskyway_1_1_context_1_1_event_listener.html">EventListener</a>* listener,</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                      <span class="keyword">const</span> <a class="code hl_struct" href="structskyway_1_1_context_1_1_sky_way_options.html">SkyWayOptions</a>&amp; options);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="classskyway_1_1_context.html#a4980ad490425ced8452467d75453fa4e">  194</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1_context.html#a4980ad490425ced8452467d75453fa4e">SetupForDev</a>(<span class="keyword">const</span> std::string&amp; app_id,</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                            <span class="keyword">const</span> std::string&amp; secret_key,</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                            <a class="code hl_class" href="classskyway_1_1_context_1_1_event_listener.html">EventListener</a>* listener,</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                            <span class="keyword">const</span> <a class="code hl_struct" href="structskyway_1_1_context_1_1_sky_way_options.html">SkyWayOptions</a>&amp; options);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="classskyway_1_1_context.html#ac538fa00dde85d18bd6cf194d608290b">  205</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1_context.html#ac538fa00dde85d18bd6cf194d608290b">Dispose</a>();</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keyword">static</span> std::shared_ptr&lt;media::codec::VideoCodec&gt; GetRtpVideoInputCodecWithValidate();</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="classskyway_1_1_context.html#a391eea271143b269a5da778d1969b0ed">  208</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classskyway_1_1_context.html#a391eea271143b269a5da778d1969b0ed">UpdateAuthToken</a>(<span class="keyword">const</span> std::string&amp; token);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="classskyway_1_1_context.html#a043c8eaf8fdbe6cfd97e68e59b6d007b">  211</a></span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classskyway_1_1_context.html#a043c8eaf8fdbe6cfd97e68e59b6d007b">GetVersionString</a>();</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keyword">class </span>CoreEventListenerAdapter : <span class="keyword">public</span> core::Context::EventListener {</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        CoreEventListenerAdapter();</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="keywordtype">void</span> SetListener(<a class="code hl_class" href="classskyway_1_1_context_1_1_event_listener.html">Context::EventListener</a>* listener);</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="keywordtype">void</span> OnReconnectStart() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        <span class="keywordtype">void</span> OnReconnectSuccess() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        <span class="keywordtype">void</span> OnFatalError(<span class="keyword">const</span> global::Error&amp; error) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <a class="code hl_class" href="classskyway_1_1_context_1_1_event_listener.html">Context::EventListener</a>* listener_;</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    };</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keyword">class </span>CoreAuthTokenListenerAdapter : <span class="keyword">public</span> token::interface::AuthTokenManager::Listener {</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        CoreAuthTokenListenerAdapter();</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keywordtype">void</span> SetListener(<a class="code hl_class" href="classskyway_1_1_context_1_1_auth_token_listener.html">Context::AuthTokenListener</a>* listener);</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        <span class="keywordtype">void</span> OnTokenRefreshingNeeded() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keywordtype">void</span> OnTokenExpired() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <a class="code hl_class" href="classskyway_1_1_context_1_1_auth_token_listener.html">Context::AuthTokenListener</a>* listener_;</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    };</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="keyword">static</span> core::TurnPolicy ConvertToCoreTurnPolicy(domain::TurnPolicy policy);</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="keyword">static</span> core::ContextOptions ConvertToCoreContextOptions(<span class="keyword">const</span> SkyWayOptions&amp; options);</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keyword">inline</span> <span class="keyword">static</span> SkyWayOptions::Rtp rtp_;</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    <span class="keyword">static</span> std::mutex core_event_listener_mutex_;</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="keyword">static</span> CoreEventListenerAdapter core_event_listener_adapter_;</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keyword">static</span> std::mutex core_auth_token_listener_mutex_;</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keyword">static</span> CoreAuthTokenListenerAdapter core_auth_token_listener_adapter_;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keyword">static</span> std::shared_ptr&lt;media::codec::VideoCodec&gt; GetRtpVideoInputCodecWithValidate();</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keyword">class </span>CoreEventListenerAdapter : <span class="keyword">public</span> core::Context::EventListener {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        CoreEventListenerAdapter();</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keywordtype">void</span> SetListener(<a class="code hl_class" href="classskyway_1_1_context_1_1_event_listener.html">Context::EventListener</a>* listener);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keywordtype">void</span> OnReconnectStart() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="keywordtype">void</span> OnReconnectSuccess() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <span class="keywordtype">void</span> OnFatalError(<span class="keyword">const</span> global::Error&amp; error) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <a class="code hl_class" href="classskyway_1_1_context_1_1_event_listener.html">Context::EventListener</a>* listener_;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    };</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keyword">class </span>CoreAuthTokenListenerAdapter : <span class="keyword">public</span> token::interface::AuthTokenManager::Listener {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        CoreAuthTokenListenerAdapter();</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <span class="keywordtype">void</span> SetListener(<a class="code hl_class" href="classskyway_1_1_context_1_1_auth_token_listener.html">Context::AuthTokenListener</a>* listener);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <span class="keywordtype">void</span> OnTokenRefreshingNeeded() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <span class="keywordtype">void</span> OnTokenExpired() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <a class="code hl_class" href="classskyway_1_1_context_1_1_auth_token_listener.html">Context::AuthTokenListener</a>* listener_;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    };</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keyword">static</span> core::TurnPolicy ConvertToCoreTurnPolicy(domain::TurnPolicy policy);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keyword">static</span> core::ContextOptions ConvertToCoreContextOptions(<span class="keyword">const</span> SkyWayOptions&amp; options);</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keyword">friend</span> <span class="keyword">class </span>media::rtp::PassthroughVideoEncoderFactoryTest;</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>};</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keyword">inline</span> <span class="keyword">static</span> SkyWayOptions::Rtp rtp_;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="keyword">static</span> std::mutex core_event_listener_mutex_;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keyword">static</span> CoreEventListenerAdapter core_event_listener_adapter_;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <span class="keyword">static</span> std::mutex core_auth_token_listener_mutex_;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keyword">static</span> CoreAuthTokenListenerAdapter core_auth_token_listener_adapter_;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keyword">friend</span> <span class="keyword">class </span>media::rtp::PassthroughVideoEncoderFactoryTest;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>};</div>
 </div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_CONTEXT_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="preprocessor">#endif </span><span class="comment">/* SKYWAY_CONTEXT_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aclassskyway_1_1_context_1_1_auth_token_listener_html"><div class="ttname"><a href="classskyway_1_1_context_1_1_auth_token_listener.html">skyway::Context::AuthTokenListener</a></div><div class="ttdoc">AuthTokenのイベントリスナ</div><div class="ttdef"><b>Definition</b> context.hpp:49</div></div>
 <div class="ttc" id="aclassskyway_1_1_context_1_1_auth_token_listener_html_a8313c323285586cc8f0f0b4e0bc54f93"><div class="ttname"><a href="classskyway_1_1_context_1_1_auth_token_listener.html#a8313c323285586cc8f0f0b4e0bc54f93">skyway::Context::AuthTokenListener::OnTokenRefreshingNeeded</a></div><div class="ttdeci">virtual void OnTokenRefreshingNeeded()</div><div class="ttdoc">設定したリマインド時間に応じてコールされるリマインダコールバック関数</div><div class="ttdef"><b>Definition</b> context.hpp:54</div></div>
 <div class="ttc" id="aclassskyway_1_1_context_1_1_auth_token_listener_html_aa10fb382ae5b64d6e56624f60bee5a46"><div class="ttname"><a href="classskyway_1_1_context_1_1_auth_token_listener.html#aa10fb382ae5b64d6e56624f60bee5a46">skyway::Context::AuthTokenListener::OnTokenExpired</a></div><div class="ttdeci">virtual void OnTokenExpired()</div><div class="ttdoc">トークンが失効した時にコールされるコールバック関数</div><div class="ttdef"><b>Definition</b> context.hpp:57</div></div>
@@ -325,9 +327,11 @@ $(document).ready(function(){initNavTree('context_8hpp_source.html',''); initRes
 <div class="ttc" id="astructskyway_1_1_context_1_1_sky_way_options_1_1_token_html"><div class="ttname"><a href="structskyway_1_1_context_1_1_sky_way_options_1_1_token.html">skyway::Context::SkyWayOptions::Token</a></div><div class="ttdoc">トークンに関する設定</div><div class="ttdef"><b>Definition</b> context.hpp:99</div></div>
 <div class="ttc" id="astructskyway_1_1_context_1_1_sky_way_options_html"><div class="ttname"><a href="structskyway_1_1_context_1_1_sky_way_options.html">skyway::Context::SkyWayOptions</a></div><div class="ttdoc">SkyWayの利用に関する設定</div><div class="ttdef"><b>Definition</b> context.hpp:61</div></div>
 <div class="ttc" id="astructskyway_1_1_context_1_1_sky_way_options_html_a096dc2fb87930b564a6aff7977fd27e5"><div class="ttname"><a href="structskyway_1_1_context_1_1_sky_way_options.html#a096dc2fb87930b564a6aff7977fd27e5">skyway::Context::SkyWayOptions::enable_webrtc_log</a></div><div class="ttdeci">bool enable_webrtc_log</div><div class="ttdoc">WebRTCのログを有効にします</div><div class="ttdef"><b>Definition</b> context.hpp:153</div></div>
+<div class="ttc" id="astructskyway_1_1_context_1_1_sky_way_options_html_a38402c30242a9052fa7bab0bfacaae29"><div class="ttname"><a href="structskyway_1_1_context_1_1_sky_way_options.html#a38402c30242a9052fa7bab0bfacaae29">skyway::Context::SkyWayOptions::audio_processing</a></div><div class="ttdeci">skyway::media::AudioProcessingOptions audio_processing</div><div class="ttdoc">音声処理に関する設定</div><div class="ttdef"><b>Definition</b> context.hpp:163</div></div>
 <div class="ttc" id="astructskyway_1_1_context_1_1_sky_way_options_html_acc504eefca01eb8bad4bd933cd38b094"><div class="ttname"><a href="structskyway_1_1_context_1_1_sky_way_options.html#acc504eefca01eb8bad4bd933cd38b094">skyway::Context::SkyWayOptions::log_level</a></div><div class="ttdeci">domain::LogLevel log_level</div><div class="ttdoc">ログレベル</div><div class="ttdef"><b>Definition</b> context.hpp:141</div></div>
-<div class="ttc" id="astructskyway_1_1_context_1_1_sky_way_options_html_ace37c5935f4c6d4a63f7c0920ef05cfa"><div class="ttname"><a href="structskyway_1_1_context_1_1_sky_way_options.html#ace37c5935f4c6d4a63f7c0920ef05cfa">skyway::Context::SkyWayOptions::rtp</a></div><div class="ttdeci">Rtp rtp</div><div class="ttdoc">RTPに関する設定</div><div class="ttdef"><b>Definition</b> context.hpp:160</div></div>
+<div class="ttc" id="astructskyway_1_1_context_1_1_sky_way_options_html_ace37c5935f4c6d4a63f7c0920ef05cfa"><div class="ttname"><a href="structskyway_1_1_context_1_1_sky_way_options.html#ace37c5935f4c6d4a63f7c0920ef05cfa">skyway::Context::SkyWayOptions::rtp</a></div><div class="ttdeci">Rtp rtp</div><div class="ttdoc">RTPに関する設定</div><div class="ttdef"><b>Definition</b> context.hpp:166</div></div>
 <div class="ttc" id="astructskyway_1_1_context_1_1_sky_way_options_html_ad5e799d767c4ceab824577ecdc9673ca"><div class="ttname"><a href="structskyway_1_1_context_1_1_sky_way_options.html#ad5e799d767c4ceab824577ecdc9673ca">skyway::Context::SkyWayOptions::audio_backend</a></div><div class="ttdeci">skyway::media::AudioBackendType audio_backend</div><div class="ttdoc">オーディオバックエンドを指定します</div><div class="ttdef"><b>Definition</b> context.hpp:156</div></div>
+<div class="ttc" id="astructskyway_1_1media_1_1_audio_processing_options_html"><div class="ttname"><a href="structskyway_1_1media_1_1_audio_processing_options.html">skyway::media::AudioProcessingOptions</a></div><div class="ttdoc">音声処理に関する設定</div><div class="ttdef"><b>Definition</b> types.hpp:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

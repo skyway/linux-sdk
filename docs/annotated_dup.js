@@ -67,6 +67,7 @@ var annotated_dup =
             [ "RemoteVideoStream", "classskyway_1_1media_1_1stream_1_1remote_1_1_remote_video_stream.html", null ]
           ] ]
         ] ],
+        [ "AudioProcessingOptions", "structskyway_1_1media_1_1_audio_processing_options.html", "structskyway_1_1media_1_1_audio_processing_options" ],
         [ "DeviceManager", "classskyway_1_1media_1_1_device_manager.html", "classskyway_1_1media_1_1_device_manager" ],
         [ "I420CapturerVideoSource", "classskyway_1_1media_1_1_i420_capturer_video_source.html", "classskyway_1_1media_1_1_i420_capturer_video_source" ],
         [ "I420VideoRenderer", "classskyway_1_1media_1_1_i420_video_renderer.html", "classskyway_1_1media_1_1_i420_video_renderer" ],
