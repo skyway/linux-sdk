@@ -180,6 +180,8 @@ public:
     static std::shared_ptr<Logger> Shared();
 
 private:
+    static constexpr size_t kMaxSdkLogBufferSize = 1000;
+
     static std::shared_ptr<Logger> shared_;
     std::weak_ptr<LoggerObserver> observer_;
 
@@ -188,6 +190,9 @@ private:
 
     std::mutex fmt_mtx_;
     boost::format fmt_;
+
+public:
+    friend class LoggerTest;
 };
 
 }  // namespace interface
