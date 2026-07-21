@@ -30,7 +30,7 @@ class Context {
 public:
     static const unsigned int kVersionMajor = 4;
     static const unsigned int kVersionMinor = 1;
-    static const unsigned int kVersionPatch = 0;
+    static const unsigned int kVersionPatch = 1;
 
     /// @brief Contextのイベントリスナ
     class EventListener {
