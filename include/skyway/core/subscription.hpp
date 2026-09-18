@@ -21,6 +21,7 @@ public:
     Subscription(std::shared_ptr<interface::Channel> channel,
                  const model::Subscription& initial_dto,
                  model::ContentType content_type);
+    ~Subscription();
 
     void AddEventListener(interface::Subscription::EventListener* listener) override;
     void RemoveEventListener(interface::Subscription::EventListener* listener) override;
@@ -48,6 +49,7 @@ public:
 
     void OnCanceled() override;
     void OnConnectionStateChanged(const core::ConnectionState new_state) override;
+    void Dispose() override;
 
 private:
     void DispatchSubscriptionListeners(
@@ -58,6 +60,7 @@ private:
     model::ContentType content_type_;
     std::atomic<interface::SubscriptionState> state_;
     std::weak_ptr<interface::Member> subscriber_;
+    std::atomic<bool> is_disposed_ = false;
     std::mutex stream_mtx_;
     std::shared_ptr<interface::RemoteStream> stream_;
     std::optional<std::string> preferred_encoding_id_;

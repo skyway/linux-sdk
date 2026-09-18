@@ -26,7 +26,7 @@ public:
 
     ~LoggerObserver() override;
 
-    void StopSendingLogs();
+    void Dispose();
 
     void OnLog(const std::string& log_level,
                const std::string& message,
@@ -54,8 +54,8 @@ private:
     std::mutex buffer_mtx_;
     std::condition_variable cv_;
     std::thread flush_thread_;
-    std::atomic<bool> stop_thread_               = false;
-    std::atomic<bool> is_sending_thread_stopped_ = false;
+    std::atomic<bool> is_disposed_ = false;
+    std::atomic<bool> stop_thread_ = false;
 };
 }  // namespace global
 }  // namespace skyway

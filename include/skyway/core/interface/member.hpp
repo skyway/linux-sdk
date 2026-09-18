@@ -27,6 +27,8 @@ class Member : public std::enable_shared_from_this<Member> {
 public:
     class EventListener {
     public:
+        virtual ~EventListener() = default;
+
         virtual void OnLeft() {}
 
         virtual void OnMetadataUpdated(const std::string& metadata) {}

@@ -71,6 +71,7 @@ private:
 
     std::weak_ptr<interface::Channel> channel_;
     model::Publication initial_dto_;
+    std::atomic<bool> is_disposed_ = false;
     std::atomic<interface::PublicationState> state_;
     std::vector<model::Codec> codec_capabilities_;
     std::vector<model::Encoding> encodings_;

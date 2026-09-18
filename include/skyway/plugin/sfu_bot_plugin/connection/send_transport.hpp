@@ -35,7 +35,6 @@ public:
                        const nlohmann::json* codec,
                        const nlohmann::json& app_data) override;
 
-    bool IsClosed(const ProducerId& producer_id) const override;
     rtc::scoped_refptr<webrtc::RtpSenderInterface> GetRtpSender(
         const ProducerId& producer_id) const override;
     rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> GetTrack(
@@ -68,7 +67,6 @@ private:
     std::mutex listeners_mtx_;
     std::unordered_map<TransactionId, interface::SendTransport::Listener*> listeners_;
 
-    mutable std::mutex producer_operation_mtx_;
     mutable std::mutex producers_mtx_;
     std::unordered_map<ProducerId, std::unique_ptr<mediasoupclient::Producer>> producers_;
 

@@ -43,6 +43,7 @@ var hierarchy =
     [ "skyway::global::Logger::Listener", "classskyway_1_1global_1_1_logger_1_1_listener.html", null ],
     [ "skyway::media::interface::I420VideoRenderer::Listener", "classskyway_1_1media_1_1interface_1_1_i420_video_renderer_1_1_listener.html", null ],
     [ "skyway::media::opencv::OpenCVVideoRenderer::Listener", "classskyway_1_1media_1_1opencv_1_1_open_c_v_video_renderer_1_1_listener.html", null ],
+    [ "skyway::media::stream::interface::local::LocalDataStream::Listener", "classskyway_1_1media_1_1stream_1_1interface_1_1local_1_1_local_data_stream_1_1_listener.html", null ],
     [ "skyway::media::stream::interface::remote::RemoteAudioStream::Listener", "classskyway_1_1media_1_1stream_1_1interface_1_1remote_1_1_remote_audio_stream_1_1_listener.html", null ],
     [ "skyway::media::stream::interface::remote::RemoteDataStream::Listener", "classskyway_1_1media_1_1stream_1_1interface_1_1remote_1_1_remote_data_stream_1_1_listener.html", null ],
     [ "interface::Logger", null, [
@@ -135,6 +136,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "skyway::media::StreamFactory", "classskyway_1_1media_1_1_stream_factory.html", null ],
+    [ "skyway::media::stream::interface::local::LocalDataStream::Subscriber", "structskyway_1_1media_1_1stream_1_1interface_1_1local_1_1_local_data_stream_1_1_subscriber.html", null ],
     [ "skyway::room::interface::LocalRoomMember::SubscriptionOptions", "structskyway_1_1room_1_1interface_1_1_local_room_member_1_1_subscription_options.html", null ],
     [ "skyway::Context::SkyWayOptions::Token", "structskyway_1_1_context_1_1_sky_way_options_1_1_token.html", null ],
     [ "skyway::media::V4l2VideoRendererOptions", "structskyway_1_1media_1_1_v4l2_video_renderer_options.html", null ],

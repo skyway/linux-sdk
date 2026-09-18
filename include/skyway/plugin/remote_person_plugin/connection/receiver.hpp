@@ -10,8 +10,6 @@
 #include <api/rtp_transceiver_interface.h>
 
 #include <atomic>
-#include <queue>
-#include <unordered_map>
 
 #include "skyway/analytics/interface/analytics_client.hpp"
 #include "skyway/core/interface/ice_manager.hpp"
@@ -30,11 +28,13 @@ class Receiver : public Peer,
                  public core::interface::Subscription::Callback,
                  public std::enable_shared_from_this<Receiver> {
 public:
-    Receiver(const MessageMember& remote_member,
+    Receiver(const signaling::interface::Member& remote_member,
              core::interface::IceManager* ice_manager,
-             core::interface::ChunkMessenger* messenger,
+             signaling::interface::SignalingClient* signaling_client,
              rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory);
     ~Receiver();
+
+    void Dispose();
 
     bool Subscribe(std::shared_ptr<core::interface::Subscription> subscription);
 
@@ -75,6 +75,7 @@ private:
     std::vector<std::weak_ptr<core::interface::Subscription>> subscriptions_;
     std::mutex publication_info_mutex_;
     std::vector<dto::ProducePayloadPayloadInfo> publication_info_;
+    std::atomic<bool> is_receiver_disposed_              = false;
     std::atomic<core::ConnectionState> connection_state_ = core::ConnectionState::kNew;
 
 public:

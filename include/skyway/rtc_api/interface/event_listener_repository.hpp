@@ -23,8 +23,10 @@ public:
     };
     virtual ~EventListenerRepository() = default;
 
+    virtual void Dispose()                                                                    = 0;
     virtual void AddListener(const std::string& channel_id, std::weak_ptr<Listener> listener) = 0;
-    virtual void RemoveListener(const std::string& channel_id)                                = 0;
+    virtual void RemoveListener(const std::string& channel_id,
+                                std::weak_ptr<Listener> listener)                             = 0;
     virtual void StartQueuingEvents()                                                         = 0;
     virtual void ResolveQueuingEvents()                                                       = 0;
 };

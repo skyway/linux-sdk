@@ -17,15 +17,14 @@ namespace skyway {
 namespace rtc_api {
 namespace rpc {
 
-using ApiClientInterface = interface::ApiClient;
-using RapiOptions        = core::ContextOptions::RtcApi;
-
-class ApiClient : public ApiClientInterface {
+class ApiClient : public interface::ApiClient {
 public:
     ApiClient(std::weak_ptr<token::interface::AuthTokenManager> auth,
               std::unique_ptr<interface::Rpc> rpc,
-              const RapiOptions& options);
+              const core::ContextOptions::RtcApi& options);
     ~ApiClient();
+
+    void Dispose() override;
 
     bool Connect() override;
 
@@ -73,7 +72,7 @@ private:
     std::optional<Result> Request(const std::string& method,
                                   nlohmann::json& params,
                                   dto::ResponseErrorMessage* error);
-    RapiOptions options_;
+    core::ContextOptions::RtcApi options_;
     std::weak_ptr<token::interface::AuthTokenManager> auth_;
     std::unique_ptr<interface::Rpc> rpc_;
     std::atomic<bool> is_disposed_ = false;

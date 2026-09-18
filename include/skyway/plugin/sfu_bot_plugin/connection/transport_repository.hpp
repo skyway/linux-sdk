@@ -34,6 +34,13 @@ public:
 
     nlohmann::json GetRtpCapabilities() override;
 
+    std::optional<nlohmann::json> FindSendCodec(const model::ContentType& type,
+                                                const std::vector<model::Codec>& codecs) override;
+
+    bool CanSend(const model::ContentType& type) override;
+
+    bool CanRecv(const model::ContentType& type) override;
+
     std::shared_ptr<interface::SendTransport> CreateSendTransport(
         const nlohmann::json& transport_options,
         const interface::Device::PeerConnectionOptions* pc_options,
@@ -56,6 +63,9 @@ private:
     TransportRepository(interface::SfuApiClient* client, std::unique_ptr<interface::Device> device);
     bool ApplyCodecCapabilities(std::vector<model::Codec> publication_codec_caps,
                                 nlohmann::json& router_rtp_capabilities);
+    std::optional<nlohmann::json> FindCodec(const model::ContentType& type,
+                                            const std::vector<model::Codec>& codecs,
+                                            const nlohmann::json& rtp_capabilities);
 
     interface::SfuApiClient* client_;
     std::mutex device_mtx_;

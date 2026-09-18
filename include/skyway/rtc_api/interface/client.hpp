@@ -17,6 +17,8 @@ public:
 
     virtual bool Connect() = 0;
 
+    virtual void Dispose() = 0;
+
     virtual std::shared_ptr<ChannelState> CreateChannel(const model::Channel::Init& init)       = 0;
     virtual std::shared_ptr<ChannelState> FindChannel(const model::Channel::Query& query)       = 0;
     virtual std::shared_ptr<ChannelState> FindOrCreateChannel(const model::Channel::Init& init) = 0;

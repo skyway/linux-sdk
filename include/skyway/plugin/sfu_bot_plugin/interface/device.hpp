@@ -30,6 +30,8 @@ public:
 
     virtual nlohmann::json GetRtpCapabilities() = 0;
 
+    virtual nlohmann::json GetSendRtpCapabilities() = 0;
+
     virtual std::unique_ptr<SendTransport> CreateSendTransport(
         SfuApiClient* client,
         const nlohmann::json& transport_options,

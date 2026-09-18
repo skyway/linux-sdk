@@ -8,43 +8,37 @@
 #include <atomic>
 #include <functional>
 #include <string>
+
 #include "skyway/core/channel/member/local_person.hpp"
 #include "skyway/core/interface/channel.hpp"
-#include "skyway/core/interface/chunk_messenger_factory.hpp"
 #include "skyway/core/interface/member.hpp"
 #include "skyway/core/interface/publication.hpp"
 #include "skyway/core/interface/remote_member.hpp"
 #include "skyway/core/interface/subscription.hpp"
-#include "skyway/rtc_api/client.hpp"
 #include "skyway/rtc_api/interface/channel_state.hpp"
+#include "skyway/signaling/interface/signaling_client_factory.hpp"
 
 namespace skyway {
 namespace core {
 namespace channel {
 
-using ChannelState = interface::ChannelState;
-using ChannelInit  = model::Channel::Init;
-using ChannelQuery = model::Channel::Query;
-
-using SignalingClientDelegator = signaling::interface::SignalingClient::Delegator;
-
 class Channel : public interface::Channel, public rtc_api::ChannelState::EventListener {
 public:
     Channel(std::shared_ptr<rtc_api::interface::ChannelState> rtc_api_channel_state,
-            std::unique_ptr<interface::ChunkMessengerFactory> chunk_messenger_factory);
+            std::unique_ptr<signaling::interface::SignalingClientFactory> signaling_client_factory);
     Channel(std::shared_ptr<rtc_api::interface::ChannelState> rtc_api_channel_state);
     ~Channel();
+
+    void RegisterToChannelState();
     void SetupDomains();
 
-    static std::shared_ptr<Channel> Create(const ChannelInit& init);
+    static std::shared_ptr<Channel> Create(const model::Channel::Init& init);
 
     static std::shared_ptr<Channel> Create();
 
-    static std::shared_ptr<Channel> Find(const ChannelQuery& query);
+    static std::shared_ptr<Channel> Find(const model::Channel::Query& query);
 
-    static std::shared_ptr<Channel> FindOrCreate(const ChannelInit& init);
-
-    static void DisposeAllChannels();
+    static std::shared_ptr<Channel> FindOrCreate(const model::Channel::Init& init);
 
     void AddEventListener(interface::Channel::EventListener* listener) override;
     void RemoveEventListener(interface::Channel::EventListener* listener) override;
@@ -59,7 +53,7 @@ public:
         bool active_only = true) override;
     std::vector<std::shared_ptr<interface::Subscription>> Subscriptions(
         bool active_only = true) override;
-    ChannelState State() const override;
+    interface::ChannelState State() const override;
 
     std::shared_ptr<interface::LocalPerson> Join(const model::Member::Init& init) override;
     bool UpdateMetadata(const std::string& metadata) override;
@@ -110,8 +104,8 @@ private:
     std::shared_ptr<interface::RemoteMember> CreateRemoteMember(const model::Member& member);
 
     std::shared_ptr<rtc_api::interface::ChannelState> rtc_api_channel_state_;
-    std::atomic<ChannelState> state_ = ChannelState::kOpened;
-    std::atomic<bool> is_disposed_   = false;
+    std::atomic<interface::ChannelState> state_ = interface::ChannelState::kOpened;
+    std::atomic<bool> is_disposed_              = false;
 
     std::vector<std::shared_ptr<member::LocalPerson>> persons_;
     std::vector<std::shared_ptr<interface::RemoteMember>> remote_members_;
@@ -133,9 +127,7 @@ private:
     std::mutex subscriptions_mtx_;
     std::mutex dispose_mtx_;
 
-    std::unique_ptr<interface::ChunkMessengerFactory> chunk_messenger_factory_;
-
-    static std::unordered_set<std::shared_ptr<Channel>> channels_;
+    std::unique_ptr<signaling::interface::SignalingClientFactory> signaling_client_factory_;
 
 public:
     friend class CoreChannelTest;

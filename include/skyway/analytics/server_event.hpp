@@ -69,6 +69,7 @@ struct AcknowledgePayload {
     bool IsUnexpected() const;
 
     std::string event_id;
+
     bool ok;
     std::optional<std::string> reason;
 

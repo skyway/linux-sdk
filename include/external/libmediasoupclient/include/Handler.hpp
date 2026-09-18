@@ -34,8 +34,16 @@ namespace mediasoupclient
 			nlohmann::json sctpStreamParameters;
 		};
 
+		struct NativeRtpCapabilities
+		{
+			nlohmann::json send;
+			nlohmann::json recv;
+		};
+
 	public:
 		static nlohmann::json GetNativeRtpCapabilities(
+		  const PeerConnection::Options* peerConnectionOptions = nullptr);
+		static NativeRtpCapabilities GetNativeSendRecvRtpCapabilities(
 		  const PeerConnection::Options* peerConnectionOptions = nullptr);
 		static nlohmann::json GetNativeSctpCapabilities();
 

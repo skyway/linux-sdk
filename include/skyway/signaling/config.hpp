@@ -21,6 +21,8 @@ extern const int kMaxSocketReconnectCount;
 
 extern const int kMaxPayloadLength;
 
+extern const int kMaxChunkLength;
+
 extern const int kDefaultConnectivityCheckIntervalSec;
 
 extern const int kSocketOpenTimeoutSec;

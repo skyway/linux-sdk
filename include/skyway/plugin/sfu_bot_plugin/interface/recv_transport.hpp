@@ -29,7 +29,6 @@ public:
                                const std::string& kind,
                                nlohmann::json* rtp_parameters) = 0;
 
-    virtual bool IsClosed(const ConsumerId& consumer_id) const = 0;
     virtual rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> GetTrack(
         const ConsumerId& consumer_id) const                             = 0;
     virtual rtc::Thread* GetSignalingThread() const                      = 0;

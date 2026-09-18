@@ -5,10 +5,10 @@
 #ifndef SKYWAY_CORE_INTERFACE_LOCAL_PERSON_HPP_
 #define SKYWAY_CORE_INTERFACE_LOCAL_PERSON_HPP_
 
-#include "skyway/core/interface/chunk_messenger.hpp"
 #include "skyway/core/interface/local_stream.hpp"
 #include "skyway/core/interface/publication.hpp"
 #include "skyway/core/interface/remote_member.hpp"
+#include "skyway/signaling/interface/signaling_client.hpp"
 
 namespace skyway {
 namespace core {
@@ -52,7 +52,7 @@ public:
     };
     virtual ~LocalPerson() = default;
 
-    virtual ChunkMessenger* Messenger() const = 0;
+    virtual signaling::interface::SignalingClient* SignalingClient() const = 0;
 
     virtual std::shared_ptr<interface::Publication> Publish(std::shared_ptr<LocalStream> stream,
                                                             PublicationOptions options) = 0;

@@ -5,6 +5,7 @@
 #ifndef SKYWAY_TOKEN_AUTH_TOKEN_MANAGER_HPP_
 #define SKYWAY_TOKEN_AUTH_TOKEN_MANAGER_HPP_
 
+#include <atomic>
 #include <condition_variable>
 #include <memory>
 #include <mutex>
@@ -30,6 +31,8 @@ public:
     AuthTokenManager(const core::ContextOptions::Token& options);
     ~AuthTokenManager();
 
+    void Dispose() override;
+
     bool UpdateToken(const std::string& token) override;
     std::string AppId() const override;
     std::string Jwt() const override;
@@ -40,6 +43,7 @@ public:
     void RemoveInternalListener(InternalListener* listener) override;
 
 private:
+    std::atomic<bool> is_disposed_ = false;
     void JoinTimerThreadsIfNeeded();
     bool SetupTimers(time_t exp);
     std::mutex update_token_mtx_;

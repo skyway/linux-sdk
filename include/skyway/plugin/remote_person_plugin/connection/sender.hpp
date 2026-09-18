@@ -18,8 +18,8 @@
 #include "skyway/core/interface/local_media_stream.hpp"
 #include "skyway/core/interface/publication.hpp"
 #include "skyway/core/stream/local/data_stream.hpp"
+#include "skyway/global/interface/worker.hpp"
 #include "skyway/model/domain.hpp"
-#include "skyway/network/util.hpp"
 #include "skyway/plugin/remote_person_plugin/connection/dto/message.hpp"
 #include "skyway/plugin/remote_person_plugin/connection/peer.hpp"
 
@@ -37,9 +37,9 @@ class Sender : public Peer,
 public:
     using SubscriptionId = std::string;
 
-    Sender(const MessageMember& remote_member,
+    Sender(const signaling::interface::Member& remote_member,
            core::interface::IceManager* ice_manager,
-           core::interface::ChunkMessenger* messenger,
+           signaling::interface::SignalingClient* signaling_client,
            rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory);
     ~Sender();
 
@@ -111,13 +111,13 @@ private:
         transceivers_;
     std::mutex publications_mutex_;
     std::vector<std::weak_ptr<core::interface::Publication>> publications_;
-    std::mutex restart_ice_threads_mtx;
-    std::vector<std::unique_ptr<std::thread>> restart_ice_threads_;
+    std::unique_ptr<global::interface::Worker> reconnect_worker_;
     std::mutex send_data_mtx_;
     std::mutex buffered_amount_mtx_;
     std::condition_variable buffered_amount_cv_;
 
     core::interface::IceManager* ice_manager_;
+    std::atomic<bool> is_sender_disposed_                = false;
     std::atomic<core::ConnectionState> connection_state_ = core::ConnectionState::kNew;
 
 public:

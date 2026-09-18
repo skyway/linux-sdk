@@ -23,23 +23,20 @@ namespace core {
 namespace channel {
 namespace member {
 
-using LocalStream              = interface::LocalStream;
-using ChunkMessengerInterface  = interface::ChunkMessenger;
-using AnalyticsClientInterface = analytics::interface::AnalyticsClient;
-
-class LocalPerson : public interface::LocalPerson, public AnalyticsClientInterface::Delegator {
+class LocalPerson : public interface::LocalPerson,
+                    public analytics::interface::AnalyticsClient::Delegator {
 public:
     LocalPerson(std::shared_ptr<interface::Channel> channel,
                 const model::Member& dto,
-                std::unique_ptr<ChunkMessengerInterface> messenger,
+                std::unique_ptr<signaling::interface::SignalingClient> signaling_client,
                 int keepalive_interval_sec,
                 int keepalive_interval_gap_sec);
     ~LocalPerson();
 
-    ChunkMessengerInterface* Messenger() const override;
+    signaling::interface::SignalingClient* SignalingClient() const override;
 
     std::shared_ptr<interface::Publication> Publish(
-        std::shared_ptr<LocalStream> stream,
+        std::shared_ptr<interface::LocalStream> stream,
         interface::LocalPerson::PublicationOptions options) override;
     std::shared_ptr<interface::Subscription> Subscribe(
         const std::string& publication_id,
@@ -59,6 +56,8 @@ public:
     void OnPublicationUnsubscribedByRemoteMember(
         std::shared_ptr<interface::Subscription> subscription,
         std::shared_ptr<interface::RemoteMember> subscriber) override;
+
+    void OnLeft() override;
     void Dispose() override;
 
     std::vector<analytics::interface::AnalyticsClient::SubscriptionStats>
@@ -71,7 +70,7 @@ private:
     using SubscriptionPair = std::pair<std::weak_ptr<interface::Subscription>,
                                        interface::LocalPerson::SubscriptionOptions>;
 
-    std::unique_ptr<ChunkMessengerInterface> messenger_;
+    std::unique_ptr<signaling::interface::SignalingClient> signaling_client_;
     std::mutex tmp_subscriptions_mtx_;
     std::unordered_map<SubscriptionId, SubscriptionPair> tmp_subscriptions_;
     int keepalive_interval_sec_;
@@ -83,6 +82,7 @@ private:
     std::condition_variable ttl_timer_wait_cv_;
     std::atomic<bool> is_disposed_ = false;
     std::unique_ptr<std::thread> ttl_timer_thread_;
+    std::unique_ptr<std::thread> signaling_dispose_thread_;
 };
 
 }  // namespace member

@@ -19,12 +19,9 @@ namespace skyway {
 namespace plugin {
 namespace sfu_bot {
 
-using PluginInterface     = core::interface::RemoteMemberPlugin;
-using HttpClientInterface = network::interface::HttpClient;
-
-class Plugin : public PluginInterface {
+class Plugin : public core::interface::RemoteMemberPlugin {
 public:
-    Plugin(HttpClientInterface* http,
+    Plugin(network::interface::HttpClient* http,
            rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory,
            sfu_options::SfuOptionsParams sfu_options);
     std::string GetSubtype() const override;

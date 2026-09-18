@@ -6,7 +6,6 @@
 #define SKYWAY_SIGNALING_SOCKET_HPP_
 
 #include <atomic>
-#include <future>
 #include <memory>
 #include <mutex>
 #include <optional>
@@ -24,13 +23,9 @@ class WebSocketIntegrationTest;
 
 namespace signaling {
 
-using SocketInterface                = interface::Socket;
-using WebSocketClientInterface       = network::interface::WebSocketClient;
-using PlatformInfoDelegatorInterface = platform::interface::PlatformInfoDelegator;
-
 const std::string kSignalingWebSocketReconnectThreadName = "sign_reconnect";
 
-class Socket : public SocketInterface, public WebSocketClientInterface::Listener {
+class Socket : public interface::Socket, public network::interface::WebSocketClient::Listener {
 public:
     Socket(const std::string& session_endpoint,
            const std::string& channel_id,
@@ -39,11 +34,11 @@ public:
            const std::optional<std::string> member_name,
            const int connectivity_check_interval_sec,
            std::weak_ptr<token::interface::AuthTokenManager> auth,
-           std::shared_ptr<WebSocketClientInterface> ws,
-           const PlatformInfoDelegatorInterface* platform_info);
+           std::shared_ptr<network::interface::WebSocketClient> ws,
+           const platform::interface::PlatformInfoDelegator* platform_info);
     ~Socket();
 
-    void RegisterListener(SocketInterface::Listener* listener) override;
+    void RegisterListener(interface::Socket::Listener* listener) override;
 
     bool Connect() override;
     bool Send(const ClientEvent& event) override;
@@ -60,25 +55,26 @@ private:
     bool CloseWebSocket(bool updatesState = true);
     void DestroyWebSocket();
 
-    std::string GetWebsocketUrl(const std::string& session_endpoint,
-                                const std::string& channel_id,
-                                const std::optional<std::string> channel_name,
-                                const std::string& member_id,
-                                const std::optional<std::string> member_name,
-                                const int connectivity_check_interval_sec,
-                                const PlatformInfoDelegatorInterface* platform_info) const;
+    std::string GetWebsocketUrl(
+        const std::string& session_endpoint,
+        const std::string& channel_id,
+        const std::optional<std::string> channel_name,
+        const std::string& member_id,
+        const std::optional<std::string> member_name,
+        const int connectivity_check_interval_sec,
+        const platform::interface::PlatformInfoDelegator* platform_info) const;
     std::string GetRelayingServerSocketSubProtocol() const;
     void Reconnect();
 
     std::string tag_ = "sign";
     const std::string url_;
     std::weak_ptr<token::interface::AuthTokenManager> auth_;
-    SocketInterface::Listener* listener_ = nullptr;
+    interface::Socket::Listener* listener_ = nullptr;
     std::mutex listener_mtx_;
 
     std::atomic<State> state_      = State::kReady;
     std::atomic<bool> is_disposed_ = false;
-    std::shared_ptr<WebSocketClientInterface> ws_;
+    std::shared_ptr<network::interface::WebSocketClient> ws_;
     std::unique_ptr<global::interface::Worker> reconnect_worker_ =
         std::make_unique<global::Worker>(kSignalingWebSocketReconnectThreadName);
 

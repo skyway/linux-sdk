@@ -17,6 +17,7 @@ namespace mediasoupclient
 
 		bool IsLoaded() const;
 		const nlohmann::json& GetRtpCapabilities() const;
+		const nlohmann::json& GetSendRtpCapabilities() const;
 		const nlohmann::json& GetSctpCapabilities() const;
 		void Load(
 		  nlohmann::json routerRtpCapabilities,
@@ -60,8 +61,12 @@ namespace mediasoupclient
 	private:
 		// Loaded flag.
 		bool loaded{ false };
-		// Extended RTP capabilities.
-		nlohmann::json extendedRtpCapabilities;
+		// Extended RTP capabilities for sending media.
+		nlohmann::json sendExtendedRtpCapabilities;
+		// Extended RTP capabilities for receiving media.
+		nlohmann::json recvExtendedRtpCapabilities;
+		// Local RTP capabilities for sending media.
+		nlohmann::json sendRtpCapabilities;
 		// Local RTP capabilities for receiving media.
 		nlohmann::json recvRtpCapabilities;
 		// Whether we can produce audio/video based on computed extended RTP capabilities.

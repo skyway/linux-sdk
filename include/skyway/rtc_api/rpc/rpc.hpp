@@ -17,22 +17,19 @@ namespace skyway {
 namespace rtc_api {
 namespace rpc {
 
-using RpcInterface             = interface::Rpc;
-using WebSocketClientInterface = network::interface::WebSocketClient;
-
 const std::string kRapiReconnectThreadName = "rapi_reconnect";
 
-class Rpc : public RpcInterface, public WebSocketClientInterface::Listener {
+class Rpc : public interface::Rpc, public network::interface::WebSocketClient::Listener {
 public:
     Rpc(std::weak_ptr<token::interface::AuthTokenManager> auth,
-        RpcInterface::Listener* listener,
+        interface::Rpc::Listener* listener,
         int timeout_for_send_ms = config::kDefaultTimeoutForSend);
     ~Rpc();
     bool Connect(const std::string& domain, bool secure) override;
     std::optional<nlohmann::json> Request(const std::string& method,
                                           const nlohmann::json& params,
                                           const std::string& message_id) override;
-    void Close() override;
+    void Dispose() override;
     bool IsConnected() const override;
     void AddPendingRequest(const std::string& method,
                            const nlohmann::json& params,
@@ -60,9 +57,9 @@ private:
 
     std::weak_ptr<token::interface::AuthTokenManager> auth_;
     std::mutex listener_mtx_;
-    RpcInterface::Listener* listener_ = nullptr;
-    std::atomic<State> state_         = State::kReady;
-    std::shared_ptr<WebSocketClientInterface> ws_;
+    interface::Rpc::Listener* listener_ = nullptr;
+    std::atomic<State> state_           = State::kReady;
+    std::shared_ptr<network::interface::WebSocketClient> ws_;
     std::string ws_domain_;
     bool is_secure_;
     std::mutex request_results_mtx_;
@@ -76,7 +73,7 @@ private:
     std::unordered_set<dto::RequestMessage, dto::RequestMessage::Hash> pending_requests_;
 
     std::atomic<bool> disconnected_while_requesting_ = false;
-    std::atomic<bool> is_closed_                     = false;
+    std::atomic<bool> is_disposed_                   = false;
 
     std::unique_ptr<global::interface::Worker> reconnect_worker_ =
         std::make_unique<global::Worker>(kRapiReconnectThreadName);

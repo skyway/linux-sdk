@@ -59,6 +59,8 @@ struct ContextOptions {
     RtcConfig rtc_config;
     Token token;
 
+    bool voice_detection_enabled = true;
+
     bool dispose_channel_when_close = false;
 };
 

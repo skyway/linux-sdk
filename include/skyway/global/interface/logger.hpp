@@ -5,6 +5,7 @@
 #ifndef SKYWAY_GLOBAL_INTERFACE_LOGGER_HPP_
 #define SKYWAY_GLOBAL_INTERFACE_LOGGER_HPP_
 
+#include <atomic>
 #include <boost/format.hpp>
 #include <memory>
 #include <mutex>
@@ -142,22 +143,13 @@ public:
                 const std::string& function,
                 int line);
 
-    void BuildFormat() {}
+    void StopSdkLogBuffering();
 
-    template <class Head, class... Tail>
-    void BuildFormat(Head&& head, Tail&&... tail) {
-        fmt_ = fmt_ % head;
-        this->BuildFormat(std::forward<Tail>(tail)...);
-    }
-
-    template <class FormatString, class... Args>
-    std::string Format(FormatString fmt_str, Args&&... args) {
-        {
-            std::lock_guard<std::mutex> lg(fmt_mtx_);
-            fmt_ = boost::format(fmt_str);
-            this->BuildFormat(args...);
-            return fmt_.str();
-        }
+    template <class... Args>
+    std::string Format(const std::string& fmt_str, Args&&... args) {
+        boost::format fmt(fmt_str);
+        (void)(fmt % ... % args);
+        return boost::str(fmt);
     }
 
     static inline std::string GetFileName(const std::string& path) {
@@ -180,19 +172,12 @@ public:
     static std::shared_ptr<Logger> Shared();
 
 private:
-    static constexpr size_t kMaxSdkLogBufferSize = 1000;
-
     static std::shared_ptr<Logger> shared_;
     std::weak_ptr<LoggerObserver> observer_;
 
     std::vector<LoggerObserver::SdkLog> sdk_log_buffer_;
     std::mutex sdk_log_buffer_mtx_;
-
-    std::mutex fmt_mtx_;
-    boost::format fmt_;
-
-public:
-    friend class LoggerTest;
+    std::atomic<bool> sdk_log_buffering_ = true;
 };
 
 }  // namespace interface

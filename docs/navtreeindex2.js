@@ -1,5 +1,12 @@
 var NAVTREEINDEX2 =
 {
+"remote__room__member_8hpp_source.html":[4,0,0,0,3,7],
+"remote__stream_8hpp_source.html":[4,0,0,0,2,5,1,1,2],
+"room_2core__convert__helper_8hpp_source.html":[4,0,0,0,3,5],
+"room_2types_8hpp.html":[4,0,0,0,3,13],
+"room_2types_8hpp.html#a1599a7cab2a35d64a1d56f76b82a4139":[4,0,0,0,3,13,5],
+"room_2types_8hpp.html#a1599a7cab2a35d64a1d56f76b82a4139a485b505a72a57b16c8dd36bfc17c98c0":[4,0,0,0,3,13,5,2],
+"room_2types_8hpp.html#a1599a7cab2a35d64a1d56f76b82a4139aaf1adf7ec3673b4f5765cfbc5d43b7dc":[4,0,0,0,3,13,5,0],
 "room_2types_8hpp.html#a1599a7cab2a35d64a1d56f76b82a4139ab714c11518d545c225d456731dab0dd0":[4,0,0,0,3,13,5,1],
 "room_2types_8hpp.html#a1599a7cab2a35d64a1d56f76b82a4139add5ad1d97b8e9b23aca1ab0e6e383ec0":[4,0,0,0,3,13,5,3],
 "room_2types_8hpp.html#a1599a7cab2a35d64a1d56f76b82a4139af469e2a5b05d423dd49764004270f117":[4,0,0,0,3,13,5,4],
@@ -102,6 +109,9 @@ var NAVTREEINDEX2 =
 "structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a3fc31290117b1bb496e78398b622058c":[3,0,0,1,4,0,1,3],
 "structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a4a455351fb34bc9dcdc0700a23e877c4":[3,0,0,1,4,0,1,0],
 "structskyway_1_1media_1_1rtp_1_1interface_1_1_rtp_capturer_video_source_options.html#a51fe02658fd9b3c85810f6b588cd6b70":[3,0,0,1,4,0,1,1],
+"structskyway_1_1media_1_1stream_1_1interface_1_1local_1_1_local_data_stream_1_1_subscriber.html":[3,0,0,1,5,1,0,1,1],
+"structskyway_1_1media_1_1stream_1_1interface_1_1local_1_1_local_data_stream_1_1_subscriber.html#a0c003556350681111dd1d89d5ade5050":[3,0,0,1,5,1,0,1,1,0],
+"structskyway_1_1media_1_1stream_1_1interface_1_1local_1_1_local_data_stream_1_1_subscriber.html#a7ce612f115c221f219fa75f63fb0a782":[3,0,0,1,5,1,0,1,1,1],
 "structskyway_1_1room_1_1_codec.html":[3,0,0,2,4],
 "structskyway_1_1room_1_1_codec.html#a05c2cbbd9003d032d2d6c002bba0ec3d":[3,0,0,2,4,2],
 "structskyway_1_1room_1_1_codec.html#aa7e9a5bf5a9ceb656596c970a90cee86":[3,0,0,2,4,1],
