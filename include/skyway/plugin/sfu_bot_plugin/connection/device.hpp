@@ -24,6 +24,8 @@ public:
 
     nlohmann::json GetRtpCapabilities() override;
 
+    nlohmann::json GetSendRtpCapabilities() override;
+
     std::unique_ptr<interface::SendTransport> CreateSendTransport(
         interface::SfuApiClient* client,
         const nlohmann::json& transport_options,

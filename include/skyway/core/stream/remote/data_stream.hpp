@@ -17,23 +17,24 @@ namespace core {
 namespace stream {
 namespace remote {
 
-using RemoteStream = interface::RemoteStream;
-
-class RemoteDataStream : public RemoteStream {
+class RemoteDataStream : public interface::RemoteStream {
 public:
     using PublicationId = std::string;
 
     class Listener {
     public:
+        virtual ~Listener() = default;
+
         virtual void OnData(const std::string& data)                  = 0;
         virtual void OnDataBuffer(const uint8_t* data, size_t length) = 0;
     };
     RemoteDataStream(const std::string& id);
     ~RemoteDataStream();
+    void Dispose() override;
 
-    virtual void AddListener(Listener* listener);
+    void AddListener(Listener* listener);
 
-    virtual void RemoveListener(Listener* listener);
+    void RemoveListener(Listener* listener);
 
     void OnDataBuffer(const webrtc::DataBuffer& buffer);
 
@@ -56,7 +57,8 @@ private:
 
     std::mutex listeners_mutex_;
     std::vector<Listener*> listeners_;
-    std::atomic<bool> is_enabled_ = true;
+    std::atomic<bool> is_disposed_ = false;
+    std::atomic<bool> is_enabled_  = true;
 
     std::mutex buffer_mutex_;
     std::deque<BufferedData> buffer_;

@@ -31,6 +31,7 @@ public:
                     std::unique_ptr<interface::Socket> socket);
 
     ~AnalyticsClient() override;
+    void Dispose() override;
 
     void SetDelegator(std::weak_ptr<Delegator> delegator) override;
     void RemoveDelegator() override;
@@ -81,8 +82,7 @@ private:
     std::weak_ptr<Delegator> delegator_;
     std::mutex delegator_mutex_;
 
-    bool disposed_ = false;
-    std::mutex disposed_mutex_;
+    std::atomic<bool> disposed_ = false;
 
     std::thread connection_failed_thread_;
     std::mutex connection_failed_thread_mutex_;

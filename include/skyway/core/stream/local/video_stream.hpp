@@ -14,9 +14,7 @@ namespace core {
 namespace stream {
 namespace local {
 
-using LocalMediaStream = interface::LocalMediaStream;
-
-class LocalVideoStream : public LocalMediaStream {
+class LocalVideoStream : public interface::LocalMediaStream {
 public:
     LocalVideoStream(rtc::scoped_refptr<webrtc::VideoTrackInterface> track);
     rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> Track() const override;

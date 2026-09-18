@@ -5,6 +5,12 @@
 #ifndef SKYWAY_RTC_API_INTERFACE_CHANNEL_STATE_HPP_
 #define SKYWAY_RTC_API_INTERFACE_CHANNEL_STATE_HPP_
 
+#include <memory>
+#include <optional>
+#include <string>
+
+#include "skyway/model/domain.hpp"
+
 namespace skyway {
 namespace rtc_api {
 namespace interface {

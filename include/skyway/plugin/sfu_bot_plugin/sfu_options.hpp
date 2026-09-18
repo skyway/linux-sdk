@@ -5,6 +5,9 @@
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_SFU_OPTIONS_HPP_
 #define SKYWAY_PLUGIN_SFU_BOT_PLUGIN_SFU_OPTIONS_HPP_
 
+#include <optional>
+#include <string>
+
 namespace skyway {
 namespace plugin {
 namespace sfu_options {

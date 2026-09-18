@@ -16,12 +16,9 @@ namespace skyway {
 namespace plugin {
 namespace sfu_bot {
 
-using HttpClientInterface = network::interface::HttpClient;
-using SfuOptions          = sfu_options::SfuOptionsParams;
-
 class SfuApiClient : public interface::SfuApiClient {
 public:
-    SfuApiClient(HttpClientInterface* http, SfuOptions sfu_options);
+    SfuApiClient(network::interface::HttpClient* http, sfu_options::SfuOptionsParams sfu_options);
 
     std::optional<dto::CreateBotResponse> CreateBot(const std::string& app_id,
                                                     const std::string& channel_id) override;
@@ -65,16 +62,15 @@ public:
     std::optional<dto::IceRestartResponse> IceRestart(const std::string& transport_id) override;
 
 private:
-    std::optional<HttpClientInterface::Response> Request(const std::string& path,
-                                                         const std::string& method,
-                                                         const nlohmann::json& body) const;
+    std::optional<network::interface::HttpClient::Response> Request(
+        const std::string& path, const std::string& method, const nlohmann::json& body) const;
     std::string GetSfuParamsEndPoint() const;
     bool IsSuccessfulStatusCode(int status);
     bool IsClientErrorStatusCode(int status);
     bool IsServerErrorStatusCode(int status);
 
-    HttpClientInterface* http_;
-    SfuOptions sfu_options_;
+    network::interface::HttpClient* http_;
+    sfu_options::SfuOptionsParams sfu_options_;
 };
 
 }  // namespace sfu_bot

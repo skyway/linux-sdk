@@ -9,11 +9,9 @@
 #include <json.hpp>
 #include <optional>
 #include <string>
-#include <unordered_map>
 
 #include "skyway/signaling/dto/response.hpp"
 #include "skyway/signaling/interface/member.hpp"
-#include "skyway/signaling/interface/socket.hpp"
 
 namespace skyway {
 namespace signaling {
@@ -23,24 +21,10 @@ class SignalingClient {
 public:
     class Listener {
     public:
-        virtual ~Listener() = default;
-        virtual void OnConnectionFailed(){};
-
-        virtual void OnRequestReceived(const nlohmann::json& data, const Member src) = 0;
-        std::function<nlohmann::json(const nlohmann::json&, const std::string&, const std::string&)>
-            reply;
+        virtual ~Listener()                                   = default;
+        virtual void OnMessage(const nlohmann::json& message) = 0;
     };
 
-    class Delegator {
-    public:
-        virtual ~Delegator() = default;
-
-        virtual nlohmann::json reply(const nlohmann::json& data,
-                                     const std::string& src,
-                                     const std::string& event_id) {
-            return nlohmann::json::object();
-        };
-    };
     struct Options {
         std::optional<int> connectivity_check_interval_sec;
         std::optional<std::string> signaling_domain;
@@ -56,24 +40,23 @@ public:
     };
     virtual ~SignalingClient() = default;
 
+    virtual void Dispose() = 0;
+
     virtual void InterruptBlocking(const std::string& member_id) = 0;
 
     virtual void ResetBlocking(const std::string& member_id) = 0;
 
-    virtual void AddListener(Listener* listener) = 0;
+    virtual void AddListener(const Member& remote_member, Listener* listener) = 0;
 
-    virtual void RemoveListener(Listener* listener) = 0;
+    virtual void RemoveListener(const Member& remote_member) = 0;
 
-    virtual bool Connect(Delegator* delegator, int connectivity_check_interval_sec) = 0;
+    virtual bool Connect(int connectivity_check_interval_sec) = 0;
 
-    virtual signaling::dto::RequestResult Request(const Member& target,
-                                                  const nlohmann::json& data,
-                                                  const int timeout_sec,
-                                                  const bool skip_response_wait = false) = 0;
+    virtual std::future<dto::SendResult> Send(const Member& target,
+                                              const nlohmann::json& data,
+                                              bool skip_response_wait = false) = 0;
 
-    virtual signaling::dto::RequestResult Request(const Member& target,
-                                                  const nlohmann::json& data,
-                                                  const bool skip_response_wait = false) = 0;
+    virtual void ResolveBufferedMessages(const Member& sender) = 0;
 };
 
 }  // namespace interface

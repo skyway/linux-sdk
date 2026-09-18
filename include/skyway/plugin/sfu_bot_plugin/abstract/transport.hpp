@@ -40,7 +40,7 @@ protected:
 
     mediasoupclient::Transport* transport_ = nullptr;
 
-    std::mutex negotiation_mtx_;
+    mutable std::mutex operation_mtx_;
 
 private:
     interface::SfuApiClient* client_;

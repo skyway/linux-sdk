@@ -66,6 +66,18 @@ void to_json(nlohmann::json& j, const Request& payload);
 void to_json(nlohmann::json& j, const Response& payload);
 
 }  // namespace outgoing
+
+struct ChunkedMessage {
+    std::string type;
+    unsigned int length;
+    unsigned int offset;
+    std::string chunk;
+    std::string id;
+};
+
+void from_json(const nlohmann::json& j, ChunkedMessage& msg);
+void to_json(nlohmann::json& j, const ChunkedMessage& msg);
+
 }  // namespace dto
 }  // namespace signaling
 }  // namespace skyway

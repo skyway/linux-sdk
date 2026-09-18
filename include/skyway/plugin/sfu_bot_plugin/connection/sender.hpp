@@ -20,8 +20,6 @@ namespace plugin {
 namespace sfu_bot {
 namespace connection {
 
-using LocalMediaStream = core::interface::LocalMediaStream;
-
 class Sender : public interface::SendTransport::Listener,
                public mediasoupclient::Producer::Listener,
                public core::interface::Publication::InternalListener,
@@ -62,10 +60,9 @@ private:
         const interface::Device::PeerConnectionOptions* pc_options);
     std::shared_ptr<interface::SendTransport> GetSendTransport();
     bool ApplyEncoding(std::vector<model::Encoding> encoding);
-    void Produce(const std::string& transaction_id);
+    bool Produce(const std::string& transaction_id);
     void SetupTransportAccessForStream(std::shared_ptr<core::interface::Publication> publication);
-    bool SupportedCodecs(std::vector<model::Codec> codecs);
-    std::optional<nlohmann::json> FindSupportedRemoteCodec(const model::ContentType& type);
+    bool SupportedCodecs(const std::vector<model::Codec>& codecs);
 
     std::string local_person_id_;
     std::string bot_id_;

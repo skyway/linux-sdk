@@ -14,9 +14,7 @@ namespace skyway {
 namespace plugin {
 namespace remote_person {
 
-using PluginInterface = core::interface::RemoteMemberPlugin;
-
-class Plugin : public PluginInterface {
+class Plugin : public core::interface::RemoteMemberPlugin {
 public:
     Plugin(rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory);
     std::string GetSubtype() const override;

@@ -12,6 +12,9 @@ namespace core {
 namespace interface {
 
 class RemoteStream : public Stream {
+public:
+    virtual void Dispose() = 0;
+
 protected:
     RemoteStream(const std::string& id, model::ContentType content_type);
 };

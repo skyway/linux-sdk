@@ -25,9 +25,7 @@ enum class Status {
 
 class IceParamsClient : public interface::IceParamsClient {
 public:
-    using HttpClientInterface = network::interface::HttpClient;
-
-    IceParamsClient(HttpClientInterface* http, const ContextOptions::IceParams& options);
+    IceParamsClient(network::interface::HttpClient* http, const ContextOptions::IceParams& options);
 
     webrtc::PeerConnectionInterface::IceServers FetchIceServers(
         const std::string& token,
@@ -36,7 +34,7 @@ public:
         std::optional<int> ttl) const override;
 
 private:
-    HttpClientInterface* http_;
+    network::interface::HttpClient* http_;
     ContextOptions::IceParams options_;
     std::string GetIceParamsEndoint() const;
     webrtc::PeerConnectionInterface::IceServers ConvertResponse(

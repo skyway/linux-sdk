@@ -6,8 +6,11 @@
 #define SKYWAY_PLUGIN_SFU_BOT_PLUGIN_INTERFACE_TRANSPORT_REPOSITORY_HPP_
 
 #include <memory>
+#include <optional>
 #include <string>
+#include <vector>
 
+#include "skyway/model/domain.hpp"
 #include "skyway/plugin/sfu_bot_plugin/interface/device.hpp"
 #include "skyway/plugin/sfu_bot_plugin/interface/recv_transport.hpp"
 #include "skyway/plugin/sfu_bot_plugin/interface/send_transport.hpp"
@@ -28,6 +31,13 @@ public:
     virtual bool LoadDevice(nlohmann::json caps, const Device::PeerConnectionOptions* options) = 0;
 
     virtual nlohmann::json GetRtpCapabilities() = 0;
+
+    virtual std::optional<nlohmann::json> FindSendCodec(
+        const model::ContentType& type, const std::vector<model::Codec>& codecs) = 0;
+
+    virtual bool CanSend(const model::ContentType& type) = 0;
+
+    virtual bool CanRecv(const model::ContentType& type) = 0;
 
     virtual std::shared_ptr<SendTransport> CreateSendTransport(
         const nlohmann::json& transport_options,

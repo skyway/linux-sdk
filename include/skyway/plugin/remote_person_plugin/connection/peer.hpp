@@ -15,20 +15,17 @@
 #include <unordered_map>
 
 #include "skyway/analytics/interface/analytics_client.hpp"
-#include "skyway/core/interface/chunk_messenger.hpp"
 #include "skyway/core/interface/ice_manager.hpp"
 #include "skyway/global/worker.hpp"
 #include "skyway/plugin/remote_person_plugin/connection/data_channel_label.hpp"
 #include "skyway/plugin/remote_person_plugin/connection/dto/message.hpp"
 #include "skyway/signaling/interface/member.hpp"
+#include "skyway/signaling/interface/signaling_client.hpp"
 
 namespace skyway {
 namespace plugin {
 namespace remote_person {
 namespace connection {
-
-using MessageMember           = signaling::interface::Member;
-using ChunkMessengerInterface = core::interface::ChunkMessenger;
 
 const std::string kRemotePersonConnectionStateThreadName = "remo_psn_conn";
 
@@ -110,9 +107,9 @@ public:
     };
 
     Peer(Role role,
-         const MessageMember& remote_member,
+         const signaling::interface::Member& remote_member,
          core::interface::IceManager* ice_manager,
-         ChunkMessengerInterface* messenger,
+         signaling::interface::SignalingClient* signaling_client,
          Listener* listener,
          rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory);
     virtual ~Peer();
@@ -176,8 +173,8 @@ protected:
     rtc::scoped_refptr<CreateSdpObserver> create_sdp_observer_;
     rtc::scoped_refptr<SetSdpObserver> set_sdp_observer_;
     rtc::scoped_refptr<StatsObserver> stats_observer_;
-    MessageMember remote_member_;
-    ChunkMessengerInterface* messenger_;
+    signaling::interface::Member remote_member_;
+    signaling::interface::SignalingClient* signaling_client_;
 
     std::mutex negotiation_mtx_;
 

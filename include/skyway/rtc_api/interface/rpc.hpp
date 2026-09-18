@@ -28,7 +28,7 @@ public:
     virtual std::optional<nlohmann::json> Request(const std::string& method,
                                                   const nlohmann::json& params,
                                                   const std::string& message_id) = 0;
-    virtual void Close()                                                         = 0;
+    virtual void Dispose()                                                       = 0;
 
     virtual bool IsConnected() const                              = 0;
     virtual void AddPendingRequest(const std::string& method,

@@ -5,6 +5,8 @@
 #ifndef SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_REMOTE_PERSON_HPP_
 #define SKYWAY_PLUGIN_REMOTE_PERSON_PLUGIN_REMOTE_PERSON_HPP_
 
+#include <atomic>
+
 #include "skyway/core/ice/ice_manager.hpp"
 #include "skyway/core/interface/channel.hpp"
 #include "skyway/core/interface/publication.hpp"
@@ -66,8 +68,9 @@ private:
     bool IsLocalPersonSubscribing();
     bool IsSubscribingLocalPersonsPublication();
     bool ShouldClose();
-    void CloseConnection();
+    void DisposeConnection();
 
+    std::atomic<bool> is_disposed_ = false;
     std::mutex connection_mtx_;
     std::unique_ptr<connection::P2PConnection> connection_;
     rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory_;

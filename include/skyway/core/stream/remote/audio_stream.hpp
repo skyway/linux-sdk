@@ -5,6 +5,8 @@
 #ifndef SKYWAY_CORE_STREAM_REMOTE_AUDIO_STREAM_HPP_
 #define SKYWAY_CORE_STREAM_REMOTE_AUDIO_STREAM_HPP_
 
+#include "skyway/content/audio/audio_track_sink_impl.hpp"
+#include "skyway/content/audio/voice_detection/audio_level_calculator.hpp"
 #include "skyway/core/interface/remote_media_stream.hpp"
 
 namespace rtc {
@@ -31,11 +33,17 @@ public:
 
     bool Disable() override;
 
-private:
-    void Dispose();
+    double GetAudioLevel() const;
 
+    void SetVolume(double volume);
+    void Dispose() override;
+
+private:
     std::atomic<bool> is_disposed_ = false;
     rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track_;
+    rtc::Thread* signaling_thread_ = nullptr;
+    std::unique_ptr<content::audio::AudioTrackSinkImpl> audio_track_sink_impl_;
+    std::shared_ptr<content::audio::voice_detection::AudioLevelCalculator> audio_level_calculator_;
 };
 
 }  // namespace remote

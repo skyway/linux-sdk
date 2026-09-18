@@ -7,6 +7,8 @@
 
 #include <api/media_stream_interface.h>
 
+#include <atomic>
+
 #include "skyway/core/interface/remote_media_stream.hpp"
 
 namespace skyway {
@@ -19,6 +21,7 @@ public:
     RemoteVideoStream(const std::string& id,
                       rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track);
     ~RemoteVideoStream();
+    void Dispose() override;
     rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> GetTrack() const override;
 
     bool Enable() override;
@@ -26,6 +29,7 @@ public:
     bool Disable() override;
 
 private:
+    std::atomic<bool> is_disposed_ = false;
     rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track_;
 };
 

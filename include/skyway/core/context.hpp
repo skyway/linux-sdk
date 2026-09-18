@@ -7,6 +7,7 @@
 
 #include "skyway/analytics/interface/analytics_client.hpp"
 #include "skyway/core/context_options.hpp"
+#include "skyway/core/interface/channel_repository.hpp"
 #include "skyway/core/interface/remote_member_plugin.hpp"
 #include "skyway/global/error.hpp"
 #include "skyway/global/interface/logger.hpp"
@@ -55,13 +56,6 @@ class SfuBotPluginSenderTest;
 namespace skyway {
 namespace core {
 
-using RemoteMemberPluginInterface     = interface::RemoteMemberPlugin;
-using HttpClientInterface             = network::interface::HttpClient;
-using WebSocketClientFactoryInterface = network::interface::WebSocketClientFactory;
-using PlatformInfoDelegatorInterface  = platform::interface::PlatformInfoDelegator;
-using LoggerInterface                 = global::interface::Logger;
-using SkyWayError                     = global::Error;
-
 class Context {
 public:
     class EventListener {
@@ -72,14 +66,14 @@ public:
 
         virtual void OnReconnectSuccess() = 0;
 
-        virtual void OnFatalError(const SkyWayError& error) = 0;
+        virtual void OnFatalError(const global::Error& error) = 0;
     };
 
     static bool Setup(const std::string& token,
-                      std::unique_ptr<HttpClientInterface> http,
-                      std::unique_ptr<WebSocketClientFactoryInterface> ws_factory,
-                      std::unique_ptr<PlatformInfoDelegatorInterface> platform_info,
-                      std::unique_ptr<LoggerInterface> logger,
+                      std::unique_ptr<network::interface::HttpClient> http,
+                      std::unique_ptr<network::interface::WebSocketClientFactory> ws_factory,
+                      std::unique_ptr<platform::interface::PlatformInfoDelegator> platform_info,
+                      std::unique_ptr<global::interface::Logger> logger,
                       EventListener* listener,
                       const ContextOptions& options);
 
@@ -87,7 +81,7 @@ public:
 
     static void _UpdateRtcConfig(ContextOptions::RtcConfig rtc_config);
 
-    static void RegisterPlugin(std::unique_ptr<RemoteMemberPluginInterface> plugin);
+    static void RegisterPlugin(std::unique_ptr<interface::RemoteMemberPlugin> plugin);
 
     static void Dispose();
 
@@ -95,19 +89,22 @@ public:
 
     static std::weak_ptr<rtc_api::interface::Client> RtcApi();
 
+    static std::weak_ptr<interface::ChannelRepository> ChannelRepository();
+
     static std::weak_ptr<analytics::interface::AnalyticsClient> AnalyticsClient();
 
     static ContextOptions Options();
 
-    static std::vector<RemoteMemberPluginInterface*> GetRemoteMemberPlugins();
+    static std::vector<interface::RemoteMemberPlugin*> GetRemoteMemberPlugins();
 
-    static RemoteMemberPluginInterface* FindRemoteMemberPluginBySubtype(const std::string& subtype);
+    static interface::RemoteMemberPlugin* FindRemoteMemberPluginBySubtype(
+        const std::string& subtype);
 
     static void OnReconnectStart();
 
     static void OnReconnectSuccess();
 
-    static void OnFatalError(const SkyWayError& error);
+    static void OnFatalError(const global::Error& error);
 
     static std::string GetContextId();
 
@@ -123,9 +120,11 @@ private:
     static std::string context_id_;
     static std::shared_ptr<analytics::interface::AnalyticsClient> analytics_client_;
     static ContextOptions options_;
-    static std::vector<std::unique_ptr<RemoteMemberPluginInterface>> plugins_;
+    static std::vector<std::unique_ptr<interface::RemoteMemberPlugin>> plugins_;
     static std::mutex callback_worker_mtx_;
     static std::unique_ptr<global::Worker> callback_worker_;
+    static std::mutex channel_repository_mtx_;
+    static std::shared_ptr<interface::ChannelRepository> channel_repository_;
 
 public:
     friend class CoreContextTest;
@@ -134,6 +133,7 @@ public:
     friend class channel::CoreChannelTest;
     friend class ice::CoreIceManagerTest;
     friend class plugin::sfu_bot::SfuBotTest;
+
     friend class plugin::sfu_bot::connection::SfuBotPluginConnectionStateObserverTest;
     friend class plugin::sfu_bot::connection::SfuBotPluginSfuConnectionTest;
     friend class plugin::sfu_bot::connection::SfuBotPluginSenderTest;

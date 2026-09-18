@@ -17,6 +17,7 @@ class ApiClient {
 public:
     virtual ~ApiClient()   = default;
     virtual bool Connect() = 0;
+    virtual void Dispose() = 0;
 
     virtual std::optional<rpc::dto::CreateChannelResult> CreateChannel(
         const model::Channel::Init& init) = 0;

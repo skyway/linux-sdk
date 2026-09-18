@@ -8,6 +8,8 @@
 #include <api/media_stream_interface.h>
 #include <api/peer_connection_interface.h>
 
+#include <atomic>
+
 #include "skyway/analytics/interface/analytics_client.hpp"
 #include "skyway/plugin/remote_person_plugin/connection/dto/message.hpp"
 #include "skyway/plugin/remote_person_plugin/connection/receiver.hpp"
@@ -19,18 +21,16 @@ namespace plugin {
 namespace remote_person {
 namespace connection {
 
-using StreamInterface         = core::interface::Stream;
-using ChunkMessengerInterface = core::interface::ChunkMessenger;
-using SubscriptionId          = std::string;
+using SubscriptionId = std::string;
 
 const std::string kRemotePersonSendThreadName = "remo_psn_send";
 const std::string kRemotePersonRecvThreadName = "remo_psn_recv";
 
-class P2PConnection : public ChunkMessengerInterface::Listener {
+class P2PConnection : public signaling::interface::SignalingClient::Listener {
 public:
     P2PConnection(
-        const MessageMember& remote_member,
-        ChunkMessengerInterface* messenger,
+        const signaling::interface::Member& remote_member,
+        signaling::interface::SignalingClient* signaling_client,
         core::interface::IceManager* ice_manager,
         rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> peer_connection_factory);
 
@@ -45,13 +45,13 @@ public:
 
     void StopSubscribing(const std::string& subscription_id);
 
-    void Close();
+    void Dispose();
 
     void OnMessage(const nlohmann::json& message) override;
 
 private:
-    P2PConnection(const MessageMember& remote_member,
-                  ChunkMessengerInterface* messenger,
+    P2PConnection(const signaling::interface::Member& remote_member,
+                  signaling::interface::SignalingClient* signaling_client,
                   std::shared_ptr<Sender> sender,
                   std::shared_ptr<Receiver> receiver);
 
@@ -61,14 +61,15 @@ private:
     void OnRestartIcePayloadPayloadReceived(const dto::RestartIcePayloadPayload& payload);
     void OnCandidatePayloadPayloadReceived(const dto::CandidatePayloadPayload& payload);
 
-    MessageMember remote_member_;
-    ChunkMessengerInterface* messenger_;
+    signaling::interface::Member remote_member_;
+    signaling::interface::SignalingClient* signaling_client_;
     std::shared_ptr<Sender> sender_;
     std::shared_ptr<Receiver> receiver_;
     std::unique_ptr<global::interface::Worker> send_worker_ =
         std::make_unique<global::Worker>(kRemotePersonSendThreadName);
     std::unique_ptr<global::interface::Worker> receive_worker_ =
         std::make_unique<global::Worker>(kRemotePersonRecvThreadName);
+    std::atomic<bool> is_disposed_ = false;
 
 public:
     friend class P2PConnectionTest;

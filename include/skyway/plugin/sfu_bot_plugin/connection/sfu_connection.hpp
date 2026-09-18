@@ -25,9 +25,6 @@ namespace plugin {
 namespace sfu_bot {
 namespace connection {
 
-using StreamInterface = core::interface::Stream;
-using SfuApiClient    = plugin::sfu_bot::SfuApiClient;
-
 class SfuConnection : public interface::SfuConnection {
 public:
     SfuConnection(

@@ -23,6 +23,8 @@ class Subscription : public std::enable_shared_from_this<Subscription>,
 public:
     class EventListener {
     public:
+        virtual ~EventListener() = default;
+
         virtual void OnConnectionStateChanged(const ConnectionState state) {}
 
         virtual void OnStreamAttached(std::shared_ptr<RemoteStream> stream) {}
@@ -72,6 +74,7 @@ public:
     virtual void SetPreferredEncodingId(const std::string& id)   = 0;
 
     virtual void OnCanceled() = 0;
+    virtual void Dispose()    = 0;
 };
 
 }  // namespace interface

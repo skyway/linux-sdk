@@ -29,8 +29,8 @@ class PassthroughVideoEncoderFactoryTest;
 class Context {
 public:
     static const unsigned int kVersionMajor = 4;
-    static const unsigned int kVersionMinor = 1;
-    static const unsigned int kVersionPatch = 1;
+    static const unsigned int kVersionMinor = 2;
+    static const unsigned int kVersionPatch = 0;
 
     /// @brief Contextのイベントリスナ
     class EventListener {

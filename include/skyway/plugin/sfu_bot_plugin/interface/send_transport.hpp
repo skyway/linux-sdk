@@ -39,7 +39,6 @@ public:
                                const nlohmann::json* codec,
                                const nlohmann::json& app_data)       = 0;
 
-    virtual bool IsClosed(const ProducerId& producer_id) const = 0;
     virtual rtc::scoped_refptr<webrtc::RtpSenderInterface> GetRtpSender(
         const ProducerId& producer_id) const = 0;
     virtual rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> GetTrack(

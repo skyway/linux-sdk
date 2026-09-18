@@ -7,6 +7,8 @@
 
 #include <modules/audio_processing/include/audio_processing.h>
 
+#include <atomic>
+
 #include "audio_data_forwarder.hpp"
 
 namespace skyway {
@@ -36,6 +38,7 @@ public:
     static void Dispose();
 
 private:
+    static std::atomic<bool> is_disposed_;
     static rtc::scoped_refptr<webrtc::AudioProcessing> audio_processing_;
     static std::shared_ptr<AudioDataForwarder> audio_data_forwarder_;
 };

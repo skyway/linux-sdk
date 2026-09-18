@@ -5,9 +5,8 @@
 #ifndef SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_CONNECTION_STATE_OBSERVER_HPP_
 #define SKYWAY_PLUGIN_SFU_BOT_PLUGIN_CONNECTION_CONNECTION_STATE_OBSERVER_HPP_
 
-#include <thread>
-
 #include "skyway/core/connection_state.hpp"
+#include "skyway/global/interface/worker.hpp"
 #include "skyway/plugin/sfu_bot_plugin/interface/connection_state_observer.hpp"
 #include "skyway/plugin/sfu_bot_plugin/interface/sfu_api_client.hpp"
 #include "skyway/plugin/sfu_bot_plugin/interface/transport.hpp"
@@ -55,9 +54,7 @@ private:
     std::atomic<bool> is_reconnecting_ = false;
 
     std::atomic<bool> is_disposed_ = false;
-
-    std::mutex reconnect_threads_mtx_;
-    std::vector<std::unique_ptr<std::thread>> reconnect_threads_;
+    std::unique_ptr<global::interface::Worker> reconnect_worker_;
 
 public:
     friend class SfuBotPluginConnectionStateObserverTest;

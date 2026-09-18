@@ -47,6 +47,8 @@ public:
 
     virtual ~AnalyticsClient() = default;
 
+    virtual void Dispose() = 0;
+
     virtual void SetDelegator(std::weak_ptr<Delegator> delegator) = 0;
     virtual void RemoveDelegator()                                = 0;
 

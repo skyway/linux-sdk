@@ -22,6 +22,8 @@ class Forwarding : public core::interface::Publication::EventListener {
 public:
     class EventListener {
     public:
+        virtual ~EventListener() = default;
+
         virtual void OnStopped() {}
     };
 

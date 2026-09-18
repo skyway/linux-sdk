@@ -10,6 +10,7 @@
 #include "skyway/core/interface/channel.hpp"
 #include "skyway/core/interface/ice_manager.hpp"
 #include "skyway/core/interface/ice_params_client.hpp"
+#include "skyway/token/interface/auth_token_manager.hpp"
 
 namespace skyway {
 namespace core {

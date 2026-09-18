@@ -18,6 +18,8 @@ class AuthTokenManager {
 public:
     class Listener {
     public:
+        virtual ~Listener() = default;
+
         virtual void OnTokenRefreshingNeeded() {}
 
         virtual void OnTokenExpired() {}
@@ -42,6 +44,8 @@ public:
 
     virtual void AddInternalListener(InternalListener* listener)    = 0;
     virtual void RemoveInternalListener(InternalListener* listener) = 0;
+
+    virtual void Dispose() = 0;
 };
 
 }  // namespace interface

@@ -24,7 +24,6 @@ public:
                        const std::string& kind,
                        nlohmann::json* rtp_parameters) override;
 
-    bool IsClosed(const ConsumerId& consumer_id) const override;
     rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> GetTrack(
         const ConsumerId& consumer_id) const override;
     rtc::Thread* GetSignalingThread() const override;
@@ -42,7 +41,6 @@ private:
 
     mediasoupclient::Consumer* FindConsumer(const ConsumerId& consumer_id) const;
 
-    mutable std::mutex consumer_operation_mtx_;
     mutable std::mutex consumers_mtx_;
     std::unordered_map<ConsumerId, std::unique_ptr<mediasoupclient::Consumer>> consumers_;
 };

@@ -23,6 +23,8 @@ class Channel : public std::enable_shared_from_this<Channel> {
 public:
     class EventListener {
     public:
+        virtual ~EventListener() = default;
+
         virtual void OnClosed() {}
 
         virtual void OnMetadataUpdated(const std::string& metadata) {}

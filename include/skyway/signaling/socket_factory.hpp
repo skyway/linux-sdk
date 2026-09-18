@@ -21,18 +21,15 @@ namespace signaling {
 
 class SocketFactory {
 public:
-    using SignalingClinetInterface       = interface::SignalingClient;
-    using SocketInterface                = interface::Socket;
-    using WebSocketClientInterface       = network::interface::WebSocketClient;
-    using PlatformInfoDelegatorInterface = platform::interface::PlatformInfoDelegator;
-    std::unique_ptr<SocketInterface> Create(const std::string& channel_id,
-                                            const std::optional<std::string> channel_name,
-                                            const std::string& member_id,
-                                            const std::optional<std::string> member_name,
-                                            std::weak_ptr<token::interface::AuthTokenManager> auth,
-                                            std::shared_ptr<WebSocketClientInterface> ws,
-                                            const PlatformInfoDelegatorInterface* platform_info,
-                                            const SignalingClinetInterface::Options& options);
+    std::unique_ptr<interface::Socket> Create(
+        const std::string& channel_id,
+        const std::optional<std::string> channel_name,
+        const std::string& member_id,
+        const std::optional<std::string> member_name,
+        std::weak_ptr<token::interface::AuthTokenManager> auth,
+        std::shared_ptr<network::interface::WebSocketClient> ws,
+        const platform::interface::PlatformInfoDelegator* platform_info,
+        const interface::SignalingClient::Options& options);
 
 private:
     std::string GetSignalingServerSessionEndpoint(const std::string& signaling_domain,

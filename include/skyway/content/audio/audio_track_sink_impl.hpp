@@ -14,9 +14,6 @@ namespace content {
 namespace audio {
 class AudioTrackSinkImpl : public AudioDataForwarder, public webrtc::AudioTrackSinkInterface {
 public:
-    AudioTrackSinkImpl(rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track);
-    ~AudioTrackSinkImpl();
-
     void OnData(const void* audio_data,
                 int bits_per_sample,
                 int sample_rate,

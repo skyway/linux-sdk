@@ -5,6 +5,7 @@
 #ifndef SKYWAY_RTC_API_CLIENT_HPP_
 #define SKYWAY_RTC_API_CLIENT_HPP_
 
+#include <atomic>
 #include <json.hpp>
 
 #include "skyway/core/context_options.hpp"
@@ -19,9 +20,11 @@ namespace rtc_api {
 
 class Client : public interface::Client {
 public:
-    Client(const rpc::RapiOptions& options);
+    Client(const core::ContextOptions::RtcApi& options);
+    ~Client() override;
 
     bool Connect() override;
+    void Dispose() override;
     std::shared_ptr<interface::ChannelState> CreateChannel(
         const model::Channel::Init& init) override;
     std::shared_ptr<interface::ChannelState> FindOrCreateChannel(
@@ -56,6 +59,7 @@ public:
     bool Unsubscribe(const std::string& channel_id, const std::string& subscription_id) override;
 
 private:
+    std::atomic<bool> is_disposed_ = false;
     std::shared_ptr<interface::EventListenerRepository> event_listener_repository_;
     std::unique_ptr<interface::ApiClient> api_;
 

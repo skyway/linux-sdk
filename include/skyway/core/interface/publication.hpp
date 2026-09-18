@@ -15,8 +15,6 @@ namespace skyway {
 namespace core {
 namespace interface {
 
-using LocalStream = interface::LocalStream;
-
 enum class PublicationState { kEnabled, kDisabled, kCanceled };
 
 class Publication : public std::enable_shared_from_this<Publication>,
@@ -24,6 +22,8 @@ class Publication : public std::enable_shared_from_this<Publication>,
 public:
     class EventListener {
     public:
+        virtual ~EventListener() = default;
+
         virtual void OnSubscribed(std::shared_ptr<interface::Subscription> subscription) {}
 
         virtual void OnUnsubscribed(std::shared_ptr<interface::Subscription> subscription) {}
@@ -81,9 +81,9 @@ public:
 
     virtual std::vector<model::Encoding> Encodings() const = 0;
 
-    virtual PublicationState State() = 0;
+    virtual interface::PublicationState State() = 0;
 
-    virtual std::shared_ptr<LocalStream> Stream() const = 0;
+    virtual std::shared_ptr<interface::LocalStream> Stream() const = 0;
 
     virtual bool UpdateMetadata(const std::string& metadata) = 0;
 

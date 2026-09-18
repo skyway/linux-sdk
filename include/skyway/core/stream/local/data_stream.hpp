@@ -18,14 +18,12 @@ namespace core {
 namespace stream {
 namespace local {
 
-using LocalStream = interface::LocalStream;
-
 struct DataStreamSubscriber {
     std::string id;
     std::optional<std::string> name;
 };
 
-class LocalDataStream : public LocalStream {
+class LocalDataStream : public interface::LocalStream {
 public:
     using PublicationId = std::string;
     class Listener {
