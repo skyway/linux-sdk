@@ -28,6 +28,7 @@ public:
     /// @cond INTERNAL_SECTION
     RemoteAudioStream(std::shared_ptr<skyway::core::stream::remote::RemoteAudioStream> core);
     /// @endcond
+    ~RemoteAudioStream() override;
 
     /// @copydoc skyway::media::stream::interface::remote::RemoteAudioStream::RegisterListener
     void RegisterListener(

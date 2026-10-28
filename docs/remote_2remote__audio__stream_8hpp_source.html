@@ -133,43 +133,44 @@ $(document).ready(function(){initNavTree('remote_2remote__audio__stream_8hpp_sou
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                                  skyway::core::stream::remote::RemoteAudioStream&gt; {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="classskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream.html">RemoteAudioStream</a>(std::shared_ptr&lt;skyway::core::stream::remote::RemoteAudioStream&gt; core);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream.html#aca63233898d508d0bfd4f1e4fa421eae">   29</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream.html#aca63233898d508d0bfd4f1e4fa421eae">RegisterListener</a>(</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        std::shared_ptr&lt;interface::remote::RemoteAudioStream::Listener&gt; listener) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream.html#afd37fee8676e74cfd010eda69a799233">   33</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream.html#afd37fee8676e74cfd010eda69a799233">UnregisterListener</a>(</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        std::shared_ptr&lt;interface::remote::RemoteAudioStream::Listener&gt; listener) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    rtc::scoped_refptr&lt;webrtc::MediaStreamTrackInterface&gt; Track() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">class </span>PcmAudioTrackSink : <span class="keyword">public</span> webrtc::AudioTrackSinkInterface {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">explicit</span> PcmAudioTrackSink(</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            std::shared_ptr&lt;interface::remote::RemoteAudioStream::Listener&gt; listener);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">void</span> OnData(<span class="keyword">const</span> <span class="keywordtype">void</span>* audio_data,</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                    <span class="keywordtype">int</span> bits_per_sample,</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    <span class="keywordtype">int</span> sample_rate,</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    <span class="keywordtype">size_t</span> number_of_channels,</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                    <span class="keywordtype">size_t</span> number_of_frames,</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                    absl::optional&lt;int64_t&gt;) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        std::shared_ptr&lt;interface::remote::RemoteAudioStream::Listener&gt; listener_;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    };</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::unordered_map&lt;std::shared_ptr&lt;interface::remote::RemoteAudioStream::Listener&gt;,</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                       std::shared_ptr&lt;PcmAudioTrackSink&gt;&gt;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        sinks_;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    std::mutex sinks_mtx_;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_class" href="classskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream.html">~RemoteAudioStream</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream.html#aca63233898d508d0bfd4f1e4fa421eae">   30</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream.html#aca63233898d508d0bfd4f1e4fa421eae">RegisterListener</a>(</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        std::shared_ptr&lt;interface::remote::RemoteAudioStream::Listener&gt; listener) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream.html#afd37fee8676e74cfd010eda69a799233">   34</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream.html#afd37fee8676e74cfd010eda69a799233">UnregisterListener</a>(</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        std::shared_ptr&lt;interface::remote::RemoteAudioStream::Listener&gt; listener) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    rtc::scoped_refptr&lt;webrtc::MediaStreamTrackInterface&gt; Track() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">class </span>PcmAudioTrackSink : <span class="keyword">public</span> webrtc::AudioTrackSinkInterface {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">explicit</span> PcmAudioTrackSink(</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            std::shared_ptr&lt;interface::remote::RemoteAudioStream::Listener&gt; listener);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">void</span> OnData(<span class="keyword">const</span> <span class="keywordtype">void</span>* audio_data,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    <span class="keywordtype">int</span> bits_per_sample,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    <span class="keywordtype">int</span> sample_rate,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                    <span class="keywordtype">size_t</span> number_of_channels,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                    <span class="keywordtype">size_t</span> number_of_frames,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                    absl::optional&lt;int64_t&gt;) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        std::shared_ptr&lt;interface::remote::RemoteAudioStream::Listener&gt; listener_;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    };</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    std::unordered_map&lt;std::shared_ptr&lt;interface::remote::RemoteAudioStream::Listener&gt;,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                       std::shared_ptr&lt;PcmAudioTrackSink&gt;&gt;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        sinks_;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    std::mutex sinks_mtx_;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
 </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}  <span class="comment">// namespace remote</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}  <span class="comment">// namespace stream</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}  <span class="comment">// namespace media</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}  <span class="comment">// namespace skyway</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif  </span><span class="comment">// SKYWAY_MEDIA_STREAM_REMOTE_REMOTE_AUDIO_STREAM_HPP_</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}  <span class="comment">// namespace remote</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}  <span class="comment">// namespace stream</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}  <span class="comment">// namespace media</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}  <span class="comment">// namespace skyway</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif  </span><span class="comment">// SKYWAY_MEDIA_STREAM_REMOTE_REMOTE_AUDIO_STREAM_HPP_</span></div>
 <div class="ttc" id="aclassskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base_html"><div class="ttname"><a href="classskyway_1_1media_1_1stream_1_1abstract_1_1_stream_base.html">skyway::media::stream::abstract::StreamBase</a></div><div class="ttdef"><b>Definition</b> stream_base.hpp:15</div></div>
 <div class="ttc" id="aclassskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream_html"><div class="ttname"><a href="classskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream.html">skyway::media::stream::remote::RemoteAudioStream</a></div><div class="ttdef"><b>Definition</b> remote_audio_stream.hpp:22</div></div>
 <div class="ttc" id="aclassskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream_html_aca63233898d508d0bfd4f1e4fa421eae"><div class="ttname"><a href="classskyway_1_1media_1_1stream_1_1remote_1_1_remote_audio_stream.html#aca63233898d508d0bfd4f1e4fa421eae">skyway::media::stream::remote::RemoteAudioStream::RegisterListener</a></div><div class="ttdeci">void RegisterListener(std::shared_ptr&lt; interface::remote::RemoteAudioStream::Listener &gt; listener) override</div><div class="ttdoc">RemoteAudioStream::Listenerを登録します。</div></div>
