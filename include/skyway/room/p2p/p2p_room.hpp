@@ -28,8 +28,14 @@ public:
 };
 /// @endcond
 
+/// @deprecated 本機能は非推奨です。
+/// @ref skyway::room::Room を利用してください。
+/// P2P/SFUの種別はPublish時に
+/// @ref skyway::room::interface::LocalRoomMember::PublicationOptions::type で選択してください。
 /// @brief P2PRoomの操作を行うクラス
-class P2PRoom : public abstract::Room, public std::enable_shared_from_this<P2PRoom> {
+class [[deprecated("Use skyway::room::Room instead.")]] P2PRoom
+    : public abstract::Room,
+      public std::enable_shared_from_this<P2PRoom> {
 public:
     /// @cond INTERNAL_SECTION
     P2PRoom(std::shared_ptr<core::interface::Channel> channel,

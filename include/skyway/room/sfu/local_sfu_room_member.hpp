@@ -13,8 +13,13 @@ namespace skyway {
 namespace room {
 namespace sfu {
 
+/// @deprecated 本機能は非推奨です。
+/// @ref skyway::room::Room から作成した @ref skyway::room::LocalRoomMember を利用してください。
+/// P2P/SFUの種別はPublish時に
+/// @ref skyway::room::interface::LocalRoomMember::PublicationOptions::type で選択してください。
 /// @brief LocalRoomMemberの操作を行うクラス
-class LocalSFURoomMember : public abstract::LocalRoomMember {
+class [[deprecated("Use skyway::room::LocalRoomMember instead.")]] LocalSFURoomMember
+    : public abstract::LocalRoomMember {
 public:
     /// @cond INTERNAL_SECTION
     LocalSFURoomMember(std::shared_ptr<core::interface::LocalPerson> core,
